@@ -25,7 +25,10 @@ export class UI {
 
   layout(width, height) {
     const spots = [];
-    const r = Math.max(13, Math.round(height * 0.030));
+    // Sized from the shorter side: a portrait camera would otherwise get
+    // controls scaled to its height and far too big for its width.
+    const base = Math.min(width, height);
+    const r = Math.max(10, Math.round(base * 0.030));
     const gap = r * 2.7;
     const x = r * 2.1;
     const top = (height - gap * (CONFIG.palette.length - 1)) / 2;
@@ -34,21 +37,41 @@ export class UI {
       spots.push({ id: `color:${i}`, kind: 'circle', x, y: top + gap * i, r, color: c.hex });
     });
 
-    const h = Math.max(44, Math.round(height * 0.084));
+    const h = Math.max(30, Math.round(base * 0.084));
     const y = height - h - Math.round(height * 0.04);
-    this.title = Math.round(h * 0.30);
-    this.sub = Math.round(h * 0.20);
-
     let cursor = x - r;
+    const rects = [];
+    const step = Math.round(h * 0.16);
+
     const put = (item, w) => {
-      spots.push({ ...item, kind: 'rect', x: cursor, y, w, h });
-      cursor += w + Math.round(h * 0.16);
+      const spot = { ...item, kind: 'rect', x: cursor, y, w, h };
+      rects.push(spot);
+      spots.push(spot);
+      cursor += w + step;
     };
 
     ['S', 'M', 'L'].forEach((label, i) => put({ id: `size:${i}`, label }, Math.round(h * 0.8)));
     cursor += Math.round(h * 0.4);
     for (const a of ACTIONS) put(a, Math.round(h * 1.62));
 
+    // Squeeze the row into the frame rather than letting it run off the edge,
+    // which is what a phone in portrait does to it.
+    const left = x - r;
+    const rowWidth = cursor - step - left;
+    const room = width - left * 2;
+    const k = rowWidth > room ? room / rowWidth : 1;
+    if (k < 1) {
+      for (const spot of rects) {
+        spot.x = left + (spot.x - left) * k;
+        spot.w *= k;
+      }
+    }
+
+    this.scale = k;
+    this.title = Math.round(h * 0.30 * Math.min(1, k * 1.15));
+    this.sub = Math.round(h * 0.20 * Math.min(1, k * 1.15));
+    // Below this the two-line labels stop being readable at all.
+    this.showSub = k > 0.72;
     this.hotspots = spots;
   }
 
@@ -247,7 +270,7 @@ export class UI {
       ctx.fillStyle = on ? '#0a1436' : '#f5f2ea';
       ctx.font = `700 ${this.title}px ui-sans-serif, system-ui, sans-serif`;
       const cx = s.x + s.w / 2;
-      if (s.sub) {
+      if (s.sub && this.showSub) {
         ctx.fillText(s.label, cx, s.y + s.h * 0.38);
         ctx.globalAlpha = 0.72;
         ctx.font = `500 ${this.sub}px system-ui, "Hiragino Sans", "Noto Sans JP", sans-serif`;

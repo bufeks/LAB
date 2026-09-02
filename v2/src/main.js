@@ -36,6 +36,9 @@ const state = {
 const history = [];
 const strokeFrom = new Map();
 const cooldown = new Map();
+let lastPalmGap = null;
+let crushing = false;
+let wasCrushing = false;
 let beforeImage = null;
 let scanStart = 0;
 let resultSince = 0;
@@ -84,6 +87,7 @@ async function start() {
     window.breakToCreate = { CONFIG, tracker, face, depth, gestures, ink, deform, renderer, handMask, ui, state, finish, generate, reclaim };
 
     setPhase('live');
+    layout();
     requestAnimationFrame(loop);
   } catch (err) {
     console.error(err);
@@ -161,6 +165,31 @@ function ready(now, id, key, ms) {
   return true;
 }
 
+// Two open palms travelling towards each other, rather than towards the
+// face. Both gestures are open hands in motion, so this is checked first and
+// takes the hands out of the slap's hands when it fires.
+function crush(hands) {
+  const palms = hands.filter((h) => h.armed && h.pose === 'open');
+  if (palms.length < 2 || !face.present || !state.ready) {
+    lastPalmGap = null;
+    return null;
+  }
+
+  const [a, b] = palms;
+  const gap = Math.hypot(a.x - b.x, a.y - b.y);
+  const previous = lastPalmGap;
+  lastPalmGap = gap;
+  if (previous === null) return null;
+
+  const C = CONFIG.gesture.crush;
+  const closing = previous - gap;
+  if (closing < C.closeSpeed) return null;
+  // Only once the hands are around the head rather than out at the edges.
+  if (gap / (face.scale * H) > C.maxGap) return null;
+
+  return { a, b, closing };
+}
+
 function act(hand, now) {
   if (!face.present || !state.ready) return;
   if (!hand.armed) { strokeFrom.delete(hand.id); return; }
@@ -182,8 +211,7 @@ function act(hand, now) {
       const d = hand.entered ? { x: 0, y: 0 } : face.deltaToFace(hand.vx, hand.vy, H);
       if (d.x || d.y) {
         deform.push(faceUv.x, faceUv.y,
-          d.x * CONFIG.deformGain, d.y * CONFIG.deformGain,
-          CONFIG.deformRadius * (brush() / CONFIG.brushSizes[1]));
+          d.x * CONFIG.deformGain, d.y * CONFIG.deformGain, grabRadius(hand));
       }
       break;
     }
@@ -219,6 +247,20 @@ function act(hand, now) {
   }
 
   strokeFrom.set(hand.id, inkPt);
+}
+
+// How much of the face a grip takes hold of. The weight setting is the
+// coarse control; bringing the hand nearer the camera than the face is the
+// fine one, and it needs no UI at all.
+function grabRadius(hand) {
+  const G = CONFIG.gesture;
+  const spanInFaces = hand.span / (face.scale * H);
+  const nearness = clamp(spanInFaces / G.handRefSpan, G.handGrab[0], G.handGrab[1]);
+  return CONFIG.deformRadius * (brush() / CONFIG.brushSizes[1]) * nearness;
+}
+
+function clamp(v, lo, hi) {
+  return v < lo ? lo : v > hi ? hi : v;
 }
 
 function finish() {
@@ -295,7 +337,21 @@ function loop(now) {
     if (action === 'done') finish();
   }
 
+  const squeeze = crush(hands);
+  crushing = !!squeeze;
+  if (squeeze) {
+    if (!wasCrushing) snapshot();
+    const a = face.toFaceUv(squeeze.a.x, squeeze.a.y, W, H);
+    const b = face.toFaceUv(squeeze.b.x, squeeze.b.y, W, H);
+    // Closing distance, in eye-distances, is what gets transferred.
+    const amount = (squeeze.closing / H / face.scale) * CONFIG.gesture.crush.strength;
+    deform.squeeze(a.x, a.y, b.x, b.y, amount, CONFIG.gesture.crush.band / CONFIG.faceExtent);
+  }
+  wasCrushing = crushing;
+
   for (const hand of hands) {
+    // A hand taking part in a squeeze is not also emptying a bucket.
+    if (crushing && hand.pose === 'open') { strokeFrom.delete(hand.id); continue; }
     if (ui.hitTest(hand.x, hand.y)) { strokeFrom.delete(hand.id); continue; }
     act(hand, now);
   }
@@ -338,6 +394,7 @@ function loop(now) {
 
 function legend(hands) {
   const live = new Set(hands.filter((h) => h.armed).map((h) => h.pose));
+  if (crushing) { live.add('crush'); live.delete('open'); }
   for (const pose of Object.keys(POSES)) {
     el(`g-${pose}`)?.classList.toggle('on', live.has(pose));
   }
@@ -347,7 +404,15 @@ function legend(hands) {
 
 function layout() {
   if (!W) return;
-  const scale = Math.min(window.innerWidth / W, (window.innerHeight - 150) / H);
+  // Measure the space the layout actually left, rather than guessing at how
+  // much chrome is above and below. On a phone that guess was always wrong.
+  const stage = el('stage');
+  const box = stage.getBoundingClientRect();
+  const avail = {
+    w: box.width || window.innerWidth,
+    h: box.height || window.innerHeight * 0.6,
+  };
+  const scale = Math.max(0.05, Math.min(avail.w / W, avail.h / H));
   for (const c of [gl, hud]) {
     c.style.width = `${Math.floor(W * scale)}px`;
     c.style.height = `${Math.floor(H * scale)}px`;
@@ -480,6 +545,7 @@ window.addEventListener('keydown', (e) => {
 });
 
 window.addEventListener('resize', layout);
+window.addEventListener('orientationchange', () => setTimeout(layout, 250));
 el('start').addEventListener('click', start);
 el('retry').addEventListener('click', start);
 el('save').addEventListener('click', save);

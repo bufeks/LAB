@@ -72,6 +72,22 @@ export const CONFIG = {
     speed: { fist: 17, open: 22, point: 6, pinch: 2 },
     // ms before the same hand may fire the same one-shot again.
     cooldown: { fist: 300, open: 1200 },
+
+    // Two open palms closing on the head. Taking precedence over the slap is
+    // the whole trick: both are open hands in motion, and what separates them
+    // is whether they are travelling towards each other or towards the face.
+    crush: {
+      closeSpeed: 5,     // px/frame the gap has to be shrinking by
+      maxGap: 5.5,       // and how near, in eye-distances, before it counts
+      strength: 0.5,     // how much of the closing is transferred
+      band: 1.5,         // reach either side of the line between the hands
+      bulge: 0.45,       // how much the squeezed material swells sideways
+    },
+
+    // A pinch grabs more when the hand is nearer the camera than the face,
+    // which is the only handle on grab size that needs no UI at all.
+    handRefSpan: 1.4,    // hand span, in eye-distances, that means "normal"
+    handGrab: [0.6, 2.2],
   },
 
   // --- look -----------------------------------------------------------------
@@ -165,6 +181,7 @@ export const CONFIG = {
 };
 
 export const POSES = {
+  crush: { id: 'crush', label: '潰す', en: 'CRUSH' },
   fist: { id: 'fist', label: 'ぶつける', en: 'THROW' },
   point: { id: 'point', label: '塗る', en: 'PAINT' },
   open: { id: 'open', label: 'ぶちまける', en: 'POUR' },
