@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>Face Paint — webcam installation demo</title>
+<link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <div id="stage">
+    <video id="video" playsinline muted autoplay></video>
+    <canvas id="view"></canvas>
+  </div>
+
+  <div id="boot" class="overlay">
+    <div class="panel">
+      <h1>Face Paint</h1>
+      <p>Webカメラに映った自分の顔に、手でペイントするインスタレーションのデモです。</p>
+      <ul class="how">
+        <li><b>親指と人差し指をつまむ</b>と、その位置にペイントされます</li>
+        <li>画面左の色、下のツールも<b>つまんで</b>選べます</li>
+        <li>ペイントは顔に貼りつき、顔を動かしても一緒に動きます</li>
+      </ul>
+      <button id="start">カメラを許可して開始</button>
+      <p class="note">映像・ペイントはすべてブラウザ内で処理され、どこにも送信されません。</p>
+    </div>
+  </div>
+
+  <div id="error" class="overlay hidden">
+    <div class="panel">
+      <h1>起動できませんでした</h1>
+      <p id="error-msg"></p>
+      <button id="retry">再試行</button>
+    </div>
+  </div>
+
+  <div id="hud">
+    <span id="fps">–</span>
+    <span id="hint"></span>
+  </div>
+
+  <script type="module" src="./src/main.js"></script>
+</body>
+</html>

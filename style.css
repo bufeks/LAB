@@ -1,0 +1,106 @@
+:root {
+  color-scheme: dark;
+  --ink: #f2f3f5;
+  --muted: #9aa0a6;
+  --bg: #0b0c0e;
+  --accent: #4de2c2;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  height: 100%;
+  background: var(--bg);
+  color: var(--ink);
+  font: 14px/1.6 system-ui, -apple-system, "Hiragino Sans", "Noto Sans JP", sans-serif;
+  overflow: hidden;
+}
+
+#stage {
+  position: fixed;
+  inset: 0;
+  display: grid;
+  place-items: center;
+}
+
+/* The video is only a texture source; everything visible is drawn on the canvas. */
+#video {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+#view {
+  display: block;
+  background: #000;
+  border-radius: 6px;
+  touch-action: none;
+  cursor: crosshair;
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  background: radial-gradient(120% 120% at 50% 0%, #16181c 0%, #0b0c0e 70%);
+  z-index: 10;
+}
+
+.overlay.hidden { display: none; }
+
+.panel {
+  max-width: 460px;
+  text-align: left;
+}
+
+.panel h1 {
+  margin: 0 0 12px;
+  font-size: 28px;
+  letter-spacing: 0.02em;
+}
+
+.panel p { color: var(--muted); margin: 0 0 12px; }
+
+.how {
+  margin: 0 0 20px;
+  padding-left: 18px;
+  color: var(--muted);
+}
+
+.how b { color: var(--ink); font-weight: 600; }
+
+button {
+  appearance: none;
+  border: 0;
+  border-radius: 999px;
+  padding: 12px 22px;
+  font: inherit;
+  font-weight: 600;
+  color: #06231d;
+  background: var(--accent);
+  cursor: pointer;
+}
+
+button:hover { filter: brightness(1.08); }
+
+.note { font-size: 12px; margin-top: 16px; }
+
+#hud {
+  position: fixed;
+  top: 10px;
+  right: 12px;
+  display: flex;
+  gap: 12px;
+  font-size: 12px;
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+  pointer-events: none;
+  z-index: 5;
+}
+
+#hud.hidden { display: none; }
