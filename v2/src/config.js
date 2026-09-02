@@ -98,6 +98,22 @@ export const CONFIG = {
   speckRadius: 2.6,  // below this a mark is a crisp speck, not a soft stamp
   spatter: 1,          // multiplier on how many droplets fly
 
+  // Runs are not placed: they form wherever paint has piled up and found a
+  // lower edge to fall off, and they carry the colour that is already there.
+  drip: {
+    seedEveryNFrames: 7,
+    perSeed: 3,
+    // Only paint fresh enough to still be moving starts new runs. Runs of
+    // their own keep the layer damp, and without this floor they would go on
+    // seeding each other indefinitely.
+    seedWetness: 8,
+    maxRuns: 80,
+    minMass: 0.28,     // how much paint has to be stacked above an edge
+    hang: [0.12, 0.75],  // seconds a bead swells before it lets go
+    gravity: 620,      // ink-canvas px per second squared
+    maxSpeed: 240,
+  },
+
   // Paint belongs on the body. Anything thrown past it misses and is simply
   // not there, rather than landing on the paper behind.
   inkOnBodyOnly: true,

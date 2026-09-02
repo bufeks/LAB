@@ -282,17 +282,62 @@ export class Ink {
   }
 
   #run(x, y, color, width, length) {
+    const w = Math.max(1.5, width);
+    const D = CONFIG.drip;
     this.runs.push({
-      x, y, color,
-      w: Math.max(1.5, width),
+      x, y, color, w,
+      // A bead has to swell before it lets go; that pause is most of what
+      // makes a run read as liquid rather than as a line being drawn.
+      hang: D.hang[0] + this.rand() * (D.hang[1] - D.hang[0]),
+      bead: 0,
+      v: 0,
       travelled: 0,
-      length,
-      speed: 22 + this.rand() * 80,
-      // A run never falls dead straight; the wobble is what makes it read as
-      // liquid finding its way rather than a drawn line.
+      // What is left to lay down. A run thins as it spends this, and stops
+      // when it is gone, so fatter runs also go further.
+      vol0: w * length,
+      vol: w * length,
+      // A run never falls dead straight.
       phase: this.rand() * Math.PI * 2,
-      wobble: width * (0.5 + this.rand() * 1.4),
+      wobble: w * (0.5 + this.rand() * 1.4),
     });
+  }
+
+  // Runs are seeded from the layer itself: any lower edge with enough paint
+  // stacked above it is somewhere a drip could start. That is what puts them
+  // along the jaw rather than only where the last mark happened to land.
+  #seedRuns() {
+    const d = this.probeData;
+    const D = CONFIG.drip;
+    if (!d || this.wet < D.seedWetness || this.runs.length >= D.maxRuns) return;
+
+    const a = d.data;
+    const alpha = (x, y) => a[(y * PROBE + x) * 4 + 3];
+    const candidates = [];
+
+    for (let y = 7; y < PROBE - 2; y++) {
+      for (let x = 1; x < PROBE - 1; x++) {
+        if (alpha(x, y) < 140) continue;
+        if (alpha(x, y + 1) > 90) continue;     // not a lower edge
+        let mass = 0;
+        for (let k = 1; k <= 6; k++) mass += alpha(x, y - k);
+        mass /= 6 * 255;
+        if (mass < D.minMass) continue;
+        candidates.push({ x, y, mass });
+      }
+    }
+    if (!candidates.length) return;
+
+    const n = Math.min(D.perSeed, D.maxRuns - this.runs.length);
+    const sx = this.canvas.width / PROBE;
+    const sy = this.canvas.height / PROBE;
+    for (let i = 0; i < n; i++) {
+      const c = candidates[Math.floor(this.rand() * candidates.length)];
+      const k = (c.y * PROBE + c.x) * 4;
+      const colour = `#${((1 << 24) | (a[k] << 16) | (a[k + 1] << 8) | a[k + 2]).toString(16).slice(1)}`;
+      const w = (1.6 + c.mass * 7 * this.rand()) * (sx / 8);
+      const len = this.canvas.height * c.mass * (0.05 + this.rand() * 0.2);
+      this.#run((c.x + 0.5) * sx, (c.y + 0.5) * sy, colour, w, len);
+    }
   }
 
   #wetten() {
@@ -304,34 +349,42 @@ export class Ink {
   // since the last one, so the trail is the drawing.
   update(dt) {
     this.tick++;
-    if (this.runs.length) {
-      for (const run of this.runs) {
-        const step = Math.min(run.speed * dt, run.length - run.travelled);
-        if (step <= 0) { run.done = true; continue; }
+    if (this.tick % CONFIG.drip.seedEveryNFrames === 0) this.#seedRuns();
 
+    if (this.runs.length) {
+      const D = CONFIG.drip;
+      for (const run of this.runs) {
+        // Swelling at the edge, not yet moving.
+        if (run.hang > 0) {
+          run.hang -= dt;
+          run.bead = Math.min(1, run.bead + dt * 2.2);
+          this.#stamp(run.x, run.y, run.w * (0.7 + run.bead * 0.7), run.color);
+          continue;
+        }
+
+        run.v = Math.min(D.maxSpeed, run.v + D.gravity * dt);
+        const step = run.v * dt;
         const from = run.travelled;
         const to = from + step;
-        const p = from / run.length;
-        // A run thins as it goes but keeps a fat head of wet paint.
-        const w = run.w * (1 - p * 0.55);
+
+        // A run thins as it spends what it is carrying, but keeps a fat head.
+        const w = Math.max(0.8, run.w * (0.3 + 0.7 * (run.vol / run.vol0)));
         const stamps = Math.max(1, Math.ceil(step / (w * 0.5)));
 
         for (let i = 1; i <= stamps; i++) {
           const d = from + (step * i) / stamps;
-          const x = run.x + Math.sin(d * 0.035 + run.phase) * run.wobble;
+          const x = run.x + Math.sin(d * 0.03 + run.phase) * run.wobble;
           this.#stamp(x, run.y + d, w, run.color);
         }
 
-        const headX = run.x + Math.sin(to * 0.035 + run.phase) * run.wobble;
-        this.#stamp(headX, run.y + to, w * 1.25, run.color);
+        const headX = run.x + Math.sin(to * 0.03 + run.phase) * run.wobble;
+        this.#stamp(headX, run.y + to, w * 1.3, run.color);
 
         run.travelled = to;
-        // Gravity pulls, surface tension holds it back; it always stalls.
-        run.speed *= 0.985;
-        if (run.travelled >= run.length || run.speed < 3
-            || run.y + to > this.canvas.height + 20) {
-          // The pendant drop left hanging at the end.
-          this.#stamp(headX, run.y + to + w * 0.4, w * 1.7, run.color);
+        run.vol -= step * w;
+        if (run.vol <= 0 || run.y + to > this.canvas.height + 20) {
+          // The pendant drop left hanging where it ran out.
+          this.#stamp(headX, run.y + to + w * 0.5, w * 1.8, run.color);
           run.done = true;
         }
       }
