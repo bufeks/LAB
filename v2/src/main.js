@@ -172,23 +172,28 @@ function act(hand, now) {
     }
 
     case 'fist':
-      // One swing of the fist, one blot, landing a little ahead of it.
+      // One swing of the fist, one blot, landing just ahead of the knuckles.
       if (!hand.struck) break;
       if (!ready(now, hand.id, 'fist', CONFIG.gesture.cooldown.fist)) break;
       snapshot();
       {
-        const lead = face.toInk(hand.x + hand.vx * 2.5, hand.y + hand.vy * 2.5, W, H);
-        ink.splat(lead.x, lead.y, colorHex(), brush(),
-          { x: lead.x - inkPt.x, y: lead.y - inkPt.y });
+        const lead = CONFIG.gesture.lead;
+        const at = face.toInk(hand.rawX + hand.vx * lead, hand.rawY + hand.vy * lead, W, H);
+        const next = face.toInk(hand.rawX + hand.vx * (lead + 1), hand.rawY + hand.vy * (lead + 1), W, H);
+        ink.splat(at.x, at.y, colorHex(), brush(), { x: next.x - at.x, y: next.y - at.y });
       }
       break;
 
     case 'open':
-      // An open hand has to be slapped forward to empty the bucket.
+      // An open hand has to be slapped forward to empty the bucket, and it
+      // lands under the palm, not behind it.
       if (!hand.struck) break;
       if (!ready(now, hand.id, 'open', CONFIG.gesture.cooldown.open)) break;
       snapshot();
-      ink.pour(inkPt.x, inkPt.y, colorHex(), brush() * 1.4);
+      {
+        const at = face.toInk(hand.rawX, hand.rawY, W, H);
+        ink.pour(at.x, at.y, colorHex(), brush() * 1.4);
+      }
       break;
 
     default:

@@ -63,6 +63,11 @@ export const CONFIG = {
     armFrames: 8,         // and then this long before it may act at all
     smoothing: 0.45,
 
+    // How far ahead of the hand a thrown blot lands, in frames of travel.
+    // Smoothed positions lag, so impacts are taken from the raw anchor and
+    // this is all the lead there is.
+    lead: 0.5,
+
     // px/frame of hand travel each action demands.
     speed: { fist: 17, open: 22, point: 6, pinch: 2 },
     // ms before the same hand may fire the same one-shot again.

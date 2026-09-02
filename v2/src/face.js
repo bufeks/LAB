@@ -2,8 +2,14 @@ import { CONFIG } from './config.js';
 
 // Stable landmarks: the outer eye corners set rotation and scale, the bridge
 // of the nose sets the origin.
-const EYE_L = 33;
-const EYE_R = 263;
+//
+// The landmarks arrive mirrored, so 33 - the outer corner of the visitor's
+// right eye - is the one on the RIGHT of the display, and 263 is on the left.
+// Taking the axis in that order makes the frame's x run the same way as the
+// screen's, and therefore its y point down. Get this backwards and runs fall
+// upwards.
+const EYE_SCREEN_LEFT = 263;
+const EYE_SCREEN_RIGHT = 33;
 const NASION = 168;
 
 // Corner pairs for each eye: [outer, inner].
@@ -47,8 +53,8 @@ export class FaceFrame {
       }
     }
 
-    const l = this.pts[EYE_L];
-    const r = this.pts[EYE_R];
+    const l = this.pts[EYE_SCREEN_LEFT];
+    const r = this.pts[EYE_SCREEN_RIGHT];
     const s = Math.hypot(r.x - l.x, r.y - l.y) || 1e-4;
     this.scale = s;
     this.axisU = { x: (r.x - l.x) / s, y: (r.y - l.y) / s };

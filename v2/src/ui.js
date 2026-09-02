@@ -175,6 +175,22 @@ export class UI {
       ctx.fill();
     }
 
+    // Where the tool actually acts. Without it the visitor has to guess
+    // which part of their hand the piece is aiming from.
+    if (hand.armed) {
+      const a = hand.rawX !== undefined ? { x: hand.rawX, y: hand.rawY } : hand;
+      ctx.globalAlpha = 1;
+      ctx.lineWidth = 2.5;
+      ctx.strokeStyle = '#f5f2ea';
+      ctx.beginPath();
+      ctx.arc(a.x, a.y, w * 0.5, 0, Math.PI * 2);
+      ctx.stroke();
+      ctx.fillStyle = color;
+      ctx.beginPath();
+      ctx.arc(a.x, a.y, w * 0.2, 0, Math.PI * 2);
+      ctx.fill();
+    }
+
     const pose = hand.armed ? POSES[hand.pose] : null;
     if (pose) {
       ctx.globalAlpha = 1;

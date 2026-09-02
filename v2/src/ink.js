@@ -173,8 +173,8 @@ export class Ink {
 
     const count = Math.round((120 + r() * 120) * CONFIG.spatter);
     for (let i = 0; i < count; i++) {
-      const t = Math.pow(r(), 0.55);
-      const d = size * (0.4 + t * (3.2 + speed * 7));
+      const t = Math.pow(r(), 1.4);
+      const d = size * (0.35 + t * (2.6 + speed * 5));
       const lat = (r() - 0.5) * size * (0.4 + t * 1.9) * (speed > 0.05 ? 1.15 : 3.4);
       const px = x + Math.cos(ang) * d - Math.sin(ang) * lat;
       const py = y + Math.sin(ang) * d + Math.cos(ang) * lat;

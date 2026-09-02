@@ -111,6 +111,10 @@ export class Gestures {
         moving: fast,
         struck,
         x: s.x, y: s.y, vx: s.vx, vy: s.vy,
+        // Where the hand actually is this frame. Smoothing is right for
+        // dragging a finger, but a one-shot impact wants the truth: at throw
+        // speed the smoothed point trails the hand by a visible margin.
+        rawX: anchor.x, rawY: anchor.y,
         speed,
         span,
         points: px,
@@ -124,7 +128,7 @@ export class Gestures {
       if (s.pose !== 'idle') {
         out.push({
           id, pose: 'idle', entered: true, armed: false, moving: false, struck: false,
-          x: s.x, y: s.y, vx: 0, vy: 0, speed: 0, span: 1, points: null,
+          x: s.x, y: s.y, rawX: s.x, rawY: s.y, vx: 0, vy: 0, speed: 0, span: 1, points: null,
         });
       }
     }
