@@ -9,21 +9,61 @@
 <body>
   <video id="video" playsinline muted autoplay></video>
 
+  <svg class="sprite" aria-hidden="true">
+    <!-- Four hand schematics. A finger drawn to the top of the box is out,
+         a stub is curled; the arrow shows the motion the pose needs. -->
+    <symbol id="i-fist" viewBox="0 0 32 32">
+      <rect x="9" y="15" width="15" height="13" rx="5.5" />
+      <path d="M12 16v-3M16 16v-3.5M20 16v-3.5M23.5 17v-3M9 20l-4-3" />
+      <path d="M3 9l6 2-2.2 2.2" fill="none" />
+    </symbol>
+    <symbol id="i-point" viewBox="0 0 32 32">
+      <rect x="9" y="15" width="15" height="13" rx="5.5" />
+      <path d="M12 16V4M16 16v-3.5M20 16v-3.5M23.5 17v-3M9 20l-4-3" />
+    </symbol>
+    <symbol id="i-open" viewBox="0 0 32 32">
+      <rect x="9" y="16" width="15" height="12" rx="5.5" />
+      <path d="M11.5 17V6M15.5 17V4M19.5 17V4.5M23 18V7M9.5 21L4 15" />
+    </symbol>
+    <symbol id="i-pinch" viewBox="0 0 32 32">
+      <rect x="10" y="17" width="14" height="11" rx="5" />
+      <path d="M13 18l3-8M10 20l3-7" />
+      <circle cx="16.5" cy="9" r="1.6" fill="currentColor" stroke="none" />
+      <path d="M21 8h6M24.5 5l3 3-3 3" fill="none" />
+    </symbol>
+  </svg>
+
   <div id="shell" class="hidden">
     <div id="hud-bar">
       <span class="mark">BREAK TO CREATE.</span>
+      <span id="hint"></span>
       <span id="fps">–</span>
     </div>
+
     <div id="stage">
-      <canvas id="preview" class="hidden"></canvas>
-      <canvas id="gl" class="hidden"></canvas>
-      <canvas id="hud" class="hidden"></canvas>
-      <div id="flash"></div>
+      <canvas id="gl"></canvas>
+      <canvas id="hud"></canvas>
     </div>
-    <div id="capture-ui" class="hidden">
-      <div id="count"></div>
-      <p id="capture-hint">顔をカメラに写してください</p>
-      <button id="shutter" class="ghost">いま撮る</button>
+
+    <!-- The explanation stays on screen: the active pose lights up, so the
+         guide doubles as feedback that the camera has understood you. -->
+    <div id="guide">
+      <div class="g" id="g-fist">
+        <svg class="ico"><use href="#i-fist" /></svg>
+        <b>ぶつける</b><span>握って振る</span>
+      </div>
+      <div class="g" id="g-point">
+        <svg class="ico"><use href="#i-point" /></svg>
+        <b>塗る</b><span>人差し指1本</span>
+      </div>
+      <div class="g" id="g-open">
+        <svg class="ico"><use href="#i-open" /></svg>
+        <b>ぶちまける</b><span>手を開く</span>
+      </div>
+      <div class="g" id="g-pinch">
+        <svg class="ico"><use href="#i-pinch" /></svg>
+        <b>歪ませる</b><span>つまんで引く</span>
+      </div>
     </div>
   </div>
 
@@ -31,14 +71,27 @@
     <div class="panel">
       <h1>BREAK<br />TO<br />CREATE.</h1>
       <p class="lede">DESTROY THE OLD SELF.<br />DISCOVER THE NEW YOU.</p>
-      <p>生成された自分の胸像に触れ、壊し、塗り替えることで殻を破り、新たな自分の形を見出す体験。</p>
-      <ol class="flow">
-        <li>自分の胸像が生成される</li>
-        <li>触れる / 動かす</li>
-        <li>インクをぶつける / 塗る / 流す</li>
-        <li>破壊と再構築を繰り返す</li>
-        <li>新しい自分のかたちが立ち上がる</li>
-      </ol>
+      <p>映し出された自分自身に触れ、壊し、塗り替えることで殻を破り、新たな自分の形を見出す体験。
+        道具はありません。<b>手のかたちがそのまま道具になります。</b></p>
+
+      <ul class="gestures">
+        <li><svg class="ico"><use href="#i-fist" /></svg>
+          <b>ぶつける</b><em>手を握って振る</em>
+          <span>インク玉が飛び、勢いの向きに飛沫が伸びる</span></li>
+        <li><svg class="ico"><use href="#i-point" /></svg>
+          <b>塗る</b><em>人差し指を1本立てる</em>
+          <span>指先でなぞったところに絵の具が乗る</span></li>
+        <li><svg class="ico"><use href="#i-open" /></svg>
+          <b>ぶちまける</b><em>手をぱっと開く</em>
+          <span>バケツ1杯分が落ち、幾筋も垂れていく</span></li>
+        <li><svg class="ico"><use href="#i-pinch" /></svg>
+          <b>歪ませる</b><em>つまんで引っぱる</em>
+          <span>粘土のように顔が引きずられる。乗っているインクも一緒に伸びる</span></li>
+      </ul>
+
+      <p class="aside">色と太さは、左と下のパネルに<b>手をしばらく重ねる</b>と選べます。
+        どれだけ壊しても<b>目だけは潰れません</b>。</p>
+
       <button id="start">カメラを許可して開始</button>
       <p class="note">映像はすべてブラウザ内で処理され、どこにも送信されません。</p>
     </div>
@@ -61,9 +114,9 @@
       <h2>NEW SELF.</h2>
       <p>破壊の先にある、自分だけのかたち。</p>
       <div class="transform">
-        <figure><img id="before" alt="破壊する前の胸像" /><figcaption>OLD SELF</figcaption></figure>
+        <figure><img id="before" alt="壊す前の姿" /><figcaption>OLD SELF</figcaption></figure>
         <span class="arrow">→</span>
-        <figure><img id="after" alt="破壊したあとの胸像" /><figcaption>NEW SELF</figcaption></figure>
+        <figure><img id="after" alt="壊したあとの姿" /><figcaption>NEW SELF</figcaption></figure>
       </div>
       <div class="row">
         <button id="save">画像を保存</button>

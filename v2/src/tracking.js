@@ -1,15 +1,18 @@
 import { CONFIG } from './config.js';
 
-// Face landmarks frame the shot, hand landmarks drive the interaction, and the
-// segmenter cuts the visitor out of their background exactly once, at capture.
-// Everything handed back is already mirrored.
+// Face landmarks anchor everything, hand landmarks are the only input, and the
+// segmenter lifts the visitor off their background live. Everything handed
+// back is already mirrored, so the rest of the app works in display space.
 export class Tracker {
   constructor() {
     this.face = null;
     this.hands = null;
     this.segmenter = null;
     this.lastVideoTime = -1;
-    this.result = { face: null, hands: [] };
+    this.frame = 0;
+    this.result = { face: null, hands: [], mask: null };
+    this.personLabel = null;
+    this.maskBytes = null;
   }
 
   async init() {
@@ -43,68 +46,89 @@ export class Tracker {
     this.face = built.face;
     this.hands = built.hands;
 
-    // The cut-out is a nicety: if the segmenter will not load, the portrait
-    // falls back to a soft oval and the piece still works.
-    try {
-      this.segmenter = await ImageSegmenter.createFromOptions(fileset, {
-        baseOptions: { modelAssetPath: CONFIG.segmentModel, delegate: 'CPU' },
-        runningMode: 'IMAGE',
-        outputCategoryMask: true,
-        outputConfidenceMasks: false,
-      });
-    } catch (err) {
-      console.warn('Segmenter unavailable; falling back to an oval mask', err);
-      this.segmenter = null;
+    // The cut-out is a nicety. Without it the camera image simply fills the
+    // frame instead of sitting on paper, and everything else still works.
+    if (CONFIG.liveCutout) {
+      try {
+        this.segmenter = await ImageSegmenter.createFromOptions(fileset, {
+          baseOptions: { modelAssetPath: CONFIG.segmentModel, delegate: 'GPU' },
+          runningMode: 'VIDEO',
+          outputCategoryMask: true,
+          outputConfidenceMasks: false,
+        });
+      } catch (err) {
+        console.warn('Segmenter unavailable; running without the cut-out', err);
+        this.segmenter = null;
+      }
     }
   }
 
-  detect(video, wantFace, wantHands) {
+  detect(video) {
     if (video.currentTime === this.lastVideoTime) return this.result;
     this.lastVideoTime = video.currentTime;
+    this.frame++;
 
     const ts = performance.now();
-    const out = { face: null, hands: [] };
+    const faceOut = this.face.detectForVideo(video, ts);
+    const handOut = this.hands.detectForVideo(video, ts);
 
-    if (wantFace) {
-      const r = this.face.detectForVideo(video, ts);
-      out.face = r.faceLandmarks?.[0] ? mirror(r.faceLandmarks[0]) : null;
-    }
-    if (wantHands) {
-      const r = this.hands.detectForVideo(video, ts);
-      out.hands = (r.landmarks ?? []).map((lm, i) => ({
+    const face = faceOut.faceLandmarks?.[0] ? mirror(faceOut.faceLandmarks[0]) : null;
+
+    this.result = {
+      face,
+      hands: (handOut.landmarks ?? []).map((lm, i) => ({
         landmarks: mirror(lm),
-        id: r.handedness?.[i]?.[0]?.categoryName ?? `hand${i}`,
-      }));
-    }
-
-    this.result = out;
-    return out;
+        id: handOut.handedness?.[i]?.[0]?.categoryName ?? `hand${i}`,
+      })),
+      // Segmentation is the expensive one, so it runs at a fraction of the
+      // rate; the silhouette moves slowly enough that nobody can tell.
+      mask: this.frame % CONFIG.cutoutEveryNFrames === 0
+        ? this.#segment(video, ts, face) ?? this.result.mask
+        : this.result.mask,
+    };
+    return this.result;
   }
 
-  // Returns { data, width, height, personLabel } or null. The source must
-  // already be mirrored, because the mask is used against a mirrored frame.
-  segment(source, probe) {
+  #segment(video, ts, face) {
     if (!this.segmenter) return null;
-    let out = null;
     try {
-      const res = this.segmenter.segment(source);
-      const mask = res.categoryMask;
-      if (mask) {
-        const data = Uint8Array.from(mask.getAsUint8Array());
-        const { width, height } = mask;
-        // Which label means "person" is not guaranteed, so read it off the
-        // pixel we know is on the visitor: the middle of their face.
-        const px = Math.min(width - 1, Math.max(0, Math.round(probe.x * width)));
-        const py = Math.min(height - 1, Math.max(0, Math.round(probe.y * height)));
-        out = { data, width, height, personLabel: data[py * width + px] };
-        mask.close();
+      const res = this.segmenter.segmentForVideo(video, ts);
+      const mask = res?.categoryMask;
+      if (!mask) return null;
+
+      const data = mask.getAsUint8Array();
+      const { width, height } = mask;
+
+      // Which label means "person" is not guaranteed, so read it off a pixel
+      // we know is on the visitor: the tip of their nose. The landmark is
+      // mirrored and the mask is not, hence the flip.
+      if (face) {
+        const p = face[1] ?? face[0];
+        const px = clampIndex((1 - p.x) * width, width);
+        const py = clampIndex(p.y * height, height);
+        this.personLabel = data[py * width + px];
       }
+      if (this.personLabel === null) return null;
+
+      if (!this.maskBytes || this.maskBytes.length !== data.length) {
+        this.maskBytes = new Uint8Array(data.length);
+      }
+      for (let i = 0; i < data.length; i++) {
+        this.maskBytes[i] = data[i] === this.personLabel ? 255 : 0;
+      }
+      mask.close();
       res.close?.();
+      return { data: this.maskBytes, width, height };
     } catch (err) {
-      console.warn('segmentation failed', err);
+      console.warn('segmentation failed; continuing without it', err);
+      this.segmenter = null;
+      return null;
     }
-    return out;
   }
+}
+
+function clampIndex(v, size) {
+  return Math.min(size - 1, Math.max(0, Math.round(v)));
 }
 
 function mirror(landmarks) {

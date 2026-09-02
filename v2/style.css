@@ -19,14 +19,28 @@ html, body {
 }
 
 .hidden { display: none !important; }
+.faded { opacity: 0; }
 
 #video { position: absolute; width: 1px; height: 1px; opacity: 0; pointer-events: none; }
+
+.sprite { position: absolute; width: 0; height: 0; }
+
+.ico {
+  width: 30px;
+  height: 30px;
+  flex: none;
+  stroke: currentColor;
+  stroke-width: 2.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none;
+}
 
 #shell {
   position: fixed;
   inset: 0;
   display: grid;
-  grid-template-rows: 44px 1fr auto;
+  grid-template-rows: 40px 1fr auto;
   background: var(--navy);
 }
 
@@ -34,14 +48,17 @@ html, body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 16px;
   padding: 0 18px;
   font-size: 12px;
-  letter-spacing: 0.18em;
+  letter-spacing: 0.16em;
   color: rgba(245, 242, 234, 0.65);
   font-variant-numeric: tabular-nums;
+  transition: opacity 0.25s;
 }
 
 .mark { font-weight: 800; letter-spacing: 0.24em; color: var(--ink); }
+#hint { letter-spacing: 0.04em; }
 
 #stage {
   position: relative;
@@ -55,12 +72,11 @@ html, body {
   display: block;
 }
 
-/* Only the image layers get a ground and a shadow. #hud is stacked on top of
+/* Only the image layer gets a ground and a shadow. #hud is stacked on top of
    #gl, so giving it either would paint over the artwork. */
-#preview,
 #gl {
   background: #000;
-  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.55);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.55);
 }
 
 #hud {
@@ -69,38 +85,34 @@ html, body {
   cursor: crosshair;
 }
 
-#flash {
-  grid-area: 1 / 1;
-  align-self: stretch;
-  justify-self: stretch;
-  background: #fff;
-  opacity: 0;
-  pointer-events: none;
+#guide {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 12px 14px 18px;
+  transition: opacity 0.25s;
 }
 
-#flash.fire { animation: flash 0.42s ease-out; }
-
-@keyframes flash {
-  0% { opacity: 0.95; }
-  100% { opacity: 0; }
+#guide .g {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 8px 14px 8px 11px;
+  border: 1px solid rgba(245, 242, 234, 0.2);
+  border-radius: 3px;
+  color: rgba(245, 242, 234, 0.55);
+  transition: color 0.15s, border-color 0.15s, background 0.15s;
 }
 
-#capture-ui {
-  display: grid;
-  justify-items: center;
-  gap: 8px;
-  padding: 14px 0 22px;
-}
+#guide .g b { font-size: 13px; letter-spacing: 0.06em; }
+#guide .g span { font-size: 11px; opacity: 0.75; }
 
-#count {
-  font-size: 44px;
-  font-weight: 800;
-  line-height: 1;
-  min-height: 44px;
-  letter-spacing: 0.04em;
+/* The pose the camera can currently see. */
+#guide .g.on {
+  color: #0a1436;
+  background: var(--paper);
+  border-color: var(--paper);
 }
-
-#capture-hint { margin: 0; color: rgba(245, 242, 234, 0.7); }
 
 .overlay {
   position: fixed;
@@ -109,19 +121,19 @@ html, body {
   display: grid;
   place-items: center;
   padding: 28px;
+  overflow: auto;
   background:
     radial-gradient(120% 100% at 20% 0%, #123 0%, transparent 60%),
     var(--navy-deep);
 }
 
-.panel { max-width: 520px; }
+.panel { max-width: 560px; }
 .panel.wide { max-width: 940px; text-align: center; }
 
 h1 {
   margin: 0 0 18px;
-  font-size: clamp(44px, 8vw, 86px);
+  font-size: clamp(40px, 7vw, 78px);
   line-height: 0.92;
-  letter-spacing: 0.01em;
   font-weight: 900;
   font-style: italic;
 }
@@ -144,11 +156,40 @@ h2 {
 }
 
 .panel p { color: rgba(245, 242, 234, 0.72); margin: 0 0 14px; }
+.panel p b { color: var(--ink); font-weight: 700; }
 
-.flow {
-  margin: 0 0 24px;
-  padding-left: 20px;
-  color: rgba(245, 242, 234, 0.72);
+.gestures {
+  list-style: none;
+  margin: 0 0 18px;
+  padding: 0;
+  display: grid;
+  gap: 2px;
+}
+
+.gestures li {
+  display: grid;
+  grid-template-columns: 30px 5.5em 1fr;
+  align-items: center;
+  gap: 12px;
+  padding: 9px 12px;
+  border-left: 2px solid rgba(245, 242, 234, 0.18);
+}
+
+.gestures b { font-size: 15px; }
+.gestures em { font-style: normal; font-size: 12px; color: rgba(245, 242, 234, 0.6); }
+.gestures li span {
+  grid-column: 2 / -1;
+  font-size: 12px;
+  color: rgba(245, 242, 234, 0.62);
+}
+
+.gestures li em { grid-column: 2; }
+.gestures li b { grid-column: 2; }
+
+.aside {
+  font-size: 13px;
+  border-top: 1px solid rgba(245, 242, 234, 0.15);
+  padding-top: 14px;
 }
 
 .transform {
@@ -202,3 +243,9 @@ button.ghost {
 button.ghost:hover { background: rgba(245, 242, 234, 0.1); }
 
 .note { font-size: 12px; margin-top: 16px; }
+
+@media (max-width: 780px) {
+  #guide .g span { display: none; }
+  .gestures li { grid-template-columns: 26px 1fr; }
+  .gestures li b, .gestures li em, .gestures li span { grid-column: 2; }
+}
