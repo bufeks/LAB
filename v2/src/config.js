@@ -39,9 +39,10 @@ export const CONFIG = {
   eyeGuard: {
     rx: 1.08, ry: 0.8, soft: 0.86,
     deform: 0.15, deformScale: 1.75,
-    // Inside the guard the eye is pushed towards a clean white and a dark
-    // iris, so it reads through everything happening around it.
-    punch: 2.6, lift: 0.03,
+    // Local contrast around the eye, in colour. Replacing it with grey read
+    // as a dead patch stuck on the face; this only separates the white from
+    // the iris and fades out well before the guard edge.
+    punch: 1.8, lift: 0.02, gradeFrom: 0.30, gradeTo: 1.15,
   },
 
   deformGrid: 192,
@@ -73,7 +74,7 @@ export const CONFIG = {
   // head read through the pigment, `relief` is the bevel of the paint's own
   // edge, `formRelief` bends the highlight around the skull, and `gloss` is
   // how wet it looks.
-  paint: { form: 0.85, relief: 26, formRelief: 3.2, gloss: 0.8, shadow: 0.42,
+  paint: { form: 0.85, relief: 18, formRelief: 3.2, gloss: 0.8, shadow: 0.42,
            faceRelief: 1.15, sculpt: 0.55 },
 
   // Resolution of the depth map recovered from the face landmarks, and the
@@ -84,7 +85,18 @@ export const CONFIG = {
   // Fresh paint keeps creeping into itself for a while, then sets. This is
   // what makes neighbouring colours bleed together instead of stacking.
   bleedEveryNFrames: 4,
-  bleedRadius: 1.1,
+  bleedRadius: 0.62,   // gentle: a heavier blur eats the fine spatter
+
+  // Wet-on-wet: a mark picks up the colour it lands in and carries it, so
+  // yellow dragged through blue goes green at the meeting instead of simply
+  // covering it.
+  pickup: 0.5,
+  // Mixing happens in density space rather than in RGB. Interpolating RGB
+  // sends yellow through grey on its way to blue; absorbing like pigment
+  // sends it through green, which is what a viewer expects of paint.
+  mixFloor: 0.012,   // keeps a pure channel from having infinite density
+  speckRadius: 2.6,  // below this a mark is a crisp speck, not a soft stamp
+  spatter: 1,          // multiplier on how many droplets fly
 
   // Paint belongs on the body. Anything thrown past it misses and is simply
   // not there, rather than landing on the paper behind.

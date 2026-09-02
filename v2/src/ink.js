@@ -1,19 +1,31 @@
 import { CONFIG } from './config.js';
 
+const SPRITE = 64;
+const SPRITE_CACHE_LIMIT = 192;
+const PROBE = 128;
+
 // The paint layer. Because it lives in the head's own frame it is
 // append-only: marks accumulate, runs keep crawling after the hand has gone,
 // and nothing is ever re-resolved.
 //
-// Everything is laid down with soft-edged stamps rather than hard shapes. The
-// falloff is what lets colours bleed into one another where they overlap, and
-// it is also what the shader reads as thickness when it lights the surface.
+// Marks are stamped, not drawn as shapes. Soft stamps make the masses, whose
+// falloff is what the shader reads as thickness; hard little ones make the
+// spatter. A mark also picks up whatever colour it lands in, and fresh paint
+// keeps creeping into itself until it sets.
 export class Ink {
   constructor(width, height) {
     this.canvas = make(width, height);
     this.ctx = this.canvas.getContext('2d');
     this.scratch = make(width, height);
+
+    // A cheap, coarse copy of the layer, so a brush can ask what colour is
+    // already underneath it without stalling the pipeline on a readback.
+    this.probe = make(PROBE, PROBE);
+    this.probeCtx = this.probe.getContext('2d', { willReadFrequently: true });
+    this.probeData = null;
+
     this.runs = [];
-    this.brushes = new Map();
+    this.sprites = new Map();
     this.wet = 0;
     this.tick = 0;
     this.dirty = true;
@@ -27,6 +39,7 @@ export class Ink {
     this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
     this.runs.length = 0;
     this.wet = 0;
+    this.probeData = null;
     this.dirty = true;
   }
 
@@ -43,104 +56,227 @@ export class Ink {
     this.dirty = true;
   }
 
-  // A soft disc in one colour, rendered once and reused. The plateau keeps
-  // the middle opaque so a mass reads as a coat, while the falloff gives the
-  // wet edge the lighting needs.
-  #brush(color) {
-    let b = this.brushes.get(color);
+  // --- stamps --------------------------------------------------------------
+
+  #sprite(color, hard) {
+    const key = (hard ? 'h' : 's') + color;
+    let b = this.sprites.get(key);
     if (b) return b;
-    const R = 96;
-    b = make(R * 2, R * 2);
+    // Mixing invents colours, so the cache is bounded rather than unbounded.
+    if (this.sprites.size > SPRITE_CACHE_LIMIT) this.sprites.clear();
+
+    const R = SPRITE / 2;
+    b = make(SPRITE, SPRITE);
     const ctx = b.getContext('2d');
     const grad = ctx.createRadialGradient(R, R, 0, R, R, R);
-    grad.addColorStop(0, color);
-    grad.addColorStop(0.62, color);
-    grad.addColorStop(0.86, hexA(color, 0.55));
-    grad.addColorStop(1, hexA(color, 0));
+    if (hard) {
+      grad.addColorStop(0, color);
+      grad.addColorStop(0.74, color);
+      grad.addColorStop(0.92, rgba(color, 0.7));
+      grad.addColorStop(1, rgba(color, 0));
+    } else {
+      grad.addColorStop(0, color);
+      grad.addColorStop(0.6, color);
+      grad.addColorStop(0.85, rgba(color, 0.55));
+      grad.addColorStop(1, rgba(color, 0));
+    }
     ctx.fillStyle = grad;
-    ctx.fillRect(0, 0, R * 2, R * 2);
-    this.brushes.set(color, b);
+    ctx.fillRect(0, 0, SPRITE, SPRITE);
+    this.sprites.set(key, b);
     return b;
   }
 
-  #stamp(x, y, r, color, alpha = 1) {
-    const b = this.#brush(color);
-    this.ctx.globalAlpha = alpha;
-    this.ctx.drawImage(b, x - r, y - r, r * 2, r * 2);
+  #stamp(x, y, r, color, { alpha = 1, hard = false, ang = 0, stretch = 1 } = {}) {
+    const ctx = this.ctx;
+    // A sprite's falloff eats anything this small, leaving specks too faint
+    // to see. Below the threshold a mark is drawn outright.
+    if (r < CONFIG.speckRadius) {
+      ctx.globalAlpha = alpha;
+      ctx.fillStyle = color;
+      ctx.beginPath();
+      if (stretch === 1) {
+        ctx.arc(x, y, r, 0, Math.PI * 2);
+      } else {
+        ctx.ellipse(x, y, r * stretch, r, ang, 0, Math.PI * 2);
+      }
+      ctx.fill();
+      return;
+    }
+
+    const b = this.#sprite(color, hard);
+    ctx.globalAlpha = alpha;
+    if (stretch === 1) {
+      ctx.drawImage(b, x - r, y - r, r * 2, r * 2);
+      return;
+    }
+    // Droplets thrown hard are streaks, not dots.
+    ctx.save();
+    ctx.translate(x, y);
+    ctx.rotate(ang);
+    ctx.scale(stretch, 1);
+    ctx.drawImage(b, -r, -r, r * 2, r * 2);
+    ctx.restore();
   }
 
-  #wetten() {
-    this.wet = Math.min(26, this.wet + 12);
-    this.dirty = true;
+  // --- wet-on-wet ----------------------------------------------------------
+
+  #refreshProbe() {
+    const ctx = this.probeCtx;
+    ctx.globalCompositeOperation = 'copy';
+    ctx.drawImage(this.canvas, 0, 0, PROBE, PROBE);
+    ctx.globalCompositeOperation = 'source-over';
+    this.probeData = ctx.getImageData(0, 0, PROBE, PROBE);
   }
 
-  // A thrown blot: a body of overlapping soft masses, a scatter of satellites
-  // thrown further along the travel, and a couple of runs starting from the
-  // bottom of the mass.
+  // The colour a mark ends up as: its own, pulled towards whatever it landed
+  // in. Quantised, because every distinct result costs a cached sprite.
+  #tint(color, x, y) {
+    const d = this.probeData;
+    if (!d) return color;
+    const px = clampIndex((x / this.canvas.width) * PROBE, PROBE);
+    const py = clampIndex((y / this.canvas.height) * PROBE, PROBE);
+    const i = (py * PROBE + px) * 4;
+    const a = d.data[i + 3] / 255;
+    if (a < 0.06) return color;
+
+    const c = parseInt(color.slice(1), 16);
+    const t = CONFIG.pickup * a;
+    // Averaging how much each channel absorbs, not how much it reflects.
+    // Quantised on the way out: every distinct result costs a cached sprite.
+    const e = CONFIG.mixFloor;
+    const mix = (own, under) => {
+      const dm = -Math.log(own / 255 + e) * (1 - t) - Math.log(under / 255 + e) * t;
+      return Math.round(Math.min(255, Math.max(0, (Math.exp(-dm) - e) * 255)) / 8) * 8;
+    };
+    const r = mix((c >> 16) & 255, d.data[i]);
+    const g = mix((c >> 8) & 255, d.data[i + 1]);
+    const b = mix(c & 255, d.data[i + 2]);
+    return `#${((1 << 24) | (r << 16) | (g << 8) | b).toString(16).slice(1)}`;
+  }
+
+  // --- marks ---------------------------------------------------------------
+
+  // A thrown blot, in the Pollock sense: a small body and a long fan of
+  // droplets, most of them tiny, a few fat, the fast ones drawn out into
+  // streaks along the throw.
   splat(x, y, color, size, dir = null) {
     const r = this.rand;
     const speed = dir ? Math.min(1, Math.hypot(dir.x, dir.y) / 40) : 0;
     const ang = dir && speed > 0.05 ? Math.atan2(dir.y, dir.x) : r() * Math.PI * 2;
+    const c = this.#tint(color, x, y);
 
-    for (let i = 0; i < 7; i++) {
+    for (let i = 0; i < 4; i++) {
       const a = r() * Math.PI * 2;
-      const d = r() * size * 0.4;
-      this.#stamp(
-        x + Math.cos(a) * d + Math.cos(ang) * speed * size * 0.35,
-        y + Math.sin(a) * d + Math.sin(ang) * speed * size * 0.35,
-        size * (0.34 + r() * 0.4), color,
-      );
+      const d = r() * size * 0.34;
+      this.#stamp(x + Math.cos(a) * d, y + Math.sin(a) * d, size * (0.16 + r() * 0.2), c);
     }
 
-    const count = 6 + Math.floor(r() * 9);
+    const count = Math.round((120 + r() * 120) * CONFIG.spatter);
     for (let i = 0; i < count; i++) {
-      const spread = speed > 0.05 ? 1.0 : Math.PI * 2;
-      const a = ang + (r() - 0.5) * spread;
-      const d = size * (0.8 + r() * (2.2 + speed * 3));
-      this.#stamp(x + Math.cos(a) * d, y + Math.sin(a) * d,
-        size * 0.07 * (0.5 + r() * 1.8), color, 0.85);
+      const t = Math.pow(r(), 0.55);
+      const d = size * (0.4 + t * (3.2 + speed * 7));
+      const lat = (r() - 0.5) * size * (0.4 + t * 1.9) * (speed > 0.05 ? 1.15 : 3.4);
+      const px = x + Math.cos(ang) * d - Math.sin(ang) * lat;
+      const py = y + Math.sin(ang) * d + Math.cos(ang) * lat;
+      // A power law, so the fan is mostly specks with the odd fat drop.
+      const rad = Math.max(1.1, size * 0.014 * (1 + Math.pow(r(), 4) * 14));
+      this.#stamp(px, py, rad, c, {
+        hard: true, alpha: 0.75 + r() * 0.25,
+        ang, stretch: 1 + t * speed * 2.4,
+      });
+    }
+
+    const whips = 1 + Math.floor(r() * 3);
+    for (let i = 0; i < whips; i++) {
+      this.#whip(x, y, ang + (r() - 0.5) * 1.1, size * (2.5 + r() * 5), size * 0.09, c);
     }
 
     const runs = 1 + Math.floor(r() * 2);
     for (let i = 0; i < runs; i++) {
-      this.#run(x + (r() - 0.5) * size * 1.1, y + size * 0.7, color,
-        size * (0.13 + r() * 0.16), size * (1.6 + r() * 4));
+      this.#run(x + (r() - 0.5) * size * 1.1, y + size * 0.6, c,
+        size * (0.11 + r() * 0.15), size * (1.6 + r() * 4));
     }
     this.#wetten();
   }
 
-  // A bucket emptied over the head: a broad sheet that coats, and a curtain
-  // of runs off its lower edge.
+  // The flicked line a loaded brush leaves: thinning, wandering, breaking up.
+  #whip(x, y, ang, len, width, color) {
+    const r = this.rand;
+    const steps = Math.round(24 + r() * 34);
+    const step = len / steps;
+    let a = ang;
+    const curve = (r() - 0.5) * 0.06;
+    let px = x;
+    let py = y;
+    for (let i = 0; i < steps; i++) {
+      a += curve;
+      px += Math.cos(a) * step;
+      py += Math.sin(a) * step;
+      if (r() < 0.12) continue;              // the line breaks up as it goes
+      const rad = Math.max(0.9, width * (1 - i / steps) * (0.45 + r() * 0.9));
+      this.#stamp(px, py, rad, color, { hard: true, alpha: 0.85 });
+    }
+  }
+
+  // A bucket emptied over the head: a broad sheet that coats, a curtain of
+  // runs off its lower edge, and a haze of spray around the impact.
   pour(x, y, color, size) {
     const r = this.rand;
+    const c = this.#tint(color, x, y);
     const w = size * 2.1;
+
     for (let i = 0; i < 14; i++) {
       this.#stamp(x + (r() - 0.5) * w, y + (r() - 0.5) * size * 0.7,
-        size * (0.5 + r() * 0.55), color);
+        size * (0.5 + r() * 0.55), c);
     }
+
+    const specks = Math.round(140 * CONFIG.spatter);
+    for (let i = 0; i < specks; i++) {
+      const a = r() * Math.PI * 2;
+      const d = size * (0.9 + Math.pow(r(), 0.6) * 2.6);
+      this.#stamp(x + Math.cos(a) * d, y + Math.sin(a) * d,
+        Math.max(1, size * 0.012 * (1 + Math.pow(r(), 4) * 12)), c,
+        { hard: true, alpha: 0.7 + r() * 0.3 });
+    }
+
     const count = 4 + Math.floor(r() * 5);
     for (let i = 0; i < count; i++) {
-      this.#run(x + (r() - 0.5) * w, y + size * 0.5, color,
+      this.#run(x + (r() - 0.5) * w, y + size * 0.5, c,
         size * (0.11 + r() * 0.22), this.canvas.height * (0.16 + r() * 0.34));
     }
     this.#wetten();
   }
 
-  // A continuous coat, stamped densely enough that the strokes read as one
-  // mass rather than a row of dots.
+  // A continuous coat, stamped densely enough to read as one mass, throwing
+  // a little spray off the leading edge.
   strokeTo(from, to, color, size) {
     const r = this.rand;
     const dx = to.x - from.x;
     const dy = to.y - from.y;
     const len = Math.hypot(dx, dy);
+    const ang = Math.atan2(dy, dx);
     const steps = Math.max(1, Math.ceil(len / (size * 0.22)));
+    const c = this.#tint(color, to.x, to.y);
 
     for (let i = 1; i <= steps; i++) {
       const t = i / steps;
-      this.#stamp(from.x + dx * t, from.y + dy * t, size * (0.48 + r() * 0.06), color);
+      this.#stamp(from.x + dx * t, from.y + dy * t, size * (0.48 + r() * 0.06), c);
     }
+
+    const specks = Math.round((3 + len * 0.11) * CONFIG.spatter);
+    for (let i = 0; i < specks; i++) {
+      const t = r();
+      const off = (r() - 0.5) * size * 2.4;
+      this.#stamp(
+        from.x + dx * t - Math.sin(ang) * off,
+        from.y + dy * t + Math.cos(ang) * off,
+        Math.max(0.9, size * 0.02 * (1 + Math.pow(r(), 4) * 9)), c,
+        { hard: true, alpha: 0.6 + r() * 0.4 },
+      );
+    }
+
     if (r() < 0.09) {
-      this.#run(to.x, to.y + size * 0.45, color, size * (0.11 + r() * 0.16), size * (1.4 + r() * 4));
+      this.#run(to.x, to.y + size * 0.45, c, size * (0.11 + r() * 0.16), size * (1.4 + r() * 4));
     }
     this.#wetten();
   }
@@ -157,6 +293,11 @@ export class Ink {
       phase: this.rand() * Math.PI * 2,
       wobble: width * (0.5 + this.rand() * 1.4),
     });
+  }
+
+  #wetten() {
+    this.wet = Math.min(26, this.wet + 12);
+    this.dirty = true;
   }
 
   // Runs are drawn incrementally: each frame lays down the stretch covered
@@ -196,8 +337,8 @@ export class Ink {
       }
       if (this.runs.some((r) => r.done)) this.runs = this.runs.filter((r) => !r.done);
       this.dirty = true;
-      // Running paint keeps the layer damp, but it no longer pins it open:
-      // once the runs stall, the coat sets.
+      // Running paint keeps the layer damp, but no longer pins it open: once
+      // the runs stall, the coat sets.
       this.wet = Math.max(this.wet, 5);
     }
 
@@ -206,10 +347,13 @@ export class Ink {
   }
 
   // Wet paint keeps moving into itself for a while, then sets. Each pass is a
-  // small diffusion of the whole layer, which is what softens edges and lets
+  // small diffusion of the whole layer, which softens edges and lets
   // neighbouring colours run together instead of stacking as flat decals.
+  // The same beat refreshes the probe the brushes read for pickup.
   #bleed() {
-    if (this.wet <= 0 || this.tick % CONFIG.bleedEveryNFrames !== 0) return;
+    if (this.tick % CONFIG.bleedEveryNFrames !== 0) return;
+    this.#refreshProbe();
+    if (this.wet <= 0) return;
     this.wet--;
 
     const s = this.scratch;
@@ -235,7 +379,11 @@ function make(w, h) {
   return c;
 }
 
-function hexA(hex, a) {
+function clampIndex(v, size) {
+  return Math.min(size - 1, Math.max(0, Math.round(v)));
+}
+
+function rgba(hex, a) {
   const n = parseInt(hex.slice(1), 16);
   return `rgba(${(n >> 16) & 255},${(n >> 8) & 255},${n & 255},${a})`;
 }

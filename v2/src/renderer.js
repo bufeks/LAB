@@ -51,6 +51,8 @@ uniform float uEyeDeform;
 uniform float uEyeDeformScale;
 uniform float uEyePunch;
 uniform float uEyeLift;
+uniform float uEyeGradeFrom;
+uniform float uEyeGradeTo;
 uniform float uInkTexel;
 uniform float uPaintForm;
 uniform float uPaintRelief;
@@ -78,6 +80,33 @@ float eyeGuard(vec2 f, float scale) {
   float a = length((f - uEyeA) / r);
   float b = length((f - uEyeB) / r);
   return smoothstep(uEyeSoft, 1.0, min(a, b));
+}
+
+// A soft blob over each eye, wider than the guard and with no hard edge,
+// used only to grade the eye.
+float eyeGrade(vec2 f) {
+  if (uProtectEyes < 0.5) return 0.0;
+  float a = length((f - uEyeA) / uEyeR);
+  float b = length((f - uEyeB) / uEyeR);
+  return 1.0 - smoothstep(uEyeGradeFrom, uEyeGradeTo, min(a, b));
+}
+
+float inkAt(vec2 fp) {
+  vec2 uv = uFaceCentre + fp / uExtent;
+  if (outside(uv)) return 0.0;
+  return texture(uInk, uv).a;
+}
+
+// How buried an eye is: the paint immediately around it, ignoring the guard
+// that keeps the eye itself clear. Nothing thrown yet means nothing to
+// compensate for, and the eye is left exactly as the camera saw it.
+float buried(vec2 centre) {
+  float m = inkAt(centre);
+  m = max(m, inkAt(centre + vec2(uEyeR.x * 1.5, 0.0)));
+  m = max(m, inkAt(centre - vec2(uEyeR.x * 1.5, 0.0)));
+  m = max(m, inkAt(centre + vec2(0.0, uEyeR.y * 1.8)));
+  m = max(m, inkAt(centre - vec2(0.0, uEyeR.y * 1.8)));
+  return m;
 }
 
 // Luminance of the camera at a point in display space.
@@ -143,13 +172,16 @@ void main() {
   // Bare skin is modelled too, so the head reads as a head and not a cut-out.
   bust *= mix(1.0, 0.78 + 0.44 * sculpt, uSculpt);
 
-  // The one thing that survives: inside the guard the eye is graded hard, so
-  // white and iris separate and the look stays legible through the wreckage.
-  float eyeOpen = uHasFace * (1.0 - eyeGuard(f + d, 1.0));
-  if (eyeOpen > 0.001) {
-    float e = clamp((g - 0.5) * uEyePunch + 0.5 + uEyeLift, 0.0, 1.0);
-    e = smoothstep(0.10, 0.90, e);
-    bust = mix(bust, paper * (0.05 + 0.95 * e), eyeOpen);
+  // The one thing that survives. Contrast is lifted around the eye so the
+  // white and the iris separate, but in colour, with a soft falloff, and
+  // only in proportion to how much paint has closed in around it. Applied
+  // unconditionally it read as a dead patch stuck on an untouched face.
+  vec2 fe = f + d;
+  vec2 nearEye = length(fe - uEyeA) < length(fe - uEyeB) ? uEyeA : uEyeB;
+  float grade = uHasFace * eyeGrade(fe) * smoothstep(0.12, 0.65, buried(nearEye));
+  if (grade > 0.001) {
+    vec3 punched = clamp((look - 0.5) * uEyePunch + 0.5 + uEyeLift, 0.0, 1.0);
+    bust = mix(bust, paper * (0.10 + 0.90 * punched), grade);
   }
 
   vec3 base = mix(paper, bust, person);
@@ -241,7 +273,8 @@ export class Renderer {
       'uInkTexel', 'uPaintForm', 'uPaintRelief', 'uPaintGloss', 'uPaintShadow',
       'uFormRelief', 'uPixel', 'uBodyOnly',
       'uDepth', 'uHasDepth', 'uDepthRange', 'uFaceRelief', 'uSculpt',
-      'uEyeDeformScale', 'uEyePunch', 'uEyeLift', 'uColour']) {
+      'uEyeDeformScale', 'uEyePunch', 'uEyeLift', 'uColour',
+      'uEyeGradeFrom', 'uEyeGradeTo']) {
       this.u[name] = gl.getUniformLocation(this.program, name);
     }
 
@@ -263,6 +296,8 @@ export class Renderer {
     gl.uniform1f(this.u.uEyeDeformScale, CONFIG.eyeGuard.deformScale);
     gl.uniform1f(this.u.uEyePunch, CONFIG.eyeGuard.punch);
     gl.uniform1f(this.u.uEyeLift, CONFIG.eyeGuard.lift);
+    gl.uniform1f(this.u.uEyeGradeFrom, CONFIG.eyeGuard.gradeFrom);
+    gl.uniform1f(this.u.uEyeGradeTo, CONFIG.eyeGuard.gradeTo);
     gl.uniform1f(this.u.uInkTexel, 1 / CONFIG.inkSize);
     gl.uniform1f(this.u.uPaintForm, CONFIG.paint.form);
     gl.uniform1f(this.u.uPaintRelief, CONFIG.paint.relief);
