@@ -8,6 +8,10 @@ Webカメラに映った自分の顔に、手でペイントするインスタ�
 
 **公開URL: https://bufeks.github.io/LAB/**
 
+デフォルトブランチへの push ごとに `.github/workflows/pages.yml` が上記へデプロイします。
+リポジトリ設定の Settings → Pages → Build and deployment → Source を
+**GitHub Actions** にしておく必要があります（初回のみ）。
+
 ## 動かす
 
 そのままブラウザで上のURLを開けば動きます。手元で動かす場合は:
