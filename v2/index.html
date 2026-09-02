@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>BREAK TO CREATE — 自身の再構築</title>
+<link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <video id="video" playsinline muted autoplay></video>
+
+  <div id="shell" class="hidden">
+    <div id="hud-bar">
+      <span class="mark">BREAK TO CREATE.</span>
+      <span id="fps">–</span>
+    </div>
+    <div id="stage">
+      <canvas id="preview" class="hidden"></canvas>
+      <canvas id="gl" class="hidden"></canvas>
+      <canvas id="hud" class="hidden"></canvas>
+      <div id="flash"></div>
+    </div>
+    <div id="capture-ui" class="hidden">
+      <div id="count"></div>
+      <p id="capture-hint">顔をカメラに写してください</p>
+      <button id="shutter" class="ghost">いま撮る</button>
+    </div>
+  </div>
+
+  <div id="intro" class="overlay">
+    <div class="panel">
+      <h1>BREAK<br />TO<br />CREATE.</h1>
+      <p class="lede">DESTROY THE OLD SELF.<br />DISCOVER THE NEW YOU.</p>
+      <p>生成された自分の胸像に触れ、壊し、塗り替えることで殻を破り、新たな自分の形を見出す体験。</p>
+      <ol class="flow">
+        <li>自分の胸像が生成される</li>
+        <li>触れる / 動かす</li>
+        <li>インクをぶつける / 塗る / 流す</li>
+        <li>破壊と再構築を繰り返す</li>
+        <li>新しい自分のかたちが立ち上がる</li>
+      </ol>
+      <button id="start">カメラを許可して開始</button>
+      <p class="note">映像はすべてブラウザ内で処理され、どこにも送信されません。</p>
+    </div>
+  </div>
+
+  <div id="loading" class="overlay hidden">
+    <div class="panel"><h2>GENERATING…</h2><p>モデルを読み込んでいます。</p></div>
+  </div>
+
+  <div id="error" class="overlay hidden">
+    <div class="panel">
+      <h2>起動できませんでした</h2>
+      <p id="error-msg"></p>
+      <button id="retry">再試行</button>
+    </div>
+  </div>
+
+  <div id="result" class="overlay hidden">
+    <div class="panel wide">
+      <h2>NEW SELF.</h2>
+      <p>破壊の先にある、自分だけのかたち。</p>
+      <div class="transform">
+        <figure><img id="before" alt="破壊する前の胸像" /><figcaption>OLD SELF</figcaption></figure>
+        <span class="arrow">→</span>
+        <figure><img id="after" alt="破壊したあとの胸像" /><figcaption>NEW SELF</figcaption></figure>
+      </div>
+      <div class="row">
+        <button id="save">画像を保存</button>
+        <button id="again" class="ghost">もう一度</button>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="./src/main.js"></script>
+</body>
+</html>

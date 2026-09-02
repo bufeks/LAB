@@ -29,7 +29,7 @@ done
 cat <<'MSG'
 
 Done. Now edit src/config.js so CONFIG starts with these four paths
-(they are resolved relative to src/):
+(they are resolved relative to the page, i.e. the repository root):
 
   visionModule: '../vendor/vision_bundle.mjs',
   wasmBase:     '../vendor/wasm',
