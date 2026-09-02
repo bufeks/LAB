@@ -39,12 +39,25 @@ uniform float uScan;
 uniform vec2 uEyeA;
 uniform vec2 uEyeB;
 uniform vec2 uEyeR;
+uniform float uInkTexel;
+uniform float uPaintForm;
+uniform float uPaintRelief;
+uniform float uFormRelief;
+uniform float uPixel;
+uniform float uPaintGloss;
+uniform float uPaintShadow;
 uniform float uProtectEyes;
 uniform float uEyeSoft;
 uniform float uEyeDeform;
 
 float hash(vec2 p) {
   return fract(sin(dot(p, vec2(127.1, 311.7))) * 43758.5453);
+}
+
+// Luminance of the camera at a point in display space.
+float lumAt(vec2 s) {
+  vec3 c = texture(uVideo, vec2(1.0 - s.x, s.y)).rgb;
+  return dot(c, vec3(0.299, 0.587, 0.114));
 }
 
 bool outside(vec2 p) {
@@ -97,17 +110,59 @@ void main() {
   vec3 base = mix(paper, bust, person);
 
   vec4 ink = vec4(0.0);
-  if (uHasFace > 0.5 && !outside(fuv2)) ink = texture(uInk, fuv2);
-  // Judged at the coordinate actually on screen here, so the guard travels
-  // with the surface when it is dragged.
-  ink.a *= eyeGuard(f + d);
+  float guardHere = eyeGuard(f + d);
+  bool onCanvas = uHasFace > 0.5 && !outside(fuv2);
+  if (onCanvas) ink = texture(uInk, fuv2);
+  ink.a *= guardHere;
 
   // Stretched surface loses a little pigment, so the material reads as giving
   // way rather than the image simply sliding.
   float strain = clamp(length(d) / max(uDeform, 1e-4), 0.0, 1.0);
   base = mix(base, base * 0.88 + 0.06, strain * 0.5);
 
-  vec3 col = mix(base, ink.rgb, ink.a);
+  vec3 L = normalize(vec3(-0.45, -0.62, 0.65));
+
+  // Paint sitting proud of the skin drops a shadow beside itself. This has to
+  // be computed where there is no ink, which is exactly where it shows.
+  if (onCanvas) {
+    float occl = texture(uInk, fuv2 - L.xy * uInkTexel * 4.0).a * guardHere;
+    base *= 1.0 - uPaintShadow * clamp(occl - ink.a, 0.0, 1.0);
+  }
+
+  vec3 col = base;
+  if (ink.a > 0.003) {
+    // The thickness gradient of the pool is its own surface normal. Sampling
+    // a few texels out gives the wide bevel of a wet edge, not a crease.
+    float t = uInkTexel * 3.0;
+    float ax = texture(uInk, fuv2 + vec2(t, 0.0)).a - texture(uInk, fuv2 - vec2(t, 0.0)).a;
+    float ay = texture(uInk, fuv2 + vec2(0.0, t)).a - texture(uInk, fuv2 - vec2(0.0, t)).a;
+    vec3 nPaint = normalize(vec3(-ax * uPaintRelief, -ay * uPaintRelief, 1.0));
+
+    // And the modelling of the head underneath, from a low-passed luminance
+    // gradient. Blending the two is what carries the highlight around the
+    // skull instead of leaving it flat on the picture plane.
+    float k = uPixel * 5.0;
+    float fx = lumAt(camUv + vec2(k, 0.0)) - lumAt(camUv - vec2(k, 0.0));
+    float fy = lumAt(camUv + vec2(0.0, k)) - lumAt(camUv - vec2(0.0, k));
+    vec3 nForm = normalize(vec3(-fx * uFormRelief, -fy * uFormRelief, 1.0));
+
+    vec3 n = normalize(mix(nForm, nPaint, 0.6));
+    float lambert = clamp(dot(n, L), 0.0, 1.0);
+    float h = clamp(reflect(-L, n).z, 0.0, 1.0);
+    // A glint over a broad sheen: the two together read as wet. The broad
+    // lobe is what sheets across a coated forehead in the reference.
+    float spec = pow(h, 38.0) * 1.35 + pow(h, 5.0) * 0.42;
+    float rim = pow(1.0 - clamp(n.z, 0.0, 1.0), 2.2);
+
+    // Thick, but never opaque: the nose and lips stay legible through it.
+    vec3 pigment = ink.rgb * mix(1.0, 0.30 + 1.45 * g, uPaintForm);
+    pigment *= 0.70 + 0.52 * lambert;
+    pigment += ink.rgb * rim * 0.35;
+    pigment *= 1.0 + (hash(floor(fuv2 * 1100.0)) - 0.5) * 0.09;
+    pigment += vec3(spec) * uPaintGloss;
+
+    col = mix(base, pigment, ink.a);
+  }
 
   // The generating sweep: everything above the line has been brought into
   // being, everything below is still waiting.
@@ -138,7 +193,9 @@ export class Renderer {
     for (const name of ['uVideo', 'uInk', 'uDisp', 'uMask', 'uAspect', 'uOrigin',
       'uAxisU', 'uAxisV', 'uScale', 'uExtent', 'uFaceCentre', 'uDeform', 'uHasFace',
       'uHasMask', 'uContrast', 'uBright', 'uPaper', 'uReveal', 'uScan',
-      'uEyeA', 'uEyeB', 'uEyeR', 'uProtectEyes', 'uEyeSoft', 'uEyeDeform']) {
+      'uEyeA', 'uEyeB', 'uEyeR', 'uProtectEyes', 'uEyeSoft', 'uEyeDeform',
+      'uInkTexel', 'uPaintForm', 'uPaintRelief', 'uPaintGloss', 'uPaintShadow',
+      'uFormRelief', 'uPixel']) {
       this.u[name] = gl.getUniformLocation(this.program, name);
     }
 
@@ -155,6 +212,12 @@ export class Renderer {
     gl.uniform1f(this.u.uProtectEyes, CONFIG.protectEyes ? 1 : 0);
     gl.uniform1f(this.u.uEyeSoft, CONFIG.eyeGuard.soft);
     gl.uniform1f(this.u.uEyeDeform, CONFIG.eyeGuard.deform);
+    gl.uniform1f(this.u.uInkTexel, 1 / CONFIG.inkSize);
+    gl.uniform1f(this.u.uPaintForm, CONFIG.paint.form);
+    gl.uniform1f(this.u.uPaintRelief, CONFIG.paint.relief);
+    gl.uniform1f(this.u.uPaintGloss, CONFIG.paint.gloss);
+    gl.uniform1f(this.u.uPaintShadow, CONFIG.paint.shadow);
+    gl.uniform1f(this.u.uFormRelief, CONFIG.paint.formRelief);
 
     this.vao = gl.createVertexArray();
     this.texVideo = texture(gl);
@@ -171,6 +234,7 @@ export class Renderer {
     this.canvas.height = height;
     this.gl.useProgram(this.program);
     this.gl.uniform1f(this.u.uAspect, width / height);
+    this.gl.uniform1f(this.u.uPixel, 1 / height);
   }
 
   updateVideo(video) {

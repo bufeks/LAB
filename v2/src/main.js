@@ -144,57 +144,57 @@ function ready(now, id, key, ms) {
 
 function act(hand, now) {
   if (!face.present || !state.ready) return;
+  if (!hand.armed) { strokeFrom.delete(hand.id); return; }
 
   const inkPt = face.toInk(hand.x, hand.y, W, H);
   const faceUv = face.toFaceUv(hand.x, hand.y, W, H);
-
-  if (hand.entered && hand.pose !== 'idle') {
-    snapshot();
-    strokeFrom.set(hand.id, inkPt);
-  }
+  const from = strokeFrom.get(hand.id) ?? inkPt;
+  if (hand.entered) snapshot();
 
   switch (hand.pose) {
-    case 'point': {
-      const from = strokeFrom.get(hand.id) ?? inkPt;
-      ink.strokeTo(from, inkPt, colorHex(), brush());
-      strokeFrom.set(hand.id, inkPt);
+    case 'point':
+      // A still finger leaves nothing. Paint is laid down by moving it.
+      if (hand.moving) ink.strokeTo(from, inkPt, colorHex(), brush());
       break;
-    }
 
     case 'pinch': {
-      const from = strokeFrom.get(hand.id) ?? inkPt;
       // The hand moved this far across the head, in eye-distances. The first
       // frame of a grip has no meaningful travel yet.
       const d = hand.entered ? { x: 0, y: 0 } : face.deltaToFace(hand.vx, hand.vy, H);
       if (d.x || d.y) {
-        deform.push(faceUv.x, faceUv.y, d.x, d.y,
+        deform.push(faceUv.x, faceUv.y,
+          d.x * CONFIG.deformGain, d.y * CONFIG.deformGain,
           CONFIG.deformRadius * (brush() / CONFIG.brushSizes[1]));
       }
-      strokeFrom.set(hand.id, from);
       break;
     }
 
-    case 'fist': {
-      // A blot leaves the fist when it is actually travelling, and lands a
-      // little ahead of it.
-      if (hand.speed < CONFIG.gesture.throwSpeed) break;
-      if (!ready(now, hand.id, 'throw', CONFIG.gesture.throwCooldown)) break;
-      const lead = face.toInk(hand.x + hand.vx * 2.5, hand.y + hand.vy * 2.5, W, H);
-      ink.splat(lead.x, lead.y, colorHex(), brush(),
-        { x: lead.x - inkPt.x, y: lead.y - inkPt.y });
+    case 'fist':
+      // One swing of the fist, one blot, landing a little ahead of it.
+      if (!hand.struck) break;
+      if (!ready(now, hand.id, 'fist', CONFIG.gesture.cooldown.fist)) break;
+      snapshot();
+      {
+        const lead = face.toInk(hand.x + hand.vx * 2.5, hand.y + hand.vy * 2.5, W, H);
+        ink.splat(lead.x, lead.y, colorHex(), brush(),
+          { x: lead.x - inkPt.x, y: lead.y - inkPt.y });
+      }
       break;
-    }
 
-    case 'open': {
-      if (!hand.entered && !ready(now, hand.id, 'pour', CONFIG.gesture.pourCooldown)) break;
-      if (hand.entered) cooldown.set(`${hand.id}:pour`, now);
-      ink.pour(inkPt.x, inkPt.y, colorHex(), brush() * 1.5);
+    case 'open':
+      // An open hand has to be slapped forward to empty the bucket.
+      if (!hand.struck) break;
+      if (!ready(now, hand.id, 'open', CONFIG.gesture.cooldown.open)) break;
+      snapshot();
+      ink.pour(inkPt.x, inkPt.y, colorHex(), brush() * 1.4);
       break;
-    }
 
     default:
       strokeFrom.delete(hand.id);
+      return;
   }
+
+  strokeFrom.set(hand.id, inkPt);
 }
 
 function finish() {
@@ -294,7 +294,7 @@ function loop(now) {
 }
 
 function legend(hands) {
-  const live = new Set(hands.map((h) => h.pose));
+  const live = new Set(hands.filter((h) => h.armed).map((h) => h.pose));
   for (const pose of Object.keys(POSES)) {
     el(`g-${pose}`)?.classList.toggle('on', live.has(pose));
   }
@@ -323,7 +323,7 @@ function toCanvas(clientX, clientY) {
 // pose is selected with the keyboard, which is also what makes the piece
 // testable without a person in front of the camera.
 const mouse = {
-  over: false, down: false, x: 0, y: 0, queue: [], last: null, click: false,
+  over: false, down: false, x: 0, y: 0, queue: [], last: null, click: false, fast: false,
 
   clicked() {
     const was = this.click;
@@ -343,18 +343,26 @@ const mouse = {
     for (const e of this.queue) {
       const prev = this.last ?? { x: e.x, y: e.y, down: false };
       if (e.down) {
+        const speed = Math.hypot(e.x - prev.x, e.y - prev.y);
+        const fast = speed > (CONFIG.gesture.speed[state.mouseTool] ?? Infinity);
         out.push({
           id: 'mouse',
           pose: state.mouseTool,
           entered: !prev.down,
+          armed: true,
+          moving: fast,
+          struck: fast && !this.fast,
           x: e.x, y: e.y,
           vx: e.x - prev.x, vy: e.y - prev.y,
-          speed: Math.hypot(e.x - prev.x, e.y - prev.y),
+          speed,
           span: 100,
           points: null,
         });
+        this.fast = fast;
       } else if (prev.down) {
-        out.push({ id: 'mouse', pose: 'idle', entered: true, x: e.x, y: e.y, vx: 0, vy: 0, speed: 0, span: 100, points: null });
+        this.fast = false;
+        out.push({ id: 'mouse', pose: 'idle', entered: true, armed: false, moving: false,
+                   struck: false, x: e.x, y: e.y, vx: 0, vy: 0, speed: 0, span: 100, points: null });
       }
       this.last = e;
     }

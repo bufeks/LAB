@@ -158,6 +158,11 @@ h2 {
 .panel p { color: rgba(245, 242, 234, 0.72); margin: 0 0 14px; }
 .panel p b { color: var(--ink); font-weight: 700; }
 
+.two-step {
+  border-left: 2px solid var(--magenta);
+  padding: 2px 0 2px 14px;
+}
+
 .gestures {
   list-style: none;
   margin: 0 0 18px;

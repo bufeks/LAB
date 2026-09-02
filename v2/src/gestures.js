@@ -47,7 +47,8 @@ export class Gestures {
 
       let s = this.state.get(id);
       if (!s) {
-        s = { pose: 'idle', candidate: 'idle', held: 0, x: 0, y: 0, vx: 0, vy: 0, seeded: false };
+        s = { pose: 'idle', candidate: 'idle', held: 0, since: 0, fast: false,
+              x: 0, y: 0, vx: 0, vy: 0, seeded: false };
         this.state.set(id, s);
       }
 
@@ -66,7 +67,12 @@ export class Gestures {
       else { s.candidate = pose; s.held = 1; }
 
       const previous = s.pose;
-      if (s.held >= CONFIG.gesture.holdFrames && pose !== s.pose) s.pose = pose;
+      if (s.held >= CONFIG.gesture.holdFrames && pose !== s.pose) {
+        s.pose = pose;
+        s.since = 0;
+        s.fast = false;
+      }
+      s.since++;
 
       const anchor = anchorFor(s.pose, px);
       // Each pose acts from a different part of the hand, so a change of pose
@@ -84,13 +90,28 @@ export class Gestures {
         s.y = ny;
       }
 
+      // While the fingers are still rearranging, the classifier and the hand
+      // disagree and the anchor can jump between landmarks. A hand in transit
+      // is disarmed, so a change of grip can never fire an action by itself.
+      const settled = pose === s.pose;
+      const speed = Math.hypot(s.vx, s.vy);
+      const threshold = CONFIG.gesture.speed[s.pose] ?? Infinity;
+      const fast = speed > threshold;
+      // The rising edge is the action: one swing, one blot. Holding a hand
+      // in motion does not keep firing.
+      const struck = fast && !s.fast;
+      s.fast = fast;
+
       out.push({
         id,
         pose: s.pose,
         entered: s.pose !== previous,
-        left: previous !== s.pose ? previous : null,
+        // Held long enough to mean it. Until then the hand is only travelling.
+        armed: settled && s.since >= CONFIG.gesture.armFrames,
+        moving: fast,
+        struck,
         x: s.x, y: s.y, vx: s.vx, vy: s.vy,
-        speed: Math.hypot(s.vx, s.vy),
+        speed,
         span,
         points: px,
       });
@@ -102,7 +123,7 @@ export class Gestures {
       // A hand leaving frame mid-gesture still has to end the gesture.
       if (s.pose !== 'idle') {
         out.push({
-          id, pose: 'idle', entered: true, left: s.pose,
+          id, pose: 'idle', entered: true, armed: false, moving: false, struck: false,
           x: s.x, y: s.y, vx: 0, vy: 0, speed: 0, span: 1, points: null,
         });
       }

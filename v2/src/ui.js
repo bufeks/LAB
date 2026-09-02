@@ -136,6 +136,9 @@ export class UI {
     const p = hand.points;
     const color = CONFIG.palette[state.colorIndex].hex;
     const w = hand.span * 0.26;
+    // Dim until the pose has been held long enough to do anything, so the
+    // two-part gesture is visible rather than something to be discovered.
+    const strength = hand.armed ? 1 : 0.4;
 
     ctx.save();
     ctx.lineCap = 'round';
@@ -143,7 +146,7 @@ export class UI {
     ctx.fillStyle = color;
     ctx.strokeStyle = color;
 
-    ctx.globalAlpha = 0.42;
+    ctx.globalAlpha = 0.42 * strength;
     ctx.beginPath();
     PALM.forEach((i, n) => (n ? ctx.lineTo(p[i].x, p[i].y) : ctx.moveTo(p[i].x, p[i].y)));
     ctx.closePath();
@@ -157,7 +160,7 @@ export class UI {
     }
 
     // Wet fingertips, with a bead about to fall.
-    ctx.globalAlpha = 0.9;
+    ctx.globalAlpha = 0.9 * strength;
     for (const i of TIPS) {
       ctx.beginPath();
       ctx.arc(p[i].x, p[i].y, w * 0.62, 0, Math.PI * 2);
@@ -172,7 +175,7 @@ export class UI {
       ctx.fill();
     }
 
-    const pose = POSES[hand.pose];
+    const pose = hand.armed ? POSES[hand.pose] : null;
     if (pose) {
       ctx.globalAlpha = 1;
       ctx.font = `700 ${Math.round(hand.span * 0.36)}px system-ui, "Hiragino Sans", "Noto Sans JP", sans-serif`;
