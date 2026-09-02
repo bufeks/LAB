@@ -35,12 +35,15 @@ export class FaceFrame {
     const a = CONFIG.faceSmoothing;
     const sx = width / height;
     if (!this.pts || this.pts.length !== landmarks.length || !this.present) {
-      this.pts = landmarks.map((p) => ({ x: p.x * sx, y: p.y }));
+      // z arrives on roughly the same scale as x, so it gets the same
+      // aspect correction and lives in the same units as everything else.
+      this.pts = landmarks.map((p) => ({ x: p.x * sx, y: p.y, z: (p.z ?? 0) * sx }));
     } else {
       for (let i = 0; i < landmarks.length; i++) {
         const t = this.pts[i];
         t.x += (landmarks[i].x * sx - t.x) * (1 - a);
         t.y += (landmarks[i].y - t.y) * (1 - a);
+        t.z += ((landmarks[i].z ?? 0) * sx - t.z) * (1 - a);
       }
     }
 

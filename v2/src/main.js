@@ -1,6 +1,7 @@
 import { CONFIG, POSES } from './config.js';
 import { Tracker } from './tracking.js';
 import { FaceFrame } from './face.js';
+import { FaceDepth } from './depth.js';
 import { Gestures } from './gestures.js';
 import { Ink } from './ink.js';
 import { Deform } from './deform.js';
@@ -16,6 +17,7 @@ const hctx = hud.getContext('2d');
 const tracker = new Tracker();
 const gestures = new Gestures();
 const face = new FaceFrame();
+const depth = new FaceDepth();
 const ui = new UI();
 let ink = null;
 let deform = null;
@@ -75,7 +77,7 @@ async function start() {
     ui.layout(W, H);
     layout();
 
-    window.breakToCreate = { CONFIG, tracker, face, gestures, ink, deform, renderer, ui, state, finish, generate };
+    window.breakToCreate = { CONFIG, tracker, face, depth, gestures, ink, deform, renderer, ui, state, finish, generate };
 
     setPhase('live');
     requestAnimationFrame(loop);
@@ -233,6 +235,8 @@ function loop(now) {
   face.update(detected.face, W, H, now);
 
   renderer.updateVideo(video);
+  depth.update(face);
+  if (depth.ready) renderer.updateDepth(depth.pack(), depth.size);
   if (detected.mask) renderer.updateMask(detected.mask.data, detected.mask.width, detected.mask.height);
 
   // Hold still once, and the bust is generated.

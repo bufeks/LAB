@@ -31,8 +31,18 @@ export const CONFIG = {
   // The eyes survive whatever happens around them: ink never covers them and
   // the surface barely moves there. Radii are multiples of the eye's own
   // corner-to-corner width, so they hold for any face and any distance.
+  // The guard is sized to the eye opening itself, so paint runs right up to
+  // the lid instead of stopping short of it. Radii are multiples of the eye's
+  // corner-to-corner half width, which blinking cannot change. Deformation is
+  // held off over a wider area so the socket is not squashed shut.
   protectEyes: true,
-  eyeGuard: { rx: 1.45, ry: 1.25, soft: 0.72, deform: 0.15 },
+  eyeGuard: {
+    rx: 1.08, ry: 0.8, soft: 0.86,
+    deform: 0.15, deformScale: 1.75,
+    // Inside the guard the eye is pushed towards a clean white and a dark
+    // iris, so it reads through everything happening around it.
+    punch: 2.6, lift: 0.03,
+  },
 
   deformGrid: 192,
   deformStrength: 0.38,   // maximum displacement, in eye-distances
@@ -63,15 +73,30 @@ export const CONFIG = {
   // head read through the pigment, `relief` is the bevel of the paint's own
   // edge, `formRelief` bends the highlight around the skull, and `gloss` is
   // how wet it looks.
-  paint: { form: 0.85, relief: 26, formRelief: 3.2, gloss: 0.95, shadow: 0.42 },
+  paint: { form: 0.85, relief: 26, formRelief: 3.2, gloss: 0.8, shadow: 0.42,
+           faceRelief: 1.15, sculpt: 0.55 },
+
+  // Resolution of the depth map recovered from the face landmarks, and the
+  // steepest slope it can express, in depth per eye-distance.
+  depthGrid: 72,
+  depthRange: 3.0,
 
   // Fresh paint keeps creeping into itself for a while, then sets. This is
   // what makes neighbouring colours bleed together instead of stacking.
   bleedEveryNFrames: 4,
   bleedRadius: 1.1,
 
+  // Paint belongs on the body. Anything thrown past it misses and is simply
+  // not there, rather than landing on the paper behind.
+  inkOnBodyOnly: true,
+
   liveCutout: true,
   cutoutEveryNFrames: 2,   // segmentation is the expensive one; halve its rate
+
+  // 1 keeps the visitor in colour, 0 renders them as a graphite bust. The
+  // eyes are graded towards grey either way, because a white and a dark iris
+  // is what makes them read.
+  bodyColour: 1,
   contrast: 1.55,
   brightness: 0.03,
   paper: [0.937, 0.918, 0.878],
