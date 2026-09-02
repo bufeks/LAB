@@ -23,9 +23,15 @@ export class Ink {
     this.probe = make(PROBE, PROBE);
     this.probeCtx = this.probe.getContext('2d', { willReadFrequently: true });
     this.probeData = null;
+    // Reading the layer back stalls the pipeline, so it is only done when
+    // there is something new to see.
+    this.probeStale = true;
 
     this.runs = [];
     this.sprites = new Map();
+    // The area touched since the paint last set. Diffusing the whole layer
+    // was costing more than everything else in the frame put together.
+    this.wetBox = null;
     this.wet = 0;
     this.tick = 0;
     this.dirty = true;
@@ -39,7 +45,9 @@ export class Ink {
     this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
     this.runs.length = 0;
     this.wet = 0;
+    this.wetBox = null;
     this.probeData = null;
+    this.probeStale = true;
     this.dirty = true;
   }
 
@@ -53,6 +61,8 @@ export class Ink {
     this.clear();
     this.ctx.drawImage(snap.image, 0, 0);
     this.runs = snap.runs.map((r) => ({ ...r }));
+    this.wetBox = null;
+    this.probeStale = true;
     this.dirty = true;
   }
 
@@ -86,8 +96,22 @@ export class Ink {
     return b;
   }
 
+  #touch(x, y, r) {
+    this.probeStale = true;
+    const b = this.wetBox;
+    if (!b) {
+      this.wetBox = { x0: x - r, y0: y - r, x1: x + r, y1: y + r };
+      return;
+    }
+    if (x - r < b.x0) b.x0 = x - r;
+    if (y - r < b.y0) b.y0 = y - r;
+    if (x + r > b.x1) b.x1 = x + r;
+    if (y + r > b.y1) b.y1 = y + r;
+  }
+
   #stamp(x, y, r, color, { alpha = 1, hard = false, ang = 0, stretch = 1 } = {}) {
     const ctx = this.ctx;
+    this.#touch(x, y, r * Math.max(1, stretch));
     // A sprite's falloff eats anything this small, leaving specks too faint
     // to see. Below the threshold a mark is drawn outright.
     if (r < CONFIG.speckRadius) {
@@ -400,29 +424,66 @@ export class Ink {
   }
 
   // Wet paint keeps moving into itself for a while, then sets. Each pass is a
-  // small diffusion of the whole layer, which softens edges and lets
-  // neighbouring colours run together instead of stacking as flat decals.
-  // The same beat refreshes the probe the brushes read for pickup.
+  // small diffusion, and it only covers the area that has actually been
+  // painted since the layer last set - diffusing the whole megapixel every
+  // time cost more than the rest of the frame combined.
   #bleed() {
+    if (this.probeStale && this.tick % CONFIG.probeEveryNFrames === 0) {
+      this.#refreshProbe();
+      this.probeStale = false;
+    }
     if (this.tick % CONFIG.bleedEveryNFrames !== 0) return;
-    this.#refreshProbe();
-    if (this.wet <= 0) return;
+    if (this.wet <= 0) { this.wetBox = null; return; }
     this.wet--;
+
+    const box = this.wetBox;
+    if (!box) return;
+
+    // Blurring a sub-rect fades at its own border, so the region read is
+    // wider than the region written back and the seam falls outside.
+    const m = Math.ceil(CONFIG.bleedRadius * 4) + 2;
+    const inner = clampBox(box, m, this.canvas.width, this.canvas.height);
+    const outer = clampBox(box, m * 2, this.canvas.width, this.canvas.height);
+    if (inner.w <= 0 || inner.h <= 0) return;
 
     const s = this.scratch;
     const sctx = s.getContext('2d');
     sctx.setTransform(1, 0, 0, 1, 0, 0);
-    sctx.globalCompositeOperation = 'copy';
+    // Clipped before the filter is set: a filtered draw allocates a layer the
+    // size of the clip, and without one that layer is the whole canvas -
+    // which is the cost this is trying to avoid.
+    sctx.save();
+    sctx.beginPath();
+    sctx.rect(outer.x, outer.y, outer.w, outer.h);
+    sctx.clip();
+    sctx.clearRect(outer.x, outer.y, outer.w, outer.h);
     sctx.filter = `blur(${CONFIG.bleedRadius}px)`;
-    sctx.drawImage(this.canvas, 0, 0);
-    sctx.filter = 'none';
+    sctx.drawImage(this.canvas, outer.x, outer.y, outer.w, outer.h,
+      outer.x, outer.y, outer.w, outer.h);
+    sctx.restore();
 
-    this.ctx.globalCompositeOperation = 'copy';
-    this.ctx.globalAlpha = 1;
-    this.ctx.drawImage(s, 0, 0);
-    this.ctx.globalCompositeOperation = 'source-over';
+    const ctx = this.ctx;
+    ctx.save();
+    ctx.beginPath();
+    ctx.rect(inner.x, inner.y, inner.w, inner.h);
+    ctx.clip();
+    ctx.globalCompositeOperation = 'copy';
+    ctx.globalAlpha = 1;
+    ctx.drawImage(s, inner.x, inner.y, inner.w, inner.h,
+      inner.x, inner.y, inner.w, inner.h);
+    ctx.restore();
     this.dirty = true;
   }
+}
+
+function clampBox(b, margin, w, h) {
+  const x = Math.max(0, Math.floor(b.x0 - margin));
+  const y = Math.max(0, Math.floor(b.y0 - margin));
+  return {
+    x, y,
+    w: Math.min(w, Math.ceil(b.x1 + margin)) - x,
+    h: Math.min(h, Math.ceil(b.y1 + margin)) - y,
+  };
 }
 
 function make(w, h) {

@@ -3,6 +3,7 @@ import { Tracker } from './tracking.js';
 import { FaceFrame } from './face.js';
 import { FaceDepth } from './depth.js';
 import { Gestures } from './gestures.js';
+import { HandMask } from './handmask.js';
 import { Ink } from './ink.js';
 import { Deform } from './deform.js';
 import { Renderer } from './renderer.js';
@@ -22,6 +23,7 @@ const ui = new UI();
 let ink = null;
 let deform = null;
 let renderer = null;
+let handMask = null;
 
 const state = {
   phase: 'intro',      // intro | loading | error | live | result
@@ -36,6 +38,7 @@ const strokeFrom = new Map();
 const cooldown = new Map();
 let beforeImage = null;
 let scanStart = 0;
+let resultSince = 0;
 let stableFrames = 0;
 let W = 0;
 let H = 0;
@@ -73,11 +76,12 @@ async function start() {
     renderer = new Renderer(gl);
     renderer.resize(W, H);
     ink = new Ink(CONFIG.inkSize, CONFIG.inkSize);
+    handMask = CONFIG.maskHands ? new HandMask(W, H) : null;
     deform = new Deform();
     ui.layout(W, H);
     layout();
 
-    window.breakToCreate = { CONFIG, tracker, face, depth, gestures, ink, deform, renderer, ui, state, finish, generate };
+    window.breakToCreate = { CONFIG, tracker, face, depth, gestures, ink, deform, renderer, handMask, ui, state, finish, generate, reclaim };
 
     setPhase('live');
     requestAnimationFrame(loop);
@@ -105,6 +109,19 @@ function setPhase(phase) {
   }
   el('shell').classList.toggle('hidden', phase === 'intro' || phase === 'loading' || phase === 'error');
   el('guide').classList.toggle('hidden', phase !== 'live');
+}
+
+// Hand the piece back to the room: everything cleared, and waiting for the
+// next face to hold still. Deliberately not a generate() - that would start
+// the sweep at an empty room and finish it with nobody there.
+function reclaim() {
+  ink.clear();
+  deform.clear();
+  history.length = 0;
+  beforeImage = null;
+  state.ready = false;
+  scanStart = 0;
+  stableFrames = 0;
 }
 
 // The bust is "generated": a sweep down the frame, then the untouched
@@ -206,6 +223,7 @@ function act(hand, now) {
 
 function finish() {
   if (state.phase !== 'live') return;
+  resultSince = performance.now();
   setPhase('result');
   el('before').src = beforeImage ?? gl.toDataURL('image/png');
   el('after').src = gl.toDataURL('image/png');
@@ -234,6 +252,12 @@ function loop(now) {
   requestAnimationFrame(loop);
   const dt = Math.min(0.05, (now - last) / 1000) || 0;
   last = now;
+
+  // Nobody has taken their picture away; hand the piece back to the room.
+  if (state.phase === 'result' && CONFIG.idleResetMs > 0
+      && now - resultSince > CONFIG.idleResetMs * 2) {
+    again();
+  }
   if (video.readyState < 2 || state.phase !== 'live') return;
 
   const detected = tracker.detect(video);
@@ -250,7 +274,17 @@ function loop(now) {
     if (stableFrames > 20) generate();
   }
 
+  // The visitor has gone. Wipe it so the next one arrives at their own face
+  // rather than at somebody else's finished piece.
+  if (CONFIG.idleResetMs > 0 && state.ready && face.idleFor(now) > CONFIG.idleResetMs) {
+    reclaim();
+  }
+
   const hands = gestures.read(detected.hands, W, H);
+  if (handMask) {
+    handMask.update(hands);
+    renderer.updateHandMask(handMask.canvas, handMask.active);
+  }
 
   // A hand resting on a control is choosing, not painting.
   const pointers = hands.map((h) => ({ id: h.id, x: h.x, y: h.y }));

@@ -92,6 +92,11 @@ export const CONFIG = {
   bleedEveryNFrames: 4,
   bleedRadius: 0.62,   // gentle: a heavier blur eats the fine spatter
 
+  // The snapshot the brushes read for mixing, and that runs are seeded from,
+  // is refreshed on its own beat. It used to ride on the diffusion pass, so
+  // turning that down to save time silently disabled both.
+  probeEveryNFrames: 6,
+
   // Wet-on-wet: a mark picks up the colour it lands in and carries it, so
   // yellow dragged through blue goes green at the meeting instead of simply
   // covering it.
@@ -123,6 +128,13 @@ export const CONFIG = {
   // not there, rather than landing on the paper behind.
   inkOnBodyOnly: true,
 
+  // Segmentation counts the visitor's hands as part of the visitor, so paint
+  // meant for a face would show on the hand in front of it. The hands are
+  // drawn into their own mask and cut back out.
+  maskHands: true,
+  handMaskWidth: 192,
+  handDilate: 0.3,     // fraction of hand span the mask grows by
+
   liveCutout: true,
   cutoutEveryNFrames: 2,   // segmentation is the expensive one; halve its rate
 
@@ -146,6 +158,10 @@ export const CONFIG = {
   ],
 
   historyLimit: 10,
+
+  // Unattended installation: once the visitor has gone, wipe the piece so the
+  // next person starts on their own face. 0 leaves it standing.
+  idleResetMs: 12000,
 };
 
 export const POSES = {

@@ -21,6 +21,7 @@ uniform sampler2D uInk;
 uniform sampler2D uDisp;
 uniform sampler2D uMask;
 uniform sampler2D uDepth;
+uniform sampler2D uHandMask;
 
 uniform float uAspect;
 uniform vec2 uOrigin;
@@ -60,6 +61,7 @@ uniform float uPaintGloss;
 uniform float uPaintShadow;
 uniform float uFormRelief;
 uniform float uBodyOnly;
+uniform float uHasHands;
 uniform float uPixel;
 
 const vec3 L = normalize(vec3(-0.45, -0.62, 0.65));
@@ -196,6 +198,11 @@ void main() {
   // Paint belongs on the visitor. The mask is upscaled from a small one, so a
   // little sharpening makes it end at the silhouette rather than fade across it.
   float body = mix(1.0, smoothstep(0.35, 0.68, person), uBodyOnly);
+  // Segmentation counts the visitor's hands as the visitor, so without this a
+  // hand held up to the face wears the paint meant for the face. Cutting it
+  // out also gives the hand the right behaviour: it hides the coat while it
+  // is there, and what is underneath comes back when it moves.
+  if (uHasHands > 0.5) body *= 1.0 - texture(uHandMask, camUv).a;
   ink.a *= body;
 
   // Stretched surface loses a little pigment, so the material reads as giving
@@ -274,7 +281,7 @@ export class Renderer {
       'uFormRelief', 'uPixel', 'uBodyOnly',
       'uDepth', 'uHasDepth', 'uDepthRange', 'uFaceRelief', 'uSculpt',
       'uEyeDeformScale', 'uEyePunch', 'uEyeLift', 'uColour',
-      'uEyeGradeFrom', 'uEyeGradeTo']) {
+      'uEyeGradeFrom', 'uEyeGradeTo', 'uHandMask', 'uHasHands']) {
       this.u[name] = gl.getUniformLocation(this.program, name);
     }
 
@@ -283,6 +290,7 @@ export class Renderer {
     gl.uniform1i(this.u.uDisp, 2);
     gl.uniform1i(this.u.uMask, 3);
     gl.uniform1i(this.u.uDepth, 4);
+    gl.uniform1i(this.u.uHandMask, 5);
     gl.uniform1f(this.u.uExtent, CONFIG.faceExtent);
     gl.uniform2f(this.u.uFaceCentre, CONFIG.faceCentre.x, CONFIG.faceCentre.y);
     gl.uniform1f(this.u.uDeform, CONFIG.deformStrength);
@@ -315,8 +323,10 @@ export class Renderer {
     this.texDisp = texture(gl);
     this.texMask = texture(gl);
     this.texDepth = texture(gl);
+    this.texHands = texture(gl);
     this.hasMask = false;
     this.hasDepth = false;
+    this.hasHands = false;
     this.reveal = 1;
     this.scan = -1;
   }
@@ -370,6 +380,15 @@ export class Renderer {
     this.hasDepth = true;
   }
 
+  updateHandMask(canvas, active) {
+    this.hasHands = active;
+    if (!active) return;
+    const gl = this.gl;
+    gl.activeTexture(gl.TEXTURE5);
+    gl.bindTexture(gl.TEXTURE_2D, this.texHands);
+    gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, gl.RGBA, gl.UNSIGNED_BYTE, canvas);
+  }
+
   render(face) {
     const gl = this.gl;
     gl.viewport(0, 0, this.canvas.width, this.canvas.height);
@@ -388,6 +407,7 @@ export class Renderer {
     }
     gl.uniform1f(this.u.uHasMask, this.hasMask ? 1 : 0);
     gl.uniform1f(this.u.uHasDepth, this.hasDepth ? 1 : 0);
+    gl.uniform1f(this.u.uHasHands, this.hasHands ? 1 : 0);
     gl.uniform1f(this.u.uReveal, this.reveal);
     gl.uniform1f(this.u.uScan, this.scan);
 
@@ -396,6 +416,7 @@ export class Renderer {
     gl.activeTexture(gl.TEXTURE2); gl.bindTexture(gl.TEXTURE_2D, this.texDisp);
     gl.activeTexture(gl.TEXTURE3); gl.bindTexture(gl.TEXTURE_2D, this.texMask);
     gl.activeTexture(gl.TEXTURE4); gl.bindTexture(gl.TEXTURE_2D, this.texDepth);
+    gl.activeTexture(gl.TEXTURE5); gl.bindTexture(gl.TEXTURE_2D, this.texHands);
     gl.drawArrays(gl.TRIANGLES, 0, 3);
   }
 }
