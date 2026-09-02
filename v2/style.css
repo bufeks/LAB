@@ -53,11 +53,21 @@ html, body {
 #stage canvas {
   grid-area: 1 / 1;
   display: block;
+}
+
+/* Only the image layers get a ground and a shadow. #hud is stacked on top of
+   #gl, so giving it either would paint over the artwork. */
+#preview,
+#gl {
   background: #000;
   box-shadow: 0 24px 70px rgba(0, 0, 0, 0.55);
 }
 
-#hud { touch-action: none; cursor: crosshair; }
+#hud {
+  background: transparent;
+  touch-action: none;
+  cursor: crosshair;
+}
 
 #flash {
   grid-area: 1 / 1;
