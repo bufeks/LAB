@@ -38,7 +38,11 @@ export const CONFIG = {
   protectEyes: true,
   eyeGuard: {
     rx: 1.08, ry: 0.8, soft: 0.86,
-    deform: 0.15, deformScale: 1.75,
+    // The eyes are not pinned in place - that made them read as two lenses
+    // glued to a face sliding away underneath. They take the average of the
+    // displacement around them instead: they travel with the flesh, they just
+    // do not distort. 1 is fully rigid, 0 lets them deform like everything else.
+    rigid: 1, deformScale: 1.75,
     // Local contrast around the eye, in colour. Replacing it with grey read
     // as a dead patch stuck on the face; this only separates the white from
     // the iris and fades out well before the guard edge.

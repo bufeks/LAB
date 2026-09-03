@@ -48,7 +48,7 @@ uniform vec2 uEyeB;
 uniform vec2 uEyeR;
 uniform float uProtectEyes;
 uniform float uEyeSoft;
-uniform float uEyeDeform;
+uniform float uEyeRigid;
 uniform float uEyeDeformScale;
 uniform float uEyePunch;
 uniform float uEyeLift;
@@ -82,6 +82,23 @@ float eyeGuard(vec2 f, float scale) {
   float a = length((f - uEyeA) / r);
   float b = length((f - uEyeB) / r);
   return smoothstep(uEyeSoft, 1.0, min(a, b));
+}
+
+vec2 dispAt(vec2 fp) {
+  vec2 uv = uFaceCentre + fp / uExtent;
+  if (outside(uv)) return vec2(0.0);
+  return (texture(uDisp, uv).rg * 2.0 - 1.0) * uDeform;
+}
+
+// The displacement of the flesh surrounding an eye, as a single rigid motion.
+// Handing this to the eye lets it travel with the face without being pulled
+// out of shape, where holding it still made it look stuck on.
+vec2 rigidAround(vec2 centre) {
+  vec2 r = uEyeR * 1.6;
+  vec2 sum = dispAt(centre + vec2(r.x, 0.0)) + dispAt(centre - vec2(r.x, 0.0))
+           + dispAt(centre + vec2(0.0, r.y)) + dispAt(centre - vec2(0.0, r.y))
+           + dispAt(centre + r * 0.72) + dispAt(centre - r * 0.72);
+  return sum / 6.0;
 }
 
 // A soft blob over each eye, wider than the guard and with no hard edge,
@@ -128,10 +145,14 @@ void main() {
 
   vec2 d = vec2(0.0);
   if (uHasFace > 0.5 && !outside(fuv)) {
-    d = (texture(uDisp, fuv).rg * 2.0 - 1.0) * uDeform;
+    d = dispAt(f);
+    // The eyes keep their shape while the surface around them is pulled, but
+    // they are carried along by it rather than left behind.
+    if (guard < 0.999) {
+      vec2 socket = length(f - uEyeA) < length(f - uEyeB) ? uEyeA : uEyeB;
+      d = mix(mix(d, rigidAround(socket), uEyeRigid), d, guard);
+    }
   }
-  // The eyes hold their shape while the surface around them is pulled.
-  d *= mix(uEyeDeform, 1.0, guard);
   vec2 fuv2 = fuv + d / uExtent;
 
   // The same displacement, expressed back in screen space, so the camera
@@ -276,11 +297,11 @@ export class Renderer {
     for (const name of ['uVideo', 'uInk', 'uDisp', 'uMask', 'uAspect', 'uOrigin',
       'uAxisU', 'uAxisV', 'uScale', 'uExtent', 'uFaceCentre', 'uDeform', 'uHasFace',
       'uHasMask', 'uContrast', 'uBright', 'uPaper', 'uReveal', 'uScan',
-      'uEyeA', 'uEyeB', 'uEyeR', 'uProtectEyes', 'uEyeSoft', 'uEyeDeform',
+      'uEyeA', 'uEyeB', 'uEyeR', 'uProtectEyes', 'uEyeSoft',
       'uInkTexel', 'uPaintForm', 'uPaintRelief', 'uPaintGloss', 'uPaintShadow',
       'uFormRelief', 'uPixel', 'uBodyOnly',
       'uDepth', 'uHasDepth', 'uDepthRange', 'uFaceRelief', 'uSculpt',
-      'uEyeDeformScale', 'uEyePunch', 'uEyeLift', 'uColour',
+      'uEyeRigid', 'uEyeDeformScale', 'uEyePunch', 'uEyeLift', 'uColour',
       'uEyeGradeFrom', 'uEyeGradeTo', 'uHandMask', 'uHasHands']) {
       this.u[name] = gl.getUniformLocation(this.program, name);
     }
@@ -300,7 +321,7 @@ export class Renderer {
     gl.uniform3f(this.u.uPaper, ...CONFIG.paper);
     gl.uniform1f(this.u.uProtectEyes, CONFIG.protectEyes ? 1 : 0);
     gl.uniform1f(this.u.uEyeSoft, CONFIG.eyeGuard.soft);
-    gl.uniform1f(this.u.uEyeDeform, CONFIG.eyeGuard.deform);
+    gl.uniform1f(this.u.uEyeRigid, CONFIG.eyeGuard.rigid);
     gl.uniform1f(this.u.uEyeDeformScale, CONFIG.eyeGuard.deformScale);
     gl.uniform1f(this.u.uEyePunch, CONFIG.eyeGuard.punch);
     gl.uniform1f(this.u.uEyeLift, CONFIG.eyeGuard.lift);
