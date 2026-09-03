@@ -47,9 +47,14 @@ uniform vec2 uEyeA;
 uniform vec2 uEyeB;
 uniform vec2 uEyeR;
 uniform float uProtectEyes;
+uniform float uLidA[32];
+uniform float uLidB[32];
 uniform float uEyeSoft;
+uniform float uEyeDeformSoft;
+uniform float uEyeDeformRound;
 uniform float uEyeRigid;
 uniform float uEyeDeformScale;
+uniform float uEyeGrade;
 uniform float uEyePunch;
 uniform float uEyeLift;
 uniform float uEyeGradeFrom;
@@ -74,14 +79,44 @@ bool outside(vec2 p) {
   return p.x < 0.0 || p.x > 1.0 || p.y < 0.0 || p.y > 1.0;
 }
 
+// Where the lid rim lies at this angle. The table comes straight off the
+// eyelid landmarks, so the boundary is the lash line rather than an ellipse
+// drawn around the whole socket, and paint can run right up to it.
+float lidRadius(vec2 d, bool second) {
+  float t = fract(atan(d.y, d.x) * 0.1591549431) * 32.0;
+  int i = int(t);
+  float f = t - float(i);
+  int j = i == 31 ? 0 : i + 1;
+  float r = second ? mix(uLidB[i], uLidB[j], f) : mix(uLidA[i], uLidA[j], f);
+  // Never smaller than a fraction of the socket: an empty table would
+  // otherwise read as "no eye here" and let paint straight over it.
+  return max(r, min(uEyeR.x, uEyeR.y) * 0.25);
+}
+
+// How far the guard reaches in one direction. Paint follows the rim exactly;
+// the deformation is held off over a rounder, wider area, because a socket
+// squeezed shut looks far worse than one that resists a little too much.
+float eyeReach(vec2 d, bool second, float round) {
+  float lid = lidRadius(d, second);
+  if (round <= 0.0) return lid;
+  float wide = length(d) / max(length(d / uEyeR), 1e-4);
+  return mix(lid, wide, round);
+}
+
+// Distance to an eye, in units of its own rim: 1 exactly at the lashes.
+float eyeDist(vec2 f, float round) {
+  vec2 da = f - uEyeA;
+  vec2 db = f - uEyeB;
+  return dot(da, da) < dot(db, db)
+    ? length(da) / eyeReach(da, false, round)
+    : length(db) / eyeReach(db, true, round);
+}
+
 // 1 well clear of the eyes, 0 inside one. Everything the visitor throws is
 // multiplied by this, so the eyes stay open however wrecked the rest gets.
-float eyeGuard(vec2 f, float scale) {
+float eyeGuard(vec2 f, float scale, float soft, float round) {
   if (uProtectEyes < 0.5) return 1.0;
-  vec2 r = uEyeR * scale;
-  float a = length((f - uEyeA) / r);
-  float b = length((f - uEyeB) / r);
-  return smoothstep(uEyeSoft, 1.0, min(a, b));
+  return smoothstep(soft, 1.0, eyeDist(f, round) / scale);
 }
 
 vec2 dispAt(vec2 fp) {
@@ -141,16 +176,24 @@ void main() {
   vec2 f = vec2(dot(rel, uAxisU), dot(rel, uAxisV)) / uScale;
   vec2 fuv = uFaceCentre + f / uExtent;
 
-  float guard = eyeGuard(f, uEyeDeformScale);
-
   vec2 d = vec2(0.0);
   if (uHasFace > 0.5 && !outside(fuv)) {
     d = dispAt(f);
-    // The eyes keep their shape while the surface around them is pulled, but
-    // they are carried along by it rather than left behind.
-    if (guard < 0.999) {
-      vec2 socket = length(f - uEyeA) < length(f - uEyeB) ? uEyeA : uEyeB;
-      d = mix(mix(d, rigidAround(socket), uEyeRigid), d, guard);
+
+    // The eyes keep their shape while the surface around them is pulled, and
+    // are carried along by it. Which fragments that applies to is decided by
+    // where the surface they show comes FROM, not by where they sit: judging
+    // it by the fragment's own position leaves a rigid patch behind at the
+    // undeformed eye position once the displacement exceeds the eye's size.
+    if (uProtectEyes > 0.5 && uEyeRigid > 0.0) {
+      vec2 content = f + d;
+      vec2 socket = length(content - uEyeA) < length(content - uEyeB) ? uEyeA : uEyeB;
+      vec2 rel = (content - socket) / (uEyeR * uEyeDeformScale);
+      if (dot(rel, rel) < 9.0) {
+        vec2 rigid = rigidAround(socket);
+        float guard = eyeGuard(f + rigid, uEyeDeformScale, uEyeDeformSoft, uEyeDeformRound);
+        d = mix(mix(d, rigid, uEyeRigid), d, guard);
+      }
     }
   }
   vec2 fuv2 = fuv + d / uExtent;
@@ -201,7 +244,7 @@ void main() {
   // unconditionally it read as a dead patch stuck on an untouched face.
   vec2 fe = f + d;
   vec2 nearEye = length(fe - uEyeA) < length(fe - uEyeB) ? uEyeA : uEyeB;
-  float grade = uHasFace * eyeGrade(fe) * smoothstep(0.12, 0.65, buried(nearEye));
+  float grade = uHasFace * uEyeGrade * eyeGrade(fe) * smoothstep(0.12, 0.65, buried(nearEye));
   if (grade > 0.001) {
     vec3 punched = clamp((look - 0.5) * uEyePunch + 0.5 + uEyeLift, 0.0, 1.0);
     bust = mix(bust, paper * (0.10 + 0.90 * punched), grade);
@@ -211,7 +254,7 @@ void main() {
 
   // ---- the coat -----------------------------------------------------------
   vec4 ink = vec4(0.0);
-  float guardHere = eyeGuard(f + d, 1.0);
+  float guardHere = eyeGuard(f + d, 1.0, uEyeSoft, 0.0);
   bool onCanvas = uHasFace > 0.5 && !outside(fuv2);
   if (onCanvas) ink = texture(uInk, fuv2);
   ink.a *= guardHere;
@@ -297,11 +340,11 @@ export class Renderer {
     for (const name of ['uVideo', 'uInk', 'uDisp', 'uMask', 'uAspect', 'uOrigin',
       'uAxisU', 'uAxisV', 'uScale', 'uExtent', 'uFaceCentre', 'uDeform', 'uHasFace',
       'uHasMask', 'uContrast', 'uBright', 'uPaper', 'uReveal', 'uScan',
-      'uEyeA', 'uEyeB', 'uEyeR', 'uProtectEyes', 'uEyeSoft',
-      'uInkTexel', 'uPaintForm', 'uPaintRelief', 'uPaintGloss', 'uPaintShadow',
+      'uEyeA', 'uEyeB', 'uEyeR', 'uLidA', 'uLidB', 'uProtectEyes', 'uEyeSoft',
+      'uEyeDeformSoft', 'uEyeDeformRound', 'uInkTexel', 'uPaintForm', 'uPaintRelief', 'uPaintGloss', 'uPaintShadow',
       'uFormRelief', 'uPixel', 'uBodyOnly',
       'uDepth', 'uHasDepth', 'uDepthRange', 'uFaceRelief', 'uSculpt',
-      'uEyeRigid', 'uEyeDeformScale', 'uEyePunch', 'uEyeLift', 'uColour',
+      'uEyeRigid', 'uEyeDeformScale', 'uEyeGrade', 'uEyePunch', 'uEyeLift', 'uColour',
       'uEyeGradeFrom', 'uEyeGradeTo', 'uHandMask', 'uHasHands']) {
       this.u[name] = gl.getUniformLocation(this.program, name);
     }
@@ -321,8 +364,11 @@ export class Renderer {
     gl.uniform3f(this.u.uPaper, ...CONFIG.paper);
     gl.uniform1f(this.u.uProtectEyes, CONFIG.protectEyes ? 1 : 0);
     gl.uniform1f(this.u.uEyeSoft, CONFIG.eyeGuard.soft);
+    gl.uniform1f(this.u.uEyeDeformSoft, CONFIG.eyeGuard.deformSoft);
+    gl.uniform1f(this.u.uEyeDeformRound, CONFIG.eyeGuard.deformRound);
     gl.uniform1f(this.u.uEyeRigid, CONFIG.eyeGuard.rigid);
     gl.uniform1f(this.u.uEyeDeformScale, CONFIG.eyeGuard.deformScale);
+    gl.uniform1f(this.u.uEyeGrade, CONFIG.eyeGuard.grade);
     gl.uniform1f(this.u.uEyePunch, CONFIG.eyeGuard.punch);
     gl.uniform1f(this.u.uEyeLift, CONFIG.eyeGuard.lift);
     gl.uniform1f(this.u.uEyeGradeFrom, CONFIG.eyeGuard.gradeFrom);
@@ -425,6 +471,8 @@ export class Renderer {
       gl.uniform2f(this.u.uEyeA, face.eyes.a.x, face.eyes.a.y);
       gl.uniform2f(this.u.uEyeB, face.eyes.b.x, face.eyes.b.y);
       gl.uniform2f(this.u.uEyeR, face.eyes.rx, face.eyes.ry);
+      gl.uniform1fv(this.u.uLidA, face.eyes.lids[0]);
+      gl.uniform1fv(this.u.uLidB, face.eyes.lids[1]);
     }
     gl.uniform1f(this.u.uHasMask, this.hasMask ? 1 : 0);
     gl.uniform1f(this.u.uHasDepth, this.hasDepth ? 1 : 0);

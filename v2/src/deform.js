@@ -107,6 +107,47 @@ export class Deform {
     this.dirty = true;
   }
 
+  // Two hands turning about each other. The surface rotates most at the
+  // centre and not at all at the edge of the reach, which is what makes it
+  // shear rather than simply spin. Centre and radius are in field UV, the
+  // angle in radians.
+  twist(cx, cy, angle, radius) {
+    const max = CONFIG.deformStrength;
+    if (radius <= 0 || !angle) return;
+
+    const S = this.size;
+    const r = radius * S;
+    const px = cx * S;
+    const py = cy * S;
+    const x0 = Math.max(0, Math.floor(px - r));
+    const x1 = Math.min(S - 1, Math.ceil(px + r));
+    const y0 = Math.max(0, Math.floor(py - r));
+    const y1 = Math.min(S - 1, Math.ceil(py + r));
+
+    for (let y = y0; y <= y1; y++) {
+      for (let x = x0; x <= x1; x++) {
+        const ox = (x + 0.5) / S - cx;
+        const oy = (y + 0.5) / S - cy;
+        const d2 = (ox * ox + oy * oy) / (radius * radius);
+        if (d2 > 1) continue;
+        const fall = (1 - d2) ** 2;
+
+        // Stored displacement is where to sample from, so the offset is
+        // turned the opposite way to the rotation being shown.
+        const a = -angle * fall;
+        const c = Math.cos(a);
+        const s = Math.sin(a);
+        const dx = (ox * c - oy * s - ox) * CONFIG.faceExtent;
+        const dy = (ox * s + oy * c - oy) * CONFIG.faceExtent;
+
+        const i = (y * S + x) * 2;
+        this.field[i] = clamp(this.field[i] + dx, -max, max);
+        this.field[i + 1] = clamp(this.field[i + 1] + dy, -max, max);
+      }
+    }
+    this.dirty = true;
+  }
+
   // Packed into RG8; linear filtering on the GPU smooths the quantisation
   // back out, and the field is broad and soft to begin with.
   pack() {

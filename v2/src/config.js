@@ -29,24 +29,34 @@ export const CONFIG = {
   faceSmoothing: 0.4,
 
   // The eyes survive whatever happens around them: ink never covers them and
-  // the surface barely moves there. Radii are multiples of the eye's own
-  // corner-to-corner width, so they hold for any face and any distance.
-  // The guard is sized to the eye opening itself, so paint runs right up to
-  // the lid instead of stopping short of it. Radii are multiples of the eye's
-  // corner-to-corner half width, which blinking cannot change. Deformation is
-  // held off over a wider area so the socket is not squashed shut.
+  // the surface barely moves there. Everything here is a multiple of the eye's
+  // own size, so it holds for any face at any distance from the camera.
   protectEyes: true,
   eyeGuard: {
-    rx: 1.08, ry: 0.8, soft: 0.86,
+    // The boundary paint stops at is the eyelid rim itself, read off the lid
+    // landmarks: `margin` is how far past the lashes it sits, and `soft` how
+    // sharply it arrives. rx/ry are only a size reference for the rigid
+    // handling and the grading, both of which want a whole socket, not a slit.
+    margin: 1.05, soft: 0.86,
+    // A rim can only ever be this big or this small next to the eye's own
+    // width. One badly tracked frame is then a slightly wrong eye rather
+    // than a hole punched through the middle of the paint.
+    lidClamp: [0.12, 1.25],
+    rx: 1.08, ry: 0.8,
+    // Paint has to stop sharply at the lid, but the deformation must not:
+    // the same narrow ramp there shows up as a hard-edged lens. It is held
+    // off over a rounder shape too, so a squeeze cannot close the socket.
+    deformSoft: 0.15, deformRound: 0.7,
     // The eyes are not pinned in place - that made them read as two lenses
     // glued to a face sliding away underneath. They take the average of the
     // displacement around them instead: they travel with the flesh, they just
     // do not distort. 1 is fully rigid, 0 lets them deform like everything else.
     rigid: 1, deformScale: 1.75,
-    // Local contrast around the eye, in colour. Replacing it with grey read
-    // as a dead patch stuck on the face; this only separates the white from
-    // the iris and fades out well before the guard edge.
-    punch: 1.8, lift: 0.02, gradeFrom: 0.30, gradeTo: 1.15,
+    // Local contrast around the eye. Off: it read as a processed patch on an
+    // otherwise untouched face. `grade` above 0 brings it back, in colour,
+    // proportional to how buried in paint the eye already is.
+    grade: 0,
+    punch: 1.9, lift: 0.02, gradeFrom: 0.30, gradeTo: 1.15,
   },
 
   deformGrid: 192,
@@ -86,6 +96,15 @@ export const CONFIG = {
       strength: 0.5,     // how much of the closing is transferred
       band: 1.5,         // reach either side of the line between the hands
       bulge: 0.45,       // how much the squeezed material swells sideways
+    },
+
+    // The same two palms turning about each other instead of closing. Both
+    // can happen at once, which is what wringing actually is.
+    twist: {
+      turnSpeed: 0.016,  // radians per frame before it counts
+      strength: 0.85,    // how much of the turn is transferred
+      reach: 1.5,        // radius, as a multiple of half the distance apart
+      maxStep: 0.5,      // ignore jumps this large: the hands swapped identity
     },
 
     // A pinch grabs more when the hand is nearer the camera than the face,
@@ -142,9 +161,9 @@ export const CONFIG = {
     // Slow and viscous. How far a run goes is set by what it is carrying, not
     // by these, so lowering them lengthens the fall in time without
     // shortening it in distance.
-    hang: [0.25, 1.4],   // seconds a bead swells before it lets go
-    gravity: 180,      // ink-canvas px per second squared
-    maxSpeed: 80,
+    hang: [0.4, 2.2],    // seconds a bead swells before it lets go
+    gravity: 95,       // ink-canvas px per second squared
+    maxSpeed: 44,
   },
 
   // Paint belongs on the body. Anything thrown past it misses and is simply
@@ -189,6 +208,7 @@ export const CONFIG = {
 
 export const POSES = {
   crush: { id: 'crush', label: '潰す', en: 'CRUSH' },
+  twist: { id: 'twist', label: 'ねじる', en: 'TWIST' },
   fist: { id: 'fist', label: 'ぶつける', en: 'THROW' },
   point: { id: 'point', label: '塗る', en: 'PAINT' },
   open: { id: 'open', label: 'ぶちまける', en: 'POUR' },

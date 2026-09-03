@@ -37,8 +37,10 @@ const history = [];
 const strokeFrom = new Map();
 const cooldown = new Map();
 let lastPalmGap = null;
+let lastPalmAngle = null;
 let crushing = false;
-let wasCrushing = false;
+let twisting = false;
+let wasTwoHanded = false;
 let beforeImage = null;
 let scanStart = 0;
 let resultSince = 0;
@@ -165,29 +167,40 @@ function ready(now, id, key, ms) {
   return true;
 }
 
-// Two open palms travelling towards each other, rather than towards the
-// face. Both gestures are open hands in motion, so this is checked first and
-// takes the hands out of the slap's hands when it fires.
-function crush(hands) {
-  const palms = hands.filter((h) => h.armed && h.pose === 'open');
+// What two open palms are doing to each other. Closing on the head squeezes
+// it; turning about each other wrings it. Both can be true at once, which is
+// what wringing actually is. Checked before the per-hand actions, because a
+// slap is also an open hand in motion.
+function twoHanded(hands) {
+  const palms = hands
+    .filter((h) => h.armed && h.pose === 'open')
+    .sort((p, q) => (p.id < q.id ? -1 : 1));
+
   if (palms.length < 2 || !face.present || !state.ready) {
     lastPalmGap = null;
+    lastPalmAngle = null;
     return null;
   }
 
   const [a, b] = palms;
   const gap = Math.hypot(a.x - b.x, a.y - b.y);
-  const previous = lastPalmGap;
+  const angle = Math.atan2(b.y - a.y, b.x - a.x);
+  const previousGap = lastPalmGap;
+  const previousAngle = lastPalmAngle;
   lastPalmGap = gap;
-  if (previous === null) return null;
+  lastPalmAngle = angle;
+  if (previousGap === null) return null;
 
-  const C = CONFIG.gesture.crush;
-  const closing = previous - gap;
-  if (closing < C.closeSpeed) return null;
   // Only once the hands are around the head rather than out at the edges.
-  if (gap / (face.scale * H) > C.maxGap) return null;
+  if (gap / (face.scale * H) > CONFIG.gesture.crush.maxGap) return null;
 
-  return { a, b, closing };
+  let turning = angle - previousAngle;
+  while (turning > Math.PI) turning -= Math.PI * 2;
+  while (turning < -Math.PI) turning += Math.PI * 2;
+  // A jump that big is the two hands trading places, not a wrist turning.
+  if (Math.abs(turning) > CONFIG.gesture.twist.maxStep) turning = 0;
+
+  return { a, b, gap, closing: previousGap - gap, turning };
 }
 
 function act(hand, now) {
@@ -337,21 +350,32 @@ function loop(now) {
     if (action === 'done') finish();
   }
 
-  const squeeze = crush(hands);
-  crushing = !!squeeze;
-  if (squeeze) {
-    if (!wasCrushing) snapshot();
-    const a = face.toFaceUv(squeeze.a.x, squeeze.a.y, W, H);
-    const b = face.toFaceUv(squeeze.b.x, squeeze.b.y, W, H);
-    // Closing distance, in eye-distances, is what gets transferred.
-    const amount = (squeeze.closing / H / face.scale) * CONFIG.gesture.crush.strength;
-    deform.squeeze(a.x, a.y, b.x, b.y, amount, CONFIG.gesture.crush.band / CONFIG.faceExtent);
+  const both = twoHanded(hands);
+  const C = CONFIG.gesture.crush;
+  const T = CONFIG.gesture.twist;
+  crushing = !!both && both.closing >= C.closeSpeed;
+  twisting = !!both && Math.abs(both.turning) >= T.turnSpeed;
+
+  if (crushing || twisting) {
+    if (!wasTwoHanded) snapshot();
+    const a = face.toFaceUv(both.a.x, both.a.y, W, H);
+    const b = face.toFaceUv(both.b.x, both.b.y, W, H);
+
+    if (crushing) {
+      // Closing distance, in eye-distances, is what gets transferred.
+      const amount = (both.closing / H / face.scale) * C.strength;
+      deform.squeeze(a.x, a.y, b.x, b.y, amount, C.band / CONFIG.faceExtent);
+    }
+    if (twisting) {
+      const half = Math.hypot(b.x - a.x, b.y - a.y) / 2;
+      deform.twist((a.x + b.x) / 2, (a.y + b.y) / 2, both.turning * T.strength, half * T.reach);
+    }
   }
-  wasCrushing = crushing;
+  wasTwoHanded = crushing || twisting;
 
   for (const hand of hands) {
-    // A hand taking part in a squeeze is not also emptying a bucket.
-    if (crushing && hand.pose === 'open') { strokeFrom.delete(hand.id); continue; }
+    // A hand wringing or squeezing is not also emptying a bucket.
+    if ((crushing || twisting) && hand.pose === 'open') { strokeFrom.delete(hand.id); continue; }
     if (ui.hitTest(hand.x, hand.y)) { strokeFrom.delete(hand.id); continue; }
     act(hand, now);
   }
@@ -394,7 +418,9 @@ function loop(now) {
 
 function legend(hands) {
   const live = new Set(hands.filter((h) => h.armed).map((h) => h.pose));
-  if (crushing) { live.add('crush'); live.delete('open'); }
+  if (crushing || twisting) live.delete('open');
+  if (crushing) live.add('crush');
+  if (twisting) live.add('twist');
   for (const pose of Object.keys(POSES)) {
     el(`g-${pose}`)?.classList.toggle('on', live.has(pose));
   }
