@@ -135,9 +135,12 @@ export const CONFIG = {
     seedWetness: 8,
     maxRuns: 80,
     minMass: 0.28,     // how much paint has to be stacked above an edge
-    hang: [0.12, 0.75],  // seconds a bead swells before it lets go
-    gravity: 620,      // ink-canvas px per second squared
-    maxSpeed: 240,
+    // Slow and viscous. How far a run goes is set by what it is carrying, not
+    // by these, so lowering them lengthens the fall in time without
+    // shortening it in distance.
+    hang: [0.25, 1.4],   // seconds a bead swells before it lets go
+    gravity: 180,      // ink-canvas px per second squared
+    maxSpeed: 80,
   },
 
   // Paint belongs on the body. Anything thrown past it misses and is simply
