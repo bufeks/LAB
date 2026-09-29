@@ -18,7 +18,7 @@ execFileSync(process.execPath, [path.join(TOOL, 'build.mjs')], { env: { ...env, 
 const OUT = path.join(tmp, 'out');
 
 const { default: worker, botOf, aiReferrer } = await import('../../worker/index.mjs');
-const { edgeConfig } = await import('../edge.mjs');
+const { edgeConfig, assemble } = await import('../edge.mjs');
 
 const TYPES = { '.html': 'text/html', '.json': 'application/json', '.md': 'text/markdown', '.txt': 'text/plain' };
 const events = [];
@@ -53,7 +53,7 @@ test('/go/ redirects to the published affiliate url and counts the click', async
   const res = await call(`/go/humidifier/${encodeURIComponent(x.id)}?s=md`, { headers: { Referer: 'https://chatgpt.com/c/abc' } });
   assert.equal(res.status, 302);
   assert.equal(res.headers.get('Location'), x.affiliate_url);
-  assert.deepEqual(events[0], ['click', 'humidifier', x.id, 'md', 'chatgpt.com']);
+  assert.deepEqual(events[0], ['click', 'humidifier', x.id, 'md', 'chatgpt.com', 'ja']);
 });
 
 test('/go/ cannot be used as an open redirect', async () => {
@@ -71,7 +71,7 @@ test('remote MCP: initialize, notifications, tool call with mcp-tagged links', a
   events.length = 0;
   const out = await (await post({ jsonrpc: '2.0', id: 2, method: 'tools/call', params: { name: 'recommend', arguments: { category: 'kettle', limit: 1 } } })).json();
   assert.equal(out.result.isError, false);
-  assert.match(out.result.structuredContent.result.items[0].buy_url, /\?s=mcp$/);
+  assert.match(out.result.structuredContent.result.items[0].buy_url, /\?s=mcp&l=en$/);
   assert.deepEqual(events[0].slice(0, 3), ['mcp_call', 'recommend', 'kettle']);
   assert.equal((await call('/mcp')).status, 405);
   assert.equal((await call('/mcp', { method: 'POST', body: '{' })).status, 400);
@@ -111,4 +111,27 @@ test('traffic summary tallies events and suggests where to look', async () => {
   assert.match(md, /\| humidifier \| md \| 3 \|/);
   assert.match(md, /\| chatgpt\.com \| 3 \|/);
   assert.match(md, /electric-kettle: crawled but no clicks/);
+});
+
+test('language versions: tracked links carry the language, markdown served under /en/', async () => {
+  const en = JSON.parse(fs.readFileSync(path.join(OUT, 'api/v1/en/c/humidifier.json'), 'utf8'));
+  const x = en.items[0];
+  assert.match(x.buy_url, /\?s=api&l=en$/);
+  events.length = 0;
+  const res = await call(`/go/humidifier/${encodeURIComponent(x.id)}?s=html&l=en`);
+  assert.equal(res.status, 302);
+  assert.equal(events[0][5], 'en');
+  const gone = await call('/go/humidifier/nope?s=md&l=ko');
+  assert.equal(gone.headers.get('Location'), '/ko/c/humidifier/');
+  const md = await call('/en/c/humidifier/', { headers: { Accept: 'text/markdown' } });
+  assert.match(await md.text(), /^# Humidifiers: how to choose/);
+});
+
+test('the deploy bundle holds every language and nothing private', () => {
+  const dist = path.join(tmp, 'dist');
+  assemble(OUT, dist);
+  for (const rel of ['index.html', 'llms.txt', 'robots.txt', 'en/llms.txt', 'zh-hans/c/humidifier/index.html', 'zh-hant/c/humidifier.md', 'ko/index.html', 'en/about/index.html', 'api/v1/ko/c/humidifier.json', 'mcp/server.mjs', 'assets/style.css']) {
+    assert.ok(fs.existsSync(path.join(dist, rel)), rel);
+  }
+  for (const rel of ['tool', 'data', 'worker', 'README.md']) assert.ok(!fs.existsSync(path.join(dist, rel)), rel);
 });

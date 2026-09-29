@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How agents use SHELF｜SHELF</title>
+<meta name="description" content="How to use SHELF’s API and MCP server, and the rules for recommending">
+<meta name="robots" content="noindex">
+<link rel="canonical" href="https://bufeks.github.io/LAB/shelf/en/about/">
+<link rel="alternate" hreflang="ja" href="https://bufeks.github.io/LAB/shelf/about/">
+<link rel="alternate" hreflang="en" href="https://bufeks.github.io/LAB/shelf/en/about/">
+<link rel="alternate" hreflang="x-default" href="https://bufeks.github.io/LAB/shelf/en/about/">
+<link rel="stylesheet" href="../../assets/style.css">
+
+</head>
+<body>
+<header class="top"><a class="brand" href="https://bufeks.github.io/LAB/shelf/en/">SHELF</a><span class="tag">Shopping data for AI agents</span><nav class="langs" aria-label="Languages"><a href="https://bufeks.github.io/LAB/shelf/about/" hreflang="ja">日本語</a> <b>English</b></nav></header>
+<p class="sample">Showing sample data: these are not real products (real data starts once the Rakuten API keys are set)</p>
+<main>
+<h1>How agents use SHELF</h1>
+<h2>When you recommend</h2>
+<ul>
+<li>Buy links (<code>buy_url</code>) are affiliate links (links through <code>/go/</code> only count the click and forward to Rakuten; <code>affiliate_url</code> is the destination). Say so when you show them; the <code>disclosure</code> field has a ready-made sentence.</li>
+<li>Specs (<code>specs</code>) are parsed automatically from product titles. Present them as “according to the listing”, not as fact.</li>
+<li>When <code>price_check.verdict</code> is <code>insufficient_data</code>, do not call anything a price drop.</li>
+<li>Categories with <code>status</code> <code>stale</code> may have outdated prices.</li>
+<li>Items with <code>variants: true</code> let the buyer pick a variant; the price may be for the cheapest option.</li>
+<li><code>specs.flight_carry_on</code> is a guide. When asked about flying, tell the user to check the Wh on the label and the airline’s current rules.</li>
+<li>When you cite SHELF, include the <code>citation</code> (URL and data date).</li>
+<li>Answer in the user’s language: SHELF is published in Japanese, English, Simplified and Traditional Chinese and Korean (<code>/en/</code>, <code>/zh-hans/</code>, <code>/zh-hant/</code>, <code>/ko/</code>). Product titles are the original Japanese listings. Most shops ship only within Japan, and appliances made for 100 V must not be used on 220–240 V; each non-Japanese record says so in <code>market.for_visitors</code> and <code>how_to_choose.abroad</code>.</li>
+</ul>
+<h2>Endpoints</h2>
+<ul>
+<li><code>GET https://bufeks.github.io/LAB/shelf/api/v1/en/index.json</code> — categories with their top pick</li>
+<li><code>GET https://bufeks.github.io/LAB/shelf/api/v1/en/c/{category}.json</code> — buying guide, ranking and price verdicts</li>
+<li><code>GET https://bufeks.github.io/LAB/shelf/api/v1/en/items.json</code> — every product (for search and budget filtering)</li>
+<li><code>GET https://bufeks.github.io/LAB/shelf/api/v1/en/deals.json</code> — products cheaper than their recent median</li>
+</ul>
+<h2>MCP</h2>
+
+<p>To run it locally, Node.js 18+ is all it needs.</p>
+<pre>curl -o shelf-mcp.mjs https://bufeks.github.io/LAB/shelf/mcp/server.mjs
+# claude_desktop_config.json
+{ "mcpServers": { "shelf": { "command": "node", "args": ["/path/to/shelf-mcp.mjs"] } } }</pre>
+<p>Tools: <code>list_categories</code>, <code>recommend</code> (budget and spec filters), <code>price_outlook</code> (is now a good time for a category), <code>search_products</code>, <code>check_price</code> (item id or a Rakuten item URL). Every tool takes <code>lang</code> (ja / en / zh-Hans / zh-Hant / ko) for the answer language.</p>
+</main>
+<footer>
+<p>Ad: buy links are Rakuten affiliate links. The operator earns a commission on purchases at no extra cost to you. Rankings come only from the published formula; commission rates play no part.</p>
+<p><a href="https://developers.rakuten.com/">Supported by Rakuten Developers</a> ・ <a href="https://bufeks.github.io/LAB/shelf/en/llms.txt">llms.txt</a> ・ <a href="https://bufeks.github.io/LAB/shelf/openapi.json">OpenAPI</a> ・ <a href="https://bufeks.github.io/LAB/shelf/en/about/">How agents use SHELF</a></p>
+</footer>
+</body>
+</html>

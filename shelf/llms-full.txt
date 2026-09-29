@@ -7,20 +7,27 @@
 
 ## Categories
 
-- [モバイルバッテリー](https://bufeks.github.io/LAB/shelf/c/mobile-battery.md): 1位 (サンプル) モバイルバッテリー C 5000mAh マグネット式 20W PSE（¥5,560）。普段使いは10000mAh・20W以上、ノートPCも充電するなら20000mAh・45W以上が目安。国内で売られる製品はPSEマークが必須。飛行機は預け入れ不可…
-- [USB-C 充電器 (PD)](https://bufeks.github.io/LAB/shelf/c/usb-c-charger.md): 1位 (サンプル) USB-C 充電器 (PD) D 30W 2ポート GaN PPS（¥4,460）。スマホだけなら20〜30W、ノートPCも充電するなら65W以上が目安。複数ポートは「同時に挿したときの配分」で1ポートあたりの出力が下がる点に注意。…
-- [完全ワイヤレスイヤホン](https://bufeks.github.io/LAB/shelf/c/wireless-earphones.md): 1位 (サンプル) 完全ワイヤレスイヤホン D aptX マルチポイント IPX7（¥10,130）。通勤・移動が多いならノイズキャンセリング付き、PCとスマホを行き来するならマルチポイント対応を優先。高音質コーデックはスマホ側の対応で決まる（iPhoneはAA…
-- [電気ケトル](https://bufeks.github.io/LAB/shelf/c/electric-kettle.md): 1位 (サンプル) 電気ケトル A 0.8L 1250W 転倒湯もれ防止（¥7,650）。一人暮らしは0.8L前後、家族は1.0〜1.2Lが目安。小さな子どもがいる家庭は「転倒湯もれ防止」と「本体二重構造」を優先。コーヒーをハンドドリップするなら温度…
-- [加湿器](https://bufeks.github.io/LAB/shelf/c/humidifier.md): 1位 (サンプル) 加湿器 F 超音波式 アロマ対応 8畳（¥10,060）。方式で性格がまったく違う。衛生面重視ならスチーム式（電気代は高め）、電気代重視なら気化式、置き場所と価格重視なら超音波式（こまめな手入れが前提）。適用畳数は部屋…
-- [電動歯ブラシ](https://bufeks.github.io/LAB/shelf/c/electric-toothbrush.md): 1位 (サンプル) 電動歯ブラシ D 音波 5つのモード 過圧（¥10,130）。本体価格より替えブラシ代（約3か月ごとに交換）が長期の出費を左右する。磨きすぎが心配なら押しつけ防止センサー付き、磨き残しが心配ならタイマー付きを選ぶ。…
+- [モバイルバッテリー](https://bufeks.github.io/LAB/shelf/c/mobile-battery.md): 1位 (サンプル) モバイルバッテリー C 5000mAh マグネット式 20W PSE（¥5,560）. 普段使いは10000mAh・20W以上、ノートPCも充電するなら20000mAh・45W以上が目安。国内で売られる製品はPSEマークが必須。飛行機は預け入れ不可で機内持ち込みのみ、…
+- [USB-C 充電器 (PD)](https://bufeks.github.io/LAB/shelf/c/usb-c-charger.md): 1位 (サンプル) USB-C 充電器 (PD) D 30W 2ポート GaN PPS（¥4,460）. スマホだけなら20〜30W、ノートPCも充電するなら65W以上が目安。複数ポートは「同時に挿したときの配分」で1ポートあたりの出力が下がる点に注意。
+- [完全ワイヤレスイヤホン](https://bufeks.github.io/LAB/shelf/c/wireless-earphones.md): 1位 (サンプル) 完全ワイヤレスイヤホン D aptX マルチポイント IPX7（¥10,130）. 通勤・移動が多いならノイズキャンセリング付き、PCとスマホを行き来するならマルチポイント対応を優先。高音質コーデックはスマホ側の対応で決まる（iPhoneはAACまで）。
+- [電気ケトル](https://bufeks.github.io/LAB/shelf/c/electric-kettle.md): 1位 (サンプル) 電気ケトル A 0.8L 1250W 転倒湯もれ防止（¥7,650）. 一人暮らしは0.8L前後、家族は1.0〜1.2Lが目安。小さな子どもがいる家庭は「転倒湯もれ防止」と「本体二重構造」を優先。コーヒーをハンドドリップするなら温度調節＋細口。
+- [加湿器](https://bufeks.github.io/LAB/shelf/c/humidifier.md): 1位 (サンプル) 加湿器 F 超音波式 アロマ対応 8畳（¥10,060）. 方式で性格がまったく違う。衛生面重視ならスチーム式（電気代は高め）、電気代重視なら気化式、置き場所と価格重視なら超音波式（こまめな手入れが前提）。適用畳数は部屋より一回り大きめを選…
+- [電動歯ブラシ](https://bufeks.github.io/LAB/shelf/c/electric-toothbrush.md): 1位 (サンプル) 電動歯ブラシ D 音波 5つのモード 過圧（¥10,130）. 本体価格より替えブラシ代（約3か月ごとに交換）が長期の出費を左右する。磨きすぎが心配なら押しつけ防止センサー付き、磨き残しが心配ならタイマー付きを選ぶ。
 
 ## API
 
 - [index.json](https://bufeks.github.io/LAB/shelf/api/v1/index.json): カテゴリ一覧
 - [items.json](https://bufeks.github.io/LAB/shelf/api/v1/items.json): 全商品（予算・スペックで絞り込む用）
-- [deals.json](https://bufeks.github.io/LAB/shelf/api/v1/deals.json): 過去90日比で値下がり中の商品
+- [deals.json](https://bufeks.github.io/LAB/shelf/api/v1/deals.json): 最近の中央値より安くなっている商品
 - [openapi.json](https://bufeks.github.io/LAB/shelf/openapi.json): OpenAPI 3.1 定義
-- [MCP server](https://bufeks.github.io/LAB/shelf/mcp/server.mjs): 依存なしの stdio MCP サーバー（tools: list_categories, recommend, price_outlook, search_products, check_price）
+- [MCP server](https://bufeks.github.io/LAB/shelf/mcp/server.mjs): 依存なしの stdio MCP サーバー (tools: list_categories, recommend, price_outlook, search_products, check_price; lang = ja | en | zh-Hans | zh-Hant | ko)
+
+## Other languages
+
+- [English](https://bufeks.github.io/LAB/shelf/en/llms.txt)
+- [简体中文](https://bufeks.github.io/LAB/shelf/zh-hans/llms.txt)
+- [繁體中文](https://bufeks.github.io/LAB/shelf/zh-hant/llms.txt)
+- [한국어](https://bufeks.github.io/LAB/shelf/ko/llms.txt)
 
 ## Optional
 
@@ -39,9 +46,9 @@
 
 ## 結論
 
-- **総合1位**: (サンプル) モバイルバッテリー C 5000mAh マグネット式 20W PSE — ¥5,560 ★4.81（1,671件）、価格判定: いつもの価格 → [購入リンク](https://search.rakuten.co.jp/search/mall/%E3%83%A2%E3%83%90%E3%82%A4%E3%83%AB%E3%83%90%E3%83%83%E3%83%86%E3%83%AA%E3%83%BC/)
-- **コスパ（高評価の中で最安）**: (サンプル) モバイルバッテリー B 20000mAh 65W PD ノートPC対応 PSE — ¥2,860 ★4.29（2,853件）、価格判定: いつもの価格 → [購入リンク](https://search.rakuten.co.jp/search/mall/%E3%83%A2%E3%83%90%E3%82%A4%E3%83%AB%E3%83%90%E3%83%83%E3%83%86%E3%83%AA%E3%83%BC/)
-- **値下がり中**: (サンプル) モバイルバッテリー D 10000mAh ケーブル内蔵 20W PSE — ¥4,690 ★4.22（2,332件）、価格判定: 観測31日の最安値 → [購入リンク](https://search.rakuten.co.jp/search/mall/%E3%83%A2%E3%83%90%E3%82%A4%E3%83%AB%E3%83%90%E3%83%83%E3%83%86%E3%83%AA%E3%83%BC/)
+- **総合1位**: (サンプル) モバイルバッテリー C 5000mAh マグネット式 20W PSE — ¥5,560 ★4.81（1,671件）, 価格判定: いつもの価格 → [購入リンク](https://search.rakuten.co.jp/search/mall/%E3%83%A2%E3%83%90%E3%82%A4%E3%83%AB%E3%83%90%E3%83%83%E3%83%86%E3%83%AA%E3%83%BC/)
+- **コスパ（高評価の中で最安）**: (サンプル) モバイルバッテリー B 20000mAh 65W PD ノートPC対応 PSE — ¥2,860 ★4.29（2,853件）, 価格判定: いつもの価格 → [購入リンク](https://search.rakuten.co.jp/search/mall/%E3%83%A2%E3%83%90%E3%82%A4%E3%83%AB%E3%83%90%E3%83%83%E3%83%86%E3%83%AA%E3%83%BC/)
+- **値下がり中**: (サンプル) モバイルバッテリー D 10000mAh ケーブル内蔵 20W PSE — ¥4,690 ★4.22（2,332件）, 価格判定: 観測31日の最安値 → [購入リンク](https://search.rakuten.co.jp/search/mall/%E3%83%A2%E3%83%90%E3%82%A4%E3%83%AB%E3%83%90%E3%83%83%E3%83%86%E3%83%AA%E3%83%BC/)
 - **今が買い時か（カテゴリ全体）**: 上位商品の33%がいつもより安い。買うなら悪くない時期。（観測31日・季節変動はまだ反映していない）
 
 普段使いは10000mAh・20W以上、ノートPCも充電するなら20000mAh・45W以上が目安。国内で売られる製品はPSEマークが必須。飛行機は預け入れ不可で機内持ち込みのみ、100Whを超えると航空会社の承認が要り、機内での使用・充電を禁じる航空会社も多い。
@@ -63,12 +70,12 @@
 
 | 順位 | 商品 | 価格 | 評価 | 価格判定 | スペック(商品名から抽出) | 購入 |
 | --- | --- | --- | --- | --- | --- | --- |
-| 1 | (サンプル) モバイルバッテリー C 5000mAh マグネット式 20W PSE（サンプルショップ） | ¥5,560 送料込 | ★4.81（1,671件） | いつもの価格（中央値¥5,280・観測31日） | 容量5000mAh・最大出力20W・PSE表記・マグネット式・推定電力量(3.85V換算)19.25Wh・機内持ち込み可の目安(95Wh以下) | [楽天](https://search.rakuten.co.jp/search/mall/%E3%83%A2%E3%83%90%E3%82%A4%E3%83%AB%E3%83%90%E3%83%83%E3%83%86%E3%83%AA%E3%83%BC/) |
-| 2 | (サンプル) モバイルバッテリー E 27000mAh 140W PD PSE（サンプルショップ） | ¥6,050 送料込 | ★4.43（995件） | いつもの価格（中央値¥6,030・観測31日） | 容量27000mAh・最大出力140W・PSE表記・推定電力量(3.85V換算)103.95Wh・航空会社の承認が必要(100〜160Wh) | [楽天](https://search.rakuten.co.jp/search/mall/%E3%83%A2%E3%83%90%E3%82%A4%E3%83%AB%E3%83%90%E3%83%83%E3%83%86%E3%83%AA%E3%83%BC/) |
-| 3 | (サンプル) モバイルバッテリー B 20000mAh 65W PD ノートPC対応 PSE（サンプルショップ） | ¥2,860 送料別 | ★4.29（2,853件） | いつもの価格（中央値¥2,850・観測31日） | 容量20000mAh・最大出力65W・PSE表記・推定電力量(3.85V換算)77Wh・機内持ち込み可の目安(95Wh以下) | [楽天](https://search.rakuten.co.jp/search/mall/%E3%83%A2%E3%83%90%E3%82%A4%E3%83%AB%E3%83%90%E3%83%83%E3%83%86%E3%83%AA%E3%83%BC/) |
-| 4 | (サンプル) モバイルバッテリー F 10000mAh 30W 軽量 PSE（サンプルショップ） | ¥6,440 送料別 | ★4.24（2,519件） | いつもの価格（中央値¥6,120・観測31日） | 容量10000mAh・最大出力30W・PSE表記・推定電力量(3.85V換算)38.5Wh・機内持ち込み可の目安(95Wh以下) | [楽天](https://search.rakuten.co.jp/search/mall/%E3%83%A2%E3%83%90%E3%82%A4%E3%83%AB%E3%83%90%E3%83%83%E3%83%86%E3%83%AA%E3%83%BC/) |
-| 5 | (サンプル) モバイルバッテリー D 10000mAh ケーブル内蔵 20W PSE（サンプルショップ） | ¥4,690 送料別 | ★4.22（2,332件） | 観測31日の最安値（中央値¥5,350・観測31日） | 容量10000mAh・最大出力20W・PSE表記・ケーブル内蔵・推定電力量(3.85V換算)38.5Wh・機内持ち込み可の目安(95Wh以下) | [楽天](https://search.rakuten.co.jp/search/mall/%E3%83%A2%E3%83%90%E3%82%A4%E3%83%AB%E3%83%90%E3%83%83%E3%83%86%E3%83%AA%E3%83%BC/) |
-| 6 | (サンプル) モバイルバッテリー A 10000mAh 22.5W PD PSE適合 薄型（サンプルショップ） | ¥6,850 送料込 | ★4.20（965件） | 観測31日の最安値（中央値¥7,810・観測31日） | 容量10000mAh・最大出力22.5W・PSE表記・推定電力量(3.85V換算)38.5Wh・機内持ち込み可の目安(95Wh以下) | [楽天](https://search.rakuten.co.jp/search/mall/%E3%83%A2%E3%83%90%E3%82%A4%E3%83%AB%E3%83%90%E3%83%83%E3%83%86%E3%83%AA%E3%83%BC/) |
+| 1 | (サンプル) モバイルバッテリー C 5000mAh マグネット式 20W PSE (サンプルショップ) | ¥5,560 送料込 | ★4.81（1,671件） | いつもの価格（中央値¥5,280・観測31日） | 容量 5000mAh・最大出力 20W・PSE表記・マグネット式・推定電力量(3.85V換算) 19.25Wh・機内持ち込み可の目安(95Wh以下) | [楽天](https://search.rakuten.co.jp/search/mall/%E3%83%A2%E3%83%90%E3%82%A4%E3%83%AB%E3%83%90%E3%83%83%E3%83%86%E3%83%AA%E3%83%BC/) |
+| 2 | (サンプル) モバイルバッテリー E 27000mAh 140W PD PSE (サンプルショップ) | ¥6,050 送料込 | ★4.43（995件） | いつもの価格（中央値¥6,030・観測31日） | 容量 27000mAh・最大出力 140W・PSE表記・推定電力量(3.85V換算) 103.95Wh・航空会社の承認が必要(100〜160Wh) | [楽天](https://search.rakuten.co.jp/search/mall/%E3%83%A2%E3%83%90%E3%82%A4%E3%83%AB%E3%83%90%E3%83%83%E3%83%86%E3%83%AA%E3%83%BC/) |
+| 3 | (サンプル) モバイルバッテリー B 20000mAh 65W PD ノートPC対応 PSE (サンプルショップ) | ¥2,860 送料別 | ★4.29（2,853件） | いつもの価格（中央値¥2,850・観測31日） | 容量 20000mAh・最大出力 65W・PSE表記・推定電力量(3.85V換算) 77Wh・機内持ち込み可の目安(95Wh以下) | [楽天](https://search.rakuten.co.jp/search/mall/%E3%83%A2%E3%83%90%E3%82%A4%E3%83%AB%E3%83%90%E3%83%83%E3%83%86%E3%83%AA%E3%83%BC/) |
+| 4 | (サンプル) モバイルバッテリー F 10000mAh 30W 軽量 PSE (サンプルショップ) | ¥6,440 送料別 | ★4.24（2,519件） | いつもの価格（中央値¥6,120・観測31日） | 容量 10000mAh・最大出力 30W・PSE表記・推定電力量(3.85V換算) 38.5Wh・機内持ち込み可の目安(95Wh以下) | [楽天](https://search.rakuten.co.jp/search/mall/%E3%83%A2%E3%83%90%E3%82%A4%E3%83%AB%E3%83%90%E3%83%83%E3%83%86%E3%83%AA%E3%83%BC/) |
+| 5 | (サンプル) モバイルバッテリー D 10000mAh ケーブル内蔵 20W PSE (サンプルショップ) | ¥4,690 送料別 | ★4.22（2,332件） | 観測31日の最安値（中央値¥5,350・観測31日） | 容量 10000mAh・最大出力 20W・PSE表記・ケーブル内蔵・推定電力量(3.85V換算) 38.5Wh・機内持ち込み可の目安(95Wh以下) | [楽天](https://search.rakuten.co.jp/search/mall/%E3%83%A2%E3%83%90%E3%82%A4%E3%83%AB%E3%83%90%E3%83%83%E3%83%86%E3%83%AA%E3%83%BC/) |
+| 6 | (サンプル) モバイルバッテリー A 10000mAh 22.5W PD PSE適合 薄型 (サンプルショップ) | ¥6,850 送料込 | ★4.20（965件） | 観測31日の最安値（中央値¥7,810・観測31日） | 容量 10000mAh・最大出力 22.5W・PSE表記・推定電力量(3.85V換算) 38.5Wh・機内持ち込み可の目安(95Wh以下) | [楽天](https://search.rakuten.co.jp/search/mall/%E3%83%A2%E3%83%90%E3%82%A4%E3%83%AB%E3%83%90%E3%83%83%E3%83%86%E3%83%AA%E3%83%BC/) |
 
 ## ランキングの決め方
 
@@ -84,6 +91,7 @@ Rakutenで各カテゴリをレビュー件数順に最大60件取得し、除�
 - JSON: https://bufeks.github.io/LAB/shelf/api/v1/c/mobile-battery.json
 - 全カテゴリ: https://bufeks.github.io/LAB/shelf/api/v1/index.json
 - OpenAPI: https://bufeks.github.io/LAB/shelf/openapi.json / MCPサーバー: https://bufeks.github.io/LAB/shelf/mcp/server.mjs
+- Languages: [日本語](https://bufeks.github.io/LAB/shelf/c/mobile-battery.md) · [English](https://bufeks.github.io/LAB/shelf/en/c/mobile-battery.md) · [简体中文](https://bufeks.github.io/LAB/shelf/zh-hans/c/mobile-battery.md) · [繁體中文](https://bufeks.github.io/LAB/shelf/zh-hant/c/mobile-battery.md) · [한국어](https://bufeks.github.io/LAB/shelf/ko/c/mobile-battery.md)
 
 
 ---
@@ -97,9 +105,9 @@ Rakutenで各カテゴリをレビュー件数順に最大60件取得し、除�
 
 ## 結論
 
-- **総合1位**: (サンプル) USB-C 充電器 (PD) D 30W 2ポート GaN PPS — ¥4,460 ★4.83（2,742件）、価格判定: 観測31日の最安値 → [購入リンク](https://search.rakuten.co.jp/search/mall/USB-C%20%E5%85%85%E9%9B%BB%E5%99%A8%20PD/)
-- **コスパ（高評価の中で最安）**: (サンプル) USB-C 充電器 (PD) F 140W 3ポート GaN — ¥3,020 ★4.73（1,264件）、価格判定: いつもの価格 → [購入リンク](https://search.rakuten.co.jp/search/mall/USB-C%20%E5%85%85%E9%9B%BB%E5%99%A8%20PD/)
-- **値下がり中**: (サンプル) USB-C 充電器 (PD) A 65W 3ポート GaN 折りたたみ PPS — ¥1,620 ★3.89（1,335件）、価格判定: 観測31日の最安値 → [購入リンク](https://search.rakuten.co.jp/search/mall/USB-C%20%E5%85%85%E9%9B%BB%E5%99%A8%20PD/)
+- **総合1位**: (サンプル) USB-C 充電器 (PD) D 30W 2ポート GaN PPS — ¥4,460 ★4.83（2,742件）, 価格判定: 観測31日の最安値 → [購入リンク](https://search.rakuten.co.jp/search/mall/USB-C%20%E5%85%85%E9%9B%BB%E5%99%A8%20PD/)
+- **コスパ（高評価の中で最安）**: (サンプル) USB-C 充電器 (PD) F 140W 3ポート GaN — ¥3,020 ★4.73（1,264件）, 価格判定: いつもの価格 → [購入リンク](https://search.rakuten.co.jp/search/mall/USB-C%20%E5%85%85%E9%9B%BB%E5%99%A8%20PD/)
+- **値下がり中**: (サンプル) USB-C 充電器 (PD) A 65W 3ポート GaN 折りたたみ PPS — ¥1,620 ★3.89（1,335件）, 価格判定: 観測31日の最安値 → [購入リンク](https://search.rakuten.co.jp/search/mall/USB-C%20%E5%85%85%E9%9B%BB%E5%99%A8%20PD/)
 - **今が買い時か（カテゴリ全体）**: 上位商品の33%がいつもより安い。買うなら悪くない時期。（観測31日・季節変動はまだ反映していない）
 
 スマホだけなら20〜30W、ノートPCも充電するなら65W以上が目安。複数ポートは「同時に挿したときの配分」で1ポートあたりの出力が下がる点に注意。
@@ -121,12 +129,12 @@ Rakutenで各カテゴリをレビュー件数順に最大60件取得し、除�
 
 | 順位 | 商品 | 価格 | 評価 | 価格判定 | スペック(商品名から抽出) | 購入 |
 | --- | --- | --- | --- | --- | --- | --- |
-| 1 | (サンプル) USB-C 充電器 (PD) D 30W 2ポート GaN PPS（サンプルショップ） | ¥4,460 送料別 | ★4.83（2,742件） | 観測31日の最安値（中央値¥5,090・観測31日） | 最大出力30W・ポート数2口・GaN(窒化ガリウム)・PPS対応 | [楽天](https://search.rakuten.co.jp/search/mall/USB-C%20%E5%85%85%E9%9B%BB%E5%99%A8%20PD/) |
-| 2 | (サンプル) USB-C 充電器 (PD) F 140W 3ポート GaN（サンプルショップ） | ¥3,020 送料別 | ★4.73（1,264件） | いつもの価格（中央値¥2,870・観測31日） | 最大出力140W・ポート数3口・GaN(窒化ガリウム) | [楽天](https://search.rakuten.co.jp/search/mall/USB-C%20%E5%85%85%E9%9B%BB%E5%99%A8%20PD/) |
-| 3 | (サンプル) USB-C 充電器 (PD) C 100W 4ポート GaN（サンプルショップ） | ¥5,180 送料込 | ★4.52（694件） | いつもの価格（中央値¥4,920・観測31日） | 最大出力100W・ポート数4口・GaN(窒化ガリウム) | [楽天](https://search.rakuten.co.jp/search/mall/USB-C%20%E5%85%85%E9%9B%BB%E5%99%A8%20PD/) |
-| 4 | (サンプル) USB-C 充電器 (PD) B 20W 1ポート 小型（サンプルショップ） | ¥4,590 送料別 | ★4.35（1,402件） | いつもの価格（中央値¥4,570・観測31日） | 最大出力20W・ポート数1口 | [楽天](https://search.rakuten.co.jp/search/mall/USB-C%20%E5%85%85%E9%9B%BB%E5%99%A8%20PD/) |
-| 5 | (サンプル) USB-C 充電器 (PD) E 45W 1ポート GaN PPS 折りたたみ（サンプルショップ） | ¥5,660 送料込 | ★3.92（372件） | いつもの価格（中央値¥5,640・観測31日） | 最大出力45W・ポート数1口・GaN(窒化ガリウム)・PPS対応・折りたたみプラグ | [楽天](https://search.rakuten.co.jp/search/mall/USB-C%20%E5%85%85%E9%9B%BB%E5%99%A8%20PD/) |
-| 6 | (サンプル) USB-C 充電器 (PD) A 65W 3ポート GaN 折りたたみ PPS（サンプルショップ） | ¥1,620 送料込 | ★3.89（1,335件） | 観測31日の最安値（中央値¥1,850・観測31日） | 最大出力65W・ポート数3口・GaN(窒化ガリウム)・PPS対応・折りたたみプラグ | [楽天](https://search.rakuten.co.jp/search/mall/USB-C%20%E5%85%85%E9%9B%BB%E5%99%A8%20PD/) |
+| 1 | (サンプル) USB-C 充電器 (PD) D 30W 2ポート GaN PPS (サンプルショップ) | ¥4,460 送料別 | ★4.83（2,742件） | 観測31日の最安値（中央値¥5,090・観測31日） | 最大出力 30W・ポート数 2口・GaN(窒化ガリウム)・PPS対応 | [楽天](https://search.rakuten.co.jp/search/mall/USB-C%20%E5%85%85%E9%9B%BB%E5%99%A8%20PD/) |
+| 2 | (サンプル) USB-C 充電器 (PD) F 140W 3ポート GaN (サンプルショップ) | ¥3,020 送料別 | ★4.73（1,264件） | いつもの価格（中央値¥2,870・観測31日） | 最大出力 140W・ポート数 3口・GaN(窒化ガリウム) | [楽天](https://search.rakuten.co.jp/search/mall/USB-C%20%E5%85%85%E9%9B%BB%E5%99%A8%20PD/) |
+| 3 | (サンプル) USB-C 充電器 (PD) C 100W 4ポート GaN (サンプルショップ) | ¥5,180 送料込 | ★4.52（694件） | いつもの価格（中央値¥4,920・観測31日） | 最大出力 100W・ポート数 4口・GaN(窒化ガリウム) | [楽天](https://search.rakuten.co.jp/search/mall/USB-C%20%E5%85%85%E9%9B%BB%E5%99%A8%20PD/) |
+| 4 | (サンプル) USB-C 充電器 (PD) B 20W 1ポート 小型 (サンプルショップ) | ¥4,590 送料別 | ★4.35（1,402件） | いつもの価格（中央値¥4,570・観測31日） | 最大出力 20W・ポート数 1口 | [楽天](https://search.rakuten.co.jp/search/mall/USB-C%20%E5%85%85%E9%9B%BB%E5%99%A8%20PD/) |
+| 5 | (サンプル) USB-C 充電器 (PD) E 45W 1ポート GaN PPS 折りたたみ (サンプルショップ) | ¥5,660 送料込 | ★3.92（372件） | いつもの価格（中央値¥5,640・観測31日） | 最大出力 45W・ポート数 1口・GaN(窒化ガリウム)・PPS対応・折りたたみプラグ | [楽天](https://search.rakuten.co.jp/search/mall/USB-C%20%E5%85%85%E9%9B%BB%E5%99%A8%20PD/) |
+| 6 | (サンプル) USB-C 充電器 (PD) A 65W 3ポート GaN 折りたたみ PPS (サンプルショップ) | ¥1,620 送料込 | ★3.89（1,335件） | 観測31日の最安値（中央値¥1,850・観測31日） | 最大出力 65W・ポート数 3口・GaN(窒化ガリウム)・PPS対応・折りたたみプラグ | [楽天](https://search.rakuten.co.jp/search/mall/USB-C%20%E5%85%85%E9%9B%BB%E5%99%A8%20PD/) |
 
 ## ランキングの決め方
 
@@ -142,6 +150,7 @@ Rakutenで各カテゴリをレビュー件数順に最大60件取得し、除�
 - JSON: https://bufeks.github.io/LAB/shelf/api/v1/c/usb-c-charger.json
 - 全カテゴリ: https://bufeks.github.io/LAB/shelf/api/v1/index.json
 - OpenAPI: https://bufeks.github.io/LAB/shelf/openapi.json / MCPサーバー: https://bufeks.github.io/LAB/shelf/mcp/server.mjs
+- Languages: [日本語](https://bufeks.github.io/LAB/shelf/c/usb-c-charger.md) · [English](https://bufeks.github.io/LAB/shelf/en/c/usb-c-charger.md) · [简体中文](https://bufeks.github.io/LAB/shelf/zh-hans/c/usb-c-charger.md) · [繁體中文](https://bufeks.github.io/LAB/shelf/zh-hant/c/usb-c-charger.md) · [한국어](https://bufeks.github.io/LAB/shelf/ko/c/usb-c-charger.md)
 
 
 ---
@@ -155,9 +164,9 @@ Rakutenで各カテゴリをレビュー件数順に最大60件取得し、除�
 
 ## 結論
 
-- **総合1位**: (サンプル) 完全ワイヤレスイヤホン D aptX マルチポイント IPX7 — ¥10,130 ★4.68（2,990件）、価格判定: 観測31日の最安値 → [購入リンク](https://search.rakuten.co.jp/search/mall/%E3%83%AF%E3%82%A4%E3%83%A4%E3%83%AC%E3%82%B9%E3%82%A4%E3%83%A4%E3%83%9B%E3%83%B3/)
-- **コスパ（高評価の中で最安）**: (サンプル) 完全ワイヤレスイヤホン F マルチポイント LDAC IPX4 — ¥9,190 ★4.58（1,287件）、価格判定: いつもの価格 → [購入リンク](https://search.rakuten.co.jp/search/mall/%E3%83%AF%E3%82%A4%E3%83%A4%E3%83%AC%E3%82%B9%E3%82%A4%E3%83%A4%E3%83%9B%E3%83%B3/)
-- **値下がり中**: (サンプル) 完全ワイヤレスイヤホン D aptX マルチポイント IPX7 — ¥10,130 ★4.68（2,990件）、価格判定: 観測31日の最安値 → [購入リンク](https://search.rakuten.co.jp/search/mall/%E3%83%AF%E3%82%A4%E3%83%A4%E3%83%AC%E3%82%B9%E3%82%A4%E3%83%A4%E3%83%9B%E3%83%B3/)
+- **総合1位**: (サンプル) 完全ワイヤレスイヤホン D aptX マルチポイント IPX7 — ¥10,130 ★4.68（2,990件）, 価格判定: 観測31日の最安値 → [購入リンク](https://search.rakuten.co.jp/search/mall/%E3%83%AF%E3%82%A4%E3%83%A4%E3%83%AC%E3%82%B9%E3%82%A4%E3%83%A4%E3%83%9B%E3%83%B3/)
+- **コスパ（高評価の中で最安）**: (サンプル) 完全ワイヤレスイヤホン F マルチポイント LDAC IPX4 — ¥9,190 ★4.58（1,287件）, 価格判定: いつもの価格 → [購入リンク](https://search.rakuten.co.jp/search/mall/%E3%83%AF%E3%82%A4%E3%83%A4%E3%83%AC%E3%82%B9%E3%82%A4%E3%83%A4%E3%83%9B%E3%83%B3/)
+- **値下がり中**: (サンプル) 完全ワイヤレスイヤホン D aptX マルチポイント IPX7 — ¥10,130 ★4.68（2,990件）, 価格判定: 観測31日の最安値 → [購入リンク](https://search.rakuten.co.jp/search/mall/%E3%83%AF%E3%82%A4%E3%83%A4%E3%83%AC%E3%82%B9%E3%82%A4%E3%83%A4%E3%83%9B%E3%83%B3/)
 - **今が買い時か（カテゴリ全体）**: 上位商品の33%がいつもより安い。買うなら悪くない時期。（観測31日・季節変動はまだ反映していない）
 
 通勤・移動が多いならノイズキャンセリング付き、PCとスマホを行き来するならマルチポイント対応を優先。高音質コーデックはスマホ側の対応で決まる（iPhoneはAACまで）。
@@ -178,12 +187,12 @@ Rakutenで各カテゴリをレビュー件数順に最大60件取得し、除�
 
 | 順位 | 商品 | 価格 | 評価 | 価格判定 | スペック(商品名から抽出) | 購入 |
 | --- | --- | --- | --- | --- | --- | --- |
-| 1 | (サンプル) 完全ワイヤレスイヤホン D aptX マルチポイント IPX7（サンプルショップ） | ¥10,130 送料別 | ★4.68（2,990件） | 観測31日の最安値（中央値¥11,560・観測31日） | aptX・マルチポイント・防水等級(IPX)7 | [楽天](https://search.rakuten.co.jp/search/mall/%E3%83%AF%E3%82%A4%E3%83%A4%E3%83%AC%E3%82%B9%E3%82%A4%E3%83%A4%E3%83%9B%E3%83%B3/) |
-| 2 | (サンプル) 完全ワイヤレスイヤホン E ノイズキャンセリング 最大50時間（サンプルショップ） | ¥10,570 送料込 | ★4.77（67件） | いつもの価格（中央値¥10,540・観測31日） | ノイズキャンセリング・最大再生時間(ケース込みの場合あり)50時間 | [楽天](https://search.rakuten.co.jp/search/mall/%E3%83%AF%E3%82%A4%E3%83%A4%E3%83%AC%E3%82%B9%E3%82%A4%E3%83%A4%E3%83%9B%E3%83%B3/) |
-| 3 | (サンプル) 完全ワイヤレスイヤホン F マルチポイント LDAC IPX4（サンプルショップ） | ¥9,190 送料別 | ★4.58（1,287件） | いつもの価格（中央値¥8,730・観測31日） | LDAC・マルチポイント・防水等級(IPX)4 | [楽天](https://search.rakuten.co.jp/search/mall/%E3%83%AF%E3%82%A4%E3%83%A4%E3%83%AC%E3%82%B9%E3%82%A4%E3%83%A4%E3%83%9B%E3%83%B3/) |
-| 4 | (サンプル) 完全ワイヤレスイヤホン C 軽量 IPX4 最大30時間（サンプルショップ） | ¥6,790 送料込 | ★4.50（2,071件） | いつもの価格（中央値¥6,450・観測31日） | 防水等級(IPX)4・最大再生時間(ケース込みの場合あり)30時間 | [楽天](https://search.rakuten.co.jp/search/mall/%E3%83%AF%E3%82%A4%E3%83%A4%E3%83%AC%E3%82%B9%E3%82%A4%E3%83%A4%E3%83%9B%E3%83%B3/) |
-| 5 | (サンプル) 完全ワイヤレスイヤホン B LDAC ノイズキャンセリング IPX5（サンプルショップ） | ¥11,330 送料別 | ★4.22（2,527件） | いつもの価格（中央値¥11,280・観測31日） | ノイズキャンセリング・LDAC・防水等級(IPX)5 | [楽天](https://search.rakuten.co.jp/search/mall/%E3%83%AF%E3%82%A4%E3%83%A4%E3%83%AC%E3%82%B9%E3%82%A4%E3%83%A4%E3%83%9B%E3%83%B3/) |
-| 6 | (サンプル) 完全ワイヤレスイヤホン A ノイズキャンセリング マルチポイント IPX4 最大40時間（サンプルショップ） | ¥5,280 送料込 | ★4.11（3,318件） | 観測31日の最安値（中央値¥6,020・観測31日） | ノイズキャンセリング・マルチポイント・防水等級(IPX)4・最大再生時間(ケース込みの場合あり)40時間 | [楽天](https://search.rakuten.co.jp/search/mall/%E3%83%AF%E3%82%A4%E3%83%A4%E3%83%AC%E3%82%B9%E3%82%A4%E3%83%A4%E3%83%9B%E3%83%B3/) |
+| 1 | (サンプル) 完全ワイヤレスイヤホン D aptX マルチポイント IPX7 (サンプルショップ) | ¥10,130 送料別 | ★4.68（2,990件） | 観測31日の最安値（中央値¥11,560・観測31日） | aptX・マルチポイント・防水等級(IPX) 7 | [楽天](https://search.rakuten.co.jp/search/mall/%E3%83%AF%E3%82%A4%E3%83%A4%E3%83%AC%E3%82%B9%E3%82%A4%E3%83%A4%E3%83%9B%E3%83%B3/) |
+| 2 | (サンプル) 完全ワイヤレスイヤホン E ノイズキャンセリング 最大50時間 (サンプルショップ) | ¥10,570 送料込 | ★4.77（67件） | いつもの価格（中央値¥10,540・観測31日） | ノイズキャンセリング・最大再生時間(ケース込みの場合あり) 50時間 | [楽天](https://search.rakuten.co.jp/search/mall/%E3%83%AF%E3%82%A4%E3%83%A4%E3%83%AC%E3%82%B9%E3%82%A4%E3%83%A4%E3%83%9B%E3%83%B3/) |
+| 3 | (サンプル) 完全ワイヤレスイヤホン F マルチポイント LDAC IPX4 (サンプルショップ) | ¥9,190 送料別 | ★4.58（1,287件） | いつもの価格（中央値¥8,730・観測31日） | LDAC・マルチポイント・防水等級(IPX) 4 | [楽天](https://search.rakuten.co.jp/search/mall/%E3%83%AF%E3%82%A4%E3%83%A4%E3%83%AC%E3%82%B9%E3%82%A4%E3%83%A4%E3%83%9B%E3%83%B3/) |
+| 4 | (サンプル) 完全ワイヤレスイヤホン C 軽量 IPX4 最大30時間 (サンプルショップ) | ¥6,790 送料込 | ★4.50（2,071件） | いつもの価格（中央値¥6,450・観測31日） | 防水等級(IPX) 4・最大再生時間(ケース込みの場合あり) 30時間 | [楽天](https://search.rakuten.co.jp/search/mall/%E3%83%AF%E3%82%A4%E3%83%A4%E3%83%AC%E3%82%B9%E3%82%A4%E3%83%A4%E3%83%9B%E3%83%B3/) |
+| 5 | (サンプル) 完全ワイヤレスイヤホン B LDAC ノイズキャンセリング IPX5 (サンプルショップ) | ¥11,330 送料別 | ★4.22（2,527件） | いつもの価格（中央値¥11,280・観測31日） | ノイズキャンセリング・LDAC・防水等級(IPX) 5 | [楽天](https://search.rakuten.co.jp/search/mall/%E3%83%AF%E3%82%A4%E3%83%A4%E3%83%AC%E3%82%B9%E3%82%A4%E3%83%A4%E3%83%9B%E3%83%B3/) |
+| 6 | (サンプル) 完全ワイヤレスイヤホン A ノイズキャンセリング マルチポイント IPX4 最大40時間 (サンプルショップ) | ¥5,280 送料込 | ★4.11（3,318件） | 観測31日の最安値（中央値¥6,020・観測31日） | ノイズキャンセリング・マルチポイント・防水等級(IPX) 4・最大再生時間(ケース込みの場合あり) 40時間 | [楽天](https://search.rakuten.co.jp/search/mall/%E3%83%AF%E3%82%A4%E3%83%A4%E3%83%AC%E3%82%B9%E3%82%A4%E3%83%A4%E3%83%9B%E3%83%B3/) |
 
 ## ランキングの決め方
 
@@ -199,6 +208,7 @@ Rakutenで各カテゴリをレビュー件数順に最大60件取得し、除�
 - JSON: https://bufeks.github.io/LAB/shelf/api/v1/c/wireless-earphones.json
 - 全カテゴリ: https://bufeks.github.io/LAB/shelf/api/v1/index.json
 - OpenAPI: https://bufeks.github.io/LAB/shelf/openapi.json / MCPサーバー: https://bufeks.github.io/LAB/shelf/mcp/server.mjs
+- Languages: [日本語](https://bufeks.github.io/LAB/shelf/c/wireless-earphones.md) · [English](https://bufeks.github.io/LAB/shelf/en/c/wireless-earphones.md) · [简体中文](https://bufeks.github.io/LAB/shelf/zh-hans/c/wireless-earphones.md) · [繁體中文](https://bufeks.github.io/LAB/shelf/zh-hant/c/wireless-earphones.md) · [한국어](https://bufeks.github.io/LAB/shelf/ko/c/wireless-earphones.md)
 
 
 ---
@@ -212,9 +222,9 @@ Rakutenで各カテゴリをレビュー件数順に最大60件取得し、除�
 
 ## 結論
 
-- **総合1位**: (サンプル) 電気ケトル A 0.8L 1250W 転倒湯もれ防止 — ¥7,650 ★4.73（974件）、価格判定: 観測31日の最安値 → [購入リンク](https://search.rakuten.co.jp/search/mall/%E9%9B%BB%E6%B0%97%E3%82%B1%E3%83%88%E3%83%AB/)
-- **コスパ（高評価の中で最安）**: (サンプル) 電気ケトル F 0.8L 細口 ドリップ 900W — ¥4,340 ★4.42（1,568件）、価格判定: いつもの価格 → [購入リンク](https://search.rakuten.co.jp/search/mall/%E9%9B%BB%E6%B0%97%E3%82%B1%E3%83%88%E3%83%AB/)
-- **値下がり中**: (サンプル) 電気ケトル D 1.2L 1300W 転倒湯もれ防止 二重構造 — ¥5,700 ★4.31（1,522件）、価格判定: 観測31日の最安値 → [購入リンク](https://search.rakuten.co.jp/search/mall/%E9%9B%BB%E6%B0%97%E3%82%B1%E3%83%88%E3%83%AB/)
+- **総合1位**: (サンプル) 電気ケトル A 0.8L 1250W 転倒湯もれ防止 — ¥7,650 ★4.73（974件）, 価格判定: 観測31日の最安値 → [購入リンク](https://search.rakuten.co.jp/search/mall/%E9%9B%BB%E6%B0%97%E3%82%B1%E3%83%88%E3%83%AB/)
+- **コスパ（高評価の中で最安）**: (サンプル) 電気ケトル F 0.8L 細口 ドリップ 900W — ¥4,340 ★4.42（1,568件）, 価格判定: いつもの価格 → [購入リンク](https://search.rakuten.co.jp/search/mall/%E9%9B%BB%E6%B0%97%E3%82%B1%E3%83%88%E3%83%AB/)
+- **値下がり中**: (サンプル) 電気ケトル D 1.2L 1300W 転倒湯もれ防止 二重構造 — ¥5,700 ★4.31（1,522件）, 価格判定: 観測31日の最安値 → [購入リンク](https://search.rakuten.co.jp/search/mall/%E9%9B%BB%E6%B0%97%E3%82%B1%E3%83%88%E3%83%AB/)
 - **今が買い時か（カテゴリ全体）**: 上位商品の33%がいつもより安い。買うなら悪くない時期。（観測31日・季節変動はまだ反映していない）
 
 一人暮らしは0.8L前後、家族は1.0〜1.2Lが目安。小さな子どもがいる家庭は「転倒湯もれ防止」と「本体二重構造」を優先。コーヒーをハンドドリップするなら温度調節＋細口。
@@ -235,12 +245,12 @@ Rakutenで各カテゴリをレビュー件数順に最大60件取得し、除�
 
 | 順位 | 商品 | 価格 | 評価 | 価格判定 | スペック(商品名から抽出) | 購入 |
 | --- | --- | --- | --- | --- | --- | --- |
-| 1 | (サンプル) 電気ケトル A 0.8L 1250W 転倒湯もれ防止（サンプルショップ） | ¥7,650 送料込 | ★4.73（974件） | 観測31日の最安値（中央値¥8,720・観測31日） | 容量0.8L・消費電力1250W・転倒湯もれ防止 | [楽天](https://search.rakuten.co.jp/search/mall/%E9%9B%BB%E6%B0%97%E3%82%B1%E3%83%88%E3%83%AB/) |
-| 2 | (サンプル) 電気ケトル E 1.0L 1250W（サンプルショップ） | ¥10,300 送料込 | ★4.71（1,223件） | いつもの価格（中央値¥10,270・観測31日） | 容量1L・消費電力1250W | [楽天](https://search.rakuten.co.jp/search/mall/%E9%9B%BB%E6%B0%97%E3%82%B1%E3%83%88%E3%83%AB/) |
-| 3 | (サンプル) 電気ケトル F 0.8L 細口 ドリップ 900W（サンプルショップ） | ¥4,340 送料別 | ★4.42（1,568件） | いつもの価格（中央値¥4,120・観測31日） | 容量0.8L・消費電力900W・細口(ドリップ向き) | [楽天](https://search.rakuten.co.jp/search/mall/%E9%9B%BB%E6%B0%97%E3%82%B1%E3%83%88%E3%83%AB/) |
-| 4 | (サンプル) 電気ケトル D 1.2L 1300W 転倒湯もれ防止 二重構造（サンプルショップ） | ¥5,700 送料別 | ★4.31（1,522件） | 観測31日の最安値（中央値¥6,510・観測31日） | 容量1.2L・消費電力1300W・転倒湯もれ防止 | [楽天](https://search.rakuten.co.jp/search/mall/%E9%9B%BB%E6%B0%97%E3%82%B1%E3%83%88%E3%83%AB/) |
-| 5 | (サンプル) 電気ケトル B 1.0L 温度調節 保温 1200W（サンプルショップ） | ¥2,010 送料別 | ★4.20（1,308件） | いつもの価格（中央値¥2,000・観測31日） | 容量1L・消費電力1200W・温度調節・保温 | [楽天](https://search.rakuten.co.jp/search/mall/%E9%9B%BB%E6%B0%97%E3%82%B1%E3%83%88%E3%83%AB/) |
-| 6 | (サンプル) 電気ケトル C 0.6L 細口 ドリップ 温度調節（サンプルショップ） | ¥5,500 送料込 | ★3.96（477件） | いつもの価格（中央値¥5,230・観測31日） | 容量0.6L・温度調節・細口(ドリップ向き) | [楽天](https://search.rakuten.co.jp/search/mall/%E9%9B%BB%E6%B0%97%E3%82%B1%E3%83%88%E3%83%AB/) |
+| 1 | (サンプル) 電気ケトル A 0.8L 1250W 転倒湯もれ防止 (サンプルショップ) | ¥7,650 送料込 | ★4.73（974件） | 観測31日の最安値（中央値¥8,720・観測31日） | 容量 0.8L・消費電力 1250W・転倒湯もれ防止 | [楽天](https://search.rakuten.co.jp/search/mall/%E9%9B%BB%E6%B0%97%E3%82%B1%E3%83%88%E3%83%AB/) |
+| 2 | (サンプル) 電気ケトル E 1.0L 1250W (サンプルショップ) | ¥10,300 送料込 | ★4.71（1,223件） | いつもの価格（中央値¥10,270・観測31日） | 容量 1L・消費電力 1250W | [楽天](https://search.rakuten.co.jp/search/mall/%E9%9B%BB%E6%B0%97%E3%82%B1%E3%83%88%E3%83%AB/) |
+| 3 | (サンプル) 電気ケトル F 0.8L 細口 ドリップ 900W (サンプルショップ) | ¥4,340 送料別 | ★4.42（1,568件） | いつもの価格（中央値¥4,120・観測31日） | 容量 0.8L・消費電力 900W・細口(ドリップ向き) | [楽天](https://search.rakuten.co.jp/search/mall/%E9%9B%BB%E6%B0%97%E3%82%B1%E3%83%88%E3%83%AB/) |
+| 4 | (サンプル) 電気ケトル D 1.2L 1300W 転倒湯もれ防止 二重構造 (サンプルショップ) | ¥5,700 送料別 | ★4.31（1,522件） | 観測31日の最安値（中央値¥6,510・観測31日） | 容量 1.2L・消費電力 1300W・転倒湯もれ防止 | [楽天](https://search.rakuten.co.jp/search/mall/%E9%9B%BB%E6%B0%97%E3%82%B1%E3%83%88%E3%83%AB/) |
+| 5 | (サンプル) 電気ケトル B 1.0L 温度調節 保温 1200W (サンプルショップ) | ¥2,010 送料別 | ★4.20（1,308件） | いつもの価格（中央値¥2,000・観測31日） | 容量 1L・消費電力 1200W・温度調節・保温 | [楽天](https://search.rakuten.co.jp/search/mall/%E9%9B%BB%E6%B0%97%E3%82%B1%E3%83%88%E3%83%AB/) |
+| 6 | (サンプル) 電気ケトル C 0.6L 細口 ドリップ 温度調節 (サンプルショップ) | ¥5,500 送料込 | ★3.96（477件） | いつもの価格（中央値¥5,230・観測31日） | 容量 0.6L・温度調節・細口(ドリップ向き) | [楽天](https://search.rakuten.co.jp/search/mall/%E9%9B%BB%E6%B0%97%E3%82%B1%E3%83%88%E3%83%AB/) |
 
 ## ランキングの決め方
 
@@ -256,6 +266,7 @@ Rakutenで各カテゴリをレビュー件数順に最大60件取得し、除�
 - JSON: https://bufeks.github.io/LAB/shelf/api/v1/c/electric-kettle.json
 - 全カテゴリ: https://bufeks.github.io/LAB/shelf/api/v1/index.json
 - OpenAPI: https://bufeks.github.io/LAB/shelf/openapi.json / MCPサーバー: https://bufeks.github.io/LAB/shelf/mcp/server.mjs
+- Languages: [日本語](https://bufeks.github.io/LAB/shelf/c/electric-kettle.md) · [English](https://bufeks.github.io/LAB/shelf/en/c/electric-kettle.md) · [简体中文](https://bufeks.github.io/LAB/shelf/zh-hans/c/electric-kettle.md) · [繁體中文](https://bufeks.github.io/LAB/shelf/zh-hant/c/electric-kettle.md) · [한국어](https://bufeks.github.io/LAB/shelf/ko/c/electric-kettle.md)
 
 
 ---
@@ -269,9 +280,9 @@ Rakutenで各カテゴリをレビュー件数順に最大60件取得し、除�
 
 ## 結論
 
-- **総合1位**: (サンプル) 加湿器 F 超音波式 アロマ対応 8畳 — ¥10,060 ★4.71（2,239件）、価格判定: いつもの価格 → [購入リンク](https://search.rakuten.co.jp/search/mall/%E5%8A%A0%E6%B9%BF%E5%99%A8/)
-- **コスパ（高評価の中で最安）**: (サンプル) 加湿器 C 超音波式 6畳 300mL/h タンク2.5L — ¥8,460 ★4.26（3,126件）、価格判定: いつもの価格 → [購入リンク](https://search.rakuten.co.jp/search/mall/%E5%8A%A0%E6%B9%BF%E5%99%A8/)
-- **値下がり中**: (サンプル) 加湿器 D ハイブリッド 14畳 600mL/h タンク4.0L — ¥7,250 ★4.03（3,768件）、価格判定: 観測31日の最安値 → [購入リンク](https://search.rakuten.co.jp/search/mall/%E5%8A%A0%E6%B9%BF%E5%99%A8/)
+- **総合1位**: (サンプル) 加湿器 F 超音波式 アロマ対応 8畳 — ¥10,060 ★4.71（2,239件）, 価格判定: いつもの価格 → [購入リンク](https://search.rakuten.co.jp/search/mall/%E5%8A%A0%E6%B9%BF%E5%99%A8/)
+- **コスパ（高評価の中で最安）**: (サンプル) 加湿器 C 超音波式 6畳 300mL/h タンク2.5L — ¥8,460 ★4.26（3,126件）, 価格判定: いつもの価格 → [購入リンク](https://search.rakuten.co.jp/search/mall/%E5%8A%A0%E6%B9%BF%E5%99%A8/)
+- **値下がり中**: (サンプル) 加湿器 D ハイブリッド 14畳 600mL/h タンク4.0L — ¥7,250 ★4.03（3,768件）, 価格判定: 観測31日の最安値 → [購入リンク](https://search.rakuten.co.jp/search/mall/%E5%8A%A0%E6%B9%BF%E5%99%A8/)
 - **今が買い時か（カテゴリ全体）**: 上位商品の33%がいつもより安い。買うなら悪くない時期。（観測31日・季節変動はまだ反映していない）
 
 方式で性格がまったく違う。衛生面重視ならスチーム式（電気代は高め）、電気代重視なら気化式、置き場所と価格重視なら超音波式（こまめな手入れが前提）。適用畳数は部屋より一回り大きめを選ぶ。
@@ -293,12 +304,12 @@ Rakutenで各カテゴリをレビュー件数順に最大60件取得し、除�
 
 | 順位 | 商品 | 価格 | 評価 | 価格判定 | スペック(商品名から抽出) | 購入 |
 | --- | --- | --- | --- | --- | --- | --- |
-| 1 | (サンプル) 加湿器 F 超音波式 アロマ対応 8畳（サンプルショップ） | ¥10,060 送料別 | ★4.71（2,239件） | いつもの価格（中央値¥9,560・観測31日） | 適用畳数(最大)8畳・超音波式 | [楽天](https://search.rakuten.co.jp/search/mall/%E5%8A%A0%E6%B9%BF%E5%99%A8/) |
-| 2 | (サンプル) 加湿器 B 気化式 18畳 700mL/h タンク4.2L（サンプルショップ） | ¥15,520 送料別 | ★4.65（516件） | いつもの価格（中央値¥15,450・観測31日） | 加湿量700mL/h・適用畳数(最大)18畳・タンク容量4.2L・気化式 | [楽天](https://search.rakuten.co.jp/search/mall/%E5%8A%A0%E6%B9%BF%E5%99%A8/) |
-| 3 | (サンプル) 加湿器 C 超音波式 6畳 300mL/h タンク2.5L（サンプルショップ） | ¥8,460 送料込 | ★4.26（3,126件） | いつもの価格（中央値¥8,040・観測31日） | 加湿量300mL/h・適用畳数(最大)6畳・タンク容量2.5L・超音波式 | [楽天](https://search.rakuten.co.jp/search/mall/%E5%8A%A0%E6%B9%BF%E5%99%A8/) |
-| 4 | (サンプル) 加湿器 E スチーム式 10畳 タンク2.2L（サンプルショップ） | ¥4,320 送料込 | ★4.08（689件） | いつもの価格（中央値¥4,310・観測31日） | 適用畳数(最大)10畳・タンク容量2.2L・スチーム式 | [楽天](https://search.rakuten.co.jp/search/mall/%E5%8A%A0%E6%B9%BF%E5%99%A8/) |
-| 5 | (サンプル) 加湿器 D ハイブリッド 14畳 600mL/h タンク4.0L（サンプルショップ） | ¥7,250 送料別 | ★4.03（3,768件） | 観測31日の最安値（中央値¥8,280・観測31日） | 加湿量600mL/h・適用畳数(最大)14畳・タンク容量4L・ハイブリッド式 | [楽天](https://search.rakuten.co.jp/search/mall/%E5%8A%A0%E6%B9%BF%E5%99%A8/) |
-| 6 | (サンプル) 加湿器 A スチーム式 木造8畳/プレハブ13畳 480mL/h タンク3.0L（サンプルショップ） | ¥15,290 送料込 | ★3.98（272件） | 観測31日の最安値（中央値¥17,440・観測31日） | 加湿量480mL/h・適用畳数(最大)13畳・タンク容量3L・スチーム式 | [楽天](https://search.rakuten.co.jp/search/mall/%E5%8A%A0%E6%B9%BF%E5%99%A8/) |
+| 1 | (サンプル) 加湿器 F 超音波式 アロマ対応 8畳 (サンプルショップ) | ¥10,060 送料別 | ★4.71（2,239件） | いつもの価格（中央値¥9,560・観測31日） | 適用畳数(最大) 8畳・超音波式 | [楽天](https://search.rakuten.co.jp/search/mall/%E5%8A%A0%E6%B9%BF%E5%99%A8/) |
+| 2 | (サンプル) 加湿器 B 気化式 18畳 700mL/h タンク4.2L (サンプルショップ) | ¥15,520 送料別 | ★4.65（516件） | いつもの価格（中央値¥15,450・観測31日） | 加湿量 700 mL/h・適用畳数(最大) 18畳・タンク容量 4.2L・気化式 | [楽天](https://search.rakuten.co.jp/search/mall/%E5%8A%A0%E6%B9%BF%E5%99%A8/) |
+| 3 | (サンプル) 加湿器 C 超音波式 6畳 300mL/h タンク2.5L (サンプルショップ) | ¥8,460 送料込 | ★4.26（3,126件） | いつもの価格（中央値¥8,040・観測31日） | 加湿量 300 mL/h・適用畳数(最大) 6畳・タンク容量 2.5L・超音波式 | [楽天](https://search.rakuten.co.jp/search/mall/%E5%8A%A0%E6%B9%BF%E5%99%A8/) |
+| 4 | (サンプル) 加湿器 E スチーム式 10畳 タンク2.2L (サンプルショップ) | ¥4,320 送料込 | ★4.08（689件） | いつもの価格（中央値¥4,310・観測31日） | 適用畳数(最大) 10畳・タンク容量 2.2L・スチーム式 | [楽天](https://search.rakuten.co.jp/search/mall/%E5%8A%A0%E6%B9%BF%E5%99%A8/) |
+| 5 | (サンプル) 加湿器 D ハイブリッド 14畳 600mL/h タンク4.0L (サンプルショップ) | ¥7,250 送料別 | ★4.03（3,768件） | 観測31日の最安値（中央値¥8,280・観測31日） | 加湿量 600 mL/h・適用畳数(最大) 14畳・タンク容量 4L・ハイブリッド式 | [楽天](https://search.rakuten.co.jp/search/mall/%E5%8A%A0%E6%B9%BF%E5%99%A8/) |
+| 6 | (サンプル) 加湿器 A スチーム式 木造8畳/プレハブ13畳 480mL/h タンク3.0L (サンプルショップ) | ¥15,290 送料込 | ★3.98（272件） | 観測31日の最安値（中央値¥17,440・観測31日） | 加湿量 480 mL/h・適用畳数(最大) 13畳・タンク容量 3L・スチーム式 | [楽天](https://search.rakuten.co.jp/search/mall/%E5%8A%A0%E6%B9%BF%E5%99%A8/) |
 
 ## ランキングの決め方
 
@@ -314,6 +325,7 @@ Rakutenで各カテゴリをレビュー件数順に最大60件取得し、除�
 - JSON: https://bufeks.github.io/LAB/shelf/api/v1/c/humidifier.json
 - 全カテゴリ: https://bufeks.github.io/LAB/shelf/api/v1/index.json
 - OpenAPI: https://bufeks.github.io/LAB/shelf/openapi.json / MCPサーバー: https://bufeks.github.io/LAB/shelf/mcp/server.mjs
+- Languages: [日本語](https://bufeks.github.io/LAB/shelf/c/humidifier.md) · [English](https://bufeks.github.io/LAB/shelf/en/c/humidifier.md) · [简体中文](https://bufeks.github.io/LAB/shelf/zh-hans/c/humidifier.md) · [繁體中文](https://bufeks.github.io/LAB/shelf/zh-hant/c/humidifier.md) · [한국어](https://bufeks.github.io/LAB/shelf/ko/c/humidifier.md)
 
 
 ---
@@ -327,9 +339,9 @@ Rakutenで各カテゴリをレビュー件数順に最大60件取得し、除�
 
 ## 結論
 
-- **総合1位**: (サンプル) 電動歯ブラシ D 音波 5つのモード 過圧 — ¥10,130 ★4.68（2,990件）、価格判定: 観測31日の最安値 → [購入リンク](https://search.rakuten.co.jp/search/mall/%E9%9B%BB%E5%8B%95%E6%AD%AF%E3%83%96%E3%83%A9%E3%82%B7/)
-- **コスパ（高評価の中で最安）**: (サンプル) 電動歯ブラシ F 音波 タイマー 替えブラシ2本付き — ¥9,190 ★4.58（1,287件）、価格判定: いつもの価格 → [購入リンク](https://search.rakuten.co.jp/search/mall/%E9%9B%BB%E5%8B%95%E6%AD%AF%E3%83%96%E3%83%A9%E3%82%B7/)
-- **値下がり中**: (サンプル) 電動歯ブラシ D 音波 5つのモード 過圧 — ¥10,130 ★4.68（2,990件）、価格判定: 観測31日の最安値 → [購入リンク](https://search.rakuten.co.jp/search/mall/%E9%9B%BB%E5%8B%95%E6%AD%AF%E3%83%96%E3%83%A9%E3%82%B7/)
+- **総合1位**: (サンプル) 電動歯ブラシ D 音波 5つのモード 過圧 — ¥10,130 ★4.68（2,990件）, 価格判定: 観測31日の最安値 → [購入リンク](https://search.rakuten.co.jp/search/mall/%E9%9B%BB%E5%8B%95%E6%AD%AF%E3%83%96%E3%83%A9%E3%82%B7/)
+- **コスパ（高評価の中で最安）**: (サンプル) 電動歯ブラシ F 音波 タイマー 替えブラシ2本付き — ¥9,190 ★4.58（1,287件）, 価格判定: いつもの価格 → [購入リンク](https://search.rakuten.co.jp/search/mall/%E9%9B%BB%E5%8B%95%E6%AD%AF%E3%83%96%E3%83%A9%E3%82%B7/)
+- **値下がり中**: (サンプル) 電動歯ブラシ D 音波 5つのモード 過圧 — ¥10,130 ★4.68（2,990件）, 価格判定: 観測31日の最安値 → [購入リンク](https://search.rakuten.co.jp/search/mall/%E9%9B%BB%E5%8B%95%E6%AD%AF%E3%83%96%E3%83%A9%E3%82%B7/)
 - **今が買い時か（カテゴリ全体）**: 上位商品の33%がいつもより安い。買うなら悪くない時期。（観測31日・季節変動はまだ反映していない）
 
 本体価格より替えブラシ代（約3か月ごとに交換）が長期の出費を左右する。磨きすぎが心配なら押しつけ防止センサー付き、磨き残しが心配ならタイマー付きを選ぶ。
@@ -349,12 +361,12 @@ Rakutenで各カテゴリをレビュー件数順に最大60件取得し、除�
 
 | 順位 | 商品 | 価格 | 評価 | 価格判定 | スペック(商品名から抽出) | 購入 |
 | --- | --- | --- | --- | --- | --- | --- |
-| 1 | (サンプル) 電動歯ブラシ D 音波 5つのモード 過圧（サンプルショップ） | ¥10,130 送料別 | ★4.68（2,990件） | 観測31日の最安値（中央値¥11,560・観測31日） | 音波式・押しつけ防止・モード数5 | [楽天](https://search.rakuten.co.jp/search/mall/%E9%9B%BB%E5%8B%95%E6%AD%AF%E3%83%96%E3%83%A9%E3%82%B7/) |
-| 2 | (サンプル) 電動歯ブラシ E 回転 2つのモード（サンプルショップ） | ¥10,570 送料込 | ★4.77（67件） | いつもの価格（中央値¥10,540・観測31日） | 回転式・モード数2 | [楽天](https://search.rakuten.co.jp/search/mall/%E9%9B%BB%E5%8B%95%E6%AD%AF%E3%83%96%E3%83%A9%E3%82%B7/) |
-| 3 | (サンプル) 電動歯ブラシ F 音波 タイマー 替えブラシ2本付き（サンプルショップ） | ¥9,190 送料別 | ★4.58（1,287件） | いつもの価格（中央値¥8,730・観測31日） | 音波式・タイマー | [楽天](https://search.rakuten.co.jp/search/mall/%E9%9B%BB%E5%8B%95%E6%AD%AF%E3%83%96%E3%83%A9%E3%82%B7/) |
-| 4 | (サンプル) 電動歯ブラシ C 音波 タイマー 軽量（サンプルショップ） | ¥6,790 送料込 | ★4.50（2,071件） | いつもの価格（中央値¥6,450・観測31日） | 音波式・タイマー | [楽天](https://search.rakuten.co.jp/search/mall/%E9%9B%BB%E5%8B%95%E6%AD%AF%E3%83%96%E3%83%A9%E3%82%B7/) |
-| 5 | (サンプル) 電動歯ブラシ B 回転 押しつけ防止 タイマー（サンプルショップ） | ¥11,330 送料別 | ★4.22（2,527件） | いつもの価格（中央値¥11,280・観測31日） | 回転式・押しつけ防止・タイマー | [楽天](https://search.rakuten.co.jp/search/mall/%E9%9B%BB%E5%8B%95%E6%AD%AF%E3%83%96%E3%83%A9%E3%82%B7/) |
-| 6 | (サンプル) 電動歯ブラシ A 音波 圧センサー 2分タイマー 3つのモード（サンプルショップ） | ¥5,280 送料込 | ★4.11（3,318件） | 観測31日の最安値（中央値¥6,020・観測31日） | 音波式・押しつけ防止・タイマー・モード数3 | [楽天](https://search.rakuten.co.jp/search/mall/%E9%9B%BB%E5%8B%95%E6%AD%AF%E3%83%96%E3%83%A9%E3%82%B7/) |
+| 1 | (サンプル) 電動歯ブラシ D 音波 5つのモード 過圧 (サンプルショップ) | ¥10,130 送料別 | ★4.68（2,990件） | 観測31日の最安値（中央値¥11,560・観測31日） | 音波式・押しつけ防止・モード数 5 | [楽天](https://search.rakuten.co.jp/search/mall/%E9%9B%BB%E5%8B%95%E6%AD%AF%E3%83%96%E3%83%A9%E3%82%B7/) |
+| 2 | (サンプル) 電動歯ブラシ E 回転 2つのモード (サンプルショップ) | ¥10,570 送料込 | ★4.77（67件） | いつもの価格（中央値¥10,540・観測31日） | 回転式・モード数 2 | [楽天](https://search.rakuten.co.jp/search/mall/%E9%9B%BB%E5%8B%95%E6%AD%AF%E3%83%96%E3%83%A9%E3%82%B7/) |
+| 3 | (サンプル) 電動歯ブラシ F 音波 タイマー 替えブラシ2本付き (サンプルショップ) | ¥9,190 送料別 | ★4.58（1,287件） | いつもの価格（中央値¥8,730・観測31日） | 音波式・タイマー | [楽天](https://search.rakuten.co.jp/search/mall/%E9%9B%BB%E5%8B%95%E6%AD%AF%E3%83%96%E3%83%A9%E3%82%B7/) |
+| 4 | (サンプル) 電動歯ブラシ C 音波 タイマー 軽量 (サンプルショップ) | ¥6,790 送料込 | ★4.50（2,071件） | いつもの価格（中央値¥6,450・観測31日） | 音波式・タイマー | [楽天](https://search.rakuten.co.jp/search/mall/%E9%9B%BB%E5%8B%95%E6%AD%AF%E3%83%96%E3%83%A9%E3%82%B7/) |
+| 5 | (サンプル) 電動歯ブラシ B 回転 押しつけ防止 タイマー (サンプルショップ) | ¥11,330 送料別 | ★4.22（2,527件） | いつもの価格（中央値¥11,280・観測31日） | 回転式・押しつけ防止・タイマー | [楽天](https://search.rakuten.co.jp/search/mall/%E9%9B%BB%E5%8B%95%E6%AD%AF%E3%83%96%E3%83%A9%E3%82%B7/) |
+| 6 | (サンプル) 電動歯ブラシ A 音波 圧センサー 2分タイマー 3つのモード (サンプルショップ) | ¥5,280 送料込 | ★4.11（3,318件） | 観測31日の最安値（中央値¥6,020・観測31日） | 音波式・押しつけ防止・タイマー・モード数 3 | [楽天](https://search.rakuten.co.jp/search/mall/%E9%9B%BB%E5%8B%95%E6%AD%AF%E3%83%96%E3%83%A9%E3%82%B7/) |
 
 ## ランキングの決め方
 
@@ -370,3 +382,4 @@ Rakutenで各カテゴリをレビュー件数順に最大60件取得し、除�
 - JSON: https://bufeks.github.io/LAB/shelf/api/v1/c/electric-toothbrush.json
 - 全カテゴリ: https://bufeks.github.io/LAB/shelf/api/v1/index.json
 - OpenAPI: https://bufeks.github.io/LAB/shelf/openapi.json / MCPサーバー: https://bufeks.github.io/LAB/shelf/mcp/server.mjs
+- Languages: [日本語](https://bufeks.github.io/LAB/shelf/c/electric-toothbrush.md) · [English](https://bufeks.github.io/LAB/shelf/en/c/electric-toothbrush.md) · [简体中文](https://bufeks.github.io/LAB/shelf/zh-hans/c/electric-toothbrush.md) · [繁體中文](https://bufeks.github.io/LAB/shelf/zh-hant/c/electric-toothbrush.md) · [한국어](https://bufeks.github.io/LAB/shelf/ko/c/electric-toothbrush.md)

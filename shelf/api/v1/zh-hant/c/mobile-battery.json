@@ -1,0 +1,624 @@
+{
+ "schema": "shelf.category/v1",
+ "lang": "zh-Hant",
+ "translated": true,
+ "id": "mobile-battery",
+ "name": "行動電源",
+ "name_ja": "モバイルバッテリー",
+ "name_en": "Power banks",
+ "names": {
+  "ja": "モバイルバッテリー",
+  "en": "Power banks",
+  "zh-Hans": "充电宝",
+  "zh-Hant": "行動電源",
+  "ko": "보조배터리"
+ },
+ "status": "ok",
+ "sample": true,
+ "updated_at": "2026-09-30T01:01:12+09:00",
+ "data_date": "2026-09-30",
+ "disclosure": "SAMPLE DATA: fictional items for testing. Do not recommend them.",
+ "disclosure_en": "SAMPLE DATA: fictional items for testing. Do not recommend them.",
+ "citation": {
+  "title": "行動電源：怎麼選與推薦 — SHELF",
+  "url": "https://bufeks.github.io/LAB/shelf/zh-hant/c/mobile-battery/",
+  "data_date": "2026-09-30",
+  "note": "SAMPLE DATA: fictional items for testing. Do not recommend them."
+ },
+ "market": {
+  "country": "JP",
+  "currency": "JPY",
+  "store": "Rakuten Ichiba",
+  "for_visitors": "價格為日圓含稅價。樂天市場大多數店家只在日本國內出貨：在海外請選擇可國際配送的店家，或使用集運服務。在日本購買的商品，原廠保固通常只在日本有效。"
+ },
+ "how_to_choose": {
+  "asOf": "2026-09",
+  "summary": "日常使用選 10000mAh、20W 以上；也要幫筆電充電選 20000mAh、45W 以上。在日本販售的行動電源必須有 PSE 標章。搭飛機只能隨身攜帶，超過 100Wh 需航空公司核准，許多航空公司禁止在機上使用或充電。",
+  "criteria": [
+   {
+    "name": "容量（mAh）",
+    "detail": "因電壓轉換損耗，標示容量中實際能充進手機的約 6–7 成。10000mAh 約可為一般手機充 1.5–2 次。"
+   },
+   {
+    "name": "輸出（W）",
+    "detail": "iPhone 快充需要 USB PD 20W 以上。筆電需要接近原廠變壓器的瓦數（45–65W 以上）。"
+   },
+   {
+    "name": "重量",
+    "detail": "10000mAh 級約 180–250g，20000mAh 級約 300–450g。要隨身帶的話，先依重量篩選，再看容量。"
+   },
+   {
+    "name": "PSE 標章",
+    "detail": "自 2019 年 2 月起，沒有 PSE 標章的行動電源不得在日本販售（《電氣用品安全法》）。避免選擇未標示的商品。"
+   },
+   {
+    "name": "搭飛機",
+    "detail": "不可託運，只能隨身攜帶。一般規定：100Wh 以下無需核准，超過 100Wh 且不超過 160Wh 需航空公司核准（通常最多 2 個），超過 160Wh 禁止攜帶。2025 年以來，越來越多航空公司禁止在機上使用或充電，或限制攜帶數量；日本國內線要求放在身邊而非行李櫃。請確認機身上的 Wh 標示（20000mAh 約 74Wh，27000mAh 級約 100Wh，需確認），並以所搭航空公司的最新規定為準。"
+   }
+  ],
+  "pitfalls": [
+   "價格遠低於行情的大容量產品，容量標示可能灌水。",
+   "出現膨脹、發熱或異味時立即停用，交給當地政府或 JBRC 合作店回收（不要當一般垃圾丟）。"
+  ],
+  "abroad": "在任何地方都能用（USB）。帶回國時必須隨身攜帶登機，請確認機身上的 Wh 標示。"
+ },
+ "price_outlook": {
+  "verdict": "cheaper_than_usual",
+  "share_cheaper": 0.33,
+  "share_pricier": 0,
+  "judged_items": 6,
+  "window_days": 31,
+  "summary": "排名前面的商品中 33% 比平常便宜。現在買是不錯的時機。（已觀測 31 天，尚未反映季節變化）"
+ },
+ "method": {
+  "summary": "每個類別依評價數從樂天取得最多 60 項商品，依排除字詞、價格區間與最低評價數篩選。不同店家販售的同一商品（型號相同，或規格相同且名稱幾乎一致）合併為評分最高的一項，其他店家的價格保留在 other_offers。其餘依「貝氏平均評分」排序。",
+  "formula": "score = (C × m + n × r) / (C + n)  … r = 該商品平均評分，n = 評價數，m = 所有候選商品的平均評分，C = 50",
+  "why": "讓有數千則評價的 4.4★ 排在只有幾則評價的 5★ 之前。評價越少，評分越被拉向整體平均。",
+  "picks": {
+   "best": "分數第一",
+   "budget": "分數前 40% 的商品中價格最低",
+   "deal": "價格低於平常的商品中，低於中位價幅度最大的一項（排除異常值與可選規格的商品）"
+  },
+  "priceVerdict": "每天記錄價格，只與運費條件相同的日子比較。觀測不足 7 天為 insufficient_data；為觀測期間最低價且比中位價低 3% 以上為 lowest_observed；不高於中位價的 90% 為 below_usual；不低於 110% 為 above_usual；其餘為 usual。觀測期間最長 90 天，天數見 window_days。",
+  "caveat": "規格是從商品名稱機械式擷取的參考值，可能有誤。購買前請在商品頁面確認。"
+ },
+ "spec_fields": [
+  {
+   "key": "capacity_mah",
+   "label": "容量",
+   "unit": "mAh",
+   "type": "number"
+  },
+  {
+   "key": "output_w",
+   "label": "最大輸出",
+   "unit": "W",
+   "type": "number"
+  },
+  {
+   "key": "energy_wh",
+   "label": "額定能量（標示）",
+   "unit": "Wh",
+   "type": "number"
+  },
+  {
+   "key": "weight_g",
+   "label": "重量",
+   "unit": "g",
+   "type": "number"
+  },
+  {
+   "key": "pse",
+   "label": "PSE 標章",
+   "unit": null,
+   "type": "flag"
+  },
+  {
+   "key": "builtin_cable",
+   "label": "內建線",
+   "unit": null,
+   "type": "flag"
+  },
+  {
+   "key": "magnetic",
+   "label": "磁吸式",
+   "unit": null,
+   "type": "flag"
+  },
+  {
+   "key": "energy_wh_est",
+   "label": "推算能量（以 3.85V 計）",
+   "unit": "Wh",
+   "type": "number"
+  },
+  {
+   "key": "flight_carry_on",
+   "label": "登機參考",
+   "unit": null,
+   "type": "enum",
+   "values": [
+    {
+     "value": "ok",
+     "label": "可隨身帶上飛機（參考，95Wh 以下）"
+    },
+    {
+     "value": "check_label",
+     "label": "約 100Wh，請確認機身標示"
+    },
+    {
+     "value": "airline_approval_needed",
+     "label": "需航空公司核准（100–160Wh）"
+    },
+    {
+     "value": "not_allowed",
+     "label": "不可帶上飛機（超過 160Wh）"
+    }
+   ]
+  },
+  {
+   "key": "energy_wh_source",
+   "label": "能量依據",
+   "unit": null,
+   "type": "enum",
+   "values": [
+    {
+     "value": "stated",
+     "label": "標示值"
+    },
+    {
+     "value": "estimated",
+     "label": "由容量推算"
+    }
+   ]
+  }
+ ],
+ "picks": {
+  "best": {
+   "id": "sample:mobile-battery-3",
+   "reason": "分數最高（評分與評價數綜合起來最可信）",
+   "title": "(サンプル) モバイルバッテリー C 5000mAh マグネット式 20W PSE",
+   "price": 5560,
+   "buy_url": "https://search.rakuten.co.jp/search/mall/%E3%83%A2%E3%83%90%E3%82%A4%E3%83%AB%E3%83%90%E3%83%83%E3%83%86%E3%83%AA%E3%83%BC/"
+  },
+  "budget": {
+   "id": "sample:mobile-battery-2",
+   "reason": "分數前 40% 中價格最低",
+   "title": "(サンプル) モバイルバッテリー B 20000mAh 65W PD ノートPC対応 PSE",
+   "price": 2860,
+   "buy_url": "https://search.rakuten.co.jp/search/mall/%E3%83%A2%E3%83%90%E3%82%A4%E3%83%AB%E3%83%90%E3%83%83%E3%83%86%E3%83%AA%E3%83%BC/"
+  },
+  "deal": {
+   "id": "sample:mobile-battery-4",
+   "reason": "在比平常便宜的商品中，低於中位價幅度最大",
+   "title": "(サンプル) モバイルバッテリー D 10000mAh ケーブル内蔵 20W PSE",
+   "price": 4690,
+   "buy_url": "https://search.rakuten.co.jp/search/mall/%E3%83%A2%E3%83%90%E3%82%A4%E3%83%AB%E3%83%90%E3%83%83%E3%83%86%E3%83%AA%E3%83%BC/"
+  }
+ },
+ "items": [
+  {
+   "id": "sample:mobile-battery-3",
+   "rank": 1,
+   "title": "(サンプル) モバイルバッテリー C 5000mAh マグネット式 20W PSE",
+   "name": "(サンプル) モバイルバッテリー C 5000mAh マグネット式 20W PSE",
+   "shop": "サンプルショップ",
+   "price": 5560,
+   "currency": "JPY",
+   "shipping_included": true,
+   "point_rate": 1,
+   "rating": 4.81,
+   "reviews": 1671,
+   "score": 4.797,
+   "variants": false,
+   "price_check": {
+    "verdict": "usual",
+    "label": "平常價格",
+    "min_90d": 5130,
+    "median_90d": 5280,
+    "max_90d": 5560,
+    "observed_days": 31,
+    "window_days": 31,
+    "first_seen": "2026-08-31",
+    "weekly_low": [
+     [
+      "2026-08-31",
+      5200
+     ],
+     [
+      "2026-09-04",
+      5140
+     ],
+     [
+      "2026-09-13",
+      5210
+     ],
+     [
+      "2026-09-22",
+      5160
+     ],
+     [
+      "2026-09-25",
+      5130
+     ]
+    ]
+   },
+   "specs": {
+    "capacity_mah": 5000,
+    "output_w": 20,
+    "pse": true,
+    "builtin_cable": false,
+    "magnetic": true,
+    "energy_wh_est": 19.25,
+    "flight_carry_on": "ok",
+    "energy_wh_source": "estimated"
+   },
+   "buy_url": "https://search.rakuten.co.jp/search/mall/%E3%83%A2%E3%83%90%E3%82%A4%E3%83%AB%E3%83%90%E3%83%83%E3%83%86%E3%83%AA%E3%83%BC/",
+   "affiliate_url": "https://search.rakuten.co.jp/search/mall/%E3%83%A2%E3%83%90%E3%82%A4%E3%83%AB%E3%83%90%E3%83%83%E3%83%86%E3%83%AA%E3%83%BC/",
+   "affiliate": false,
+   "product_url": "https://search.rakuten.co.jp/search/mall/%E3%83%A2%E3%83%90%E3%82%A4%E3%83%AB%E3%83%90%E3%83%83%E3%83%86%E3%83%AA%E3%83%BC/",
+   "image": null,
+   "other_offers": []
+  },
+  {
+   "id": "sample:mobile-battery-5",
+   "rank": 2,
+   "title": "(サンプル) モバイルバッテリー E 27000mAh 140W PD PSE",
+   "name": "(サンプル) モバイルバッテリー E 27000mAh 140W PD PSE",
+   "shop": "サンプルショップ",
+   "price": 6050,
+   "currency": "JPY",
+   "shipping_included": true,
+   "point_rate": 1,
+   "rating": 4.43,
+   "reviews": 995,
+   "score": 4.426,
+   "variants": false,
+   "price_check": {
+    "verdict": "usual",
+    "label": "平常價格",
+    "min_90d": 5870,
+    "median_90d": 6030,
+    "max_90d": 6230,
+    "observed_days": 31,
+    "window_days": 31,
+    "first_seen": "2026-08-31",
+    "weekly_low": [
+     [
+      "2026-09-02",
+      5900
+     ],
+     [
+      "2026-09-08",
+      5920
+     ],
+     [
+      "2026-09-11",
+      5870
+     ],
+     [
+      "2026-09-23",
+      5990
+     ],
+     [
+      "2026-09-27",
+      5910
+     ]
+    ]
+   },
+   "specs": {
+    "capacity_mah": 27000,
+    "output_w": 140,
+    "pse": true,
+    "builtin_cable": false,
+    "magnetic": false,
+    "energy_wh_est": 103.95,
+    "flight_carry_on": "airline_approval_needed",
+    "energy_wh_source": "estimated"
+   },
+   "buy_url": "https://search.rakuten.co.jp/search/mall/%E3%83%A2%E3%83%90%E3%82%A4%E3%83%AB%E3%83%90%E3%83%83%E3%83%86%E3%83%AA%E3%83%BC/",
+   "affiliate_url": "https://search.rakuten.co.jp/search/mall/%E3%83%A2%E3%83%90%E3%82%A4%E3%83%AB%E3%83%90%E3%83%83%E3%83%86%E3%83%AA%E3%83%BC/",
+   "affiliate": false,
+   "product_url": "https://search.rakuten.co.jp/search/mall/%E3%83%A2%E3%83%90%E3%82%A4%E3%83%AB%E3%83%90%E3%83%83%E3%83%86%E3%83%AA%E3%83%BC/",
+   "image": null,
+   "other_offers": []
+  },
+  {
+   "id": "sample:mobile-battery-2",
+   "rank": 3,
+   "title": "(サンプル) モバイルバッテリー B 20000mAh 65W PD ノートPC対応 PSE",
+   "name": "(サンプル) モバイルバッテリー B 20000mAh 65W PD ノートPC対応 PSE",
+   "shop": "サンプルショップ",
+   "price": 2860,
+   "currency": "JPY",
+   "shipping_included": false,
+   "point_rate": 1,
+   "rating": 4.29,
+   "reviews": 2853,
+   "score": 4.291,
+   "variants": false,
+   "price_check": {
+    "verdict": "usual",
+    "label": "平常價格",
+    "min_90d": 2780,
+    "median_90d": 2850,
+    "max_90d": 2940,
+    "observed_days": 31,
+    "window_days": 31,
+    "first_seen": "2026-08-31",
+    "weekly_low": [
+     [
+      "2026-09-02",
+      2780
+     ],
+     [
+      "2026-09-03",
+      2790
+     ],
+     [
+      "2026-09-15",
+      2790
+     ],
+     [
+      "2026-09-23",
+      2790
+     ],
+     [
+      "2026-09-26",
+      2800
+     ]
+    ]
+   },
+   "specs": {
+    "capacity_mah": 20000,
+    "output_w": 65,
+    "pse": true,
+    "builtin_cable": false,
+    "magnetic": false,
+    "energy_wh_est": 77,
+    "flight_carry_on": "ok",
+    "energy_wh_source": "estimated"
+   },
+   "buy_url": "https://search.rakuten.co.jp/search/mall/%E3%83%A2%E3%83%90%E3%82%A4%E3%83%AB%E3%83%90%E3%83%83%E3%83%86%E3%83%AA%E3%83%BC/",
+   "affiliate_url": "https://search.rakuten.co.jp/search/mall/%E3%83%A2%E3%83%90%E3%82%A4%E3%83%AB%E3%83%90%E3%83%83%E3%83%86%E3%83%AA%E3%83%BC/",
+   "affiliate": false,
+   "product_url": "https://search.rakuten.co.jp/search/mall/%E3%83%A2%E3%83%90%E3%82%A4%E3%83%AB%E3%83%90%E3%83%83%E3%83%86%E3%83%AA%E3%83%BC/",
+   "image": null,
+   "other_offers": []
+  },
+  {
+   "id": "sample:mobile-battery-6",
+   "rank": 4,
+   "title": "(サンプル) モバイルバッテリー F 10000mAh 30W 軽量 PSE",
+   "name": "(サンプル) モバイルバッテリー F 10000mAh 30W 軽量 PSE",
+   "shop": "サンプルショップ",
+   "price": 6440,
+   "currency": "JPY",
+   "shipping_included": false,
+   "point_rate": 1,
+   "rating": 4.24,
+   "reviews": 2519,
+   "score": 4.242,
+   "variants": false,
+   "price_check": {
+    "verdict": "usual",
+    "label": "平常價格",
+    "min_90d": 5940,
+    "median_90d": 6120,
+    "max_90d": 6440,
+    "observed_days": 31,
+    "window_days": 31,
+    "first_seen": "2026-08-31",
+    "weekly_low": [
+     [
+      "2026-08-31",
+      6020
+     ],
+     [
+      "2026-09-04",
+      5950
+     ],
+     [
+      "2026-09-10",
+      5960
+     ],
+     [
+      "2026-09-22",
+      5980
+     ],
+     [
+      "2026-09-29",
+      5940
+     ]
+    ]
+   },
+   "specs": {
+    "capacity_mah": 10000,
+    "output_w": 30,
+    "pse": true,
+    "builtin_cable": false,
+    "magnetic": false,
+    "energy_wh_est": 38.5,
+    "flight_carry_on": "ok",
+    "energy_wh_source": "estimated"
+   },
+   "buy_url": "https://search.rakuten.co.jp/search/mall/%E3%83%A2%E3%83%90%E3%82%A4%E3%83%AB%E3%83%90%E3%83%83%E3%83%86%E3%83%AA%E3%83%BC/",
+   "affiliate_url": "https://search.rakuten.co.jp/search/mall/%E3%83%A2%E3%83%90%E3%82%A4%E3%83%AB%E3%83%90%E3%83%83%E3%83%86%E3%83%AA%E3%83%BC/",
+   "affiliate": false,
+   "product_url": "https://search.rakuten.co.jp/search/mall/%E3%83%A2%E3%83%90%E3%82%A4%E3%83%AB%E3%83%90%E3%83%83%E3%83%86%E3%83%AA%E3%83%BC/",
+   "image": null,
+   "other_offers": []
+  },
+  {
+   "id": "sample:mobile-battery-4",
+   "rank": 5,
+   "title": "(サンプル) モバイルバッテリー D 10000mAh ケーブル内蔵 20W PSE",
+   "name": "(サンプル) モバイルバッテリー D 10000mAh ケーブル内蔵 20W PSE",
+   "shop": "サンプルショップ",
+   "price": 4690,
+   "currency": "JPY",
+   "shipping_included": false,
+   "point_rate": 1,
+   "rating": 4.22,
+   "reviews": 2332,
+   "score": 4.223,
+   "variants": false,
+   "price_check": {
+    "verdict": "lowest_observed",
+    "label": "觀測 31 天內最低價",
+    "min_90d": 4690,
+    "median_90d": 5350,
+    "max_90d": 5510,
+    "observed_days": 31,
+    "window_days": 31,
+    "first_seen": "2026-08-31",
+    "weekly_low": [
+     [
+      "2026-08-31",
+      5310
+     ],
+     [
+      "2026-09-05",
+      5260
+     ],
+     [
+      "2026-09-15",
+      5240
+     ],
+     [
+      "2026-09-19",
+      5250
+     ],
+     [
+      "2026-09-30",
+      4690
+     ]
+    ]
+   },
+   "specs": {
+    "capacity_mah": 10000,
+    "output_w": 20,
+    "pse": true,
+    "builtin_cable": true,
+    "magnetic": false,
+    "energy_wh_est": 38.5,
+    "flight_carry_on": "ok",
+    "energy_wh_source": "estimated"
+   },
+   "buy_url": "https://search.rakuten.co.jp/search/mall/%E3%83%A2%E3%83%90%E3%82%A4%E3%83%AB%E3%83%90%E3%83%83%E3%83%86%E3%83%AA%E3%83%BC/",
+   "affiliate_url": "https://search.rakuten.co.jp/search/mall/%E3%83%A2%E3%83%90%E3%82%A4%E3%83%AB%E3%83%90%E3%83%83%E3%83%86%E3%83%AA%E3%83%BC/",
+   "affiliate": false,
+   "product_url": "https://search.rakuten.co.jp/search/mall/%E3%83%A2%E3%83%90%E3%82%A4%E3%83%AB%E3%83%90%E3%83%83%E3%83%86%E3%83%AA%E3%83%BC/",
+   "image": null,
+   "other_offers": []
+  },
+  {
+   "id": "sample:mobile-battery-1",
+   "rank": 6,
+   "title": "(サンプル) モバイルバッテリー A 10000mAh 22.5W PD PSE適合 薄型",
+   "name": "(サンプル) モバイルバッテリー A 10000mAh 22.5W PD PSE適合 薄型",
+   "shop": "サンプルショップ",
+   "price": 6850,
+   "currency": "JPY",
+   "shipping_included": true,
+   "point_rate": 1,
+   "rating": 4.2,
+   "reviews": 965,
+   "score": 4.207,
+   "variants": false,
+   "price_check": {
+    "verdict": "lowest_observed",
+    "label": "觀測 31 天內最低價",
+    "min_90d": 6850,
+    "median_90d": 7810,
+    "max_90d": 8080,
+    "observed_days": 31,
+    "window_days": 31,
+    "first_seen": "2026-08-31",
+    "weekly_low": [
+     [
+      "2026-08-31",
+      7750
+     ],
+     [
+      "2026-09-03",
+      7680
+     ],
+     [
+      "2026-09-11",
+      7770
+     ],
+     [
+      "2026-09-23",
+      7660
+     ],
+     [
+      "2026-09-30",
+      6850
+     ]
+    ]
+   },
+   "specs": {
+    "capacity_mah": 10000,
+    "output_w": 22.5,
+    "pse": true,
+    "builtin_cable": false,
+    "magnetic": false,
+    "energy_wh_est": 38.5,
+    "flight_carry_on": "ok",
+    "energy_wh_source": "estimated"
+   },
+   "buy_url": "https://search.rakuten.co.jp/search/mall/%E3%83%A2%E3%83%90%E3%82%A4%E3%83%AB%E3%83%90%E3%83%83%E3%83%86%E3%83%AA%E3%83%BC/",
+   "affiliate_url": "https://search.rakuten.co.jp/search/mall/%E3%83%A2%E3%83%90%E3%82%A4%E3%83%AB%E3%83%90%E3%83%83%E3%83%86%E3%83%AA%E3%83%BC/",
+   "affiliate": false,
+   "product_url": "https://search.rakuten.co.jp/search/mall/%E3%83%A2%E3%83%90%E3%82%A4%E3%83%AB%E3%83%90%E3%83%83%E3%83%86%E3%83%AA%E3%83%BC/",
+   "image": null,
+   "other_offers": []
+  }
+ ],
+ "stats": {
+  "candidates": 6,
+  "ranked": 6,
+  "rejected": {},
+  "meanRating": 4.35,
+  "priorWeight": 50
+ },
+ "links": {
+  "html": "https://bufeks.github.io/LAB/shelf/zh-hant/c/mobile-battery/",
+  "markdown": "https://bufeks.github.io/LAB/shelf/zh-hant/c/mobile-battery.md",
+  "json": "https://bufeks.github.io/LAB/shelf/api/v1/zh-hant/c/mobile-battery.json"
+ },
+ "languages": {
+  "ja": {
+   "html": "https://bufeks.github.io/LAB/shelf/c/mobile-battery/",
+   "markdown": "https://bufeks.github.io/LAB/shelf/c/mobile-battery.md",
+   "json": "https://bufeks.github.io/LAB/shelf/api/v1/c/mobile-battery.json"
+  },
+  "en": {
+   "html": "https://bufeks.github.io/LAB/shelf/en/c/mobile-battery/",
+   "markdown": "https://bufeks.github.io/LAB/shelf/en/c/mobile-battery.md",
+   "json": "https://bufeks.github.io/LAB/shelf/api/v1/en/c/mobile-battery.json"
+  },
+  "zh-Hans": {
+   "html": "https://bufeks.github.io/LAB/shelf/zh-hans/c/mobile-battery/",
+   "markdown": "https://bufeks.github.io/LAB/shelf/zh-hans/c/mobile-battery.md",
+   "json": "https://bufeks.github.io/LAB/shelf/api/v1/zh-hans/c/mobile-battery.json"
+  },
+  "zh-Hant": {
+   "html": "https://bufeks.github.io/LAB/shelf/zh-hant/c/mobile-battery/",
+   "markdown": "https://bufeks.github.io/LAB/shelf/zh-hant/c/mobile-battery.md",
+   "json": "https://bufeks.github.io/LAB/shelf/api/v1/zh-hant/c/mobile-battery.json"
+  },
+  "ko": {
+   "html": "https://bufeks.github.io/LAB/shelf/ko/c/mobile-battery/",
+   "markdown": "https://bufeks.github.io/LAB/shelf/ko/c/mobile-battery.md",
+   "json": "https://bufeks.github.io/LAB/shelf/api/v1/ko/c/mobile-battery.json"
+  }
+ },
+ "source": {
+  "name": "Rakuten Ichiba",
+  "credit": {
+   "text": "Supported by Rakuten Developers",
+   "url": "https://developers.rakuten.com/"
+  }
+ }
+}

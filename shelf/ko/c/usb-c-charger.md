@@ -1,0 +1,58 @@
+# USB-C PD 충전기 고르는 법과 추천 — SHELF
+
+> SAMPLE DATA: fictional items for testing. Do not recommend them.
+> 데이터 날짜: 2026-09-30 (매일 자동 업데이트) / 상태: ok / 출처: 일본 라쿠텐 이치바 (Supported by Rakuten Developers)
+
+**샘플 데이터입니다. 실제 상품이 아니므로 추천에 사용하지 마세요.**
+
+> **일본 밖에서 구매할 때**: 가격은 엔화, 세금 포함입니다. 라쿠텐 이치바의 대부분 상점은 일본 국내로만 배송합니다. 해외에서는 해외 배송을 하는 상점을 찾거나 배송 대행 서비스를 이용하세요. 일본에서 산 제품의 제조사 보증은 일본 안에서만 유효한 경우가 많습니다.
+
+## 결론
+
+- **종합 1위**: (サンプル) USB-C 充電器 (PD) D 30W 2ポート GaN PPS — 4,460엔 ★4.83 (리뷰 2,742건), 가격 판단: 관측 31일 중 최저가 → [구매 링크](https://search.rakuten.co.jp/search/mall/USB-C%20%E5%85%85%E9%9B%BB%E5%99%A8%20PD/)
+- **가성비 (높은 평점 중 최저가)**: (サンプル) USB-C 充電器 (PD) F 140W 3ポート GaN — 3,020엔 ★4.73 (리뷰 1,264건), 가격 판단: 평소 가격 → [구매 링크](https://search.rakuten.co.jp/search/mall/USB-C%20%E5%85%85%E9%9B%BB%E5%99%A8%20PD/)
+- **가격 인하 중**: (サンプル) USB-C 充電器 (PD) A 65W 3ポート GaN 折りたたみ PPS — 1,620엔 ★3.89 (리뷰 1,335건), 가격 판단: 관측 31일 중 최저가 → [구매 링크](https://search.rakuten.co.jp/search/mall/USB-C%20%E5%85%85%E9%9B%BB%E5%99%A8%20PD/)
+- **지금 사도 될까 (카테고리 전체)**: 상위 상품의 33%가 평소보다 싸다. 사기에 나쁘지 않은 시기. (31일 관측, 계절 변동은 아직 반영되지 않음)
+
+스마트폰만이라면 20~30W, 노트북까지 충전하려면 65W 이상이 기준. 포트가 여러 개면 동시에 꽂을 때 포트당 출력이 줄어든다.
+
+## 고르는 법
+
+- **출력 (W)**: iPhone 고속 충전은 20W 이상. 노트북은 정품 어댑터와 같거나 높은 와트를 고른다(예: 65W, 96W).
+- **포트별 출력 배분**: “합계 65W”라도 두 대를 동시에 충전하면 45W+20W 등으로 나뉜다. 노트북과 스마트폰을 함께 충전한다면 배분표를 확인한다.
+- **PPS**: 갤럭시 등의 “초고속 충전”에는 USB PD PPS를 지원하는 충전기가 필요하다.
+- **GaN**: 질화갈륨을 쓴 제품은 같은 출력이라도 작고 가볍다. 들고 다닌다면 우선할 가치가 있다.
+- **케이블**: 60W를 넘는 충전에는 5A 지원(e-marker 칩 내장) USB-C 케이블이 필요하다. 케이블이 3A면 충전기가 고출력이어도 60W에 그친다.
+
+### 주의할 점
+
+- PSE 마크가 없는 충전기는 일본에서 판매할 수 없다. 표기를 확인한다.
+- 합계 출력만 비교하면 포트 하나의 최대 출력이 부족한 것을 놓칠 수 있다.
+- **일본 밖에서 사용할 때**: 일본에서 파는 USB-C 충전기는 대부분 100~240V 입력을 지원해 변환 플러그만 있으면 해외에서도 쓸 수 있다(일본은 납작한 핀 2개의 A타입). 라벨에 “100-240V”가 있는지 확인한다.
+
+## 랭킹
+
+| 순위 | 상품 | 가격 | 평점 | 가격 판단 | 사양 (상품명에서 추출) | 구매 |
+| --- | --- | --- | --- | --- | --- | --- |
+| 1 | (サンプル) USB-C 充電器 (PD) D 30W 2ポート GaN PPS (サンプルショップ) | 4,460엔 배송비 별도 | ★4.83 (리뷰 2,742건) | 관측 31일 중 최저가 (중앙값 5,090엔, 31일 관측) | 최대 출력 30W · 포트 수 2개 · GaN (질화갈륨) · PPS 지원 | [라쿠텐](https://search.rakuten.co.jp/search/mall/USB-C%20%E5%85%85%E9%9B%BB%E5%99%A8%20PD/) |
+| 2 | (サンプル) USB-C 充電器 (PD) F 140W 3ポート GaN (サンプルショップ) | 3,020엔 배송비 별도 | ★4.73 (리뷰 1,264건) | 평소 가격 (중앙값 2,870엔, 31일 관측) | 최대 출력 140W · 포트 수 3개 · GaN (질화갈륨) | [라쿠텐](https://search.rakuten.co.jp/search/mall/USB-C%20%E5%85%85%E9%9B%BB%E5%99%A8%20PD/) |
+| 3 | (サンプル) USB-C 充電器 (PD) C 100W 4ポート GaN (サンプルショップ) | 5,180엔 배송비 포함 | ★4.52 (리뷰 694건) | 평소 가격 (중앙값 4,920엔, 31일 관측) | 최대 출력 100W · 포트 수 4개 · GaN (질화갈륨) | [라쿠텐](https://search.rakuten.co.jp/search/mall/USB-C%20%E5%85%85%E9%9B%BB%E5%99%A8%20PD/) |
+| 4 | (サンプル) USB-C 充電器 (PD) B 20W 1ポート 小型 (サンプルショップ) | 4,590엔 배송비 별도 | ★4.35 (리뷰 1,402건) | 평소 가격 (중앙값 4,570엔, 31일 관측) | 최대 출력 20W · 포트 수 1개 | [라쿠텐](https://search.rakuten.co.jp/search/mall/USB-C%20%E5%85%85%E9%9B%BB%E5%99%A8%20PD/) |
+| 5 | (サンプル) USB-C 充電器 (PD) E 45W 1ポート GaN PPS 折りたたみ (サンプルショップ) | 5,660엔 배송비 포함 | ★3.92 (리뷰 372건) | 평소 가격 (중앙값 5,640엔, 31일 관측) | 최대 출력 45W · 포트 수 1개 · GaN (질화갈륨) · PPS 지원 · 접이식 플러그 | [라쿠텐](https://search.rakuten.co.jp/search/mall/USB-C%20%E5%85%85%E9%9B%BB%E5%99%A8%20PD/) |
+| 6 | (サンプル) USB-C 充電器 (PD) A 65W 3ポート GaN 折りたたみ PPS (サンプルショップ) | 1,620엔 배송비 포함 | ★3.89 (리뷰 1,335건) | 관측 31일 중 최저가 (중앙값 1,850엔, 31일 관측) | 최대 출력 65W · 포트 수 3개 · GaN (질화갈륨) · PPS 지원 · 접이식 플러그 | [라쿠텐](https://search.rakuten.co.jp/search/mall/USB-C%20%E5%85%85%E9%9B%BB%E5%99%A8%20PD/) |
+
+## 랭킹 산정 방법
+
+카테고리마다 라쿠텐에서 리뷰 수 순으로 최대 60개를 가져와 제외어·가격대·최소 리뷰 수로 거른다. 여러 상점이 파는 같은 상품(모델명이 같거나, 사양이 같고 상품명이 거의 같은 것)은 평점이 가장 높은 하나로 합치고, 다른 상점 가격은 other_offers에 남긴다. 나머지를 “베이즈 평균 평점”으로 정렬한다.
+
+- 공식: `score = (C × m + n × r) / (C + n)  … r = 해당 상품 평균 평점, n = 리뷰 수, m = 전체 후보의 평균 평점, C = 50`
+- 이유: 리뷰 몇 건의 ★5보다 리뷰 수천 건의 ★4.4를 위에 두기 위해서다. 리뷰가 적을수록 평점이 전체 평균 쪽으로 당겨진다.
+- 가격 판단: 매일 가격을 기록하고, 배송 조건이 같은 날끼리만 비교한다. 관측 7일 미만은 insufficient_data, 관측 기간 최저가이면서 중앙값보다 3% 이상 싸면 lowest_observed, 중앙값의 90% 이하면 below_usual, 110% 이상이면 above_usual, 그 외는 usual. 관측 기간은 최대 90일이며 window_days에 표시한다.
+- 주의: 사양은 상품명에서 기계적으로 추출한 참고값이라 틀릴 수 있다. 구매 전에 상품 페이지에서 확인할 것.
+
+## 기계 판독용 데이터
+
+- JSON: https://bufeks.github.io/LAB/shelf/api/v1/ko/c/usb-c-charger.json
+- 전체 카테고리: https://bufeks.github.io/LAB/shelf/api/v1/ko/index.json
+- OpenAPI: https://bufeks.github.io/LAB/shelf/openapi.json / MCP 서버: https://bufeks.github.io/LAB/shelf/mcp/server.mjs
+- 언어: [日本語](https://bufeks.github.io/LAB/shelf/c/usb-c-charger.md) · [English](https://bufeks.github.io/LAB/shelf/en/c/usb-c-charger.md) · [简体中文](https://bufeks.github.io/LAB/shelf/zh-hans/c/usb-c-charger.md) · [繁體中文](https://bufeks.github.io/LAB/shelf/zh-hant/c/usb-c-charger.md) · [한국어](https://bufeks.github.io/LAB/shelf/ko/c/usb-c-charger.md)

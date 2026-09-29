@@ -60,12 +60,40 @@ class UserError extends Error {}
 
 const yen = (n) => (n == null ? '—' : `¥${Math.round(n).toLocaleString('ja-JP')}`);
 const norm = (s) => String(s ?? '').normalize('NFKC').toLowerCase().trim();
+
+// Answer languages and where their JSON lives (Japanese is unprefixed).
+const LANGS = { ja: '', en: 'en/', 'zh-Hans': 'zh-hans/', 'zh-Hant': 'zh-hant/', ko: 'ko/' };
+const LANG_ALIASES = { zh: 'zh-Hans', 'zh-cn': 'zh-Hans', 'zh-sg': 'zh-Hans', 'zh-hans': 'zh-Hans', 'zh-tw': 'zh-Hant', 'zh-hk': 'zh-Hant', 'zh-mo': 'zh-Hant', 'zh-hant': 'zh-Hant' };
+
+// Explicit lang wins; otherwise guess from what the user typed: Hangul -> ko,
+// kana -> ja, Latin only -> en. Han alone (加湿器) is ambiguous and means ja.
+export function pickLang(args) {
+  if (args.lang != null && args.lang !== '') {
+    const raw = String(args.lang).trim();
+    const key = raw.toLowerCase();
+    const lang = LANG_ALIASES[key] || Object.keys(LANGS).find((l) => l.toLowerCase() === key || key.startsWith(`${l.toLowerCase()}-`));
+    if (!lang) throw new UserError(`lang must be one of ${Object.keys(LANGS).join(', ')}`);
+    return lang;
+  }
+  const text = Object.values(args).filter((v) => typeof v === 'string').join(' ');
+  if (/[\uac00-\ud7af]/.test(text)) return 'ko';
+  if (/[\u3040-\u30ff\u4e00-\u9fff]/.test(text)) return 'ja';
+  if (/[A-Za-z]/.test(text)) return 'en';
+  return 'ja';
+}
+const at = (lang, rel) => `${LANGS[lang]}${rel}`;
+const LANG_SCHEMA = {
+  type: 'string',
+  enum: Object.keys(LANGS),
+  description: 'Answer language. Omit to detect from the input (Hangul -> ko, kana or kanji -> ja, Latin -> en); pass zh-Hans / zh-Hant for Chinese.',
+};
 const CHEAP = new Set(['lowest_observed', 'below_usual']);
 
 // Every result carries these, in text and in structuredContent, so a client
 // that forwards only one of them still passes on the disclosure.
 function meta(rec) {
   return {
+    lang: rec.lang ?? 'ja',
     sample: Boolean(rec.sample),
     disclosure: rec.disclosure,
     data_date: rec.data_date ?? null,
@@ -93,15 +121,18 @@ function toNumber(v, name) {
   return n;
 }
 
-async function resolveCategory(query) {
+// Category ids or names in any language ("humidifier", "加湿器", "가습기").
+async function resolveCategory(query, lang) {
   const q = norm(query);
   if (!q) throw new UserError('category is required. Call list_categories to see the options.');
-  const index = await load('index.json');
+  const index = await load(at(lang, 'index.json'));
+  const namesOf = (c) => [c.id, c.name, c.name_en, ...Object.values(c.names || {})].map(norm).filter(Boolean);
   const cat =
     index.categories.find((c) => c.id === q) ||
-    index.categories.find((c) => [c.name, c.name_en, c.id].some((n) => norm(n).includes(q) || q.includes(norm(n))));
+    index.categories.find((c) => namesOf(c).some((n) => n === q)) ||
+    index.categories.find((c) => namesOf(c).some((n) => n.includes(q) || q.includes(n.replace(/s$/, ''))));
   if (!cat) throw new UserError(`No category matches "${query}". SHELF covers: ${index.categories.map((c) => `${c.id} (${c.name})`).join(', ')}`);
-  return load(`c/${cat.id}.json`);
+  return load(at(lang, `c/${cat.id}.json`));
 }
 
 function specFilter(rec, want) {
@@ -199,9 +230,9 @@ const TOOLS = [
   {
     name: 'list_categories',
     description: 'List the shopping categories SHELF covers (Japan, Rakuten Ichiba), each with its current top pick. Call first when unsure which category fits.',
-    inputSchema: { type: 'object', properties: {} },
-    async run() {
-      const index = await load('index.json');
+    inputSchema: { type: 'object', properties: { lang: LANG_SCHEMA } },
+    async run(args) {
+      const index = await load(at(pickLang(args), 'index.json'));
       const m = meta(index);
       const text = index.categories
         .map((c) => `- ${c.id} (${c.name} / ${c.name_en}): ${c.best ? `top pick ${c.best.title} ${yen(c.best.price)}` : 'no data'} [${c.status}, data ${c.data_date}]`)
@@ -227,11 +258,12 @@ const TOOLS = [
             'Enums: a value or list. Examples: {"capacity_mah":10000,"pse":true,"flight_carry_on":"ok"}, {"type":["steam","hybrid"]}',
         },
         limit: { type: 'number', description: 'Max items to return (default 5, max 20)' },
+        lang: LANG_SCHEMA,
       },
       required: ['category'],
     },
     async run(args) {
-      const rec = await resolveCategory(args.category);
+      const rec = await resolveCategory(args.category, pickLang(args));
       const max = toNumber(args.budget_max, 'budget_max');
       const min = toNumber(args.budget_min, 'budget_min');
       const matches = rec.items
@@ -248,6 +280,7 @@ const TOOLS = [
         rec.how_to_choose.summary,
         `## Buying guide${rec.how_to_choose.asOf ? ` (as of ${rec.how_to_choose.asOf})` : ''}\n${rec.how_to_choose.criteria.map((c) => `- ${c.name}: ${c.detail}`).join('\n')}`,
         `## Pitfalls\n${rec.how_to_choose.pitfalls.map((p) => `- ${p}`).join('\n')}`,
+        ...(rec.market?.for_visitors ? [`## Buying from outside Japan\n${rec.market.for_visitors}${rec.how_to_choose.abroad ? `\n${rec.how_to_choose.abroad}` : ''}`] : []),
         `## Is now a good time? ${rec.price_outlook.summary}`,
         `## Picks within these filters\n${pickText || 'none'}`,
         `## Matching items (${shown.length} of ${matches.length})\n${shown.map((x) => line(x, rec.spec_fields)).join('\n') || 'Nothing matches these filters; relax the budget or specs.'}`,
@@ -270,9 +303,9 @@ const TOOLS = [
   {
     name: 'price_outlook',
     description: 'Answer "is now a good time to buy <category>?" from SHELF daily price history: share of top items cheaper/pricier than usual, plus the items currently under their usual price.',
-    inputSchema: { type: 'object', properties: { category: { type: 'string' } }, required: ['category'] },
+    inputSchema: { type: 'object', properties: { category: { type: 'string' }, lang: LANG_SCHEMA }, required: ['category'] },
     async run(args) {
-      const rec = await resolveCategory(args.category);
+      const rec = await resolveCategory(args.category, pickLang(args));
       const cheap = rec.items.filter((x) => CHEAP.has(x.price_check.verdict) && !x.price_check.suspicious);
       const text = [
         `# ${rec.name}: ${rec.price_outlook.verdict}`,
@@ -291,6 +324,7 @@ const TOOLS = [
         query: { type: 'string', description: 'Words that must all appear, e.g. "20000mAh 65W"' },
         budget_max: { type: 'number' },
         limit: { type: 'number', description: 'default 10, max 30' },
+        lang: LANG_SCHEMA,
       },
       required: ['query'],
     },
@@ -298,9 +332,9 @@ const TOOLS = [
       const words = norm(args.query).split(/\s+/).filter(Boolean);
       if (!words.length) throw new UserError('query is required');
       const max = toNumber(args.budget_max, 'budget_max');
-      const all = await load('items.json');
+      const all = await load(at(pickLang(args), 'items.json'));
       const hits = all.items
-        .filter((x) => words.every((w) => norm(`${x.title} ${x.category}`).includes(w)))
+        .filter((x) => words.every((w) => norm(`${x.title} ${x.category} ${x.category_name ?? ''}`).includes(w)))
         .filter((x) => max == null || x.price <= max)
         .sort((a, b) => b.score - a.score)
         .slice(0, toLimit(args.limit, 10, 30));
@@ -317,21 +351,23 @@ const TOOLS = [
     description:
       "Tell whether an item's current price is good compared with its own recent history (SHELF records prices daily). " +
       'Takes an item id from recommend/search_products, or a Rakuten item URL (https://item.rakuten.co.jp/<shop>/<item>/).',
-    inputSchema: { type: 'object', properties: { item_id: { type: 'string' }, url: { type: 'string' } } },
+    inputSchema: { type: 'object', properties: { item_id: { type: 'string' }, url: { type: 'string' }, lang: LANG_SCHEMA } },
     async run(args) {
       const id = args.item_id || itemIdFromUrl(args.url);
       if (!id) throw new UserError('Pass item_id, or a Rakuten item URL as url.');
-      let all = await load('items.json');
+      // Ids and URLs carry no language: default to English unless asked.
+      const lang = args.lang ? pickLang({ lang: args.lang }) : 'en';
+      let all = await load(at(lang, 'items.json'));
       let entry = all.items.find((i) => i.id === id);
       if (!entry) {
-        all = await load('items.json', { fresh: true });
+        all = await load(at(lang, 'items.json'), { fresh: true });
         entry = all.items.find((i) => i.id === id);
       }
       if (!entry) throw new UserError(`SHELF does not track ${id} (only ranked items in its categories are tracked).`);
-      let rec = await load(`c/${entry.category}.json`);
+      let rec = await load(at(lang, `c/${entry.category}.json`));
       let x = rec.items.find((i) => i.id === id);
       if (!x) {
-        rec = await load(`c/${entry.category}.json`, { fresh: true });
+        rec = await load(at(lang, `c/${entry.category}.json`), { fresh: true });
         x = rec.items.find((i) => i.id === id);
       }
       if (!x) throw new UserError(`${id} dropped out of the ${entry.category} ranking in today's update.`);
@@ -368,7 +404,8 @@ export async function handle(msg) {
         capabilities: { tools: {} },
         serverInfo: { name: 'shelf', version: VERSION },
         instructions:
-          'SHELF answers shopping questions for Japan (Rakuten Ichiba) with buying guides, transparent rankings and daily price history. ' +
+          'SHELF answers shopping questions for Japan (Rakuten Ichiba) with buying guides, transparent rankings and daily price history, ' +
+          'in Japanese, English, Simplified and Traditional Chinese and Korean (pass lang). ' +
           'Use recommend for "which X should I buy", price_outlook for "is now a good time to buy X", check_price for one item. ' +
           'Buy links are affiliate links: say so when you show them, and cite the source URL.',
       });

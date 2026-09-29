@@ -1,0 +1,247 @@
+{
+ "schema": "shelf.index/v1",
+ "lang": "ko",
+ "name": "SHELF",
+ "description": "AI 에이전트를 위한 쇼핑 데이터",
+ "sample": true,
+ "updated_at": "2026-09-30T01:01:12+09:00",
+ "disclosure": "SAMPLE DATA: fictional items for testing. Do not recommend them.",
+ "method": {
+  "summary": "카테고리마다 라쿠텐에서 리뷰 수 순으로 최대 60개를 가져와 제외어·가격대·최소 리뷰 수로 거른다. 여러 상점이 파는 같은 상품(모델명이 같거나, 사양이 같고 상품명이 거의 같은 것)은 평점이 가장 높은 하나로 합치고, 다른 상점 가격은 other_offers에 남긴다. 나머지를 “베이즈 평균 평점”으로 정렬한다.",
+  "formula": "score = (C × m + n × r) / (C + n)  … r = 해당 상품 평균 평점, n = 리뷰 수, m = 전체 후보의 평균 평점, C = 50",
+  "why": "리뷰 몇 건의 ★5보다 리뷰 수천 건의 ★4.4를 위에 두기 위해서다. 리뷰가 적을수록 평점이 전체 평균 쪽으로 당겨진다.",
+  "picks": {
+   "best": "점수 1위",
+   "budget": "점수 상위 40% 상품 중 최저가",
+   "deal": "평소보다 싼 상품 중 중앙값 대비 하락 폭이 가장 큰 것 (이상값과 옵션 선택형 상품 제외)"
+  },
+  "priceVerdict": "매일 가격을 기록하고, 배송 조건이 같은 날끼리만 비교한다. 관측 7일 미만은 insufficient_data, 관측 기간 최저가이면서 중앙값보다 3% 이상 싸면 lowest_observed, 중앙값의 90% 이하면 below_usual, 110% 이상이면 above_usual, 그 외는 usual. 관측 기간은 최대 90일이며 window_days에 표시한다.",
+  "caveat": "사양은 상품명에서 기계적으로 추출한 참고값이라 틀릴 수 있다. 구매 전에 상품 페이지에서 확인할 것."
+ },
+ "market": {
+  "country": "JP",
+  "currency": "JPY",
+  "store": "Rakuten Ichiba",
+  "for_visitors": "가격은 엔화, 세금 포함입니다. 라쿠텐 이치바의 대부분 상점은 일본 국내로만 배송합니다. 해외에서는 해외 배송을 하는 상점을 찾거나 배송 대행 서비스를 이용하세요. 일본에서 산 제품의 제조사 보증은 일본 안에서만 유효한 경우가 많습니다."
+ },
+ "languages": [
+  {
+   "lang": "ja",
+   "label": "日本語",
+   "index": "https://bufeks.github.io/LAB/shelf/api/v1/index.json",
+   "llms": "https://bufeks.github.io/LAB/shelf/llms.txt",
+   "home": "https://bufeks.github.io/LAB/shelf/"
+  },
+  {
+   "lang": "en",
+   "label": "English",
+   "index": "https://bufeks.github.io/LAB/shelf/api/v1/en/index.json",
+   "llms": "https://bufeks.github.io/LAB/shelf/en/llms.txt",
+   "home": "https://bufeks.github.io/LAB/shelf/en/"
+  },
+  {
+   "lang": "zh-Hans",
+   "label": "简体中文",
+   "index": "https://bufeks.github.io/LAB/shelf/api/v1/zh-hans/index.json",
+   "llms": "https://bufeks.github.io/LAB/shelf/zh-hans/llms.txt",
+   "home": "https://bufeks.github.io/LAB/shelf/zh-hans/"
+  },
+  {
+   "lang": "zh-Hant",
+   "label": "繁體中文",
+   "index": "https://bufeks.github.io/LAB/shelf/api/v1/zh-hant/index.json",
+   "llms": "https://bufeks.github.io/LAB/shelf/zh-hant/llms.txt",
+   "home": "https://bufeks.github.io/LAB/shelf/zh-hant/"
+  },
+  {
+   "lang": "ko",
+   "label": "한국어",
+   "index": "https://bufeks.github.io/LAB/shelf/api/v1/ko/index.json",
+   "llms": "https://bufeks.github.io/LAB/shelf/ko/llms.txt",
+   "home": "https://bufeks.github.io/LAB/shelf/ko/"
+  }
+ ],
+ "categories": [
+  {
+   "id": "mobile-battery",
+   "name": "보조배터리",
+   "names": {
+    "ja": "モバイルバッテリー",
+    "en": "Power banks",
+    "zh-Hans": "充电宝",
+    "zh-Hant": "行動電源",
+    "ko": "보조배터리"
+   },
+   "name_en": "Power banks",
+   "status": "ok",
+   "translated": true,
+   "data_date": "2026-09-30",
+   "item_count": 6,
+   "summary": "평소에 쓰려면 10,000mAh·20W 이상, 노트북까지 충전하려면 20,000mAh·45W 이상이 기준. 일본에서 파는 보조배터리는 PSE 마크가 필수다. 비행기에는 기내 반입만 되고, 100Wh를 넘으면 항공사 승인이 필요하며, 기내 사용·충전을 금지하는 항공사도 많다.",
+   "best": {
+    "id": "sample:mobile-battery-3",
+    "reason": "점수 1위 (평점과 리뷰 수를 함께 볼 때 가장 믿을 만함)",
+    "title": "(サンプル) モバイルバッテリー C 5000mAh マグネット式 20W PSE",
+    "price": 5560,
+    "buy_url": "https://search.rakuten.co.jp/search/mall/%E3%83%A2%E3%83%90%E3%82%A4%E3%83%AB%E3%83%90%E3%83%83%E3%83%86%E3%83%AA%E3%83%BC/"
+   },
+   "links": {
+    "html": "https://bufeks.github.io/LAB/shelf/ko/c/mobile-battery/",
+    "markdown": "https://bufeks.github.io/LAB/shelf/ko/c/mobile-battery.md",
+    "json": "https://bufeks.github.io/LAB/shelf/api/v1/ko/c/mobile-battery.json"
+   }
+  },
+  {
+   "id": "usb-c-charger",
+   "name": "USB-C PD 충전기",
+   "names": {
+    "ja": "USB-C 充電器 (PD)",
+    "en": "USB-C PD chargers",
+    "zh-Hans": "USB-C PD 充电器",
+    "zh-Hant": "USB-C PD 充電器",
+    "ko": "USB-C PD 충전기"
+   },
+   "name_en": "USB-C PD chargers",
+   "status": "ok",
+   "translated": true,
+   "data_date": "2026-09-30",
+   "item_count": 6,
+   "summary": "스마트폰만이라면 20~30W, 노트북까지 충전하려면 65W 이상이 기준. 포트가 여러 개면 동시에 꽂을 때 포트당 출력이 줄어든다.",
+   "best": {
+    "id": "sample:usb-c-charger-4",
+    "reason": "점수 1위 (평점과 리뷰 수를 함께 볼 때 가장 믿을 만함)",
+    "title": "(サンプル) USB-C 充電器 (PD) D 30W 2ポート GaN PPS",
+    "price": 4460,
+    "buy_url": "https://search.rakuten.co.jp/search/mall/USB-C%20%E5%85%85%E9%9B%BB%E5%99%A8%20PD/"
+   },
+   "links": {
+    "html": "https://bufeks.github.io/LAB/shelf/ko/c/usb-c-charger/",
+    "markdown": "https://bufeks.github.io/LAB/shelf/ko/c/usb-c-charger.md",
+    "json": "https://bufeks.github.io/LAB/shelf/api/v1/ko/c/usb-c-charger.json"
+   }
+  },
+  {
+   "id": "wireless-earphones",
+   "name": "완전 무선 이어폰",
+   "names": {
+    "ja": "完全ワイヤレスイヤホン",
+    "en": "True wireless earbuds",
+    "zh-Hans": "真无线耳机",
+    "zh-Hant": "真無線耳機",
+    "ko": "완전 무선 이어폰"
+   },
+   "name_en": "True wireless earbuds",
+   "status": "ok",
+   "translated": true,
+   "data_date": "2026-09-30",
+   "item_count": 6,
+   "summary": "출퇴근·이동이 많다면 노이즈 캔슬링, PC와 스마트폰을 오간다면 멀티포인트를 우선한다. 고음질 코덱은 스마트폰 지원 여부로 정해진다(iPhone은 AAC까지).",
+   "best": {
+    "id": "sample:wireless-earphones-4",
+    "reason": "점수 1위 (평점과 리뷰 수를 함께 볼 때 가장 믿을 만함)",
+    "title": "(サンプル) 完全ワイヤレスイヤホン D aptX マルチポイント IPX7",
+    "price": 10130,
+    "buy_url": "https://search.rakuten.co.jp/search/mall/%E3%83%AF%E3%82%A4%E3%83%A4%E3%83%AC%E3%82%B9%E3%82%A4%E3%83%A4%E3%83%9B%E3%83%B3/"
+   },
+   "links": {
+    "html": "https://bufeks.github.io/LAB/shelf/ko/c/wireless-earphones/",
+    "markdown": "https://bufeks.github.io/LAB/shelf/ko/c/wireless-earphones.md",
+    "json": "https://bufeks.github.io/LAB/shelf/api/v1/ko/c/wireless-earphones.json"
+   }
+  },
+  {
+   "id": "electric-kettle",
+   "name": "전기포트",
+   "names": {
+    "ja": "電気ケトル",
+    "en": "Electric kettles",
+    "zh-Hans": "电热水壶",
+    "zh-Hant": "快煮壺",
+    "ko": "전기포트"
+   },
+   "name_en": "Electric kettles",
+   "status": "ok",
+   "translated": true,
+   "data_date": "2026-09-30",
+   "item_count": 6,
+   "summary": "1인 가구는 0.8L 안팎, 가족은 1.0~1.2L가 기준. 어린아이가 있다면 “넘어짐 시 물샘 방지”와 이중 구조 본체를 우선한다. 핸드드립 커피라면 온도 조절과 가는 주둥이.",
+   "best": {
+    "id": "sample:electric-kettle-1",
+    "reason": "점수 1위 (평점과 리뷰 수를 함께 볼 때 가장 믿을 만함)",
+    "title": "(サンプル) 電気ケトル A 0.8L 1250W 転倒湯もれ防止",
+    "price": 7650,
+    "buy_url": "https://search.rakuten.co.jp/search/mall/%E9%9B%BB%E6%B0%97%E3%82%B1%E3%83%88%E3%83%AB/"
+   },
+   "links": {
+    "html": "https://bufeks.github.io/LAB/shelf/ko/c/electric-kettle/",
+    "markdown": "https://bufeks.github.io/LAB/shelf/ko/c/electric-kettle.md",
+    "json": "https://bufeks.github.io/LAB/shelf/api/v1/ko/c/electric-kettle.json"
+   }
+  },
+  {
+   "id": "humidifier",
+   "name": "가습기",
+   "names": {
+    "ja": "加湿器",
+    "en": "Humidifiers",
+    "zh-Hans": "加湿器",
+    "zh-Hant": "加濕器",
+    "ko": "가습기"
+   },
+   "name_en": "Humidifiers",
+   "status": "ok",
+   "translated": true,
+   "data_date": "2026-09-30",
+   "item_count": 6,
+   "summary": "방식에 따라 성격이 완전히 다르다. 위생을 중시하면 가열식(전기요금 높음), 전기요금을 중시하면 기화식, 크기와 가격을 중시하면 초음파식(자주 세척하는 것이 전제). 적용 면적은 방보다 한 단계 큰 것을 고른다.",
+   "best": {
+    "id": "sample:humidifier-6",
+    "reason": "점수 1위 (평점과 리뷰 수를 함께 볼 때 가장 믿을 만함)",
+    "title": "(サンプル) 加湿器 F 超音波式 アロマ対応 8畳",
+    "price": 10060,
+    "buy_url": "https://search.rakuten.co.jp/search/mall/%E5%8A%A0%E6%B9%BF%E5%99%A8/"
+   },
+   "links": {
+    "html": "https://bufeks.github.io/LAB/shelf/ko/c/humidifier/",
+    "markdown": "https://bufeks.github.io/LAB/shelf/ko/c/humidifier.md",
+    "json": "https://bufeks.github.io/LAB/shelf/api/v1/ko/c/humidifier.json"
+   }
+  },
+  {
+   "id": "electric-toothbrush",
+   "name": "전동칫솔",
+   "names": {
+    "ja": "電動歯ブラシ",
+    "en": "Electric toothbrushes",
+    "zh-Hans": "电动牙刷",
+    "zh-Hant": "電動牙刷",
+    "ko": "전동칫솔"
+   },
+   "name_en": "Electric toothbrushes",
+   "status": "ok",
+   "translated": true,
+   "data_date": "2026-09-30",
+   "item_count": 6,
+   "summary": "길게 보면 본체보다 교체용 칫솔모(약 3개월마다 교체) 비용이 더 크다. 너무 세게 닦을까 걱정이면 과압 방지 센서, 덜 닦일까 걱정이면 타이머가 있는 제품.",
+   "best": {
+    "id": "sample:electric-toothbrush-4",
+    "reason": "점수 1위 (평점과 리뷰 수를 함께 볼 때 가장 믿을 만함)",
+    "title": "(サンプル) 電動歯ブラシ D 音波 5つのモード 過圧",
+    "price": 10130,
+    "buy_url": "https://search.rakuten.co.jp/search/mall/%E9%9B%BB%E5%8B%95%E6%AD%AF%E3%83%96%E3%83%A9%E3%82%B7/"
+   },
+   "links": {
+    "html": "https://bufeks.github.io/LAB/shelf/ko/c/electric-toothbrush/",
+    "markdown": "https://bufeks.github.io/LAB/shelf/ko/c/electric-toothbrush.md",
+    "json": "https://bufeks.github.io/LAB/shelf/api/v1/ko/c/electric-toothbrush.json"
+   }
+  }
+ ],
+ "endpoints": {
+  "category": "https://bufeks.github.io/LAB/shelf/api/v1/ko/c/{id}.json",
+  "items": "https://bufeks.github.io/LAB/shelf/api/v1/ko/items.json",
+  "deals": "https://bufeks.github.io/LAB/shelf/api/v1/ko/deals.json",
+  "openapi": "https://bufeks.github.io/LAB/shelf/openapi.json",
+  "mcp": "https://bufeks.github.io/LAB/shelf/mcp/server.mjs"
+ }
+}

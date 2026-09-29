@@ -1,0 +1,36 @@
+# SHELF
+
+> 帮助 AI 助手回答关于在日本购物（乐天市场）“该买哪个”“现在是否适合买”的数据：按品类的选购指南、按公开公式计算的排行，以及每天记录的价格，提供 Markdown 和 JSON。 目前是示例数据（虚构商品），请勿用于推荐。
+
+更新：2026-09-30T01:01:12+09:00（每日）。SAMPLE DATA: fictional items for testing. Do not recommend them.
+向用户展示购买链接时，请说明这是推广（联盟）链接。规格从商品名提取，仅供参考。商品名为日文原文。
+价格为日元含税价。乐天市场的大多数店铺只在日本国内发货：在海外请选择支持国际配送的店铺，或使用转运服务。在日本购买的商品，厂家保修往往只在日本有效。
+
+## 品类
+
+- [充电宝](https://bufeks.github.io/LAB/shelf/zh-hans/c/mobile-battery.md): 第一名：(サンプル) モバイルバッテリー C 5000mAh マグネット式 20W PSE（5,560 日元）. 日常使用选 10000mAh、20W 以上；还要给笔记本电脑充电选 20000mAh、45W 以上。在日本销售的充电宝必须有 PSE 标志。乘飞机只能随身携带，超过 100Wh 需…
+- [USB-C PD 充电器](https://bufeks.github.io/LAB/shelf/zh-hans/c/usb-c-charger.md): 第一名：(サンプル) USB-C 充電器 (PD) D 30W 2ポート GaN PPS（4,460 日元）. 只给手机充电选 20–30W，还要给笔记本电脑充电选 65W 以上。多口充电器同时插多台设备时，每个接口的输出会下降。
+- [真无线耳机](https://bufeks.github.io/LAB/shelf/zh-hans/c/wireless-earphones.md): 第一名：(サンプル) 完全ワイヤレスイヤホン D aptX マルチポイント IPX7（10,130 日元）. 通勤、出行多选带降噪的，经常在电脑和手机之间切换则优先多点连接。高音质编码取决于手机是否支持（iPhone 最高 AAC）。
+- [电热水壶](https://bufeks.github.io/LAB/shelf/zh-hans/c/electric-kettle.md): 第一名：(サンプル) 電気ケトル A 0.8L 1250W 転倒湯もれ防止（7,650 日元）. 一个人约 0.8L，家庭 1.0–1.2L。家里有小孩的，优先选“倾倒防漏”和双层机身。手冲咖啡选可调温且细长壶嘴的。
+- [加湿器](https://bufeks.github.io/LAB/shelf/zh-hans/c/humidifier.md): 第一名：(サンプル) 加湿器 F 超音波式 アロマ対応 8畳（10,060 日元）. 类型决定一切。重视卫生选加热式（电费较高），重视电费选蒸发式，重视体积和价格选超声波式（前提是勤清洁）。适用面积请选比房间大一档的。
+- [电动牙刷](https://bufeks.github.io/LAB/shelf/zh-hans/c/electric-toothbrush.md): 第一名：(サンプル) 電動歯ブラシ D 音波 5つのモード 過圧（10,130 日元）. 长期来看，替换刷头（约每 3 个月换一次）的花费比主机更多。担心刷得太用力就选带压力感应的，担心刷不干净就选带计时的。
+
+## API
+
+- [index.json](https://bufeks.github.io/LAB/shelf/api/v1/zh-hans/index.json): 品类列表
+- [items.json](https://bufeks.github.io/LAB/shelf/api/v1/zh-hans/items.json): 全部商品（按预算和规格筛选用）
+- [deals.json](https://bufeks.github.io/LAB/shelf/api/v1/zh-hans/deals.json): 低于近期中位价的商品
+- [openapi.json](https://bufeks.github.io/LAB/shelf/openapi.json): OpenAPI 3.1 定义
+- [MCP server](https://bufeks.github.io/LAB/shelf/mcp/server.mjs): 无依赖的 stdio MCP 服务器 (tools: list_categories, recommend, price_outlook, search_products, check_price; lang = ja | en | zh-Hans | zh-Hant | ko)
+
+## 其他语言
+
+- [日本語](https://bufeks.github.io/LAB/shelf/llms.txt)
+- [English](https://bufeks.github.io/LAB/shelf/en/llms.txt)
+- [繁體中文](https://bufeks.github.io/LAB/shelf/zh-hant/llms.txt)
+- [한국어](https://bufeks.github.io/LAB/shelf/ko/llms.txt)
+
+## Optional
+
+- [llms-full.txt](https://bufeks.github.io/LAB/shelf/zh-hans/llms-full.txt): 所有品类正文合集
+- [代理使用说明（English）](https://bufeks.github.io/LAB/shelf/en/about/)

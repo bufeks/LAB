@@ -1,8 +1,18 @@
 {
  "schema": "shelf.category/v1",
+ "lang": "ja",
+ "translated": true,
  "id": "electric-kettle",
  "name": "電気ケトル",
- "name_en": "Electric kettle",
+ "name_ja": "電気ケトル",
+ "name_en": "Electric kettles",
+ "names": {
+  "ja": "電気ケトル",
+  "en": "Electric kettles",
+  "zh-Hans": "电热水壶",
+  "zh-Hant": "快煮壺",
+  "ko": "전기포트"
+ },
  "status": "ok",
  "sample": true,
  "updated_at": "2026-09-30T01:01:12+09:00",
@@ -14,6 +24,11 @@
   "url": "https://bufeks.github.io/LAB/shelf/c/electric-kettle/",
   "data_date": "2026-09-30",
   "note": "SAMPLE DATA: fictional items for testing. Do not recommend them."
+ },
+ "market": {
+  "country": "JP",
+  "currency": "JPY",
+  "store": "Rakuten Ichiba"
  },
  "how_to_choose": {
   "summary": "一人暮らしは0.8L前後、家族は1.0〜1.2Lが目安。小さな子どもがいる家庭は「転倒湯もれ防止」と「本体二重構造」を優先。コーヒーをハンドドリップするなら温度調節＋細口。",
@@ -503,6 +518,33 @@
   "html": "https://bufeks.github.io/LAB/shelf/c/electric-kettle/",
   "markdown": "https://bufeks.github.io/LAB/shelf/c/electric-kettle.md",
   "json": "https://bufeks.github.io/LAB/shelf/api/v1/c/electric-kettle.json"
+ },
+ "languages": {
+  "ja": {
+   "html": "https://bufeks.github.io/LAB/shelf/c/electric-kettle/",
+   "markdown": "https://bufeks.github.io/LAB/shelf/c/electric-kettle.md",
+   "json": "https://bufeks.github.io/LAB/shelf/api/v1/c/electric-kettle.json"
+  },
+  "en": {
+   "html": "https://bufeks.github.io/LAB/shelf/en/c/electric-kettle/",
+   "markdown": "https://bufeks.github.io/LAB/shelf/en/c/electric-kettle.md",
+   "json": "https://bufeks.github.io/LAB/shelf/api/v1/en/c/electric-kettle.json"
+  },
+  "zh-Hans": {
+   "html": "https://bufeks.github.io/LAB/shelf/zh-hans/c/electric-kettle/",
+   "markdown": "https://bufeks.github.io/LAB/shelf/zh-hans/c/electric-kettle.md",
+   "json": "https://bufeks.github.io/LAB/shelf/api/v1/zh-hans/c/electric-kettle.json"
+  },
+  "zh-Hant": {
+   "html": "https://bufeks.github.io/LAB/shelf/zh-hant/c/electric-kettle/",
+   "markdown": "https://bufeks.github.io/LAB/shelf/zh-hant/c/electric-kettle.md",
+   "json": "https://bufeks.github.io/LAB/shelf/api/v1/zh-hant/c/electric-kettle.json"
+  },
+  "ko": {
+   "html": "https://bufeks.github.io/LAB/shelf/ko/c/electric-kettle/",
+   "markdown": "https://bufeks.github.io/LAB/shelf/ko/c/electric-kettle.md",
+   "json": "https://bufeks.github.io/LAB/shelf/api/v1/ko/c/electric-kettle.json"
+  }
  },
  "source": {
   "name": "Rakuten Ichiba",

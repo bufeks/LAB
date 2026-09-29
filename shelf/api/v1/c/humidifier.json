@@ -1,8 +1,18 @@
 {
  "schema": "shelf.category/v1",
+ "lang": "ja",
+ "translated": true,
  "id": "humidifier",
  "name": "加湿器",
- "name_en": "Humidifier",
+ "name_ja": "加湿器",
+ "name_en": "Humidifiers",
+ "names": {
+  "ja": "加湿器",
+  "en": "Humidifiers",
+  "zh-Hans": "加湿器",
+  "zh-Hant": "加濕器",
+  "ko": "가습기"
+ },
  "status": "ok",
  "sample": true,
  "updated_at": "2026-09-30T01:01:12+09:00",
@@ -14,6 +24,11 @@
   "url": "https://bufeks.github.io/LAB/shelf/c/humidifier/",
   "data_date": "2026-09-30",
   "note": "SAMPLE DATA: fictional items for testing. Do not recommend them."
+ },
+ "market": {
+  "country": "JP",
+  "currency": "JPY",
+  "store": "Rakuten Ichiba"
  },
  "how_to_choose": {
   "summary": "方式で性格がまったく違う。衛生面重視ならスチーム式（電気代は高め）、電気代重視なら気化式、置き場所と価格重視なら超音波式（こまめな手入れが前提）。適用畳数は部屋より一回り大きめを選ぶ。",
@@ -496,6 +511,33 @@
   "html": "https://bufeks.github.io/LAB/shelf/c/humidifier/",
   "markdown": "https://bufeks.github.io/LAB/shelf/c/humidifier.md",
   "json": "https://bufeks.github.io/LAB/shelf/api/v1/c/humidifier.json"
+ },
+ "languages": {
+  "ja": {
+   "html": "https://bufeks.github.io/LAB/shelf/c/humidifier/",
+   "markdown": "https://bufeks.github.io/LAB/shelf/c/humidifier.md",
+   "json": "https://bufeks.github.io/LAB/shelf/api/v1/c/humidifier.json"
+  },
+  "en": {
+   "html": "https://bufeks.github.io/LAB/shelf/en/c/humidifier/",
+   "markdown": "https://bufeks.github.io/LAB/shelf/en/c/humidifier.md",
+   "json": "https://bufeks.github.io/LAB/shelf/api/v1/en/c/humidifier.json"
+  },
+  "zh-Hans": {
+   "html": "https://bufeks.github.io/LAB/shelf/zh-hans/c/humidifier/",
+   "markdown": "https://bufeks.github.io/LAB/shelf/zh-hans/c/humidifier.md",
+   "json": "https://bufeks.github.io/LAB/shelf/api/v1/zh-hans/c/humidifier.json"
+  },
+  "zh-Hant": {
+   "html": "https://bufeks.github.io/LAB/shelf/zh-hant/c/humidifier/",
+   "markdown": "https://bufeks.github.io/LAB/shelf/zh-hant/c/humidifier.md",
+   "json": "https://bufeks.github.io/LAB/shelf/api/v1/zh-hant/c/humidifier.json"
+  },
+  "ko": {
+   "html": "https://bufeks.github.io/LAB/shelf/ko/c/humidifier/",
+   "markdown": "https://bufeks.github.io/LAB/shelf/ko/c/humidifier.md",
+   "json": "https://bufeks.github.io/LAB/shelf/api/v1/ko/c/humidifier.json"
+  }
  },
  "source": {
   "name": "Rakuten Ichiba",

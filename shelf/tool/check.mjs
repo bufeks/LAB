@@ -9,6 +9,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { CATEGORIES } from './categories.mjs';
+import { LOCALES, SOURCE, prefix } from './i18n/index.mjs';
 
 const HERE = path.dirname(fileURLToPath(import.meta.url));
 const DATA_DIR = process.env.SHELF_DATA_DIR || path.join(HERE, '..', 'data');
@@ -80,6 +81,23 @@ export function audit() {
     }
     m.suspicious = rec.items.filter((x) => x.price_check.suspicious).length;
     if (m.suspicious) warnings.push(`${category.id}: ${m.suspicious} item(s) priced far below their usual price`);
+  }
+
+  // Every language must be published; a category without a translation is
+  // served in English as a fallback and listed here for someone to translate.
+  metrics.languages = {};
+  for (const L of LOCALES.filter((X) => X !== SOURCE)) {
+    const untranslated = [];
+    for (const category of CATEGORIES) {
+      const rec = read(`api/v1/${prefix(L)}c/${category.id}.json`);
+      if (!rec) continue;
+      if (rec.items.length !== (metrics[category.id]?.items ?? rec.items.length)) errors.push(`${L.lang}/${category.id}: item count differs from Japanese`);
+      if (!rec.translated) untranslated.push(category.id);
+      if (!rec.market?.for_visitors) errors.push(`${L.lang}/${category.id}: visitor notice missing`);
+    }
+    if (!fs.existsSync(path.join(OUT_DIR, prefix(L), 'llms.txt'))) errors.push(`${L.lang}: llms.txt missing`);
+    metrics.languages[L.lang] = { untranslated };
+    if (untranslated.length) warnings.push(`${L.lang}: no translation for ${untranslated.join(', ')} (English shown instead)`);
   }
 
   const llms = fs.readFileSync(path.join(OUT_DIR, 'llms.txt'), 'utf8');

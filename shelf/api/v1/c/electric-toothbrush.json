@@ -1,8 +1,18 @@
 {
  "schema": "shelf.category/v1",
+ "lang": "ja",
+ "translated": true,
  "id": "electric-toothbrush",
  "name": "電動歯ブラシ",
- "name_en": "Electric toothbrush",
+ "name_ja": "電動歯ブラシ",
+ "name_en": "Electric toothbrushes",
+ "names": {
+  "ja": "電動歯ブラシ",
+  "en": "Electric toothbrushes",
+  "zh-Hans": "电动牙刷",
+  "zh-Hant": "電動牙刷",
+  "ko": "전동칫솔"
+ },
  "status": "ok",
  "sample": true,
  "updated_at": "2026-09-30T01:01:12+09:00",
@@ -14,6 +24,11 @@
   "url": "https://bufeks.github.io/LAB/shelf/c/electric-toothbrush/",
   "data_date": "2026-09-30",
   "note": "SAMPLE DATA: fictional items for testing. Do not recommend them."
+ },
+ "market": {
+  "country": "JP",
+  "currency": "JPY",
+  "store": "Rakuten Ichiba"
  },
  "how_to_choose": {
   "summary": "本体価格より替えブラシ代（約3か月ごとに交換）が長期の出費を左右する。磨きすぎが心配なら押しつけ防止センサー付き、磨き残しが心配ならタイマー付きを選ぶ。",
@@ -92,7 +107,7 @@
   {
    "key": "modes",
    "label": "モード数",
-   "unit": null,
+   "unit": "",
    "type": "number"
   }
  ],
@@ -483,6 +498,33 @@
   "html": "https://bufeks.github.io/LAB/shelf/c/electric-toothbrush/",
   "markdown": "https://bufeks.github.io/LAB/shelf/c/electric-toothbrush.md",
   "json": "https://bufeks.github.io/LAB/shelf/api/v1/c/electric-toothbrush.json"
+ },
+ "languages": {
+  "ja": {
+   "html": "https://bufeks.github.io/LAB/shelf/c/electric-toothbrush/",
+   "markdown": "https://bufeks.github.io/LAB/shelf/c/electric-toothbrush.md",
+   "json": "https://bufeks.github.io/LAB/shelf/api/v1/c/electric-toothbrush.json"
+  },
+  "en": {
+   "html": "https://bufeks.github.io/LAB/shelf/en/c/electric-toothbrush/",
+   "markdown": "https://bufeks.github.io/LAB/shelf/en/c/electric-toothbrush.md",
+   "json": "https://bufeks.github.io/LAB/shelf/api/v1/en/c/electric-toothbrush.json"
+  },
+  "zh-Hans": {
+   "html": "https://bufeks.github.io/LAB/shelf/zh-hans/c/electric-toothbrush/",
+   "markdown": "https://bufeks.github.io/LAB/shelf/zh-hans/c/electric-toothbrush.md",
+   "json": "https://bufeks.github.io/LAB/shelf/api/v1/zh-hans/c/electric-toothbrush.json"
+  },
+  "zh-Hant": {
+   "html": "https://bufeks.github.io/LAB/shelf/zh-hant/c/electric-toothbrush/",
+   "markdown": "https://bufeks.github.io/LAB/shelf/zh-hant/c/electric-toothbrush.md",
+   "json": "https://bufeks.github.io/LAB/shelf/api/v1/zh-hant/c/electric-toothbrush.json"
+  },
+  "ko": {
+   "html": "https://bufeks.github.io/LAB/shelf/ko/c/electric-toothbrush/",
+   "markdown": "https://bufeks.github.io/LAB/shelf/ko/c/electric-toothbrush.md",
+   "json": "https://bufeks.github.io/LAB/shelf/api/v1/ko/c/electric-toothbrush.json"
+  }
  },
  "source": {
   "name": "Rakuten Ichiba",

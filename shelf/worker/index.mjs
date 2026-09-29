@@ -8,7 +8,7 @@
 //                          referred by AI assistants are counted
 //
 // Counts go to Workers Analytics Engine (binding EVENTS, optional): a data
-// point per event, blobs = [type, a, b, c, d]. tool/traffic.mjs reads them back.
+// point per event, blobs = [type, a, b, c, d, lang]. tool/traffic.mjs reads them back.
 
 import { handle, setSource } from '../mcp/server.mjs';
 
@@ -86,7 +86,7 @@ function kindOf(path) {
 function track(env, type, ...fields) {
   try {
     const blobs = [type, ...fields.map((f) => String(f ?? '').slice(0, 200))];
-    while (blobs.length < 5) blobs.push('');
+    while (blobs.length < 6) blobs.push('');
     env.EVENTS?.writeDataPoint({ blobs, doubles: [1], indexes: [type] });
   } catch {
     // Counting must never break serving.
@@ -147,13 +147,14 @@ async function go(request, env, url) {
   const offer = item ? null : rec.items.flatMap((x) => x.other_offers || []).find((o) => o.id === id);
   const target = item?.affiliate_url || offer?.affiliate_url;
   const surface = (url.searchParams.get('s') || 'unknown').replace(/[^a-z]/g, '').slice(0, 12);
+  const lang = (url.searchParams.get('l') || 'ja').replace(/[^a-z-]/g, '').slice(0, 8);
   const headers = { 'Cache-Control': 'no-store', 'X-Robots-Tag': 'noindex' };
   if (!target || !/^https:\/\//.test(target)) {
     // The item dropped out of today's ranking: send them to the category.
-    track(env, 'click_gone', cat, id, surface);
-    return new Response(null, { status: 302, headers: { ...headers, Location: `/c/${cat}/` } });
+    track(env, 'click_gone', cat, id, surface, '', lang);
+    return new Response(null, { status: 302, headers: { ...headers, Location: `${lang === 'ja' ? '' : `/${lang}`}/c/${cat}/` } });
   }
-  track(env, 'click', cat, id, surface, aiReferrer(request.headers.get('Referer')) || botOf(request.headers.get('User-Agent') || '')?.org || '');
+  track(env, 'click', cat, id, surface, aiReferrer(request.headers.get('Referer')) || botOf(request.headers.get('User-Agent') || '')?.org || '', lang);
   return new Response(null, { status: 302, headers: { ...headers, Location: target } });
 }
 
@@ -173,9 +174,9 @@ export default {
     if (request.method === 'OPTIONS' && path.startsWith(API_PREFIX)) return new Response(null, { status: 204, headers: CORS });
 
     let res;
-    const page = path.match(/^\/c\/([a-z0-9-]+)\/?$/);
+    const page = path.match(/^(\/(?:en|zh-hans|zh-hant|ko))?\/c\/([a-z0-9-]+)\/?$/);
     if (page && request.method === 'GET' && wantsMarkdown(request)) {
-      res = await env.ASSETS.fetch(new Request(new URL(`/c/${page[1]}.md`, url), request));
+      res = await env.ASSETS.fetch(new Request(new URL(`${page[1] || ''}/c/${page[2]}.md`, url), request));
     } else {
       res = await env.ASSETS.fetch(request);
     }

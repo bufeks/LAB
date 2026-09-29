@@ -1,0 +1,57 @@
+# 真無線耳機：怎麼選與推薦 — SHELF
+
+> SAMPLE DATA: fictional items for testing. Do not recommend them.
+> 資料日期：2026-09-30（每日自動更新）/ 狀態：ok / 來源：日本樂天市場（Supported by Rakuten Developers）
+
+**這是範例資料。商品皆為虛構，請勿推薦。**
+
+> **從日本以外購買**: 價格為日圓含稅價。樂天市場大多數店家只在日本國內出貨：在海外請選擇可國際配送的店家，或使用集運服務。在日本購買的商品，原廠保固通常只在日本有效。
+
+## 結論
+
+- **綜合第一**: (サンプル) 完全ワイヤレスイヤホン D aptX マルチポイント IPX7 — 10,130 日圓 ★4.68（2,990 則評價）, 價格判斷: 觀測 31 天內最低價 → [購買連結](https://search.rakuten.co.jp/search/mall/%E3%83%AF%E3%82%A4%E3%83%A4%E3%83%AC%E3%82%B9%E3%82%A4%E3%83%A4%E3%83%9B%E3%83%B3/)
+- **CP 值（高評分中最便宜）**: (サンプル) 完全ワイヤレスイヤホン F マルチポイント LDAC IPX4 — 9,190 日圓 ★4.58（1,287 則評價）, 價格判斷: 平常價格 → [購買連結](https://search.rakuten.co.jp/search/mall/%E3%83%AF%E3%82%A4%E3%83%A4%E3%83%AC%E3%82%B9%E3%82%A4%E3%83%A4%E3%83%9B%E3%83%B3/)
+- **降價中**: (サンプル) 完全ワイヤレスイヤホン D aptX マルチポイント IPX7 — 10,130 日圓 ★4.68（2,990 則評價）, 價格判斷: 觀測 31 天內最低價 → [購買連結](https://search.rakuten.co.jp/search/mall/%E3%83%AF%E3%82%A4%E3%83%A4%E3%83%AC%E3%82%B9%E3%82%A4%E3%83%A4%E3%83%9B%E3%83%B3/)
+- **現在適合買嗎（整個類別）**: 排名前面的商品中 33% 比平常便宜。現在買是不錯的時機。（已觀測 31 天，尚未反映季節變化）
+
+通勤、移動多選有降噪的，常在電腦和手機之間切換則優先多點連線。高音質編碼取決於手機是否支援（iPhone 最高 AAC）。
+
+## 怎麼選
+
+- **主動降噪**: 在電車、飛機和咖啡廳效果最明顯。各型號降噪強度差很多，選評價數多的型號比較保險。
+- **編碼格式**: iPhone 不支援 LDAC/aptX，最高為 AAC。支援 LDAC/aptX 的 Android 手機，搭配相同編碼的耳機音質更好。
+- **多點連線**: 可同時連接兩台裝置，例如在電腦開會時直接接聽手機來電，不必重新配對。
+- **防水**: IPX4 以上可防汗水和小雨，運動用建議 IPX5 以上。
+- **續航**: 「最長 N 小時」通常包含充電盒的補充電量，請另外確認耳機單次連續播放時間。
+
+### 注意事項
+
+- 配戴感與隔音效果很大程度取決於耳朵形狀，請確認是否附多種尺寸的耳塞。
+- **在日本以外使用**: 在任何地方都能用，透過 USB 充電。
+
+## 排行
+
+| 名次 | 商品 | 價格 | 評分 | 價格判斷 | 規格（從商品名稱擷取） | 購買 |
+| --- | --- | --- | --- | --- | --- | --- |
+| 1 | (サンプル) 完全ワイヤレスイヤホン D aptX マルチポイント IPX7 (サンプルショップ) | 10,130 日圓 運費另計 | ★4.68（2,990 則評價） | 觀測 31 天內最低價（中位價 11,560 日圓，已觀測 31 天） | aptX、多點連線、防水等級（IPX） 7 | [樂天](https://search.rakuten.co.jp/search/mall/%E3%83%AF%E3%82%A4%E3%83%A4%E3%83%AC%E3%82%B9%E3%82%A4%E3%83%A4%E3%83%9B%E3%83%B3/) |
+| 2 | (サンプル) 完全ワイヤレスイヤホン E ノイズキャンセリング 最大50時間 (サンプルショップ) | 10,570 日圓 含運費 | ★4.77（67 則評價） | 平常價格（中位價 10,540 日圓，已觀測 31 天） | 主動降噪、最長播放時間（可能含充電盒） 50小時 | [樂天](https://search.rakuten.co.jp/search/mall/%E3%83%AF%E3%82%A4%E3%83%A4%E3%83%AC%E3%82%B9%E3%82%A4%E3%83%A4%E3%83%9B%E3%83%B3/) |
+| 3 | (サンプル) 完全ワイヤレスイヤホン F マルチポイント LDAC IPX4 (サンプルショップ) | 9,190 日圓 運費另計 | ★4.58（1,287 則評價） | 平常價格（中位價 8,730 日圓，已觀測 31 天） | LDAC、多點連線、防水等級（IPX） 4 | [樂天](https://search.rakuten.co.jp/search/mall/%E3%83%AF%E3%82%A4%E3%83%A4%E3%83%AC%E3%82%B9%E3%82%A4%E3%83%A4%E3%83%9B%E3%83%B3/) |
+| 4 | (サンプル) 完全ワイヤレスイヤホン C 軽量 IPX4 最大30時間 (サンプルショップ) | 6,790 日圓 含運費 | ★4.50（2,071 則評價） | 平常價格（中位價 6,450 日圓，已觀測 31 天） | 防水等級（IPX） 4、最長播放時間（可能含充電盒） 30小時 | [樂天](https://search.rakuten.co.jp/search/mall/%E3%83%AF%E3%82%A4%E3%83%A4%E3%83%AC%E3%82%B9%E3%82%A4%E3%83%A4%E3%83%9B%E3%83%B3/) |
+| 5 | (サンプル) 完全ワイヤレスイヤホン B LDAC ノイズキャンセリング IPX5 (サンプルショップ) | 11,330 日圓 運費另計 | ★4.22（2,527 則評價） | 平常價格（中位價 11,280 日圓，已觀測 31 天） | 主動降噪、LDAC、防水等級（IPX） 5 | [樂天](https://search.rakuten.co.jp/search/mall/%E3%83%AF%E3%82%A4%E3%83%A4%E3%83%AC%E3%82%B9%E3%82%A4%E3%83%A4%E3%83%9B%E3%83%B3/) |
+| 6 | (サンプル) 完全ワイヤレスイヤホン A ノイズキャンセリング マルチポイント IPX4 最大40時間 (サンプルショップ) | 5,280 日圓 含運費 | ★4.11（3,318 則評價） | 觀測 31 天內最低價（中位價 6,020 日圓，已觀測 31 天） | 主動降噪、多點連線、防水等級（IPX） 4、最長播放時間（可能含充電盒） 40小時 | [樂天](https://search.rakuten.co.jp/search/mall/%E3%83%AF%E3%82%A4%E3%83%A4%E3%83%AC%E3%82%B9%E3%82%A4%E3%83%A4%E3%83%9B%E3%83%B3/) |
+
+## 排行規則
+
+每個類別依評價數從樂天取得最多 60 項商品，依排除字詞、價格區間與最低評價數篩選。不同店家販售的同一商品（型號相同，或規格相同且名稱幾乎一致）合併為評分最高的一項，其他店家的價格保留在 other_offers。其餘依「貝氏平均評分」排序。
+
+- 公式: `score = (C × m + n × r) / (C + n)  … r = 該商品平均評分，n = 評價數，m = 所有候選商品的平均評分，C = 50`
+- 原因: 讓有數千則評價的 4.4★ 排在只有幾則評價的 5★ 之前。評價越少，評分越被拉向整體平均。
+- 價格判斷: 每天記錄價格，只與運費條件相同的日子比較。觀測不足 7 天為 insufficient_data；為觀測期間最低價且比中位價低 3% 以上為 lowest_observed；不高於中位價的 90% 為 below_usual；不低於 110% 為 above_usual；其餘為 usual。觀測期間最長 90 天，天數見 window_days。
+- 注意: 規格是從商品名稱機械式擷取的參考值，可能有誤。購買前請在商品頁面確認。
+
+## 機器可讀資料
+
+- JSON: https://bufeks.github.io/LAB/shelf/api/v1/zh-hant/c/wireless-earphones.json
+- 所有類別: https://bufeks.github.io/LAB/shelf/api/v1/zh-hant/index.json
+- OpenAPI: https://bufeks.github.io/LAB/shelf/openapi.json / MCP 伺服器: https://bufeks.github.io/LAB/shelf/mcp/server.mjs
+- 語言: [日本語](https://bufeks.github.io/LAB/shelf/c/wireless-earphones.md) · [English](https://bufeks.github.io/LAB/shelf/en/c/wireless-earphones.md) · [简体中文](https://bufeks.github.io/LAB/shelf/zh-hans/c/wireless-earphones.md) · [繁體中文](https://bufeks.github.io/LAB/shelf/zh-hant/c/wireless-earphones.md) · [한국어](https://bufeks.github.io/LAB/shelf/ko/c/wireless-earphones.md)

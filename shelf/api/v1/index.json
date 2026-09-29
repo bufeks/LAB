@@ -1,5 +1,6 @@
 {
  "schema": "shelf.index/v1",
+ "lang": "ja",
  "name": "SHELF",
  "description": "AIエージェントのための買い物データ",
  "sample": true,
@@ -18,12 +19,62 @@
   "priceVerdict": "毎日の価格（送料込/別が今日と同じ日だけ）を記録し、観測7日未満は insufficient_data。中央値より3%以上安く観測期間の最安値なら lowest_observed、中央値の90%以下なら below_usual、110%以上なら above_usual、それ以外は usual。観測期間は最大90日で window_days に示す。",
   "caveat": "スペック(facets)は商品名から機械的に抜き出した参考値で、誤りを含むことがある。購入前に商品ページで確認すること。"
  },
+ "market": {
+  "country": "JP",
+  "currency": "JPY",
+  "store": "Rakuten Ichiba"
+ },
+ "languages": [
+  {
+   "lang": "ja",
+   "label": "日本語",
+   "index": "https://bufeks.github.io/LAB/shelf/api/v1/index.json",
+   "llms": "https://bufeks.github.io/LAB/shelf/llms.txt",
+   "home": "https://bufeks.github.io/LAB/shelf/"
+  },
+  {
+   "lang": "en",
+   "label": "English",
+   "index": "https://bufeks.github.io/LAB/shelf/api/v1/en/index.json",
+   "llms": "https://bufeks.github.io/LAB/shelf/en/llms.txt",
+   "home": "https://bufeks.github.io/LAB/shelf/en/"
+  },
+  {
+   "lang": "zh-Hans",
+   "label": "简体中文",
+   "index": "https://bufeks.github.io/LAB/shelf/api/v1/zh-hans/index.json",
+   "llms": "https://bufeks.github.io/LAB/shelf/zh-hans/llms.txt",
+   "home": "https://bufeks.github.io/LAB/shelf/zh-hans/"
+  },
+  {
+   "lang": "zh-Hant",
+   "label": "繁體中文",
+   "index": "https://bufeks.github.io/LAB/shelf/api/v1/zh-hant/index.json",
+   "llms": "https://bufeks.github.io/LAB/shelf/zh-hant/llms.txt",
+   "home": "https://bufeks.github.io/LAB/shelf/zh-hant/"
+  },
+  {
+   "lang": "ko",
+   "label": "한국어",
+   "index": "https://bufeks.github.io/LAB/shelf/api/v1/ko/index.json",
+   "llms": "https://bufeks.github.io/LAB/shelf/ko/llms.txt",
+   "home": "https://bufeks.github.io/LAB/shelf/ko/"
+  }
+ ],
  "categories": [
   {
    "id": "mobile-battery",
    "name": "モバイルバッテリー",
-   "name_en": "Power bank",
+   "names": {
+    "ja": "モバイルバッテリー",
+    "en": "Power banks",
+    "zh-Hans": "充电宝",
+    "zh-Hant": "行動電源",
+    "ko": "보조배터리"
+   },
+   "name_en": "Power banks",
    "status": "ok",
+   "translated": true,
    "data_date": "2026-09-30",
    "item_count": 6,
    "summary": "普段使いは10000mAh・20W以上、ノートPCも充電するなら20000mAh・45W以上が目安。国内で売られる製品はPSEマークが必須。飛行機は預け入れ不可で機内持ち込みのみ、100Whを超えると航空会社の承認が要り、機内での使用・充電を禁じる航空会社も多い。",
@@ -43,8 +94,16 @@
   {
    "id": "usb-c-charger",
    "name": "USB-C 充電器 (PD)",
-   "name_en": "USB-C PD charger",
+   "names": {
+    "ja": "USB-C 充電器 (PD)",
+    "en": "USB-C PD chargers",
+    "zh-Hans": "USB-C PD 充电器",
+    "zh-Hant": "USB-C PD 充電器",
+    "ko": "USB-C PD 충전기"
+   },
+   "name_en": "USB-C PD chargers",
    "status": "ok",
+   "translated": true,
    "data_date": "2026-09-30",
    "item_count": 6,
    "summary": "スマホだけなら20〜30W、ノートPCも充電するなら65W以上が目安。複数ポートは「同時に挿したときの配分」で1ポートあたりの出力が下がる点に注意。",
@@ -64,8 +123,16 @@
   {
    "id": "wireless-earphones",
    "name": "完全ワイヤレスイヤホン",
+   "names": {
+    "ja": "完全ワイヤレスイヤホン",
+    "en": "True wireless earbuds",
+    "zh-Hans": "真无线耳机",
+    "zh-Hant": "真無線耳機",
+    "ko": "완전 무선 이어폰"
+   },
    "name_en": "True wireless earbuds",
    "status": "ok",
+   "translated": true,
    "data_date": "2026-09-30",
    "item_count": 6,
    "summary": "通勤・移動が多いならノイズキャンセリング付き、PCとスマホを行き来するならマルチポイント対応を優先。高音質コーデックはスマホ側の対応で決まる（iPhoneはAACまで）。",
@@ -85,8 +152,16 @@
   {
    "id": "electric-kettle",
    "name": "電気ケトル",
-   "name_en": "Electric kettle",
+   "names": {
+    "ja": "電気ケトル",
+    "en": "Electric kettles",
+    "zh-Hans": "电热水壶",
+    "zh-Hant": "快煮壺",
+    "ko": "전기포트"
+   },
+   "name_en": "Electric kettles",
    "status": "ok",
+   "translated": true,
    "data_date": "2026-09-30",
    "item_count": 6,
    "summary": "一人暮らしは0.8L前後、家族は1.0〜1.2Lが目安。小さな子どもがいる家庭は「転倒湯もれ防止」と「本体二重構造」を優先。コーヒーをハンドドリップするなら温度調節＋細口。",
@@ -106,8 +181,16 @@
   {
    "id": "humidifier",
    "name": "加湿器",
-   "name_en": "Humidifier",
+   "names": {
+    "ja": "加湿器",
+    "en": "Humidifiers",
+    "zh-Hans": "加湿器",
+    "zh-Hant": "加濕器",
+    "ko": "가습기"
+   },
+   "name_en": "Humidifiers",
    "status": "ok",
+   "translated": true,
    "data_date": "2026-09-30",
    "item_count": 6,
    "summary": "方式で性格がまったく違う。衛生面重視ならスチーム式（電気代は高め）、電気代重視なら気化式、置き場所と価格重視なら超音波式（こまめな手入れが前提）。適用畳数は部屋より一回り大きめを選ぶ。",
@@ -127,8 +210,16 @@
   {
    "id": "electric-toothbrush",
    "name": "電動歯ブラシ",
-   "name_en": "Electric toothbrush",
+   "names": {
+    "ja": "電動歯ブラシ",
+    "en": "Electric toothbrushes",
+    "zh-Hans": "电动牙刷",
+    "zh-Hant": "電動牙刷",
+    "ko": "전동칫솔"
+   },
+   "name_en": "Electric toothbrushes",
    "status": "ok",
+   "translated": true,
    "data_date": "2026-09-30",
    "item_count": 6,
    "summary": "本体価格より替えブラシ代（約3か月ごとに交換）が長期の出費を左右する。磨きすぎが心配なら押しつけ防止センサー付き、磨き残しが心配ならタイマー付きを選ぶ。",

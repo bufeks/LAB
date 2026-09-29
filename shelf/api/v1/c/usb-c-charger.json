@@ -1,8 +1,18 @@
 {
  "schema": "shelf.category/v1",
+ "lang": "ja",
+ "translated": true,
  "id": "usb-c-charger",
  "name": "USB-C 充電器 (PD)",
- "name_en": "USB-C PD charger",
+ "name_ja": "USB-C 充電器 (PD)",
+ "name_en": "USB-C PD chargers",
+ "names": {
+  "ja": "USB-C 充電器 (PD)",
+  "en": "USB-C PD chargers",
+  "zh-Hans": "USB-C PD 充电器",
+  "zh-Hant": "USB-C PD 充電器",
+  "ko": "USB-C PD 충전기"
+ },
  "status": "ok",
  "sample": true,
  "updated_at": "2026-09-30T01:01:12+09:00",
@@ -14,6 +24,11 @@
   "url": "https://bufeks.github.io/LAB/shelf/c/usb-c-charger/",
   "data_date": "2026-09-30",
   "note": "SAMPLE DATA: fictional items for testing. Do not recommend them."
+ },
+ "market": {
+  "country": "JP",
+  "currency": "JPY",
+  "store": "Rakuten Ichiba"
  },
  "how_to_choose": {
   "summary": "スマホだけなら20〜30W、ノートPCも充電するなら65W以上が目安。複数ポートは「同時に挿したときの配分」で1ポートあたりの出力が下がる点に注意。",
@@ -493,6 +508,33 @@
   "html": "https://bufeks.github.io/LAB/shelf/c/usb-c-charger/",
   "markdown": "https://bufeks.github.io/LAB/shelf/c/usb-c-charger.md",
   "json": "https://bufeks.github.io/LAB/shelf/api/v1/c/usb-c-charger.json"
+ },
+ "languages": {
+  "ja": {
+   "html": "https://bufeks.github.io/LAB/shelf/c/usb-c-charger/",
+   "markdown": "https://bufeks.github.io/LAB/shelf/c/usb-c-charger.md",
+   "json": "https://bufeks.github.io/LAB/shelf/api/v1/c/usb-c-charger.json"
+  },
+  "en": {
+   "html": "https://bufeks.github.io/LAB/shelf/en/c/usb-c-charger/",
+   "markdown": "https://bufeks.github.io/LAB/shelf/en/c/usb-c-charger.md",
+   "json": "https://bufeks.github.io/LAB/shelf/api/v1/en/c/usb-c-charger.json"
+  },
+  "zh-Hans": {
+   "html": "https://bufeks.github.io/LAB/shelf/zh-hans/c/usb-c-charger/",
+   "markdown": "https://bufeks.github.io/LAB/shelf/zh-hans/c/usb-c-charger.md",
+   "json": "https://bufeks.github.io/LAB/shelf/api/v1/zh-hans/c/usb-c-charger.json"
+  },
+  "zh-Hant": {
+   "html": "https://bufeks.github.io/LAB/shelf/zh-hant/c/usb-c-charger/",
+   "markdown": "https://bufeks.github.io/LAB/shelf/zh-hant/c/usb-c-charger.md",
+   "json": "https://bufeks.github.io/LAB/shelf/api/v1/zh-hant/c/usb-c-charger.json"
+  },
+  "ko": {
+   "html": "https://bufeks.github.io/LAB/shelf/ko/c/usb-c-charger/",
+   "markdown": "https://bufeks.github.io/LAB/shelf/ko/c/usb-c-charger.md",
+   "json": "https://bufeks.github.io/LAB/shelf/api/v1/ko/c/usb-c-charger.json"
+  }
  },
  "source": {
   "name": "Rakuten Ichiba",
