@@ -1,0 +1,77 @@
+{
+ "at": "2026-09-29T15:46:36.143Z",
+ "errors": [],
+ "warnings": [
+  "sample mode: set RAKUTEN_APP_ID / RAKUTEN_ACCESS_KEY secrets to publish real data"
+ ],
+ "metrics": {
+  "mobile-battery": {
+   "items": 6,
+   "status": "ok",
+   "facet_coverage": {
+    "capacity_mah": 1,
+    "output_w": 1
+   },
+   "reject_rate": 0,
+   "rejected": {},
+   "suspicious": 0
+  },
+  "usb-c-charger": {
+   "items": 6,
+   "status": "ok",
+   "facet_coverage": {
+    "output_w": 1,
+    "ports": 1
+   },
+   "reject_rate": 0,
+   "rejected": {},
+   "suspicious": 0
+  },
+  "wireless-earphones": {
+   "items": 6,
+   "status": "ok",
+   "facet_coverage": {
+    "ipx": 0.83,
+    "battery_h": 0.5
+   },
+   "reject_rate": 0,
+   "rejected": {},
+   "suspicious": 0
+  },
+  "electric-kettle": {
+   "items": 6,
+   "status": "ok",
+   "facet_coverage": {
+    "capacity_l": 1,
+    "watt": 0.83
+   },
+   "reject_rate": 0,
+   "rejected": {},
+   "suspicious": 0
+  },
+  "humidifier": {
+   "items": 6,
+   "status": "ok",
+   "facet_coverage": {
+    "rated_ml_h": 0.67,
+    "room_tatami": 1,
+    "tank_l": 0.83
+   },
+   "reject_rate": 0,
+   "rejected": {},
+   "suspicious": 0
+  },
+  "electric-toothbrush": {
+   "items": 6,
+   "status": "ok",
+   "facet_coverage": {
+    "modes": 0.5
+   },
+   "reject_rate": 0,
+   "rejected": {},
+   "suspicious": 0
+  },
+  "llms_txt_bytes": 4065
+ },
+ "live": false
+}

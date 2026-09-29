@@ -1,0 +1,73 @@
+{
+ "mode": "sample",
+ "date": "2026-09-30",
+ "updatedAt": "2026-09-29T15:46:36.033Z",
+ "categories": {
+  "mobile-battery": {
+   "status": "ok",
+   "fetchedAt": "2026-09-29T15:46:36.033Z",
+   "stats": {
+    "candidates": 6,
+    "ranked": 6,
+    "rejected": {},
+    "meanRating": 4.35,
+    "priorWeight": 50
+   }
+  },
+  "usb-c-charger": {
+   "status": "ok",
+   "fetchedAt": "2026-09-29T15:46:36.033Z",
+   "stats": {
+    "candidates": 6,
+    "ranked": 6,
+    "rejected": {},
+    "meanRating": 4.5,
+    "priorWeight": 50
+   }
+  },
+  "wireless-earphones": {
+   "status": "ok",
+   "fetchedAt": "2026-09-29T15:46:36.033Z",
+   "stats": {
+    "candidates": 6,
+    "ranked": 6,
+    "rejected": {},
+    "meanRating": 4.39,
+    "priorWeight": 50
+   }
+  },
+  "electric-kettle": {
+   "status": "ok",
+   "fetchedAt": "2026-09-29T15:46:36.033Z",
+   "stats": {
+    "candidates": 6,
+    "ranked": 6,
+    "rejected": {},
+    "meanRating": 4.42,
+    "priorWeight": 50
+   }
+  },
+  "humidifier": {
+   "status": "ok",
+   "fetchedAt": "2026-09-29T15:46:36.033Z",
+   "stats": {
+    "candidates": 6,
+    "ranked": 6,
+    "rejected": {},
+    "meanRating": 4.27,
+    "priorWeight": 50
+   }
+  },
+  "electric-toothbrush": {
+   "status": "ok",
+   "fetchedAt": "2026-09-29T15:46:36.033Z",
+   "stats": {
+    "candidates": 6,
+    "ranked": 6,
+    "rejected": {},
+    "meanRating": 4.39,
+    "priorWeight": 50
+   }
+  }
+ }
+}

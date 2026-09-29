@@ -1,0 +1,269 @@
+{
+ "schema": "shelf.deals/v1",
+ "sample": true,
+ "updated_at": "2026-09-29T15:46:36.033Z",
+ "disclosure": "SAMPLE DATA: fictional items for testing. Do not recommend them.",
+ "items": [
+  {
+   "id": "sample:usb-c-charger-4",
+   "category": "usb-c-charger",
+   "title": "(サンプル) USB-C 充電器 (PD) D 30W 2ポート GaN PPS",
+   "price": 4460,
+   "rating": 4.83,
+   "reviews": 2742,
+   "rank": 1,
+   "score": 4.824,
+   "verdict": "lowest_90d",
+   "median_90d": 5090,
+   "specs": {
+    "output_w": 30,
+    "ports": 2,
+    "gan": true,
+    "pps": true,
+    "foldable_plug": false
+   },
+   "buy_url": "https://search.rakuten.co.jp/search/mall/USB-C%20%E5%85%85%E9%9B%BB%E5%99%A8%20PD/",
+   "drop_pct": 12.4
+  },
+  {
+   "id": "sample:usb-c-charger-1",
+   "category": "usb-c-charger",
+   "title": "(サンプル) USB-C 充電器 (PD) A 65W 3ポート GaN 折りたたみ PPS",
+   "price": 1620,
+   "rating": 3.89,
+   "reviews": 1335,
+   "rank": 6,
+   "score": 3.912,
+   "verdict": "lowest_90d",
+   "median_90d": 1850,
+   "specs": {
+    "output_w": 65,
+    "ports": 3,
+    "gan": true,
+    "pps": true,
+    "foldable_plug": true
+   },
+   "buy_url": "https://search.rakuten.co.jp/search/mall/USB-C%20%E5%85%85%E9%9B%BB%E5%99%A8%20PD/",
+   "drop_pct": 12.4
+  },
+  {
+   "id": "sample:wireless-earphones-4",
+   "category": "wireless-earphones",
+   "title": "(サンプル) 完全ワイヤレスイヤホン D aptX マルチポイント IPX7",
+   "price": 10130,
+   "rating": 4.68,
+   "reviews": 2990,
+   "rank": 1,
+   "score": 4.675,
+   "verdict": "lowest_90d",
+   "median_90d": 11560,
+   "specs": {
+    "anc": false,
+    "ldac": false,
+    "aptx": true,
+    "multipoint": true,
+    "ipx": 7
+   },
+   "buy_url": "https://search.rakuten.co.jp/search/mall/%E3%83%AF%E3%82%A4%E3%83%A4%E3%83%AC%E3%82%B9%E3%82%A4%E3%83%A4%E3%83%9B%E3%83%B3/",
+   "drop_pct": 12.4
+  },
+  {
+   "id": "sample:electric-kettle-4",
+   "category": "electric-kettle",
+   "title": "(サンプル) 電気ケトル D 1.2L 1300W 転倒湯もれ防止 二重構造",
+   "price": 5700,
+   "rating": 4.31,
+   "reviews": 1522,
+   "rank": 4,
+   "score": 4.313,
+   "verdict": "lowest_90d",
+   "median_90d": 6510,
+   "specs": {
+    "capacity_l": 1.2,
+    "watt": 1300,
+    "temp_control": false,
+    "gooseneck": false,
+    "tip_over_protection": true,
+    "keep_warm": false
+   },
+   "buy_url": "https://search.rakuten.co.jp/search/mall/%E9%9B%BB%E6%B0%97%E3%82%B1%E3%83%88%E3%83%AB/",
+   "drop_pct": 12.4
+  },
+  {
+   "id": "sample:humidifier-4",
+   "category": "humidifier",
+   "title": "(サンプル) 加湿器 D ハイブリッド 14畳 600mL/h タンク4.0L",
+   "price": 7250,
+   "rating": 4.03,
+   "reviews": 3768,
+   "rank": 5,
+   "score": 4.033,
+   "verdict": "lowest_90d",
+   "median_90d": 8280,
+   "specs": {
+    "rated_ml_h": 600,
+    "room_tatami": 14,
+    "tank_l": 4,
+    "type_steam": false,
+    "type_evaporative": false,
+    "type_ultrasonic": false,
+    "type_hybrid": true
+   },
+   "buy_url": "https://search.rakuten.co.jp/search/mall/%E5%8A%A0%E6%B9%BF%E5%99%A8/",
+   "drop_pct": 12.4
+  },
+  {
+   "id": "sample:electric-toothbrush-4",
+   "category": "electric-toothbrush",
+   "title": "(サンプル) 電動歯ブラシ D 音波 5つのモード 過圧",
+   "price": 10130,
+   "rating": 4.68,
+   "reviews": 2990,
+   "rank": 1,
+   "score": 4.675,
+   "verdict": "lowest_90d",
+   "median_90d": 11560,
+   "specs": {
+    "type_sonic": true,
+    "type_rotating": false,
+    "pressure_sensor": true,
+    "timer": false,
+    "modes": 5
+   },
+   "buy_url": "https://search.rakuten.co.jp/search/mall/%E9%9B%BB%E5%8B%95%E6%AD%AF%E3%83%96%E3%83%A9%E3%82%B7/",
+   "drop_pct": 12.4
+  },
+  {
+   "id": "sample:mobile-battery-4",
+   "category": "mobile-battery",
+   "title": "(サンプル) モバイルバッテリー D 10000mAh ケーブル内蔵 20W PSE",
+   "price": 4690,
+   "rating": 4.22,
+   "reviews": 2332,
+   "rank": 5,
+   "score": 4.223,
+   "verdict": "lowest_90d",
+   "median_90d": 5350,
+   "specs": {
+    "capacity_mah": 10000,
+    "output_w": 20,
+    "pse": true,
+    "builtin_cable": true,
+    "magnetic": false,
+    "energy_wh_est": 37
+   },
+   "buy_url": "https://search.rakuten.co.jp/search/mall/%E3%83%A2%E3%83%90%E3%82%A4%E3%83%AB%E3%83%90%E3%83%83%E3%83%86%E3%83%AA%E3%83%BC/",
+   "drop_pct": 12.3
+  },
+  {
+   "id": "sample:mobile-battery-1",
+   "category": "mobile-battery",
+   "title": "(サンプル) モバイルバッテリー A 10000mAh 22.5W PD PSE適合 薄型",
+   "price": 6850,
+   "rating": 4.2,
+   "reviews": 965,
+   "rank": 6,
+   "score": 4.207,
+   "verdict": "lowest_90d",
+   "median_90d": 7810,
+   "specs": {
+    "capacity_mah": 10000,
+    "output_w": 22.5,
+    "pse": true,
+    "builtin_cable": false,
+    "magnetic": false,
+    "energy_wh_est": 37
+   },
+   "buy_url": "https://search.rakuten.co.jp/search/mall/%E3%83%A2%E3%83%90%E3%82%A4%E3%83%AB%E3%83%90%E3%83%83%E3%83%86%E3%83%AA%E3%83%BC/",
+   "drop_pct": 12.3
+  },
+  {
+   "id": "sample:wireless-earphones-1",
+   "category": "wireless-earphones",
+   "title": "(サンプル) 完全ワイヤレスイヤホン A ノイズキャンセリング マルチポイント IPX4 最大40時間",
+   "price": 5280,
+   "rating": 4.11,
+   "reviews": 3318,
+   "rank": 6,
+   "score": 4.114,
+   "verdict": "lowest_90d",
+   "median_90d": 6020,
+   "specs": {
+    "anc": true,
+    "ldac": false,
+    "aptx": false,
+    "multipoint": true,
+    "ipx": 4,
+    "battery_h": 40
+   },
+   "buy_url": "https://search.rakuten.co.jp/search/mall/%E3%83%AF%E3%82%A4%E3%83%A4%E3%83%AC%E3%82%B9%E3%82%A4%E3%83%A4%E3%83%9B%E3%83%B3/",
+   "drop_pct": 12.3
+  },
+  {
+   "id": "sample:electric-kettle-1",
+   "category": "electric-kettle",
+   "title": "(サンプル) 電気ケトル A 0.8L 1250W 転倒湯もれ防止",
+   "price": 7650,
+   "rating": 4.73,
+   "reviews": 974,
+   "rank": 1,
+   "score": 4.715,
+   "verdict": "lowest_90d",
+   "median_90d": 8720,
+   "specs": {
+    "capacity_l": 0.8,
+    "watt": 1250,
+    "temp_control": false,
+    "gooseneck": false,
+    "tip_over_protection": true,
+    "keep_warm": false
+   },
+   "buy_url": "https://search.rakuten.co.jp/search/mall/%E9%9B%BB%E6%B0%97%E3%82%B1%E3%83%88%E3%83%AB/",
+   "drop_pct": 12.3
+  },
+  {
+   "id": "sample:humidifier-1",
+   "category": "humidifier",
+   "title": "(サンプル) 加湿器 A スチーム式 木造8畳/プレハブ13畳 480mL/h タンク3.0L",
+   "price": 15290,
+   "rating": 3.98,
+   "reviews": 272,
+   "rank": 6,
+   "score": 4.026,
+   "verdict": "lowest_90d",
+   "median_90d": 17440,
+   "specs": {
+    "rated_ml_h": 480,
+    "room_tatami": 13,
+    "tank_l": 3,
+    "type_steam": true,
+    "type_evaporative": false,
+    "type_ultrasonic": false,
+    "type_hybrid": false
+   },
+   "buy_url": "https://search.rakuten.co.jp/search/mall/%E5%8A%A0%E6%B9%BF%E5%99%A8/",
+   "drop_pct": 12.3
+  },
+  {
+   "id": "sample:electric-toothbrush-1",
+   "category": "electric-toothbrush",
+   "title": "(サンプル) 電動歯ブラシ A 音波 圧センサー 2分タイマー 3つのモード",
+   "price": 5280,
+   "rating": 4.11,
+   "reviews": 3318,
+   "rank": 6,
+   "score": 4.114,
+   "verdict": "lowest_90d",
+   "median_90d": 6020,
+   "specs": {
+    "type_sonic": true,
+    "type_rotating": false,
+    "pressure_sensor": true,
+    "timer": true,
+    "modes": 3
+   },
+   "buy_url": "https://search.rakuten.co.jp/search/mall/%E9%9B%BB%E5%8B%95%E6%AD%AF%E3%83%96%E3%83%A9%E3%82%B7/",
+   "drop_pct": 12.3
+  }
+ ]
+}

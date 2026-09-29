@@ -1,0 +1,27 @@
+name: SHELF CI
+
+on:
+  push:
+    paths: ['shelf/**', '.github/workflows/shelf-*.yml']
+  pull_request:
+    paths: ['shelf/**', '.github/workflows/shelf-*.yml']
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: node --test 'shelf/tool/test/*.test.mjs'
+      - name: Build and audit from sample data into a scratch directory
+        env:
+          SHELF_DATA_DIR: ${{ runner.temp }}/data
+          SHELF_OUT_DIR: ${{ runner.temp }}/out
+        run: |
+          node shelf/tool/update.mjs
+          node shelf/tool/check.mjs

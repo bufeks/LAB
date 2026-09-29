@@ -1,0 +1,95 @@
+:root {
+  --bg: #fbfaf7;
+  --fg: #1d1c1a;
+  --muted: #6b6760;
+  --line: #e4e0d8;
+  --card: #ffffff;
+  --accent: #b3261e;
+  --good: #1b6e3a;
+  --good-bg: #e3f3e8;
+  --bad: #8a4b00;
+  --bad-bg: #fbecd9;
+  --neutral-bg: #eeebe5;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #161514;
+    --fg: #ecebe8;
+    --muted: #a19d95;
+    --line: #34322f;
+    --card: #201f1d;
+    --accent: #ff8a80;
+    --good: #8fdca9;
+    --good-bg: #1d3526;
+    --bad: #ffc27a;
+    --bad-bg: #3b2a14;
+    --neutral-bg: #2a2926;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #161514; --fg: #ecebe8; --muted: #a19d95; --line: #34322f; --card: #201f1d;
+  --accent: #ff8a80; --good: #8fdca9; --good-bg: #1d3526; --bad: #ffc27a; --bad-bg: #3b2a14; --neutral-bg: #2a2926;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font: 16px/1.7 system-ui, -apple-system, "Hiragino Sans", "Noto Sans JP", sans-serif;
+}
+a { color: inherit; text-underline-offset: 3px; }
+main, header.top, footer { max-width: 960px; margin: 0 auto; padding: 0 16px; }
+header.top { display: flex; gap: 12px; align-items: baseline; padding-top: 20px; padding-bottom: 8px; border-bottom: 1px solid var(--line); }
+.brand { font-weight: 800; letter-spacing: .12em; text-decoration: none; }
+.tag { color: var(--muted); font-size: 13px; }
+h1 { font-size: clamp(24px, 4vw, 34px); line-height: 1.3; margin: 24px 0 8px; }
+h2 { font-size: 20px; margin-top: 40px; border-bottom: 1px solid var(--line); padding-bottom: 4px; }
+.lead { font-size: 17px; }
+.meta, small, .pr { color: var(--muted); }
+.pr { font-size: 12px; margin: 16px 0 0; }
+.sample { background: var(--bad-bg); color: var(--bad); text-align: center; padding: 8px 16px; margin: 0; font-weight: 600; }
+.picks { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 12px; margin: 24px 0; }
+.pick { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 16px; display: flex; flex-direction: column; gap: 4px; }
+.pick img { align-self: center; border-radius: 8px; object-fit: contain; background: #fff; }
+.pick h3 { font-size: 15px; margin: 4px 0; line-height: 1.45; }
+.pick p { margin: 0; }
+.kind { font-size: 12px; font-weight: 700; color: var(--accent); letter-spacing: .06em; }
+.price { font-size: 20px; font-weight: 700; }
+.why { font-size: 13px; color: var(--muted); flex: 1; }
+.buy { margin-top: 8px; display: block; text-align: center; padding: 10px; border-radius: 8px; background: var(--fg); color: var(--bg); text-decoration: none; font-weight: 700; }
+.verdict { display: inline-block; font-size: 12px; font-weight: 600; padding: 1px 8px; border-radius: 99px; background: var(--neutral-bg); vertical-align: middle; }
+.v-lowest_90d, .v-below_usual { background: var(--good-bg); color: var(--good); }
+.v-above_usual { background: var(--bad-bg); color: var(--bad); }
+.criteria dt { font-weight: 700; margin-top: 12px; }
+.criteria dd { margin: 2px 0 0; }
+.scroll { overflow-x: auto; }
+table { border-collapse: collapse; width: 100%; font-size: 14px; }
+th, td { border-bottom: 1px solid var(--line); padding: 8px 6px; text-align: left; vertical-align: top; }
+td.num { white-space: nowrap; }
+.specs { display: inline-block; margin-top: 2px; }
+.cats { list-style: none; padding: 0; display: grid; gap: 8px; }
+.cats li { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 12px 16px; display: grid; gap: 2px; }
+code, pre { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 13px; }
+pre { background: var(--card); border: 1px solid var(--line); padding: 12px; overflow-x: auto; border-radius: 8px; }
+footer { margin-top: 48px; padding-top: 16px; padding-bottom: 32px; border-top: 1px solid var(--line); color: var(--muted); font-size: 13px; }
+@media (max-width: 640px) {
+  table.rank thead { display: none; }
+  table.rank, table.rank tbody { display: block; }
+  table.rank tr {
+    display: grid;
+    grid-template-columns: 2em 1fr auto;
+    grid-template-areas: "rank item item" ". price rating" ". verdict buy";
+    gap: 4px 8px;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--line);
+  }
+  table.rank td { border: 0; padding: 0; }
+  .c-rank { grid-area: rank; font-weight: 700; }
+  .c-item { grid-area: item; }
+  .c-price { grid-area: price; font-weight: 700; }
+  .c-rating { grid-area: rating; text-align: right; }
+  .c-verdict { grid-area: verdict; }
+  .c-buy { grid-area: buy; text-align: right; align-self: end; }
+  .c-price small, .c-verdict small { margin-left: 6px; }
+  .c-price br, .c-verdict br { display: none; }
+}

@@ -1,0 +1,232 @@
+{
+ "categoryId": "electric-toothbrush",
+ "date": "2026-09-30",
+ "fetchedAt": "2026-09-29T15:46:36.033Z",
+ "items": [
+  {
+   "id": "sample:electric-toothbrush-4",
+   "source": "sample",
+   "name": "(サンプル) 電動歯ブラシ D 音波 5つのモード 過圧",
+   "caption": "",
+   "shop": "サンプルショップ",
+   "price": 10130,
+   "shippingIncluded": false,
+   "pointRate": 1,
+   "rating": 4.68,
+   "reviews": 2990,
+   "productUrl": "https://search.rakuten.co.jp/search/mall/%E9%9B%BB%E5%8B%95%E6%AD%AF%E3%83%96%E3%83%A9%E3%82%B7/",
+   "buyUrl": "https://search.rakuten.co.jp/search/mall/%E9%9B%BB%E5%8B%95%E6%AD%AF%E3%83%96%E3%83%A9%E3%82%B7/",
+   "affiliate": false,
+   "image": null,
+   "available": true,
+   "title": "(サンプル) 電動歯ブラシ D 音波 5つのモード 過圧",
+   "score": 4.675,
+   "facets": {
+    "type_sonic": true,
+    "type_rotating": false,
+    "pressure_sensor": true,
+    "timer": false,
+    "modes": 5
+   },
+   "otherOffers": [],
+   "rank": 1,
+   "priceStats": {
+    "points": 31,
+    "firstSeen": "2026-08-31",
+    "min90": 10130,
+    "median90": 11560,
+    "max90": 11900,
+    "verdict": "lowest_90d"
+   }
+  },
+  {
+   "id": "sample:electric-toothbrush-5",
+   "source": "sample",
+   "name": "(サンプル) 電動歯ブラシ E 回転 2つのモード",
+   "caption": "",
+   "shop": "サンプルショップ",
+   "price": 10570,
+   "shippingIncluded": true,
+   "pointRate": 1,
+   "rating": 4.77,
+   "reviews": 67,
+   "productUrl": "https://search.rakuten.co.jp/search/mall/%E9%9B%BB%E5%8B%95%E6%AD%AF%E3%83%96%E3%83%A9%E3%82%B7/",
+   "buyUrl": "https://search.rakuten.co.jp/search/mall/%E9%9B%BB%E5%8B%95%E6%AD%AF%E3%83%96%E3%83%A9%E3%82%B7/",
+   "affiliate": false,
+   "image": null,
+   "available": true,
+   "title": "(サンプル) 電動歯ブラシ E 回転 2つのモード",
+   "score": 4.608,
+   "facets": {
+    "type_sonic": false,
+    "type_rotating": true,
+    "pressure_sensor": false,
+    "timer": false,
+    "modes": 2
+   },
+   "otherOffers": [],
+   "rank": 2,
+   "priceStats": {
+    "points": 31,
+    "firstSeen": "2026-08-31",
+    "min90": 10260,
+    "median90": 10540,
+    "max90": 10880,
+    "verdict": "usual"
+   }
+  },
+  {
+   "id": "sample:electric-toothbrush-6",
+   "source": "sample",
+   "name": "(サンプル) 電動歯ブラシ F 音波 タイマー 替えブラシ2本付き",
+   "caption": "",
+   "shop": "サンプルショップ",
+   "price": 9190,
+   "shippingIncluded": false,
+   "pointRate": 1,
+   "rating": 4.58,
+   "reviews": 1287,
+   "productUrl": "https://search.rakuten.co.jp/search/mall/%E9%9B%BB%E5%8B%95%E6%AD%AF%E3%83%96%E3%83%A9%E3%82%B7/",
+   "buyUrl": "https://search.rakuten.co.jp/search/mall/%E9%9B%BB%E5%8B%95%E6%AD%AF%E3%83%96%E3%83%A9%E3%82%B7/",
+   "affiliate": false,
+   "image": null,
+   "available": true,
+   "title": "(サンプル) 電動歯ブラシ F 音波 タイマー 替えブラシ2本付き",
+   "score": 4.573,
+   "facets": {
+    "type_sonic": true,
+    "type_rotating": false,
+    "pressure_sensor": false,
+    "timer": true
+   },
+   "otherOffers": [],
+   "rank": 3,
+   "priceStats": {
+    "points": 31,
+    "firstSeen": "2026-08-31",
+    "min90": 8470,
+    "median90": 8730,
+    "max90": 9190,
+    "verdict": "usual"
+   }
+  },
+  {
+   "id": "sample:electric-toothbrush-3",
+   "source": "sample",
+   "name": "(サンプル) 電動歯ブラシ C 音波 タイマー 軽量",
+   "caption": "",
+   "shop": "サンプルショップ",
+   "price": 6790,
+   "shippingIncluded": true,
+   "pointRate": 1,
+   "rating": 4.5,
+   "reviews": 2071,
+   "productUrl": "https://search.rakuten.co.jp/search/mall/%E9%9B%BB%E5%8B%95%E6%AD%AF%E3%83%96%E3%83%A9%E3%82%B7/",
+   "buyUrl": "https://search.rakuten.co.jp/search/mall/%E9%9B%BB%E5%8B%95%E6%AD%AF%E3%83%96%E3%83%A9%E3%82%B7/",
+   "affiliate": false,
+   "image": null,
+   "available": true,
+   "title": "(サンプル) 電動歯ブラシ C 音波 タイマー 軽量",
+   "score": 4.497,
+   "facets": {
+    "type_sonic": true,
+    "type_rotating": false,
+    "pressure_sensor": false,
+    "timer": true
+   },
+   "otherOffers": [],
+   "rank": 4,
+   "priceStats": {
+    "points": 31,
+    "firstSeen": "2026-08-31",
+    "min90": 6260,
+    "median90": 6450,
+    "max90": 6790,
+    "verdict": "usual"
+   }
+  },
+  {
+   "id": "sample:electric-toothbrush-2",
+   "source": "sample",
+   "name": "(サンプル) 電動歯ブラシ B 回転 押しつけ防止 タイマー",
+   "caption": "",
+   "shop": "サンプルショップ",
+   "price": 11330,
+   "shippingIncluded": false,
+   "pointRate": 1,
+   "rating": 4.22,
+   "reviews": 2527,
+   "productUrl": "https://search.rakuten.co.jp/search/mall/%E9%9B%BB%E5%8B%95%E6%AD%AF%E3%83%96%E3%83%A9%E3%82%B7/",
+   "buyUrl": "https://search.rakuten.co.jp/search/mall/%E9%9B%BB%E5%8B%95%E6%AD%AF%E3%83%96%E3%83%A9%E3%82%B7/",
+   "affiliate": false,
+   "image": null,
+   "available": true,
+   "title": "(サンプル) 電動歯ブラシ B 回転 押しつけ防止 タイマー",
+   "score": 4.223,
+   "facets": {
+    "type_sonic": false,
+    "type_rotating": true,
+    "pressure_sensor": true,
+    "timer": true
+   },
+   "otherOffers": [],
+   "rank": 5,
+   "priceStats": {
+    "points": 31,
+    "firstSeen": "2026-08-31",
+    "min90": 11010,
+    "median90": 11280,
+    "max90": 11650,
+    "verdict": "usual"
+   }
+  },
+  {
+   "id": "sample:electric-toothbrush-1",
+   "source": "sample",
+   "name": "(サンプル) 電動歯ブラシ A 音波 圧センサー 2分タイマー 3つのモード",
+   "caption": "",
+   "shop": "サンプルショップ",
+   "price": 5280,
+   "shippingIncluded": true,
+   "pointRate": 1,
+   "rating": 4.11,
+   "reviews": 3318,
+   "productUrl": "https://search.rakuten.co.jp/search/mall/%E9%9B%BB%E5%8B%95%E6%AD%AF%E3%83%96%E3%83%A9%E3%82%B7/",
+   "buyUrl": "https://search.rakuten.co.jp/search/mall/%E9%9B%BB%E5%8B%95%E6%AD%AF%E3%83%96%E3%83%A9%E3%82%B7/",
+   "affiliate": false,
+   "image": null,
+   "available": true,
+   "title": "(サンプル) 電動歯ブラシ A 音波 圧センサー 2分タイマー 3つのモード",
+   "score": 4.114,
+   "facets": {
+    "type_sonic": true,
+    "type_rotating": false,
+    "pressure_sensor": true,
+    "timer": true,
+    "modes": 3
+   },
+   "otherOffers": [],
+   "rank": 6,
+   "priceStats": {
+    "points": 31,
+    "firstSeen": "2026-08-31",
+    "min90": 5280,
+    "median90": 6020,
+    "max90": 6230,
+    "verdict": "lowest_90d"
+   }
+  }
+ ],
+ "stats": {
+  "candidates": 6,
+  "ranked": 6,
+  "rejected": {},
+  "meanRating": 4.39,
+  "priorWeight": 50
+ },
+ "picks": {
+  "best": "sample:electric-toothbrush-4",
+  "budget": "sample:electric-toothbrush-6",
+  "deal": "sample:electric-toothbrush-4"
+ }
+}

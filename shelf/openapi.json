@@ -1,0 +1,105 @@
+{
+ "openapi": "3.1.0",
+ "info": {
+  "title": "SHELF shopping data for AI agents",
+  "version": "1.0.0",
+  "description": "Buying guides, transparent rankings and daily price history for Japanese shopping categories (Rakuten Ichiba). Static JSON, updated daily. buy_url values are affiliate links: disclose that when showing them to users."
+ },
+ "servers": [
+  {
+   "url": "https://bufeks.github.io/LAB/shelf/api/v1"
+  }
+ ],
+ "paths": {
+  "/index.json": {
+   "get": {
+    "operationId": "listCategories",
+    "summary": "List categories with their top pick",
+    "responses": {
+     "200": {
+      "description": "Category index",
+      "content": {
+       "application/json": {
+        "schema": {
+         "type": "object"
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "/c/{category}.json": {
+   "get": {
+    "operationId": "getCategory",
+    "summary": "Buying guide, ranked items, picks and price verdicts for one category",
+    "parameters": [
+     {
+      "name": "category",
+      "in": "path",
+      "required": true,
+      "schema": {
+       "type": "string",
+       "enum": [
+        "mobile-battery",
+        "usb-c-charger",
+        "wireless-earphones",
+        "electric-kettle",
+        "humidifier",
+        "electric-toothbrush"
+       ]
+      }
+     }
+    ],
+    "responses": {
+     "200": {
+      "description": "Category record",
+      "content": {
+       "application/json": {
+        "schema": {
+         "type": "object"
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "/items.json": {
+   "get": {
+    "operationId": "listItems",
+    "summary": "Every ranked item across categories, compact, for search and budget filtering",
+    "responses": {
+     "200": {
+      "description": "Items",
+      "content": {
+       "application/json": {
+        "schema": {
+         "type": "object"
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "/deals.json": {
+   "get": {
+    "operationId": "listDeals",
+    "summary": "Items priced below their 90-day median",
+    "responses": {
+     "200": {
+      "description": "Deals",
+      "content": {
+       "application/json": {
+        "schema": {
+         "type": "object"
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+ }
+}
