@@ -1,11 +1,11 @@
 {
  "mode": "sample",
  "date": "2026-09-30",
- "updatedAt": "2026-09-29T15:46:36.033Z",
+ "updatedAt": "2026-09-30T01:01:12+09:00",
  "categories": {
   "mobile-battery": {
    "status": "ok",
-   "fetchedAt": "2026-09-29T15:46:36.033Z",
+   "fetchedAt": "2026-09-30T01:01:12+09:00",
    "stats": {
     "candidates": 6,
     "ranked": 6,
@@ -16,7 +16,7 @@
   },
   "usb-c-charger": {
    "status": "ok",
-   "fetchedAt": "2026-09-29T15:46:36.033Z",
+   "fetchedAt": "2026-09-30T01:01:12+09:00",
    "stats": {
     "candidates": 6,
     "ranked": 6,
@@ -27,7 +27,7 @@
   },
   "wireless-earphones": {
    "status": "ok",
-   "fetchedAt": "2026-09-29T15:46:36.033Z",
+   "fetchedAt": "2026-09-30T01:01:12+09:00",
    "stats": {
     "candidates": 6,
     "ranked": 6,
@@ -38,7 +38,7 @@
   },
   "electric-kettle": {
    "status": "ok",
-   "fetchedAt": "2026-09-29T15:46:36.033Z",
+   "fetchedAt": "2026-09-30T01:01:12+09:00",
    "stats": {
     "candidates": 6,
     "ranked": 6,
@@ -49,7 +49,7 @@
   },
   "humidifier": {
    "status": "ok",
-   "fetchedAt": "2026-09-29T15:46:36.033Z",
+   "fetchedAt": "2026-09-30T01:01:12+09:00",
    "stats": {
     "candidates": 6,
     "ranked": 6,
@@ -60,7 +60,7 @@
   },
   "electric-toothbrush": {
    "status": "ok",
-   "fetchedAt": "2026-09-29T15:46:36.033Z",
+   "fetchedAt": "2026-09-30T01:01:12+09:00",
    "stats": {
     "candidates": 6,
     "ranked": 6,

@@ -1,7 +1,7 @@
 {
  "categoryId": "wireless-earphones",
  "date": "2026-09-30",
- "fetchedAt": "2026-09-29T15:46:36.033Z",
+ "fetchedAt": "2026-09-30T01:01:12+09:00",
  "items": [
   {
    "id": "sample:wireless-earphones-4",
@@ -20,6 +20,7 @@
    "image": null,
    "available": true,
    "title": "(サンプル) 完全ワイヤレスイヤホン D aptX マルチポイント IPX7",
+   "variants": false,
    "score": 4.675,
    "facets": {
     "anc": false,
@@ -32,12 +33,35 @@
    "rank": 1,
    "priceStats": {
     "points": 31,
+    "windowDays": 31,
     "firstSeen": "2026-08-31",
     "min90": 10130,
     "median90": 11560,
     "max90": 11900,
-    "verdict": "lowest_90d"
-   }
+    "verdict": "lowest_observed"
+   },
+   "priceWeekly": [
+    [
+     "2026-08-31",
+     11470
+    ],
+    [
+     "2026-09-05",
+     11360
+    ],
+    [
+     "2026-09-15",
+     11330
+    ],
+    [
+     "2026-09-19",
+     11340
+    ],
+    [
+     "2026-09-30",
+     10130
+    ]
+   ]
   },
   {
    "id": "sample:wireless-earphones-5",
@@ -56,6 +80,7 @@
    "image": null,
    "available": true,
    "title": "(サンプル) 完全ワイヤレスイヤホン E ノイズキャンセリング 最大50時間",
+   "variants": false,
    "score": 4.608,
    "facets": {
     "anc": true,
@@ -68,12 +93,35 @@
    "rank": 2,
    "priceStats": {
     "points": 31,
+    "windowDays": 31,
     "firstSeen": "2026-08-31",
     "min90": 10260,
     "median90": 10540,
     "max90": 10880,
     "verdict": "usual"
-   }
+   },
+   "priceWeekly": [
+    [
+     "2026-09-02",
+     10310
+    ],
+    [
+     "2026-09-08",
+     10340
+    ],
+    [
+     "2026-09-11",
+     10260
+    ],
+    [
+     "2026-09-23",
+     10460
+    ],
+    [
+     "2026-09-27",
+     10330
+    ]
+   ]
   },
   {
    "id": "sample:wireless-earphones-6",
@@ -92,6 +140,7 @@
    "image": null,
    "available": true,
    "title": "(サンプル) 完全ワイヤレスイヤホン F マルチポイント LDAC IPX4",
+   "variants": false,
    "score": 4.573,
    "facets": {
     "anc": false,
@@ -104,12 +153,35 @@
    "rank": 3,
    "priceStats": {
     "points": 31,
+    "windowDays": 31,
     "firstSeen": "2026-08-31",
     "min90": 8470,
     "median90": 8730,
     "max90": 9190,
     "verdict": "usual"
-   }
+   },
+   "priceWeekly": [
+    [
+     "2026-08-31",
+     8600
+    ],
+    [
+     "2026-09-04",
+     8490
+    ],
+    [
+     "2026-09-10",
+     8500
+    ],
+    [
+     "2026-09-22",
+     8530
+    ],
+    [
+     "2026-09-29",
+     8470
+    ]
+   ]
   },
   {
    "id": "sample:wireless-earphones-3",
@@ -128,6 +200,7 @@
    "image": null,
    "available": true,
    "title": "(サンプル) 完全ワイヤレスイヤホン C 軽量 IPX4 最大30時間",
+   "variants": false,
    "score": 4.497,
    "facets": {
     "anc": false,
@@ -141,12 +214,35 @@
    "rank": 4,
    "priceStats": {
     "points": 31,
+    "windowDays": 31,
     "firstSeen": "2026-08-31",
     "min90": 6260,
     "median90": 6450,
     "max90": 6790,
     "verdict": "usual"
-   }
+   },
+   "priceWeekly": [
+    [
+     "2026-08-31",
+     6350
+    ],
+    [
+     "2026-09-04",
+     6280
+    ],
+    [
+     "2026-09-13",
+     6360
+    ],
+    [
+     "2026-09-22",
+     6300
+    ],
+    [
+     "2026-09-25",
+     6260
+    ]
+   ]
   },
   {
    "id": "sample:wireless-earphones-2",
@@ -165,6 +261,7 @@
    "image": null,
    "available": true,
    "title": "(サンプル) 完全ワイヤレスイヤホン B LDAC ノイズキャンセリング IPX5",
+   "variants": false,
    "score": 4.223,
    "facets": {
     "anc": true,
@@ -177,12 +274,35 @@
    "rank": 5,
    "priceStats": {
     "points": 31,
+    "windowDays": 31,
     "firstSeen": "2026-08-31",
     "min90": 11010,
     "median90": 11280,
     "max90": 11650,
     "verdict": "usual"
-   }
+   },
+   "priceWeekly": [
+    [
+     "2026-09-02",
+     11010
+    ],
+    [
+     "2026-09-03",
+     11070
+    ],
+    [
+     "2026-09-15",
+     11060
+    ],
+    [
+     "2026-09-23",
+     11060
+    ],
+    [
+     "2026-09-26",
+     11110
+    ]
+   ]
   },
   {
    "id": "sample:wireless-earphones-1",
@@ -201,6 +321,7 @@
    "image": null,
    "available": true,
    "title": "(サンプル) 完全ワイヤレスイヤホン A ノイズキャンセリング マルチポイント IPX4 最大40時間",
+   "variants": false,
    "score": 4.114,
    "facets": {
     "anc": true,
@@ -214,12 +335,35 @@
    "rank": 6,
    "priceStats": {
     "points": 31,
+    "windowDays": 31,
     "firstSeen": "2026-08-31",
     "min90": 5280,
     "median90": 6020,
     "max90": 6230,
-    "verdict": "lowest_90d"
-   }
+    "verdict": "lowest_observed"
+   },
+   "priceWeekly": [
+    [
+     "2026-08-31",
+     5980
+    ],
+    [
+     "2026-09-03",
+     5920
+    ],
+    [
+     "2026-09-11",
+     5990
+    ],
+    [
+     "2026-09-23",
+     5900
+    ],
+    [
+     "2026-09-30",
+     5280
+    ]
+   ]
   }
  ],
  "stats": {

@@ -71,37 +71,68 @@ function mcp() {
   return { call, close: () => child.kill() };
 }
 
-test('MCP server: handshake, tools, recommend with filters, price check', async () => {
+const call = (s, name, args) => s.call('tools/call', { name, arguments: args }).then((r) => r.result);
+
+test('MCP server: handshake and tool list', async () => {
   const s = mcp();
   try {
     const init = await s.call('initialize', { protocolVersion: '2025-06-18', capabilities: {}, clientInfo: { name: 't', version: '0' } });
     assert.equal(init.result.serverInfo.name, 'shelf');
+    assert.equal(init.result.protocolVersion, '2025-06-18');
+    const future = await s.call('initialize', { protocolVersion: '2099-01-01' });
+    assert.equal(future.result.protocolVersion, '2025-06-18');
     const tools = await s.call('tools/list', {});
-    assert.deepEqual(tools.result.tools.map((t) => t.name), ['list_categories', 'recommend', 'search_products', 'check_price']);
-
-    const rec = await s.call('tools/call', { name: 'recommend', arguments: { category: 'モバイルバッテリー', specs: { capacity_mah: 10000, pse: true }, budget_max: 8000 } });
-    assert.equal(rec.result.isError, false);
-    const items = rec.result.structuredContent.result.items;
-    assert.ok(items.length > 0);
-    for (const x of items) {
-      assert.ok(x.specs.capacity_mah >= 10000 && x.specs.pse && x.price <= 8000);
-    }
-    assert.match(rec.result.content[0].text, /SAMPLE DATA/);
-
-    const byEnglish = await s.call('tools/call', { name: 'recommend', arguments: { category: 'kettle' } });
-    assert.equal(byEnglish.result.structuredContent.result.category, 'electric-kettle');
-
-    const bad = await s.call('tools/call', { name: 'recommend', arguments: { category: '冷蔵庫' } });
-    assert.equal(bad.result.isError, true);
-
-    const price = await s.call('tools/call', { name: 'check_price', arguments: { item_id: items[0].id } });
-    assert.match(price.result.content[0].text, /Verdict: \w+/);
-
-    const search = await s.call('tools/call', { name: 'search_products', arguments: { query: 'GaN' } });
-    assert.ok(search.result.structuredContent.result.every((x) => /GaN/.test(x.title)));
-
+    assert.deepEqual(tools.result.tools.map((t) => t.name), ['list_categories', 'recommend', 'price_outlook', 'search_products', 'check_price']);
     const unknown = await s.call('nope', {});
     assert.equal(unknown.error.code, -32601);
+  } finally {
+    s.close();
+  }
+});
+
+test('MCP recommend: filters, picks inside the budget, disclosure in structured output', async () => {
+  const s = mcp();
+  try {
+    const rec = await call(s, 'recommend', { category: 'モバイルバッテリー', specs: { capacity_mah: 10000, pse: true }, budget_max: 6000 });
+    assert.equal(rec.isError, false);
+    const out = rec.structuredContent;
+    assert.equal(out.sample, true);
+    assert.ok(out.disclosure);
+    assert.ok(out.cite.url.endsWith('/c/mobile-battery/'));
+    assert.ok(out.result.items.length > 0);
+    for (const x of out.result.items) assert.ok(x.specs.capacity_mah >= 10000 && x.specs.pse && x.price <= 6000);
+    const bestId = out.result.picks.best;
+    assert.ok(out.result.items.some((x) => x.id === bestId));
+    assert.match(rec.content[0].text, /SAMPLE DATA/);
+
+    const enumFilter = await call(s, 'recommend', { category: 'humidifier', specs: { type: ['steam', 'hybrid'] }, limit: 'x' });
+    assert.ok(enumFilter.structuredContent.result.items.every((x) => ['steam', 'hybrid'].includes(x.specs.type)));
+
+    assert.equal((await call(s, 'recommend', { category: 'kettle' })).structuredContent.result.category, 'electric-kettle');
+    for (const bad of [{ category: '冷蔵庫' }, { category: '' }, { category: 'kettle', specs: { capacity: 1 } }, { category: 'humidifier', specs: { type: 'gas' } }, { category: 'kettle', budget_max: 'cheap' }]) {
+      const r = await call(s, 'recommend', bad);
+      assert.equal(r.isError, true, JSON.stringify(bad));
+    }
+    const unknownKey = await call(s, 'recommend', { category: 'kettle', specs: { capacity: 1 } });
+    assert.match(unknownKey.content[0].text, /capacity_l/);
+  } finally {
+    s.close();
+  }
+});
+
+test('MCP price tools: outlook, check_price, search', async () => {
+  const s = mcp();
+  try {
+    const outlook = await call(s, 'price_outlook', { category: '加湿器' });
+    assert.ok(['cheaper_than_usual', 'pricier_than_usual', 'usual', 'insufficient_data'].includes(outlook.structuredContent.result.outlook.verdict));
+    const items = JSON.parse(fs.readFileSync(out('api/v1/items.json'), 'utf8')).items;
+    const price = await call(s, 'check_price', { item_id: items[0].id });
+    assert.match(price.content[0].text, /Verdict: \w+/);
+    assert.equal((await call(s, 'check_price', { url: 'https://item.rakuten.co.jp/shop/none/' })).isError, true);
+    assert.equal((await call(s, 'check_price', {})).isError, true);
+    const search = await call(s, 'search_products', { query: 'GaN' });
+    assert.ok(search.structuredContent.result.length > 0);
+    assert.ok(search.structuredContent.result.every((x) => /GaN/.test(x.title)));
   } finally {
     s.close();
   }

@@ -1,7 +1,7 @@
 {
  "schema": "shelf.deals/v1",
  "sample": true,
- "updated_at": "2026-09-29T15:46:36.033Z",
+ "updated_at": "2026-09-30T01:01:12+09:00",
  "disclosure": "SAMPLE DATA: fictional items for testing. Do not recommend them.",
  "items": [
   {
@@ -13,8 +13,10 @@
    "reviews": 2742,
    "rank": 1,
    "score": 4.824,
-   "verdict": "lowest_90d",
+   "verdict": "lowest_observed",
    "median_90d": 5090,
+   "shipping_included": false,
+   "variants": false,
    "specs": {
     "output_w": 30,
     "ports": 2,
@@ -34,8 +36,10 @@
    "reviews": 1335,
    "rank": 6,
    "score": 3.912,
-   "verdict": "lowest_90d",
+   "verdict": "lowest_observed",
    "median_90d": 1850,
+   "shipping_included": true,
+   "variants": false,
    "specs": {
     "output_w": 65,
     "ports": 3,
@@ -55,8 +59,10 @@
    "reviews": 2990,
    "rank": 1,
    "score": 4.675,
-   "verdict": "lowest_90d",
+   "verdict": "lowest_observed",
    "median_90d": 11560,
+   "shipping_included": false,
+   "variants": false,
    "specs": {
     "anc": false,
     "ldac": false,
@@ -76,8 +82,10 @@
    "reviews": 1522,
    "rank": 4,
    "score": 4.313,
-   "verdict": "lowest_90d",
+   "verdict": "lowest_observed",
    "median_90d": 6510,
+   "shipping_included": false,
+   "variants": false,
    "specs": {
     "capacity_l": 1.2,
     "watt": 1300,
@@ -98,16 +106,15 @@
    "reviews": 3768,
    "rank": 5,
    "score": 4.033,
-   "verdict": "lowest_90d",
+   "verdict": "lowest_observed",
    "median_90d": 8280,
+   "shipping_included": false,
+   "variants": false,
    "specs": {
     "rated_ml_h": 600,
     "room_tatami": 14,
     "tank_l": 4,
-    "type_steam": false,
-    "type_evaporative": false,
-    "type_ultrasonic": false,
-    "type_hybrid": true
+    "type": "hybrid"
    },
    "buy_url": "https://search.rakuten.co.jp/search/mall/%E5%8A%A0%E6%B9%BF%E5%99%A8/",
    "drop_pct": 12.4
@@ -121,11 +128,12 @@
    "reviews": 2990,
    "rank": 1,
    "score": 4.675,
-   "verdict": "lowest_90d",
+   "verdict": "lowest_observed",
    "median_90d": 11560,
+   "shipping_included": false,
+   "variants": false,
    "specs": {
-    "type_sonic": true,
-    "type_rotating": false,
+    "type": "sonic",
     "pressure_sensor": true,
     "timer": false,
     "modes": 5
@@ -142,15 +150,19 @@
    "reviews": 2332,
    "rank": 5,
    "score": 4.223,
-   "verdict": "lowest_90d",
+   "verdict": "lowest_observed",
    "median_90d": 5350,
+   "shipping_included": false,
+   "variants": false,
    "specs": {
     "capacity_mah": 10000,
     "output_w": 20,
     "pse": true,
     "builtin_cable": true,
     "magnetic": false,
-    "energy_wh_est": 37
+    "energy_wh_est": 38.5,
+    "flight_carry_on": "ok",
+    "energy_wh_source": "estimated"
    },
    "buy_url": "https://search.rakuten.co.jp/search/mall/%E3%83%A2%E3%83%90%E3%82%A4%E3%83%AB%E3%83%90%E3%83%83%E3%83%86%E3%83%AA%E3%83%BC/",
    "drop_pct": 12.3
@@ -164,15 +176,19 @@
    "reviews": 965,
    "rank": 6,
    "score": 4.207,
-   "verdict": "lowest_90d",
+   "verdict": "lowest_observed",
    "median_90d": 7810,
+   "shipping_included": true,
+   "variants": false,
    "specs": {
     "capacity_mah": 10000,
     "output_w": 22.5,
     "pse": true,
     "builtin_cable": false,
     "magnetic": false,
-    "energy_wh_est": 37
+    "energy_wh_est": 38.5,
+    "flight_carry_on": "ok",
+    "energy_wh_source": "estimated"
    },
    "buy_url": "https://search.rakuten.co.jp/search/mall/%E3%83%A2%E3%83%90%E3%82%A4%E3%83%AB%E3%83%90%E3%83%83%E3%83%86%E3%83%AA%E3%83%BC/",
    "drop_pct": 12.3
@@ -186,8 +202,10 @@
    "reviews": 3318,
    "rank": 6,
    "score": 4.114,
-   "verdict": "lowest_90d",
+   "verdict": "lowest_observed",
    "median_90d": 6020,
+   "shipping_included": true,
+   "variants": false,
    "specs": {
     "anc": true,
     "ldac": false,
@@ -208,8 +226,10 @@
    "reviews": 974,
    "rank": 1,
    "score": 4.715,
-   "verdict": "lowest_90d",
+   "verdict": "lowest_observed",
    "median_90d": 8720,
+   "shipping_included": true,
+   "variants": false,
    "specs": {
     "capacity_l": 0.8,
     "watt": 1250,
@@ -230,16 +250,15 @@
    "reviews": 272,
    "rank": 6,
    "score": 4.026,
-   "verdict": "lowest_90d",
+   "verdict": "lowest_observed",
    "median_90d": 17440,
+   "shipping_included": true,
+   "variants": false,
    "specs": {
     "rated_ml_h": 480,
     "room_tatami": 13,
     "tank_l": 3,
-    "type_steam": true,
-    "type_evaporative": false,
-    "type_ultrasonic": false,
-    "type_hybrid": false
+    "type": "steam"
    },
    "buy_url": "https://search.rakuten.co.jp/search/mall/%E5%8A%A0%E6%B9%BF%E5%99%A8/",
    "drop_pct": 12.3
@@ -253,11 +272,12 @@
    "reviews": 3318,
    "rank": 6,
    "score": 4.114,
-   "verdict": "lowest_90d",
+   "verdict": "lowest_observed",
    "median_90d": 6020,
+   "shipping_included": true,
+   "variants": false,
    "specs": {
-    "type_sonic": true,
-    "type_rotating": false,
+    "type": "sonic",
     "pressure_sensor": true,
     "timer": true,
     "modes": 3

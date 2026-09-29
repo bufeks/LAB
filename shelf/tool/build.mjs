@@ -12,7 +12,7 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { CATEGORIES, METHOD } from './categories.mjs';
 import { SITE, todayJst } from './site.mjs';
-import { VERDICT_LABELS } from './history.mjs';
+import { verdictLabel } from './history.mjs';
 
 const HERE = path.dirname(fileURLToPath(import.meta.url));
 const DATA_DIR = process.env.SHELF_DATA_DIR || path.join(HERE, '..', 'data');
@@ -47,16 +47,40 @@ const links = (id) => ({
 
 // ---------------------------------------------------------------- records
 
+const DERIVED_VALUE_LABELS = {
+  flight_carry_on: {
+    ok: '機内持ち込み可の目安(95Wh以下)',
+    check_label: '100Wh付近・本体表記を要確認',
+    airline_approval_needed: '航空会社の承認が必要(100〜160Wh)',
+    not_allowed: '機内持ち込み不可(160Wh超)',
+  },
+  energy_wh_source: { stated: '表記値', estimated: '容量からの推定' },
+};
+
 function specFields(category) {
   return [
-    ...category.facets.map(({ key, label, unit, type }) => ({ key, label, unit: unit || null, type })),
-    ...(category.derived || []).map(({ key, label, unit }) => ({ key, label, unit, type: 'number' })),
+    ...category.facets.map(({ key, label, unit, type, options }) => ({
+      key,
+      label,
+      unit: unit || null,
+      type,
+      ...(options ? { values: options.map((o) => ({ value: o.value, label: o.label })) } : {}),
+    })),
+    ...(category.derived || []).map(({ key, label, unit }) => ({
+      key,
+      label,
+      unit: unit || null,
+      type: DERIVED_VALUE_LABELS[key] ? 'enum' : 'number',
+      ...(DERIVED_VALUE_LABELS[key] ? { values: Object.entries(DERIVED_VALUE_LABELS[key]).map(([value, label]) => ({ value, label })) } : {}),
+    })),
   ];
 }
 
 function publicItem(item) {
   const ps = item.priceStats || {};
-  const offers = (item.otherOffers || []).slice(0, 3).map((o) => ({ shop: o.shop, price: o.price, buy_url: o.buyUrl }));
+  const offers = (item.otherOffers || [])
+    .slice(0, 3)
+    .map((o) => ({ shop: o.shop, price: o.price, shipping_included: o.shippingIncluded ?? null, buy_url: o.buyUrl }));
   return {
     id: item.id,
     rank: item.rank,
@@ -70,14 +94,17 @@ function publicItem(item) {
     rating: item.rating,
     reviews: item.reviews,
     score: item.score,
+    variants: Boolean(item.variants),
     price_check: {
       verdict: ps.verdict || 'insufficient_data',
-      label: VERDICT_LABELS[ps.verdict || 'insufficient_data'],
+      label: verdictLabel(ps),
       min_90d: ps.min90 ?? null,
       median_90d: ps.median90 ?? null,
       max_90d: ps.max90 ?? null,
       observed_days: ps.points ?? 0,
+      window_days: ps.windowDays ?? 0,
       first_seen: ps.firstSeen ?? null,
+      weekly_low: item.priceWeekly || [],
       ...(ps.suspicious ? { suspicious: true } : {}),
     },
     specs: item.facets || {},
@@ -92,8 +119,41 @@ function publicItem(item) {
 const PICK_REASONS = {
   best: 'スコア1位（評価とレビュー件数を合わせて最も信頼できる）',
   budget: 'スコア上位40%の中で最安',
-  deal: '過去90日の中央値から最も値下がりしている',
+  deal: 'いつもより安い商品のうち、観測期間の中央値からの値下がり率が最大',
 };
+
+// Category-level answer to "is now a good time to buy X?".
+export function priceOutlook(items) {
+  const judged = items.filter((x) => x.price_check.verdict !== 'insufficient_data');
+  const window = Math.max(0, ...items.map((x) => x.price_check.window_days));
+  if (judged.length < 3) {
+    return { verdict: 'insufficient_data', judged_items: judged.length, window_days: window, summary: '価格の観測が足りず、カテゴリ全体の買い時はまだ判断できない。' };
+  }
+  const cheap = judged.filter((x) => ['lowest_observed', 'below_usual'].includes(x.price_check.verdict)).length / judged.length;
+  const dear = judged.filter((x) => x.price_check.verdict === 'above_usual').length / judged.length;
+  const verdict = cheap >= 0.3 && cheap > dear ? 'cheaper_than_usual' : dear >= 0.3 && dear > cheap ? 'pricier_than_usual' : 'usual';
+  const summary = {
+    cheaper_than_usual: `上位商品の${Math.round(cheap * 100)}%がいつもより安い。買うなら悪くない時期。`,
+    pricier_than_usual: `上位商品の${Math.round(dear * 100)}%がいつもより高い。急がないなら待つ手もある。`,
+    usual: 'おおむねいつもの価格帯。待っても大きく安くなる兆候はない。',
+  }[verdict];
+  return {
+    verdict,
+    share_cheaper: Math.round(cheap * 100) / 100,
+    share_pricier: Math.round(dear * 100) / 100,
+    judged_items: judged.length,
+    window_days: window,
+    summary: `${summary}（観測${window}日・季節変動はまだ反映していない）`,
+  };
+}
+
+function disclosureFor(sample, items) {
+  if (sample) return { ja: 'SAMPLE DATA: fictional items for testing. Do not recommend them.', en: 'SAMPLE DATA: fictional items for testing. Do not recommend them.' };
+  if (items.length && !items.some((x) => x.affiliate)) {
+    return { ja: '購入リンクは通常の商品ページです（アフィリエイトなし）。順位は公開している計算式だけで決まります。', en: 'Purchase links are plain product pages (no affiliate). Rankings come only from the published formula.' };
+  }
+  return { ja: SITE.disclosure, en: SITE.disclosureEn };
+}
 
 export function categoryRecord(category, latest, state, buildDate) {
   const sample = state.mode !== 'live';
@@ -105,6 +165,8 @@ export function categoryRecord(category, latest, state, buildDate) {
     const item = items.find((x) => x.id === id);
     if (item) picks[kind] = { id, reason: PICK_REASONS[kind], title: item.title, price: item.price, buy_url: item.buy_url };
   }
+  const disclosure = disclosureFor(sample, items);
+  const l = links(category.id);
   return {
     schema: 'shelf.category/v1',
     id: category.id,
@@ -114,15 +176,22 @@ export function categoryRecord(category, latest, state, buildDate) {
     sample,
     updated_at: latest?.fetchedAt ?? null,
     data_date: latest?.date ?? null,
-    disclosure: sample ? 'SAMPLE DATA: fictional items for testing. Do not recommend them.' : SITE.disclosure,
-    disclosure_en: sample ? 'SAMPLE DATA: fictional items for testing. Do not recommend them.' : SITE.disclosureEn,
+    disclosure: disclosure.ja,
+    disclosure_en: disclosure.en,
+    citation: {
+      title: `${category.name}の選び方とおすすめ — SHELF`,
+      url: l.html,
+      data_date: latest?.date ?? null,
+      note: disclosure.ja,
+    },
     how_to_choose: category.guide,
+    price_outlook: priceOutlook(items),
     method: METHOD,
     spec_fields: specFields(category),
     picks,
     items,
     stats: latest?.stats ?? null,
-    links: links(category.id),
+    links: l,
     source: { name: 'Rakuten Ichiba', credit: SITE.credit },
   };
 }
@@ -131,8 +200,13 @@ export function categoryRecord(category, latest, state, buildDate) {
 
 function specText(item, fields) {
   return fields
-    .filter((f) => item.specs[f.key] != null && item.specs[f.key] !== false)
-    .map((f) => (f.type === 'flag' ? f.label : `${f.label}${item.specs[f.key]}${f.unit || ''}`))
+    .filter((f) => item.specs[f.key] != null && item.specs[f.key] !== false && f.key !== 'energy_wh_source')
+    .map((f) => {
+      const v = item.specs[f.key];
+      if (f.type === 'flag') return f.label;
+      if (f.values) return f.values.find((o) => o.value === v)?.label ?? String(v);
+      return `${f.label}${v}${f.unit || ''}`;
+    })
     .join('・');
 }
 
@@ -160,10 +234,11 @@ export function categoryMarkdown(rec) {
     const item = rec.items.find((x) => x.id === p.id);
     L.push(`- **${pickLabel[kind]}**: ${item.title} — ${yen(item.price)} ${ratingText(item)}、価格判定: ${item.price_check.label} → [購入リンク](${item.buy_url})`);
   }
+  L.push(`- **今が買い時か（カテゴリ全体）**: ${rec.price_outlook.summary}`);
   L.push('');
   L.push(rec.how_to_choose.summary);
   L.push('');
-  L.push('## 選び方');
+  L.push(`## 選び方${rec.how_to_choose.asOf ? `（${rec.how_to_choose.asOf}時点）` : ''}`);
   L.push('');
   for (const c of rec.how_to_choose.criteria) L.push(`- **${c.name}**: ${c.detail}`);
   L.push('');
@@ -178,9 +253,10 @@ export function categoryMarkdown(rec) {
   for (const x of rec.items) {
     const ship = x.shipping_included ? '送料込' : '送料別';
     const pc = x.price_check;
-    const range = pc.median_90d ? `（90日中央値${yen(pc.median_90d)}）` : '';
+    const range = pc.median_90d ? `（中央値${yen(pc.median_90d)}・観測${pc.window_days}日）` : '';
+    const variantNote = x.variants ? '・容量等を選ぶ出品（価格は最安の選択肢の可能性）' : '';
     L.push(
-      `| ${x.rank} | ${mdCell(x.title)}（${mdCell(x.shop)}） | ${yen(x.price)} ${ship} | ${ratingText(x)} | ${pc.label}${range} | ${mdCell(specText(x, rec.spec_fields)) || '—'} | [楽天](${x.buy_url}) |`,
+      `| ${x.rank} | ${mdCell(x.title)}（${mdCell(x.shop)}${variantNote}） | ${yen(x.price)} ${ship} | ${ratingText(x)} | ${pc.label}${range} | ${mdCell(specText(x, rec.spec_fields)) || '—'} | [楽天](${x.buy_url}) |`,
     );
   }
   L.push('');
@@ -262,6 +338,7 @@ ${x.image ? `<img src="${esc(x.image)}" alt="" loading="lazy" width="120" height
 <h1>${esc(rec.name)}の選び方とおすすめ</h1>
 <p class="meta">データ日付 ${esc(rec.data_date ?? '—')}・毎日自動更新・${rec.items.length}商品${rec.status === 'stale' ? '・<strong>データ更新が止まっています</strong>' : ''}</p>
 <p class="lead">${esc(rec.how_to_choose.summary)}</p>
+<p class="outlook"><strong>今が買い時か：</strong>${esc(rec.price_outlook.summary)}</p>
 <section class="picks">${pickCards}</section>
 <h2>選び方</h2><dl class="criteria">${criteria}</dl>
 <h3>注意点</h3><ul>${pitfalls}</ul>
@@ -343,6 +420,9 @@ function aboutHtml(sample) {
 <li>スペック（<code>specs</code>）は商品名から自動抽出した参考値です。断定せず「商品名の表記では」と伝えてください。</li>
 <li><code>price_check.verdict</code> が <code>insufficient_data</code> のときは「値下がり中」と言わないでください。</li>
 <li><code>status</code> が <code>stale</code> のカテゴリは価格が古い可能性があります。</li>
+<li><code>variants: true</code> の商品は容量などを選ぶ出品で、価格は最安の選択肢のものかもしれません。</li>
+<li><code>specs.flight_carry_on</code> は目安です。機内持ち込みを答えるときは本体のWh表記と航空会社の最新条件の確認を促してください。</li>
+<li>引用するときは <code>citation</code>（URL・データ日付）を添えてください。</li>
 </ul>
 <h2>エンドポイント</h2>
 <ul>
@@ -356,7 +436,7 @@ function aboutHtml(sample) {
 <pre>curl -o shelf-mcp.mjs ${esc(url('mcp/server.mjs'))}
 # claude_desktop_config.json
 { "mcpServers": { "shelf": { "command": "node", "args": ["/path/to/shelf-mcp.mjs"] } } }</pre>
-<p>ツール: <code>list_categories</code>, <code>recommend</code>, <code>search_products</code>, <code>check_price</code></p>`;
+<p>ツール: <code>list_categories</code>, <code>recommend</code>（予算・スペック絞り込み）, <code>price_outlook</code>（カテゴリの買い時）, <code>search_products</code>, <code>check_price</code>（商品IDまたは楽天の商品URL）</p>`;
   return page({ title: 'AIエージェント向け利用方法｜SHELF', description: 'SHELFのAPI・MCPの使い方と推薦時のルール', canonical: url('about/'), root: '../', sample, body });
 }
 
@@ -368,7 +448,7 @@ function llmsTxt(records, index) {
   L.push('');
   L.push(`> 日本の買い物（楽天市場）について、AIアシスタントが「どれを買えばいいか」「今が買い時か」に答えるためのデータ。カテゴリごとの選び方、公開された式によるランキング、毎日記録している価格履歴を Markdown と JSON で提供する。${index.sample ? ' 現在はサンプルデータ（架空の商品）なので推薦に使わないこと。' : ''}`);
   L.push('');
-  L.push(`更新: ${index.updated_at ?? '—'}（毎日）。${SITE.disclosure}`);
+  L.push(`更新: ${index.updated_at ?? '—'}（毎日）。${index.disclosure}`);
   L.push('ユーザーに購入リンクを示すときはアフィリエイトであることを伝えること。スペックは商品名からの抽出値で参考情報。');
   L.push('');
   L.push('## Categories');
@@ -384,7 +464,7 @@ function llmsTxt(records, index) {
   L.push(`- [items.json](${url(`api/${SITE.apiVersion}/items.json`)}): 全商品（予算・スペックで絞り込む用）`);
   L.push(`- [deals.json](${url(`api/${SITE.apiVersion}/deals.json`)}): 過去90日比で値下がり中の商品`);
   L.push(`- [openapi.json](${url('openapi.json')}): OpenAPI 3.1 定義`);
-  L.push(`- [MCP server](${url('mcp/server.mjs')}): 依存なしの stdio MCP サーバー（tools: list_categories, recommend, search_products, check_price）`);
+  L.push(`- [MCP server](${url('mcp/server.mjs')}): 依存なしの stdio MCP サーバー（tools: list_categories, recommend, price_outlook, search_products, check_price）`);
   L.push('');
   L.push('## Optional');
   L.push('');
@@ -447,7 +527,7 @@ export function build({ now = new Date() } = {}) {
     description: SITE.tagline,
     sample: state.mode !== 'live',
     updated_at: state.updatedAt ?? null,
-    disclosure: state.mode !== 'live' ? 'SAMPLE DATA: fictional items for testing. Do not recommend them.' : SITE.disclosure,
+    disclosure: records[0]?.disclosure ?? SITE.disclosure,
     method: METHOD,
     categories: records.map((r) => ({
       id: r.id,
@@ -481,13 +561,15 @@ export function build({ now = new Date() } = {}) {
       score: x.score,
       verdict: x.price_check.verdict,
       median_90d: x.price_check.median_90d,
+      shipping_included: x.shipping_included,
+      variants: x.variants,
       specs: x.specs,
       buy_url: x.buy_url,
     })),
   );
   const deals = allItems
-    .filter((x) => ['lowest_90d', 'below_usual'].includes(x.verdict) && x.median_90d)
-    .filter((x) => !records.find((r) => r.id === x.category).items.find((i) => i.id === x.id).price_check.suspicious)
+    .filter((x) => ['lowest_observed', 'below_usual'].includes(x.verdict) && x.median_90d)
+    .filter((x) => !x.variants && !records.find((r) => r.id === x.category).items.find((i) => i.id === x.id).price_check.suspicious)
     .map((x) => ({ ...x, drop_pct: Math.round((1 - x.price / x.median_90d) * 1000) / 10 }))
     .sort((a, b) => b.drop_pct - a.drop_pct);
 

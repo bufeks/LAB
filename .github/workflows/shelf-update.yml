@@ -39,6 +39,7 @@ jobs:
             echo "::notice::RAKUTEN_APP_ID / RAKUTEN_ACCESS_KEY are not set; keeping the committed sample build."
           fi
       - name: Fetch and build
+        id: fetch
         if: steps.mode.outputs.live == 'true'
         env:
           RAKUTEN_APP_ID: ${{ secrets.RAKUTEN_APP_ID }}
@@ -47,11 +48,15 @@ jobs:
           RAKUTEN_REFERER: ${{ vars.RAKUTEN_REFERER }}
           SHELF_BASE_URL: ${{ vars.SHELF_BASE_URL }}
         run: node shelf/tool/update.mjs
+      # An audit error must not cost a day of price history: commit anyway,
+      # then fail the job at the end so the alert issue gets opened.
       - name: Audit
-        if: steps.mode.outputs.live == 'true'
+        id: audit
+        if: steps.fetch.outcome == 'success'
+        continue-on-error: true
         run: node shelf/tool/check.mjs
       - name: Commit
-        if: steps.mode.outputs.live == 'true'
+        if: steps.fetch.outcome == 'success'
         run: |
           git config user.name "shelf-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -59,10 +64,19 @@ jobs:
           if git diff --cached --quiet; then echo "no changes"; exit 0; fi
           git commit -m "SHELF: daily update $(TZ=Asia/Tokyo date +%F)"
           for i in 1 2 3; do
-            git pull --rebase origin "${GITHUB_REF_NAME}" && git push origin "HEAD:${GITHUB_REF_NAME}" && exit 0
+            git fetch origin "${GITHUB_REF_NAME}"
+            # Generated files: on conflict keep this run's version.
+            if git rebase -X theirs "origin/${GITHUB_REF_NAME}"; then
+              git push origin "HEAD:${GITHUB_REF_NAME}" && exit 0
+            else
+              git rebase --abort || true
+            fi
             sleep $((i * 5))
           done
           exit 1
+      - name: Fail on audit errors
+        if: steps.audit.outcome == 'failure'
+        run: exit 1
       - name: Open or update an alert issue
         if: failure()
         env:

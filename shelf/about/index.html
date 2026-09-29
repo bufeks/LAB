@@ -22,6 +22,9 @@
 <li>スペック（<code>specs</code>）は商品名から自動抽出した参考値です。断定せず「商品名の表記では」と伝えてください。</li>
 <li><code>price_check.verdict</code> が <code>insufficient_data</code> のときは「値下がり中」と言わないでください。</li>
 <li><code>status</code> が <code>stale</code> のカテゴリは価格が古い可能性があります。</li>
+<li><code>variants: true</code> の商品は容量などを選ぶ出品で、価格は最安の選択肢のものかもしれません。</li>
+<li><code>specs.flight_carry_on</code> は目安です。機内持ち込みを答えるときは本体のWh表記と航空会社の最新条件の確認を促してください。</li>
+<li>引用するときは <code>citation</code>（URL・データ日付）を添えてください。</li>
 </ul>
 <h2>エンドポイント</h2>
 <ul>
@@ -35,7 +38,7 @@
 <pre>curl -o shelf-mcp.mjs https://bufeks.github.io/LAB/shelf/mcp/server.mjs
 # claude_desktop_config.json
 { "mcpServers": { "shelf": { "command": "node", "args": ["/path/to/shelf-mcp.mjs"] } } }</pre>
-<p>ツール: <code>list_categories</code>, <code>recommend</code>, <code>search_products</code>, <code>check_price</code></p>
+<p>ツール: <code>list_categories</code>, <code>recommend</code>（予算・スペック絞り込み）, <code>price_outlook</code>（カテゴリの買い時）, <code>search_products</code>, <code>check_price</code>（商品IDまたは楽天の商品URL）</p>
 </main>
 <footer>
 <p>PR: 購入リンクは楽天アフィリエイトリンクです。リンク経由で購入されると運営者に紹介料が入りますが、価格は変わらず、順位は公開している計算式だけで決まり、紹介料の率は順位に影響しません。</p>

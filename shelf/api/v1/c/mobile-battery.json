@@ -5,12 +5,19 @@
  "name_en": "Power bank",
  "status": "ok",
  "sample": true,
- "updated_at": "2026-09-29T15:46:36.033Z",
+ "updated_at": "2026-09-30T01:01:12+09:00",
  "data_date": "2026-09-30",
  "disclosure": "SAMPLE DATA: fictional items for testing. Do not recommend them.",
  "disclosure_en": "SAMPLE DATA: fictional items for testing. Do not recommend them.",
+ "citation": {
+  "title": "モバイルバッテリーの選び方とおすすめ — SHELF",
+  "url": "https://bufeks.github.io/LAB/shelf/c/mobile-battery/",
+  "data_date": "2026-09-30",
+  "note": "SAMPLE DATA: fictional items for testing. Do not recommend them."
+ },
  "how_to_choose": {
-  "summary": "普段使いは10000mAh・20W以上、ノートPCも充電するなら20000mAh・45W以上が目安。国内で売られる製品はPSEマークが必須で、飛行機は機内持ち込みのみ（預け入れ不可）・100Whを超えると航空会社の承認が要る。",
+  "asOf": "2026-09",
+  "summary": "普段使いは10000mAh・20W以上、ノートPCも充電するなら20000mAh・45W以上が目安。国内で売られる製品はPSEマークが必須。飛行機は預け入れ不可で機内持ち込みのみ、100Whを超えると航空会社の承認が要り、機内での使用・充電を禁じる航空会社も多い。",
   "criteria": [
    {
     "name": "容量 (mAh)",
@@ -30,7 +37,7 @@
    },
    {
     "name": "飛行機",
-    "detail": "預け入れ不可・機内持ち込みのみ。100Wh以下は制限なし、100Wh超160Wh以下は航空会社の承認が必要（通常2個まで）、160Wh超は持ち込み不可。20000mAh(3.7V)は約74Wh。最新の条件は利用する航空会社で確認する。"
+    "detail": "預け入れ不可・機内持ち込みのみ。一般的な基準は、100Wh以下は承認不要、100Wh超160Wh以下は航空会社の承認が必要（通常2個まで）、160Wh超は持ち込み不可。2025年以降、機内での使用・充電の禁止や個数制限を設ける航空会社が増え、国内線では収納棚に入れず手元に置くよう求められている。Whは本体表記で確認する（20000mAhは約74Wh、27000mAh級は100Wh前後で要確認）。条件は利用する航空会社の最新情報で確認する。"
    }
   ],
   "pitfalls": [
@@ -38,17 +45,25 @@
    "膨らんだ・熱を持つ・異臭がするものは使用を中止し、自治体やJBRC協力店の回収に出す（燃えないごみに出さない）。"
   ]
  },
+ "price_outlook": {
+  "verdict": "cheaper_than_usual",
+  "share_cheaper": 0.33,
+  "share_pricier": 0,
+  "judged_items": 6,
+  "window_days": 31,
+  "summary": "上位商品の33%がいつもより安い。買うなら悪くない時期。（観測31日・季節変動はまだ反映していない）"
+ },
  "method": {
   "version": "2026-09",
-  "summary": "Rakutenで各カテゴリをレビュー件数順に最大60件取得し、除外語・価格帯・最低レビュー件数で絞り、ほぼ同じ商品名の重複は最安の1件にまとめる。残りを「ベイズ平均評価」で並べる。",
+  "summary": "Rakutenで各カテゴリをレビュー件数順に最大60件取得し、除外語・価格帯・最低レビュー件数で絞り、同じ商品の別ショップ出品（型番が同じ、またはスペックが同じで商品名がほぼ同じもの）は評価の高い1件にまとめ、他店の価格は other_offers に残す。残りを「ベイズ平均評価」で並べる。",
   "formula": "score = (C × m + n × r) / (C + n)  … r=その商品の平均評価, n=レビュー件数, m=候補全体の平均評価, C=50",
   "why": "レビュー数件の★5より、数千件の★4.4を上に置くため。件数が少ない商品ほど評価が候補全体の平均に引き寄せられる。",
   "picks": {
    "best": "スコア1位",
    "budget": "スコアが候補の上位40%以内の商品のうち最安",
-   "deal": "過去90日の中央値から最も値下がりしている商品（観測7日以上、異常値は除く）"
+   "deal": "価格判定が「いつもより安い」以上の商品のうち、中央値からの値下がり率が最大のもの（異常値・容量などを選べる出品は除く）"
   },
-  "priceVerdict": "毎日の価格を記録し、過去90日で観測7日未満は insufficient_data、90日最安値以下なら lowest_90d、中央値の90%以下なら below_usual、110%以上なら above_usual、それ以外は usual。",
+  "priceVerdict": "毎日の価格（送料込/別が今日と同じ日だけ）を記録し、観測7日未満は insufficient_data。中央値より3%以上安く観測期間の最安値なら lowest_observed、中央値の90%以下なら below_usual、110%以上なら above_usual、それ以外は usual。観測期間は最大90日で window_days に示す。",
   "caveat": "スペック(facets)は商品名から機械的に抜き出した参考値で、誤りを含むことがある。購入前に商品ページで確認すること。"
  },
  "spec_fields": [
@@ -62,6 +77,18 @@
    "key": "output_w",
    "label": "最大出力",
    "unit": "W",
+   "type": "number"
+  },
+  {
+   "key": "energy_wh",
+   "label": "電力量(表記)",
+   "unit": "Wh",
+   "type": "number"
+  },
+  {
+   "key": "weight_g",
+   "label": "重さ",
+   "unit": "g",
    "type": "number"
   },
   {
@@ -84,9 +111,49 @@
   },
   {
    "key": "energy_wh_est",
-   "label": "推定電力量",
+   "label": "推定電力量(3.85V換算)",
    "unit": "Wh",
    "type": "number"
+  },
+  {
+   "key": "flight_carry_on",
+   "label": "機内持ち込み目安",
+   "unit": null,
+   "type": "enum",
+   "values": [
+    {
+     "value": "ok",
+     "label": "機内持ち込み可の目安(95Wh以下)"
+    },
+    {
+     "value": "check_label",
+     "label": "100Wh付近・本体表記を要確認"
+    },
+    {
+     "value": "airline_approval_needed",
+     "label": "航空会社の承認が必要(100〜160Wh)"
+    },
+    {
+     "value": "not_allowed",
+     "label": "機内持ち込み不可(160Wh超)"
+    }
+   ]
+  },
+  {
+   "key": "energy_wh_source",
+   "label": "電力量の根拠",
+   "unit": null,
+   "type": "enum",
+   "values": [
+    {
+     "value": "stated",
+     "label": "表記値"
+    },
+    {
+     "value": "estimated",
+     "label": "容量からの推定"
+    }
+   ]
   }
  ],
  "picks": {
@@ -106,7 +173,7 @@
   },
   "deal": {
    "id": "sample:mobile-battery-4",
-   "reason": "過去90日の中央値から最も値下がりしている",
+   "reason": "いつもより安い商品のうち、観測期間の中央値からの値下がり率が最大",
    "title": "(サンプル) モバイルバッテリー D 10000mAh ケーブル内蔵 20W PSE",
    "price": 4690,
    "buy_url": "https://search.rakuten.co.jp/search/mall/%E3%83%A2%E3%83%90%E3%82%A4%E3%83%AB%E3%83%90%E3%83%83%E3%83%86%E3%83%AA%E3%83%BC/"
@@ -126,6 +193,7 @@
    "rating": 4.81,
    "reviews": 1671,
    "score": 4.797,
+   "variants": false,
    "price_check": {
     "verdict": "usual",
     "label": "いつもの価格",
@@ -133,7 +201,30 @@
     "median_90d": 5280,
     "max_90d": 5560,
     "observed_days": 31,
-    "first_seen": "2026-08-31"
+    "window_days": 31,
+    "first_seen": "2026-08-31",
+    "weekly_low": [
+     [
+      "2026-08-31",
+      5200
+     ],
+     [
+      "2026-09-04",
+      5140
+     ],
+     [
+      "2026-09-13",
+      5210
+     ],
+     [
+      "2026-09-22",
+      5160
+     ],
+     [
+      "2026-09-25",
+      5130
+     ]
+    ]
    },
    "specs": {
     "capacity_mah": 5000,
@@ -141,7 +232,9 @@
     "pse": true,
     "builtin_cable": false,
     "magnetic": true,
-    "energy_wh_est": 18.5
+    "energy_wh_est": 19.25,
+    "flight_carry_on": "ok",
+    "energy_wh_source": "estimated"
    },
    "buy_url": "https://search.rakuten.co.jp/search/mall/%E3%83%A2%E3%83%90%E3%82%A4%E3%83%AB%E3%83%90%E3%83%83%E3%83%86%E3%83%AA%E3%83%BC/",
    "affiliate": false,
@@ -162,6 +255,7 @@
    "rating": 4.43,
    "reviews": 995,
    "score": 4.426,
+   "variants": false,
    "price_check": {
     "verdict": "usual",
     "label": "いつもの価格",
@@ -169,7 +263,30 @@
     "median_90d": 6030,
     "max_90d": 6230,
     "observed_days": 31,
-    "first_seen": "2026-08-31"
+    "window_days": 31,
+    "first_seen": "2026-08-31",
+    "weekly_low": [
+     [
+      "2026-09-02",
+      5900
+     ],
+     [
+      "2026-09-08",
+      5920
+     ],
+     [
+      "2026-09-11",
+      5870
+     ],
+     [
+      "2026-09-23",
+      5990
+     ],
+     [
+      "2026-09-27",
+      5910
+     ]
+    ]
    },
    "specs": {
     "capacity_mah": 27000,
@@ -177,7 +294,9 @@
     "pse": true,
     "builtin_cable": false,
     "magnetic": false,
-    "energy_wh_est": 99.9
+    "energy_wh_est": 103.95,
+    "flight_carry_on": "airline_approval_needed",
+    "energy_wh_source": "estimated"
    },
    "buy_url": "https://search.rakuten.co.jp/search/mall/%E3%83%A2%E3%83%90%E3%82%A4%E3%83%AB%E3%83%90%E3%83%83%E3%83%86%E3%83%AA%E3%83%BC/",
    "affiliate": false,
@@ -198,6 +317,7 @@
    "rating": 4.29,
    "reviews": 2853,
    "score": 4.291,
+   "variants": false,
    "price_check": {
     "verdict": "usual",
     "label": "いつもの価格",
@@ -205,7 +325,30 @@
     "median_90d": 2850,
     "max_90d": 2940,
     "observed_days": 31,
-    "first_seen": "2026-08-31"
+    "window_days": 31,
+    "first_seen": "2026-08-31",
+    "weekly_low": [
+     [
+      "2026-09-02",
+      2780
+     ],
+     [
+      "2026-09-03",
+      2790
+     ],
+     [
+      "2026-09-15",
+      2790
+     ],
+     [
+      "2026-09-23",
+      2790
+     ],
+     [
+      "2026-09-26",
+      2800
+     ]
+    ]
    },
    "specs": {
     "capacity_mah": 20000,
@@ -213,7 +356,9 @@
     "pse": true,
     "builtin_cable": false,
     "magnetic": false,
-    "energy_wh_est": 74
+    "energy_wh_est": 77,
+    "flight_carry_on": "ok",
+    "energy_wh_source": "estimated"
    },
    "buy_url": "https://search.rakuten.co.jp/search/mall/%E3%83%A2%E3%83%90%E3%82%A4%E3%83%AB%E3%83%90%E3%83%83%E3%83%86%E3%83%AA%E3%83%BC/",
    "affiliate": false,
@@ -234,6 +379,7 @@
    "rating": 4.24,
    "reviews": 2519,
    "score": 4.242,
+   "variants": false,
    "price_check": {
     "verdict": "usual",
     "label": "いつもの価格",
@@ -241,7 +387,30 @@
     "median_90d": 6120,
     "max_90d": 6440,
     "observed_days": 31,
-    "first_seen": "2026-08-31"
+    "window_days": 31,
+    "first_seen": "2026-08-31",
+    "weekly_low": [
+     [
+      "2026-08-31",
+      6020
+     ],
+     [
+      "2026-09-04",
+      5950
+     ],
+     [
+      "2026-09-10",
+      5960
+     ],
+     [
+      "2026-09-22",
+      5980
+     ],
+     [
+      "2026-09-29",
+      5940
+     ]
+    ]
    },
    "specs": {
     "capacity_mah": 10000,
@@ -249,7 +418,9 @@
     "pse": true,
     "builtin_cable": false,
     "magnetic": false,
-    "energy_wh_est": 37
+    "energy_wh_est": 38.5,
+    "flight_carry_on": "ok",
+    "energy_wh_source": "estimated"
    },
    "buy_url": "https://search.rakuten.co.jp/search/mall/%E3%83%A2%E3%83%90%E3%82%A4%E3%83%AB%E3%83%90%E3%83%83%E3%83%86%E3%83%AA%E3%83%BC/",
    "affiliate": false,
@@ -270,14 +441,38 @@
    "rating": 4.22,
    "reviews": 2332,
    "score": 4.223,
+   "variants": false,
    "price_check": {
-    "verdict": "lowest_90d",
-    "label": "90日最安値",
+    "verdict": "lowest_observed",
+    "label": "観測31日の最安値",
     "min_90d": 4690,
     "median_90d": 5350,
     "max_90d": 5510,
     "observed_days": 31,
-    "first_seen": "2026-08-31"
+    "window_days": 31,
+    "first_seen": "2026-08-31",
+    "weekly_low": [
+     [
+      "2026-08-31",
+      5310
+     ],
+     [
+      "2026-09-05",
+      5260
+     ],
+     [
+      "2026-09-15",
+      5240
+     ],
+     [
+      "2026-09-19",
+      5250
+     ],
+     [
+      "2026-09-30",
+      4690
+     ]
+    ]
    },
    "specs": {
     "capacity_mah": 10000,
@@ -285,7 +480,9 @@
     "pse": true,
     "builtin_cable": true,
     "magnetic": false,
-    "energy_wh_est": 37
+    "energy_wh_est": 38.5,
+    "flight_carry_on": "ok",
+    "energy_wh_source": "estimated"
    },
    "buy_url": "https://search.rakuten.co.jp/search/mall/%E3%83%A2%E3%83%90%E3%82%A4%E3%83%AB%E3%83%90%E3%83%83%E3%83%86%E3%83%AA%E3%83%BC/",
    "affiliate": false,
@@ -306,14 +503,38 @@
    "rating": 4.2,
    "reviews": 965,
    "score": 4.207,
+   "variants": false,
    "price_check": {
-    "verdict": "lowest_90d",
-    "label": "90日最安値",
+    "verdict": "lowest_observed",
+    "label": "観測31日の最安値",
     "min_90d": 6850,
     "median_90d": 7810,
     "max_90d": 8080,
     "observed_days": 31,
-    "first_seen": "2026-08-31"
+    "window_days": 31,
+    "first_seen": "2026-08-31",
+    "weekly_low": [
+     [
+      "2026-08-31",
+      7750
+     ],
+     [
+      "2026-09-03",
+      7680
+     ],
+     [
+      "2026-09-11",
+      7770
+     ],
+     [
+      "2026-09-23",
+      7660
+     ],
+     [
+      "2026-09-30",
+      6850
+     ]
+    ]
    },
    "specs": {
     "capacity_mah": 10000,
@@ -321,7 +542,9 @@
     "pse": true,
     "builtin_cable": false,
     "magnetic": false,
-    "energy_wh_est": 37
+    "energy_wh_est": 38.5,
+    "flight_carry_on": "ok",
+    "energy_wh_source": "estimated"
    },
    "buy_url": "https://search.rakuten.co.jp/search/mall/%E3%83%A2%E3%83%90%E3%82%A4%E3%83%AB%E3%83%90%E3%83%83%E3%83%86%E3%83%AA%E3%83%BC/",
    "affiliate": false,

@@ -1,7 +1,7 @@
 {
  "schema": "shelf.items/v1",
  "sample": true,
- "updated_at": "2026-09-29T15:46:36.033Z",
+ "updated_at": "2026-09-30T01:01:12+09:00",
  "disclosure": "SAMPLE DATA: fictional items for testing. Do not recommend them.",
  "items": [
   {
@@ -15,13 +15,17 @@
    "score": 4.797,
    "verdict": "usual",
    "median_90d": 5280,
+   "shipping_included": true,
+   "variants": false,
    "specs": {
     "capacity_mah": 5000,
     "output_w": 20,
     "pse": true,
     "builtin_cable": false,
     "magnetic": true,
-    "energy_wh_est": 18.5
+    "energy_wh_est": 19.25,
+    "flight_carry_on": "ok",
+    "energy_wh_source": "estimated"
    },
    "buy_url": "https://search.rakuten.co.jp/search/mall/%E3%83%A2%E3%83%90%E3%82%A4%E3%83%AB%E3%83%90%E3%83%83%E3%83%86%E3%83%AA%E3%83%BC/"
   },
@@ -36,13 +40,17 @@
    "score": 4.426,
    "verdict": "usual",
    "median_90d": 6030,
+   "shipping_included": true,
+   "variants": false,
    "specs": {
     "capacity_mah": 27000,
     "output_w": 140,
     "pse": true,
     "builtin_cable": false,
     "magnetic": false,
-    "energy_wh_est": 99.9
+    "energy_wh_est": 103.95,
+    "flight_carry_on": "airline_approval_needed",
+    "energy_wh_source": "estimated"
    },
    "buy_url": "https://search.rakuten.co.jp/search/mall/%E3%83%A2%E3%83%90%E3%82%A4%E3%83%AB%E3%83%90%E3%83%83%E3%83%86%E3%83%AA%E3%83%BC/"
   },
@@ -57,13 +65,17 @@
    "score": 4.291,
    "verdict": "usual",
    "median_90d": 2850,
+   "shipping_included": false,
+   "variants": false,
    "specs": {
     "capacity_mah": 20000,
     "output_w": 65,
     "pse": true,
     "builtin_cable": false,
     "magnetic": false,
-    "energy_wh_est": 74
+    "energy_wh_est": 77,
+    "flight_carry_on": "ok",
+    "energy_wh_source": "estimated"
    },
    "buy_url": "https://search.rakuten.co.jp/search/mall/%E3%83%A2%E3%83%90%E3%82%A4%E3%83%AB%E3%83%90%E3%83%83%E3%83%86%E3%83%AA%E3%83%BC/"
   },
@@ -78,13 +90,17 @@
    "score": 4.242,
    "verdict": "usual",
    "median_90d": 6120,
+   "shipping_included": false,
+   "variants": false,
    "specs": {
     "capacity_mah": 10000,
     "output_w": 30,
     "pse": true,
     "builtin_cable": false,
     "magnetic": false,
-    "energy_wh_est": 37
+    "energy_wh_est": 38.5,
+    "flight_carry_on": "ok",
+    "energy_wh_source": "estimated"
    },
    "buy_url": "https://search.rakuten.co.jp/search/mall/%E3%83%A2%E3%83%90%E3%82%A4%E3%83%AB%E3%83%90%E3%83%83%E3%83%86%E3%83%AA%E3%83%BC/"
   },
@@ -97,15 +113,19 @@
    "reviews": 2332,
    "rank": 5,
    "score": 4.223,
-   "verdict": "lowest_90d",
+   "verdict": "lowest_observed",
    "median_90d": 5350,
+   "shipping_included": false,
+   "variants": false,
    "specs": {
     "capacity_mah": 10000,
     "output_w": 20,
     "pse": true,
     "builtin_cable": true,
     "magnetic": false,
-    "energy_wh_est": 37
+    "energy_wh_est": 38.5,
+    "flight_carry_on": "ok",
+    "energy_wh_source": "estimated"
    },
    "buy_url": "https://search.rakuten.co.jp/search/mall/%E3%83%A2%E3%83%90%E3%82%A4%E3%83%AB%E3%83%90%E3%83%83%E3%83%86%E3%83%AA%E3%83%BC/"
   },
@@ -118,15 +138,19 @@
    "reviews": 965,
    "rank": 6,
    "score": 4.207,
-   "verdict": "lowest_90d",
+   "verdict": "lowest_observed",
    "median_90d": 7810,
+   "shipping_included": true,
+   "variants": false,
    "specs": {
     "capacity_mah": 10000,
     "output_w": 22.5,
     "pse": true,
     "builtin_cable": false,
     "magnetic": false,
-    "energy_wh_est": 37
+    "energy_wh_est": 38.5,
+    "flight_carry_on": "ok",
+    "energy_wh_source": "estimated"
    },
    "buy_url": "https://search.rakuten.co.jp/search/mall/%E3%83%A2%E3%83%90%E3%82%A4%E3%83%AB%E3%83%90%E3%83%83%E3%83%86%E3%83%AA%E3%83%BC/"
   },
@@ -139,8 +163,10 @@
    "reviews": 2742,
    "rank": 1,
    "score": 4.824,
-   "verdict": "lowest_90d",
+   "verdict": "lowest_observed",
    "median_90d": 5090,
+   "shipping_included": false,
+   "variants": false,
    "specs": {
     "output_w": 30,
     "ports": 2,
@@ -161,6 +187,8 @@
    "score": 4.721,
    "verdict": "usual",
    "median_90d": 2870,
+   "shipping_included": false,
+   "variants": false,
    "specs": {
     "output_w": 140,
     "ports": 3,
@@ -181,6 +209,8 @@
    "score": 4.518,
    "verdict": "usual",
    "median_90d": 4920,
+   "shipping_included": true,
+   "variants": false,
    "specs": {
     "output_w": 100,
     "ports": 4,
@@ -201,6 +231,8 @@
    "score": 4.355,
    "verdict": "usual",
    "median_90d": 4570,
+   "shipping_included": false,
+   "variants": false,
    "specs": {
     "output_w": 20,
     "ports": 1,
@@ -221,6 +253,8 @@
    "score": 3.988,
    "verdict": "usual",
    "median_90d": 5640,
+   "shipping_included": true,
+   "variants": false,
    "specs": {
     "output_w": 45,
     "ports": 1,
@@ -239,8 +273,10 @@
    "reviews": 1335,
    "rank": 6,
    "score": 3.912,
-   "verdict": "lowest_90d",
+   "verdict": "lowest_observed",
    "median_90d": 1850,
+   "shipping_included": true,
+   "variants": false,
    "specs": {
     "output_w": 65,
     "ports": 3,
@@ -259,8 +295,10 @@
    "reviews": 2990,
    "rank": 1,
    "score": 4.675,
-   "verdict": "lowest_90d",
+   "verdict": "lowest_observed",
    "median_90d": 11560,
+   "shipping_included": false,
+   "variants": false,
    "specs": {
     "anc": false,
     "ldac": false,
@@ -281,6 +319,8 @@
    "score": 4.608,
    "verdict": "usual",
    "median_90d": 10540,
+   "shipping_included": true,
+   "variants": false,
    "specs": {
     "anc": true,
     "ldac": false,
@@ -301,6 +341,8 @@
    "score": 4.573,
    "verdict": "usual",
    "median_90d": 8730,
+   "shipping_included": false,
+   "variants": false,
    "specs": {
     "anc": false,
     "ldac": true,
@@ -321,6 +363,8 @@
    "score": 4.497,
    "verdict": "usual",
    "median_90d": 6450,
+   "shipping_included": true,
+   "variants": false,
    "specs": {
     "anc": false,
     "ldac": false,
@@ -342,6 +386,8 @@
    "score": 4.223,
    "verdict": "usual",
    "median_90d": 11280,
+   "shipping_included": false,
+   "variants": false,
    "specs": {
     "anc": true,
     "ldac": true,
@@ -360,8 +406,10 @@
    "reviews": 3318,
    "rank": 6,
    "score": 4.114,
-   "verdict": "lowest_90d",
+   "verdict": "lowest_observed",
    "median_90d": 6020,
+   "shipping_included": true,
+   "variants": false,
    "specs": {
     "anc": true,
     "ldac": false,
@@ -381,8 +429,10 @@
    "reviews": 974,
    "rank": 1,
    "score": 4.715,
-   "verdict": "lowest_90d",
+   "verdict": "lowest_observed",
    "median_90d": 8720,
+   "shipping_included": true,
+   "variants": false,
    "specs": {
     "capacity_l": 0.8,
     "watt": 1250,
@@ -404,6 +454,8 @@
    "score": 4.699,
    "verdict": "usual",
    "median_90d": 10270,
+   "shipping_included": true,
+   "variants": false,
    "specs": {
     "capacity_l": 1,
     "watt": 1250,
@@ -425,6 +477,8 @@
    "score": 4.42,
    "verdict": "usual",
    "median_90d": 4120,
+   "shipping_included": false,
+   "variants": false,
    "specs": {
     "capacity_l": 0.8,
     "watt": 900,
@@ -444,8 +498,10 @@
    "reviews": 1522,
    "rank": 4,
    "score": 4.313,
-   "verdict": "lowest_90d",
+   "verdict": "lowest_observed",
    "median_90d": 6510,
+   "shipping_included": false,
+   "variants": false,
    "specs": {
     "capacity_l": 1.2,
     "watt": 1300,
@@ -467,6 +523,8 @@
    "score": 4.208,
    "verdict": "usual",
    "median_90d": 2000,
+   "shipping_included": false,
+   "variants": false,
    "specs": {
     "capacity_l": 1,
     "watt": 1200,
@@ -488,6 +546,8 @@
    "score": 4.003,
    "verdict": "usual",
    "median_90d": 5230,
+   "shipping_included": true,
+   "variants": false,
    "specs": {
     "capacity_l": 0.6,
     "temp_control": true,
@@ -508,12 +568,11 @@
    "score": 4.7,
    "verdict": "usual",
    "median_90d": 9560,
+   "shipping_included": false,
+   "variants": false,
    "specs": {
     "room_tatami": 8,
-    "type_steam": false,
-    "type_evaporative": false,
-    "type_ultrasonic": true,
-    "type_hybrid": false
+    "type": "ultrasonic"
    },
    "buy_url": "https://search.rakuten.co.jp/search/mall/%E5%8A%A0%E6%B9%BF%E5%99%A8/"
   },
@@ -528,14 +587,13 @@
    "score": 4.617,
    "verdict": "usual",
    "median_90d": 15450,
+   "shipping_included": false,
+   "variants": false,
    "specs": {
     "rated_ml_h": 700,
     "room_tatami": 18,
     "tank_l": 4.2,
-    "type_steam": false,
-    "type_evaporative": true,
-    "type_ultrasonic": false,
-    "type_hybrid": false
+    "type": "evaporative"
    },
    "buy_url": "https://search.rakuten.co.jp/search/mall/%E5%8A%A0%E6%B9%BF%E5%99%A8/"
   },
@@ -550,14 +608,13 @@
    "score": 4.26,
    "verdict": "usual",
    "median_90d": 8040,
+   "shipping_included": true,
+   "variants": false,
    "specs": {
     "rated_ml_h": 300,
     "room_tatami": 6,
     "tank_l": 2.5,
-    "type_steam": false,
-    "type_evaporative": false,
-    "type_ultrasonic": true,
-    "type_hybrid": false
+    "type": "ultrasonic"
    },
    "buy_url": "https://search.rakuten.co.jp/search/mall/%E5%8A%A0%E6%B9%BF%E5%99%A8/"
   },
@@ -572,13 +629,12 @@
    "score": 4.093,
    "verdict": "usual",
    "median_90d": 4310,
+   "shipping_included": true,
+   "variants": false,
    "specs": {
     "room_tatami": 10,
     "tank_l": 2.2,
-    "type_steam": true,
-    "type_evaporative": false,
-    "type_ultrasonic": false,
-    "type_hybrid": false
+    "type": "steam"
    },
    "buy_url": "https://search.rakuten.co.jp/search/mall/%E5%8A%A0%E6%B9%BF%E5%99%A8/"
   },
@@ -591,16 +647,15 @@
    "reviews": 3768,
    "rank": 5,
    "score": 4.033,
-   "verdict": "lowest_90d",
+   "verdict": "lowest_observed",
    "median_90d": 8280,
+   "shipping_included": false,
+   "variants": false,
    "specs": {
     "rated_ml_h": 600,
     "room_tatami": 14,
     "tank_l": 4,
-    "type_steam": false,
-    "type_evaporative": false,
-    "type_ultrasonic": false,
-    "type_hybrid": true
+    "type": "hybrid"
    },
    "buy_url": "https://search.rakuten.co.jp/search/mall/%E5%8A%A0%E6%B9%BF%E5%99%A8/"
   },
@@ -613,16 +668,15 @@
    "reviews": 272,
    "rank": 6,
    "score": 4.026,
-   "verdict": "lowest_90d",
+   "verdict": "lowest_observed",
    "median_90d": 17440,
+   "shipping_included": true,
+   "variants": false,
    "specs": {
     "rated_ml_h": 480,
     "room_tatami": 13,
     "tank_l": 3,
-    "type_steam": true,
-    "type_evaporative": false,
-    "type_ultrasonic": false,
-    "type_hybrid": false
+    "type": "steam"
    },
    "buy_url": "https://search.rakuten.co.jp/search/mall/%E5%8A%A0%E6%B9%BF%E5%99%A8/"
   },
@@ -635,11 +689,12 @@
    "reviews": 2990,
    "rank": 1,
    "score": 4.675,
-   "verdict": "lowest_90d",
+   "verdict": "lowest_observed",
    "median_90d": 11560,
+   "shipping_included": false,
+   "variants": false,
    "specs": {
-    "type_sonic": true,
-    "type_rotating": false,
+    "type": "sonic",
     "pressure_sensor": true,
     "timer": false,
     "modes": 5
@@ -657,9 +712,10 @@
    "score": 4.608,
    "verdict": "usual",
    "median_90d": 10540,
+   "shipping_included": true,
+   "variants": false,
    "specs": {
-    "type_sonic": false,
-    "type_rotating": true,
+    "type": "rotating",
     "pressure_sensor": false,
     "timer": false,
     "modes": 2
@@ -677,9 +733,10 @@
    "score": 4.573,
    "verdict": "usual",
    "median_90d": 8730,
+   "shipping_included": false,
+   "variants": false,
    "specs": {
-    "type_sonic": true,
-    "type_rotating": false,
+    "type": "sonic",
     "pressure_sensor": false,
     "timer": true
    },
@@ -696,9 +753,10 @@
    "score": 4.497,
    "verdict": "usual",
    "median_90d": 6450,
+   "shipping_included": true,
+   "variants": false,
    "specs": {
-    "type_sonic": true,
-    "type_rotating": false,
+    "type": "sonic",
     "pressure_sensor": false,
     "timer": true
    },
@@ -715,9 +773,10 @@
    "score": 4.223,
    "verdict": "usual",
    "median_90d": 11280,
+   "shipping_included": false,
+   "variants": false,
    "specs": {
-    "type_sonic": false,
-    "type_rotating": true,
+    "type": "rotating",
     "pressure_sensor": true,
     "timer": true
    },
@@ -732,11 +791,12 @@
    "reviews": 3318,
    "rank": 6,
    "score": 4.114,
-   "verdict": "lowest_90d",
+   "verdict": "lowest_observed",
    "median_90d": 6020,
+   "shipping_included": true,
+   "variants": false,
    "specs": {
-    "type_sonic": true,
-    "type_rotating": false,
+    "type": "sonic",
     "pressure_sensor": true,
     "timer": true,
     "modes": 3

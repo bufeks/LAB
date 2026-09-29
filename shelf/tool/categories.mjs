@@ -2,8 +2,11 @@
 // turn its results into a comparable, honest shortlist:
 //
 //   query/ngKeywords/minPrice/maxPrice  -> what Rakuten is asked for
-//   require/exclude                     -> title regexes: must look like the product itself,
-//                                          not a case, spare part or refill
+//   noun                                -> regex naming the product; titles without it are skipped
+//   accessories                         -> words that make a listing an accessory when they come
+//                                          before the noun, as "<noun>用", or with のみ/単品
+//                                          ("替えブラシ付き" and "フィルター不要" are fine)
+//   exclude                             -> regexes that always disqualify a title
 //   minReviews                          -> items with fewer reviews are not ranked
 //   facets                              -> specs pulled out of titles so agents can filter
 //   guide                               -> buying criteria written for this site; it is the
@@ -19,32 +22,50 @@ export const CATEGORIES = [
     nameEn: 'Power bank',
     query: 'モバイルバッテリー',
     ngKeywords: ['中古', 'ジャンク'],
-    require: 'モバイル\\s*バッテリー',
-    exclude: ['(ケース|ポーチ|カバー)のみ', '(ケース|ポーチ|カバー)\\s*(単品|単体)', 'セル交換', '部品'],
+    noun: 'モバイル\\s*バッテリー',
+    accessories: 'ケース|ポーチ|カバー|収納袋',
+    exclude: ['セル交換', '部品'],
     minPrice: 1000,
     maxPrice: 20000,
     minReviews: 30,
     facets: [
       { key: 'capacity_mah', label: '容量', unit: 'mAh', type: 'number', pattern: '(\\d{1,3}[,，]?\\d{3})\\s*mAh', pick: 'max', min: 1000, max: 60000 },
       { key: 'output_w', label: '最大出力', unit: 'W', type: 'number', pattern: '(\\d{2,3}(?:\\.\\d)?)\\s*W(?!h)', pick: 'max', min: 5, max: 300 },
+      { key: 'energy_wh', label: '電力量(表記)', unit: 'Wh', type: 'number', pattern: '(\\d{2,3}(?:\\.\\d{1,2})?)\\s*Wh', pick: 'max', min: 5, max: 400 },
+      { key: 'weight_g', label: '重さ', unit: 'g', type: 'number', pattern: '(\\d{2,4})\\s*g(?![a-z])', pick: 'first', min: 50, max: 1500 },
       { key: 'pse', label: 'PSE表記', type: 'flag', pattern: 'PSE' },
       { key: 'builtin_cable', label: 'ケーブル内蔵', type: 'flag', pattern: 'ケーブル内蔵|ケーブル一体' },
       { key: 'magnetic', label: 'マグネット式', type: 'flag', pattern: 'MagSafe|マグセーフ|マグネット' },
     ],
     derived: [
-      // Nominal 3.6-3.7V cells; airlines use Wh, so agents asked about flights need it.
-      { key: 'energy_wh_est', label: '推定電力量', unit: 'Wh', from: 'capacity_mah', formula: (mah) => Math.round((mah * 3.7) / 100) / 10 },
+      // Airlines limit by Wh. Estimate at 3.85V (the high end of common cells)
+      // so the estimate errs towards "needs checking", never towards "fine".
+      { key: 'energy_wh_est', label: '推定電力量(3.85V換算)', unit: 'Wh', compute: (f) => (f.capacity_mah ? Math.round(f.capacity_mah * 3.85) / 1000 : undefined) },
+      {
+        key: 'flight_carry_on',
+        label: '機内持ち込み目安',
+        compute: (f) => {
+          const wh = f.energy_wh ?? f.energy_wh_est;
+          if (wh == null) return undefined;
+          if (wh <= 95) return 'ok';
+          if (wh <= 100) return 'check_label';
+          if (wh <= 160) return 'airline_approval_needed';
+          return 'not_allowed';
+        },
+      },
+      { key: 'energy_wh_source', label: '電力量の根拠', compute: (f) => (f.energy_wh != null ? 'stated' : f.energy_wh_est != null ? 'estimated' : undefined) },
     ],
     guide: {
+      asOf: '2026-09',
       summary:
-        '普段使いは10000mAh・20W以上、ノートPCも充電するなら20000mAh・45W以上が目安。国内で売られる製品はPSEマークが必須で、' +
-        '飛行機は機内持ち込みのみ（預け入れ不可）・100Whを超えると航空会社の承認が要る。',
+        '普段使いは10000mAh・20W以上、ノートPCも充電するなら20000mAh・45W以上が目安。国内で売られる製品はPSEマークが必須。' +
+        '飛行機は預け入れ不可で機内持ち込みのみ、100Whを超えると航空会社の承認が要り、機内での使用・充電を禁じる航空会社も多い。',
       criteria: [
         { name: '容量 (mAh)', detail: '表示容量のうち実際にスマホへ入るのは電圧変換ロスで約6〜7割。10000mAhで一般的なスマホを約1.5〜2回充電できる。' },
         { name: '出力 (W)', detail: 'iPhoneの急速充電はUSB PD 20W以上。ノートPCは機種の純正アダプタに近いW数（45〜65W以上）が必要。' },
         { name: '重さ', detail: '10000mAhクラスで約180〜250g、20000mAhクラスで約300〜450g。持ち歩くなら容量より先に重さで絞る。' },
         { name: 'PSEマーク', detail: '2019年2月以降、PSEマークのないモバイルバッテリーは国内で販売できない（電気用品安全法）。表記がない出品は避ける。' },
-        { name: '飛行機', detail: '預け入れ不可・機内持ち込みのみ。100Wh以下は制限なし、100Wh超160Wh以下は航空会社の承認が必要（通常2個まで）、160Wh超は持ち込み不可。20000mAh(3.7V)は約74Wh。最新の条件は利用する航空会社で確認する。' },
+        { name: '飛行機', detail: '預け入れ不可・機内持ち込みのみ。一般的な基準は、100Wh以下は承認不要、100Wh超160Wh以下は航空会社の承認が必要（通常2個まで）、160Wh超は持ち込み不可。2025年以降、機内での使用・充電の禁止や個数制限を設ける航空会社が増え、国内線では収納棚に入れず手元に置くよう求められている。Whは本体表記で確認する（20000mAhは約74Wh、27000mAh級は100Wh前後で要確認）。条件は利用する航空会社の最新情報で確認する。' },
       ],
       pitfalls: [
         '相場より極端に安い大容量品は、容量表記が実際より大きいことがある。',
@@ -58,8 +79,9 @@ export const CATEGORIES = [
     nameEn: 'USB-C PD charger',
     query: 'USB-C 充電器 PD',
     ngKeywords: ['中古', 'ジャンク', 'シガー'],
-    require: '充電器|アダプタ|アダプター',
-    exclude: ['ケーブル(単品|のみ)', '車載', 'シガーソケット', 'ワイヤレス充電器'],
+    noun: '充電器|アダプタ|アダプター',
+    accessories: 'ケーブル|変換プラグ',
+    exclude: ['車載', 'シガーソケット', 'ワイヤレス充電器'],
     minPrice: 800,
     maxPrice: 15000,
     minReviews: 30,
@@ -92,13 +114,14 @@ export const CATEGORIES = [
     nameEn: 'True wireless earbuds',
     query: 'ワイヤレスイヤホン',
     ngKeywords: ['中古', 'ジャンク', '骨伝導'],
-    require: 'イヤホン|イヤフォン',
-    exclude: ['^[^ ]{0,20}イヤーピース', '(ケース|カバー)(のみ|単品)', '片耳(のみ|単品)', '交換用', '骨伝導', '有線'],
+    noun: 'イヤホン|イヤフォン',
+    accessories: 'イヤーピース|イヤーチップ|ケース|カバー|ストラップ',
+    exclude: ['骨伝導', '有線イヤホン', '片耳(のみ|単品)'],
     minPrice: 2000,
     maxPrice: 50000,
     minReviews: 30,
     facets: [
-      { key: 'anc', label: 'ノイズキャンセリング', type: 'flag', pattern: 'ノイズキャンセリング|ノイキャン|ANC' },
+      { key: 'anc', label: 'ノイズキャンセリング', type: 'flag', pattern: 'ノイズキャンセリング|ノイキャン|(?<![A-Za-z])ANC(?![A-Za-z])' },
       { key: 'ldac', label: 'LDAC', type: 'flag', pattern: 'LDAC' },
       { key: 'aptx', label: 'aptX', type: 'flag', pattern: 'aptX' },
       { key: 'multipoint', label: 'マルチポイント', type: 'flag', pattern: 'マルチポイント' },
@@ -126,13 +149,14 @@ export const CATEGORIES = [
     nameEn: 'Electric kettle',
     query: '電気ケトル',
     ngKeywords: ['中古', 'ジャンク'],
-    require: 'ケトル',
-    exclude: ['(フタ|蓋|パッキン|フィルター)(のみ|単品)', '部品', '交換用'],
+    noun: 'ケトル',
+    accessories: 'フタ|蓋|パッキン|フィルター',
+    exclude: ['部品'],
     minPrice: 1500,
     maxPrice: 25000,
     minReviews: 30,
     facets: [
-      { key: 'capacity_l', label: '容量', unit: 'L', type: 'number', pattern: '(\\d\\.\\d{1,2})\\s*(?:L|l|ℓ|リットル)', pick: 'first', min: 0.3, max: 3 },
+      { key: 'capacity_l', label: '容量', unit: 'L', type: 'number', pattern: '(?<![\\d.])(\\d\\.\\d{1,2})\\s*(?:L|ℓ|リットル)', alt: [{ pattern: '(?<!\\d)(\\d{3,4})\\s*ml', scale: 0.001 }], pick: 'first', min: 0.3, max: 3 },
       { key: 'watt', label: '消費電力', unit: 'W', type: 'number', pattern: '(\\d{3,4})\\s*W', pick: 'max', min: 300, max: 1500 },
       { key: 'temp_control', label: '温度調節', type: 'flag', pattern: '温度調節|温度設定|温度調整' },
       { key: 'gooseneck', label: '細口(ドリップ向き)', type: 'flag', pattern: '細口|ドリップ|グースネック' },
@@ -160,19 +184,28 @@ export const CATEGORIES = [
     nameEn: 'Humidifier',
     query: '加湿器',
     ngKeywords: ['中古', 'ジャンク', 'アロマオイル', '抗菌剤'],
-    require: '加湿器',
-    exclude: ['交換用', '交換フィルター', '(フィルター|カートリッジ|タンク)(のみ|単品)', '部品', '互換'],
+    noun: '加湿器',
+    accessories: '交換用?フィルター|フィルター|カートリッジ',
+    exclude: ['互換', '部品', 'タンク(のみ|単品)'],
     minPrice: 2000,
     maxPrice: 60000,
     minReviews: 30,
     facets: [
       { key: 'rated_ml_h', label: '加湿量', unit: 'mL/h', type: 'number', pattern: '(\\d{3,4})\\s*m[lL]\\s*/\\s*h', pick: 'max', min: 50, max: 3000 },
       { key: 'room_tatami', label: '適用畳数(最大)', unit: '畳', type: 'number', pattern: '(\\d{1,2})\\s*畳', pick: 'max', min: 2, max: 60 },
-      { key: 'tank_l', label: 'タンク容量', unit: 'L', type: 'number', pattern: 'タンク.{0,6}?(\\d(?:\\.\\d)?)\\s*(?:L|l|ℓ|リットル)', pick: 'first', min: 0.2, max: 15 },
-      { key: 'type_steam', label: 'スチーム式', type: 'flag', pattern: 'スチーム|加熱式' },
-      { key: 'type_evaporative', label: '気化式', type: 'flag', pattern: '気化式' },
-      { key: 'type_ultrasonic', label: '超音波式', type: 'flag', pattern: '超音波' },
-      { key: 'type_hybrid', label: 'ハイブリッド式', type: 'flag', pattern: 'ハイブリッド' },
+      { key: 'tank_l', label: 'タンク容量', unit: 'L', type: 'number', pattern: 'タンク.{0,6}?(?<![\\d.])(\\d{1,2}(?:\\.\\d)?)\\s*(?:L|ℓ|リットル)', pick: 'first', min: 0.2, max: 15 },
+      {
+        key: 'type',
+        label: '方式',
+        type: 'enum',
+        // First match wins: hybrids often also say 加熱式 or 超音波.
+        options: [
+          { value: 'hybrid', label: 'ハイブリッド式', pattern: 'ハイブリッド' },
+          { value: 'steam', label: 'スチーム式', pattern: 'スチーム|加熱式' },
+          { value: 'evaporative', label: '気化式', pattern: '気化式' },
+          { value: 'ultrasonic', label: '超音波式', pattern: '超音波' },
+        ],
+      },
     ],
     guide: {
       summary:
@@ -196,14 +229,22 @@ export const CATEGORIES = [
     nameEn: 'Electric toothbrush',
     query: '電動歯ブラシ',
     ngKeywords: ['中古', 'ジャンク', '互換'],
-    require: '歯ブラシ',
-    exclude: ['^[^ ]{0,12}(替え?|交換)ブラシ', '(替え?|交換)ブラシ.{0,6}(本入|本セット|本組|個入)', '互換', '(ヘッド|充電器|スタンド)(のみ|単品)'],
+    noun: '歯ブラシ',
+    accessories: '替え?ブラシ|交換ブラシ|ブラシヘッド|替えヘッド',
+    exclude: ['互換'],
     minPrice: 2000,
     maxPrice: 40000,
     minReviews: 30,
     facets: [
-      { key: 'type_sonic', label: '音波式', type: 'flag', pattern: '音波' },
-      { key: 'type_rotating', label: '回転式', type: 'flag', pattern: '回転' },
+      {
+        key: 'type',
+        label: '方式',
+        type: 'enum',
+        options: [
+          { value: 'sonic', label: '音波式', pattern: '音波|ソニッケアー|sonicare' },
+          { value: 'rotating', label: '回転式', pattern: '回転|オーラルB|Oral-?B' },
+        ],
+      },
       { key: 'pressure_sensor', label: '押しつけ防止', type: 'flag', pattern: '圧センサー|過圧|押し(つ|付)け(防止|すぎ)' },
       { key: 'timer', label: 'タイマー', type: 'flag', pattern: 'タイマー' },
       { key: 'modes', label: 'モード数', unit: '', type: 'number', pattern: '(\\d)\\s*(?:つの)?モード', pick: 'max', min: 1, max: 9 },
@@ -228,17 +269,17 @@ export const METHOD = {
   version: '2026-09',
   summary:
     'Rakutenで各カテゴリをレビュー件数順に最大60件取得し、除外語・価格帯・最低レビュー件数で絞り、' +
-    'ほぼ同じ商品名の重複は最安の1件にまとめる。残りを「ベイズ平均評価」で並べる。',
+    '同じ商品の別ショップ出品（型番が同じ、またはスペックが同じで商品名がほぼ同じもの）は評価の高い1件にまとめ、他店の価格は other_offers に残す。残りを「ベイズ平均評価」で並べる。',
   formula: 'score = (C × m + n × r) / (C + n)  … r=その商品の平均評価, n=レビュー件数, m=候補全体の平均評価, C=50',
   why:
     'レビュー数件の★5より、数千件の★4.4を上に置くため。件数が少ない商品ほど評価が候補全体の平均に引き寄せられる。',
   picks: {
     best: 'スコア1位',
     budget: 'スコアが候補の上位40%以内の商品のうち最安',
-    deal: '過去90日の中央値から最も値下がりしている商品（観測7日以上、異常値は除く）',
+    deal: '価格判定が「いつもより安い」以上の商品のうち、中央値からの値下がり率が最大のもの（異常値・容量などを選べる出品は除く）',
   },
   priceVerdict:
-    '毎日の価格を記録し、過去90日で観測7日未満は insufficient_data、90日最安値以下なら lowest_90d、' +
-    '中央値の90%以下なら below_usual、110%以上なら above_usual、それ以外は usual。',
+    '毎日の価格（送料込/別が今日と同じ日だけ）を記録し、観測7日未満は insufficient_data。中央値より3%以上安く観測期間の最安値なら lowest_observed、' +
+    '中央値の90%以下なら below_usual、110%以上なら above_usual、それ以外は usual。観測期間は最大90日で window_days に示す。',
   caveat: 'スペック(facets)は商品名から機械的に抜き出した参考値で、誤りを含むことがある。購入前に商品ページで確認すること。',
 };

@@ -1,5 +1,5 @@
 {
- "at": "2026-09-29T15:46:36.143Z",
+ "at": "2026-09-29T16:01:16.453Z",
  "errors": [],
  "warnings": [
   "sample mode: set RAKUTEN_APP_ID / RAKUTEN_ACCESS_KEY secrets to publish real data"
@@ -10,8 +10,11 @@
    "status": "ok",
    "facet_coverage": {
     "capacity_mah": 1,
-    "output_w": 1
+    "output_w": 1,
+    "energy_wh": 0,
+    "weight_g": 0
    },
+   "variant_listings": 0,
    "reject_rate": 0,
    "rejected": {},
    "suspicious": 0
@@ -23,6 +26,7 @@
     "output_w": 1,
     "ports": 1
    },
+   "variant_listings": 0,
    "reject_rate": 0,
    "rejected": {},
    "suspicious": 0
@@ -34,6 +38,7 @@
     "ipx": 0.83,
     "battery_h": 0.5
    },
+   "variant_listings": 0,
    "reject_rate": 0,
    "rejected": {},
    "suspicious": 0
@@ -45,6 +50,7 @@
     "capacity_l": 1,
     "watt": 0.83
    },
+   "variant_listings": 0,
    "reject_rate": 0,
    "rejected": {},
    "suspicious": 0
@@ -57,6 +63,7 @@
     "room_tatami": 1,
     "tank_l": 0.83
    },
+   "variant_listings": 0,
    "reject_rate": 0,
    "rejected": {},
    "suspicious": 0
@@ -67,11 +74,12 @@
    "facet_coverage": {
     "modes": 0.5
    },
+   "variant_listings": 0,
    "reject_rate": 0,
    "rejected": {},
    "suspicious": 0
   },
-  "llms_txt_bytes": 4065
+  "llms_txt_bytes": 3871
  },
  "live": false
 }

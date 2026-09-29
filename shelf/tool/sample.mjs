@@ -74,7 +74,7 @@ export function sampleHistory(items, date, days = 30) {
     for (let d = days; d >= 1; d--) {
       const day = new Date(end - d * 86400000).toISOString().slice(0, 10);
       const drift = idx % 3 === 0 ? 1.15 : idx % 3 === 1 ? 1.0 : 0.95;
-      points.push([day, Math.round((item.price * drift * (0.97 + rand() * 0.06)) / 10) * 10]);
+      points.push([day, Math.round((item.price * drift * (0.97 + rand() * 0.06)) / 10) * 10, item.shippingIncluded ? 1 : 0]);
     }
     history[item.id] = { name: item.name, points };
   });

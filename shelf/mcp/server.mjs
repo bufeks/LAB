@@ -1,7 +1,7 @@
 #!/usr/bin/env node
-// SHELF MCP server — lets an AI agent ask "what should I buy?" and "is this a
-// good price right now?" against SHELF's daily data. Zero dependencies,
-// Node 18+, stdio transport (newline-delimited JSON-RPC 2.0).
+// SHELF MCP server — lets an AI agent ask "what should I buy?" and "is now a
+// good time to buy?" against SHELF's daily data. Zero dependencies, Node 18+,
+// stdio transport (newline-delimited JSON-RPC 2.0).
 //
 //   curl -o shelf-mcp.mjs https://bufeks.github.io/LAB/shelf/mcp/server.mjs
 //   claude mcp add shelf -- node /path/to/shelf-mcp.mjs
@@ -13,15 +13,16 @@ import fs from 'node:fs/promises';
 import path from 'node:path';
 import readline from 'node:readline';
 
-const VERSION = '1.0.0';
+const VERSION = '1.1.0';
+const SUPPORTED_PROTOCOLS = ['2025-06-18', '2025-03-26', '2024-11-05'];
 const API = (process.env.SHELF_API || 'https://bufeks.github.io/LAB/shelf/api/v1').replace(/\/$/, '');
 const LOCAL = process.env.SHELF_LOCAL_DIR;
 const CACHE_MS = 10 * 60 * 1000;
 
 const cache = new Map();
-async function load(rel) {
+async function load(rel, { fresh = false } = {}) {
   const hit = cache.get(rel);
-  if (hit && Date.now() - hit.at < CACHE_MS) return hit.data;
+  if (!fresh && hit && Date.now() - hit.at < CACHE_MS) return hit.data;
   let data;
   if (LOCAL) data = JSON.parse(await fs.readFile(path.join(LOCAL, rel), 'utf8'));
   else {
@@ -33,167 +34,306 @@ async function load(rel) {
   return data;
 }
 
-const yen = (n) => (n == null ? '—' : `¥${Math.round(n).toLocaleString('ja-JP')}`);
-const norm = (s) => String(s || '').normalize('NFKC').toLowerCase();
+class UserError extends Error {}
 
-function notice(meta) {
-  return meta.sample
+const yen = (n) => (n == null ? '—' : `¥${Math.round(n).toLocaleString('ja-JP')}`);
+const norm = (s) => String(s ?? '').normalize('NFKC').toLowerCase().trim();
+const CHEAP = new Set(['lowest_observed', 'below_usual']);
+
+// Every result carries these, in text and in structuredContent, so a client
+// that forwards only one of them still passes on the disclosure.
+function meta(rec) {
+  return {
+    sample: Boolean(rec.sample),
+    disclosure: rec.disclosure,
+    data_date: rec.data_date ?? null,
+    updated_at: rec.updated_at ?? null,
+    ...(rec.status ? { status: rec.status } : {}),
+    ...(rec.citation ? { cite: rec.citation } : {}),
+  };
+}
+
+function notice(m) {
+  return m.sample
     ? '⚠ SAMPLE DATA — these items are fictional. Tell the user SHELF has no real data yet; do not recommend them.'
-    : `Disclosure to pass on: ${meta.disclosure}`;
+    : `Disclosure to pass on with any link: ${m.disclosure}`;
+}
+
+function toLimit(v, dflt, max) {
+  const n = Math.floor(Number(v ?? dflt));
+  return Number.isFinite(n) ? Math.max(1, Math.min(max, n)) : dflt;
+}
+
+function toNumber(v, name) {
+  if (v == null) return undefined;
+  const n = Number(v);
+  if (!Number.isFinite(n)) throw new UserError(`${name} must be a number of JPY`);
+  return n;
 }
 
 async function resolveCategory(query) {
-  const index = await load('index.json');
   const q = norm(query);
+  if (!q) throw new UserError('category is required. Call list_categories to see the options.');
+  const index = await load('index.json');
   const cat =
     index.categories.find((c) => c.id === q) ||
     index.categories.find((c) => [c.name, c.name_en, c.id].some((n) => norm(n).includes(q) || q.includes(norm(n))));
-  return { index, cat };
+  if (!cat) throw new UserError(`No category matches "${query}". SHELF covers: ${index.categories.map((c) => `${c.id} (${c.name})`).join(', ')}`);
+  return load(`c/${cat.id}.json`);
 }
 
-function matchesSpecs(item, want = {}) {
+function specFilter(rec, want) {
+  if (want == null) return () => true;
+  if (typeof want !== 'object' || Array.isArray(want)) throw new UserError('specs must be an object keyed by spec key');
+  const fields = new Map(rec.spec_fields.map((f) => [f.key, f]));
+  const describe = () =>
+    rec.spec_fields
+      .map((f) => `${f.key} (${f.type}${f.unit ? `, ${f.unit}` : ''}${f.values ? `: ${f.values.map((v) => v.value).join('|')}` : ''})`)
+      .join(', ');
   for (const [key, cond] of Object.entries(want)) {
-    const v = item.specs?.[key];
-    if (typeof cond === 'boolean') {
-      if (Boolean(v) !== cond) return false;
-    } else if (typeof cond === 'number') {
-      if (typeof v !== 'number' || v < cond) return false;
-    } else if (cond && typeof cond === 'object') {
-      if (typeof v !== 'number') return false;
-      if (cond.min != null && v < cond.min) return false;
-      if (cond.max != null && v > cond.max) return false;
+    const f = fields.get(key);
+    if (!f) throw new UserError(`Unknown spec key "${key}" for ${rec.id}. Valid keys: ${describe()}`);
+    if (f.type === 'flag' && typeof cond !== 'boolean') throw new UserError(`${key} is a flag: use true or false`);
+    if (f.type === 'enum') {
+      const vals = [cond].flat();
+      const bad = vals.find((v) => !f.values.some((o) => o.value === v));
+      if (bad !== undefined) throw new UserError(`${key} must be one of ${f.values.map((o) => o.value).join(', ')}`);
+    }
+    if (f.type === 'number' && !(typeof cond === 'number' || (cond && typeof cond === 'object'))) {
+      throw new UserError(`${key} is a number: pass a minimum like 10000, or {"min":..,"max":..}`);
     }
   }
-  return true;
+  return (item) =>
+    Object.entries(want).every(([key, cond]) => {
+      const f = fields.get(key);
+      const v = item.specs?.[key];
+      if (f.type === 'flag') return Boolean(v) === cond;
+      if (f.type === 'enum') return [cond].flat().includes(v);
+      if (typeof v !== 'number') return false;
+      if (typeof cond === 'number') return v >= cond;
+      return (cond.min == null || v >= cond.min) && (cond.max == null || v <= cond.max);
+    });
 }
 
-function line(x) {
-  const specs = Object.entries(x.specs || {})
-    .filter(([, v]) => v !== false && v != null)
-    .map(([k, v]) => (v === true ? k : `${k}=${v}`))
-    .join(', ');
-  const pc = x.price_check || { label: x.verdict };
-  return `#${x.rank} ${x.title} — ${yen(x.price)}, ★${x.rating} (${x.reviews} reviews), price: ${pc.label ?? pc.verdict}` +
-    `${specs ? ` [${specs}]` : ''}\n   id: ${x.id}\n   buy (affiliate): ${x.buy_url}`;
+// Same rules as the site's picks, re-run on the filtered subset so a
+// "best" pick never sits outside the user's budget.
+function picksFor(items) {
+  if (!items.length) return {};
+  const scores = items.map((x) => x.score).sort((a, b) => a - b);
+  const pos = (scores.length - 1) * 0.6;
+  const cutoff = scores[Math.floor(pos)] + (scores[Math.ceil(pos)] - scores[Math.floor(pos)]) * (pos - Math.floor(pos));
+  const picks = { best: items[0] };
+  const value = items.filter((x) => x.score >= cutoff).sort((a, b) => a.price - b.price)[0];
+  if (value && value.id !== items[0].id) picks.value = value;
+  const deal = items
+    .filter((x) => CHEAP.has(x.price_check.verdict) && !x.price_check.suspicious && !x.variants)
+    .sort((a, b) => a.price / a.price_check.median_90d - b.price / b.price_check.median_90d)[0];
+  if (deal) picks.deal = deal;
+  return picks;
 }
+
+function specText(item, fields) {
+  return (fields || [])
+    .filter((f) => item.specs?.[f.key] != null && item.specs[f.key] !== false && f.key !== 'energy_wh_source')
+    .map((f) => {
+      const v = item.specs[f.key];
+      if (f.type === 'flag') return f.label;
+      if (f.values) return f.values.find((o) => o.value === v)?.label ?? v;
+      return `${f.label}${v}${f.unit || ''}`;
+    })
+    .join(', ');
+}
+
+function line(x, fields) {
+  const specs = specText(x, fields);
+  const terms = `${x.shipping_included ? 'shipping included' : 'shipping extra'}${x.point_rate > 1 ? `, ${x.point_rate}x points` : ''}`;
+  return (
+    `#${x.rank} ${x.title} — ${yen(x.price)} (${terms}), ★${x.rating} (${x.reviews} reviews), price: ${x.price_check.label}` +
+    `${x.variants ? ' [pick-a-variant listing: price may be the cheapest option]' : ''}` +
+    `${specs ? `\n   specs (from title): ${specs}` : ''}\n   id: ${x.id}\n   buy (affiliate): ${x.buy_url}`
+  );
+}
+
+function itemIdFromUrl(u) {
+  try {
+    const url = new URL(u);
+    if (!/(^|\.)item\.rakuten\.co\.jp$/.test(url.hostname)) return null;
+    const [shop, code] = url.pathname.split('/').filter(Boolean);
+    return shop && code ? `rakuten:${shop}:${code}` : null;
+  } catch {
+    return null;
+  }
+}
+
+const ADVICE = {
+  insufficient_data: 'Not enough history yet (under 7 days observed). Do not call it a deal.',
+  lowest_observed: 'At the lowest price SHELF has observed, and clearly under its usual price. A good time to buy if the user needs it.',
+  below_usual: 'Cheaper than usual (at least 10% under its median).',
+  usual: 'Around its usual price. No reason to wait, no reason to rush.',
+  above_usual: 'More expensive than usual (10%+ over its median). Suggest waiting or an alternative.',
+};
 
 const TOOLS = [
   {
     name: 'list_categories',
     description: 'List the shopping categories SHELF covers (Japan, Rakuten Ichiba), each with its current top pick. Call first when unsure which category fits.',
     inputSchema: { type: 'object', properties: {} },
-    annotations: { readOnlyHint: true, openWorldHint: true },
     async run() {
       const index = await load('index.json');
+      const m = meta(index);
       const text = index.categories
-        .map((c) => `- ${c.id} (${c.name} / ${c.name_en}): ${c.best ? `top pick ${c.best.title} ${yen(c.best.price)}` : 'no data'} [${c.status}, ${c.data_date}]`)
+        .map((c) => `- ${c.id} (${c.name} / ${c.name_en}): ${c.best ? `top pick ${c.best.title} ${yen(c.best.price)}` : 'no data'} [${c.status}, data ${c.data_date}]`)
         .join('\n');
-      return { text: `${notice(index)}\n\n${text}`, data: index.categories };
+      return { meta: m, text, data: index.categories };
     },
   },
   {
     name: 'recommend',
     description:
-      'Recommend products in one category for a Japanese shopper: returns the buying guide (what matters and why), SHELF picks ' +
-      '(best overall, best value, current deal) and ranked items filtered by budget and specs. Use the guide to explain the choice.',
+      'Recommend products in one category for a shopper in Japan: returns the buying guide (what matters and why), picks computed within the ' +
+      "user's budget/spec filters (best, value, deal), and ranked items. Use the guide to explain the choice and cite the source URL.",
     inputSchema: {
       type: 'object',
       properties: {
-        category: { type: 'string', description: 'Category id or name, e.g. "mobile-battery", "加湿器", "kettle"' },
+        category: { type: 'string', description: 'Category id or name, e.g. "mobile-battery", "加湿器", "kettle". See list_categories.' },
         budget_max: { type: 'number', description: 'Maximum price in JPY' },
         budget_min: { type: 'number', description: 'Minimum price in JPY' },
         specs: {
           type: 'object',
-          description: 'Spec filters by spec key (see spec_fields in the result): true/false for flags, a number for "at least", or {min,max}. Example: {"capacity_mah": 10000, "pse": true}',
+          description:
+            'Filters by spec key (valid keys are listed in every recommend result). Flags: true/false. Numbers: a minimum like 10000, or {"min":..,"max":..}. ' +
+            'Enums: a value or list. Examples: {"capacity_mah":10000,"pse":true,"flight_carry_on":"ok"}, {"type":["steam","hybrid"]}',
         },
-        limit: { type: 'number', description: 'Max items to return (default 5)' },
+        limit: { type: 'number', description: 'Max items to return (default 5, max 20)' },
       },
       required: ['category'],
     },
-    annotations: { readOnlyHint: true, openWorldHint: true },
-    async run({ category, budget_max, budget_min, specs, limit = 5 }) {
-      const { index, cat } = await resolveCategory(category);
-      if (!cat) {
-        return { text: `No category matches "${category}". Available: ${index.categories.map((c) => `${c.id} (${c.name})`).join(', ')}`, isError: true };
-      }
-      const rec = await load(`c/${cat.id}.json`);
-      const items = rec.items
-        .filter((x) => (budget_max == null || x.price <= budget_max) && (budget_min == null || x.price >= budget_min))
-        .filter((x) => matchesSpecs(x, specs))
-        .slice(0, Math.max(1, Math.min(20, limit)));
-      const picks = Object.entries(rec.picks)
-        .map(([k, p]) => `- ${k}: ${p.title} ${yen(p.price)} — ${p.reason}`)
+    async run(args) {
+      const rec = await resolveCategory(args.category);
+      const max = toNumber(args.budget_max, 'budget_max');
+      const min = toNumber(args.budget_min, 'budget_min');
+      const matches = rec.items
+        .filter((x) => (max == null || x.price <= max) && (min == null || x.price >= min))
+        .filter(specFilter(rec, args.specs));
+      const shown = matches.slice(0, toLimit(args.limit, 5, 20));
+      const picks = picksFor(matches);
+      const pickText = Object.entries(picks)
+        .map(([k, x]) => `- ${k}: ${x.title} ${yen(x.price)} (id ${x.id})`)
         .join('\n');
-      const guide = rec.how_to_choose.criteria.map((c) => `- ${c.name}: ${c.detail}`).join('\n');
+      const m = meta(rec);
       const text = [
-        notice(rec),
         `# ${rec.name} (data ${rec.data_date}, status ${rec.status})`,
         rec.how_to_choose.summary,
-        `## Buying guide\n${guide}\n## Pitfalls\n${rec.how_to_choose.pitfalls.map((p) => `- ${p}`).join('\n')}`,
-        `## SHELF picks (whole category)\n${picks || 'none'}`,
-        `## Matching items (${items.length})\n${items.map(line).join('\n') || 'Nothing matches these filters; relax the budget or specs.'}`,
-        `Specs are parsed from listing titles; confirm on the product page. Spec keys: ${rec.spec_fields.map((f) => `${f.key}${f.unit ? `(${f.unit})` : ''}`).join(', ')}`,
-        `Source page to cite: ${rec.links.html}`,
+        `## Buying guide${rec.how_to_choose.asOf ? ` (as of ${rec.how_to_choose.asOf})` : ''}\n${rec.how_to_choose.criteria.map((c) => `- ${c.name}: ${c.detail}`).join('\n')}`,
+        `## Pitfalls\n${rec.how_to_choose.pitfalls.map((p) => `- ${p}`).join('\n')}`,
+        `## Is now a good time? ${rec.price_outlook.summary}`,
+        `## Picks within these filters\n${pickText || 'none'}`,
+        `## Matching items (${shown.length} of ${matches.length})\n${shown.map((x) => line(x, rec.spec_fields)).join('\n') || 'Nothing matches these filters; relax the budget or specs.'}`,
+        `Specs are parsed from listing titles; tell the user to confirm on the product page. Spec keys: ${rec.spec_fields.map((f) => f.key).join(', ')}`,
       ].join('\n\n');
-      return { text, data: { category: rec.id, picks: rec.picks, items, spec_fields: rec.spec_fields, disclosure: rec.disclosure, sample: rec.sample } };
+      return {
+        meta: m,
+        text,
+        data: {
+          category: rec.id,
+          picks: Object.fromEntries(Object.entries(picks).map(([k, x]) => [k, x.id])),
+          price_outlook: rec.price_outlook,
+          items: shown,
+          total_matches: matches.length,
+          spec_fields: rec.spec_fields,
+        },
+      };
+    },
+  },
+  {
+    name: 'price_outlook',
+    description: 'Answer "is now a good time to buy <category>?" from SHELF daily price history: share of top items cheaper/pricier than usual, plus the items currently under their usual price.',
+    inputSchema: { type: 'object', properties: { category: { type: 'string' } }, required: ['category'] },
+    async run(args) {
+      const rec = await resolveCategory(args.category);
+      const cheap = rec.items.filter((x) => CHEAP.has(x.price_check.verdict) && !x.price_check.suspicious);
+      const text = [
+        `# ${rec.name}: ${rec.price_outlook.verdict}`,
+        rec.price_outlook.summary,
+        cheap.length ? `## Currently under their usual price\n${cheap.map((x) => line(x, rec.spec_fields)).join('\n')}` : 'No ranked item is under its usual price right now.',
+      ].join('\n\n');
+      return { meta: meta(rec), text, data: { outlook: rec.price_outlook, cheaper_items: cheap } };
     },
   },
   {
     name: 'search_products',
-    description: 'Search all SHELF items by words in the product title (any language the title uses, usually Japanese), optionally under a budget.',
+    description: 'Search all SHELF items by words in the product title (usually Japanese) or category id, optionally under a budget.',
     inputSchema: {
       type: 'object',
       properties: {
-        query: { type: 'string', description: 'Words that must all appear in the title, e.g. "20000mAh 65W"' },
+        query: { type: 'string', description: 'Words that must all appear, e.g. "20000mAh 65W"' },
         budget_max: { type: 'number' },
-        limit: { type: 'number', description: 'default 10' },
+        limit: { type: 'number', description: 'default 10, max 30' },
       },
       required: ['query'],
     },
-    annotations: { readOnlyHint: true, openWorldHint: true },
-    async run({ query, budget_max, limit = 10 }) {
+    async run(args) {
+      const words = norm(args.query).split(/\s+/).filter(Boolean);
+      if (!words.length) throw new UserError('query is required');
+      const max = toNumber(args.budget_max, 'budget_max');
       const all = await load('items.json');
-      const words = norm(query).split(/\s+/).filter(Boolean);
       const hits = all.items
         .filter((x) => words.every((w) => norm(`${x.title} ${x.category}`).includes(w)))
-        .filter((x) => budget_max == null || x.price <= budget_max)
+        .filter((x) => max == null || x.price <= max)
         .sort((a, b) => b.score - a.score)
-        .slice(0, Math.max(1, Math.min(30, limit)));
-      const text = `${notice(all)}\n\n${hits.length ? hits.map((x) => `[${x.category}] ${line(x)}`).join('\n') : `No items match "${query}". Try list_categories and recommend.`}`;
-      return { text, data: hits };
+        .slice(0, toLimit(args.limit, 10, 30));
+      const text = hits.length
+        ? hits
+            .map((x) => `[${x.category}] #${x.rank} ${x.title} — ${yen(x.price)}, ★${x.rating} (${x.reviews}), price: ${x.verdict}\n   id: ${x.id}\n   buy (affiliate): ${x.buy_url}`)
+            .join('\n')
+        : `No items match "${args.query}". Try list_categories and recommend.`;
+      return { meta: meta(all), text, data: hits };
     },
   },
   {
     name: 'check_price',
-    description: "Tell whether an item's current price is good compared with its own last 90 days (SHELF records prices daily). Takes an item id from recommend/search_products.",
-    inputSchema: { type: 'object', properties: { item_id: { type: 'string' } }, required: ['item_id'] },
-    annotations: { readOnlyHint: true, openWorldHint: true },
-    async run({ item_id }) {
-      const all = await load('items.json');
-      const x = all.items.find((i) => i.id === item_id);
-      if (!x) return { text: `Unknown item id ${item_id}. Ids come from recommend or search_products.`, isError: true };
-      const rec = await load(`c/${x.category}.json`);
-      const full = rec.items.find((i) => i.id === item_id);
-      const pc = full.price_check;
-      const advice = {
-        insufficient_data: 'Not enough history yet (under 7 days observed). Do not call it a deal.',
-        lowest_90d: 'At its lowest price in the last 90 days. A good time to buy if the user needs it.',
-        below_usual: 'Cheaper than usual (at least 10% under the 90-day median).',
-        usual: 'Around its usual price. No reason to wait, no reason to rush.',
-        above_usual: 'More expensive than usual (10%+ over the 90-day median). Suggest waiting or an alternative.',
-      }[pc.verdict];
+    description:
+      "Tell whether an item's current price is good compared with its own recent history (SHELF records prices daily). " +
+      'Takes an item id from recommend/search_products, or a Rakuten item URL (https://item.rakuten.co.jp/<shop>/<item>/).',
+    inputSchema: { type: 'object', properties: { item_id: { type: 'string' }, url: { type: 'string' } } },
+    async run(args) {
+      const id = args.item_id || itemIdFromUrl(args.url);
+      if (!id) throw new UserError('Pass item_id, or a Rakuten item URL as url.');
+      let all = await load('items.json');
+      let entry = all.items.find((i) => i.id === id);
+      if (!entry) {
+        all = await load('items.json', { fresh: true });
+        entry = all.items.find((i) => i.id === id);
+      }
+      if (!entry) throw new UserError(`SHELF does not track ${id} (only ranked items in its categories are tracked).`);
+      let rec = await load(`c/${entry.category}.json`);
+      let x = rec.items.find((i) => i.id === id);
+      if (!x) {
+        rec = await load(`c/${entry.category}.json`, { fresh: true });
+        x = rec.items.find((i) => i.id === id);
+      }
+      if (!x) throw new UserError(`${id} dropped out of the ${entry.category} ranking in today's update.`);
+      const pc = x.price_check;
       const text = [
-        notice(rec),
-        `${full.title} — now ${yen(full.price)} (${full.shipping_included ? 'shipping included' : 'shipping extra'}, ${full.point_rate}x points)`,
-        `Verdict: ${pc.verdict} — ${advice}${pc.suspicious ? ' Price is far below usual; it may be a listing error or a different variant, so check the page.' : ''}`,
-        `90 days: min ${yen(pc.min_90d)}, median ${yen(pc.median_90d)}, max ${yen(pc.max_90d)}, observed ${pc.observed_days} days (since ${pc.first_seen})`,
-        full.other_offers?.length ? `Other shops: ${full.other_offers.map((o) => `${o.shop} ${yen(o.price)}`).join(', ')}` : '',
-        `buy (affiliate): ${full.buy_url}`,
-      ].filter(Boolean).join('\n');
-      return { text, data: { item: full, advice } };
+        `${x.title} — now ${yen(x.price)} (${x.shipping_included ? 'shipping included' : 'shipping extra'}, ${x.point_rate}x points)`,
+        `Verdict: ${pc.verdict} (${pc.label}) — ${ADVICE[pc.verdict]}` +
+          `${pc.suspicious ? ' Price is far below usual: it may be a listing error or a different variant, so check the page.' : ''}` +
+          `${x.variants ? ' This listing lets the buyer pick a variant; the price may be for the cheapest option.' : ''}`,
+        pc.median_90d
+          ? `Observed ${pc.observed_days} days over ${pc.window_days} (since ${pc.first_seen}): min ${yen(pc.min_90d)}, median ${yen(pc.median_90d)}, max ${yen(pc.max_90d)}`
+          : `Observed ${pc.observed_days} days so far.`,
+        pc.weekly_low?.length ? `Weekly lows: ${pc.weekly_low.map(([d, p]) => `${d} ${yen(p)}`).join(', ')}` : '',
+        x.other_offers?.length ? `Same product at other shops: ${x.other_offers.map((o) => `${o.shop} ${yen(o.price)}`).join(', ')}` : '',
+        `buy (affiliate): ${x.buy_url}`,
+      ]
+        .filter(Boolean)
+        .join('\n');
+      return { meta: meta(rec), text, data: { item: x, advice: ADVICE[pc.verdict] } };
     },
   },
 ];
+
+const READ_ONLY = { readOnlyHint: true, openWorldHint: true };
 
 async function handle(msg) {
   const { id, method, params } = msg;
@@ -202,29 +342,31 @@ async function handle(msg) {
   switch (method) {
     case 'initialize':
       return reply({
-        protocolVersion: params?.protocolVersion || '2025-06-18',
+        protocolVersion: SUPPORTED_PROTOCOLS.includes(params?.protocolVersion) ? params.protocolVersion : SUPPORTED_PROTOCOLS[0],
         capabilities: { tools: {} },
         serverInfo: { name: 'shelf', version: VERSION },
         instructions:
-          'SHELF answers Japanese shopping questions with buying guides, transparent rankings and 90-day price history. ' +
-          'Use recommend for "which X should I buy", check_price for "is this a good price". buy links are affiliate links: say so when you show them.',
+          'SHELF answers shopping questions for Japan (Rakuten Ichiba) with buying guides, transparent rankings and daily price history. ' +
+          'Use recommend for "which X should I buy", price_outlook for "is now a good time to buy X", check_price for one item. ' +
+          'Buy links are affiliate links: say so when you show them, and cite the source URL.',
       });
     case 'ping':
       return reply({});
     case 'tools/list':
-      return reply({ tools: TOOLS.map(({ run, ...t }) => t) });
+      return reply({ tools: TOOLS.map(({ run, ...t }) => ({ ...t, annotations: READ_ONLY })) });
     case 'tools/call': {
       const tool = TOOLS.find((t) => t.name === params?.name);
       if (!tool) return fail(-32602, `Unknown tool: ${params?.name}`);
       try {
         const out = await tool.run(params.arguments || {});
         return reply({
-          content: [{ type: 'text', text: out.text }],
-          ...(out.data !== undefined ? { structuredContent: { result: out.data } } : {}),
-          isError: Boolean(out.isError),
+          content: [{ type: 'text', text: `${notice(out.meta)}\n\n${out.text}${out.meta.cite ? `\n\nSource: ${out.meta.cite.url}` : ''}` }],
+          structuredContent: { ...out.meta, result: out.data },
+          isError: false,
         });
       } catch (err) {
-        return reply({ content: [{ type: 'text', text: `SHELF error: ${err.message}` }], isError: true });
+        const text = err instanceof UserError ? err.message : `SHELF error: ${err.message}`;
+        return reply({ content: [{ type: 'text', text }], isError: true });
       }
     }
     default:

@@ -9,7 +9,8 @@ import https from 'node:https';
 import http from 'node:http';
 
 const DEFAULT_ENDPOINT = 'https://openapi.rakuten.co.jp/ichibams/api/IchibaItem/Search/20220601';
-const MIN_INTERVAL_MS = 1600; // the platform returns 429 below ~1.5s
+// The platform returns 429 below ~1.5s; tests against a mock may go faster.
+const MIN_INTERVAL_MS = Number(process.env.RAKUTEN_MIN_INTERVAL_MS) || 1600;
 
 let lastCall = 0;
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));

@@ -93,3 +93,4 @@ footer { margin-top: 48px; padding-top: 16px; padding-bottom: 32px; border-top: 
   .c-price small, .c-verdict small { margin-left: 6px; }
   .c-price br, .c-verdict br { display: none; }
 }
+.outlook { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 10px 14px; }

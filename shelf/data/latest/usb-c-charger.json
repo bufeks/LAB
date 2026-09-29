@@ -1,7 +1,7 @@
 {
  "categoryId": "usb-c-charger",
  "date": "2026-09-30",
- "fetchedAt": "2026-09-29T15:46:36.033Z",
+ "fetchedAt": "2026-09-30T01:01:12+09:00",
  "items": [
   {
    "id": "sample:usb-c-charger-4",
@@ -20,6 +20,7 @@
    "image": null,
    "available": true,
    "title": "(サンプル) USB-C 充電器 (PD) D 30W 2ポート GaN PPS",
+   "variants": false,
    "score": 4.824,
    "facets": {
     "output_w": 30,
@@ -32,12 +33,35 @@
    "rank": 1,
    "priceStats": {
     "points": 31,
+    "windowDays": 31,
     "firstSeen": "2026-08-31",
     "min90": 4460,
     "median90": 5090,
     "max90": 5240,
-    "verdict": "lowest_90d"
-   }
+    "verdict": "lowest_observed"
+   },
+   "priceWeekly": [
+    [
+     "2026-08-31",
+     5050
+    ],
+    [
+     "2026-09-05",
+     5000
+    ],
+    [
+     "2026-09-15",
+     4990
+    ],
+    [
+     "2026-09-19",
+     4990
+    ],
+    [
+     "2026-09-30",
+     4460
+    ]
+   ]
   },
   {
    "id": "sample:usb-c-charger-6",
@@ -56,6 +80,7 @@
    "image": null,
    "available": true,
    "title": "(サンプル) USB-C 充電器 (PD) F 140W 3ポート GaN",
+   "variants": false,
    "score": 4.721,
    "facets": {
     "output_w": 140,
@@ -68,12 +93,35 @@
    "rank": 2,
    "priceStats": {
     "points": 31,
+    "windowDays": 31,
     "firstSeen": "2026-08-31",
     "min90": 2780,
     "median90": 2870,
     "max90": 3020,
     "verdict": "usual"
-   }
+   },
+   "priceWeekly": [
+    [
+     "2026-08-31",
+     2820
+    ],
+    [
+     "2026-09-04",
+     2790
+    ],
+    [
+     "2026-09-10",
+     2790
+    ],
+    [
+     "2026-09-22",
+     2800
+    ],
+    [
+     "2026-09-29",
+     2780
+    ]
+   ]
   },
   {
    "id": "sample:usb-c-charger-3",
@@ -92,6 +140,7 @@
    "image": null,
    "available": true,
    "title": "(サンプル) USB-C 充電器 (PD) C 100W 4ポート GaN",
+   "variants": false,
    "score": 4.518,
    "facets": {
     "output_w": 100,
@@ -104,12 +153,35 @@
    "rank": 3,
    "priceStats": {
     "points": 31,
+    "windowDays": 31,
     "firstSeen": "2026-08-31",
     "min90": 4780,
     "median90": 4920,
     "max90": 5180,
     "verdict": "usual"
-   }
+   },
+   "priceWeekly": [
+    [
+     "2026-08-31",
+     4840
+    ],
+    [
+     "2026-09-04",
+     4790
+    ],
+    [
+     "2026-09-13",
+     4850
+    ],
+    [
+     "2026-09-22",
+     4810
+    ],
+    [
+     "2026-09-25",
+     4780
+    ]
+   ]
   },
   {
    "id": "sample:usb-c-charger-2",
@@ -128,6 +200,7 @@
    "image": null,
    "available": true,
    "title": "(サンプル) USB-C 充電器 (PD) B 20W 1ポート 小型",
+   "variants": false,
    "score": 4.355,
    "facets": {
     "output_w": 20,
@@ -140,12 +213,35 @@
    "rank": 4,
    "priceStats": {
     "points": 31,
+    "windowDays": 31,
     "firstSeen": "2026-08-31",
     "min90": 4460,
     "median90": 4570,
     "max90": 4720,
     "verdict": "usual"
-   }
+   },
+   "priceWeekly": [
+    [
+     "2026-09-02",
+     4460
+    ],
+    [
+     "2026-09-03",
+     4480
+    ],
+    [
+     "2026-09-15",
+     4480
+    ],
+    [
+     "2026-09-23",
+     4480
+    ],
+    [
+     "2026-09-26",
+     4500
+    ]
+   ]
   },
   {
    "id": "sample:usb-c-charger-5",
@@ -164,6 +260,7 @@
    "image": null,
    "available": true,
    "title": "(サンプル) USB-C 充電器 (PD) E 45W 1ポート GaN PPS 折りたたみ",
+   "variants": false,
    "score": 3.988,
    "facets": {
     "output_w": 45,
@@ -176,12 +273,35 @@
    "rank": 5,
    "priceStats": {
     "points": 31,
+    "windowDays": 31,
     "firstSeen": "2026-08-31",
     "min90": 5490,
     "median90": 5640,
     "max90": 5820,
     "verdict": "usual"
-   }
+   },
+   "priceWeekly": [
+    [
+     "2026-09-02",
+     5520
+    ],
+    [
+     "2026-09-08",
+     5540
+    ],
+    [
+     "2026-09-11",
+     5490
+    ],
+    [
+     "2026-09-23",
+     5600
+    ],
+    [
+     "2026-09-27",
+     5530
+    ]
+   ]
   },
   {
    "id": "sample:usb-c-charger-1",
@@ -200,6 +320,7 @@
    "image": null,
    "available": true,
    "title": "(サンプル) USB-C 充電器 (PD) A 65W 3ポート GaN 折りたたみ PPS",
+   "variants": false,
    "score": 3.912,
    "facets": {
     "output_w": 65,
@@ -212,12 +333,35 @@
    "rank": 6,
    "priceStats": {
     "points": 31,
+    "windowDays": 31,
     "firstSeen": "2026-08-31",
     "min90": 1620,
     "median90": 1850,
     "max90": 1910,
-    "verdict": "lowest_90d"
-   }
+    "verdict": "lowest_observed"
+   },
+   "priceWeekly": [
+    [
+     "2026-08-31",
+     1830
+    ],
+    [
+     "2026-09-03",
+     1820
+    ],
+    [
+     "2026-09-11",
+     1840
+    ],
+    [
+     "2026-09-23",
+     1810
+    ],
+    [
+     "2026-09-30",
+     1620
+    ]
+   ]
   }
  ],
  "stats": {

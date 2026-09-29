@@ -1,7 +1,7 @@
 {
  "categoryId": "mobile-battery",
  "date": "2026-09-30",
- "fetchedAt": "2026-09-29T15:46:36.033Z",
+ "fetchedAt": "2026-09-30T01:01:12+09:00",
  "items": [
   {
    "id": "sample:mobile-battery-3",
@@ -20,6 +20,7 @@
    "image": null,
    "available": true,
    "title": "(サンプル) モバイルバッテリー C 5000mAh マグネット式 20W PSE",
+   "variants": false,
    "score": 4.797,
    "facets": {
     "capacity_mah": 5000,
@@ -27,18 +28,43 @@
     "pse": true,
     "builtin_cable": false,
     "magnetic": true,
-    "energy_wh_est": 18.5
+    "energy_wh_est": 19.25,
+    "flight_carry_on": "ok",
+    "energy_wh_source": "estimated"
    },
    "otherOffers": [],
    "rank": 1,
    "priceStats": {
     "points": 31,
+    "windowDays": 31,
     "firstSeen": "2026-08-31",
     "min90": 5130,
     "median90": 5280,
     "max90": 5560,
     "verdict": "usual"
-   }
+   },
+   "priceWeekly": [
+    [
+     "2026-08-31",
+     5200
+    ],
+    [
+     "2026-09-04",
+     5140
+    ],
+    [
+     "2026-09-13",
+     5210
+    ],
+    [
+     "2026-09-22",
+     5160
+    ],
+    [
+     "2026-09-25",
+     5130
+    ]
+   ]
   },
   {
    "id": "sample:mobile-battery-5",
@@ -57,6 +83,7 @@
    "image": null,
    "available": true,
    "title": "(サンプル) モバイルバッテリー E 27000mAh 140W PD PSE",
+   "variants": false,
    "score": 4.426,
    "facets": {
     "capacity_mah": 27000,
@@ -64,18 +91,43 @@
     "pse": true,
     "builtin_cable": false,
     "magnetic": false,
-    "energy_wh_est": 99.9
+    "energy_wh_est": 103.95,
+    "flight_carry_on": "airline_approval_needed",
+    "energy_wh_source": "estimated"
    },
    "otherOffers": [],
    "rank": 2,
    "priceStats": {
     "points": 31,
+    "windowDays": 31,
     "firstSeen": "2026-08-31",
     "min90": 5870,
     "median90": 6030,
     "max90": 6230,
     "verdict": "usual"
-   }
+   },
+   "priceWeekly": [
+    [
+     "2026-09-02",
+     5900
+    ],
+    [
+     "2026-09-08",
+     5920
+    ],
+    [
+     "2026-09-11",
+     5870
+    ],
+    [
+     "2026-09-23",
+     5990
+    ],
+    [
+     "2026-09-27",
+     5910
+    ]
+   ]
   },
   {
    "id": "sample:mobile-battery-2",
@@ -94,6 +146,7 @@
    "image": null,
    "available": true,
    "title": "(サンプル) モバイルバッテリー B 20000mAh 65W PD ノートPC対応 PSE",
+   "variants": false,
    "score": 4.291,
    "facets": {
     "capacity_mah": 20000,
@@ -101,18 +154,43 @@
     "pse": true,
     "builtin_cable": false,
     "magnetic": false,
-    "energy_wh_est": 74
+    "energy_wh_est": 77,
+    "flight_carry_on": "ok",
+    "energy_wh_source": "estimated"
    },
    "otherOffers": [],
    "rank": 3,
    "priceStats": {
     "points": 31,
+    "windowDays": 31,
     "firstSeen": "2026-08-31",
     "min90": 2780,
     "median90": 2850,
     "max90": 2940,
     "verdict": "usual"
-   }
+   },
+   "priceWeekly": [
+    [
+     "2026-09-02",
+     2780
+    ],
+    [
+     "2026-09-03",
+     2790
+    ],
+    [
+     "2026-09-15",
+     2790
+    ],
+    [
+     "2026-09-23",
+     2790
+    ],
+    [
+     "2026-09-26",
+     2800
+    ]
+   ]
   },
   {
    "id": "sample:mobile-battery-6",
@@ -131,6 +209,7 @@
    "image": null,
    "available": true,
    "title": "(サンプル) モバイルバッテリー F 10000mAh 30W 軽量 PSE",
+   "variants": false,
    "score": 4.242,
    "facets": {
     "capacity_mah": 10000,
@@ -138,18 +217,43 @@
     "pse": true,
     "builtin_cable": false,
     "magnetic": false,
-    "energy_wh_est": 37
+    "energy_wh_est": 38.5,
+    "flight_carry_on": "ok",
+    "energy_wh_source": "estimated"
    },
    "otherOffers": [],
    "rank": 4,
    "priceStats": {
     "points": 31,
+    "windowDays": 31,
     "firstSeen": "2026-08-31",
     "min90": 5940,
     "median90": 6120,
     "max90": 6440,
     "verdict": "usual"
-   }
+   },
+   "priceWeekly": [
+    [
+     "2026-08-31",
+     6020
+    ],
+    [
+     "2026-09-04",
+     5950
+    ],
+    [
+     "2026-09-10",
+     5960
+    ],
+    [
+     "2026-09-22",
+     5980
+    ],
+    [
+     "2026-09-29",
+     5940
+    ]
+   ]
   },
   {
    "id": "sample:mobile-battery-4",
@@ -168,6 +272,7 @@
    "image": null,
    "available": true,
    "title": "(サンプル) モバイルバッテリー D 10000mAh ケーブル内蔵 20W PSE",
+   "variants": false,
    "score": 4.223,
    "facets": {
     "capacity_mah": 10000,
@@ -175,18 +280,43 @@
     "pse": true,
     "builtin_cable": true,
     "magnetic": false,
-    "energy_wh_est": 37
+    "energy_wh_est": 38.5,
+    "flight_carry_on": "ok",
+    "energy_wh_source": "estimated"
    },
    "otherOffers": [],
    "rank": 5,
    "priceStats": {
     "points": 31,
+    "windowDays": 31,
     "firstSeen": "2026-08-31",
     "min90": 4690,
     "median90": 5350,
     "max90": 5510,
-    "verdict": "lowest_90d"
-   }
+    "verdict": "lowest_observed"
+   },
+   "priceWeekly": [
+    [
+     "2026-08-31",
+     5310
+    ],
+    [
+     "2026-09-05",
+     5260
+    ],
+    [
+     "2026-09-15",
+     5240
+    ],
+    [
+     "2026-09-19",
+     5250
+    ],
+    [
+     "2026-09-30",
+     4690
+    ]
+   ]
   },
   {
    "id": "sample:mobile-battery-1",
@@ -205,6 +335,7 @@
    "image": null,
    "available": true,
    "title": "(サンプル) モバイルバッテリー A 10000mAh 22.5W PD PSE適合 薄型",
+   "variants": false,
    "score": 4.207,
    "facets": {
     "capacity_mah": 10000,
@@ -212,18 +343,43 @@
     "pse": true,
     "builtin_cable": false,
     "magnetic": false,
-    "energy_wh_est": 37
+    "energy_wh_est": 38.5,
+    "flight_carry_on": "ok",
+    "energy_wh_source": "estimated"
    },
    "otherOffers": [],
    "rank": 6,
    "priceStats": {
     "points": 31,
+    "windowDays": 31,
     "firstSeen": "2026-08-31",
     "min90": 6850,
     "median90": 7810,
     "max90": 8080,
-    "verdict": "lowest_90d"
-   }
+    "verdict": "lowest_observed"
+   },
+   "priceWeekly": [
+    [
+     "2026-08-31",
+     7750
+    ],
+    [
+     "2026-09-03",
+     7680
+    ],
+    [
+     "2026-09-11",
+     7770
+    ],
+    [
+     "2026-09-23",
+     7660
+    ],
+    [
+     "2026-09-30",
+     6850
+    ]
+   ]
   }
  ],
  "stats": {

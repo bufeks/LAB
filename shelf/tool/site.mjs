@@ -22,6 +22,12 @@ export const SITE = {
   },
 };
 
+// ISO-8601 with the +09:00 offset, so "updated at" and the JST data date
+// never disagree about which day it is.
+export function isoJst(now = new Date()) {
+  return new Date(now.getTime() + 9 * 3600000).toISOString().replace(/\.\d+Z$/, '+09:00');
+}
+
 export function todayJst(now = new Date()) {
   return new Intl.DateTimeFormat('en-CA', { timeZone: SITE.timeZone }).format(now);
 }

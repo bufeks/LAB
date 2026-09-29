@@ -1,7 +1,7 @@
 {
  "categoryId": "humidifier",
  "date": "2026-09-30",
- "fetchedAt": "2026-09-29T15:46:36.033Z",
+ "fetchedAt": "2026-09-30T01:01:12+09:00",
  "items": [
   {
    "id": "sample:humidifier-6",
@@ -20,24 +20,45 @@
    "image": null,
    "available": true,
    "title": "(サンプル) 加湿器 F 超音波式 アロマ対応 8畳",
+   "variants": false,
    "score": 4.7,
    "facets": {
     "room_tatami": 8,
-    "type_steam": false,
-    "type_evaporative": false,
-    "type_ultrasonic": true,
-    "type_hybrid": false
+    "type": "ultrasonic"
    },
    "otherOffers": [],
    "rank": 1,
    "priceStats": {
     "points": 31,
+    "windowDays": 31,
     "firstSeen": "2026-08-31",
     "min90": 9280,
     "median90": 9560,
     "max90": 10060,
     "verdict": "usual"
-   }
+   },
+   "priceWeekly": [
+    [
+     "2026-08-31",
+     9410
+    ],
+    [
+     "2026-09-04",
+     9300
+    ],
+    [
+     "2026-09-10",
+     9300
+    ],
+    [
+     "2026-09-22",
+     9340
+    ],
+    [
+     "2026-09-29",
+     9280
+    ]
+   ]
   },
   {
    "id": "sample:humidifier-2",
@@ -56,26 +77,47 @@
    "image": null,
    "available": true,
    "title": "(サンプル) 加湿器 B 気化式 18畳 700mL/h タンク4.2L",
+   "variants": false,
    "score": 4.617,
    "facets": {
     "rated_ml_h": 700,
     "room_tatami": 18,
     "tank_l": 4.2,
-    "type_steam": false,
-    "type_evaporative": true,
-    "type_ultrasonic": false,
-    "type_hybrid": false
+    "type": "evaporative"
    },
    "otherOffers": [],
    "rank": 2,
    "priceStats": {
     "points": 31,
+    "windowDays": 31,
     "firstSeen": "2026-08-31",
     "min90": 15090,
     "median90": 15450,
     "max90": 15950,
     "verdict": "usual"
-   }
+   },
+   "priceWeekly": [
+    [
+     "2026-09-02",
+     15090
+    ],
+    [
+     "2026-09-03",
+     15160
+    ],
+    [
+     "2026-09-15",
+     15150
+    ],
+    [
+     "2026-09-23",
+     15150
+    ],
+    [
+     "2026-09-28",
+     15210
+    ]
+   ]
   },
   {
    "id": "sample:humidifier-3",
@@ -94,26 +136,47 @@
    "image": null,
    "available": true,
    "title": "(サンプル) 加湿器 C 超音波式 6畳 300mL/h タンク2.5L",
+   "variants": false,
    "score": 4.26,
    "facets": {
     "rated_ml_h": 300,
     "room_tatami": 6,
     "tank_l": 2.5,
-    "type_steam": false,
-    "type_evaporative": false,
-    "type_ultrasonic": true,
-    "type_hybrid": false
+    "type": "ultrasonic"
    },
    "otherOffers": [],
    "rank": 3,
    "priceStats": {
     "points": 31,
+    "windowDays": 31,
     "firstSeen": "2026-08-31",
     "min90": 7800,
     "median90": 8040,
     "max90": 8460,
     "verdict": "usual"
-   }
+   },
+   "priceWeekly": [
+    [
+     "2026-08-31",
+     7910
+    ],
+    [
+     "2026-09-04",
+     7820
+    ],
+    [
+     "2026-09-13",
+     7920
+    ],
+    [
+     "2026-09-22",
+     7850
+    ],
+    [
+     "2026-09-25",
+     7800
+    ]
+   ]
   },
   {
    "id": "sample:humidifier-5",
@@ -132,25 +195,46 @@
    "image": null,
    "available": true,
    "title": "(サンプル) 加湿器 E スチーム式 10畳 タンク2.2L",
+   "variants": false,
    "score": 4.093,
    "facets": {
     "room_tatami": 10,
     "tank_l": 2.2,
-    "type_steam": true,
-    "type_evaporative": false,
-    "type_ultrasonic": false,
-    "type_hybrid": false
+    "type": "steam"
    },
    "otherOffers": [],
    "rank": 4,
    "priceStats": {
     "points": 31,
+    "windowDays": 31,
     "firstSeen": "2026-08-31",
     "min90": 4190,
     "median90": 4310,
     "max90": 4450,
     "verdict": "usual"
-   }
+   },
+   "priceWeekly": [
+    [
+     "2026-09-02",
+     4210
+    ],
+    [
+     "2026-09-08",
+     4230
+    ],
+    [
+     "2026-09-11",
+     4190
+    ],
+    [
+     "2026-09-23",
+     4270
+    ],
+    [
+     "2026-09-27",
+     4220
+    ]
+   ]
   },
   {
    "id": "sample:humidifier-4",
@@ -169,26 +253,47 @@
    "image": null,
    "available": true,
    "title": "(サンプル) 加湿器 D ハイブリッド 14畳 600mL/h タンク4.0L",
+   "variants": false,
    "score": 4.033,
    "facets": {
     "rated_ml_h": 600,
     "room_tatami": 14,
     "tank_l": 4,
-    "type_steam": false,
-    "type_evaporative": false,
-    "type_ultrasonic": false,
-    "type_hybrid": true
+    "type": "hybrid"
    },
    "otherOffers": [],
    "rank": 5,
    "priceStats": {
     "points": 31,
+    "windowDays": 31,
     "firstSeen": "2026-08-31",
     "min90": 7250,
     "median90": 8280,
     "max90": 8510,
-    "verdict": "lowest_90d"
-   }
+    "verdict": "lowest_observed"
+   },
+   "priceWeekly": [
+    [
+     "2026-08-31",
+     8210
+    ],
+    [
+     "2026-09-05",
+     8130
+    ],
+    [
+     "2026-09-15",
+     8110
+    ],
+    [
+     "2026-09-19",
+     8120
+    ],
+    [
+     "2026-09-30",
+     7250
+    ]
+   ]
   },
   {
    "id": "sample:humidifier-1",
@@ -207,26 +312,47 @@
    "image": null,
    "available": true,
    "title": "(サンプル) 加湿器 A スチーム式 木造8畳/プレハブ13畳 480mL/h タンク3.0L",
+   "variants": false,
    "score": 4.026,
    "facets": {
     "rated_ml_h": 480,
     "room_tatami": 13,
     "tank_l": 3,
-    "type_steam": true,
-    "type_evaporative": false,
-    "type_ultrasonic": false,
-    "type_hybrid": false
+    "type": "steam"
    },
    "otherOffers": [],
    "rank": 6,
    "priceStats": {
     "points": 31,
+    "windowDays": 31,
     "firstSeen": "2026-08-31",
     "min90": 15290,
     "median90": 17440,
     "max90": 18030,
-    "verdict": "lowest_90d"
-   }
+    "verdict": "lowest_observed"
+   },
+   "priceWeekly": [
+    [
+     "2026-08-31",
+     17310
+    ],
+    [
+     "2026-09-03",
+     17140
+    ],
+    [
+     "2026-09-11",
+     17340
+    ],
+    [
+     "2026-09-23",
+     17090
+    ],
+    [
+     "2026-09-30",
+     15290
+    ]
+   ]
   }
  ],
  "stats": {

@@ -11,9 +11,9 @@ import { fileURLToPath } from 'node:url';
 import { CATEGORIES } from './categories.mjs';
 import { credentialsFromEnv, searchCategory } from './rakuten.mjs';
 import { rankCategory, choosePicks } from './rank.mjs';
-import { recordPrices, priceStats } from './history.mjs';
+import { recordPrices, priceStats, weeklySeries } from './history.mjs';
 import { sampleItems, sampleHistory } from './sample.mjs';
-import { todayJst } from './site.mjs';
+import { todayJst, isoJst } from './site.mjs';
 import { build } from './build.mjs';
 
 const HERE = path.dirname(fileURLToPath(import.meta.url));
@@ -30,21 +30,35 @@ const writeJson = (file, value) => {
   fs.mkdirSync(path.dirname(file), { recursive: true });
   fs.writeFileSync(file, JSON.stringify(value, null, 1) + '\n');
 };
+// One item per line keeps the daily git diff to the lines that changed.
+const writeHistory = (file, history) => {
+  fs.mkdirSync(path.dirname(file), { recursive: true });
+  const lines = Object.keys(history).sort().map((id) => `${JSON.stringify(id)}:${JSON.stringify(history[id])}`);
+  fs.writeFileSync(file, `{\n${lines.join(',\n')}\n}\n`);
+};
 
 export function processCategory(category, rawItems, history, date) {
   const { items, stats } = rankCategory(rawItems, category);
   recordPrices(history, items, date);
-  for (const item of items) item.priceStats = priceStats(history[item.id], item.price, date);
+  for (const item of items) {
+    item.priceStats = priceStats(history[item.id], item.price, date, item.shippingIncluded);
+    item.priceWeekly = weeklySeries(history[item.id], date);
+  }
   return { items, stats, picks: choosePicks(items) };
 }
 
-export async function update({ only, now = new Date(), env = process.env } = {}) {
+export async function update({ only, now = new Date(), env = process.env, forceSample = false } = {}) {
   const creds = credentialsFromEnv(env);
   const mode = creds ? 'live' : 'sample';
   const date = todayJst(now);
   const statePath = path.join(DATA_DIR, 'state.json');
   const prev = readJson(statePath, {});
-  const state = { mode, date, updatedAt: now.toISOString(), categories: { ...(prev.mode === mode ? prev.categories : {}) } };
+  if (prev.mode === 'live' && !creds && !forceSample) {
+    // Running without keys on a live checkout would replace months of real
+    // price history with sample data.
+    throw new Error('data/ holds live data but no Rakuten keys are set; pass --force-sample to replace it, or set SHELF_DATA_DIR');
+  }
+  const state = { mode, date, updatedAt: isoJst(now), categories: { ...(prev.mode === mode ? prev.categories : {}) } };
 
   // Switching from sample to live must not carry fictional prices forward.
   if (prev.mode && prev.mode !== mode) {
@@ -68,13 +82,13 @@ export async function update({ only, now = new Date(), env = process.env } = {})
       }
       const result = processCategory(category, raw, history, date);
       if (!result.items.length) throw new Error('no items survived filtering');
-      writeJson(historyPath, history);
-      writeJson(latestPath, { categoryId: category.id, date, fetchedAt: now.toISOString(), ...result });
-      state.categories[category.id] = { status: 'ok', fetchedAt: now.toISOString(), stats: result.stats };
+      writeHistory(historyPath, history);
+      writeJson(latestPath, { categoryId: category.id, date, fetchedAt: isoJst(now), ...result });
+      state.categories[category.id] = { status: 'ok', fetchedAt: isoJst(now), stats: result.stats };
       console.log(`${category.id}: ${result.stats.ranked}/${result.stats.candidates} ranked`);
     } catch (err) {
       const before = state.categories[category.id] || {};
-      state.categories[category.id] = { ...before, status: 'error', error: String(err.message || err).slice(0, 300), failedAt: now.toISOString() };
+      state.categories[category.id] = { ...before, status: 'error', error: String(err.message || err).slice(0, 300), failedAt: isoJst(now) };
       console.error(`${category.id}: ${err.message}`);
     }
   }
@@ -84,7 +98,7 @@ export async function update({ only, now = new Date(), env = process.env } = {})
 
 if (process.argv[1] === fileURLToPath(import.meta.url)) {
   const only = process.argv.find((a) => a.startsWith('--only='))?.slice(7);
-  const state = await update({ only });
+  const state = await update({ only, forceSample: process.argv.includes('--force-sample') });
   build();
   const failed = Object.entries(state.categories).filter(([, c]) => c.status === 'error');
   if (failed.length === CATEGORIES.length) {

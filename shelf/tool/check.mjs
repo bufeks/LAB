@@ -67,6 +67,10 @@ export function audit() {
       if (live && cov < MIN_FACET_COVERAGE) warnings.push(`${category.id}: facet ${f.key} parsed for only ${Math.round(cov * 100)}% of items`);
     }
 
+    const asOf = category.guide.asOf;
+    if (asOf && (Date.now() - Date.parse(`${asOf}-01`)) / 86400000 > 183) warnings.push(`${category.id}: buying guide is as of ${asOf}; review its facts`);
+    m.variant_listings = rec.items.filter((x) => x.variants).length;
+
     const stats = rec.stats;
     if (stats?.candidates) {
       const rejected = Object.values(stats.rejected || {}).reduce((a, b) => a + b, 0);
