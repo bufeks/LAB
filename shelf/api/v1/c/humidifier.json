@@ -184,6 +184,7 @@
     "type": "ultrasonic"
    },
    "buy_url": "https://search.rakuten.co.jp/search/mall/%E5%8A%A0%E6%B9%BF%E5%99%A8/",
+   "affiliate_url": "https://search.rakuten.co.jp/search/mall/%E5%8A%A0%E6%B9%BF%E5%99%A8/",
    "affiliate": false,
    "product_url": "https://search.rakuten.co.jp/search/mall/%E5%8A%A0%E6%B9%BF%E5%99%A8/",
    "image": null,
@@ -242,6 +243,7 @@
     "type": "evaporative"
    },
    "buy_url": "https://search.rakuten.co.jp/search/mall/%E5%8A%A0%E6%B9%BF%E5%99%A8/",
+   "affiliate_url": "https://search.rakuten.co.jp/search/mall/%E5%8A%A0%E6%B9%BF%E5%99%A8/",
    "affiliate": false,
    "product_url": "https://search.rakuten.co.jp/search/mall/%E5%8A%A0%E6%B9%BF%E5%99%A8/",
    "image": null,
@@ -300,6 +302,7 @@
     "type": "ultrasonic"
    },
    "buy_url": "https://search.rakuten.co.jp/search/mall/%E5%8A%A0%E6%B9%BF%E5%99%A8/",
+   "affiliate_url": "https://search.rakuten.co.jp/search/mall/%E5%8A%A0%E6%B9%BF%E5%99%A8/",
    "affiliate": false,
    "product_url": "https://search.rakuten.co.jp/search/mall/%E5%8A%A0%E6%B9%BF%E5%99%A8/",
    "image": null,
@@ -357,6 +360,7 @@
     "type": "steam"
    },
    "buy_url": "https://search.rakuten.co.jp/search/mall/%E5%8A%A0%E6%B9%BF%E5%99%A8/",
+   "affiliate_url": "https://search.rakuten.co.jp/search/mall/%E5%8A%A0%E6%B9%BF%E5%99%A8/",
    "affiliate": false,
    "product_url": "https://search.rakuten.co.jp/search/mall/%E5%8A%A0%E6%B9%BF%E5%99%A8/",
    "image": null,
@@ -415,6 +419,7 @@
     "type": "hybrid"
    },
    "buy_url": "https://search.rakuten.co.jp/search/mall/%E5%8A%A0%E6%B9%BF%E5%99%A8/",
+   "affiliate_url": "https://search.rakuten.co.jp/search/mall/%E5%8A%A0%E6%B9%BF%E5%99%A8/",
    "affiliate": false,
    "product_url": "https://search.rakuten.co.jp/search/mall/%E5%8A%A0%E6%B9%BF%E5%99%A8/",
    "image": null,
@@ -473,6 +478,7 @@
     "type": "steam"
    },
    "buy_url": "https://search.rakuten.co.jp/search/mall/%E5%8A%A0%E6%B9%BF%E5%99%A8/",
+   "affiliate_url": "https://search.rakuten.co.jp/search/mall/%E5%8A%A0%E6%B9%BF%E5%99%A8/",
    "affiliate": false,
    "product_url": "https://search.rakuten.co.jp/search/mall/%E5%8A%A0%E6%B9%BF%E5%99%A8/",
    "image": null,

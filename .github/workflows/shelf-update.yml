@@ -55,6 +55,13 @@ jobs:
         if: steps.fetch.outcome == 'success'
         continue-on-error: true
         run: node shelf/tool/check.mjs
+      - name: Traffic report
+        if: steps.fetch.outcome == 'success'
+        continue-on-error: true
+        env:
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+        run: node shelf/tool/traffic.mjs
       - name: Commit
         if: steps.fetch.outcome == 'success'
         run: |

@@ -9,6 +9,9 @@ export const SITE = {
   // Rakuten checks Referer/Origin against the app's "allowed websites".
   refererUrl: process.env.RAKUTEN_REFERER || 'https://bufeks.github.io/',
   apiVersion: 'v1',
+  // Set when the build is served by the SHELF Cloudflare Worker: buy links go
+  // through /go/ (click counting) and the remote MCP endpoint is advertised.
+  edge: process.env.SHELF_EDGE === '1',
   timeZone: 'Asia/Tokyo',
   disclosure:
     'PR: 購入リンクは楽天アフィリエイトリンクです。リンク経由で購入されると運営者に紹介料が入りますが、' +
@@ -30,4 +33,15 @@ export function isoJst(now = new Date()) {
 
 export function todayJst(now = new Date()) {
   return new Intl.DateTimeFormat('en-CA', { timeZone: SITE.timeZone }).format(now);
+}
+
+// Tracked buy link, resolved by the Worker from the published data (never
+// from the URL itself, so it cannot be used as an open redirect).
+export function goUrl(categoryId, itemId, surface) {
+  return `${SITE.baseUrl}/go/${categoryId}/${encodeURIComponent(itemId)}?s=${surface}`;
+}
+
+// The same link, re-labelled for the surface it is shown on.
+export function via(url, surface) {
+  return SITE.edge && url.includes('/go/') ? url.replace(/([?&]s=)[a-z]+/, `$1${surface}`) : url;
 }

@@ -8,28 +8,50 @@
 //
 // Env: SHELF_API (default: the public API), SHELF_LOCAL_DIR (read JSON files
 // from disk instead, for testing).
+//
+// The same file is the remote MCP endpoint: the SHELF Cloudflare Worker
+// imports handle() and points setSource() at its static assets. Node-only
+// modules are imported lazily so the Worker bundle does not need them.
 
-import fs from 'node:fs/promises';
-import path from 'node:path';
-import readline from 'node:readline';
-
-const VERSION = '1.1.0';
+const VERSION = '1.2.0';
 const SUPPORTED_PROTOCOLS = ['2025-06-18', '2025-03-26', '2024-11-05'];
-const API = (process.env.SHELF_API || 'https://bufeks.github.io/LAB/shelf/api/v1').replace(/\/$/, '');
-const LOCAL = process.env.SHELF_LOCAL_DIR;
+const ENV = globalThis.process?.env ?? {};
+const API = (ENV.SHELF_API || 'https://bufeks.github.io/LAB/shelf/api/v1').replace(/\/$/, '');
 const CACHE_MS = 10 * 60 * 1000;
+
+let source = async (rel) => {
+  if (ENV.SHELF_LOCAL_DIR) {
+    const fs = await import('node:fs/promises');
+    return JSON.parse(await fs.readFile(`${ENV.SHELF_LOCAL_DIR}/${rel}`, 'utf8'));
+  }
+  const res = await fetch(`${API}/${rel}`, { headers: { 'User-Agent': `shelf-mcp/${VERSION}` } });
+  if (!res.ok) throw new Error(`SHELF API ${res.status} for ${rel}`);
+  return res.json();
+};
+
+// Where the JSON comes from: (rel) => parsed JSON for api/v1/<rel>.
+export function setSource(fn) {
+  source = fn;
+  cache.clear();
+}
+
+// Tracked buy links (/go/...) carry the surface they were shown on; links
+// handed out by this server count as "mcp".
+function retag(value) {
+  if (Array.isArray(value)) return value.map(retag);
+  if (value && typeof value === 'object') {
+    return Object.fromEntries(
+      Object.entries(value).map(([k, v]) => [k, k === 'buy_url' && typeof v === 'string' && v.includes('/go/') ? v.replace(/([?&]s=)[a-z]+/, '$1mcp') : retag(v)]),
+    );
+  }
+  return value;
+}
 
 const cache = new Map();
 async function load(rel, { fresh = false } = {}) {
   const hit = cache.get(rel);
   if (!fresh && hit && Date.now() - hit.at < CACHE_MS) return hit.data;
-  let data;
-  if (LOCAL) data = JSON.parse(await fs.readFile(path.join(LOCAL, rel), 'utf8'));
-  else {
-    const res = await fetch(`${API}/${rel}`, { headers: { 'User-Agent': `shelf-mcp/${VERSION}` } });
-    if (!res.ok) throw new Error(`SHELF API ${res.status} for ${rel}`);
-    data = await res.json();
-  }
+  const data = retag(await source(rel));
   cache.set(rel, { at: Date.now(), data });
   return data;
 }
@@ -335,7 +357,7 @@ const TOOLS = [
 
 const READ_ONLY = { readOnlyHint: true, openWorldHint: true };
 
-async function handle(msg) {
+export async function handle(msg) {
   const { id, method, params } = msg;
   const reply = (result) => (id === undefined ? null : { jsonrpc: '2.0', id, result });
   const fail = (code, message) => (id === undefined ? null : { jsonrpc: '2.0', id, error: { code, message } });
@@ -375,16 +397,24 @@ async function handle(msg) {
   }
 }
 
-const rl = readline.createInterface({ input: process.stdin });
-rl.on('line', async (lineText) => {
-  if (!lineText.trim()) return;
-  let msg;
-  try {
-    msg = JSON.parse(lineText);
-  } catch {
-    process.stdout.write(JSON.stringify({ jsonrpc: '2.0', id: null, error: { code: -32700, message: 'Parse error' } }) + '\n');
-    return;
-  }
-  const out = await handle(msg);
-  if (out) process.stdout.write(JSON.stringify(out) + '\n');
-});
+async function serveStdio() {
+  const readline = await import('node:readline');
+  const rl = readline.createInterface({ input: process.stdin });
+  rl.on('line', async (lineText) => {
+    if (!lineText.trim()) return;
+    let msg;
+    try {
+      msg = JSON.parse(lineText);
+    } catch {
+      process.stdout.write(JSON.stringify({ jsonrpc: '2.0', id: null, error: { code: -32700, message: 'Parse error' } }) + '\n');
+      return;
+    }
+    const out = await handle(msg);
+    if (out) process.stdout.write(JSON.stringify(out) + '\n');
+  });
+}
+
+// Run as a stdio server only when executed directly (not when imported).
+if (globalThis.process?.argv?.[1] && import.meta.url === (await import('node:url')).pathToFileURL(process.argv[1]).href) {
+  await serveStdio();
+}
