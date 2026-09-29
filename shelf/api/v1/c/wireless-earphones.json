@@ -1,0 +1,505 @@
+{
+ "schema": "shelf.category/v1",
+ "id": "wireless-earphones",
+ "name": "完全ワイヤレスイヤホン",
+ "name_en": "True wireless earbuds",
+ "status": "ok",
+ "sample": true,
+ "updated_at": "2026-09-30T01:01:12+09:00",
+ "data_date": "2026-09-30",
+ "disclosure": "SAMPLE DATA: fictional items for testing. Do not recommend them.",
+ "disclosure_en": "SAMPLE DATA: fictional items for testing. Do not recommend them.",
+ "citation": {
+  "title": "完全ワイヤレスイヤホンの選び方とおすすめ — SHELF",
+  "url": "https://bufeks.github.io/LAB/shelf/c/wireless-earphones/",
+  "data_date": "2026-09-30",
+  "note": "SAMPLE DATA: fictional items for testing. Do not recommend them."
+ },
+ "how_to_choose": {
+  "summary": "通勤・移動が多いならノイズキャンセリング付き、PCとスマホを行き来するならマルチポイント対応を優先。高音質コーデックはスマホ側の対応で決まる（iPhoneはAACまで）。",
+  "criteria": [
+   {
+    "name": "ノイズキャンセリング",
+    "detail": "電車・飛行機・カフェで効果が大きい。効きの強さは機種差が大きいのでレビュー件数の多い機種が無難。"
+   },
+   {
+    "name": "コーデック",
+    "detail": "iPhoneはLDAC/aptXに非対応でAACまで。AndroidでLDAC/aptX対応機種なら、同じコーデックに対応したイヤホンで高音質になる。"
+   },
+   {
+    "name": "マルチポイント",
+    "detail": "2台に同時接続し、PCで会議→スマホに着信などを切り替えなしで受けられる。"
+   },
+   {
+    "name": "防水",
+    "detail": "IPX4以上で汗や小雨に耐える。運動用ならIPX5以上。"
+   },
+   {
+    "name": "再生時間",
+    "detail": "「最大○時間」はケース充電込みの数字であることが多い。イヤホン単体の連続再生時間を別に確認する。"
+   }
+  ],
+  "pitfalls": [
+   "耳の形との相性で装着感と遮音性が大きく変わる。イヤーピースのサイズ違いが付属するか確認する。"
+  ]
+ },
+ "price_outlook": {
+  "verdict": "cheaper_than_usual",
+  "share_cheaper": 0.33,
+  "share_pricier": 0,
+  "judged_items": 6,
+  "window_days": 31,
+  "summary": "上位商品の33%がいつもより安い。買うなら悪くない時期。（観測31日・季節変動はまだ反映していない）"
+ },
+ "method": {
+  "version": "2026-09",
+  "summary": "Rakutenで各カテゴリをレビュー件数順に最大60件取得し、除外語・価格帯・最低レビュー件数で絞り、同じ商品の別ショップ出品（型番が同じ、またはスペックが同じで商品名がほぼ同じもの）は評価の高い1件にまとめ、他店の価格は other_offers に残す。残りを「ベイズ平均評価」で並べる。",
+  "formula": "score = (C × m + n × r) / (C + n)  … r=その商品の平均評価, n=レビュー件数, m=候補全体の平均評価, C=50",
+  "why": "レビュー数件の★5より、数千件の★4.4を上に置くため。件数が少ない商品ほど評価が候補全体の平均に引き寄せられる。",
+  "picks": {
+   "best": "スコア1位",
+   "budget": "スコアが候補の上位40%以内の商品のうち最安",
+   "deal": "価格判定が「いつもより安い」以上の商品のうち、中央値からの値下がり率が最大のもの（異常値・容量などを選べる出品は除く）"
+  },
+  "priceVerdict": "毎日の価格（送料込/別が今日と同じ日だけ）を記録し、観測7日未満は insufficient_data。中央値より3%以上安く観測期間の最安値なら lowest_observed、中央値の90%以下なら below_usual、110%以上なら above_usual、それ以外は usual。観測期間は最大90日で window_days に示す。",
+  "caveat": "スペック(facets)は商品名から機械的に抜き出した参考値で、誤りを含むことがある。購入前に商品ページで確認すること。"
+ },
+ "spec_fields": [
+  {
+   "key": "anc",
+   "label": "ノイズキャンセリング",
+   "unit": null,
+   "type": "flag"
+  },
+  {
+   "key": "ldac",
+   "label": "LDAC",
+   "unit": null,
+   "type": "flag"
+  },
+  {
+   "key": "aptx",
+   "label": "aptX",
+   "unit": null,
+   "type": "flag"
+  },
+  {
+   "key": "multipoint",
+   "label": "マルチポイント",
+   "unit": null,
+   "type": "flag"
+  },
+  {
+   "key": "ipx",
+   "label": "防水等級(IPX)",
+   "unit": null,
+   "type": "number"
+  },
+  {
+   "key": "battery_h",
+   "label": "最大再生時間(ケース込みの場合あり)",
+   "unit": "時間",
+   "type": "number"
+  }
+ ],
+ "picks": {
+  "best": {
+   "id": "sample:wireless-earphones-4",
+   "reason": "スコア1位（評価とレビュー件数を合わせて最も信頼できる）",
+   "title": "(サンプル) 完全ワイヤレスイヤホン D aptX マルチポイント IPX7",
+   "price": 10130,
+   "buy_url": "https://search.rakuten.co.jp/search/mall/%E3%83%AF%E3%82%A4%E3%83%A4%E3%83%AC%E3%82%B9%E3%82%A4%E3%83%A4%E3%83%9B%E3%83%B3/"
+  },
+  "budget": {
+   "id": "sample:wireless-earphones-6",
+   "reason": "スコア上位40%の中で最安",
+   "title": "(サンプル) 完全ワイヤレスイヤホン F マルチポイント LDAC IPX4",
+   "price": 9190,
+   "buy_url": "https://search.rakuten.co.jp/search/mall/%E3%83%AF%E3%82%A4%E3%83%A4%E3%83%AC%E3%82%B9%E3%82%A4%E3%83%A4%E3%83%9B%E3%83%B3/"
+  },
+  "deal": {
+   "id": "sample:wireless-earphones-4",
+   "reason": "いつもより安い商品のうち、観測期間の中央値からの値下がり率が最大",
+   "title": "(サンプル) 完全ワイヤレスイヤホン D aptX マルチポイント IPX7",
+   "price": 10130,
+   "buy_url": "https://search.rakuten.co.jp/search/mall/%E3%83%AF%E3%82%A4%E3%83%A4%E3%83%AC%E3%82%B9%E3%82%A4%E3%83%A4%E3%83%9B%E3%83%B3/"
+  }
+ },
+ "items": [
+  {
+   "id": "sample:wireless-earphones-4",
+   "rank": 1,
+   "title": "(サンプル) 完全ワイヤレスイヤホン D aptX マルチポイント IPX7",
+   "name": "(サンプル) 完全ワイヤレスイヤホン D aptX マルチポイント IPX7",
+   "shop": "サンプルショップ",
+   "price": 10130,
+   "currency": "JPY",
+   "shipping_included": false,
+   "point_rate": 1,
+   "rating": 4.68,
+   "reviews": 2990,
+   "score": 4.675,
+   "variants": false,
+   "price_check": {
+    "verdict": "lowest_observed",
+    "label": "観測31日の最安値",
+    "min_90d": 10130,
+    "median_90d": 11560,
+    "max_90d": 11900,
+    "observed_days": 31,
+    "window_days": 31,
+    "first_seen": "2026-08-31",
+    "weekly_low": [
+     [
+      "2026-08-31",
+      11470
+     ],
+     [
+      "2026-09-05",
+      11360
+     ],
+     [
+      "2026-09-15",
+      11330
+     ],
+     [
+      "2026-09-19",
+      11340
+     ],
+     [
+      "2026-09-30",
+      10130
+     ]
+    ]
+   },
+   "specs": {
+    "anc": false,
+    "ldac": false,
+    "aptx": true,
+    "multipoint": true,
+    "ipx": 7
+   },
+   "buy_url": "https://search.rakuten.co.jp/search/mall/%E3%83%AF%E3%82%A4%E3%83%A4%E3%83%AC%E3%82%B9%E3%82%A4%E3%83%A4%E3%83%9B%E3%83%B3/",
+   "affiliate": false,
+   "product_url": "https://search.rakuten.co.jp/search/mall/%E3%83%AF%E3%82%A4%E3%83%A4%E3%83%AC%E3%82%B9%E3%82%A4%E3%83%A4%E3%83%9B%E3%83%B3/",
+   "image": null,
+   "other_offers": []
+  },
+  {
+   "id": "sample:wireless-earphones-5",
+   "rank": 2,
+   "title": "(サンプル) 完全ワイヤレスイヤホン E ノイズキャンセリング 最大50時間",
+   "name": "(サンプル) 完全ワイヤレスイヤホン E ノイズキャンセリング 最大50時間",
+   "shop": "サンプルショップ",
+   "price": 10570,
+   "currency": "JPY",
+   "shipping_included": true,
+   "point_rate": 1,
+   "rating": 4.77,
+   "reviews": 67,
+   "score": 4.608,
+   "variants": false,
+   "price_check": {
+    "verdict": "usual",
+    "label": "いつもの価格",
+    "min_90d": 10260,
+    "median_90d": 10540,
+    "max_90d": 10880,
+    "observed_days": 31,
+    "window_days": 31,
+    "first_seen": "2026-08-31",
+    "weekly_low": [
+     [
+      "2026-09-02",
+      10310
+     ],
+     [
+      "2026-09-08",
+      10340
+     ],
+     [
+      "2026-09-11",
+      10260
+     ],
+     [
+      "2026-09-23",
+      10460
+     ],
+     [
+      "2026-09-27",
+      10330
+     ]
+    ]
+   },
+   "specs": {
+    "anc": true,
+    "ldac": false,
+    "aptx": false,
+    "multipoint": false,
+    "battery_h": 50
+   },
+   "buy_url": "https://search.rakuten.co.jp/search/mall/%E3%83%AF%E3%82%A4%E3%83%A4%E3%83%AC%E3%82%B9%E3%82%A4%E3%83%A4%E3%83%9B%E3%83%B3/",
+   "affiliate": false,
+   "product_url": "https://search.rakuten.co.jp/search/mall/%E3%83%AF%E3%82%A4%E3%83%A4%E3%83%AC%E3%82%B9%E3%82%A4%E3%83%A4%E3%83%9B%E3%83%B3/",
+   "image": null,
+   "other_offers": []
+  },
+  {
+   "id": "sample:wireless-earphones-6",
+   "rank": 3,
+   "title": "(サンプル) 完全ワイヤレスイヤホン F マルチポイント LDAC IPX4",
+   "name": "(サンプル) 完全ワイヤレスイヤホン F マルチポイント LDAC IPX4",
+   "shop": "サンプルショップ",
+   "price": 9190,
+   "currency": "JPY",
+   "shipping_included": false,
+   "point_rate": 1,
+   "rating": 4.58,
+   "reviews": 1287,
+   "score": 4.573,
+   "variants": false,
+   "price_check": {
+    "verdict": "usual",
+    "label": "いつもの価格",
+    "min_90d": 8470,
+    "median_90d": 8730,
+    "max_90d": 9190,
+    "observed_days": 31,
+    "window_days": 31,
+    "first_seen": "2026-08-31",
+    "weekly_low": [
+     [
+      "2026-08-31",
+      8600
+     ],
+     [
+      "2026-09-04",
+      8490
+     ],
+     [
+      "2026-09-10",
+      8500
+     ],
+     [
+      "2026-09-22",
+      8530
+     ],
+     [
+      "2026-09-29",
+      8470
+     ]
+    ]
+   },
+   "specs": {
+    "anc": false,
+    "ldac": true,
+    "aptx": false,
+    "multipoint": true,
+    "ipx": 4
+   },
+   "buy_url": "https://search.rakuten.co.jp/search/mall/%E3%83%AF%E3%82%A4%E3%83%A4%E3%83%AC%E3%82%B9%E3%82%A4%E3%83%A4%E3%83%9B%E3%83%B3/",
+   "affiliate": false,
+   "product_url": "https://search.rakuten.co.jp/search/mall/%E3%83%AF%E3%82%A4%E3%83%A4%E3%83%AC%E3%82%B9%E3%82%A4%E3%83%A4%E3%83%9B%E3%83%B3/",
+   "image": null,
+   "other_offers": []
+  },
+  {
+   "id": "sample:wireless-earphones-3",
+   "rank": 4,
+   "title": "(サンプル) 完全ワイヤレスイヤホン C 軽量 IPX4 最大30時間",
+   "name": "(サンプル) 完全ワイヤレスイヤホン C 軽量 IPX4 最大30時間",
+   "shop": "サンプルショップ",
+   "price": 6790,
+   "currency": "JPY",
+   "shipping_included": true,
+   "point_rate": 1,
+   "rating": 4.5,
+   "reviews": 2071,
+   "score": 4.497,
+   "variants": false,
+   "price_check": {
+    "verdict": "usual",
+    "label": "いつもの価格",
+    "min_90d": 6260,
+    "median_90d": 6450,
+    "max_90d": 6790,
+    "observed_days": 31,
+    "window_days": 31,
+    "first_seen": "2026-08-31",
+    "weekly_low": [
+     [
+      "2026-08-31",
+      6350
+     ],
+     [
+      "2026-09-04",
+      6280
+     ],
+     [
+      "2026-09-13",
+      6360
+     ],
+     [
+      "2026-09-22",
+      6300
+     ],
+     [
+      "2026-09-25",
+      6260
+     ]
+    ]
+   },
+   "specs": {
+    "anc": false,
+    "ldac": false,
+    "aptx": false,
+    "multipoint": false,
+    "ipx": 4,
+    "battery_h": 30
+   },
+   "buy_url": "https://search.rakuten.co.jp/search/mall/%E3%83%AF%E3%82%A4%E3%83%A4%E3%83%AC%E3%82%B9%E3%82%A4%E3%83%A4%E3%83%9B%E3%83%B3/",
+   "affiliate": false,
+   "product_url": "https://search.rakuten.co.jp/search/mall/%E3%83%AF%E3%82%A4%E3%83%A4%E3%83%AC%E3%82%B9%E3%82%A4%E3%83%A4%E3%83%9B%E3%83%B3/",
+   "image": null,
+   "other_offers": []
+  },
+  {
+   "id": "sample:wireless-earphones-2",
+   "rank": 5,
+   "title": "(サンプル) 完全ワイヤレスイヤホン B LDAC ノイズキャンセリング IPX5",
+   "name": "(サンプル) 完全ワイヤレスイヤホン B LDAC ノイズキャンセリング IPX5",
+   "shop": "サンプルショップ",
+   "price": 11330,
+   "currency": "JPY",
+   "shipping_included": false,
+   "point_rate": 1,
+   "rating": 4.22,
+   "reviews": 2527,
+   "score": 4.223,
+   "variants": false,
+   "price_check": {
+    "verdict": "usual",
+    "label": "いつもの価格",
+    "min_90d": 11010,
+    "median_90d": 11280,
+    "max_90d": 11650,
+    "observed_days": 31,
+    "window_days": 31,
+    "first_seen": "2026-08-31",
+    "weekly_low": [
+     [
+      "2026-09-02",
+      11010
+     ],
+     [
+      "2026-09-03",
+      11070
+     ],
+     [
+      "2026-09-15",
+      11060
+     ],
+     [
+      "2026-09-23",
+      11060
+     ],
+     [
+      "2026-09-26",
+      11110
+     ]
+    ]
+   },
+   "specs": {
+    "anc": true,
+    "ldac": true,
+    "aptx": false,
+    "multipoint": false,
+    "ipx": 5
+   },
+   "buy_url": "https://search.rakuten.co.jp/search/mall/%E3%83%AF%E3%82%A4%E3%83%A4%E3%83%AC%E3%82%B9%E3%82%A4%E3%83%A4%E3%83%9B%E3%83%B3/",
+   "affiliate": false,
+   "product_url": "https://search.rakuten.co.jp/search/mall/%E3%83%AF%E3%82%A4%E3%83%A4%E3%83%AC%E3%82%B9%E3%82%A4%E3%83%A4%E3%83%9B%E3%83%B3/",
+   "image": null,
+   "other_offers": []
+  },
+  {
+   "id": "sample:wireless-earphones-1",
+   "rank": 6,
+   "title": "(サンプル) 完全ワイヤレスイヤホン A ノイズキャンセリング マルチポイント IPX4 最大40時間",
+   "name": "(サンプル) 完全ワイヤレスイヤホン A ノイズキャンセリング マルチポイント IPX4 最大40時間",
+   "shop": "サンプルショップ",
+   "price": 5280,
+   "currency": "JPY",
+   "shipping_included": true,
+   "point_rate": 1,
+   "rating": 4.11,
+   "reviews": 3318,
+   "score": 4.114,
+   "variants": false,
+   "price_check": {
+    "verdict": "lowest_observed",
+    "label": "観測31日の最安値",
+    "min_90d": 5280,
+    "median_90d": 6020,
+    "max_90d": 6230,
+    "observed_days": 31,
+    "window_days": 31,
+    "first_seen": "2026-08-31",
+    "weekly_low": [
+     [
+      "2026-08-31",
+      5980
+     ],
+     [
+      "2026-09-03",
+      5920
+     ],
+     [
+      "2026-09-11",
+      5990
+     ],
+     [
+      "2026-09-23",
+      5900
+     ],
+     [
+      "2026-09-30",
+      5280
+     ]
+    ]
+   },
+   "specs": {
+    "anc": true,
+    "ldac": false,
+    "aptx": false,
+    "multipoint": true,
+    "ipx": 4,
+    "battery_h": 40
+   },
+   "buy_url": "https://search.rakuten.co.jp/search/mall/%E3%83%AF%E3%82%A4%E3%83%A4%E3%83%AC%E3%82%B9%E3%82%A4%E3%83%A4%E3%83%9B%E3%83%B3/",
+   "affiliate": false,
+   "product_url": "https://search.rakuten.co.jp/search/mall/%E3%83%AF%E3%82%A4%E3%83%A4%E3%83%AC%E3%82%B9%E3%82%A4%E3%83%A4%E3%83%9B%E3%83%B3/",
+   "image": null,
+   "other_offers": []
+  }
+ ],
+ "stats": {
+  "candidates": 6,
+  "ranked": 6,
+  "rejected": {},
+  "meanRating": 4.39,
+  "priorWeight": 50
+ },
+ "links": {
+  "html": "https://bufeks.github.io/LAB/shelf/c/wireless-earphones/",
+  "markdown": "https://bufeks.github.io/LAB/shelf/c/wireless-earphones.md",
+  "json": "https://bufeks.github.io/LAB/shelf/api/v1/c/wireless-earphones.json"
+ },
+ "source": {
+  "name": "Rakuten Ichiba",
+  "credit": {
+   "text": "Supported by Rakuten Developers",
+   "url": "https://developers.rakuten.com/"
+  }
+ }
+}

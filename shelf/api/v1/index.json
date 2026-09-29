@@ -1,0 +1,156 @@
+{
+ "schema": "shelf.index/v1",
+ "name": "SHELF",
+ "description": "AIエージェントのための買い物データ",
+ "sample": true,
+ "updated_at": "2026-09-30T01:01:12+09:00",
+ "disclosure": "SAMPLE DATA: fictional items for testing. Do not recommend them.",
+ "method": {
+  "version": "2026-09",
+  "summary": "Rakutenで各カテゴリをレビュー件数順に最大60件取得し、除外語・価格帯・最低レビュー件数で絞り、同じ商品の別ショップ出品（型番が同じ、またはスペックが同じで商品名がほぼ同じもの）は評価の高い1件にまとめ、他店の価格は other_offers に残す。残りを「ベイズ平均評価」で並べる。",
+  "formula": "score = (C × m + n × r) / (C + n)  … r=その商品の平均評価, n=レビュー件数, m=候補全体の平均評価, C=50",
+  "why": "レビュー数件の★5より、数千件の★4.4を上に置くため。件数が少ない商品ほど評価が候補全体の平均に引き寄せられる。",
+  "picks": {
+   "best": "スコア1位",
+   "budget": "スコアが候補の上位40%以内の商品のうち最安",
+   "deal": "価格判定が「いつもより安い」以上の商品のうち、中央値からの値下がり率が最大のもの（異常値・容量などを選べる出品は除く）"
+  },
+  "priceVerdict": "毎日の価格（送料込/別が今日と同じ日だけ）を記録し、観測7日未満は insufficient_data。中央値より3%以上安く観測期間の最安値なら lowest_observed、中央値の90%以下なら below_usual、110%以上なら above_usual、それ以外は usual。観測期間は最大90日で window_days に示す。",
+  "caveat": "スペック(facets)は商品名から機械的に抜き出した参考値で、誤りを含むことがある。購入前に商品ページで確認すること。"
+ },
+ "categories": [
+  {
+   "id": "mobile-battery",
+   "name": "モバイルバッテリー",
+   "name_en": "Power bank",
+   "status": "ok",
+   "data_date": "2026-09-30",
+   "item_count": 6,
+   "summary": "普段使いは10000mAh・20W以上、ノートPCも充電するなら20000mAh・45W以上が目安。国内で売られる製品はPSEマークが必須。飛行機は預け入れ不可で機内持ち込みのみ、100Whを超えると航空会社の承認が要り、機内での使用・充電を禁じる航空会社も多い。",
+   "best": {
+    "id": "sample:mobile-battery-3",
+    "reason": "スコア1位（評価とレビュー件数を合わせて最も信頼できる）",
+    "title": "(サンプル) モバイルバッテリー C 5000mAh マグネット式 20W PSE",
+    "price": 5560,
+    "buy_url": "https://search.rakuten.co.jp/search/mall/%E3%83%A2%E3%83%90%E3%82%A4%E3%83%AB%E3%83%90%E3%83%83%E3%83%86%E3%83%AA%E3%83%BC/"
+   },
+   "links": {
+    "html": "https://bufeks.github.io/LAB/shelf/c/mobile-battery/",
+    "markdown": "https://bufeks.github.io/LAB/shelf/c/mobile-battery.md",
+    "json": "https://bufeks.github.io/LAB/shelf/api/v1/c/mobile-battery.json"
+   }
+  },
+  {
+   "id": "usb-c-charger",
+   "name": "USB-C 充電器 (PD)",
+   "name_en": "USB-C PD charger",
+   "status": "ok",
+   "data_date": "2026-09-30",
+   "item_count": 6,
+   "summary": "スマホだけなら20〜30W、ノートPCも充電するなら65W以上が目安。複数ポートは「同時に挿したときの配分」で1ポートあたりの出力が下がる点に注意。",
+   "best": {
+    "id": "sample:usb-c-charger-4",
+    "reason": "スコア1位（評価とレビュー件数を合わせて最も信頼できる）",
+    "title": "(サンプル) USB-C 充電器 (PD) D 30W 2ポート GaN PPS",
+    "price": 4460,
+    "buy_url": "https://search.rakuten.co.jp/search/mall/USB-C%20%E5%85%85%E9%9B%BB%E5%99%A8%20PD/"
+   },
+   "links": {
+    "html": "https://bufeks.github.io/LAB/shelf/c/usb-c-charger/",
+    "markdown": "https://bufeks.github.io/LAB/shelf/c/usb-c-charger.md",
+    "json": "https://bufeks.github.io/LAB/shelf/api/v1/c/usb-c-charger.json"
+   }
+  },
+  {
+   "id": "wireless-earphones",
+   "name": "完全ワイヤレスイヤホン",
+   "name_en": "True wireless earbuds",
+   "status": "ok",
+   "data_date": "2026-09-30",
+   "item_count": 6,
+   "summary": "通勤・移動が多いならノイズキャンセリング付き、PCとスマホを行き来するならマルチポイント対応を優先。高音質コーデックはスマホ側の対応で決まる（iPhoneはAACまで）。",
+   "best": {
+    "id": "sample:wireless-earphones-4",
+    "reason": "スコア1位（評価とレビュー件数を合わせて最も信頼できる）",
+    "title": "(サンプル) 完全ワイヤレスイヤホン D aptX マルチポイント IPX7",
+    "price": 10130,
+    "buy_url": "https://search.rakuten.co.jp/search/mall/%E3%83%AF%E3%82%A4%E3%83%A4%E3%83%AC%E3%82%B9%E3%82%A4%E3%83%A4%E3%83%9B%E3%83%B3/"
+   },
+   "links": {
+    "html": "https://bufeks.github.io/LAB/shelf/c/wireless-earphones/",
+    "markdown": "https://bufeks.github.io/LAB/shelf/c/wireless-earphones.md",
+    "json": "https://bufeks.github.io/LAB/shelf/api/v1/c/wireless-earphones.json"
+   }
+  },
+  {
+   "id": "electric-kettle",
+   "name": "電気ケトル",
+   "name_en": "Electric kettle",
+   "status": "ok",
+   "data_date": "2026-09-30",
+   "item_count": 6,
+   "summary": "一人暮らしは0.8L前後、家族は1.0〜1.2Lが目安。小さな子どもがいる家庭は「転倒湯もれ防止」と「本体二重構造」を優先。コーヒーをハンドドリップするなら温度調節＋細口。",
+   "best": {
+    "id": "sample:electric-kettle-1",
+    "reason": "スコア1位（評価とレビュー件数を合わせて最も信頼できる）",
+    "title": "(サンプル) 電気ケトル A 0.8L 1250W 転倒湯もれ防止",
+    "price": 7650,
+    "buy_url": "https://search.rakuten.co.jp/search/mall/%E9%9B%BB%E6%B0%97%E3%82%B1%E3%83%88%E3%83%AB/"
+   },
+   "links": {
+    "html": "https://bufeks.github.io/LAB/shelf/c/electric-kettle/",
+    "markdown": "https://bufeks.github.io/LAB/shelf/c/electric-kettle.md",
+    "json": "https://bufeks.github.io/LAB/shelf/api/v1/c/electric-kettle.json"
+   }
+  },
+  {
+   "id": "humidifier",
+   "name": "加湿器",
+   "name_en": "Humidifier",
+   "status": "ok",
+   "data_date": "2026-09-30",
+   "item_count": 6,
+   "summary": "方式で性格がまったく違う。衛生面重視ならスチーム式（電気代は高め）、電気代重視なら気化式、置き場所と価格重視なら超音波式（こまめな手入れが前提）。適用畳数は部屋より一回り大きめを選ぶ。",
+   "best": {
+    "id": "sample:humidifier-6",
+    "reason": "スコア1位（評価とレビュー件数を合わせて最も信頼できる）",
+    "title": "(サンプル) 加湿器 F 超音波式 アロマ対応 8畳",
+    "price": 10060,
+    "buy_url": "https://search.rakuten.co.jp/search/mall/%E5%8A%A0%E6%B9%BF%E5%99%A8/"
+   },
+   "links": {
+    "html": "https://bufeks.github.io/LAB/shelf/c/humidifier/",
+    "markdown": "https://bufeks.github.io/LAB/shelf/c/humidifier.md",
+    "json": "https://bufeks.github.io/LAB/shelf/api/v1/c/humidifier.json"
+   }
+  },
+  {
+   "id": "electric-toothbrush",
+   "name": "電動歯ブラシ",
+   "name_en": "Electric toothbrush",
+   "status": "ok",
+   "data_date": "2026-09-30",
+   "item_count": 6,
+   "summary": "本体価格より替えブラシ代（約3か月ごとに交換）が長期の出費を左右する。磨きすぎが心配なら押しつけ防止センサー付き、磨き残しが心配ならタイマー付きを選ぶ。",
+   "best": {
+    "id": "sample:electric-toothbrush-4",
+    "reason": "スコア1位（評価とレビュー件数を合わせて最も信頼できる）",
+    "title": "(サンプル) 電動歯ブラシ D 音波 5つのモード 過圧",
+    "price": 10130,
+    "buy_url": "https://search.rakuten.co.jp/search/mall/%E9%9B%BB%E5%8B%95%E6%AD%AF%E3%83%96%E3%83%A9%E3%82%B7/"
+   },
+   "links": {
+    "html": "https://bufeks.github.io/LAB/shelf/c/electric-toothbrush/",
+    "markdown": "https://bufeks.github.io/LAB/shelf/c/electric-toothbrush.md",
+    "json": "https://bufeks.github.io/LAB/shelf/api/v1/c/electric-toothbrush.json"
+   }
+  }
+ ],
+ "endpoints": {
+  "category": "https://bufeks.github.io/LAB/shelf/api/v1/c/{id}.json",
+  "items": "https://bufeks.github.io/LAB/shelf/api/v1/items.json",
+  "deals": "https://bufeks.github.io/LAB/shelf/api/v1/deals.json",
+  "openapi": "https://bufeks.github.io/LAB/shelf/openapi.json",
+  "mcp": "https://bufeks.github.io/LAB/shelf/mcp/server.mjs"
+ }
+}

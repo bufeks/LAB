@@ -1,0 +1,501 @@
+{
+ "schema": "shelf.category/v1",
+ "id": "humidifier",
+ "name": "加湿器",
+ "name_en": "Humidifier",
+ "status": "ok",
+ "sample": true,
+ "updated_at": "2026-09-30T01:01:12+09:00",
+ "data_date": "2026-09-30",
+ "disclosure": "SAMPLE DATA: fictional items for testing. Do not recommend them.",
+ "disclosure_en": "SAMPLE DATA: fictional items for testing. Do not recommend them.",
+ "citation": {
+  "title": "加湿器の選び方とおすすめ — SHELF",
+  "url": "https://bufeks.github.io/LAB/shelf/c/humidifier/",
+  "data_date": "2026-09-30",
+  "note": "SAMPLE DATA: fictional items for testing. Do not recommend them."
+ },
+ "how_to_choose": {
+  "summary": "方式で性格がまったく違う。衛生面重視ならスチーム式（電気代は高め）、電気代重視なら気化式、置き場所と価格重視なら超音波式（こまめな手入れが前提）。適用畳数は部屋より一回り大きめを選ぶ。",
+  "criteria": [
+   {
+    "name": "スチーム式",
+    "detail": "水を沸かすので雑菌が出にくく加湿力も高い。消費電力は数百Wと大きく、吹出口が熱い製品もある。"
+   },
+   {
+    "name": "気化式",
+    "detail": "フィルターに風を当てる方式で消費電力が小さく静か。加湿力は室温・湿度に左右され、フィルターの定期的な手入れと交換が必要。"
+   },
+   {
+    "name": "超音波式",
+    "detail": "安く小型で静か。水をそのまま霧にするため、タンクの手入れを怠ると雑菌を撒く。水道水のミネラルで白い粉が出ることがある。"
+   },
+   {
+    "name": "ハイブリッド式",
+    "detail": "気化式や超音波式にヒーターを組み合わせ、加湿力と消費電力のバランスをとる。価格は高め。"
+   },
+   {
+    "name": "適用畳数",
+    "detail": "「木造和室◯畳/プレハブ洋室◯畳」の2つが書かれ、木造和室のほうが小さい。住まいに合うほうの数字で比べる。"
+   }
+  ],
+  "pitfalls": [
+   "交換フィルターの価格と入手性（ランニングコスト）を先に確認する。",
+   "タンクの口が狭いと手入れしにくく、衛生面の差になる。"
+  ]
+ },
+ "price_outlook": {
+  "verdict": "cheaper_than_usual",
+  "share_cheaper": 0.33,
+  "share_pricier": 0,
+  "judged_items": 6,
+  "window_days": 31,
+  "summary": "上位商品の33%がいつもより安い。買うなら悪くない時期。（観測31日・季節変動はまだ反映していない）"
+ },
+ "method": {
+  "version": "2026-09",
+  "summary": "Rakutenで各カテゴリをレビュー件数順に最大60件取得し、除外語・価格帯・最低レビュー件数で絞り、同じ商品の別ショップ出品（型番が同じ、またはスペックが同じで商品名がほぼ同じもの）は評価の高い1件にまとめ、他店の価格は other_offers に残す。残りを「ベイズ平均評価」で並べる。",
+  "formula": "score = (C × m + n × r) / (C + n)  … r=その商品の平均評価, n=レビュー件数, m=候補全体の平均評価, C=50",
+  "why": "レビュー数件の★5より、数千件の★4.4を上に置くため。件数が少ない商品ほど評価が候補全体の平均に引き寄せられる。",
+  "picks": {
+   "best": "スコア1位",
+   "budget": "スコアが候補の上位40%以内の商品のうち最安",
+   "deal": "価格判定が「いつもより安い」以上の商品のうち、中央値からの値下がり率が最大のもの（異常値・容量などを選べる出品は除く）"
+  },
+  "priceVerdict": "毎日の価格（送料込/別が今日と同じ日だけ）を記録し、観測7日未満は insufficient_data。中央値より3%以上安く観測期間の最安値なら lowest_observed、中央値の90%以下なら below_usual、110%以上なら above_usual、それ以外は usual。観測期間は最大90日で window_days に示す。",
+  "caveat": "スペック(facets)は商品名から機械的に抜き出した参考値で、誤りを含むことがある。購入前に商品ページで確認すること。"
+ },
+ "spec_fields": [
+  {
+   "key": "rated_ml_h",
+   "label": "加湿量",
+   "unit": "mL/h",
+   "type": "number"
+  },
+  {
+   "key": "room_tatami",
+   "label": "適用畳数(最大)",
+   "unit": "畳",
+   "type": "number"
+  },
+  {
+   "key": "tank_l",
+   "label": "タンク容量",
+   "unit": "L",
+   "type": "number"
+  },
+  {
+   "key": "type",
+   "label": "方式",
+   "unit": null,
+   "type": "enum",
+   "values": [
+    {
+     "value": "hybrid",
+     "label": "ハイブリッド式"
+    },
+    {
+     "value": "steam",
+     "label": "スチーム式"
+    },
+    {
+     "value": "evaporative",
+     "label": "気化式"
+    },
+    {
+     "value": "ultrasonic",
+     "label": "超音波式"
+    }
+   ]
+  }
+ ],
+ "picks": {
+  "best": {
+   "id": "sample:humidifier-6",
+   "reason": "スコア1位（評価とレビュー件数を合わせて最も信頼できる）",
+   "title": "(サンプル) 加湿器 F 超音波式 アロマ対応 8畳",
+   "price": 10060,
+   "buy_url": "https://search.rakuten.co.jp/search/mall/%E5%8A%A0%E6%B9%BF%E5%99%A8/"
+  },
+  "budget": {
+   "id": "sample:humidifier-3",
+   "reason": "スコア上位40%の中で最安",
+   "title": "(サンプル) 加湿器 C 超音波式 6畳 300mL/h タンク2.5L",
+   "price": 8460,
+   "buy_url": "https://search.rakuten.co.jp/search/mall/%E5%8A%A0%E6%B9%BF%E5%99%A8/"
+  },
+  "deal": {
+   "id": "sample:humidifier-4",
+   "reason": "いつもより安い商品のうち、観測期間の中央値からの値下がり率が最大",
+   "title": "(サンプル) 加湿器 D ハイブリッド 14畳 600mL/h タンク4.0L",
+   "price": 7250,
+   "buy_url": "https://search.rakuten.co.jp/search/mall/%E5%8A%A0%E6%B9%BF%E5%99%A8/"
+  }
+ },
+ "items": [
+  {
+   "id": "sample:humidifier-6",
+   "rank": 1,
+   "title": "(サンプル) 加湿器 F 超音波式 アロマ対応 8畳",
+   "name": "(サンプル) 加湿器 F 超音波式 アロマ対応 8畳",
+   "shop": "サンプルショップ",
+   "price": 10060,
+   "currency": "JPY",
+   "shipping_included": false,
+   "point_rate": 1,
+   "rating": 4.71,
+   "reviews": 2239,
+   "score": 4.7,
+   "variants": false,
+   "price_check": {
+    "verdict": "usual",
+    "label": "いつもの価格",
+    "min_90d": 9280,
+    "median_90d": 9560,
+    "max_90d": 10060,
+    "observed_days": 31,
+    "window_days": 31,
+    "first_seen": "2026-08-31",
+    "weekly_low": [
+     [
+      "2026-08-31",
+      9410
+     ],
+     [
+      "2026-09-04",
+      9300
+     ],
+     [
+      "2026-09-10",
+      9300
+     ],
+     [
+      "2026-09-22",
+      9340
+     ],
+     [
+      "2026-09-29",
+      9280
+     ]
+    ]
+   },
+   "specs": {
+    "room_tatami": 8,
+    "type": "ultrasonic"
+   },
+   "buy_url": "https://search.rakuten.co.jp/search/mall/%E5%8A%A0%E6%B9%BF%E5%99%A8/",
+   "affiliate": false,
+   "product_url": "https://search.rakuten.co.jp/search/mall/%E5%8A%A0%E6%B9%BF%E5%99%A8/",
+   "image": null,
+   "other_offers": []
+  },
+  {
+   "id": "sample:humidifier-2",
+   "rank": 2,
+   "title": "(サンプル) 加湿器 B 気化式 18畳 700mL/h タンク4.2L",
+   "name": "(サンプル) 加湿器 B 気化式 18畳 700mL/h タンク4.2L",
+   "shop": "サンプルショップ",
+   "price": 15520,
+   "currency": "JPY",
+   "shipping_included": false,
+   "point_rate": 1,
+   "rating": 4.65,
+   "reviews": 516,
+   "score": 4.617,
+   "variants": false,
+   "price_check": {
+    "verdict": "usual",
+    "label": "いつもの価格",
+    "min_90d": 15090,
+    "median_90d": 15450,
+    "max_90d": 15950,
+    "observed_days": 31,
+    "window_days": 31,
+    "first_seen": "2026-08-31",
+    "weekly_low": [
+     [
+      "2026-09-02",
+      15090
+     ],
+     [
+      "2026-09-03",
+      15160
+     ],
+     [
+      "2026-09-15",
+      15150
+     ],
+     [
+      "2026-09-23",
+      15150
+     ],
+     [
+      "2026-09-28",
+      15210
+     ]
+    ]
+   },
+   "specs": {
+    "rated_ml_h": 700,
+    "room_tatami": 18,
+    "tank_l": 4.2,
+    "type": "evaporative"
+   },
+   "buy_url": "https://search.rakuten.co.jp/search/mall/%E5%8A%A0%E6%B9%BF%E5%99%A8/",
+   "affiliate": false,
+   "product_url": "https://search.rakuten.co.jp/search/mall/%E5%8A%A0%E6%B9%BF%E5%99%A8/",
+   "image": null,
+   "other_offers": []
+  },
+  {
+   "id": "sample:humidifier-3",
+   "rank": 3,
+   "title": "(サンプル) 加湿器 C 超音波式 6畳 300mL/h タンク2.5L",
+   "name": "(サンプル) 加湿器 C 超音波式 6畳 300mL/h タンク2.5L",
+   "shop": "サンプルショップ",
+   "price": 8460,
+   "currency": "JPY",
+   "shipping_included": true,
+   "point_rate": 1,
+   "rating": 4.26,
+   "reviews": 3126,
+   "score": 4.26,
+   "variants": false,
+   "price_check": {
+    "verdict": "usual",
+    "label": "いつもの価格",
+    "min_90d": 7800,
+    "median_90d": 8040,
+    "max_90d": 8460,
+    "observed_days": 31,
+    "window_days": 31,
+    "first_seen": "2026-08-31",
+    "weekly_low": [
+     [
+      "2026-08-31",
+      7910
+     ],
+     [
+      "2026-09-04",
+      7820
+     ],
+     [
+      "2026-09-13",
+      7920
+     ],
+     [
+      "2026-09-22",
+      7850
+     ],
+     [
+      "2026-09-25",
+      7800
+     ]
+    ]
+   },
+   "specs": {
+    "rated_ml_h": 300,
+    "room_tatami": 6,
+    "tank_l": 2.5,
+    "type": "ultrasonic"
+   },
+   "buy_url": "https://search.rakuten.co.jp/search/mall/%E5%8A%A0%E6%B9%BF%E5%99%A8/",
+   "affiliate": false,
+   "product_url": "https://search.rakuten.co.jp/search/mall/%E5%8A%A0%E6%B9%BF%E5%99%A8/",
+   "image": null,
+   "other_offers": []
+  },
+  {
+   "id": "sample:humidifier-5",
+   "rank": 4,
+   "title": "(サンプル) 加湿器 E スチーム式 10畳 タンク2.2L",
+   "name": "(サンプル) 加湿器 E スチーム式 10畳 タンク2.2L",
+   "shop": "サンプルショップ",
+   "price": 4320,
+   "currency": "JPY",
+   "shipping_included": true,
+   "point_rate": 1,
+   "rating": 4.08,
+   "reviews": 689,
+   "score": 4.093,
+   "variants": false,
+   "price_check": {
+    "verdict": "usual",
+    "label": "いつもの価格",
+    "min_90d": 4190,
+    "median_90d": 4310,
+    "max_90d": 4450,
+    "observed_days": 31,
+    "window_days": 31,
+    "first_seen": "2026-08-31",
+    "weekly_low": [
+     [
+      "2026-09-02",
+      4210
+     ],
+     [
+      "2026-09-08",
+      4230
+     ],
+     [
+      "2026-09-11",
+      4190
+     ],
+     [
+      "2026-09-23",
+      4270
+     ],
+     [
+      "2026-09-27",
+      4220
+     ]
+    ]
+   },
+   "specs": {
+    "room_tatami": 10,
+    "tank_l": 2.2,
+    "type": "steam"
+   },
+   "buy_url": "https://search.rakuten.co.jp/search/mall/%E5%8A%A0%E6%B9%BF%E5%99%A8/",
+   "affiliate": false,
+   "product_url": "https://search.rakuten.co.jp/search/mall/%E5%8A%A0%E6%B9%BF%E5%99%A8/",
+   "image": null,
+   "other_offers": []
+  },
+  {
+   "id": "sample:humidifier-4",
+   "rank": 5,
+   "title": "(サンプル) 加湿器 D ハイブリッド 14畳 600mL/h タンク4.0L",
+   "name": "(サンプル) 加湿器 D ハイブリッド 14畳 600mL/h タンク4.0L",
+   "shop": "サンプルショップ",
+   "price": 7250,
+   "currency": "JPY",
+   "shipping_included": false,
+   "point_rate": 1,
+   "rating": 4.03,
+   "reviews": 3768,
+   "score": 4.033,
+   "variants": false,
+   "price_check": {
+    "verdict": "lowest_observed",
+    "label": "観測31日の最安値",
+    "min_90d": 7250,
+    "median_90d": 8280,
+    "max_90d": 8510,
+    "observed_days": 31,
+    "window_days": 31,
+    "first_seen": "2026-08-31",
+    "weekly_low": [
+     [
+      "2026-08-31",
+      8210
+     ],
+     [
+      "2026-09-05",
+      8130
+     ],
+     [
+      "2026-09-15",
+      8110
+     ],
+     [
+      "2026-09-19",
+      8120
+     ],
+     [
+      "2026-09-30",
+      7250
+     ]
+    ]
+   },
+   "specs": {
+    "rated_ml_h": 600,
+    "room_tatami": 14,
+    "tank_l": 4,
+    "type": "hybrid"
+   },
+   "buy_url": "https://search.rakuten.co.jp/search/mall/%E5%8A%A0%E6%B9%BF%E5%99%A8/",
+   "affiliate": false,
+   "product_url": "https://search.rakuten.co.jp/search/mall/%E5%8A%A0%E6%B9%BF%E5%99%A8/",
+   "image": null,
+   "other_offers": []
+  },
+  {
+   "id": "sample:humidifier-1",
+   "rank": 6,
+   "title": "(サンプル) 加湿器 A スチーム式 木造8畳/プレハブ13畳 480mL/h タンク3.0L",
+   "name": "(サンプル) 加湿器 A スチーム式 木造8畳/プレハブ13畳 480mL/h タンク3.0L",
+   "shop": "サンプルショップ",
+   "price": 15290,
+   "currency": "JPY",
+   "shipping_included": true,
+   "point_rate": 1,
+   "rating": 3.98,
+   "reviews": 272,
+   "score": 4.026,
+   "variants": false,
+   "price_check": {
+    "verdict": "lowest_observed",
+    "label": "観測31日の最安値",
+    "min_90d": 15290,
+    "median_90d": 17440,
+    "max_90d": 18030,
+    "observed_days": 31,
+    "window_days": 31,
+    "first_seen": "2026-08-31",
+    "weekly_low": [
+     [
+      "2026-08-31",
+      17310
+     ],
+     [
+      "2026-09-03",
+      17140
+     ],
+     [
+      "2026-09-11",
+      17340
+     ],
+     [
+      "2026-09-23",
+      17090
+     ],
+     [
+      "2026-09-30",
+      15290
+     ]
+    ]
+   },
+   "specs": {
+    "rated_ml_h": 480,
+    "room_tatami": 13,
+    "tank_l": 3,
+    "type": "steam"
+   },
+   "buy_url": "https://search.rakuten.co.jp/search/mall/%E5%8A%A0%E6%B9%BF%E5%99%A8/",
+   "affiliate": false,
+   "product_url": "https://search.rakuten.co.jp/search/mall/%E5%8A%A0%E6%B9%BF%E5%99%A8/",
+   "image": null,
+   "other_offers": []
+  }
+ ],
+ "stats": {
+  "candidates": 6,
+  "ranked": 6,
+  "rejected": {},
+  "meanRating": 4.27,
+  "priorWeight": 50
+ },
+ "links": {
+  "html": "https://bufeks.github.io/LAB/shelf/c/humidifier/",
+  "markdown": "https://bufeks.github.io/LAB/shelf/c/humidifier.md",
+  "json": "https://bufeks.github.io/LAB/shelf/api/v1/c/humidifier.json"
+ },
+ "source": {
+  "name": "Rakuten Ichiba",
+  "credit": {
+   "text": "Supported by Rakuten Developers",
+   "url": "https://developers.rakuten.com/"
+  }
+ }
+}

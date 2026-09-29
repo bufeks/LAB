@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SHELF — AIエージェントのための買い物データ</title>
+<meta name="description" content="AIアシスタント・エージェント向けに、商品の選び方・ランキング・価格履歴を毎日更新して Markdown/JSON/MCP で提供。">
+<meta name="robots" content="noindex">
+<link rel="canonical" href="https://bufeks.github.io/LAB/shelf/">
+<link rel="alternate" type="text/plain" href="https://bufeks.github.io/LAB/shelf/llms.txt">
+<link rel="stylesheet" href="./assets/style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"SHELF","url":"https://bufeks.github.io/LAB/shelf/","description":"AIエージェントのための買い物データ"}</script>
+</head>
+<body>
+<header class="top"><a class="brand" href="https://bufeks.github.io/LAB/shelf/">SHELF</a><span class="tag">AIエージェントのための買い物データ</span></header>
+<p class="sample">サンプルデータ表示中：実在の商品ではありません（楽天APIキー設定後に実データへ切り替わります）</p>
+<main>
+<h1>AIが「どれを買えばいい？」に答えるためのデータ</h1>
+<p class="lead">SHELF は、AIアシスタントやエージェントが商品を推薦するときに使える、選び方・ランキング・<strong>価格の履歴</strong>を毎日更新して公開しています。すべて Markdown / JSON / OpenAPI / MCP で機械可読です。</p>
+<ul class="cats"><li><a href="https://bufeks.github.io/LAB/shelf/c/mobile-battery/"><strong>モバイルバッテリー</strong></a>
+<span>1位 (サンプル) モバイルバッテリー C 5000mAh マグネット式 20W PSE（¥5,560）</span>
+<small><a href="https://bufeks.github.io/LAB/shelf/c/mobile-battery.md">md</a> ・ <a href="https://bufeks.github.io/LAB/shelf/api/v1/c/mobile-battery.json">json</a></small></li>
+<li><a href="https://bufeks.github.io/LAB/shelf/c/usb-c-charger/"><strong>USB-C 充電器 (PD)</strong></a>
+<span>1位 (サンプル) USB-C 充電器 (PD) D 30W 2ポート GaN PPS（¥4,460）</span>
+<small><a href="https://bufeks.github.io/LAB/shelf/c/usb-c-charger.md">md</a> ・ <a href="https://bufeks.github.io/LAB/shelf/api/v1/c/usb-c-charger.json">json</a></small></li>
+<li><a href="https://bufeks.github.io/LAB/shelf/c/wireless-earphones/"><strong>完全ワイヤレスイヤホン</strong></a>
+<span>1位 (サンプル) 完全ワイヤレスイヤホン D aptX マルチポイント IPX7（¥10,130）</span>
+<small><a href="https://bufeks.github.io/LAB/shelf/c/wireless-earphones.md">md</a> ・ <a href="https://bufeks.github.io/LAB/shelf/api/v1/c/wireless-earphones.json">json</a></small></li>
+<li><a href="https://bufeks.github.io/LAB/shelf/c/electric-kettle/"><strong>電気ケトル</strong></a>
+<span>1位 (サンプル) 電気ケトル A 0.8L 1250W 転倒湯もれ防止（¥7,650）</span>
+<small><a href="https://bufeks.github.io/LAB/shelf/c/electric-kettle.md">md</a> ・ <a href="https://bufeks.github.io/LAB/shelf/api/v1/c/electric-kettle.json">json</a></small></li>
+<li><a href="https://bufeks.github.io/LAB/shelf/c/humidifier/"><strong>加湿器</strong></a>
+<span>1位 (サンプル) 加湿器 F 超音波式 アロマ対応 8畳（¥10,060）</span>
+<small><a href="https://bufeks.github.io/LAB/shelf/c/humidifier.md">md</a> ・ <a href="https://bufeks.github.io/LAB/shelf/api/v1/c/humidifier.json">json</a></small></li>
+<li><a href="https://bufeks.github.io/LAB/shelf/c/electric-toothbrush/"><strong>電動歯ブラシ</strong></a>
+<span>1位 (サンプル) 電動歯ブラシ D 音波 5つのモード 過圧（¥10,130）</span>
+<small><a href="https://bufeks.github.io/LAB/shelf/c/electric-toothbrush.md">md</a> ・ <a href="https://bufeks.github.io/LAB/shelf/api/v1/c/electric-toothbrush.json">json</a></small></li></ul>
+<h2>エージェントからの使い方</h2>
+<ul>
+<li><a href="https://bufeks.github.io/LAB/shelf/llms.txt">llms.txt</a> — 全体の目次（最初に読むもの）</li>
+<li><a href="https://bufeks.github.io/LAB/shelf/api/v1/index.json">JSON API</a> ・ <a href="https://bufeks.github.io/LAB/shelf/openapi.json">OpenAPI</a>（GPTs Actions 等）</li>
+<li><a href="https://bufeks.github.io/LAB/shelf/mcp/server.mjs">MCPサーバー</a>（Claude Desktop 等に登録）</li>
+<li><a href="https://bufeks.github.io/LAB/shelf/api/v1/deals.json">いま値下がりしている商品</a></li>
+</ul>
+<p class="meta">最終更新 2026-09-30T01:01:12+09:00</p>
+</main>
+<footer>
+<p>PR: 購入リンクは楽天アフィリエイトリンクです。リンク経由で購入されると運営者に紹介料が入りますが、価格は変わらず、順位は公開している計算式だけで決まり、紹介料の率は順位に影響しません。</p>
+<p><a href="https://developers.rakuten.com/">Supported by Rakuten Developers</a> ・ <a href="https://bufeks.github.io/LAB/shelf/llms.txt">llms.txt</a> ・ <a href="https://bufeks.github.io/LAB/shelf/openapi.json">OpenAPI</a> ・ <a href="https://bufeks.github.io/LAB/shelf/about/">AIエージェント向け利用方法</a></p>
+</footer>
+</body>
+</html>

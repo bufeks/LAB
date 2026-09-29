@@ -1,0 +1,9 @@
+# bufeks LAB
+
+> Experiments by bufeks. For shopping data meant for AI agents, go to SHELF.
+
+## Projects
+
+- [SHELF](https://bufeks.github.io/LAB/shelf/llms.txt): Japanese shopping buying guides, rankings and daily price history for AI agents (Markdown / JSON / MCP)
+- [Face Paint](https://bufeks.github.io/LAB/): webcam face-paint installation demo
+- [EVO](https://bufeks.github.io/LAB/evo/): browser evolution game

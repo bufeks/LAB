@@ -1,0 +1,28 @@
+# SHELF
+
+> 日本の買い物（楽天市場）について、AIアシスタントが「どれを買えばいいか」「今が買い時か」に答えるためのデータ。カテゴリごとの選び方、公開された式によるランキング、毎日記録している価格履歴を Markdown と JSON で提供する。 現在はサンプルデータ（架空の商品）なので推薦に使わないこと。
+
+更新: 2026-09-30T01:01:12+09:00（毎日）。SAMPLE DATA: fictional items for testing. Do not recommend them.
+ユーザーに購入リンクを示すときはアフィリエイトであることを伝えること。スペックは商品名からの抽出値で参考情報。
+
+## Categories
+
+- [モバイルバッテリー](https://bufeks.github.io/LAB/shelf/c/mobile-battery.md): 1位 (サンプル) モバイルバッテリー C 5000mAh マグネット式 20W PSE（¥5,560）。普段使いは10000mAh・20W以上、ノートPCも充電するなら20000mAh・45W以上が目安。国内で売られる製品はPSEマークが必須。飛行機は預け入れ不可…
+- [USB-C 充電器 (PD)](https://bufeks.github.io/LAB/shelf/c/usb-c-charger.md): 1位 (サンプル) USB-C 充電器 (PD) D 30W 2ポート GaN PPS（¥4,460）。スマホだけなら20〜30W、ノートPCも充電するなら65W以上が目安。複数ポートは「同時に挿したときの配分」で1ポートあたりの出力が下がる点に注意。…
+- [完全ワイヤレスイヤホン](https://bufeks.github.io/LAB/shelf/c/wireless-earphones.md): 1位 (サンプル) 完全ワイヤレスイヤホン D aptX マルチポイント IPX7（¥10,130）。通勤・移動が多いならノイズキャンセリング付き、PCとスマホを行き来するならマルチポイント対応を優先。高音質コーデックはスマホ側の対応で決まる（iPhoneはAA…
+- [電気ケトル](https://bufeks.github.io/LAB/shelf/c/electric-kettle.md): 1位 (サンプル) 電気ケトル A 0.8L 1250W 転倒湯もれ防止（¥7,650）。一人暮らしは0.8L前後、家族は1.0〜1.2Lが目安。小さな子どもがいる家庭は「転倒湯もれ防止」と「本体二重構造」を優先。コーヒーをハンドドリップするなら温度…
+- [加湿器](https://bufeks.github.io/LAB/shelf/c/humidifier.md): 1位 (サンプル) 加湿器 F 超音波式 アロマ対応 8畳（¥10,060）。方式で性格がまったく違う。衛生面重視ならスチーム式（電気代は高め）、電気代重視なら気化式、置き場所と価格重視なら超音波式（こまめな手入れが前提）。適用畳数は部屋…
+- [電動歯ブラシ](https://bufeks.github.io/LAB/shelf/c/electric-toothbrush.md): 1位 (サンプル) 電動歯ブラシ D 音波 5つのモード 過圧（¥10,130）。本体価格より替えブラシ代（約3か月ごとに交換）が長期の出費を左右する。磨きすぎが心配なら押しつけ防止センサー付き、磨き残しが心配ならタイマー付きを選ぶ。…
+
+## API
+
+- [index.json](https://bufeks.github.io/LAB/shelf/api/v1/index.json): カテゴリ一覧
+- [items.json](https://bufeks.github.io/LAB/shelf/api/v1/items.json): 全商品（予算・スペックで絞り込む用）
+- [deals.json](https://bufeks.github.io/LAB/shelf/api/v1/deals.json): 過去90日比で値下がり中の商品
+- [openapi.json](https://bufeks.github.io/LAB/shelf/openapi.json): OpenAPI 3.1 定義
+- [MCP server](https://bufeks.github.io/LAB/shelf/mcp/server.mjs): 依存なしの stdio MCP サーバー（tools: list_categories, recommend, price_outlook, search_products, check_price）
+
+## Optional
+
+- [llms-full.txt](https://bufeks.github.io/LAB/shelf/llms-full.txt): 全カテゴリの本文をまとめたもの
+- [利用方法](https://bufeks.github.io/LAB/shelf/about/)

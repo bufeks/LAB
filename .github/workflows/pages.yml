@@ -5,6 +5,11 @@ name: Deploy to GitHub Pages
 on:
   push:
   workflow_dispatch:
+  # The daily SHELF update commits with GITHUB_TOKEN, which does not fire
+  # push; redeploy when it finishes instead.
+  workflow_run:
+    workflows: ['SHELF update']
+    types: [completed]
 
 permissions:
   contents: read
@@ -18,6 +23,8 @@ concurrency:
 jobs:
   deploy:
     # Only the default branch is published, whatever it is currently called.
+    # After a SHELF update run this redeploys whatever the default branch now
+    # holds, even when the run failed its audit after committing data.
     if: github.ref == format('refs/heads/{0}', github.event.repository.default_branch)
     runs-on: ubuntu-latest
     environment:

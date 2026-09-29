@@ -1,0 +1,91 @@
+name: SHELF update
+
+# Daily: fetch Rakuten, rank, extend price history, rebuild shelf/, audit,
+# and commit. Pages then redeploys through the workflow_run trigger in
+# pages.yml (pushes made with GITHUB_TOKEN do not trigger push workflows).
+# Without the RAKUTEN_* secrets it only runs the tests and keeps the
+# committed sample build.
+on:
+  schedule:
+    - cron: '17 20 * * *' # 05:17 JST
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: shelf-update
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Test
+        run: node --test 'shelf/tool/test/*.test.mjs'
+      - name: Check credentials
+        id: mode
+        env:
+          HAS_KEYS: ${{ secrets.RAKUTEN_APP_ID != '' && secrets.RAKUTEN_ACCESS_KEY != '' }}
+        run: |
+          echo "live=$HAS_KEYS" >> "$GITHUB_OUTPUT"
+          if [ "$HAS_KEYS" != "true" ]; then
+            echo "::notice::RAKUTEN_APP_ID / RAKUTEN_ACCESS_KEY are not set; keeping the committed sample build."
+          fi
+      - name: Fetch and build
+        id: fetch
+        if: steps.mode.outputs.live == 'true'
+        env:
+          RAKUTEN_APP_ID: ${{ secrets.RAKUTEN_APP_ID }}
+          RAKUTEN_ACCESS_KEY: ${{ secrets.RAKUTEN_ACCESS_KEY }}
+          RAKUTEN_AFFILIATE_ID: ${{ secrets.RAKUTEN_AFFILIATE_ID }}
+          RAKUTEN_REFERER: ${{ vars.RAKUTEN_REFERER }}
+          SHELF_BASE_URL: ${{ vars.SHELF_BASE_URL }}
+        run: node shelf/tool/update.mjs
+      # An audit error must not cost a day of price history: commit anyway,
+      # then fail the job at the end so the alert issue gets opened.
+      - name: Audit
+        id: audit
+        if: steps.fetch.outcome == 'success'
+        continue-on-error: true
+        run: node shelf/tool/check.mjs
+      - name: Commit
+        if: steps.fetch.outcome == 'success'
+        run: |
+          git config user.name "shelf-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add shelf
+          if git diff --cached --quiet; then echo "no changes"; exit 0; fi
+          git commit -m "SHELF: daily update $(TZ=Asia/Tokyo date +%F)"
+          for i in 1 2 3; do
+            git fetch origin "${GITHUB_REF_NAME}"
+            # Generated files: on conflict keep this run's version.
+            if git rebase -X theirs "origin/${GITHUB_REF_NAME}"; then
+              git push origin "HEAD:${GITHUB_REF_NAME}" && exit 0
+            else
+              git rebase --abort || true
+            fi
+            sleep $((i * 5))
+          done
+          exit 1
+      - name: Fail on audit errors
+        if: steps.audit.outcome == 'failure'
+        run: exit 1
+      - name: Open or update an alert issue
+        if: failure()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          title="SHELF: 自動更新が失敗しました"
+          body="Run: ${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}"
+          if [ -f shelf/data/report.json ]; then
+            body="$body"$'\n\n```json\n'"$(head -c 6000 shelf/data/report.json)"$'\n```'
+          fi
+          num=$(gh issue list --state open --search "\"$title\" in:title" --json number --jq '.[0].number')
+          if [ -n "$num" ]; then gh issue comment "$num" --body "$body"; else gh issue create --title "$title" --body "$body"; fi
