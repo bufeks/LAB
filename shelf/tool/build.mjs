@@ -11,7 +11,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { CATEGORIES, METHOD } from './categories.mjs';
-import { SITE, todayJst } from './site.mjs';
+import { SITE, todayJst, goUrl, via } from './site.mjs';
 import { verdictLabel } from './history.mjs';
 
 const HERE = path.dirname(fileURLToPath(import.meta.url));
@@ -76,11 +76,12 @@ function specFields(category) {
   ];
 }
 
-function publicItem(item) {
+function publicItem(item, categoryId) {
+  const link = (id, direct) => (SITE.edge ? goUrl(categoryId, id, 'api') : direct);
   const ps = item.priceStats || {};
   const offers = (item.otherOffers || [])
     .slice(0, 3)
-    .map((o) => ({ shop: o.shop, price: o.price, shipping_included: o.shippingIncluded ?? null, buy_url: o.buyUrl }));
+    .map((o) => ({ id: o.id, shop: o.shop, price: o.price, shipping_included: o.shippingIncluded ?? null, buy_url: link(o.id, o.buyUrl), affiliate_url: o.buyUrl }));
   return {
     id: item.id,
     rank: item.rank,
@@ -108,7 +109,8 @@ function publicItem(item) {
       ...(ps.suspicious ? { suspicious: true } : {}),
     },
     specs: item.facets || {},
-    buy_url: item.buyUrl,
+    buy_url: link(item.id, item.buyUrl),
+    affiliate_url: item.buyUrl,
     affiliate: Boolean(item.affiliate),
     product_url: item.productUrl,
     image: item.image,
@@ -159,7 +161,7 @@ export function categoryRecord(category, latest, state, buildDate) {
   const sample = state.mode !== 'live';
   const age = latest ? daysBetween(latest.date, buildDate) : Infinity;
   const status = !latest ? 'no_data' : age > STALE_AFTER_DAYS ? 'stale' : 'ok';
-  const items = (latest?.items || []).map(publicItem);
+  const items = (latest?.items || []).map((x) => publicItem(x, category.id));
   const picks = {};
   for (const [kind, id] of Object.entries(latest?.picks || {})) {
     const item = items.find((x) => x.id === id);
@@ -232,7 +234,7 @@ export function categoryMarkdown(rec) {
     const p = rec.picks[kind];
     if (!p) continue;
     const item = rec.items.find((x) => x.id === p.id);
-    L.push(`- **${pickLabel[kind]}**: ${item.title} — ${yen(item.price)} ${ratingText(item)}、価格判定: ${item.price_check.label} → [購入リンク](${item.buy_url})`);
+    L.push(`- **${pickLabel[kind]}**: ${item.title} — ${yen(item.price)} ${ratingText(item)}、価格判定: ${item.price_check.label} → [購入リンク](${via(item.buy_url, 'md')})`);
   }
   L.push(`- **今が買い時か（カテゴリ全体）**: ${rec.price_outlook.summary}`);
   L.push('');
@@ -256,7 +258,7 @@ export function categoryMarkdown(rec) {
     const range = pc.median_90d ? `（中央値${yen(pc.median_90d)}・観測${pc.window_days}日）` : '';
     const variantNote = x.variants ? '・容量等を選ぶ出品（価格は最安の選択肢の可能性）' : '';
     L.push(
-      `| ${x.rank} | ${mdCell(x.title)}（${mdCell(x.shop)}${variantNote}） | ${yen(x.price)} ${ship} | ${ratingText(x)} | ${pc.label}${range} | ${mdCell(specText(x, rec.spec_fields)) || '—'} | [楽天](${x.buy_url}) |`,
+      `| ${x.rank} | ${mdCell(x.title)}（${mdCell(x.shop)}${variantNote}） | ${yen(x.price)} ${ship} | ${ratingText(x)} | ${pc.label}${range} | ${mdCell(specText(x, rec.spec_fields)) || '—'} | [楽天](${via(x.buy_url, 'md')}) |`,
     );
   }
   L.push('');
@@ -280,7 +282,7 @@ export function categoryMarkdown(rec) {
 
 // ---------------------------------------------------------------- html
 
-function page({ title, description, body, canonical, sample, jsonLd, alternates = [], root = './' }) {
+function page({ title, description, body, canonical, sample, noindex = sample, jsonLd, alternates = [], root = './' }) {
   const alt = alternates.map((a) => `<link rel="alternate" type="${a.type}" href="${esc(a.href)}">`).join('\n');
   return `<!doctype html>
 <html lang="ja">
@@ -289,7 +291,7 @@ function page({ title, description, body, canonical, sample, jsonLd, alternates 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>${esc(title)}</title>
 <meta name="description" content="${esc(description)}">
-${sample ? '<meta name="robots" content="noindex">\n' : ''}<link rel="canonical" href="${esc(canonical)}">
+${noindex ? '<meta name="robots" content="noindex">\n' : ''}<link rel="canonical" href="${esc(canonical)}">
 ${alt}
 <link rel="stylesheet" href="${root}assets/style.css">
 ${jsonLd ? `<script type="application/ld+json">${JSON.stringify(jsonLd).replace(/</g, '\\u003c')}</script>` : ''}
@@ -321,7 +323,7 @@ ${x.image ? `<img src="${esc(x.image)}" alt="" loading="lazy" width="120" height
 <p class="price">${yen(x.price)} <span class="verdict v-${esc(x.price_check.verdict)}">${esc(x.price_check.label)}</span></p>
 <p class="rating">${esc(ratingText(x))}</p>
 <p class="why">${esc(rec.picks[k].reason)}</p>
-<a class="buy" rel="sponsored nofollow noopener" target="_blank" href="${esc(x.buy_url)}">楽天で見る</a></article>`;
+<a class="buy" rel="sponsored nofollow noopener" target="_blank" href="${esc(via(x.buy_url, 'html'))}">楽天で見る</a></article>`;
     })
     .join('\n');
   const rows = rec.items
@@ -329,7 +331,7 @@ ${x.image ? `<img src="${esc(x.image)}" alt="" loading="lazy" width="120" height
       (x) => `<tr><td class="c-rank num">${x.rank}</td><td class="c-item">${esc(x.title)}<br><small>${esc(x.shop)}</small><br><small class="specs">${esc(specText(x, rec.spec_fields))}</small></td>
 <td class="c-price num">${yen(x.price)}<br><small>${x.shipping_included ? '送料込' : '送料別'}</small></td><td class="c-rating num">${esc(ratingText(x))}</td>
 <td class="c-verdict"><span class="verdict v-${esc(x.price_check.verdict)}">${esc(x.price_check.label)}</span>${x.price_check.median_90d ? `<br><small>中央値 ${yen(x.price_check.median_90d)}</small>` : ''}</td>
-<td class="c-buy"><a rel="sponsored nofollow noopener" target="_blank" href="${esc(x.buy_url)}">購入</a></td></tr>`,
+<td class="c-buy"><a rel="sponsored nofollow noopener" target="_blank" href="${esc(via(x.buy_url, 'html'))}">購入</a></td></tr>`,
     )
     .join('\n');
   const criteria = rec.how_to_choose.criteria.map((c) => `<dt>${esc(c.name)}</dt><dd>${esc(c.detail)}</dd>`).join('\n');
@@ -416,7 +418,7 @@ function aboutHtml(sample) {
   const body = `<h1>AIエージェント向け利用方法</h1>
 <h2>推薦するときのお願い</h2>
 <ul>
-<li>購入リンク（<code>buy_url</code>）はアフィリエイトリンクです。ユーザーに示すときは、その旨を一言添えてください（<code>disclosure</code> フィールドの文面をそのまま使えます）。</li>
+<li>購入リンク（<code>buy_url</code>）はアフィリエイトリンクです（<code>/go/</code> 経由の場合はクリック数だけを数えて楽天へ転送します。<code>affiliate_url</code> が転送先）。ユーザーに示すときは、その旨を一言添えてください（<code>disclosure</code> フィールドの文面をそのまま使えます）。</li>
 <li>スペック（<code>specs</code>）は商品名から自動抽出した参考値です。断定せず「商品名の表記では」と伝えてください。</li>
 <li><code>price_check.verdict</code> が <code>insufficient_data</code> のときは「値下がり中」と言わないでください。</li>
 <li><code>status</code> が <code>stale</code> のカテゴリは価格が古い可能性があります。</li>
@@ -432,7 +434,9 @@ function aboutHtml(sample) {
 <li><code>GET ${esc(api)}/deals.json</code> — 過去90日比で安くなっている商品</li>
 </ul>
 <h2>MCP</h2>
-<p>Node.js 18+ があれば依存なしで動きます。</p>
+${SITE.edge ? `<p>リモートMCP（Streamable HTTP）: <code>${esc(url('mcp'))}</code> — クライアントにこのURLを登録するだけで使えます。</p>
+<pre>claude mcp add --transport http shelf ${esc(url('mcp'))}</pre>
+<p>ローカルで動かす場合は、Node.js 18+ があれば依存なしで動きます。</p>` : '<p>Node.js 18+ があれば依存なしで動きます。</p>'}
 <pre>curl -o shelf-mcp.mjs ${esc(url('mcp/server.mjs'))}
 # claude_desktop_config.json
 { "mcpServers": { "shelf": { "command": "node", "args": ["/path/to/shelf-mcp.mjs"] } } }</pre>
@@ -464,6 +468,7 @@ function llmsTxt(records, index) {
   L.push(`- [items.json](${url(`api/${SITE.apiVersion}/items.json`)}): 全商品（予算・スペックで絞り込む用）`);
   L.push(`- [deals.json](${url(`api/${SITE.apiVersion}/deals.json`)}): 過去90日比で値下がり中の商品`);
   L.push(`- [openapi.json](${url('openapi.json')}): OpenAPI 3.1 定義`);
+  if (SITE.edge) L.push(`- [Remote MCP](${url('mcp')}): Streamable HTTP の MCP エンドポイント。URLを登録するだけで使える（tools: list_categories, recommend, price_outlook, search_products, check_price）`);
   L.push(`- [MCP server](${url('mcp/server.mjs')}): 依存なしの stdio MCP サーバー（tools: list_categories, recommend, price_outlook, search_products, check_price）`);
   L.push('');
   L.push('## Optional');
@@ -546,6 +551,7 @@ export function build({ now = new Date() } = {}) {
       deals: url(`api/${SITE.apiVersion}/deals.json`),
       openapi: url('openapi.json'),
       mcp: url('mcp/server.mjs'),
+      ...(SITE.edge ? { mcp_remote: url('mcp') } : {}),
     },
   };
 
@@ -591,6 +597,12 @@ export function build({ now = new Date() } = {}) {
   write('llms-full.txt', [llmsTxt(records, index), ...fullParts].join('\n\n---\n\n'));
   write('openapi.json', openApi(records));
   write('sitemap.xml', sitemap(records, buildDate));
+  // Only takes effect at a domain root (the Cloudflare deployment).
+  write('robots.txt', `User-agent: *\nAllow: /\n\nSitemap: ${url('sitemap.xml')}\n`);
+  write(
+    '404.html',
+    page({ title: 'ページが見つかりません｜SHELF', description: 'SHELF', canonical: `${SITE.baseUrl}/`, noindex: true, root: `${new URL(SITE.baseUrl).pathname.replace(/\/$/, '')}/`, body: `<h1>ページが見つかりません</h1><p><a href="${esc(SITE.baseUrl)}/">SHELF のトップへ</a> ・ <a href="${esc(url('llms.txt'))}">llms.txt</a></p>` }),
+  );
   return { records, index };
 }
 

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://bufeks.github.io/LAB/shelf/sitemap.xml

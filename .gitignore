@@ -1,2 +1,5 @@
 vendor/
 .DS_Store
+edge-dist/
+wrangler.gen.json
+.wrangler/

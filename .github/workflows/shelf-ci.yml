@@ -25,3 +25,13 @@ jobs:
         run: |
           node shelf/tool/update.mjs
           node shelf/tool/check.mjs
+      - name: Bundle the Cloudflare Worker (dry run, no credentials)
+        env:
+          SHELF_EDGE: '1'
+          SHELF_BASE_URL: https://shelf.example.com
+          SHELF_DATA_DIR: ${{ runner.temp }}/data
+          SHELF_OUT_DIR: ${{ runner.temp }}/edge
+        run: |
+          node shelf/tool/build.mjs
+          node shelf/tool/edge.mjs
+          npx --yes wrangler@4 deploy --dry-run --config wrangler.gen.json --outdir "${{ runner.temp }}/bundle"

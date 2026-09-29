@@ -97,9 +97,39 @@ APIが落ちたカテゴリは前回データを保持し、3日を超えると 
 - `llms.txt`・`sitemap.xml`・Markdown 代替リンク（`<link rel="alternate" type="text/markdown">`）は自動生成済み。
 - MCP: `claude mcp add shelf -- node /path/to/server.mjs`。公式 MCP Registry やディレクトリへの登録で露出が増える。
 - ChatGPT: GPTs を作り、Actions に `openapi.json` を読み込ませる。
-- **独自ドメイン推奨**: `robots.txt` と `llms.txt` はドメイン直下でないと効かないため、`github.io/LAB/` 配下では限界がある。
+- 独自ドメイン（§7）に移ると、`robots.txt` / `llms.txt` がドメイン直下で効き、リモートMCPのURLを登録するだけで使ってもらえる。
 
-## 7. ローカルで動かす
+## 7. 独自ドメイン＋Cloudflare で公開する
+
+GitHub Pages は規約上、商取引が主目的のサイトの無料ホスティングには使えず、下の階層では `llms.txt` / `robots.txt` も効きにくい。
+そのため本番は **独自ドメイン＋Cloudflare Workers**（静的ファイル＋小さな Worker、無料枠で足りる）にする。
+データ生成は今の GitHub Actions のまま、出力先が増えるだけ。
+
+Worker（`worker/index.mjs`）が静的サイトに足すもの:
+
+| パス | 役割 |
+| --- | --- |
+| `POST /mcp` | **リモートMCP**（Streamable HTTP）。`claude mcp add --transport http shelf https://<domain>/mcp` のようにURLを登録するだけで使える |
+| `/go/<カテゴリ>/<商品ID>` | 購入リンクのクリックを数えて楽天へ302転送。転送先は公開データから引くので任意URLには飛ばない |
+| `/c/<id>/` + `Accept: text/markdown` | Markdown を返す（AIエージェント向け） |
+| 全リクエスト | AIクローラー（GPTBot, ClaudeBot, PerplexityBot など）の訪問と、ChatGPT・Perplexity・Claude などから来た人を記録 |
+
+記録は Workers Analytics Engine（データセット `shelf_events`）に入り、毎日の更新ジョブが直近7日を集計して
+Actions のサマリーに出す（「クリック数」「どのAI経由か」「どのカテゴリがクロールされているのに売れていないか」など）。
+数値はリポジトリにはコミットしない。
+
+### 切り替え手順（人手が必要な部分）
+
+1. ドメインを取得し、Cloudflare に追加する（ネームサーバーを Cloudflare に向ける）。
+2. Cloudflare で API トークンを作る。権限: **Workers Scripts: Edit**、**Workers Routes: Edit**（対象ゾーン）、**DNS: Edit**（対象ゾーン）、**Account Analytics: Read**。
+3. GitHub → Settings → Secrets and variables → Actions:
+   - Secrets: `CLOUDFLARE_API_TOKEN`, `CLOUDFLARE_ACCOUNT_ID`
+   - Variables: `SHELF_BASE_URL` = `https://<ドメイン>`（ドメイン直下。例 `https://shelf.example.com`）
+4. Actions → **SHELF deploy (Cloudflare)** → Run workflow。デプロイ後に `llms.txt` と `/mcp` の応答を自動確認する。
+
+`SHELF_BASE_URL` を設定すると、GitHub Pages 側のページの canonical も新ドメインを指すようになる。
+
+## 8. ローカルで動かす
 
 ```sh
 node shelf/tool/update.mjs          # キーがなければサンプルデータで取得+ビルド
@@ -108,13 +138,19 @@ node shelf/tool/build.mjs           # data/ から再生成だけ
 node shelf/tool/check.mjs           # 監査
 node --test 'shelf/tool/test/*.test.mjs'
 SHELF_LOCAL_DIR=shelf/api/v1 node shelf/mcp/server.mjs   # MCPをローカルデータで
+
+# Cloudflare 版をローカルで（wrangler が必要）
+SHELF_EDGE=1 SHELF_BASE_URL=https://shelf.example.com SHELF_OUT_DIR=/tmp/shelf-edge node shelf/tool/build.mjs
+SHELF_OUT_DIR=/tmp/shelf-edge SHELF_BASE_URL=https://shelf.example.com node shelf/tool/edge.mjs
+npx wrangler dev --config wrangler.gen.json
 ```
 
-## 8. 次の打ち手
+## 9. 次の打ち手
 
 - Yahoo!ショッピング（バリューコマース）を2つ目のソースに追加し、JANコードで店横断の最安比較。
 - カテゴリ拡充（監査の警告が少ないものから）。
-- 利用が増えたら、高頻度更新・全価格履歴を x402 等のエージェント向け従量課金APIとして提供（別途サーバーが必要）。
+- 利用が増えたら、高頻度更新・全価格履歴を x402 等のエージェント向け従量課金APIとして提供（Worker に追加できる）。
+- リモートMCPを公式 MCP Registry に登録する。
 
 ## 注意
 
