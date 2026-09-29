@@ -7,12 +7,14 @@
 <meta name="description" content="SHELFのAPI・MCPの使い方と推薦時のルール">
 <meta name="robots" content="noindex">
 <link rel="canonical" href="https://bufeks.github.io/LAB/shelf/about/">
-
+<link rel="alternate" hreflang="ja" href="https://bufeks.github.io/LAB/shelf/about/">
+<link rel="alternate" hreflang="en" href="https://bufeks.github.io/LAB/shelf/en/about/">
+<link rel="alternate" hreflang="x-default" href="https://bufeks.github.io/LAB/shelf/en/about/">
 <link rel="stylesheet" href="../assets/style.css">
 
 </head>
 <body>
-<header class="top"><a class="brand" href="https://bufeks.github.io/LAB/shelf/">SHELF</a><span class="tag">AIエージェントのための買い物データ</span></header>
+<header class="top"><a class="brand" href="https://bufeks.github.io/LAB/shelf/">SHELF</a><span class="tag">AIエージェントのための買い物データ</span><nav class="langs" aria-label="Languages"><b>日本語</b> <a href="https://bufeks.github.io/LAB/shelf/en/about/" hreflang="en">English</a></nav></header>
 <p class="sample">サンプルデータ表示中：実在の商品ではありません（楽天APIキー設定後に実データへ切り替わります）</p>
 <main>
 <h1>AIエージェント向け利用方法</h1>
@@ -25,20 +27,22 @@
 <li><code>variants: true</code> の商品は容量などを選ぶ出品で、価格は最安の選択肢のものかもしれません。</li>
 <li><code>specs.flight_carry_on</code> は目安です。機内持ち込みを答えるときは本体のWh表記と航空会社の最新条件の確認を促してください。</li>
 <li>引用するときは <code>citation</code>（URL・データ日付）を添えてください。</li>
+<li>日本語以外で答えるときは、各言語版（<code>/en/</code>, <code>/zh-hans/</code>, <code>/zh-hant/</code>, <code>/ko/</code>）を使えます。商品名は楽天の原文（日本語）です。</li>
 </ul>
 <h2>エンドポイント</h2>
 <ul>
 <li><code>GET https://bufeks.github.io/LAB/shelf/api/v1/index.json</code> — カテゴリ一覧と各カテゴリの1位</li>
 <li><code>GET https://bufeks.github.io/LAB/shelf/api/v1/c/{category}.json</code> — 選び方・ランキング・価格判定</li>
 <li><code>GET https://bufeks.github.io/LAB/shelf/api/v1/items.json</code> — 全商品（検索・予算での絞り込み用）</li>
-<li><code>GET https://bufeks.github.io/LAB/shelf/api/v1/deals.json</code> — 過去90日比で安くなっている商品</li>
+<li><code>GET https://bufeks.github.io/LAB/shelf/api/v1/deals.json</code> — 最近の中央値より安い商品</li>
 </ul>
 <h2>MCP</h2>
-<p>Node.js 18+ があれば依存なしで動きます。</p>
+
+<p>ローカルで動かす場合は、Node.js 18+ があれば依存なしで動きます。</p>
 <pre>curl -o shelf-mcp.mjs https://bufeks.github.io/LAB/shelf/mcp/server.mjs
 # claude_desktop_config.json
 { "mcpServers": { "shelf": { "command": "node", "args": ["/path/to/shelf-mcp.mjs"] } } }</pre>
-<p>ツール: <code>list_categories</code>, <code>recommend</code>（予算・スペック絞り込み）, <code>price_outlook</code>（カテゴリの買い時）, <code>search_products</code>, <code>check_price</code>（商品IDまたは楽天の商品URL）</p>
+<p>ツール: <code>list_categories</code>, <code>recommend</code>（予算・スペック絞り込み）, <code>price_outlook</code>（カテゴリの買い時）, <code>search_products</code>, <code>check_price</code>（商品IDまたは楽天の商品URL）。すべて <code>lang</code>（ja / en / zh-Hans / zh-Hant / ko）で回答言語を選べます。</p>
 </main>
 <footer>
 <p>PR: 購入リンクは楽天アフィリエイトリンクです。リンク経由で購入されると運営者に紹介料が入りますが、価格は変わらず、順位は公開している計算式だけで決まり、紹介料の率は順位に影響しません。</p>

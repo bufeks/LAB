@@ -37,8 +37,8 @@ export function todayJst(now = new Date()) {
 
 // Tracked buy link, resolved by the Worker from the published data (never
 // from the URL itself, so it cannot be used as an open redirect).
-export function goUrl(categoryId, itemId, surface) {
-  return `${SITE.baseUrl}/go/${categoryId}/${encodeURIComponent(itemId)}?s=${surface}`;
+export function goUrl(categoryId, itemId, surface, lang = 'ja') {
+  return `${SITE.baseUrl}/go/${categoryId}/${encodeURIComponent(itemId)}?s=${surface}${lang === 'ja' ? '' : `&l=${lang}`}`;
 }
 
 // The same link, re-labelled for the surface it is shown on.

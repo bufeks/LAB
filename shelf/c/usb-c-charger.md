@@ -7,9 +7,9 @@
 
 ## 結論
 
-- **総合1位**: (サンプル) USB-C 充電器 (PD) D 30W 2ポート GaN PPS — ¥4,460 ★4.83（2,742件）、価格判定: 観測31日の最安値 → [購入リンク](https://search.rakuten.co.jp/search/mall/USB-C%20%E5%85%85%E9%9B%BB%E5%99%A8%20PD/)
-- **コスパ（高評価の中で最安）**: (サンプル) USB-C 充電器 (PD) F 140W 3ポート GaN — ¥3,020 ★4.73（1,264件）、価格判定: いつもの価格 → [購入リンク](https://search.rakuten.co.jp/search/mall/USB-C%20%E5%85%85%E9%9B%BB%E5%99%A8%20PD/)
-- **値下がり中**: (サンプル) USB-C 充電器 (PD) A 65W 3ポート GaN 折りたたみ PPS — ¥1,620 ★3.89（1,335件）、価格判定: 観測31日の最安値 → [購入リンク](https://search.rakuten.co.jp/search/mall/USB-C%20%E5%85%85%E9%9B%BB%E5%99%A8%20PD/)
+- **総合1位**: (サンプル) USB-C 充電器 (PD) D 30W 2ポート GaN PPS — ¥4,460 ★4.83（2,742件）, 価格判定: 観測31日の最安値 → [購入リンク](https://search.rakuten.co.jp/search/mall/USB-C%20%E5%85%85%E9%9B%BB%E5%99%A8%20PD/)
+- **コスパ（高評価の中で最安）**: (サンプル) USB-C 充電器 (PD) F 140W 3ポート GaN — ¥3,020 ★4.73（1,264件）, 価格判定: いつもの価格 → [購入リンク](https://search.rakuten.co.jp/search/mall/USB-C%20%E5%85%85%E9%9B%BB%E5%99%A8%20PD/)
+- **値下がり中**: (サンプル) USB-C 充電器 (PD) A 65W 3ポート GaN 折りたたみ PPS — ¥1,620 ★3.89（1,335件）, 価格判定: 観測31日の最安値 → [購入リンク](https://search.rakuten.co.jp/search/mall/USB-C%20%E5%85%85%E9%9B%BB%E5%99%A8%20PD/)
 - **今が買い時か（カテゴリ全体）**: 上位商品の33%がいつもより安い。買うなら悪くない時期。（観測31日・季節変動はまだ反映していない）
 
 スマホだけなら20〜30W、ノートPCも充電するなら65W以上が目安。複数ポートは「同時に挿したときの配分」で1ポートあたりの出力が下がる点に注意。
@@ -31,12 +31,12 @@
 
 | 順位 | 商品 | 価格 | 評価 | 価格判定 | スペック(商品名から抽出) | 購入 |
 | --- | --- | --- | --- | --- | --- | --- |
-| 1 | (サンプル) USB-C 充電器 (PD) D 30W 2ポート GaN PPS（サンプルショップ） | ¥4,460 送料別 | ★4.83（2,742件） | 観測31日の最安値（中央値¥5,090・観測31日） | 最大出力30W・ポート数2口・GaN(窒化ガリウム)・PPS対応 | [楽天](https://search.rakuten.co.jp/search/mall/USB-C%20%E5%85%85%E9%9B%BB%E5%99%A8%20PD/) |
-| 2 | (サンプル) USB-C 充電器 (PD) F 140W 3ポート GaN（サンプルショップ） | ¥3,020 送料別 | ★4.73（1,264件） | いつもの価格（中央値¥2,870・観測31日） | 最大出力140W・ポート数3口・GaN(窒化ガリウム) | [楽天](https://search.rakuten.co.jp/search/mall/USB-C%20%E5%85%85%E9%9B%BB%E5%99%A8%20PD/) |
-| 3 | (サンプル) USB-C 充電器 (PD) C 100W 4ポート GaN（サンプルショップ） | ¥5,180 送料込 | ★4.52（694件） | いつもの価格（中央値¥4,920・観測31日） | 最大出力100W・ポート数4口・GaN(窒化ガリウム) | [楽天](https://search.rakuten.co.jp/search/mall/USB-C%20%E5%85%85%E9%9B%BB%E5%99%A8%20PD/) |
-| 4 | (サンプル) USB-C 充電器 (PD) B 20W 1ポート 小型（サンプルショップ） | ¥4,590 送料別 | ★4.35（1,402件） | いつもの価格（中央値¥4,570・観測31日） | 最大出力20W・ポート数1口 | [楽天](https://search.rakuten.co.jp/search/mall/USB-C%20%E5%85%85%E9%9B%BB%E5%99%A8%20PD/) |
-| 5 | (サンプル) USB-C 充電器 (PD) E 45W 1ポート GaN PPS 折りたたみ（サンプルショップ） | ¥5,660 送料込 | ★3.92（372件） | いつもの価格（中央値¥5,640・観測31日） | 最大出力45W・ポート数1口・GaN(窒化ガリウム)・PPS対応・折りたたみプラグ | [楽天](https://search.rakuten.co.jp/search/mall/USB-C%20%E5%85%85%E9%9B%BB%E5%99%A8%20PD/) |
-| 6 | (サンプル) USB-C 充電器 (PD) A 65W 3ポート GaN 折りたたみ PPS（サンプルショップ） | ¥1,620 送料込 | ★3.89（1,335件） | 観測31日の最安値（中央値¥1,850・観測31日） | 最大出力65W・ポート数3口・GaN(窒化ガリウム)・PPS対応・折りたたみプラグ | [楽天](https://search.rakuten.co.jp/search/mall/USB-C%20%E5%85%85%E9%9B%BB%E5%99%A8%20PD/) |
+| 1 | (サンプル) USB-C 充電器 (PD) D 30W 2ポート GaN PPS (サンプルショップ) | ¥4,460 送料別 | ★4.83（2,742件） | 観測31日の最安値（中央値¥5,090・観測31日） | 最大出力 30W・ポート数 2口・GaN(窒化ガリウム)・PPS対応 | [楽天](https://search.rakuten.co.jp/search/mall/USB-C%20%E5%85%85%E9%9B%BB%E5%99%A8%20PD/) |
+| 2 | (サンプル) USB-C 充電器 (PD) F 140W 3ポート GaN (サンプルショップ) | ¥3,020 送料別 | ★4.73（1,264件） | いつもの価格（中央値¥2,870・観測31日） | 最大出力 140W・ポート数 3口・GaN(窒化ガリウム) | [楽天](https://search.rakuten.co.jp/search/mall/USB-C%20%E5%85%85%E9%9B%BB%E5%99%A8%20PD/) |
+| 3 | (サンプル) USB-C 充電器 (PD) C 100W 4ポート GaN (サンプルショップ) | ¥5,180 送料込 | ★4.52（694件） | いつもの価格（中央値¥4,920・観測31日） | 最大出力 100W・ポート数 4口・GaN(窒化ガリウム) | [楽天](https://search.rakuten.co.jp/search/mall/USB-C%20%E5%85%85%E9%9B%BB%E5%99%A8%20PD/) |
+| 4 | (サンプル) USB-C 充電器 (PD) B 20W 1ポート 小型 (サンプルショップ) | ¥4,590 送料別 | ★4.35（1,402件） | いつもの価格（中央値¥4,570・観測31日） | 最大出力 20W・ポート数 1口 | [楽天](https://search.rakuten.co.jp/search/mall/USB-C%20%E5%85%85%E9%9B%BB%E5%99%A8%20PD/) |
+| 5 | (サンプル) USB-C 充電器 (PD) E 45W 1ポート GaN PPS 折りたたみ (サンプルショップ) | ¥5,660 送料込 | ★3.92（372件） | いつもの価格（中央値¥5,640・観測31日） | 最大出力 45W・ポート数 1口・GaN(窒化ガリウム)・PPS対応・折りたたみプラグ | [楽天](https://search.rakuten.co.jp/search/mall/USB-C%20%E5%85%85%E9%9B%BB%E5%99%A8%20PD/) |
+| 6 | (サンプル) USB-C 充電器 (PD) A 65W 3ポート GaN 折りたたみ PPS (サンプルショップ) | ¥1,620 送料込 | ★3.89（1,335件） | 観測31日の最安値（中央値¥1,850・観測31日） | 最大出力 65W・ポート数 3口・GaN(窒化ガリウム)・PPS対応・折りたたみプラグ | [楽天](https://search.rakuten.co.jp/search/mall/USB-C%20%E5%85%85%E9%9B%BB%E5%99%A8%20PD/) |
 
 ## ランキングの決め方
 
@@ -52,3 +52,4 @@ Rakutenで各カテゴリをレビュー件数順に最大60件取得し、除�
 - JSON: https://bufeks.github.io/LAB/shelf/api/v1/c/usb-c-charger.json
 - 全カテゴリ: https://bufeks.github.io/LAB/shelf/api/v1/index.json
 - OpenAPI: https://bufeks.github.io/LAB/shelf/openapi.json / MCPサーバー: https://bufeks.github.io/LAB/shelf/mcp/server.mjs
+- Languages: [日本語](https://bufeks.github.io/LAB/shelf/c/usb-c-charger.md) · [English](https://bufeks.github.io/LAB/shelf/en/c/usb-c-charger.md) · [简体中文](https://bufeks.github.io/LAB/shelf/zh-hans/c/usb-c-charger.md) · [繁體中文](https://bufeks.github.io/LAB/shelf/zh-hant/c/usb-c-charger.md) · [한국어](https://bufeks.github.io/LAB/shelf/ko/c/usb-c-charger.md)

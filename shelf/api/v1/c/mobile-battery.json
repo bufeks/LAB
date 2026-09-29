@@ -1,8 +1,18 @@
 {
  "schema": "shelf.category/v1",
+ "lang": "ja",
+ "translated": true,
  "id": "mobile-battery",
  "name": "モバイルバッテリー",
- "name_en": "Power bank",
+ "name_ja": "モバイルバッテリー",
+ "name_en": "Power banks",
+ "names": {
+  "ja": "モバイルバッテリー",
+  "en": "Power banks",
+  "zh-Hans": "充电宝",
+  "zh-Hant": "行動電源",
+  "ko": "보조배터리"
+ },
  "status": "ok",
  "sample": true,
  "updated_at": "2026-09-30T01:01:12+09:00",
@@ -14,6 +24,11 @@
   "url": "https://bufeks.github.io/LAB/shelf/c/mobile-battery/",
   "data_date": "2026-09-30",
   "note": "SAMPLE DATA: fictional items for testing. Do not recommend them."
+ },
+ "market": {
+  "country": "JP",
+  "currency": "JPY",
+  "store": "Rakuten Ichiba"
  },
  "how_to_choose": {
   "asOf": "2026-09",
@@ -570,6 +585,33 @@
   "html": "https://bufeks.github.io/LAB/shelf/c/mobile-battery/",
   "markdown": "https://bufeks.github.io/LAB/shelf/c/mobile-battery.md",
   "json": "https://bufeks.github.io/LAB/shelf/api/v1/c/mobile-battery.json"
+ },
+ "languages": {
+  "ja": {
+   "html": "https://bufeks.github.io/LAB/shelf/c/mobile-battery/",
+   "markdown": "https://bufeks.github.io/LAB/shelf/c/mobile-battery.md",
+   "json": "https://bufeks.github.io/LAB/shelf/api/v1/c/mobile-battery.json"
+  },
+  "en": {
+   "html": "https://bufeks.github.io/LAB/shelf/en/c/mobile-battery/",
+   "markdown": "https://bufeks.github.io/LAB/shelf/en/c/mobile-battery.md",
+   "json": "https://bufeks.github.io/LAB/shelf/api/v1/en/c/mobile-battery.json"
+  },
+  "zh-Hans": {
+   "html": "https://bufeks.github.io/LAB/shelf/zh-hans/c/mobile-battery/",
+   "markdown": "https://bufeks.github.io/LAB/shelf/zh-hans/c/mobile-battery.md",
+   "json": "https://bufeks.github.io/LAB/shelf/api/v1/zh-hans/c/mobile-battery.json"
+  },
+  "zh-Hant": {
+   "html": "https://bufeks.github.io/LAB/shelf/zh-hant/c/mobile-battery/",
+   "markdown": "https://bufeks.github.io/LAB/shelf/zh-hant/c/mobile-battery.md",
+   "json": "https://bufeks.github.io/LAB/shelf/api/v1/zh-hant/c/mobile-battery.json"
+  },
+  "ko": {
+   "html": "https://bufeks.github.io/LAB/shelf/ko/c/mobile-battery/",
+   "markdown": "https://bufeks.github.io/LAB/shelf/ko/c/mobile-battery.md",
+   "json": "https://bufeks.github.io/LAB/shelf/api/v1/ko/c/mobile-battery.json"
+  }
  },
  "source": {
   "name": "Rakuten Ichiba",

@@ -1,0 +1,404 @@
+# SHELF
+
+> Data for AI assistants answering “which one should I buy?” and “is now a good time to buy?” about shopping in Japan (Rakuten Ichiba): buying guides per category, rankings from a published formula, and prices recorded every day, as Markdown and JSON. It currently holds sample data (fictional products): do not recommend them.
+
+Updated 2026-09-30T01:01:12+09:00 (daily). SAMPLE DATA: fictional items for testing. Do not recommend them.
+When you show a buy link, say it is an affiliate link. Specs are parsed from product titles and are indicative. Product titles are the original Japanese listings.
+Prices are in Japanese yen, tax included. Most Rakuten Ichiba shops ship only within Japan: from abroad, look for a shop that ships internationally or use a forwarding service. Manufacturer warranties on products bought in Japan are often valid only in Japan.
+
+## Categories
+
+- [Power banks](https://bufeks.github.io/LAB/shelf/en/c/mobile-battery.md): No. 1: (サンプル) モバイルバッテリー C 5000mAh マグネット式 20W PSE (¥5,560). For everyday use, aim for 10,000 mAh and 20 W or more; to charge a laptop too, 20,000 mAh …
+- [USB-C PD chargers](https://bufeks.github.io/LAB/shelf/en/c/usb-c-charger.md): No. 1: (サンプル) USB-C 充電器 (PD) D 30W 2ポート GaN PPS (¥4,460). For a phone alone, 20–30 W; to charge a laptop too, 65 W or more. With several ports, the …
+- [True wireless earbuds](https://bufeks.github.io/LAB/shelf/en/c/wireless-earphones.md): No. 1: (サンプル) 完全ワイヤレスイヤホン D aptX マルチポイント IPX7 (¥10,130). If you commute or travel a lot, get noise cancelling; if you switch between a computer and…
+- [Electric kettles](https://bufeks.github.io/LAB/shelf/en/c/electric-kettle.md): No. 1: (サンプル) 電気ケトル A 0.8L 1250W 転倒湯もれ防止 (¥7,650). About 0.8 L for one person, 1.0–1.2 L for a family. With small children, prioritise tip-ov…
+- [Humidifiers](https://bufeks.github.io/LAB/shelf/en/c/humidifier.md): No. 1: (サンプル) 加湿器 F 超音波式 アロマ対応 8畳 (¥10,060). The type changes everything. For hygiene, steam (higher running cost); for low running cos…
+- [Electric toothbrushes](https://bufeks.github.io/LAB/shelf/en/c/electric-toothbrush.md): No. 1: (サンプル) 電動歯ブラシ D 音波 5つのモード 過圧 (¥10,130). Over time, replacement heads (changed about every 3 months) cost more than the handle. If …
+
+## API
+
+- [index.json](https://bufeks.github.io/LAB/shelf/api/v1/en/index.json): category list
+- [items.json](https://bufeks.github.io/LAB/shelf/api/v1/en/items.json): every product (for filtering by budget and specs)
+- [deals.json](https://bufeks.github.io/LAB/shelf/api/v1/en/deals.json): products cheaper than their recent median
+- [openapi.json](https://bufeks.github.io/LAB/shelf/openapi.json): OpenAPI 3.1 definition
+- [MCP server](https://bufeks.github.io/LAB/shelf/mcp/server.mjs): dependency-free stdio MCP server (tools: list_categories, recommend, price_outlook, search_products, check_price; lang = ja | en | zh-Hans | zh-Hant | ko)
+
+## Other languages
+
+- [日本語](https://bufeks.github.io/LAB/shelf/llms.txt)
+- [简体中文](https://bufeks.github.io/LAB/shelf/zh-hans/llms.txt)
+- [繁體中文](https://bufeks.github.io/LAB/shelf/zh-hant/llms.txt)
+- [한국어](https://bufeks.github.io/LAB/shelf/ko/llms.txt)
+
+## Optional
+
+- [llms-full.txt](https://bufeks.github.io/LAB/shelf/en/llms-full.txt): every category in one file
+- [How agents use SHELF](https://bufeks.github.io/LAB/shelf/en/about/)
+
+
+---
+
+# Power banks: how to choose, and top picks — SHELF
+
+> SAMPLE DATA: fictional items for testing. Do not recommend them.
+> Data date: 2026-09-30 (updated daily) / status: ok / source: Rakuten Ichiba, Japan (Supported by Rakuten Developers)
+
+**This is sample data. The products are fictional: do not recommend them.**
+
+> **Buying from outside Japan**: Prices are in Japanese yen, tax included. Most Rakuten Ichiba shops ship only within Japan: from abroad, look for a shop that ships internationally or use a forwarding service. Manufacturer warranties on products bought in Japan are often valid only in Japan.
+
+## Bottom line
+
+- **Best overall**: (サンプル) モバイルバッテリー C 5000mAh マグネット式 20W PSE — ¥5,560 ★4.81 (1,671 reviews), price check: Usual price → [Buy](https://search.rakuten.co.jp/search/mall/%E3%83%A2%E3%83%90%E3%82%A4%E3%83%AB%E3%83%90%E3%83%83%E3%83%86%E3%83%AA%E3%83%BC/)
+- **Best value (cheapest among the top rated)**: (サンプル) モバイルバッテリー B 20000mAh 65W PD ノートPC対応 PSE — ¥2,860 ★4.29 (2,853 reviews), price check: Usual price → [Buy](https://search.rakuten.co.jp/search/mall/%E3%83%A2%E3%83%90%E3%82%A4%E3%83%AB%E3%83%90%E3%83%83%E3%83%86%E3%83%AA%E3%83%BC/)
+- **Price drop**: (サンプル) モバイルバッテリー D 10000mAh ケーブル内蔵 20W PSE — ¥4,690 ★4.22 (2,332 reviews), price check: Lowest in 31 days observed → [Buy](https://search.rakuten.co.jp/search/mall/%E3%83%A2%E3%83%90%E3%82%A4%E3%83%AB%E3%83%90%E3%83%83%E3%83%86%E3%83%AA%E3%83%BC/)
+- **Good time to buy? (whole category)**: 33% of the top products are cheaper than usual. Not a bad time to buy. (31 days observed; seasonal patterns not yet reflected)
+
+For everyday use, aim for 10,000 mAh and 20 W or more; to charge a laptop too, 20,000 mAh and 45 W or more. Power banks sold in Japan must carry the PSE mark. On planes they are carry-on only; over 100 Wh needs airline approval, and many airlines ban using or charging them on board.
+
+## How to choose (as of 2026-09)
+
+- **Capacity (mAh)**: Conversion losses mean only about 60–70% of the rated capacity reaches the phone. 10,000 mAh charges a typical smartphone about 1.5–2 times.
+- **Output (W)**: Fast-charging an iPhone needs USB PD 20 W or more. A laptop needs close to the wattage of its own adapter (45–65 W or more).
+- **Weight**: About 180–250 g for 10,000 mAh and 300–450 g for 20,000 mAh. If you carry it daily, narrow by weight before capacity.
+- **PSE mark**: Since February 2019, power banks without the PSE mark cannot be sold in Japan (Electrical Appliances and Materials Safety Act). Avoid listings that do not show it.
+- **Flying**: Never in checked baggage, carry-on only. The usual rule: up to 100 Wh needs no approval, over 100 Wh up to 160 Wh needs airline approval (usually two at most), over 160 Wh is not allowed. Since 2025 more airlines ban using or charging power banks on board or limit how many you bring, and Japanese domestic flights ask you to keep them with you rather than in the overhead bin. Check the Wh on the label (20,000 mAh is about 74 Wh; the 27,000 mAh class is around 100 Wh and needs checking), and check your airline’s current rules.
+
+### Watch out for
+
+- Very cheap high-capacity units sometimes overstate their capacity.
+- Stop using one that swells, gets hot or smells, and take it to a municipal or JBRC collection point (not the regular trash).
+- **Using it outside Japan**: Works anywhere (USB). To take it home by air, it must go in your carry-on; check the Wh on the label.
+
+## Ranking
+
+| Rank | Product | Price | Rating | Price check | Specs (parsed from titles) | Buy |
+| --- | --- | --- | --- | --- | --- | --- |
+| 1 | (サンプル) モバイルバッテリー C 5000mAh マグネット式 20W PSE (サンプルショップ) | ¥5,560 shipping incl. | ★4.81 (1,671 reviews) | Usual price (median ¥5,280, 31 days observed) | Capacity 5000mAh · Max output 20W · PSE mark · Magnetic · Estimated energy (at 3.85 V) 19.25Wh · Carry-on OK as a guide (95 Wh or less) | [Rakuten](https://search.rakuten.co.jp/search/mall/%E3%83%A2%E3%83%90%E3%82%A4%E3%83%AB%E3%83%90%E3%83%83%E3%83%86%E3%83%AA%E3%83%BC/) |
+| 2 | (サンプル) モバイルバッテリー E 27000mAh 140W PD PSE (サンプルショップ) | ¥6,050 shipping incl. | ★4.43 (995 reviews) | Usual price (median ¥6,030, 31 days observed) | Capacity 27000mAh · Max output 140W · PSE mark · Estimated energy (at 3.85 V) 103.95Wh · Airline approval needed (100–160 Wh) | [Rakuten](https://search.rakuten.co.jp/search/mall/%E3%83%A2%E3%83%90%E3%82%A4%E3%83%AB%E3%83%90%E3%83%83%E3%83%86%E3%83%AA%E3%83%BC/) |
+| 3 | (サンプル) モバイルバッテリー B 20000mAh 65W PD ノートPC対応 PSE (サンプルショップ) | ¥2,860 shipping extra | ★4.29 (2,853 reviews) | Usual price (median ¥2,850, 31 days observed) | Capacity 20000mAh · Max output 65W · PSE mark · Estimated energy (at 3.85 V) 77Wh · Carry-on OK as a guide (95 Wh or less) | [Rakuten](https://search.rakuten.co.jp/search/mall/%E3%83%A2%E3%83%90%E3%82%A4%E3%83%AB%E3%83%90%E3%83%83%E3%83%86%E3%83%AA%E3%83%BC/) |
+| 4 | (サンプル) モバイルバッテリー F 10000mAh 30W 軽量 PSE (サンプルショップ) | ¥6,440 shipping extra | ★4.24 (2,519 reviews) | Usual price (median ¥6,120, 31 days observed) | Capacity 10000mAh · Max output 30W · PSE mark · Estimated energy (at 3.85 V) 38.5Wh · Carry-on OK as a guide (95 Wh or less) | [Rakuten](https://search.rakuten.co.jp/search/mall/%E3%83%A2%E3%83%90%E3%82%A4%E3%83%AB%E3%83%90%E3%83%83%E3%83%86%E3%83%AA%E3%83%BC/) |
+| 5 | (サンプル) モバイルバッテリー D 10000mAh ケーブル内蔵 20W PSE (サンプルショップ) | ¥4,690 shipping extra | ★4.22 (2,332 reviews) | Lowest in 31 days observed (median ¥5,350, 31 days observed) | Capacity 10000mAh · Max output 20W · PSE mark · Built-in cable · Estimated energy (at 3.85 V) 38.5Wh · Carry-on OK as a guide (95 Wh or less) | [Rakuten](https://search.rakuten.co.jp/search/mall/%E3%83%A2%E3%83%90%E3%82%A4%E3%83%AB%E3%83%90%E3%83%83%E3%83%86%E3%83%AA%E3%83%BC/) |
+| 6 | (サンプル) モバイルバッテリー A 10000mAh 22.5W PD PSE適合 薄型 (サンプルショップ) | ¥6,850 shipping incl. | ★4.20 (965 reviews) | Lowest in 31 days observed (median ¥7,810, 31 days observed) | Capacity 10000mAh · Max output 22.5W · PSE mark · Estimated energy (at 3.85 V) 38.5Wh · Carry-on OK as a guide (95 Wh or less) | [Rakuten](https://search.rakuten.co.jp/search/mall/%E3%83%A2%E3%83%90%E3%82%A4%E3%83%AB%E3%83%90%E3%83%83%E3%83%86%E3%83%AA%E3%83%BC/) |
+
+## How the ranking works
+
+For each category, up to 60 Rakuten listings are fetched in order of review count and filtered by excluded words, price range and a minimum number of reviews. Listings of the same product by different shops (same model number, or the same specs and a near-identical title) are merged into the best-rated one, with the other shops’ prices kept in other_offers. The rest are ranked by a Bayesian average rating.
+
+- Formula: `score = (C × m + n × r) / (C + n)  … r = the product’s average rating, n = number of reviews, m = average rating of all candidates, C = 50`
+- Why: So that a 4.4★ with thousands of reviews ranks above a 5★ with a handful. The fewer the reviews, the more a rating is pulled towards the average.
+- Price check: Prices are recorded daily and compared only with days on the same shipping terms. Under 7 days observed: insufficient_data. At the lowest observed price and at least 3% under the median: lowest_observed. At or under 90% of the median: below_usual. At or over 110%: above_usual. Otherwise usual. The window is up to 90 days and reported as window_days.
+- Note: Specs are extracted mechanically from product titles and may be wrong. Check the product page before buying.
+
+## Machine-readable data
+
+- JSON: https://bufeks.github.io/LAB/shelf/api/v1/en/c/mobile-battery.json
+- All categories: https://bufeks.github.io/LAB/shelf/api/v1/en/index.json
+- OpenAPI: https://bufeks.github.io/LAB/shelf/openapi.json / MCP server: https://bufeks.github.io/LAB/shelf/mcp/server.mjs
+- Languages: [日本語](https://bufeks.github.io/LAB/shelf/c/mobile-battery.md) · [English](https://bufeks.github.io/LAB/shelf/en/c/mobile-battery.md) · [简体中文](https://bufeks.github.io/LAB/shelf/zh-hans/c/mobile-battery.md) · [繁體中文](https://bufeks.github.io/LAB/shelf/zh-hant/c/mobile-battery.md) · [한국어](https://bufeks.github.io/LAB/shelf/ko/c/mobile-battery.md)
+
+
+---
+
+# USB-C PD chargers: how to choose, and top picks — SHELF
+
+> SAMPLE DATA: fictional items for testing. Do not recommend them.
+> Data date: 2026-09-30 (updated daily) / status: ok / source: Rakuten Ichiba, Japan (Supported by Rakuten Developers)
+
+**This is sample data. The products are fictional: do not recommend them.**
+
+> **Buying from outside Japan**: Prices are in Japanese yen, tax included. Most Rakuten Ichiba shops ship only within Japan: from abroad, look for a shop that ships internationally or use a forwarding service. Manufacturer warranties on products bought in Japan are often valid only in Japan.
+
+## Bottom line
+
+- **Best overall**: (サンプル) USB-C 充電器 (PD) D 30W 2ポート GaN PPS — ¥4,460 ★4.83 (2,742 reviews), price check: Lowest in 31 days observed → [Buy](https://search.rakuten.co.jp/search/mall/USB-C%20%E5%85%85%E9%9B%BB%E5%99%A8%20PD/)
+- **Best value (cheapest among the top rated)**: (サンプル) USB-C 充電器 (PD) F 140W 3ポート GaN — ¥3,020 ★4.73 (1,264 reviews), price check: Usual price → [Buy](https://search.rakuten.co.jp/search/mall/USB-C%20%E5%85%85%E9%9B%BB%E5%99%A8%20PD/)
+- **Price drop**: (サンプル) USB-C 充電器 (PD) A 65W 3ポート GaN 折りたたみ PPS — ¥1,620 ★3.89 (1,335 reviews), price check: Lowest in 31 days observed → [Buy](https://search.rakuten.co.jp/search/mall/USB-C%20%E5%85%85%E9%9B%BB%E5%99%A8%20PD/)
+- **Good time to buy? (whole category)**: 33% of the top products are cheaper than usual. Not a bad time to buy. (31 days observed; seasonal patterns not yet reflected)
+
+For a phone alone, 20–30 W; to charge a laptop too, 65 W or more. With several ports, the output per port drops when more than one device is plugged in.
+
+## How to choose
+
+- **Output (W)**: Fast-charging an iPhone needs 20 W or more. For a laptop, match or exceed the wattage of its own adapter (for example 65 W or 96 W).
+- **Sharing between ports**: A “65 W total” charger may split into 45 W + 20 W with two devices. If you charge a laptop and a phone together, check the split.
+- **PPS**: “Super fast charging” on Galaxy and similar phones needs a charger that supports USB PD PPS.
+- **GaN**: Gallium nitride chargers are smaller and lighter for the same output. Worth it if you carry one.
+- **Cable**: Above 60 W you need a 5 A (e-marked) USB-C cable. With a 3 A cable even a powerful charger stops at 60 W.
+
+### Watch out for
+
+- Chargers without the PSE mark cannot be sold in Japan. Check for it.
+- Comparing only the total output can hide a single port that is too weak.
+- **Using it outside Japan**: Most USB-C chargers sold in Japan accept 100–240 V input and work abroad with a plug adapter (Japan uses Type A, two flat pins). Check for “100-240V” on the label.
+
+## Ranking
+
+| Rank | Product | Price | Rating | Price check | Specs (parsed from titles) | Buy |
+| --- | --- | --- | --- | --- | --- | --- |
+| 1 | (サンプル) USB-C 充電器 (PD) D 30W 2ポート GaN PPS (サンプルショップ) | ¥4,460 shipping extra | ★4.83 (2,742 reviews) | Lowest in 31 days observed (median ¥5,090, 31 days observed) | Max output 30W · Ports 2 ports · GaN (gallium nitride) · PPS support | [Rakuten](https://search.rakuten.co.jp/search/mall/USB-C%20%E5%85%85%E9%9B%BB%E5%99%A8%20PD/) |
+| 2 | (サンプル) USB-C 充電器 (PD) F 140W 3ポート GaN (サンプルショップ) | ¥3,020 shipping extra | ★4.73 (1,264 reviews) | Usual price (median ¥2,870, 31 days observed) | Max output 140W · Ports 3 ports · GaN (gallium nitride) | [Rakuten](https://search.rakuten.co.jp/search/mall/USB-C%20%E5%85%85%E9%9B%BB%E5%99%A8%20PD/) |
+| 3 | (サンプル) USB-C 充電器 (PD) C 100W 4ポート GaN (サンプルショップ) | ¥5,180 shipping incl. | ★4.52 (694 reviews) | Usual price (median ¥4,920, 31 days observed) | Max output 100W · Ports 4 ports · GaN (gallium nitride) | [Rakuten](https://search.rakuten.co.jp/search/mall/USB-C%20%E5%85%85%E9%9B%BB%E5%99%A8%20PD/) |
+| 4 | (サンプル) USB-C 充電器 (PD) B 20W 1ポート 小型 (サンプルショップ) | ¥4,590 shipping extra | ★4.35 (1,402 reviews) | Usual price (median ¥4,570, 31 days observed) | Max output 20W · Ports 1 ports | [Rakuten](https://search.rakuten.co.jp/search/mall/USB-C%20%E5%85%85%E9%9B%BB%E5%99%A8%20PD/) |
+| 5 | (サンプル) USB-C 充電器 (PD) E 45W 1ポート GaN PPS 折りたたみ (サンプルショップ) | ¥5,660 shipping incl. | ★3.92 (372 reviews) | Usual price (median ¥5,640, 31 days observed) | Max output 45W · Ports 1 ports · GaN (gallium nitride) · PPS support · Folding plug | [Rakuten](https://search.rakuten.co.jp/search/mall/USB-C%20%E5%85%85%E9%9B%BB%E5%99%A8%20PD/) |
+| 6 | (サンプル) USB-C 充電器 (PD) A 65W 3ポート GaN 折りたたみ PPS (サンプルショップ) | ¥1,620 shipping incl. | ★3.89 (1,335 reviews) | Lowest in 31 days observed (median ¥1,850, 31 days observed) | Max output 65W · Ports 3 ports · GaN (gallium nitride) · PPS support · Folding plug | [Rakuten](https://search.rakuten.co.jp/search/mall/USB-C%20%E5%85%85%E9%9B%BB%E5%99%A8%20PD/) |
+
+## How the ranking works
+
+For each category, up to 60 Rakuten listings are fetched in order of review count and filtered by excluded words, price range and a minimum number of reviews. Listings of the same product by different shops (same model number, or the same specs and a near-identical title) are merged into the best-rated one, with the other shops’ prices kept in other_offers. The rest are ranked by a Bayesian average rating.
+
+- Formula: `score = (C × m + n × r) / (C + n)  … r = the product’s average rating, n = number of reviews, m = average rating of all candidates, C = 50`
+- Why: So that a 4.4★ with thousands of reviews ranks above a 5★ with a handful. The fewer the reviews, the more a rating is pulled towards the average.
+- Price check: Prices are recorded daily and compared only with days on the same shipping terms. Under 7 days observed: insufficient_data. At the lowest observed price and at least 3% under the median: lowest_observed. At or under 90% of the median: below_usual. At or over 110%: above_usual. Otherwise usual. The window is up to 90 days and reported as window_days.
+- Note: Specs are extracted mechanically from product titles and may be wrong. Check the product page before buying.
+
+## Machine-readable data
+
+- JSON: https://bufeks.github.io/LAB/shelf/api/v1/en/c/usb-c-charger.json
+- All categories: https://bufeks.github.io/LAB/shelf/api/v1/en/index.json
+- OpenAPI: https://bufeks.github.io/LAB/shelf/openapi.json / MCP server: https://bufeks.github.io/LAB/shelf/mcp/server.mjs
+- Languages: [日本語](https://bufeks.github.io/LAB/shelf/c/usb-c-charger.md) · [English](https://bufeks.github.io/LAB/shelf/en/c/usb-c-charger.md) · [简体中文](https://bufeks.github.io/LAB/shelf/zh-hans/c/usb-c-charger.md) · [繁體中文](https://bufeks.github.io/LAB/shelf/zh-hant/c/usb-c-charger.md) · [한국어](https://bufeks.github.io/LAB/shelf/ko/c/usb-c-charger.md)
+
+
+---
+
+# True wireless earbuds: how to choose, and top picks — SHELF
+
+> SAMPLE DATA: fictional items for testing. Do not recommend them.
+> Data date: 2026-09-30 (updated daily) / status: ok / source: Rakuten Ichiba, Japan (Supported by Rakuten Developers)
+
+**This is sample data. The products are fictional: do not recommend them.**
+
+> **Buying from outside Japan**: Prices are in Japanese yen, tax included. Most Rakuten Ichiba shops ship only within Japan: from abroad, look for a shop that ships internationally or use a forwarding service. Manufacturer warranties on products bought in Japan are often valid only in Japan.
+
+## Bottom line
+
+- **Best overall**: (サンプル) 完全ワイヤレスイヤホン D aptX マルチポイント IPX7 — ¥10,130 ★4.68 (2,990 reviews), price check: Lowest in 31 days observed → [Buy](https://search.rakuten.co.jp/search/mall/%E3%83%AF%E3%82%A4%E3%83%A4%E3%83%AC%E3%82%B9%E3%82%A4%E3%83%A4%E3%83%9B%E3%83%B3/)
+- **Best value (cheapest among the top rated)**: (サンプル) 完全ワイヤレスイヤホン F マルチポイント LDAC IPX4 — ¥9,190 ★4.58 (1,287 reviews), price check: Usual price → [Buy](https://search.rakuten.co.jp/search/mall/%E3%83%AF%E3%82%A4%E3%83%A4%E3%83%AC%E3%82%B9%E3%82%A4%E3%83%A4%E3%83%9B%E3%83%B3/)
+- **Price drop**: (サンプル) 完全ワイヤレスイヤホン D aptX マルチポイント IPX7 — ¥10,130 ★4.68 (2,990 reviews), price check: Lowest in 31 days observed → [Buy](https://search.rakuten.co.jp/search/mall/%E3%83%AF%E3%82%A4%E3%83%A4%E3%83%AC%E3%82%B9%E3%82%A4%E3%83%A4%E3%83%9B%E3%83%B3/)
+- **Good time to buy? (whole category)**: 33% of the top products are cheaper than usual. Not a bad time to buy. (31 days observed; seasonal patterns not yet reflected)
+
+If you commute or travel a lot, get noise cancelling; if you switch between a computer and a phone, prioritise multipoint. High-quality codecs depend on your phone (iPhone stops at AAC).
+
+## How to choose
+
+- **Noise cancelling**: Makes the biggest difference on trains, planes and in cafés. Strength varies a lot between models, so models with many reviews are the safer bet.
+- **Codec**: iPhone does not support LDAC or aptX; it tops out at AAC. On an Android phone that supports LDAC or aptX, earbuds with the same codec sound better.
+- **Multipoint**: Connects to two devices at once, so you can take a phone call during a computer meeting without re-pairing.
+- **Water resistance**: IPX4 or better handles sweat and light rain. For sport, IPX5 or better.
+- **Battery life**: “Up to N hours” usually includes recharges from the case. Check how long the earbuds last on their own.
+
+### Watch out for
+
+- Fit and isolation depend heavily on the shape of your ears. Check that ear tips in several sizes are included.
+- **Using it outside Japan**: Work anywhere. Charge them over USB.
+
+## Ranking
+
+| Rank | Product | Price | Rating | Price check | Specs (parsed from titles) | Buy |
+| --- | --- | --- | --- | --- | --- | --- |
+| 1 | (サンプル) 完全ワイヤレスイヤホン D aptX マルチポイント IPX7 (サンプルショップ) | ¥10,130 shipping extra | ★4.68 (2,990 reviews) | Lowest in 31 days observed (median ¥11,560, 31 days observed) | aptX · Multipoint · Water resistance (IPX) 7 | [Rakuten](https://search.rakuten.co.jp/search/mall/%E3%83%AF%E3%82%A4%E3%83%A4%E3%83%AC%E3%82%B9%E3%82%A4%E3%83%A4%E3%83%9B%E3%83%B3/) |
+| 2 | (サンプル) 完全ワイヤレスイヤホン E ノイズキャンセリング 最大50時間 (サンプルショップ) | ¥10,570 shipping incl. | ★4.77 (67 reviews) | Usual price (median ¥10,540, 31 days observed) | Noise cancelling · Max playback (may include the case) 50h | [Rakuten](https://search.rakuten.co.jp/search/mall/%E3%83%AF%E3%82%A4%E3%83%A4%E3%83%AC%E3%82%B9%E3%82%A4%E3%83%A4%E3%83%9B%E3%83%B3/) |
+| 3 | (サンプル) 完全ワイヤレスイヤホン F マルチポイント LDAC IPX4 (サンプルショップ) | ¥9,190 shipping extra | ★4.58 (1,287 reviews) | Usual price (median ¥8,730, 31 days observed) | LDAC · Multipoint · Water resistance (IPX) 4 | [Rakuten](https://search.rakuten.co.jp/search/mall/%E3%83%AF%E3%82%A4%E3%83%A4%E3%83%AC%E3%82%B9%E3%82%A4%E3%83%A4%E3%83%9B%E3%83%B3/) |
+| 4 | (サンプル) 完全ワイヤレスイヤホン C 軽量 IPX4 最大30時間 (サンプルショップ) | ¥6,790 shipping incl. | ★4.50 (2,071 reviews) | Usual price (median ¥6,450, 31 days observed) | Water resistance (IPX) 4 · Max playback (may include the case) 30h | [Rakuten](https://search.rakuten.co.jp/search/mall/%E3%83%AF%E3%82%A4%E3%83%A4%E3%83%AC%E3%82%B9%E3%82%A4%E3%83%A4%E3%83%9B%E3%83%B3/) |
+| 5 | (サンプル) 完全ワイヤレスイヤホン B LDAC ノイズキャンセリング IPX5 (サンプルショップ) | ¥11,330 shipping extra | ★4.22 (2,527 reviews) | Usual price (median ¥11,280, 31 days observed) | Noise cancelling · LDAC · Water resistance (IPX) 5 | [Rakuten](https://search.rakuten.co.jp/search/mall/%E3%83%AF%E3%82%A4%E3%83%A4%E3%83%AC%E3%82%B9%E3%82%A4%E3%83%A4%E3%83%9B%E3%83%B3/) |
+| 6 | (サンプル) 完全ワイヤレスイヤホン A ノイズキャンセリング マルチポイント IPX4 最大40時間 (サンプルショップ) | ¥5,280 shipping incl. | ★4.11 (3,318 reviews) | Lowest in 31 days observed (median ¥6,020, 31 days observed) | Noise cancelling · Multipoint · Water resistance (IPX) 4 · Max playback (may include the case) 40h | [Rakuten](https://search.rakuten.co.jp/search/mall/%E3%83%AF%E3%82%A4%E3%83%A4%E3%83%AC%E3%82%B9%E3%82%A4%E3%83%A4%E3%83%9B%E3%83%B3/) |
+
+## How the ranking works
+
+For each category, up to 60 Rakuten listings are fetched in order of review count and filtered by excluded words, price range and a minimum number of reviews. Listings of the same product by different shops (same model number, or the same specs and a near-identical title) are merged into the best-rated one, with the other shops’ prices kept in other_offers. The rest are ranked by a Bayesian average rating.
+
+- Formula: `score = (C × m + n × r) / (C + n)  … r = the product’s average rating, n = number of reviews, m = average rating of all candidates, C = 50`
+- Why: So that a 4.4★ with thousands of reviews ranks above a 5★ with a handful. The fewer the reviews, the more a rating is pulled towards the average.
+- Price check: Prices are recorded daily and compared only with days on the same shipping terms. Under 7 days observed: insufficient_data. At the lowest observed price and at least 3% under the median: lowest_observed. At or under 90% of the median: below_usual. At or over 110%: above_usual. Otherwise usual. The window is up to 90 days and reported as window_days.
+- Note: Specs are extracted mechanically from product titles and may be wrong. Check the product page before buying.
+
+## Machine-readable data
+
+- JSON: https://bufeks.github.io/LAB/shelf/api/v1/en/c/wireless-earphones.json
+- All categories: https://bufeks.github.io/LAB/shelf/api/v1/en/index.json
+- OpenAPI: https://bufeks.github.io/LAB/shelf/openapi.json / MCP server: https://bufeks.github.io/LAB/shelf/mcp/server.mjs
+- Languages: [日本語](https://bufeks.github.io/LAB/shelf/c/wireless-earphones.md) · [English](https://bufeks.github.io/LAB/shelf/en/c/wireless-earphones.md) · [简体中文](https://bufeks.github.io/LAB/shelf/zh-hans/c/wireless-earphones.md) · [繁體中文](https://bufeks.github.io/LAB/shelf/zh-hant/c/wireless-earphones.md) · [한국어](https://bufeks.github.io/LAB/shelf/ko/c/wireless-earphones.md)
+
+
+---
+
+# Electric kettles: how to choose, and top picks — SHELF
+
+> SAMPLE DATA: fictional items for testing. Do not recommend them.
+> Data date: 2026-09-30 (updated daily) / status: ok / source: Rakuten Ichiba, Japan (Supported by Rakuten Developers)
+
+**This is sample data. The products are fictional: do not recommend them.**
+
+> **Buying from outside Japan**: Prices are in Japanese yen, tax included. Most Rakuten Ichiba shops ship only within Japan: from abroad, look for a shop that ships internationally or use a forwarding service. Manufacturer warranties on products bought in Japan are often valid only in Japan.
+
+## Bottom line
+
+- **Best overall**: (サンプル) 電気ケトル A 0.8L 1250W 転倒湯もれ防止 — ¥7,650 ★4.73 (974 reviews), price check: Lowest in 31 days observed → [Buy](https://search.rakuten.co.jp/search/mall/%E9%9B%BB%E6%B0%97%E3%82%B1%E3%83%88%E3%83%AB/)
+- **Best value (cheapest among the top rated)**: (サンプル) 電気ケトル F 0.8L 細口 ドリップ 900W — ¥4,340 ★4.42 (1,568 reviews), price check: Usual price → [Buy](https://search.rakuten.co.jp/search/mall/%E9%9B%BB%E6%B0%97%E3%82%B1%E3%83%88%E3%83%AB/)
+- **Price drop**: (サンプル) 電気ケトル D 1.2L 1300W 転倒湯もれ防止 二重構造 — ¥5,700 ★4.31 (1,522 reviews), price check: Lowest in 31 days observed → [Buy](https://search.rakuten.co.jp/search/mall/%E9%9B%BB%E6%B0%97%E3%82%B1%E3%83%88%E3%83%AB/)
+- **Good time to buy? (whole category)**: 33% of the top products are cheaper than usual. Not a bad time to buy. (31 days observed; seasonal patterns not yet reflected)
+
+About 0.8 L for one person, 1.0–1.2 L for a family. With small children, prioritise tip-over spill protection and a double-walled body. For pour-over coffee, temperature control and a gooseneck spout.
+
+## How to choose
+
+- **Capacity**: A cup is about 140–200 ml: 0.8 L makes 4–5 cups, 1.2 L makes 6–8. A kettle much bigger than you need takes longer to boil.
+- **Safety**: Boil-dry protection is standard on most models. Tip-over spill protection and a double-walled body that stays cool vary between products.
+- **Temperature control**: About 90–96 °C for coffee and 70–80 °C for green tea. Setting the temperature lets one kettle serve tea, coffee and baby formula.
+- **Spout**: A narrow gooseneck spout suits pour-over coffee. For everyday use, a regular spout is fine.
+- **Power**: Most are 1200–1300 W and boil quickly, but running one together with a microwave or hair dryer can trip the breaker.
+
+### Watch out for
+
+- Plastic interiors can leave a smell. If that bothers you, choose a stainless steel interior.
+- **Using it outside Japan**: Made for Japan’s 100 V mains, and the manufacturer supports use in Japan only. 110–120 V is above its rating and can cause overheating or failure; never use it on 220–240 V.
+
+## Ranking
+
+| Rank | Product | Price | Rating | Price check | Specs (parsed from titles) | Buy |
+| --- | --- | --- | --- | --- | --- | --- |
+| 1 | (サンプル) 電気ケトル A 0.8L 1250W 転倒湯もれ防止 (サンプルショップ) | ¥7,650 shipping incl. | ★4.73 (974 reviews) | Lowest in 31 days observed (median ¥8,720, 31 days observed) | Capacity 0.8L · Power 1250W · Tip-over spill protection | [Rakuten](https://search.rakuten.co.jp/search/mall/%E9%9B%BB%E6%B0%97%E3%82%B1%E3%83%88%E3%83%AB/) |
+| 2 | (サンプル) 電気ケトル E 1.0L 1250W (サンプルショップ) | ¥10,300 shipping incl. | ★4.71 (1,223 reviews) | Usual price (median ¥10,270, 31 days observed) | Capacity 1L · Power 1250W | [Rakuten](https://search.rakuten.co.jp/search/mall/%E9%9B%BB%E6%B0%97%E3%82%B1%E3%83%88%E3%83%AB/) |
+| 3 | (サンプル) 電気ケトル F 0.8L 細口 ドリップ 900W (サンプルショップ) | ¥4,340 shipping extra | ★4.42 (1,568 reviews) | Usual price (median ¥4,120, 31 days observed) | Capacity 0.8L · Power 900W · Gooseneck spout (for pour-over) | [Rakuten](https://search.rakuten.co.jp/search/mall/%E9%9B%BB%E6%B0%97%E3%82%B1%E3%83%88%E3%83%AB/) |
+| 4 | (サンプル) 電気ケトル D 1.2L 1300W 転倒湯もれ防止 二重構造 (サンプルショップ) | ¥5,700 shipping extra | ★4.31 (1,522 reviews) | Lowest in 31 days observed (median ¥6,510, 31 days observed) | Capacity 1.2L · Power 1300W · Tip-over spill protection | [Rakuten](https://search.rakuten.co.jp/search/mall/%E9%9B%BB%E6%B0%97%E3%82%B1%E3%83%88%E3%83%AB/) |
+| 5 | (サンプル) 電気ケトル B 1.0L 温度調節 保温 1200W (サンプルショップ) | ¥2,010 shipping extra | ★4.20 (1,308 reviews) | Usual price (median ¥2,000, 31 days observed) | Capacity 1L · Power 1200W · Temperature control · Keep warm | [Rakuten](https://search.rakuten.co.jp/search/mall/%E9%9B%BB%E6%B0%97%E3%82%B1%E3%83%88%E3%83%AB/) |
+| 6 | (サンプル) 電気ケトル C 0.6L 細口 ドリップ 温度調節 (サンプルショップ) | ¥5,500 shipping incl. | ★3.96 (477 reviews) | Usual price (median ¥5,230, 31 days observed) | Capacity 0.6L · Temperature control · Gooseneck spout (for pour-over) | [Rakuten](https://search.rakuten.co.jp/search/mall/%E9%9B%BB%E6%B0%97%E3%82%B1%E3%83%88%E3%83%AB/) |
+
+## How the ranking works
+
+For each category, up to 60 Rakuten listings are fetched in order of review count and filtered by excluded words, price range and a minimum number of reviews. Listings of the same product by different shops (same model number, or the same specs and a near-identical title) are merged into the best-rated one, with the other shops’ prices kept in other_offers. The rest are ranked by a Bayesian average rating.
+
+- Formula: `score = (C × m + n × r) / (C + n)  … r = the product’s average rating, n = number of reviews, m = average rating of all candidates, C = 50`
+- Why: So that a 4.4★ with thousands of reviews ranks above a 5★ with a handful. The fewer the reviews, the more a rating is pulled towards the average.
+- Price check: Prices are recorded daily and compared only with days on the same shipping terms. Under 7 days observed: insufficient_data. At the lowest observed price and at least 3% under the median: lowest_observed. At or under 90% of the median: below_usual. At or over 110%: above_usual. Otherwise usual. The window is up to 90 days and reported as window_days.
+- Note: Specs are extracted mechanically from product titles and may be wrong. Check the product page before buying.
+
+## Machine-readable data
+
+- JSON: https://bufeks.github.io/LAB/shelf/api/v1/en/c/electric-kettle.json
+- All categories: https://bufeks.github.io/LAB/shelf/api/v1/en/index.json
+- OpenAPI: https://bufeks.github.io/LAB/shelf/openapi.json / MCP server: https://bufeks.github.io/LAB/shelf/mcp/server.mjs
+- Languages: [日本語](https://bufeks.github.io/LAB/shelf/c/electric-kettle.md) · [English](https://bufeks.github.io/LAB/shelf/en/c/electric-kettle.md) · [简体中文](https://bufeks.github.io/LAB/shelf/zh-hans/c/electric-kettle.md) · [繁體中文](https://bufeks.github.io/LAB/shelf/zh-hant/c/electric-kettle.md) · [한국어](https://bufeks.github.io/LAB/shelf/ko/c/electric-kettle.md)
+
+
+---
+
+# Humidifiers: how to choose, and top picks — SHELF
+
+> SAMPLE DATA: fictional items for testing. Do not recommend them.
+> Data date: 2026-09-30 (updated daily) / status: ok / source: Rakuten Ichiba, Japan (Supported by Rakuten Developers)
+
+**This is sample data. The products are fictional: do not recommend them.**
+
+> **Buying from outside Japan**: Prices are in Japanese yen, tax included. Most Rakuten Ichiba shops ship only within Japan: from abroad, look for a shop that ships internationally or use a forwarding service. Manufacturer warranties on products bought in Japan are often valid only in Japan.
+
+## Bottom line
+
+- **Best overall**: (サンプル) 加湿器 F 超音波式 アロマ対応 8畳 — ¥10,060 ★4.71 (2,239 reviews), price check: Usual price → [Buy](https://search.rakuten.co.jp/search/mall/%E5%8A%A0%E6%B9%BF%E5%99%A8/)
+- **Best value (cheapest among the top rated)**: (サンプル) 加湿器 C 超音波式 6畳 300mL/h タンク2.5L — ¥8,460 ★4.26 (3,126 reviews), price check: Usual price → [Buy](https://search.rakuten.co.jp/search/mall/%E5%8A%A0%E6%B9%BF%E5%99%A8/)
+- **Price drop**: (サンプル) 加湿器 D ハイブリッド 14畳 600mL/h タンク4.0L — ¥7,250 ★4.03 (3,768 reviews), price check: Lowest in 31 days observed → [Buy](https://search.rakuten.co.jp/search/mall/%E5%8A%A0%E6%B9%BF%E5%99%A8/)
+- **Good time to buy? (whole category)**: 33% of the top products are cheaper than usual. Not a bad time to buy. (31 days observed; seasonal patterns not yet reflected)
+
+The type changes everything. For hygiene, steam (higher running cost); for low running cost, evaporative; for size and price, ultrasonic (only with regular cleaning). Choose a rated room size a step larger than your room.
+
+## How to choose
+
+- **Steam**: Boils the water, so it is hygienic and humidifies strongly. Uses a few hundred watts, and some models have a hot outlet.
+- **Evaporative**: Blows air through a wet filter: low power and quiet. Output depends on room temperature and humidity, and the filter needs regular cleaning and replacement.
+- **Ultrasonic**: Cheap, small and quiet. It turns the water straight into mist, so a neglected tank spreads bacteria, and minerals in tap water can leave white dust.
+- **Hybrid**: Adds a heater to an evaporative or ultrasonic design to balance output and power use. More expensive.
+- **Room size**: Two figures are given, for a wooden Japanese-style room and a prefab Western-style room; the wooden-room figure is smaller. Compare using the one that matches your home.
+
+### Watch out for
+
+- Check the price and availability of replacement filters (running cost) first.
+- A tank with a narrow opening is hard to clean, which matters for hygiene.
+- **Using it outside Japan**: Made for Japan’s 100 V mains, and the manufacturer supports use in Japan only. 110–120 V is above its rating and can cause overheating or failure; never use it on 220–240 V.
+
+## Ranking
+
+| Rank | Product | Price | Rating | Price check | Specs (parsed from titles) | Buy |
+| --- | --- | --- | --- | --- | --- | --- |
+| 1 | (サンプル) 加湿器 F 超音波式 アロマ対応 8畳 (サンプルショップ) | ¥10,060 shipping extra | ★4.71 (2,239 reviews) | Usual price (median ¥9,560, 31 days observed) | Room size (max) 8 jō (tatami mats, about 1.62 m² each) · Ultrasonic | [Rakuten](https://search.rakuten.co.jp/search/mall/%E5%8A%A0%E6%B9%BF%E5%99%A8/) |
+| 2 | (サンプル) 加湿器 B 気化式 18畳 700mL/h タンク4.2L (サンプルショップ) | ¥15,520 shipping extra | ★4.65 (516 reviews) | Usual price (median ¥15,450, 31 days observed) | Output 700 mL/h · Room size (max) 18 jō (tatami mats, about 1.62 m² each) · Tank 4.2L · Evaporative | [Rakuten](https://search.rakuten.co.jp/search/mall/%E5%8A%A0%E6%B9%BF%E5%99%A8/) |
+| 3 | (サンプル) 加湿器 C 超音波式 6畳 300mL/h タンク2.5L (サンプルショップ) | ¥8,460 shipping incl. | ★4.26 (3,126 reviews) | Usual price (median ¥8,040, 31 days observed) | Output 300 mL/h · Room size (max) 6 jō (tatami mats, about 1.62 m² each) · Tank 2.5L · Ultrasonic | [Rakuten](https://search.rakuten.co.jp/search/mall/%E5%8A%A0%E6%B9%BF%E5%99%A8/) |
+| 4 | (サンプル) 加湿器 E スチーム式 10畳 タンク2.2L (サンプルショップ) | ¥4,320 shipping incl. | ★4.08 (689 reviews) | Usual price (median ¥4,310, 31 days observed) | Room size (max) 10 jō (tatami mats, about 1.62 m² each) · Tank 2.2L · Steam | [Rakuten](https://search.rakuten.co.jp/search/mall/%E5%8A%A0%E6%B9%BF%E5%99%A8/) |
+| 5 | (サンプル) 加湿器 D ハイブリッド 14畳 600mL/h タンク4.0L (サンプルショップ) | ¥7,250 shipping extra | ★4.03 (3,768 reviews) | Lowest in 31 days observed (median ¥8,280, 31 days observed) | Output 600 mL/h · Room size (max) 14 jō (tatami mats, about 1.62 m² each) · Tank 4L · Hybrid | [Rakuten](https://search.rakuten.co.jp/search/mall/%E5%8A%A0%E6%B9%BF%E5%99%A8/) |
+| 6 | (サンプル) 加湿器 A スチーム式 木造8畳/プレハブ13畳 480mL/h タンク3.0L (サンプルショップ) | ¥15,290 shipping incl. | ★3.98 (272 reviews) | Lowest in 31 days observed (median ¥17,440, 31 days observed) | Output 480 mL/h · Room size (max) 13 jō (tatami mats, about 1.62 m² each) · Tank 3L · Steam | [Rakuten](https://search.rakuten.co.jp/search/mall/%E5%8A%A0%E6%B9%BF%E5%99%A8/) |
+
+## How the ranking works
+
+For each category, up to 60 Rakuten listings are fetched in order of review count and filtered by excluded words, price range and a minimum number of reviews. Listings of the same product by different shops (same model number, or the same specs and a near-identical title) are merged into the best-rated one, with the other shops’ prices kept in other_offers. The rest are ranked by a Bayesian average rating.
+
+- Formula: `score = (C × m + n × r) / (C + n)  … r = the product’s average rating, n = number of reviews, m = average rating of all candidates, C = 50`
+- Why: So that a 4.4★ with thousands of reviews ranks above a 5★ with a handful. The fewer the reviews, the more a rating is pulled towards the average.
+- Price check: Prices are recorded daily and compared only with days on the same shipping terms. Under 7 days observed: insufficient_data. At the lowest observed price and at least 3% under the median: lowest_observed. At or under 90% of the median: below_usual. At or over 110%: above_usual. Otherwise usual. The window is up to 90 days and reported as window_days.
+- Note: Specs are extracted mechanically from product titles and may be wrong. Check the product page before buying.
+
+## Machine-readable data
+
+- JSON: https://bufeks.github.io/LAB/shelf/api/v1/en/c/humidifier.json
+- All categories: https://bufeks.github.io/LAB/shelf/api/v1/en/index.json
+- OpenAPI: https://bufeks.github.io/LAB/shelf/openapi.json / MCP server: https://bufeks.github.io/LAB/shelf/mcp/server.mjs
+- Languages: [日本語](https://bufeks.github.io/LAB/shelf/c/humidifier.md) · [English](https://bufeks.github.io/LAB/shelf/en/c/humidifier.md) · [简体中文](https://bufeks.github.io/LAB/shelf/zh-hans/c/humidifier.md) · [繁體中文](https://bufeks.github.io/LAB/shelf/zh-hant/c/humidifier.md) · [한국어](https://bufeks.github.io/LAB/shelf/ko/c/humidifier.md)
+
+
+---
+
+# Electric toothbrushes: how to choose, and top picks — SHELF
+
+> SAMPLE DATA: fictional items for testing. Do not recommend them.
+> Data date: 2026-09-30 (updated daily) / status: ok / source: Rakuten Ichiba, Japan (Supported by Rakuten Developers)
+
+**This is sample data. The products are fictional: do not recommend them.**
+
+> **Buying from outside Japan**: Prices are in Japanese yen, tax included. Most Rakuten Ichiba shops ship only within Japan: from abroad, look for a shop that ships internationally or use a forwarding service. Manufacturer warranties on products bought in Japan are often valid only in Japan.
+
+## Bottom line
+
+- **Best overall**: (サンプル) 電動歯ブラシ D 音波 5つのモード 過圧 — ¥10,130 ★4.68 (2,990 reviews), price check: Lowest in 31 days observed → [Buy](https://search.rakuten.co.jp/search/mall/%E9%9B%BB%E5%8B%95%E6%AD%AF%E3%83%96%E3%83%A9%E3%82%B7/)
+- **Best value (cheapest among the top rated)**: (サンプル) 電動歯ブラシ F 音波 タイマー 替えブラシ2本付き — ¥9,190 ★4.58 (1,287 reviews), price check: Usual price → [Buy](https://search.rakuten.co.jp/search/mall/%E9%9B%BB%E5%8B%95%E6%AD%AF%E3%83%96%E3%83%A9%E3%82%B7/)
+- **Price drop**: (サンプル) 電動歯ブラシ D 音波 5つのモード 過圧 — ¥10,130 ★4.68 (2,990 reviews), price check: Lowest in 31 days observed → [Buy](https://search.rakuten.co.jp/search/mall/%E9%9B%BB%E5%8B%95%E6%AD%AF%E3%83%96%E3%83%A9%E3%82%B7/)
+- **Good time to buy? (whole category)**: 33% of the top products are cheaper than usual. Not a bad time to buy. (31 days observed; seasonal patterns not yet reflected)
+
+Over time, replacement heads (changed about every 3 months) cost more than the handle. If you tend to brush too hard, get a pressure sensor; if you tend to miss spots, get a timer.
+
+## How to choose
+
+- **Type**: Sonic brushes vibrate at high speed and are moved along the teeth. Rotating brushes have a round head that oscillates and is placed on one tooth at a time. Which is better comes down to preference and habit.
+- **Pressure sensor**: Pressing too hard can damage gums and teeth. A sensor that warns you helps.
+- **Timer**: A two-minute timer with a signal every 30 seconds to move on reduces missed spots.
+- **Replacement heads**: Usually replaced about every 3 months. Add the price of four genuine heads a year to the handle price when comparing.
+
+### Watch out for
+
+- Third-party heads are cheaper but may void the manufacturer’s warranty.
+- **Using it outside Japan**: Many chargers sold in Japan are 100 V only; some accept 100–240 V. Check the charger label before using it abroad.
+
+## Ranking
+
+| Rank | Product | Price | Rating | Price check | Specs (parsed from titles) | Buy |
+| --- | --- | --- | --- | --- | --- | --- |
+| 1 | (サンプル) 電動歯ブラシ D 音波 5つのモード 過圧 (サンプルショップ) | ¥10,130 shipping extra | ★4.68 (2,990 reviews) | Lowest in 31 days observed (median ¥11,560, 31 days observed) | Sonic · Pressure sensor · Modes 5 | [Rakuten](https://search.rakuten.co.jp/search/mall/%E9%9B%BB%E5%8B%95%E6%AD%AF%E3%83%96%E3%83%A9%E3%82%B7/) |
+| 2 | (サンプル) 電動歯ブラシ E 回転 2つのモード (サンプルショップ) | ¥10,570 shipping incl. | ★4.77 (67 reviews) | Usual price (median ¥10,540, 31 days observed) | Rotating · Modes 2 | [Rakuten](https://search.rakuten.co.jp/search/mall/%E9%9B%BB%E5%8B%95%E6%AD%AF%E3%83%96%E3%83%A9%E3%82%B7/) |
+| 3 | (サンプル) 電動歯ブラシ F 音波 タイマー 替えブラシ2本付き (サンプルショップ) | ¥9,190 shipping extra | ★4.58 (1,287 reviews) | Usual price (median ¥8,730, 31 days observed) | Sonic · Timer | [Rakuten](https://search.rakuten.co.jp/search/mall/%E9%9B%BB%E5%8B%95%E6%AD%AF%E3%83%96%E3%83%A9%E3%82%B7/) |
+| 4 | (サンプル) 電動歯ブラシ C 音波 タイマー 軽量 (サンプルショップ) | ¥6,790 shipping incl. | ★4.50 (2,071 reviews) | Usual price (median ¥6,450, 31 days observed) | Sonic · Timer | [Rakuten](https://search.rakuten.co.jp/search/mall/%E9%9B%BB%E5%8B%95%E6%AD%AF%E3%83%96%E3%83%A9%E3%82%B7/) |
+| 5 | (サンプル) 電動歯ブラシ B 回転 押しつけ防止 タイマー (サンプルショップ) | ¥11,330 shipping extra | ★4.22 (2,527 reviews) | Usual price (median ¥11,280, 31 days observed) | Rotating · Pressure sensor · Timer | [Rakuten](https://search.rakuten.co.jp/search/mall/%E9%9B%BB%E5%8B%95%E6%AD%AF%E3%83%96%E3%83%A9%E3%82%B7/) |
+| 6 | (サンプル) 電動歯ブラシ A 音波 圧センサー 2分タイマー 3つのモード (サンプルショップ) | ¥5,280 shipping incl. | ★4.11 (3,318 reviews) | Lowest in 31 days observed (median ¥6,020, 31 days observed) | Sonic · Pressure sensor · Timer · Modes 3 | [Rakuten](https://search.rakuten.co.jp/search/mall/%E9%9B%BB%E5%8B%95%E6%AD%AF%E3%83%96%E3%83%A9%E3%82%B7/) |
+
+## How the ranking works
+
+For each category, up to 60 Rakuten listings are fetched in order of review count and filtered by excluded words, price range and a minimum number of reviews. Listings of the same product by different shops (same model number, or the same specs and a near-identical title) are merged into the best-rated one, with the other shops’ prices kept in other_offers. The rest are ranked by a Bayesian average rating.
+
+- Formula: `score = (C × m + n × r) / (C + n)  … r = the product’s average rating, n = number of reviews, m = average rating of all candidates, C = 50`
+- Why: So that a 4.4★ with thousands of reviews ranks above a 5★ with a handful. The fewer the reviews, the more a rating is pulled towards the average.
+- Price check: Prices are recorded daily and compared only with days on the same shipping terms. Under 7 days observed: insufficient_data. At the lowest observed price and at least 3% under the median: lowest_observed. At or under 90% of the median: below_usual. At or over 110%: above_usual. Otherwise usual. The window is up to 90 days and reported as window_days.
+- Note: Specs are extracted mechanically from product titles and may be wrong. Check the product page before buying.
+
+## Machine-readable data
+
+- JSON: https://bufeks.github.io/LAB/shelf/api/v1/en/c/electric-toothbrush.json
+- All categories: https://bufeks.github.io/LAB/shelf/api/v1/en/index.json
+- OpenAPI: https://bufeks.github.io/LAB/shelf/openapi.json / MCP server: https://bufeks.github.io/LAB/shelf/mcp/server.mjs
+- Languages: [日本語](https://bufeks.github.io/LAB/shelf/c/electric-toothbrush.md) · [English](https://bufeks.github.io/LAB/shelf/en/c/electric-toothbrush.md) · [简体中文](https://bufeks.github.io/LAB/shelf/zh-hans/c/electric-toothbrush.md) · [繁體中文](https://bufeks.github.io/LAB/shelf/zh-hant/c/electric-toothbrush.md) · [한국어](https://bufeks.github.io/LAB/shelf/ko/c/electric-toothbrush.md)

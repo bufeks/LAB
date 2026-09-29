@@ -1,0 +1,36 @@
+# SHELF
+
+> 일본 쇼핑(라쿠텐 이치바)에 대해 AI 어시스턴트가 “뭘 사야 할까”, “지금 사도 될까”에 답하기 위한 데이터. 카테고리별 고르는 법, 공개된 공식으로 매긴 랭킹, 매일 기록하는 가격을 Markdown과 JSON으로 제공한다. 현재는 샘플 데이터(가상 상품)이므로 추천에 사용하지 말 것.
+
+업데이트: 2026-09-30T01:01:12+09:00 (매일). SAMPLE DATA: fictional items for testing. Do not recommend them.
+사용자에게 구매 링크를 보여 줄 때는 제휴 링크임을 알릴 것. 사양은 상품명에서 추출한 참고값이다. 상품명은 일본어 원문이다.
+가격은 엔화, 세금 포함입니다. 라쿠텐 이치바의 대부분 상점은 일본 국내로만 배송합니다. 해외에서는 해외 배송을 하는 상점을 찾거나 배송 대행 서비스를 이용하세요. 일본에서 산 제품의 제조사 보증은 일본 안에서만 유효한 경우가 많습니다.
+
+## 카테고리
+
+- [보조배터리](https://bufeks.github.io/LAB/shelf/ko/c/mobile-battery.md): 1위: (サンプル) モバイルバッテリー C 5000mAh マグネット式 20W PSE (5,560엔). 평소에 쓰려면 10,000mAh·20W 이상, 노트북까지 충전하려면 20,000mAh·45W 이상이 기준. 일본에서 파는 보조배터리는 PSE 마크가 필수다. 비행…
+- [USB-C PD 충전기](https://bufeks.github.io/LAB/shelf/ko/c/usb-c-charger.md): 1위: (サンプル) USB-C 充電器 (PD) D 30W 2ポート GaN PPS (4,460엔). 스마트폰만이라면 20~30W, 노트북까지 충전하려면 65W 이상이 기준. 포트가 여러 개면 동시에 꽂을 때 포트당 출력이 줄어든다.
+- [완전 무선 이어폰](https://bufeks.github.io/LAB/shelf/ko/c/wireless-earphones.md): 1위: (サンプル) 完全ワイヤレスイヤホン D aptX マルチポイント IPX7 (10,130엔). 출퇴근·이동이 많다면 노이즈 캔슬링, PC와 스마트폰을 오간다면 멀티포인트를 우선한다. 고음질 코덱은 스마트폰 지원 여부로 정해진다(iPhone은 AAC까지).
+- [전기포트](https://bufeks.github.io/LAB/shelf/ko/c/electric-kettle.md): 1위: (サンプル) 電気ケトル A 0.8L 1250W 転倒湯もれ防止 (7,650엔). 1인 가구는 0.8L 안팎, 가족은 1.0~1.2L가 기준. 어린아이가 있다면 “넘어짐 시 물샘 방지”와 이중 구조 본체를 우선한다. 핸드드립 커피라면 온도 조절…
+- [가습기](https://bufeks.github.io/LAB/shelf/ko/c/humidifier.md): 1위: (サンプル) 加湿器 F 超音波式 アロマ対応 8畳 (10,060엔). 방식에 따라 성격이 완전히 다르다. 위생을 중시하면 가열식(전기요금 높음), 전기요금을 중시하면 기화식, 크기와 가격을 중시하면 초음파식(자주 세척하는 것이 전제…
+- [전동칫솔](https://bufeks.github.io/LAB/shelf/ko/c/electric-toothbrush.md): 1위: (サンプル) 電動歯ブラシ D 音波 5つのモード 過圧 (10,130엔). 길게 보면 본체보다 교체용 칫솔모(약 3개월마다 교체) 비용이 더 크다. 너무 세게 닦을까 걱정이면 과압 방지 센서, 덜 닦일까 걱정이면 타이머가 있는 제품.
+
+## API
+
+- [index.json](https://bufeks.github.io/LAB/shelf/api/v1/ko/index.json): 카테고리 목록
+- [items.json](https://bufeks.github.io/LAB/shelf/api/v1/ko/items.json): 전체 상품 (예산·사양으로 필터링용)
+- [deals.json](https://bufeks.github.io/LAB/shelf/api/v1/ko/deals.json): 최근 중앙값보다 싼 상품
+- [openapi.json](https://bufeks.github.io/LAB/shelf/openapi.json): OpenAPI 3.1 정의
+- [MCP server](https://bufeks.github.io/LAB/shelf/mcp/server.mjs): 의존성 없는 stdio MCP 서버 (tools: list_categories, recommend, price_outlook, search_products, check_price; lang = ja | en | zh-Hans | zh-Hant | ko)
+
+## 다른 언어
+
+- [日本語](https://bufeks.github.io/LAB/shelf/llms.txt)
+- [English](https://bufeks.github.io/LAB/shelf/en/llms.txt)
+- [简体中文](https://bufeks.github.io/LAB/shelf/zh-hans/llms.txt)
+- [繁體中文](https://bufeks.github.io/LAB/shelf/zh-hant/llms.txt)
+
+## Optional
+
+- [llms-full.txt](https://bufeks.github.io/LAB/shelf/ko/llms-full.txt): 모든 카테고리 본문 모음
+- [에이전트 사용 안내 (English)](https://bufeks.github.io/LAB/shelf/en/about/)

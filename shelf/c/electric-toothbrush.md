@@ -7,9 +7,9 @@
 
 ## 結論
 
-- **総合1位**: (サンプル) 電動歯ブラシ D 音波 5つのモード 過圧 — ¥10,130 ★4.68（2,990件）、価格判定: 観測31日の最安値 → [購入リンク](https://search.rakuten.co.jp/search/mall/%E9%9B%BB%E5%8B%95%E6%AD%AF%E3%83%96%E3%83%A9%E3%82%B7/)
-- **コスパ（高評価の中で最安）**: (サンプル) 電動歯ブラシ F 音波 タイマー 替えブラシ2本付き — ¥9,190 ★4.58（1,287件）、価格判定: いつもの価格 → [購入リンク](https://search.rakuten.co.jp/search/mall/%E9%9B%BB%E5%8B%95%E6%AD%AF%E3%83%96%E3%83%A9%E3%82%B7/)
-- **値下がり中**: (サンプル) 電動歯ブラシ D 音波 5つのモード 過圧 — ¥10,130 ★4.68（2,990件）、価格判定: 観測31日の最安値 → [購入リンク](https://search.rakuten.co.jp/search/mall/%E9%9B%BB%E5%8B%95%E6%AD%AF%E3%83%96%E3%83%A9%E3%82%B7/)
+- **総合1位**: (サンプル) 電動歯ブラシ D 音波 5つのモード 過圧 — ¥10,130 ★4.68（2,990件）, 価格判定: 観測31日の最安値 → [購入リンク](https://search.rakuten.co.jp/search/mall/%E9%9B%BB%E5%8B%95%E6%AD%AF%E3%83%96%E3%83%A9%E3%82%B7/)
+- **コスパ（高評価の中で最安）**: (サンプル) 電動歯ブラシ F 音波 タイマー 替えブラシ2本付き — ¥9,190 ★4.58（1,287件）, 価格判定: いつもの価格 → [購入リンク](https://search.rakuten.co.jp/search/mall/%E9%9B%BB%E5%8B%95%E6%AD%AF%E3%83%96%E3%83%A9%E3%82%B7/)
+- **値下がり中**: (サンプル) 電動歯ブラシ D 音波 5つのモード 過圧 — ¥10,130 ★4.68（2,990件）, 価格判定: 観測31日の最安値 → [購入リンク](https://search.rakuten.co.jp/search/mall/%E9%9B%BB%E5%8B%95%E6%AD%AF%E3%83%96%E3%83%A9%E3%82%B7/)
 - **今が買い時か（カテゴリ全体）**: 上位商品の33%がいつもより安い。買うなら悪くない時期。（観測31日・季節変動はまだ反映していない）
 
 本体価格より替えブラシ代（約3か月ごとに交換）が長期の出費を左右する。磨きすぎが心配なら押しつけ防止センサー付き、磨き残しが心配ならタイマー付きを選ぶ。
@@ -29,12 +29,12 @@
 
 | 順位 | 商品 | 価格 | 評価 | 価格判定 | スペック(商品名から抽出) | 購入 |
 | --- | --- | --- | --- | --- | --- | --- |
-| 1 | (サンプル) 電動歯ブラシ D 音波 5つのモード 過圧（サンプルショップ） | ¥10,130 送料別 | ★4.68（2,990件） | 観測31日の最安値（中央値¥11,560・観測31日） | 音波式・押しつけ防止・モード数5 | [楽天](https://search.rakuten.co.jp/search/mall/%E9%9B%BB%E5%8B%95%E6%AD%AF%E3%83%96%E3%83%A9%E3%82%B7/) |
-| 2 | (サンプル) 電動歯ブラシ E 回転 2つのモード（サンプルショップ） | ¥10,570 送料込 | ★4.77（67件） | いつもの価格（中央値¥10,540・観測31日） | 回転式・モード数2 | [楽天](https://search.rakuten.co.jp/search/mall/%E9%9B%BB%E5%8B%95%E6%AD%AF%E3%83%96%E3%83%A9%E3%82%B7/) |
-| 3 | (サンプル) 電動歯ブラシ F 音波 タイマー 替えブラシ2本付き（サンプルショップ） | ¥9,190 送料別 | ★4.58（1,287件） | いつもの価格（中央値¥8,730・観測31日） | 音波式・タイマー | [楽天](https://search.rakuten.co.jp/search/mall/%E9%9B%BB%E5%8B%95%E6%AD%AF%E3%83%96%E3%83%A9%E3%82%B7/) |
-| 4 | (サンプル) 電動歯ブラシ C 音波 タイマー 軽量（サンプルショップ） | ¥6,790 送料込 | ★4.50（2,071件） | いつもの価格（中央値¥6,450・観測31日） | 音波式・タイマー | [楽天](https://search.rakuten.co.jp/search/mall/%E9%9B%BB%E5%8B%95%E6%AD%AF%E3%83%96%E3%83%A9%E3%82%B7/) |
-| 5 | (サンプル) 電動歯ブラシ B 回転 押しつけ防止 タイマー（サンプルショップ） | ¥11,330 送料別 | ★4.22（2,527件） | いつもの価格（中央値¥11,280・観測31日） | 回転式・押しつけ防止・タイマー | [楽天](https://search.rakuten.co.jp/search/mall/%E9%9B%BB%E5%8B%95%E6%AD%AF%E3%83%96%E3%83%A9%E3%82%B7/) |
-| 6 | (サンプル) 電動歯ブラシ A 音波 圧センサー 2分タイマー 3つのモード（サンプルショップ） | ¥5,280 送料込 | ★4.11（3,318件） | 観測31日の最安値（中央値¥6,020・観測31日） | 音波式・押しつけ防止・タイマー・モード数3 | [楽天](https://search.rakuten.co.jp/search/mall/%E9%9B%BB%E5%8B%95%E6%AD%AF%E3%83%96%E3%83%A9%E3%82%B7/) |
+| 1 | (サンプル) 電動歯ブラシ D 音波 5つのモード 過圧 (サンプルショップ) | ¥10,130 送料別 | ★4.68（2,990件） | 観測31日の最安値（中央値¥11,560・観測31日） | 音波式・押しつけ防止・モード数 5 | [楽天](https://search.rakuten.co.jp/search/mall/%E9%9B%BB%E5%8B%95%E6%AD%AF%E3%83%96%E3%83%A9%E3%82%B7/) |
+| 2 | (サンプル) 電動歯ブラシ E 回転 2つのモード (サンプルショップ) | ¥10,570 送料込 | ★4.77（67件） | いつもの価格（中央値¥10,540・観測31日） | 回転式・モード数 2 | [楽天](https://search.rakuten.co.jp/search/mall/%E9%9B%BB%E5%8B%95%E6%AD%AF%E3%83%96%E3%83%A9%E3%82%B7/) |
+| 3 | (サンプル) 電動歯ブラシ F 音波 タイマー 替えブラシ2本付き (サンプルショップ) | ¥9,190 送料別 | ★4.58（1,287件） | いつもの価格（中央値¥8,730・観測31日） | 音波式・タイマー | [楽天](https://search.rakuten.co.jp/search/mall/%E9%9B%BB%E5%8B%95%E6%AD%AF%E3%83%96%E3%83%A9%E3%82%B7/) |
+| 4 | (サンプル) 電動歯ブラシ C 音波 タイマー 軽量 (サンプルショップ) | ¥6,790 送料込 | ★4.50（2,071件） | いつもの価格（中央値¥6,450・観測31日） | 音波式・タイマー | [楽天](https://search.rakuten.co.jp/search/mall/%E9%9B%BB%E5%8B%95%E6%AD%AF%E3%83%96%E3%83%A9%E3%82%B7/) |
+| 5 | (サンプル) 電動歯ブラシ B 回転 押しつけ防止 タイマー (サンプルショップ) | ¥11,330 送料別 | ★4.22（2,527件） | いつもの価格（中央値¥11,280・観測31日） | 回転式・押しつけ防止・タイマー | [楽天](https://search.rakuten.co.jp/search/mall/%E9%9B%BB%E5%8B%95%E6%AD%AF%E3%83%96%E3%83%A9%E3%82%B7/) |
+| 6 | (サンプル) 電動歯ブラシ A 音波 圧センサー 2分タイマー 3つのモード (サンプルショップ) | ¥5,280 送料込 | ★4.11（3,318件） | 観測31日の最安値（中央値¥6,020・観測31日） | 音波式・押しつけ防止・タイマー・モード数 3 | [楽天](https://search.rakuten.co.jp/search/mall/%E9%9B%BB%E5%8B%95%E6%AD%AF%E3%83%96%E3%83%A9%E3%82%B7/) |
 
 ## ランキングの決め方
 
@@ -50,3 +50,4 @@ Rakutenで各カテゴリをレビュー件数順に最大60件取得し、除�
 - JSON: https://bufeks.github.io/LAB/shelf/api/v1/c/electric-toothbrush.json
 - 全カテゴリ: https://bufeks.github.io/LAB/shelf/api/v1/index.json
 - OpenAPI: https://bufeks.github.io/LAB/shelf/openapi.json / MCPサーバー: https://bufeks.github.io/LAB/shelf/mcp/server.mjs
+- Languages: [日本語](https://bufeks.github.io/LAB/shelf/c/electric-toothbrush.md) · [English](https://bufeks.github.io/LAB/shelf/en/c/electric-toothbrush.md) · [简体中文](https://bufeks.github.io/LAB/shelf/zh-hans/c/electric-toothbrush.md) · [繁體中文](https://bufeks.github.io/LAB/shelf/zh-hant/c/electric-toothbrush.md) · [한국어](https://bufeks.github.io/LAB/shelf/ko/c/electric-toothbrush.md)

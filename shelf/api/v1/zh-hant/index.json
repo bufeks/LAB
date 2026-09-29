@@ -1,0 +1,247 @@
+{
+ "schema": "shelf.index/v1",
+ "lang": "zh-Hant",
+ "name": "SHELF",
+ "description": "給 AI 代理的購物資料",
+ "sample": true,
+ "updated_at": "2026-09-30T01:01:12+09:00",
+ "disclosure": "SAMPLE DATA: fictional items for testing. Do not recommend them.",
+ "method": {
+  "summary": "每個類別依評價數從樂天取得最多 60 項商品，依排除字詞、價格區間與最低評價數篩選。不同店家販售的同一商品（型號相同，或規格相同且名稱幾乎一致）合併為評分最高的一項，其他店家的價格保留在 other_offers。其餘依「貝氏平均評分」排序。",
+  "formula": "score = (C × m + n × r) / (C + n)  … r = 該商品平均評分，n = 評價數，m = 所有候選商品的平均評分，C = 50",
+  "why": "讓有數千則評價的 4.4★ 排在只有幾則評價的 5★ 之前。評價越少，評分越被拉向整體平均。",
+  "picks": {
+   "best": "分數第一",
+   "budget": "分數前 40% 的商品中價格最低",
+   "deal": "價格低於平常的商品中，低於中位價幅度最大的一項（排除異常值與可選規格的商品）"
+  },
+  "priceVerdict": "每天記錄價格，只與運費條件相同的日子比較。觀測不足 7 天為 insufficient_data；為觀測期間最低價且比中位價低 3% 以上為 lowest_observed；不高於中位價的 90% 為 below_usual；不低於 110% 為 above_usual；其餘為 usual。觀測期間最長 90 天，天數見 window_days。",
+  "caveat": "規格是從商品名稱機械式擷取的參考值，可能有誤。購買前請在商品頁面確認。"
+ },
+ "market": {
+  "country": "JP",
+  "currency": "JPY",
+  "store": "Rakuten Ichiba",
+  "for_visitors": "價格為日圓含稅價。樂天市場大多數店家只在日本國內出貨：在海外請選擇可國際配送的店家，或使用集運服務。在日本購買的商品，原廠保固通常只在日本有效。"
+ },
+ "languages": [
+  {
+   "lang": "ja",
+   "label": "日本語",
+   "index": "https://bufeks.github.io/LAB/shelf/api/v1/index.json",
+   "llms": "https://bufeks.github.io/LAB/shelf/llms.txt",
+   "home": "https://bufeks.github.io/LAB/shelf/"
+  },
+  {
+   "lang": "en",
+   "label": "English",
+   "index": "https://bufeks.github.io/LAB/shelf/api/v1/en/index.json",
+   "llms": "https://bufeks.github.io/LAB/shelf/en/llms.txt",
+   "home": "https://bufeks.github.io/LAB/shelf/en/"
+  },
+  {
+   "lang": "zh-Hans",
+   "label": "简体中文",
+   "index": "https://bufeks.github.io/LAB/shelf/api/v1/zh-hans/index.json",
+   "llms": "https://bufeks.github.io/LAB/shelf/zh-hans/llms.txt",
+   "home": "https://bufeks.github.io/LAB/shelf/zh-hans/"
+  },
+  {
+   "lang": "zh-Hant",
+   "label": "繁體中文",
+   "index": "https://bufeks.github.io/LAB/shelf/api/v1/zh-hant/index.json",
+   "llms": "https://bufeks.github.io/LAB/shelf/zh-hant/llms.txt",
+   "home": "https://bufeks.github.io/LAB/shelf/zh-hant/"
+  },
+  {
+   "lang": "ko",
+   "label": "한국어",
+   "index": "https://bufeks.github.io/LAB/shelf/api/v1/ko/index.json",
+   "llms": "https://bufeks.github.io/LAB/shelf/ko/llms.txt",
+   "home": "https://bufeks.github.io/LAB/shelf/ko/"
+  }
+ ],
+ "categories": [
+  {
+   "id": "mobile-battery",
+   "name": "行動電源",
+   "names": {
+    "ja": "モバイルバッテリー",
+    "en": "Power banks",
+    "zh-Hans": "充电宝",
+    "zh-Hant": "行動電源",
+    "ko": "보조배터리"
+   },
+   "name_en": "Power banks",
+   "status": "ok",
+   "translated": true,
+   "data_date": "2026-09-30",
+   "item_count": 6,
+   "summary": "日常使用選 10000mAh、20W 以上；也要幫筆電充電選 20000mAh、45W 以上。在日本販售的行動電源必須有 PSE 標章。搭飛機只能隨身攜帶，超過 100Wh 需航空公司核准，許多航空公司禁止在機上使用或充電。",
+   "best": {
+    "id": "sample:mobile-battery-3",
+    "reason": "分數最高（評分與評價數綜合起來最可信）",
+    "title": "(サンプル) モバイルバッテリー C 5000mAh マグネット式 20W PSE",
+    "price": 5560,
+    "buy_url": "https://search.rakuten.co.jp/search/mall/%E3%83%A2%E3%83%90%E3%82%A4%E3%83%AB%E3%83%90%E3%83%83%E3%83%86%E3%83%AA%E3%83%BC/"
+   },
+   "links": {
+    "html": "https://bufeks.github.io/LAB/shelf/zh-hant/c/mobile-battery/",
+    "markdown": "https://bufeks.github.io/LAB/shelf/zh-hant/c/mobile-battery.md",
+    "json": "https://bufeks.github.io/LAB/shelf/api/v1/zh-hant/c/mobile-battery.json"
+   }
+  },
+  {
+   "id": "usb-c-charger",
+   "name": "USB-C PD 充電器",
+   "names": {
+    "ja": "USB-C 充電器 (PD)",
+    "en": "USB-C PD chargers",
+    "zh-Hans": "USB-C PD 充电器",
+    "zh-Hant": "USB-C PD 充電器",
+    "ko": "USB-C PD 충전기"
+   },
+   "name_en": "USB-C PD chargers",
+   "status": "ok",
+   "translated": true,
+   "data_date": "2026-09-30",
+   "item_count": 6,
+   "summary": "只幫手機充電選 20–30W，也要幫筆電充電選 65W 以上。多孔充電器同時插多台裝置時，每孔的輸出會降低。",
+   "best": {
+    "id": "sample:usb-c-charger-4",
+    "reason": "分數最高（評分與評價數綜合起來最可信）",
+    "title": "(サンプル) USB-C 充電器 (PD) D 30W 2ポート GaN PPS",
+    "price": 4460,
+    "buy_url": "https://search.rakuten.co.jp/search/mall/USB-C%20%E5%85%85%E9%9B%BB%E5%99%A8%20PD/"
+   },
+   "links": {
+    "html": "https://bufeks.github.io/LAB/shelf/zh-hant/c/usb-c-charger/",
+    "markdown": "https://bufeks.github.io/LAB/shelf/zh-hant/c/usb-c-charger.md",
+    "json": "https://bufeks.github.io/LAB/shelf/api/v1/zh-hant/c/usb-c-charger.json"
+   }
+  },
+  {
+   "id": "wireless-earphones",
+   "name": "真無線耳機",
+   "names": {
+    "ja": "完全ワイヤレスイヤホン",
+    "en": "True wireless earbuds",
+    "zh-Hans": "真无线耳机",
+    "zh-Hant": "真無線耳機",
+    "ko": "완전 무선 이어폰"
+   },
+   "name_en": "True wireless earbuds",
+   "status": "ok",
+   "translated": true,
+   "data_date": "2026-09-30",
+   "item_count": 6,
+   "summary": "通勤、移動多選有降噪的，常在電腦和手機之間切換則優先多點連線。高音質編碼取決於手機是否支援（iPhone 最高 AAC）。",
+   "best": {
+    "id": "sample:wireless-earphones-4",
+    "reason": "分數最高（評分與評價數綜合起來最可信）",
+    "title": "(サンプル) 完全ワイヤレスイヤホン D aptX マルチポイント IPX7",
+    "price": 10130,
+    "buy_url": "https://search.rakuten.co.jp/search/mall/%E3%83%AF%E3%82%A4%E3%83%A4%E3%83%AC%E3%82%B9%E3%82%A4%E3%83%A4%E3%83%9B%E3%83%B3/"
+   },
+   "links": {
+    "html": "https://bufeks.github.io/LAB/shelf/zh-hant/c/wireless-earphones/",
+    "markdown": "https://bufeks.github.io/LAB/shelf/zh-hant/c/wireless-earphones.md",
+    "json": "https://bufeks.github.io/LAB/shelf/api/v1/zh-hant/c/wireless-earphones.json"
+   }
+  },
+  {
+   "id": "electric-kettle",
+   "name": "快煮壺",
+   "names": {
+    "ja": "電気ケトル",
+    "en": "Electric kettles",
+    "zh-Hans": "电热水壶",
+    "zh-Hant": "快煮壺",
+    "ko": "전기포트"
+   },
+   "name_en": "Electric kettles",
+   "status": "ok",
+   "translated": true,
+   "data_date": "2026-09-30",
+   "item_count": 6,
+   "summary": "一個人約 0.8L，家庭 1.0–1.2L。家中有小孩的，優先選「傾倒防漏」與雙層機身。手沖咖啡選可調溫且細口壺嘴的。",
+   "best": {
+    "id": "sample:electric-kettle-1",
+    "reason": "分數最高（評分與評價數綜合起來最可信）",
+    "title": "(サンプル) 電気ケトル A 0.8L 1250W 転倒湯もれ防止",
+    "price": 7650,
+    "buy_url": "https://search.rakuten.co.jp/search/mall/%E9%9B%BB%E6%B0%97%E3%82%B1%E3%83%88%E3%83%AB/"
+   },
+   "links": {
+    "html": "https://bufeks.github.io/LAB/shelf/zh-hant/c/electric-kettle/",
+    "markdown": "https://bufeks.github.io/LAB/shelf/zh-hant/c/electric-kettle.md",
+    "json": "https://bufeks.github.io/LAB/shelf/api/v1/zh-hant/c/electric-kettle.json"
+   }
+  },
+  {
+   "id": "humidifier",
+   "name": "加濕器",
+   "names": {
+    "ja": "加湿器",
+    "en": "Humidifiers",
+    "zh-Hans": "加湿器",
+    "zh-Hant": "加濕器",
+    "ko": "가습기"
+   },
+   "name_en": "Humidifiers",
+   "status": "ok",
+   "translated": true,
+   "data_date": "2026-09-30",
+   "item_count": 6,
+   "summary": "類型決定一切。重視衛生選加熱式（電費較高），重視電費選汽化式，重視體積和價格選超音波式（前提是勤清潔）。適用坪數請選比房間大一級的。",
+   "best": {
+    "id": "sample:humidifier-6",
+    "reason": "分數最高（評分與評價數綜合起來最可信）",
+    "title": "(サンプル) 加湿器 F 超音波式 アロマ対応 8畳",
+    "price": 10060,
+    "buy_url": "https://search.rakuten.co.jp/search/mall/%E5%8A%A0%E6%B9%BF%E5%99%A8/"
+   },
+   "links": {
+    "html": "https://bufeks.github.io/LAB/shelf/zh-hant/c/humidifier/",
+    "markdown": "https://bufeks.github.io/LAB/shelf/zh-hant/c/humidifier.md",
+    "json": "https://bufeks.github.io/LAB/shelf/api/v1/zh-hant/c/humidifier.json"
+   }
+  },
+  {
+   "id": "electric-toothbrush",
+   "name": "電動牙刷",
+   "names": {
+    "ja": "電動歯ブラシ",
+    "en": "Electric toothbrushes",
+    "zh-Hans": "电动牙刷",
+    "zh-Hant": "電動牙刷",
+    "ko": "전동칫솔"
+   },
+   "name_en": "Electric toothbrushes",
+   "status": "ok",
+   "translated": true,
+   "data_date": "2026-09-30",
+   "item_count": 6,
+   "summary": "長期來看，替換刷頭（約每 3 個月換一次）的花費比主機更多。擔心刷太用力就選有壓力感應的，擔心刷不乾淨就選有計時的。",
+   "best": {
+    "id": "sample:electric-toothbrush-4",
+    "reason": "分數最高（評分與評價數綜合起來最可信）",
+    "title": "(サンプル) 電動歯ブラシ D 音波 5つのモード 過圧",
+    "price": 10130,
+    "buy_url": "https://search.rakuten.co.jp/search/mall/%E9%9B%BB%E5%8B%95%E6%AD%AF%E3%83%96%E3%83%A9%E3%82%B7/"
+   },
+   "links": {
+    "html": "https://bufeks.github.io/LAB/shelf/zh-hant/c/electric-toothbrush/",
+    "markdown": "https://bufeks.github.io/LAB/shelf/zh-hant/c/electric-toothbrush.md",
+    "json": "https://bufeks.github.io/LAB/shelf/api/v1/zh-hant/c/electric-toothbrush.json"
+   }
+  }
+ ],
+ "endpoints": {
+  "category": "https://bufeks.github.io/LAB/shelf/api/v1/zh-hant/c/{id}.json",
+  "items": "https://bufeks.github.io/LAB/shelf/api/v1/zh-hant/items.json",
+  "deals": "https://bufeks.github.io/LAB/shelf/api/v1/zh-hant/deals.json",
+  "openapi": "https://bufeks.github.io/LAB/shelf/openapi.json",
+  "mcp": "https://bufeks.github.io/LAB/shelf/mcp/server.mjs"
+ }
+}

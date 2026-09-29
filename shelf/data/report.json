@@ -1,5 +1,5 @@
 {
- "at": "2026-09-29T18:40:43.694Z",
+ "at": "2026-09-29T18:53:32.711Z",
  "errors": [],
  "warnings": [
   "sample mode: set RAKUTEN_APP_ID / RAKUTEN_ACCESS_KEY secrets to publish real data"
@@ -79,7 +79,21 @@
    "rejected": {},
    "suspicious": 0
   },
-  "llms_txt_bytes": 3871
+  "languages": {
+   "en": {
+    "untranslated": []
+   },
+   "zh-Hans": {
+    "untranslated": []
+   },
+   "zh-Hant": {
+    "untranslated": []
+   },
+   "ko": {
+    "untranslated": []
+   }
+  },
+  "llms_txt_bytes": 4275
  },
  "live": false
 }

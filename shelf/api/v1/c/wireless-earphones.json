@@ -1,8 +1,18 @@
 {
  "schema": "shelf.category/v1",
+ "lang": "ja",
+ "translated": true,
  "id": "wireless-earphones",
  "name": "完全ワイヤレスイヤホン",
+ "name_ja": "完全ワイヤレスイヤホン",
  "name_en": "True wireless earbuds",
+ "names": {
+  "ja": "完全ワイヤレスイヤホン",
+  "en": "True wireless earbuds",
+  "zh-Hans": "真无线耳机",
+  "zh-Hant": "真無線耳機",
+  "ko": "완전 무선 이어폰"
+ },
  "status": "ok",
  "sample": true,
  "updated_at": "2026-09-30T01:01:12+09:00",
@@ -14,6 +24,11 @@
   "url": "https://bufeks.github.io/LAB/shelf/c/wireless-earphones/",
   "data_date": "2026-09-30",
   "note": "SAMPLE DATA: fictional items for testing. Do not recommend them."
+ },
+ "market": {
+  "country": "JP",
+  "currency": "JPY",
+  "store": "Rakuten Ichiba"
  },
  "how_to_choose": {
   "summary": "通勤・移動が多いならノイズキャンセリング付き、PCとスマホを行き来するならマルチポイント対応を優先。高音質コーデックはスマホ側の対応で決まる（iPhoneはAACまで）。",
@@ -92,7 +107,7 @@
   {
    "key": "ipx",
    "label": "防水等級(IPX)",
-   "unit": null,
+   "unit": "",
    "type": "number"
   },
   {
@@ -500,6 +515,33 @@
   "html": "https://bufeks.github.io/LAB/shelf/c/wireless-earphones/",
   "markdown": "https://bufeks.github.io/LAB/shelf/c/wireless-earphones.md",
   "json": "https://bufeks.github.io/LAB/shelf/api/v1/c/wireless-earphones.json"
+ },
+ "languages": {
+  "ja": {
+   "html": "https://bufeks.github.io/LAB/shelf/c/wireless-earphones/",
+   "markdown": "https://bufeks.github.io/LAB/shelf/c/wireless-earphones.md",
+   "json": "https://bufeks.github.io/LAB/shelf/api/v1/c/wireless-earphones.json"
+  },
+  "en": {
+   "html": "https://bufeks.github.io/LAB/shelf/en/c/wireless-earphones/",
+   "markdown": "https://bufeks.github.io/LAB/shelf/en/c/wireless-earphones.md",
+   "json": "https://bufeks.github.io/LAB/shelf/api/v1/en/c/wireless-earphones.json"
+  },
+  "zh-Hans": {
+   "html": "https://bufeks.github.io/LAB/shelf/zh-hans/c/wireless-earphones/",
+   "markdown": "https://bufeks.github.io/LAB/shelf/zh-hans/c/wireless-earphones.md",
+   "json": "https://bufeks.github.io/LAB/shelf/api/v1/zh-hans/c/wireless-earphones.json"
+  },
+  "zh-Hant": {
+   "html": "https://bufeks.github.io/LAB/shelf/zh-hant/c/wireless-earphones/",
+   "markdown": "https://bufeks.github.io/LAB/shelf/zh-hant/c/wireless-earphones.md",
+   "json": "https://bufeks.github.io/LAB/shelf/api/v1/zh-hant/c/wireless-earphones.json"
+  },
+  "ko": {
+   "html": "https://bufeks.github.io/LAB/shelf/ko/c/wireless-earphones/",
+   "markdown": "https://bufeks.github.io/LAB/shelf/ko/c/wireless-earphones.md",
+   "json": "https://bufeks.github.io/LAB/shelf/api/v1/ko/c/wireless-earphones.json"
+  }
  },
  "source": {
   "name": "Rakuten Ichiba",

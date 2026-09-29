@@ -12,6 +12,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { LOCALES, SOURCE } from './i18n/index.mjs';
 
 const HERE = path.dirname(fileURLToPath(import.meta.url));
 const SHELF = path.join(HERE, '..');
@@ -23,6 +24,8 @@ const DIST = path.join(ROOT, 'edge-dist');
 export const GENERATED = [
   'index.html', '404.html', 'robots.txt', 'llms.txt', 'llms-full.txt', 'openapi.json', 'sitemap.xml',
   'about', 'c', 'api',
+  // Each language's pages (/en/, /zh-hans/, ...).
+  ...LOCALES.filter((L) => L !== SOURCE).map((L) => L.slug),
 ];
 // Hand-written files, always taken from the repository.
 export const STATIC = ['assets', 'mcp/server.mjs'];
@@ -52,15 +55,20 @@ export function edgeConfig(env = process.env) {
   };
 }
 
-if (process.argv[1] === fileURLToPath(import.meta.url)) {
-  const index = JSON.parse(fs.readFileSync(path.join(OUT, 'api/v1/index.json'), 'utf8'));
+// Copies the public files of an edge build in `out` into `dist`.
+export function assemble(out = OUT, dist = DIST) {
+  const index = JSON.parse(fs.readFileSync(path.join(out, 'api/v1/index.json'), 'utf8'));
   if (!index.endpoints.mcp_remote) throw new Error('build first with SHELF_EDGE=1');
-  fs.rmSync(DIST, { recursive: true, force: true });
-  for (const [dir, rel] of [...GENERATED.map((r) => [OUT, r]), ...STATIC.map((r) => [SHELF, r])]) {
+  fs.rmSync(dist, { recursive: true, force: true });
+  for (const [dir, rel] of [...GENERATED.map((r) => [out, r]), ...STATIC.map((r) => [SHELF, r])]) {
     const from = path.join(dir, rel);
     if (!fs.existsSync(from)) throw new Error(`missing ${rel}; run build.mjs first`);
-    fs.cpSync(from, path.join(DIST, rel), { recursive: true });
+    fs.cpSync(from, path.join(dist, rel), { recursive: true });
   }
+}
+
+if (process.argv[1] === fileURLToPath(import.meta.url)) {
+  assemble();
   const config = edgeConfig();
   fs.writeFileSync(path.join(ROOT, 'wrangler.gen.json'), JSON.stringify(config, null, 2) + '\n');
   console.log(`edge-dist ready; ${config.routes ? `route ${config.routes[0].pattern}` : 'workers.dev only'}`);

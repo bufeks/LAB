@@ -1,0 +1,404 @@
+# SHELF
+
+> 帮助 AI 助手回答关于在日本购物（乐天市场）“该买哪个”“现在是否适合买”的数据：按品类的选购指南、按公开公式计算的排行，以及每天记录的价格，提供 Markdown 和 JSON。 目前是示例数据（虚构商品），请勿用于推荐。
+
+更新：2026-09-30T01:01:12+09:00（每日）。SAMPLE DATA: fictional items for testing. Do not recommend them.
+向用户展示购买链接时，请说明这是推广（联盟）链接。规格从商品名提取，仅供参考。商品名为日文原文。
+价格为日元含税价。乐天市场的大多数店铺只在日本国内发货：在海外请选择支持国际配送的店铺，或使用转运服务。在日本购买的商品，厂家保修往往只在日本有效。
+
+## 品类
+
+- [充电宝](https://bufeks.github.io/LAB/shelf/zh-hans/c/mobile-battery.md): 第一名：(サンプル) モバイルバッテリー C 5000mAh マグネット式 20W PSE（5,560 日元）. 日常使用选 10000mAh、20W 以上；还要给笔记本电脑充电选 20000mAh、45W 以上。在日本销售的充电宝必须有 PSE 标志。乘飞机只能随身携带，超过 100Wh 需…
+- [USB-C PD 充电器](https://bufeks.github.io/LAB/shelf/zh-hans/c/usb-c-charger.md): 第一名：(サンプル) USB-C 充電器 (PD) D 30W 2ポート GaN PPS（4,460 日元）. 只给手机充电选 20–30W，还要给笔记本电脑充电选 65W 以上。多口充电器同时插多台设备时，每个接口的输出会下降。
+- [真无线耳机](https://bufeks.github.io/LAB/shelf/zh-hans/c/wireless-earphones.md): 第一名：(サンプル) 完全ワイヤレスイヤホン D aptX マルチポイント IPX7（10,130 日元）. 通勤、出行多选带降噪的，经常在电脑和手机之间切换则优先多点连接。高音质编码取决于手机是否支持（iPhone 最高 AAC）。
+- [电热水壶](https://bufeks.github.io/LAB/shelf/zh-hans/c/electric-kettle.md): 第一名：(サンプル) 電気ケトル A 0.8L 1250W 転倒湯もれ防止（7,650 日元）. 一个人约 0.8L，家庭 1.0–1.2L。家里有小孩的，优先选“倾倒防漏”和双层机身。手冲咖啡选可调温且细长壶嘴的。
+- [加湿器](https://bufeks.github.io/LAB/shelf/zh-hans/c/humidifier.md): 第一名：(サンプル) 加湿器 F 超音波式 アロマ対応 8畳（10,060 日元）. 类型决定一切。重视卫生选加热式（电费较高），重视电费选蒸发式，重视体积和价格选超声波式（前提是勤清洁）。适用面积请选比房间大一档的。
+- [电动牙刷](https://bufeks.github.io/LAB/shelf/zh-hans/c/electric-toothbrush.md): 第一名：(サンプル) 電動歯ブラシ D 音波 5つのモード 過圧（10,130 日元）. 长期来看，替换刷头（约每 3 个月换一次）的花费比主机更多。担心刷得太用力就选带压力感应的，担心刷不干净就选带计时的。
+
+## API
+
+- [index.json](https://bufeks.github.io/LAB/shelf/api/v1/zh-hans/index.json): 品类列表
+- [items.json](https://bufeks.github.io/LAB/shelf/api/v1/zh-hans/items.json): 全部商品（按预算和规格筛选用）
+- [deals.json](https://bufeks.github.io/LAB/shelf/api/v1/zh-hans/deals.json): 低于近期中位价的商品
+- [openapi.json](https://bufeks.github.io/LAB/shelf/openapi.json): OpenAPI 3.1 定义
+- [MCP server](https://bufeks.github.io/LAB/shelf/mcp/server.mjs): 无依赖的 stdio MCP 服务器 (tools: list_categories, recommend, price_outlook, search_products, check_price; lang = ja | en | zh-Hans | zh-Hant | ko)
+
+## 其他语言
+
+- [日本語](https://bufeks.github.io/LAB/shelf/llms.txt)
+- [English](https://bufeks.github.io/LAB/shelf/en/llms.txt)
+- [繁體中文](https://bufeks.github.io/LAB/shelf/zh-hant/llms.txt)
+- [한국어](https://bufeks.github.io/LAB/shelf/ko/llms.txt)
+
+## Optional
+
+- [llms-full.txt](https://bufeks.github.io/LAB/shelf/zh-hans/llms-full.txt): 所有品类正文合集
+- [代理使用说明（English）](https://bufeks.github.io/LAB/shelf/en/about/)
+
+
+---
+
+# 充电宝：怎么选与推荐 — SHELF
+
+> SAMPLE DATA: fictional items for testing. Do not recommend them.
+> 数据日期：2026-09-30（每日自动更新）/ 状态：ok / 来源：日本乐天市场（Supported by Rakuten Developers）
+
+**这是示例数据。商品均为虚构，请勿推荐。**
+
+> **从日本以外购买**: 价格为日元含税价。乐天市场的大多数店铺只在日本国内发货：在海外请选择支持国际配送的店铺，或使用转运服务。在日本购买的商品，厂家保修往往只在日本有效。
+
+## 结论
+
+- **综合第一**: (サンプル) モバイルバッテリー C 5000mAh マグネット式 20W PSE — 5,560 日元 ★4.81（1,671 条评价）, 价格判断: 平时价格 → [购买链接](https://search.rakuten.co.jp/search/mall/%E3%83%A2%E3%83%90%E3%82%A4%E3%83%AB%E3%83%90%E3%83%83%E3%83%86%E3%83%AA%E3%83%BC/)
+- **性价比（高评分中最便宜）**: (サンプル) モバイルバッテリー B 20000mAh 65W PD ノートPC対応 PSE — 2,860 日元 ★4.29（2,853 条评价）, 价格判断: 平时价格 → [购买链接](https://search.rakuten.co.jp/search/mall/%E3%83%A2%E3%83%90%E3%82%A4%E3%83%AB%E3%83%90%E3%83%83%E3%83%86%E3%83%AA%E3%83%BC/)
+- **降价中**: (サンプル) モバイルバッテリー D 10000mAh ケーブル内蔵 20W PSE — 4,690 日元 ★4.22（2,332 条评价）, 价格判断: 观测 31 天内最低价 → [购买链接](https://search.rakuten.co.jp/search/mall/%E3%83%A2%E3%83%90%E3%82%A4%E3%83%AB%E3%83%90%E3%83%83%E3%83%86%E3%83%AA%E3%83%BC/)
+- **现在是否适合买（整个品类）**: 排名靠前的商品中 33% 比平时便宜。现在买是不错的时机。（已观测 31 天，尚未反映季节变化）
+
+日常使用选 10000mAh、20W 以上；还要给笔记本电脑充电选 20000mAh、45W 以上。在日本销售的充电宝必须有 PSE 标志。乘飞机只能随身携带，超过 100Wh 需航空公司批准，很多航空公司禁止在机上使用或充电。
+
+## 怎么选（截至 2026-09）
+
+- **容量（mAh）**: 由于电压转换损耗，标称容量中实际能充进手机的约为 6–7 成。10000mAh 大约能给一般手机充 1.5–2 次。
+- **输出（W）**: iPhone 快充需要 USB PD 20W 以上。笔记本电脑需要接近原装适配器的功率（45–65W 以上）。
+- **重量**: 10000mAh 级约 180–250g，20000mAh 级约 300–450g。要随身带的话，先按重量筛选，再看容量。
+- **PSE 标志**: 自 2019 年 2 月起，没有 PSE 标志的充电宝不得在日本销售（《电气用品安全法》）。避免选择未标注的商品。
+- **乘飞机**: 不可托运，只能随身携带。一般规定：100Wh 以下无需批准，超过 100Wh 且不超过 160Wh 需航空公司批准（通常最多 2 个），超过 160Wh 禁止携带。2025 年以来，越来越多航空公司禁止在机上使用或充电，或限制携带数量；日本国内航班要求放在身边而不是行李架上。请查看机身上的 Wh 标注（20000mAh 约 74Wh，27000mAh 级在 100Wh 左右，需确认），并以所乘航空公司的最新规定为准。
+
+### 注意事项
+
+- 价格远低于市场的大容量产品，容量标注可能虚高。
+- 出现鼓包、发热或异味时立即停用，交给当地政府或 JBRC 合作店回收（不要当普通垃圾扔）。
+- **在日本以外使用**: 在任何地方都能用（USB）。带回国时必须随身携带登机，请确认机身上的 Wh 标注。
+
+## 排行
+
+| 排名 | 商品 | 价格 | 评分 | 价格判断 | 规格（从商品名提取） | 购买 |
+| --- | --- | --- | --- | --- | --- | --- |
+| 1 | (サンプル) モバイルバッテリー C 5000mAh マグネット式 20W PSE (サンプルショップ) | 5,560 日元 含运费 | ★4.81（1,671 条评价） | 平时价格（中位价 5,280 日元，已观测 31 天） | 容量 5000mAh、最大输出 20W、PSE 标志、磁吸式、推算能量（按 3.85V） 19.25Wh、可随身携带登机（参考，95Wh 以下） | [乐天](https://search.rakuten.co.jp/search/mall/%E3%83%A2%E3%83%90%E3%82%A4%E3%83%AB%E3%83%90%E3%83%83%E3%83%86%E3%83%AA%E3%83%BC/) |
+| 2 | (サンプル) モバイルバッテリー E 27000mAh 140W PD PSE (サンプルショップ) | 6,050 日元 含运费 | ★4.43（995 条评价） | 平时价格（中位价 6,030 日元，已观测 31 天） | 容量 27000mAh、最大输出 140W、PSE 标志、推算能量（按 3.85V） 103.95Wh、需航空公司批准（100–160Wh） | [乐天](https://search.rakuten.co.jp/search/mall/%E3%83%A2%E3%83%90%E3%82%A4%E3%83%AB%E3%83%90%E3%83%83%E3%83%86%E3%83%AA%E3%83%BC/) |
+| 3 | (サンプル) モバイルバッテリー B 20000mAh 65W PD ノートPC対応 PSE (サンプルショップ) | 2,860 日元 运费另计 | ★4.29（2,853 条评价） | 平时价格（中位价 2,850 日元，已观测 31 天） | 容量 20000mAh、最大输出 65W、PSE 标志、推算能量（按 3.85V） 77Wh、可随身携带登机（参考，95Wh 以下） | [乐天](https://search.rakuten.co.jp/search/mall/%E3%83%A2%E3%83%90%E3%82%A4%E3%83%AB%E3%83%90%E3%83%83%E3%83%86%E3%83%AA%E3%83%BC/) |
+| 4 | (サンプル) モバイルバッテリー F 10000mAh 30W 軽量 PSE (サンプルショップ) | 6,440 日元 运费另计 | ★4.24（2,519 条评价） | 平时价格（中位价 6,120 日元，已观测 31 天） | 容量 10000mAh、最大输出 30W、PSE 标志、推算能量（按 3.85V） 38.5Wh、可随身携带登机（参考，95Wh 以下） | [乐天](https://search.rakuten.co.jp/search/mall/%E3%83%A2%E3%83%90%E3%82%A4%E3%83%AB%E3%83%90%E3%83%83%E3%83%86%E3%83%AA%E3%83%BC/) |
+| 5 | (サンプル) モバイルバッテリー D 10000mAh ケーブル内蔵 20W PSE (サンプルショップ) | 4,690 日元 运费另计 | ★4.22（2,332 条评价） | 观测 31 天内最低价（中位价 5,350 日元，已观测 31 天） | 容量 10000mAh、最大输出 20W、PSE 标志、自带线、推算能量（按 3.85V） 38.5Wh、可随身携带登机（参考，95Wh 以下） | [乐天](https://search.rakuten.co.jp/search/mall/%E3%83%A2%E3%83%90%E3%82%A4%E3%83%AB%E3%83%90%E3%83%83%E3%83%86%E3%83%AA%E3%83%BC/) |
+| 6 | (サンプル) モバイルバッテリー A 10000mAh 22.5W PD PSE適合 薄型 (サンプルショップ) | 6,850 日元 含运费 | ★4.20（965 条评价） | 观测 31 天内最低价（中位价 7,810 日元，已观测 31 天） | 容量 10000mAh、最大输出 22.5W、PSE 标志、推算能量（按 3.85V） 38.5Wh、可随身携带登机（参考，95Wh 以下） | [乐天](https://search.rakuten.co.jp/search/mall/%E3%83%A2%E3%83%90%E3%82%A4%E3%83%AB%E3%83%90%E3%83%83%E3%83%86%E3%83%AA%E3%83%BC/) |
+
+## 排行规则
+
+每个品类按评价数量从乐天获取最多 60 件商品，按排除词、价格区间和最低评价数筛选。不同店铺出售的同一商品（型号相同，或规格相同且商品名几乎一致）合并为评分最高的一件，其他店铺的价格保留在 other_offers 中。其余按“贝叶斯平均评分”排序。
+
+- 公式: `score = (C × m + n × r) / (C + n)  … r = 该商品平均评分，n = 评价数，m = 所有候选商品的平均评分，C = 50`
+- 原因: 让有数千条评价的 4.4★ 排在只有几条评价的 5★ 之前。评价越少，评分越被拉向整体平均。
+- 价格判断: 每天记录价格，只与运费条件相同的日子比较。观测不足 7 天为 insufficient_data；为观测期内最低价且比中位价低 3% 以上为 lowest_observed；不高于中位价的 90% 为 below_usual；不低于 110% 为 above_usual；其余为 usual。观测窗口最长 90 天，天数见 window_days。
+- 注意: 规格是从商品名中机械提取的参考值，可能有误。购买前请在商品页面确认。
+
+## 机器可读数据
+
+- JSON: https://bufeks.github.io/LAB/shelf/api/v1/zh-hans/c/mobile-battery.json
+- 全部品类: https://bufeks.github.io/LAB/shelf/api/v1/zh-hans/index.json
+- OpenAPI: https://bufeks.github.io/LAB/shelf/openapi.json / MCP 服务器: https://bufeks.github.io/LAB/shelf/mcp/server.mjs
+- 语言: [日本語](https://bufeks.github.io/LAB/shelf/c/mobile-battery.md) · [English](https://bufeks.github.io/LAB/shelf/en/c/mobile-battery.md) · [简体中文](https://bufeks.github.io/LAB/shelf/zh-hans/c/mobile-battery.md) · [繁體中文](https://bufeks.github.io/LAB/shelf/zh-hant/c/mobile-battery.md) · [한국어](https://bufeks.github.io/LAB/shelf/ko/c/mobile-battery.md)
+
+
+---
+
+# USB-C PD 充电器：怎么选与推荐 — SHELF
+
+> SAMPLE DATA: fictional items for testing. Do not recommend them.
+> 数据日期：2026-09-30（每日自动更新）/ 状态：ok / 来源：日本乐天市场（Supported by Rakuten Developers）
+
+**这是示例数据。商品均为虚构，请勿推荐。**
+
+> **从日本以外购买**: 价格为日元含税价。乐天市场的大多数店铺只在日本国内发货：在海外请选择支持国际配送的店铺，或使用转运服务。在日本购买的商品，厂家保修往往只在日本有效。
+
+## 结论
+
+- **综合第一**: (サンプル) USB-C 充電器 (PD) D 30W 2ポート GaN PPS — 4,460 日元 ★4.83（2,742 条评价）, 价格判断: 观测 31 天内最低价 → [购买链接](https://search.rakuten.co.jp/search/mall/USB-C%20%E5%85%85%E9%9B%BB%E5%99%A8%20PD/)
+- **性价比（高评分中最便宜）**: (サンプル) USB-C 充電器 (PD) F 140W 3ポート GaN — 3,020 日元 ★4.73（1,264 条评价）, 价格判断: 平时价格 → [购买链接](https://search.rakuten.co.jp/search/mall/USB-C%20%E5%85%85%E9%9B%BB%E5%99%A8%20PD/)
+- **降价中**: (サンプル) USB-C 充電器 (PD) A 65W 3ポート GaN 折りたたみ PPS — 1,620 日元 ★3.89（1,335 条评价）, 价格判断: 观测 31 天内最低价 → [购买链接](https://search.rakuten.co.jp/search/mall/USB-C%20%E5%85%85%E9%9B%BB%E5%99%A8%20PD/)
+- **现在是否适合买（整个品类）**: 排名靠前的商品中 33% 比平时便宜。现在买是不错的时机。（已观测 31 天，尚未反映季节变化）
+
+只给手机充电选 20–30W，还要给笔记本电脑充电选 65W 以上。多口充电器同时插多台设备时，每个接口的输出会下降。
+
+## 怎么选
+
+- **输出（W）**: iPhone 快充需要 20W 以上。笔记本电脑请选与原装适配器相同或更高的功率（例如 65W、96W）。
+- **多口功率分配**: “总计 65W”在同时充两台设备时可能分成 45W+20W。要同时给电脑和手机充电，请确认分配表。
+- **PPS**: Galaxy 等手机的“超级快充”需要支持 USB PD PPS 的充电器。
+- **GaN**: 采用氮化镓的充电器在相同输出下更小更轻，经常携带的话值得优先考虑。
+- **数据线**: 超过 60W 的供电需要支持 5A（带 e-marker 芯片）的 USB-C 线。如果线只支持 3A，即使充电器功率高也只能到 60W。
+
+### 注意事项
+
+- 没有 PSE 标志的充电器不得在日本销售，请确认标注。
+- 只比较总输出，可能忽略单个接口的最大输出不够。
+- **在日本以外使用**: 在日本销售的 USB-C 充电器大多支持 100–240V 输入，配合转换插头可在海外使用（日本为 A 型两扁脚插头）。请确认标签上有“100-240V”。
+
+## 排行
+
+| 排名 | 商品 | 价格 | 评分 | 价格判断 | 规格（从商品名提取） | 购买 |
+| --- | --- | --- | --- | --- | --- | --- |
+| 1 | (サンプル) USB-C 充電器 (PD) D 30W 2ポート GaN PPS (サンプルショップ) | 4,460 日元 运费另计 | ★4.83（2,742 条评价） | 观测 31 天内最低价（中位价 5,090 日元，已观测 31 天） | 最大输出 30W、接口数 2个、GaN（氮化镓）、支持 PPS | [乐天](https://search.rakuten.co.jp/search/mall/USB-C%20%E5%85%85%E9%9B%BB%E5%99%A8%20PD/) |
+| 2 | (サンプル) USB-C 充電器 (PD) F 140W 3ポート GaN (サンプルショップ) | 3,020 日元 运费另计 | ★4.73（1,264 条评价） | 平时价格（中位价 2,870 日元，已观测 31 天） | 最大输出 140W、接口数 3个、GaN（氮化镓） | [乐天](https://search.rakuten.co.jp/search/mall/USB-C%20%E5%85%85%E9%9B%BB%E5%99%A8%20PD/) |
+| 3 | (サンプル) USB-C 充電器 (PD) C 100W 4ポート GaN (サンプルショップ) | 5,180 日元 含运费 | ★4.52（694 条评价） | 平时价格（中位价 4,920 日元，已观测 31 天） | 最大输出 100W、接口数 4个、GaN（氮化镓） | [乐天](https://search.rakuten.co.jp/search/mall/USB-C%20%E5%85%85%E9%9B%BB%E5%99%A8%20PD/) |
+| 4 | (サンプル) USB-C 充電器 (PD) B 20W 1ポート 小型 (サンプルショップ) | 4,590 日元 运费另计 | ★4.35（1,402 条评价） | 平时价格（中位价 4,570 日元，已观测 31 天） | 最大输出 20W、接口数 1个 | [乐天](https://search.rakuten.co.jp/search/mall/USB-C%20%E5%85%85%E9%9B%BB%E5%99%A8%20PD/) |
+| 5 | (サンプル) USB-C 充電器 (PD) E 45W 1ポート GaN PPS 折りたたみ (サンプルショップ) | 5,660 日元 含运费 | ★3.92（372 条评价） | 平时价格（中位价 5,640 日元，已观测 31 天） | 最大输出 45W、接口数 1个、GaN（氮化镓）、支持 PPS、可折叠插头 | [乐天](https://search.rakuten.co.jp/search/mall/USB-C%20%E5%85%85%E9%9B%BB%E5%99%A8%20PD/) |
+| 6 | (サンプル) USB-C 充電器 (PD) A 65W 3ポート GaN 折りたたみ PPS (サンプルショップ) | 1,620 日元 含运费 | ★3.89（1,335 条评价） | 观测 31 天内最低价（中位价 1,850 日元，已观测 31 天） | 最大输出 65W、接口数 3个、GaN（氮化镓）、支持 PPS、可折叠插头 | [乐天](https://search.rakuten.co.jp/search/mall/USB-C%20%E5%85%85%E9%9B%BB%E5%99%A8%20PD/) |
+
+## 排行规则
+
+每个品类按评价数量从乐天获取最多 60 件商品，按排除词、价格区间和最低评价数筛选。不同店铺出售的同一商品（型号相同，或规格相同且商品名几乎一致）合并为评分最高的一件，其他店铺的价格保留在 other_offers 中。其余按“贝叶斯平均评分”排序。
+
+- 公式: `score = (C × m + n × r) / (C + n)  … r = 该商品平均评分，n = 评价数，m = 所有候选商品的平均评分，C = 50`
+- 原因: 让有数千条评价的 4.4★ 排在只有几条评价的 5★ 之前。评价越少，评分越被拉向整体平均。
+- 价格判断: 每天记录价格，只与运费条件相同的日子比较。观测不足 7 天为 insufficient_data；为观测期内最低价且比中位价低 3% 以上为 lowest_observed；不高于中位价的 90% 为 below_usual；不低于 110% 为 above_usual；其余为 usual。观测窗口最长 90 天，天数见 window_days。
+- 注意: 规格是从商品名中机械提取的参考值，可能有误。购买前请在商品页面确认。
+
+## 机器可读数据
+
+- JSON: https://bufeks.github.io/LAB/shelf/api/v1/zh-hans/c/usb-c-charger.json
+- 全部品类: https://bufeks.github.io/LAB/shelf/api/v1/zh-hans/index.json
+- OpenAPI: https://bufeks.github.io/LAB/shelf/openapi.json / MCP 服务器: https://bufeks.github.io/LAB/shelf/mcp/server.mjs
+- 语言: [日本語](https://bufeks.github.io/LAB/shelf/c/usb-c-charger.md) · [English](https://bufeks.github.io/LAB/shelf/en/c/usb-c-charger.md) · [简体中文](https://bufeks.github.io/LAB/shelf/zh-hans/c/usb-c-charger.md) · [繁體中文](https://bufeks.github.io/LAB/shelf/zh-hant/c/usb-c-charger.md) · [한국어](https://bufeks.github.io/LAB/shelf/ko/c/usb-c-charger.md)
+
+
+---
+
+# 真无线耳机：怎么选与推荐 — SHELF
+
+> SAMPLE DATA: fictional items for testing. Do not recommend them.
+> 数据日期：2026-09-30（每日自动更新）/ 状态：ok / 来源：日本乐天市场（Supported by Rakuten Developers）
+
+**这是示例数据。商品均为虚构，请勿推荐。**
+
+> **从日本以外购买**: 价格为日元含税价。乐天市场的大多数店铺只在日本国内发货：在海外请选择支持国际配送的店铺，或使用转运服务。在日本购买的商品，厂家保修往往只在日本有效。
+
+## 结论
+
+- **综合第一**: (サンプル) 完全ワイヤレスイヤホン D aptX マルチポイント IPX7 — 10,130 日元 ★4.68（2,990 条评价）, 价格判断: 观测 31 天内最低价 → [购买链接](https://search.rakuten.co.jp/search/mall/%E3%83%AF%E3%82%A4%E3%83%A4%E3%83%AC%E3%82%B9%E3%82%A4%E3%83%A4%E3%83%9B%E3%83%B3/)
+- **性价比（高评分中最便宜）**: (サンプル) 完全ワイヤレスイヤホン F マルチポイント LDAC IPX4 — 9,190 日元 ★4.58（1,287 条评价）, 价格判断: 平时价格 → [购买链接](https://search.rakuten.co.jp/search/mall/%E3%83%AF%E3%82%A4%E3%83%A4%E3%83%AC%E3%82%B9%E3%82%A4%E3%83%A4%E3%83%9B%E3%83%B3/)
+- **降价中**: (サンプル) 完全ワイヤレスイヤホン D aptX マルチポイント IPX7 — 10,130 日元 ★4.68（2,990 条评价）, 价格判断: 观测 31 天内最低价 → [购买链接](https://search.rakuten.co.jp/search/mall/%E3%83%AF%E3%82%A4%E3%83%A4%E3%83%AC%E3%82%B9%E3%82%A4%E3%83%A4%E3%83%9B%E3%83%B3/)
+- **现在是否适合买（整个品类）**: 排名靠前的商品中 33% 比平时便宜。现在买是不错的时机。（已观测 31 天，尚未反映季节变化）
+
+通勤、出行多选带降噪的，经常在电脑和手机之间切换则优先多点连接。高音质编码取决于手机是否支持（iPhone 最高 AAC）。
+
+## 怎么选
+
+- **主动降噪**: 在电车、飞机和咖啡馆里效果最明显。不同型号的降噪强度差别很大，选评价数多的型号更稳妥。
+- **编码格式**: iPhone 不支持 LDAC/aptX，最高为 AAC。支持 LDAC/aptX 的安卓手机，搭配支持相同编码的耳机音质更好。
+- **多点连接**: 可同时连接两台设备，例如在电脑上开会时直接接听手机来电，无需重新配对。
+- **防水**: IPX4 以上可防汗水和小雨，运动用建议 IPX5 以上。
+- **续航**: “最长 N 小时”通常包含充电盒的补充电量，请另外确认耳机单次连续播放时间。
+
+### 注意事项
+
+- 佩戴感和隔音效果很大程度取决于耳朵形状，请确认是否附带多种尺寸的耳塞。
+- **在日本以外使用**: 在任何地方都能用，通过 USB 充电。
+
+## 排行
+
+| 排名 | 商品 | 价格 | 评分 | 价格判断 | 规格（从商品名提取） | 购买 |
+| --- | --- | --- | --- | --- | --- | --- |
+| 1 | (サンプル) 完全ワイヤレスイヤホン D aptX マルチポイント IPX7 (サンプルショップ) | 10,130 日元 运费另计 | ★4.68（2,990 条评价） | 观测 31 天内最低价（中位价 11,560 日元，已观测 31 天） | aptX、多点连接、防水等级（IPX） 7 | [乐天](https://search.rakuten.co.jp/search/mall/%E3%83%AF%E3%82%A4%E3%83%A4%E3%83%AC%E3%82%B9%E3%82%A4%E3%83%A4%E3%83%9B%E3%83%B3/) |
+| 2 | (サンプル) 完全ワイヤレスイヤホン E ノイズキャンセリング 最大50時間 (サンプルショップ) | 10,570 日元 含运费 | ★4.77（67 条评价） | 平时价格（中位价 10,540 日元，已观测 31 天） | 主动降噪、最长播放时间（可能含充电盒） 50小时 | [乐天](https://search.rakuten.co.jp/search/mall/%E3%83%AF%E3%82%A4%E3%83%A4%E3%83%AC%E3%82%B9%E3%82%A4%E3%83%A4%E3%83%9B%E3%83%B3/) |
+| 3 | (サンプル) 完全ワイヤレスイヤホン F マルチポイント LDAC IPX4 (サンプルショップ) | 9,190 日元 运费另计 | ★4.58（1,287 条评价） | 平时价格（中位价 8,730 日元，已观测 31 天） | LDAC、多点连接、防水等级（IPX） 4 | [乐天](https://search.rakuten.co.jp/search/mall/%E3%83%AF%E3%82%A4%E3%83%A4%E3%83%AC%E3%82%B9%E3%82%A4%E3%83%A4%E3%83%9B%E3%83%B3/) |
+| 4 | (サンプル) 完全ワイヤレスイヤホン C 軽量 IPX4 最大30時間 (サンプルショップ) | 6,790 日元 含运费 | ★4.50（2,071 条评价） | 平时价格（中位价 6,450 日元，已观测 31 天） | 防水等级（IPX） 4、最长播放时间（可能含充电盒） 30小时 | [乐天](https://search.rakuten.co.jp/search/mall/%E3%83%AF%E3%82%A4%E3%83%A4%E3%83%AC%E3%82%B9%E3%82%A4%E3%83%A4%E3%83%9B%E3%83%B3/) |
+| 5 | (サンプル) 完全ワイヤレスイヤホン B LDAC ノイズキャンセリング IPX5 (サンプルショップ) | 11,330 日元 运费另计 | ★4.22（2,527 条评价） | 平时价格（中位价 11,280 日元，已观测 31 天） | 主动降噪、LDAC、防水等级（IPX） 5 | [乐天](https://search.rakuten.co.jp/search/mall/%E3%83%AF%E3%82%A4%E3%83%A4%E3%83%AC%E3%82%B9%E3%82%A4%E3%83%A4%E3%83%9B%E3%83%B3/) |
+| 6 | (サンプル) 完全ワイヤレスイヤホン A ノイズキャンセリング マルチポイント IPX4 最大40時間 (サンプルショップ) | 5,280 日元 含运费 | ★4.11（3,318 条评价） | 观测 31 天内最低价（中位价 6,020 日元，已观测 31 天） | 主动降噪、多点连接、防水等级（IPX） 4、最长播放时间（可能含充电盒） 40小时 | [乐天](https://search.rakuten.co.jp/search/mall/%E3%83%AF%E3%82%A4%E3%83%A4%E3%83%AC%E3%82%B9%E3%82%A4%E3%83%A4%E3%83%9B%E3%83%B3/) |
+
+## 排行规则
+
+每个品类按评价数量从乐天获取最多 60 件商品，按排除词、价格区间和最低评价数筛选。不同店铺出售的同一商品（型号相同，或规格相同且商品名几乎一致）合并为评分最高的一件，其他店铺的价格保留在 other_offers 中。其余按“贝叶斯平均评分”排序。
+
+- 公式: `score = (C × m + n × r) / (C + n)  … r = 该商品平均评分，n = 评价数，m = 所有候选商品的平均评分，C = 50`
+- 原因: 让有数千条评价的 4.4★ 排在只有几条评价的 5★ 之前。评价越少，评分越被拉向整体平均。
+- 价格判断: 每天记录价格，只与运费条件相同的日子比较。观测不足 7 天为 insufficient_data；为观测期内最低价且比中位价低 3% 以上为 lowest_observed；不高于中位价的 90% 为 below_usual；不低于 110% 为 above_usual；其余为 usual。观测窗口最长 90 天，天数见 window_days。
+- 注意: 规格是从商品名中机械提取的参考值，可能有误。购买前请在商品页面确认。
+
+## 机器可读数据
+
+- JSON: https://bufeks.github.io/LAB/shelf/api/v1/zh-hans/c/wireless-earphones.json
+- 全部品类: https://bufeks.github.io/LAB/shelf/api/v1/zh-hans/index.json
+- OpenAPI: https://bufeks.github.io/LAB/shelf/openapi.json / MCP 服务器: https://bufeks.github.io/LAB/shelf/mcp/server.mjs
+- 语言: [日本語](https://bufeks.github.io/LAB/shelf/c/wireless-earphones.md) · [English](https://bufeks.github.io/LAB/shelf/en/c/wireless-earphones.md) · [简体中文](https://bufeks.github.io/LAB/shelf/zh-hans/c/wireless-earphones.md) · [繁體中文](https://bufeks.github.io/LAB/shelf/zh-hant/c/wireless-earphones.md) · [한국어](https://bufeks.github.io/LAB/shelf/ko/c/wireless-earphones.md)
+
+
+---
+
+# 电热水壶：怎么选与推荐 — SHELF
+
+> SAMPLE DATA: fictional items for testing. Do not recommend them.
+> 数据日期：2026-09-30（每日自动更新）/ 状态：ok / 来源：日本乐天市场（Supported by Rakuten Developers）
+
+**这是示例数据。商品均为虚构，请勿推荐。**
+
+> **从日本以外购买**: 价格为日元含税价。乐天市场的大多数店铺只在日本国内发货：在海外请选择支持国际配送的店铺，或使用转运服务。在日本购买的商品，厂家保修往往只在日本有效。
+
+## 结论
+
+- **综合第一**: (サンプル) 電気ケトル A 0.8L 1250W 転倒湯もれ防止 — 7,650 日元 ★4.73（974 条评价）, 价格判断: 观测 31 天内最低价 → [购买链接](https://search.rakuten.co.jp/search/mall/%E9%9B%BB%E6%B0%97%E3%82%B1%E3%83%88%E3%83%AB/)
+- **性价比（高评分中最便宜）**: (サンプル) 電気ケトル F 0.8L 細口 ドリップ 900W — 4,340 日元 ★4.42（1,568 条评价）, 价格判断: 平时价格 → [购买链接](https://search.rakuten.co.jp/search/mall/%E9%9B%BB%E6%B0%97%E3%82%B1%E3%83%88%E3%83%AB/)
+- **降价中**: (サンプル) 電気ケトル D 1.2L 1300W 転倒湯もれ防止 二重構造 — 5,700 日元 ★4.31（1,522 条评价）, 价格判断: 观测 31 天内最低价 → [购买链接](https://search.rakuten.co.jp/search/mall/%E9%9B%BB%E6%B0%97%E3%82%B1%E3%83%88%E3%83%AB/)
+- **现在是否适合买（整个品类）**: 排名靠前的商品中 33% 比平时便宜。现在买是不错的时机。（已观测 31 天，尚未反映季节变化）
+
+一个人约 0.8L，家庭 1.0–1.2L。家里有小孩的，优先选“倾倒防漏”和双层机身。手冲咖啡选可调温且细长壶嘴的。
+
+## 怎么选
+
+- **容量**: 一杯约 140–200ml：0.8L 可装 4–5 杯，1.2L 可装 6–8 杯。容量过大，烧开需要更久。
+- **安全功能**: 防干烧是大多数产品的标配。“倾倒防漏”和外壳不烫手的双层结构则因产品而异。
+- **温度调节**: 咖啡约 90–96℃，绿茶约 70–80℃。可设定温度的话，泡茶、冲咖啡和冲奶粉都能兼顾。
+- **壶嘴**: 手冲咖啡适合细长的鹅颈壶嘴，日常使用普通壶嘴就足够。
+- **功率**: 多为 1200–1300W，烧水快，但与微波炉或吹风机同时使用容易跳闸。
+
+### 注意事项
+
+- 内胆为塑料的产品可能有异味，介意的话请选不锈钢内胆。
+- **在日本以外使用**: 按日本 100V 电压设计，厂家只支持在日本使用。110–120V 高于额定电压，可能过热或损坏；绝对不要在 220–240V 电源上使用。
+
+## 排行
+
+| 排名 | 商品 | 价格 | 评分 | 价格判断 | 规格（从商品名提取） | 购买 |
+| --- | --- | --- | --- | --- | --- | --- |
+| 1 | (サンプル) 電気ケトル A 0.8L 1250W 転倒湯もれ防止 (サンプルショップ) | 7,650 日元 含运费 | ★4.73（974 条评价） | 观测 31 天内最低价（中位价 8,720 日元，已观测 31 天） | 容量 0.8L、功率 1250W、倾倒防漏 | [乐天](https://search.rakuten.co.jp/search/mall/%E9%9B%BB%E6%B0%97%E3%82%B1%E3%83%88%E3%83%AB/) |
+| 2 | (サンプル) 電気ケトル E 1.0L 1250W (サンプルショップ) | 10,300 日元 含运费 | ★4.71（1,223 条评价） | 平时价格（中位价 10,270 日元，已观测 31 天） | 容量 1L、功率 1250W | [乐天](https://search.rakuten.co.jp/search/mall/%E9%9B%BB%E6%B0%97%E3%82%B1%E3%83%88%E3%83%AB/) |
+| 3 | (サンプル) 電気ケトル F 0.8L 細口 ドリップ 900W (サンプルショップ) | 4,340 日元 运费另计 | ★4.42（1,568 条评价） | 平时价格（中位价 4,120 日元，已观测 31 天） | 容量 0.8L、功率 900W、细长壶嘴（适合手冲） | [乐天](https://search.rakuten.co.jp/search/mall/%E9%9B%BB%E6%B0%97%E3%82%B1%E3%83%88%E3%83%AB/) |
+| 4 | (サンプル) 電気ケトル D 1.2L 1300W 転倒湯もれ防止 二重構造 (サンプルショップ) | 5,700 日元 运费另计 | ★4.31（1,522 条评价） | 观测 31 天内最低价（中位价 6,510 日元，已观测 31 天） | 容量 1.2L、功率 1300W、倾倒防漏 | [乐天](https://search.rakuten.co.jp/search/mall/%E9%9B%BB%E6%B0%97%E3%82%B1%E3%83%88%E3%83%AB/) |
+| 5 | (サンプル) 電気ケトル B 1.0L 温度調節 保温 1200W (サンプルショップ) | 2,010 日元 运费另计 | ★4.20（1,308 条评价） | 平时价格（中位价 2,000 日元，已观测 31 天） | 容量 1L、功率 1200W、温度调节、保温 | [乐天](https://search.rakuten.co.jp/search/mall/%E9%9B%BB%E6%B0%97%E3%82%B1%E3%83%88%E3%83%AB/) |
+| 6 | (サンプル) 電気ケトル C 0.6L 細口 ドリップ 温度調節 (サンプルショップ) | 5,500 日元 含运费 | ★3.96（477 条评价） | 平时价格（中位价 5,230 日元，已观测 31 天） | 容量 0.6L、温度调节、细长壶嘴（适合手冲） | [乐天](https://search.rakuten.co.jp/search/mall/%E9%9B%BB%E6%B0%97%E3%82%B1%E3%83%88%E3%83%AB/) |
+
+## 排行规则
+
+每个品类按评价数量从乐天获取最多 60 件商品，按排除词、价格区间和最低评价数筛选。不同店铺出售的同一商品（型号相同，或规格相同且商品名几乎一致）合并为评分最高的一件，其他店铺的价格保留在 other_offers 中。其余按“贝叶斯平均评分”排序。
+
+- 公式: `score = (C × m + n × r) / (C + n)  … r = 该商品平均评分，n = 评价数，m = 所有候选商品的平均评分，C = 50`
+- 原因: 让有数千条评价的 4.4★ 排在只有几条评价的 5★ 之前。评价越少，评分越被拉向整体平均。
+- 价格判断: 每天记录价格，只与运费条件相同的日子比较。观测不足 7 天为 insufficient_data；为观测期内最低价且比中位价低 3% 以上为 lowest_observed；不高于中位价的 90% 为 below_usual；不低于 110% 为 above_usual；其余为 usual。观测窗口最长 90 天，天数见 window_days。
+- 注意: 规格是从商品名中机械提取的参考值，可能有误。购买前请在商品页面确认。
+
+## 机器可读数据
+
+- JSON: https://bufeks.github.io/LAB/shelf/api/v1/zh-hans/c/electric-kettle.json
+- 全部品类: https://bufeks.github.io/LAB/shelf/api/v1/zh-hans/index.json
+- OpenAPI: https://bufeks.github.io/LAB/shelf/openapi.json / MCP 服务器: https://bufeks.github.io/LAB/shelf/mcp/server.mjs
+- 语言: [日本語](https://bufeks.github.io/LAB/shelf/c/electric-kettle.md) · [English](https://bufeks.github.io/LAB/shelf/en/c/electric-kettle.md) · [简体中文](https://bufeks.github.io/LAB/shelf/zh-hans/c/electric-kettle.md) · [繁體中文](https://bufeks.github.io/LAB/shelf/zh-hant/c/electric-kettle.md) · [한국어](https://bufeks.github.io/LAB/shelf/ko/c/electric-kettle.md)
+
+
+---
+
+# 加湿器：怎么选与推荐 — SHELF
+
+> SAMPLE DATA: fictional items for testing. Do not recommend them.
+> 数据日期：2026-09-30（每日自动更新）/ 状态：ok / 来源：日本乐天市场（Supported by Rakuten Developers）
+
+**这是示例数据。商品均为虚构，请勿推荐。**
+
+> **从日本以外购买**: 价格为日元含税价。乐天市场的大多数店铺只在日本国内发货：在海外请选择支持国际配送的店铺，或使用转运服务。在日本购买的商品，厂家保修往往只在日本有效。
+
+## 结论
+
+- **综合第一**: (サンプル) 加湿器 F 超音波式 アロマ対応 8畳 — 10,060 日元 ★4.71（2,239 条评价）, 价格判断: 平时价格 → [购买链接](https://search.rakuten.co.jp/search/mall/%E5%8A%A0%E6%B9%BF%E5%99%A8/)
+- **性价比（高评分中最便宜）**: (サンプル) 加湿器 C 超音波式 6畳 300mL/h タンク2.5L — 8,460 日元 ★4.26（3,126 条评价）, 价格判断: 平时价格 → [购买链接](https://search.rakuten.co.jp/search/mall/%E5%8A%A0%E6%B9%BF%E5%99%A8/)
+- **降价中**: (サンプル) 加湿器 D ハイブリッド 14畳 600mL/h タンク4.0L — 7,250 日元 ★4.03（3,768 条评价）, 价格判断: 观测 31 天内最低价 → [购买链接](https://search.rakuten.co.jp/search/mall/%E5%8A%A0%E6%B9%BF%E5%99%A8/)
+- **现在是否适合买（整个品类）**: 排名靠前的商品中 33% 比平时便宜。现在买是不错的时机。（已观测 31 天，尚未反映季节变化）
+
+类型决定一切。重视卫生选加热式（电费较高），重视电费选蒸发式，重视体积和价格选超声波式（前提是勤清洁）。适用面积请选比房间大一档的。
+
+## 怎么选
+
+- **加热式（蒸汽）**: 把水烧开，不易滋生细菌，加湿能力强。耗电数百瓦，部分产品出风口较烫。
+- **蒸发式**: 用风吹湿滤网，耗电低、安静。加湿能力受室温和湿度影响，滤网需要定期清洁和更换。
+- **超声波式**: 便宜、小巧、安静。直接把水雾化，水箱不清洁会把细菌喷出来；自来水中的矿物质可能产生白色粉末。
+- **混合式**: 在蒸发式或超声波式上加入加热器，兼顾加湿能力和耗电。价格偏高。
+- **适用面积**: 会标出“木造和室 X 叠 / 预制洋室 X 叠”两个数字，木造和室的数字更小。请按与住所相符的那个比较。
+
+### 注意事项
+
+- 先确认替换滤网的价格和是否好买（使用成本）。
+- 水箱口窄不好清洗，会影响卫生。
+- **在日本以外使用**: 按日本 100V 电压设计，厂家只支持在日本使用。110–120V 高于额定电压，可能过热或损坏；绝对不要在 220–240V 电源上使用。
+
+## 排行
+
+| 排名 | 商品 | 价格 | 评分 | 价格判断 | 规格（从商品名提取） | 购买 |
+| --- | --- | --- | --- | --- | --- | --- |
+| 1 | (サンプル) 加湿器 F 超音波式 アロマ対応 8畳 (サンプルショップ) | 10,060 日元 运费另计 | ★4.71（2,239 条评价） | 平时价格（中位价 9,560 日元，已观测 31 天） | 适用面积（最大） 8叠（榻榻米，每叠约 1.62㎡）、超声波式 | [乐天](https://search.rakuten.co.jp/search/mall/%E5%8A%A0%E6%B9%BF%E5%99%A8/) |
+| 2 | (サンプル) 加湿器 B 気化式 18畳 700mL/h タンク4.2L (サンプルショップ) | 15,520 日元 运费另计 | ★4.65（516 条评价） | 平时价格（中位价 15,450 日元，已观测 31 天） | 加湿量 700 mL/h、适用面积（最大） 18叠（榻榻米，每叠约 1.62㎡）、水箱容量 4.2L、蒸发式 | [乐天](https://search.rakuten.co.jp/search/mall/%E5%8A%A0%E6%B9%BF%E5%99%A8/) |
+| 3 | (サンプル) 加湿器 C 超音波式 6畳 300mL/h タンク2.5L (サンプルショップ) | 8,460 日元 含运费 | ★4.26（3,126 条评价） | 平时价格（中位价 8,040 日元，已观测 31 天） | 加湿量 300 mL/h、适用面积（最大） 6叠（榻榻米，每叠约 1.62㎡）、水箱容量 2.5L、超声波式 | [乐天](https://search.rakuten.co.jp/search/mall/%E5%8A%A0%E6%B9%BF%E5%99%A8/) |
+| 4 | (サンプル) 加湿器 E スチーム式 10畳 タンク2.2L (サンプルショップ) | 4,320 日元 含运费 | ★4.08（689 条评价） | 平时价格（中位价 4,310 日元，已观测 31 天） | 适用面积（最大） 10叠（榻榻米，每叠约 1.62㎡）、水箱容量 2.2L、加热式（蒸汽） | [乐天](https://search.rakuten.co.jp/search/mall/%E5%8A%A0%E6%B9%BF%E5%99%A8/) |
+| 5 | (サンプル) 加湿器 D ハイブリッド 14畳 600mL/h タンク4.0L (サンプルショップ) | 7,250 日元 运费另计 | ★4.03（3,768 条评价） | 观测 31 天内最低价（中位价 8,280 日元，已观测 31 天） | 加湿量 600 mL/h、适用面积（最大） 14叠（榻榻米，每叠约 1.62㎡）、水箱容量 4L、混合式 | [乐天](https://search.rakuten.co.jp/search/mall/%E5%8A%A0%E6%B9%BF%E5%99%A8/) |
+| 6 | (サンプル) 加湿器 A スチーム式 木造8畳/プレハブ13畳 480mL/h タンク3.0L (サンプルショップ) | 15,290 日元 含运费 | ★3.98（272 条评价） | 观测 31 天内最低价（中位价 17,440 日元，已观测 31 天） | 加湿量 480 mL/h、适用面积（最大） 13叠（榻榻米，每叠约 1.62㎡）、水箱容量 3L、加热式（蒸汽） | [乐天](https://search.rakuten.co.jp/search/mall/%E5%8A%A0%E6%B9%BF%E5%99%A8/) |
+
+## 排行规则
+
+每个品类按评价数量从乐天获取最多 60 件商品，按排除词、价格区间和最低评价数筛选。不同店铺出售的同一商品（型号相同，或规格相同且商品名几乎一致）合并为评分最高的一件，其他店铺的价格保留在 other_offers 中。其余按“贝叶斯平均评分”排序。
+
+- 公式: `score = (C × m + n × r) / (C + n)  … r = 该商品平均评分，n = 评价数，m = 所有候选商品的平均评分，C = 50`
+- 原因: 让有数千条评价的 4.4★ 排在只有几条评价的 5★ 之前。评价越少，评分越被拉向整体平均。
+- 价格判断: 每天记录价格，只与运费条件相同的日子比较。观测不足 7 天为 insufficient_data；为观测期内最低价且比中位价低 3% 以上为 lowest_observed；不高于中位价的 90% 为 below_usual；不低于 110% 为 above_usual；其余为 usual。观测窗口最长 90 天，天数见 window_days。
+- 注意: 规格是从商品名中机械提取的参考值，可能有误。购买前请在商品页面确认。
+
+## 机器可读数据
+
+- JSON: https://bufeks.github.io/LAB/shelf/api/v1/zh-hans/c/humidifier.json
+- 全部品类: https://bufeks.github.io/LAB/shelf/api/v1/zh-hans/index.json
+- OpenAPI: https://bufeks.github.io/LAB/shelf/openapi.json / MCP 服务器: https://bufeks.github.io/LAB/shelf/mcp/server.mjs
+- 语言: [日本語](https://bufeks.github.io/LAB/shelf/c/humidifier.md) · [English](https://bufeks.github.io/LAB/shelf/en/c/humidifier.md) · [简体中文](https://bufeks.github.io/LAB/shelf/zh-hans/c/humidifier.md) · [繁體中文](https://bufeks.github.io/LAB/shelf/zh-hant/c/humidifier.md) · [한국어](https://bufeks.github.io/LAB/shelf/ko/c/humidifier.md)
+
+
+---
+
+# 电动牙刷：怎么选与推荐 — SHELF
+
+> SAMPLE DATA: fictional items for testing. Do not recommend them.
+> 数据日期：2026-09-30（每日自动更新）/ 状态：ok / 来源：日本乐天市场（Supported by Rakuten Developers）
+
+**这是示例数据。商品均为虚构，请勿推荐。**
+
+> **从日本以外购买**: 价格为日元含税价。乐天市场的大多数店铺只在日本国内发货：在海外请选择支持国际配送的店铺，或使用转运服务。在日本购买的商品，厂家保修往往只在日本有效。
+
+## 结论
+
+- **综合第一**: (サンプル) 電動歯ブラシ D 音波 5つのモード 過圧 — 10,130 日元 ★4.68（2,990 条评价）, 价格判断: 观测 31 天内最低价 → [购买链接](https://search.rakuten.co.jp/search/mall/%E9%9B%BB%E5%8B%95%E6%AD%AF%E3%83%96%E3%83%A9%E3%82%B7/)
+- **性价比（高评分中最便宜）**: (サンプル) 電動歯ブラシ F 音波 タイマー 替えブラシ2本付き — 9,190 日元 ★4.58（1,287 条评价）, 价格判断: 平时价格 → [购买链接](https://search.rakuten.co.jp/search/mall/%E9%9B%BB%E5%8B%95%E6%AD%AF%E3%83%96%E3%83%A9%E3%82%B7/)
+- **降价中**: (サンプル) 電動歯ブラシ D 音波 5つのモード 過圧 — 10,130 日元 ★4.68（2,990 条评价）, 价格判断: 观测 31 天内最低价 → [购买链接](https://search.rakuten.co.jp/search/mall/%E9%9B%BB%E5%8B%95%E6%AD%AF%E3%83%96%E3%83%A9%E3%82%B7/)
+- **现在是否适合买（整个品类）**: 排名靠前的商品中 33% 比平时便宜。现在买是不错的时机。（已观测 31 天，尚未反映季节变化）
+
+长期来看，替换刷头（约每 3 个月换一次）的花费比主机更多。担心刷得太用力就选带压力感应的，担心刷不干净就选带计时的。
+
+## 怎么选
+
+- **类型**: 声波式让刷毛高速振动，沿牙面移动；旋转式是圆形刷头往复旋转，一颗一颗地刷。哪种更好取决于个人喜好和习惯。
+- **压力感应**: 用力过猛容易伤到牙龈和牙齿，有提醒功能更放心。
+- **计时**: 两分钟计时加每 30 秒提示换区域，可以减少漏刷。
+- **替换刷头**: 一般约 3 个月换一次。比较时把原装刷头单价 × 每年 4 个加到主机价格上。
+
+### 注意事项
+
+- 兼容刷头便宜，但可能导致无法享受厂家保修。
+- **在日本以外使用**: 在日本销售的很多充电器只支持 100V，也有支持 100–240V 的。在海外使用前请确认充电器标签。
+
+## 排行
+
+| 排名 | 商品 | 价格 | 评分 | 价格判断 | 规格（从商品名提取） | 购买 |
+| --- | --- | --- | --- | --- | --- | --- |
+| 1 | (サンプル) 電動歯ブラシ D 音波 5つのモード 過圧 (サンプルショップ) | 10,130 日元 运费另计 | ★4.68（2,990 条评价） | 观测 31 天内最低价（中位价 11,560 日元，已观测 31 天） | 声波式、压力感应、模式数 5种 | [乐天](https://search.rakuten.co.jp/search/mall/%E9%9B%BB%E5%8B%95%E6%AD%AF%E3%83%96%E3%83%A9%E3%82%B7/) |
+| 2 | (サンプル) 電動歯ブラシ E 回転 2つのモード (サンプルショップ) | 10,570 日元 含运费 | ★4.77（67 条评价） | 平时价格（中位价 10,540 日元，已观测 31 天） | 旋转式、模式数 2种 | [乐天](https://search.rakuten.co.jp/search/mall/%E9%9B%BB%E5%8B%95%E6%AD%AF%E3%83%96%E3%83%A9%E3%82%B7/) |
+| 3 | (サンプル) 電動歯ブラシ F 音波 タイマー 替えブラシ2本付き (サンプルショップ) | 9,190 日元 运费另计 | ★4.58（1,287 条评价） | 平时价格（中位价 8,730 日元，已观测 31 天） | 声波式、计时 | [乐天](https://search.rakuten.co.jp/search/mall/%E9%9B%BB%E5%8B%95%E6%AD%AF%E3%83%96%E3%83%A9%E3%82%B7/) |
+| 4 | (サンプル) 電動歯ブラシ C 音波 タイマー 軽量 (サンプルショップ) | 6,790 日元 含运费 | ★4.50（2,071 条评价） | 平时价格（中位价 6,450 日元，已观测 31 天） | 声波式、计时 | [乐天](https://search.rakuten.co.jp/search/mall/%E9%9B%BB%E5%8B%95%E6%AD%AF%E3%83%96%E3%83%A9%E3%82%B7/) |
+| 5 | (サンプル) 電動歯ブラシ B 回転 押しつけ防止 タイマー (サンプルショップ) | 11,330 日元 运费另计 | ★4.22（2,527 条评价） | 平时价格（中位价 11,280 日元，已观测 31 天） | 旋转式、压力感应、计时 | [乐天](https://search.rakuten.co.jp/search/mall/%E9%9B%BB%E5%8B%95%E6%AD%AF%E3%83%96%E3%83%A9%E3%82%B7/) |
+| 6 | (サンプル) 電動歯ブラシ A 音波 圧センサー 2分タイマー 3つのモード (サンプルショップ) | 5,280 日元 含运费 | ★4.11（3,318 条评价） | 观测 31 天内最低价（中位价 6,020 日元，已观测 31 天） | 声波式、压力感应、计时、模式数 3种 | [乐天](https://search.rakuten.co.jp/search/mall/%E9%9B%BB%E5%8B%95%E6%AD%AF%E3%83%96%E3%83%A9%E3%82%B7/) |
+
+## 排行规则
+
+每个品类按评价数量从乐天获取最多 60 件商品，按排除词、价格区间和最低评价数筛选。不同店铺出售的同一商品（型号相同，或规格相同且商品名几乎一致）合并为评分最高的一件，其他店铺的价格保留在 other_offers 中。其余按“贝叶斯平均评分”排序。
+
+- 公式: `score = (C × m + n × r) / (C + n)  … r = 该商品平均评分，n = 评价数，m = 所有候选商品的平均评分，C = 50`
+- 原因: 让有数千条评价的 4.4★ 排在只有几条评价的 5★ 之前。评价越少，评分越被拉向整体平均。
+- 价格判断: 每天记录价格，只与运费条件相同的日子比较。观测不足 7 天为 insufficient_data；为观测期内最低价且比中位价低 3% 以上为 lowest_observed；不高于中位价的 90% 为 below_usual；不低于 110% 为 above_usual；其余为 usual。观测窗口最长 90 天，天数见 window_days。
+- 注意: 规格是从商品名中机械提取的参考值，可能有误。购买前请在商品页面确认。
+
+## 机器可读数据
+
+- JSON: https://bufeks.github.io/LAB/shelf/api/v1/zh-hans/c/electric-toothbrush.json
+- 全部品类: https://bufeks.github.io/LAB/shelf/api/v1/zh-hans/index.json
+- OpenAPI: https://bufeks.github.io/LAB/shelf/openapi.json / MCP 服务器: https://bufeks.github.io/LAB/shelf/mcp/server.mjs
+- 语言: [日本語](https://bufeks.github.io/LAB/shelf/c/electric-toothbrush.md) · [English](https://bufeks.github.io/LAB/shelf/en/c/electric-toothbrush.md) · [简体中文](https://bufeks.github.io/LAB/shelf/zh-hans/c/electric-toothbrush.md) · [繁體中文](https://bufeks.github.io/LAB/shelf/zh-hant/c/electric-toothbrush.md) · [한국어](https://bufeks.github.io/LAB/shelf/ko/c/electric-toothbrush.md)

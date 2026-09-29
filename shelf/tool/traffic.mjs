@@ -9,10 +9,10 @@ import fs from 'node:fs';
 import { fileURLToPath } from 'node:url';
 
 const DATASET = 'shelf_events';
-export const QUERY = `SELECT blob1 AS type, blob2 AS a, blob3 AS b, blob4 AS c, blob5 AS d, SUM(_sample_interval) AS n
+export const QUERY = `SELECT blob1 AS type, blob2 AS a, blob3 AS b, blob4 AS c, blob5 AS d, blob6 AS lang, SUM(_sample_interval) AS n
 FROM ${DATASET}
 WHERE timestamp > NOW() - INTERVAL '7' DAY
-GROUP BY type, a, b, c, d
+GROUP BY type, a, b, c, d, lang
 ORDER BY n DESC
 LIMIT 2000`;
 
@@ -42,6 +42,7 @@ export function summarize(raw) {
   );
   L.push(table('Clicks by category and surface', ['category', 'surface', 'clicks'], tally(clicks, (r) => `${r.a}\u0000${r.c}`)));
   L.push(table('Clicks by AI source', ['source', 'clicks'], tally(clicks.filter((r) => r.d), (r) => r.d)));
+  L.push(table('Clicks by language', ['language', 'clicks'], tally(clicks, (r) => r.lang || 'ja')));
   L.push(table('Visits referred by AI assistants', ['assistant', 'visits'], tally(of('ai_referral'), (r) => r.a)));
   L.push(table('AI crawlers', ['bot', 'org', 'hits'], tally(of('crawl'), (r) => `${r.a}\u0000${r.b}`)));
   L.push(table('MCP tool calls', ['tool', 'category', 'calls'], tally(of('mcp_call'), (r) => `${r.a}\u0000${r.b || '—'}`)));
