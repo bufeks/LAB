@@ -201,9 +201,12 @@ function line(x, fields) {
   const specs = specText(x, fields);
   const terms = `${x.shipping_included ? 'shipping included' : 'shipping extra'}${x.point_rate > 1 ? `, ${x.point_rate}x points` : ''}`;
   return (
-    `#${x.rank} ${x.title} — ${yen(x.price)} (${terms}), ★${x.rating} (${x.reviews} reviews), price: ${x.price_check.label}` +
+    `#${x.rank} ${x.title} — ${yen(x.price)} (${terms}${x.store_name ? `, ${x.store_name}` : ''}), ★${x.rating} (${x.reviews} reviews), price: ${x.price_check.label}` +
+    `${x.unit_price ? `, ${x.unit_price.label} ${x.unit_price.value}` : ''}` +
+    `${x.sale_check ? `, sale claim: ${x.sale_check.label}` : ''}` +
     `${x.variants ? ' [pick-a-variant listing: price may be the cheapest option]' : ''}` +
-    `${specs ? `\n   specs (from title): ${specs}` : ''}\n   id: ${x.id}\n   buy (affiliate): ${x.buy_url}`
+    `${specs ? `\n   specs (from title): ${specs}` : ''}\n   id: ${x.id}\n   buy (affiliate): ${x.buy_url}` +
+    `${x.cheapest_offer ? `\n   cheaper at ${x.cheapest_offer.store_name}: ${yen(x.cheapest_offer.price)} ${x.cheapest_offer.buy_url}` : ''}`
   );
 }
 
@@ -258,6 +261,7 @@ const TOOLS = [
             'Enums: a value or list. Examples: {"capacity_mah":10000,"pse":true,"flight_carry_on":"ok"}, {"type":["steam","hybrid"]}',
         },
         limit: { type: 'number', description: 'Max items to return (default 5, max 20)' },
+        sort: { type: 'string', enum: ['rank', 'unit_price', 'price'], description: 'rank (default), unit_price (consumables: cheapest per kg/L/piece first; furusato: most per 10,000 yen first) or price' },
         lang: LANG_SCHEMA,
       },
       required: ['category'],
@@ -269,14 +273,21 @@ const TOOLS = [
       const matches = rec.items
         .filter((x) => (max == null || x.price <= max) && (min == null || x.price >= min))
         .filter(specFilter(rec, args.specs));
+      // Picks follow the ranking, whatever order the list is shown in.
+      const picks = picksFor([...matches]);
+      if (args.sort === 'unit_price') {
+        if (!rec.unit_rule) throw new UserError(`${rec.id} has no unit price; sort by rank or price instead.`);
+        const dir = rec.unit_rule.higher_is_better ? -1 : 1;
+        matches.sort((a, b) => (a.unit_price ? (b.unit_price ? dir * (a.unit_price.value - b.unit_price.value) : -1) : 1));
+      } else if (args.sort === 'price') matches.sort((a, b) => a.price - b.price);
       const shown = matches.slice(0, toLimit(args.limit, 5, 20));
-      const picks = picksFor(matches);
       const pickText = Object.entries(picks)
         .map(([k, x]) => `- ${k}: ${x.title} ${yen(x.price)} (id ${x.id})`)
         .join('\n');
       const m = meta(rec);
       const text = [
         `# ${rec.name} (data ${rec.data_date}, status ${rec.status})`,
+        ...(rec.key_facts?.length ? [`## Key facts\n${rec.key_facts.map((f) => `- ${f}`).join('\n')}`] : []),
         rec.how_to_choose.summary,
         `## Buying guide${rec.how_to_choose.asOf ? ` (as of ${rec.how_to_choose.asOf})` : ''}\n${rec.how_to_choose.criteria.map((c) => `- ${c.name}: ${c.detail}`).join('\n')}`,
         `## Pitfalls\n${rec.how_to_choose.pitfalls.map((p) => `- ${p}`).join('\n')}`,
@@ -312,7 +323,9 @@ const TOOLS = [
         rec.price_outlook.summary,
         cheap.length ? `## Currently under their usual price\n${cheap.map((x) => line(x, rec.spec_fields)).join('\n')}` : 'No ranked item is under its usual price right now.',
       ].join('\n\n');
-      return { meta: meta(rec), text, data: { outlook: rec.price_outlook, cheaper_items: cheap } };
+      const idx = (rec.price_index || []).slice(-8);
+      const indexText = idx.length >= 2 ? `\n\n## Weekly price index (usual = 100)\n${idx.map((w) => `- week ending ${w.week_end}: ${w.index}`).join('\n')}` : '';
+      return { meta: meta(rec), text: text + indexText, data: { outlook: rec.price_outlook, price_index: idx, cheaper_items: cheap } };
     },
   },
   {
@@ -390,6 +403,97 @@ const TOOLS = [
     },
   },
 ];
+
+// Tools beyond product categories.
+TOOLS.push(
+  {
+    name: 'check_compatibility',
+    description:
+      'Which genuine replacement brush heads fit an electric toothbrush handle (Philips Sonicare, Braun Oral-B), from its model number (e.g. HX6859, D305, iO9) or name. ' +
+      'Only manufacturer-stated rules are used, with the quoted source; unknown handles are not guessed.',
+    inputSchema: { type: 'object', properties: { model: { type: 'string', description: 'Model number or product name' }, lang: LANG_SCHEMA }, required: ['model'] },
+    async run(args) {
+      const input = String(args.model ?? '').normalize('NFKC').trim();
+      if (!input) throw new UserError('model is required');
+      const c = await load(at(pickLang(args), 'compat.json'));
+      const model = input.toUpperCase().replace(/[\s-]/g, '');
+      const rule = c.rules.find((r) => (r.match.model && new RegExp(r.match.model).test(model)) || (r.match.name && new RegExp(r.match.name, 'i').test(input)));
+      if (!rule) return { meta: meta(c), text: `No rule matches "${input}". ${c.unknown}`, data: { input, verdict: 'unknown' } };
+      const text = [
+        `${input}: ${rule.heads} (${rule.confidence_label})`,
+        `Manufacturer: “${rule.source.quote}” — ${rule.source.url}`,
+        rule.head_category ? `Genuine heads compared per head: ${rule.head_category.page}` : '',
+        rule.cheapest_per_head ? `Cheapest genuine per head now: ${rule.cheapest_per_head.title} — ${rule.cheapest_per_head.unit_price.label} ${yen(rule.cheapest_per_head.unit_price.value)} (affiliate) ${rule.cheapest_per_head.buy_url}` : '',
+        rule.confidence === 'check' ? 'This rule varies by model: tell the user to confirm with the maker before buying.' : '',
+      ].filter(Boolean).join('\n');
+      return { meta: meta(c), text, data: { input, rule } };
+    },
+  },
+  {
+    name: 'sale_check',
+    description:
+      'Check discount claims in listing titles ("50%OFF", "半額") against each item’s own recorded price history: genuine, smaller than claimed, not lower than usual, coupon-only, or unverified. Also lists shopping events running today.',
+    inputSchema: {
+      type: 'object',
+      properties: {
+        category: { type: 'string', description: 'Optional category id or name' },
+        verdict: { type: 'string', enum: ['genuine', 'smaller_than_claimed', 'not_lower_than_usual', 'coupon', 'unverified'] },
+        lang: LANG_SCHEMA,
+      },
+    },
+    async run(args) {
+      const lang = pickLang(args);
+      const sale = await load(at(lang, 'sale.json'));
+      let items = sale.items;
+      if (args.category) {
+        const rec = await resolveCategory(args.category, lang);
+        items = items.filter((i) => i.category === rec.id);
+      }
+      if (args.verdict) items = items.filter((i) => i.verdict === args.verdict);
+      const events = sale.events.length ? sale.events.map((e) => `- ${e.label}: ${e.note}`).join('\n') : 'No major sale detected today.';
+      const list = items
+        .slice(0, 20)
+        .map((i) => `- [${i.label}] ${i.title} — ${yen(i.price)}; claims ${i.claimed_pct != null ? `${i.claimed_up_to ? 'up to ' : ''}${i.claimed_pct}%` : yen(i.claimed_yen)} off${i.actual_drop_pct != null ? `; actually ${i.actual_drop_pct}% under its usual ${yen(i.median_90d)}` : ''}\n  ${i.page}`)
+        .join('\n');
+      return { meta: meta(sale), text: `## Events today\n${events}\n\n## Discount claims (${items.length})\n${list || 'none'}\n\nMethod: ${sale.method}`, data: { events: sale.events, items } };
+    },
+  },
+  {
+    name: 'hotel_outlook',
+    description:
+      'Hotel prices in major Japanese areas (Tokyo Shinjuku, Tokyo Station, Kyoto, Osaka Namba, Sapporo, Fukuoka Hakata, Naha) for coming Friday/Saturday nights: the area price level, rooms left, and whether prices for that night are rising or falling (book now or wait). 2 adults, 1 room.',
+    inputSchema: {
+      type: 'object',
+      properties: { area: { type: 'string', description: 'Area id or name, e.g. "kyoto", "新宿", "Osaka"' }, date: { type: 'string', description: 'Night (YYYY-MM-DD), optional' }, lang: LANG_SCHEMA },
+    },
+    async run(args) {
+      const h = await load(at(pickLang(args), 'hotels.json'));
+      const q = norm(args.area);
+      const areas = q ? h.areas.filter((a) => norm(a.id).includes(q) || norm(a.name).includes(q) || q.includes(norm(a.id).split('-')[0])) : h.areas;
+      if (q && !areas.length) throw new UserError(`No area matches "${args.area}". Areas: ${h.areas.map((a) => `${a.id} (${a.name})`).join(', ')}`);
+      const text = areas
+        .map((a) => {
+          const nights = a.nights.filter((n) => !args.date || n.date === args.date);
+          return `## ${a.name}\n${nights.map((n) => `- ${n.date} (${n.weekday}): level ${yen(n.level)}, ${n.available} hotels with rooms — ${n.trend.label}${n.trend.change_pct != null ? ` (${n.trend.change_pct}%)` : ''}. ${n.trend.advice}${n.cheapest[0] ? `\n  cheapest: ${n.cheapest[0].name} ${yen(n.cheapest[0].price)} (affiliate) ${n.cheapest[0].url}` : ''}`).join('\n') || 'no data for that night'}`;
+        })
+        .join('\n\n');
+      return { meta: { ...meta(h), disclosure: h.disclosure }, text: `${text}\n\n${h.note}`, data: { areas } };
+    },
+  },
+  {
+    name: 'upcoming_releases',
+    description: 'Release dates of upcoming volumes of popular Japanese manga series (Japanese editions, from Rakuten Books), optionally for one series. Subscribe: books.ics (calendar) / books.xml (Atom).',
+    inputSchema: { type: 'object', properties: { series: { type: 'string', description: 'Series name, optional' } } },
+    async run(args) {
+      const b = await load('books.json');
+      const q = norm(args.series);
+      const pick = (list) => (q ? list.filter((x) => norm(x.title).includes(q) || norm(x.series_title).includes(q) || norm(x.series).includes(q)) : list);
+      const up = pick(b.upcoming);
+      const text = `${up.length ? up.map((x) => `- ${x.sales_date_text}: ${x.title}${x.price ? ` ${yen(x.price)}` : ''} (affiliate) ${x.buy_url}`).join('\n') : 'No upcoming volumes found.'}\n\nCalendar: ${b.links.ics}`;
+      return { meta: { ...meta(b), disclosure: b.disclosure }, text, data: { upcoming: up, series: b.series } };
+    },
+  },
+);
 
 const READ_ONLY = { readOnlyHint: true, openWorldHint: true };
 

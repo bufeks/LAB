@@ -1,0 +1,396 @@
+{
+ "categoryId": "rice-cooker",
+ "date": "2026-10-02",
+ "fetchedAt": "2026-10-02T14:45:15+09:00",
+ "items": [
+  {
+   "id": "sample:rice-cooker-2",
+   "source": "rakuten",
+   "name": "(サンプル) 炊飯器 B 3合 マイコン",
+   "caption": "",
+   "shop": "サンプルショップ",
+   "price": 14750,
+   "shippingIncluded": false,
+   "pointRate": 1,
+   "rating": 4.8,
+   "reviews": 2057,
+   "productUrl": "https://search.rakuten.co.jp/search/mall/%E7%82%8A%E9%A3%AF%E5%99%A8/",
+   "buyUrl": "https://search.rakuten.co.jp/search/mall/%E7%82%8A%E9%A3%AF%E5%99%A8/",
+   "affiliate": false,
+   "image": null,
+   "available": true,
+   "title": "(サンプル) 炊飯器 B 3合 マイコン",
+   "variants": false,
+   "score": 4.792,
+   "facets": {
+    "cups": 3,
+    "heating": "microcomputer",
+    "timer": false
+   },
+   "claimed": null,
+   "otherOffers": [],
+   "rank": 1,
+   "priceStats": {
+    "points": 31,
+    "windowDays": 31,
+    "firstSeen": "2026-09-02",
+    "min90": 14340,
+    "median90": 14680,
+    "max90": 15160,
+    "verdict": "usual"
+   },
+   "priceWeekly": [
+    [
+     "2026-09-04",
+     14340
+    ],
+    [
+     "2026-09-11",
+     14410
+    ],
+    [
+     "2026-09-18",
+     14400
+    ],
+    [
+     "2026-09-25",
+     14400
+    ],
+    [
+     "2026-10-02",
+     14460
+    ]
+   ]
+  },
+  {
+   "id": "sample:rice-cooker-4",
+   "source": "rakuten",
+   "name": "(サンプル) 炊飯器 D 1升 圧力IH",
+   "caption": "",
+   "shop": "サンプルショップ",
+   "price": 13470,
+   "shippingIncluded": false,
+   "pointRate": 1,
+   "rating": 4.78,
+   "reviews": 3383,
+   "productUrl": "https://search.rakuten.co.jp/search/mall/%E7%82%8A%E9%A3%AF%E5%99%A8/",
+   "buyUrl": "https://search.rakuten.co.jp/search/mall/%E7%82%8A%E9%A3%AF%E5%99%A8/",
+   "affiliate": false,
+   "image": null,
+   "available": true,
+   "title": "(サンプル) 炊飯器 D 1升 圧力IH",
+   "variants": false,
+   "score": 4.775,
+   "facets": {
+    "heating": "pressure_ih",
+    "timer": false
+   },
+   "claimed": null,
+   "otherOffers": [
+    {
+     "id": "sample-y:rice-cooker-2",
+     "store": "yahoo",
+     "shop": "サンプルストア",
+     "price": 14010,
+     "shippingIncluded": true,
+     "buyUrl": "https://search.rakuten.co.jp/search/mall/%E7%82%8A%E9%A3%AF%E5%99%A8/",
+     "affiliate": false
+    }
+   ],
+   "rank": 2,
+   "priceStats": {
+    "points": 31,
+    "windowDays": 31,
+    "firstSeen": "2026-09-02",
+    "min90": 13470,
+    "median90": 15380,
+    "max90": 15820,
+    "verdict": "lowest_observed"
+   },
+   "priceWeekly": [
+    [
+     "2026-09-04",
+     15250
+    ],
+    [
+     "2026-09-11",
+     15110
+    ],
+    [
+     "2026-09-18",
+     15060
+    ],
+    [
+     "2026-09-25",
+     15080
+    ],
+    [
+     "2026-10-02",
+     13470
+    ]
+   ]
+  },
+  {
+   "id": "sample:rice-cooker-5",
+   "source": "rakuten",
+   "name": "(サンプル) 炊飯器 E 3合 IH",
+   "caption": "",
+   "shop": "サンプルショップ",
+   "price": 9230,
+   "shippingIncluded": true,
+   "pointRate": 1,
+   "rating": 4.47,
+   "reviews": 1628,
+   "productUrl": "https://search.rakuten.co.jp/search/mall/%E7%82%8A%E9%A3%AF%E5%99%A8/",
+   "buyUrl": "https://search.rakuten.co.jp/search/mall/%E7%82%8A%E9%A3%AF%E5%99%A8/",
+   "affiliate": false,
+   "image": null,
+   "available": true,
+   "title": "(サンプル) 炊飯器 E 3合 IH",
+   "variants": false,
+   "score": 4.47,
+   "facets": {
+    "cups": 3,
+    "heating": "ih",
+    "timer": false
+   },
+   "claimed": null,
+   "otherOffers": [],
+   "rank": 3,
+   "priceStats": {
+    "points": 31,
+    "windowDays": 31,
+    "firstSeen": "2026-09-02",
+    "min90": 8960,
+    "median90": 9200,
+    "max90": 9500,
+    "verdict": "usual"
+   },
+   "priceWeekly": [
+    [
+     "2026-09-04",
+     9000
+    ],
+    [
+     "2026-09-11",
+     9030
+    ],
+    [
+     "2026-09-18",
+     8960
+    ],
+    [
+     "2026-09-25",
+     9130
+    ],
+    [
+     "2026-10-02",
+     9020
+    ]
+   ]
+  },
+  {
+   "id": "sample-y:rice-cooker-1",
+   "source": "yahoo",
+   "name": "(サンプル) 炊飯器 A 半額 5.5合 圧力IH 予約",
+   "caption": "",
+   "shop": "サンプルストア",
+   "price": 19800,
+   "shippingIncluded": true,
+   "pointRate": 1,
+   "rating": 4.42,
+   "reviews": 971,
+   "productUrl": "https://search.rakuten.co.jp/search/mall/%E7%82%8A%E9%A3%AF%E5%99%A8/",
+   "buyUrl": "https://search.rakuten.co.jp/search/mall/%E7%82%8A%E9%A3%AF%E5%99%A8/",
+   "affiliate": false,
+   "image": null,
+   "available": true,
+   "title": "(サンプル) 炊飯器 A 半額 5.5合 圧力IH 予約",
+   "variants": false,
+   "score": 4.422,
+   "facets": {
+    "cups": 5.5,
+    "heating": "pressure_ih",
+    "timer": true
+   },
+   "claimed": {
+    "pct": 50
+   },
+   "otherOffers": [
+    {
+     "id": "sample:rice-cooker-1",
+     "store": "rakuten",
+     "shop": "サンプルショップ",
+     "price": 21290,
+     "shippingIncluded": true,
+     "buyUrl": "https://search.rakuten.co.jp/search/mall/%E7%82%8A%E9%A3%AF%E5%99%A8/",
+     "affiliate": false
+    }
+   ],
+   "rank": 4,
+   "priceStats": {
+    "points": 31,
+    "windowDays": 31,
+    "firstSeen": "2026-09-02",
+    "min90": 19800,
+    "median90": 22690,
+    "max90": 23300,
+    "verdict": "lowest_observed"
+   },
+   "priceWeekly": [
+    [
+     "2026-09-04",
+     22420
+    ],
+    [
+     "2026-09-11",
+     22300
+    ],
+    [
+     "2026-09-18",
+     22180
+    ],
+    [
+     "2026-09-25",
+     22240
+    ],
+    [
+     "2026-10-02",
+     19800
+    ]
+   ]
+  },
+  {
+   "id": "sample:rice-cooker-6",
+   "source": "rakuten",
+   "name": "(サンプル) 炊飯器 F 5.5合 マイコン 予約",
+   "caption": "",
+   "shop": "サンプルショップ",
+   "price": 13990,
+   "shippingIncluded": false,
+   "pointRate": 1,
+   "rating": 4.34,
+   "reviews": 1624,
+   "productUrl": "https://search.rakuten.co.jp/search/mall/%E7%82%8A%E9%A3%AF%E5%99%A8/",
+   "buyUrl": "https://search.rakuten.co.jp/search/mall/%E7%82%8A%E9%A3%AF%E5%99%A8/",
+   "affiliate": false,
+   "image": null,
+   "available": true,
+   "title": "(サンプル) 炊飯器 F 5.5合 マイコン 予約",
+   "variants": false,
+   "score": 4.343,
+   "facets": {
+    "cups": 5.5,
+    "heating": "microcomputer",
+    "timer": true
+   },
+   "claimed": null,
+   "otherOffers": [],
+   "rank": 5,
+   "priceStats": {
+    "points": 31,
+    "windowDays": 31,
+    "firstSeen": "2026-09-02",
+    "min90": 12900,
+    "median90": 13290,
+    "max90": 13990,
+    "verdict": "usual"
+   },
+   "priceWeekly": [
+    [
+     "2026-09-04",
+     13080
+    ],
+    [
+     "2026-09-11",
+     12930
+    ],
+    [
+     "2026-09-18",
+     12940
+    ],
+    [
+     "2026-09-25",
+     12990
+    ],
+    [
+     "2026-10-02",
+     12900
+    ]
+   ]
+  },
+  {
+   "id": "sample:rice-cooker-3",
+   "source": "rakuten",
+   "name": "(サンプル) 炊飯器 C 5.5合 IH 予約",
+   "caption": "",
+   "shop": "サンプルショップ",
+   "price": 18800,
+   "shippingIncluded": true,
+   "pointRate": 1,
+   "rating": 3.89,
+   "reviews": 3352,
+   "productUrl": "https://search.rakuten.co.jp/search/mall/%E7%82%8A%E9%A3%AF%E5%99%A8/",
+   "buyUrl": "https://search.rakuten.co.jp/search/mall/%E7%82%8A%E9%A3%AF%E5%99%A8/",
+   "affiliate": false,
+   "image": null,
+   "available": true,
+   "title": "(サンプル) 炊飯器 C 5.5合 IH 予約",
+   "variants": false,
+   "score": 3.898,
+   "facets": {
+    "cups": 5.5,
+    "heating": "ih",
+    "timer": true
+   },
+   "claimed": null,
+   "otherOffers": [],
+   "rank": 6,
+   "priceStats": {
+    "points": 31,
+    "windowDays": 31,
+    "firstSeen": "2026-09-02",
+    "min90": 17330,
+    "median90": 17870,
+    "max90": 18800,
+    "verdict": "usual"
+   },
+   "priceWeekly": [
+    [
+     "2026-09-04",
+     17580
+    ],
+    [
+     "2026-09-11",
+     17380
+    ],
+    [
+     "2026-09-18",
+     17600
+    ],
+    [
+     "2026-09-25",
+     17450
+    ],
+    [
+     "2026-10-02",
+     17330
+    ]
+   ]
+  }
+ ],
+ "stats": {
+  "candidates": 8,
+  "ranked": 6,
+  "rejected": {
+   "duplicate": 2
+  },
+  "meanRating": 4.45,
+  "priorWeight": 50
+ },
+ "picks": {
+  "best": "sample:rice-cooker-2",
+  "budget": "sample:rice-cooker-5",
+  "deal": "sample-y:rice-cooker-1"
+ }
+}

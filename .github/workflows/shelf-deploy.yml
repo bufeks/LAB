@@ -49,6 +49,7 @@ jobs:
           SHELF_EDGE: '1'
           SHELF_BASE_URL: ${{ vars.SHELF_BASE_URL }}
           SHELF_OUT_DIR: ${{ runner.temp }}/out
+          INDEXNOW_KEY: ${{ vars.INDEXNOW_KEY }}
         run: |
           node shelf/tool/build.mjs
           node shelf/tool/edge.mjs
@@ -73,3 +74,10 @@ jobs:
           done
           echo "::error::$BASE did not answer after deploy (DNS for a new custom domain can take a few minutes)"
           exit 1
+      - name: Notify IndexNow (Bing and others)
+        if: steps.cfg.outputs.ready == 'true' && vars.INDEXNOW_KEY != ''
+        continue-on-error: true
+        env:
+          INDEXNOW_KEY: ${{ vars.INDEXNOW_KEY }}
+          SHELF_BASE_URL: ${{ vars.SHELF_BASE_URL }}
+        run: node shelf/tool/indexnow.mjs edge-dist

@@ -23,6 +23,11 @@ export const SITE = {
     text: 'Supported by Rakuten Developers',
     url: 'https://developers.rakuten.com/',
   },
+  // Required wherever Yahoo!ショッピング data is shown.
+  yahooCredit: {
+    text: 'Webサービス by Yahoo! JAPAN',
+    url: 'https://developer.yahoo.co.jp/sitemap/',
+  },
 };
 
 // ISO-8601 with the +09:00 offset, so "updated at" and the JST data date

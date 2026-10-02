@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="ja">
+  <id>https://bufeks.github.io/LAB/shelf/c/rice/feed.xml</id>
+  <title>SHELF — 米（白米）: いつもより安い商品</title>
+  <link rel="self" href="https://bufeks.github.io/LAB/shelf/c/rice/feed.xml"/>
+  <link rel="alternate" href="https://bufeks.github.io/LAB/shelf/c/rice/"/>
+  <updated>2026-10-02T14:45:15+09:00</updated>
+  <author><name>SHELF</name></author>
+  <entry>
+    <id>https://bufeks.github.io/LAB/shelf/c/rice/feed.xml#sample%3Arice-1@3110</id>
+    <title>(サンプル) 米(白米) A コシヒカリ 令和7年産 10kg (5kg×2袋)</title>
+    <link rel="alternate" href="https://bufeks.github.io/LAB/shelf/c/rice/"/>
+    <updated>2026-10-02T14:45:15+09:00</updated>
+    <summary>¥3,110（いつもは¥3,550、12.4%安い）</summary>
+  </entry>
+  <entry>
+    <id>https://bufeks.github.io/LAB/shelf/c/rice/feed.xml#sample%3Arice-4@10360</id>
+    <title>(サンプル) 米(白米) D ななつぼし 10kg</title>
+    <link rel="alternate" href="https://bufeks.github.io/LAB/shelf/c/rice/"/>
+    <updated>2026-10-02T14:45:15+09:00</updated>
+    <summary>¥10,360（いつもは¥11,830、12.4%安い）</summary>
+  </entry>
+</feed>

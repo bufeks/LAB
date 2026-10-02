@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-Hans">
+  <id>https://bufeks.github.io/LAB/shelf/zh-hans/c/protein/feed.xml</id>
+  <title>SHELF — 蛋白粉: 比平时便宜的商品</title>
+  <link rel="self" href="https://bufeks.github.io/LAB/shelf/zh-hans/c/protein/feed.xml"/>
+  <link rel="alternate" href="https://bufeks.github.io/LAB/shelf/zh-hans/c/protein/"/>
+  <updated>2026-10-02T14:45:15+09:00</updated>
+  <author><name>SHELF</name></author>
+  <entry>
+    <id>https://bufeks.github.io/LAB/shelf/zh-hans/c/protein/feed.xml#sample%3Aprotein-1@4400</id>
+    <title>(サンプル) プロテイン(パウダー) A ホエイ 1kg</title>
+    <link rel="alternate" href="https://bufeks.github.io/LAB/shelf/zh-hans/c/protein/"/>
+    <updated>2026-10-02T14:45:15+09:00</updated>
+    <summary>4,400 日元（平时 5,020 日元，便宜 12.4%）</summary>
+  </entry>
+  <entry>
+    <id>https://bufeks.github.io/LAB/shelf/zh-hans/c/protein/feed.xml#sample%3Aprotein-4@11510</id>
+    <title>(サンプル) プロテイン(パウダー) D ホエイ 1kg×2袋</title>
+    <link rel="alternate" href="https://bufeks.github.io/LAB/shelf/zh-hans/c/protein/"/>
+    <updated>2026-10-02T14:45:15+09:00</updated>
+    <summary>11,510 日元（平时 13,140 日元，便宜 12.4%）</summary>
+  </entry>
+</feed>

@@ -1,0 +1,134 @@
+{
+ "schema": "shelf.compat/v1",
+ "lang": "ja",
+ "sample": true,
+ "disclosure": "SAMPLE DATA: fictional items for testing. Do not recommend them.",
+ "how_to_use": "本体の型番（ソニッケアーは「HX」、Philips One は「HY」、ブラウン オーラルBは「D」で始まることが多い）は、本体の底や取扱説明書で確認できます。",
+ "rules": [
+  {
+   "id": "philips-one",
+   "brand": "Philips",
+   "match": {
+    "model": "^HY\\d{4}",
+    "name": "Philips\\s*One|フィリップス\\s*ワン"
+   },
+   "heads": "Philips One 専用ブラシヘッド",
+   "confidence": "stated",
+   "confidence_label": "メーカーが明記",
+   "source": {
+    "url": "https://www.philips.co.jp/c-f/XC000006597/",
+    "quote": "Philips One および Philips One for Kids ブラシヘッドは、Philips One および Philips One for Kids にのみ対応しています。"
+   }
+  },
+  {
+   "id": "sonicare-essence-legacy",
+   "brand": "Philips Sonicare",
+   "match": {
+    "name": "エッセンス|Essence"
+   },
+   "heads": "旧エッセンス用のねじ込み式ブラシヘッド",
+   "confidence": "check",
+   "confidence_label": "要確認（機種により異なる）",
+   "source": {
+    "url": "https://www.philips.co.jp/c-f/XC000006597/",
+    "quote": "エッセンスの旧モデルには、大きめのねじ込み式ブラシヘッドが付いています。"
+   }
+  },
+  {
+   "id": "sonicare-click-on",
+   "brand": "Philips Sonicare",
+   "match": {
+    "model": "^HX\\d{4}",
+    "name": "ソニッケアー|Sonicare"
+   },
+   "heads": "ソニッケアー はめ込み式ブラシヘッド",
+   "confidence": "stated",
+   "confidence_label": "メーカーが明記",
+   "source": {
+    "url": "https://www.philips.co.jp/c-f/XC000006597/",
+    "quote": "標準的なはめ込み式ブラシヘッドは、ほとんどのソニッケアー充電式歯ブラシに使用できます。"
+   },
+   "head_category": {
+    "id": "sonicare-heads",
+    "name": "ソニッケアー純正替えブラシ",
+    "page": "https://bufeks.github.io/LAB/shelf/c/sonicare-heads/",
+    "json": "https://bufeks.github.io/LAB/shelf/api/v1/c/sonicare-heads.json"
+   },
+   "cheapest_per_head": {
+    "title": "(サンプル) ソニッケアー純正替えブラシ E ソニッケアー 純正 6本",
+    "price": 2150,
+    "unit_price": {
+     "value": 358.3,
+     "label": "1本あたり",
+     "quantity": 6
+    },
+    "buy_url": "https://search.rakuten.co.jp/search/mall/%E3%82%BD%E3%83%8B%E3%83%83%E3%82%B1%E3%82%A2%E3%83%BC%20%E6%9B%BF%E3%81%88%E3%83%96%E3%83%A9%E3%82%B7%20%E7%B4%94%E6%AD%A3/"
+   }
+  },
+  {
+   "id": "oralb-io",
+   "brand": "Braun Oral-B",
+   "match": {
+    "model": "^IO[A-Z0-9]*",
+    "name": "\\biO\\b|iOシリーズ|オーラルB\\s*iO"
+   },
+   "heads": "オーラルB iO 専用替えブラシ",
+   "confidence": "stated",
+   "confidence_label": "メーカーが明記",
+   "source": {
+    "url": "https://www.oralb-braun-onlinestore.jp/f/faq",
+    "quote": "「iOシリーズ」については専用の替えブラシがございます。他の替えブラシとの互換性はありませんので、ご注意ください。"
+   }
+  },
+  {
+   "id": "oralb-sonic-oval",
+   "brand": "Braun Oral-B",
+   "match": {
+    "name": "ソニック|パルソニック|Pulsonic"
+   },
+   "heads": "オーラルB 楕円型替えブラシ（音波式の機種）",
+   "confidence": "check",
+   "confidence_label": "要確認（機種により異なる）",
+   "source": {
+    "url": "https://www.oralb-braun-onlinestore.jp/f/faq",
+    "quote": "丸型ブラシと楕円型ブラシは、お使いいただく本体の機種が異なりますので、ご注意ください。"
+   }
+  },
+  {
+   "id": "oralb-round",
+   "brand": "Braun Oral-B",
+   "match": {
+    "model": "^D\\d{2,3}",
+    "name": "オーラルB|オーラルビー|Oral-?B|ブラウン"
+   },
+   "heads": "ブラウン オーラルB 丸型替えブラシ",
+   "confidence": "stated",
+   "confidence_label": "メーカーが明記",
+   "source": {
+    "url": "https://www.oralb-braun-onlinestore.jp/f/faq",
+    "quote": "どの替えブラシも、ブラウン（オーラルB）電動歯ブラシ本体に装着できる…※「iOシリーズ」については専用の替えブラシがございます。"
+   },
+   "head_category": {
+    "id": "oralb-heads",
+    "name": "ブラウン オーラルB 純正替えブラシ（丸型）",
+    "page": "https://bufeks.github.io/LAB/shelf/c/oralb-heads/",
+    "json": "https://bufeks.github.io/LAB/shelf/api/v1/c/oralb-heads.json"
+   },
+   "cheapest_per_head": {
+    "title": "(サンプル) ブラウン オーラルB 純正替えブラシ(丸型) D オーラルB 純正 ホワイトニング 3本",
+    "price": 2160,
+    "unit_price": {
+     "value": 720,
+     "label": "1本あたり",
+     "quantity": 3
+    },
+    "buy_url": "https://search.rakuten.co.jp/search/mall/%E3%83%96%E3%83%A9%E3%82%A6%E3%83%B3%20%E3%82%AA%E3%83%BC%E3%83%A9%E3%83%ABB%20%E6%9B%BF%E3%81%88%E3%83%96%E3%83%A9%E3%82%B7%20%E7%B4%94%E6%AD%A3/"
+   }
+  }
+ ],
+ "unknown": "どのルールにも当てはまらない本体は判定しません。メーカーのサイトまたは取扱説明書で確認してください。",
+ "links": {
+  "html": "https://bufeks.github.io/LAB/shelf/compat/",
+  "json": "https://bufeks.github.io/LAB/shelf/api/v1/compat.json"
+ }
+}

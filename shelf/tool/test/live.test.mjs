@@ -10,6 +10,8 @@ import http from 'node:http';
 import { execFile } from 'node:child_process';
 import { promisify } from 'node:util';
 import { fileURLToPath } from 'node:url';
+import { CATEGORIES } from '../categories.mjs';
+import { sampleItems } from '../sample.mjs';
 
 const run = promisify(execFile);
 const TOOL = path.join(path.dirname(fileURLToPath(import.meta.url)), '..');
@@ -23,6 +25,13 @@ const TITLES = {
   電動歯ブラシ: ['電動歯ブラシ 音波 R1616', '電動歯ブラシ 回転 S1717', '電動歯ブラシ 音波 タイマー T1818', '替えブラシ 4本 電動歯ブラシ用'],
 };
 
+// Categories without hand-written titles above get titles derived from the
+// sample generator, with distinct model numbers so they are not merged.
+for (const c of CATEGORIES) {
+  if (TITLES[c.query]) continue;
+  TITLES[c.query] = sampleItems(c).map((x, i) => `${x.name.replace('(サンプル) ', '')} MX${i}0${c.id.length}`);
+}
+
 function mockRakuten() {
   const server = http.createServer((req, res) => {
     const u = new URL(req.url, 'http://x');
@@ -31,7 +40,7 @@ function mockRakuten() {
     const items = (TITLES[keyword] || []).map((name, i) => ({
       itemName: name,
       itemCode: `shop${i}:${keyword.length}-${i}`,
-      itemPrice: Number(u.searchParams.get('minPrice')) + 1000 * (i + 1),
+      itemPrice: Number(u.searchParams.get('minPrice')) + 100 * (i + 1),
       itemUrl: `https://item.rakuten.co.jp/shop${i}/${i}/`,
       affiliateUrl: aff ? `https://hb.afl.rakuten.co.jp/hgc/${aff}/?pc=${i}` : '',
       shopName: `店${i}`,
@@ -58,6 +67,8 @@ test('live run: real-shaped data, affiliate links, clean audit, guarded history'
     RAKUTEN_ACCESS_KEY: 'key',
     RAKUTEN_AFFILIATE_ID: 'aff123',
     RAKUTEN_ENDPOINT: `http://127.0.0.1:${server.address().port}/search`,
+    RAKUTEN_TRAVEL_ENDPOINT: `http://127.0.0.1:${server.address().port}/travel`,
+    RAKUTEN_BOOKS_ENDPOINT: `http://127.0.0.1:${server.address().port}/books`,
     RAKUTEN_MIN_INTERVAL_MS: '10',
   };
   try {

@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>電動歯ブラシ 替えブラシ互換チェッカー｜SHELF</title>
+<meta name="description" content="本体の型番や商品名から、使える純正替えブラシの種類を判定します。メーカーが公表している互換ルールだけを使い、出典を示します。">
+<link rel="canonical" href="https://bufeks.github.io/LAB/shelf/compat/">
+<link rel="alternate" type="application/json" href="https://bufeks.github.io/LAB/shelf/api/v1/compat.json">
+<link rel="alternate" hreflang="ja" href="https://bufeks.github.io/LAB/shelf/compat/">
+<link rel="alternate" hreflang="en" href="https://bufeks.github.io/LAB/shelf/en/compat/">
+<link rel="alternate" hreflang="zh-Hans" href="https://bufeks.github.io/LAB/shelf/zh-hans/compat/">
+<link rel="alternate" hreflang="zh-Hant" href="https://bufeks.github.io/LAB/shelf/zh-hant/compat/">
+<link rel="alternate" hreflang="ko" href="https://bufeks.github.io/LAB/shelf/ko/compat/">
+<link rel="alternate" hreflang="x-default" href="https://bufeks.github.io/LAB/shelf/en/compat/">
+<link rel="stylesheet" href="../assets/style.css">
+
+</head>
+<body>
+<header class="top"><a class="brand" href="https://bufeks.github.io/LAB/shelf/">SHELF</a><span class="tag">AIエージェントのための買い物データ</span><nav class="langs" aria-label="Languages"><b>日本語</b> <a href="https://bufeks.github.io/LAB/shelf/en/compat/" hreflang="en">English</a> <a href="https://bufeks.github.io/LAB/shelf/zh-hans/compat/" hreflang="zh-Hans">简体中文</a> <a href="https://bufeks.github.io/LAB/shelf/zh-hant/compat/" hreflang="zh-Hant">繁體中文</a> <a href="https://bufeks.github.io/LAB/shelf/ko/compat/" hreflang="ko">한국어</a></nav></header>
+<p class="sample">サンプルデータ表示中：実在の商品ではありません（楽天APIキー設定後に実データへ切り替わります）</p>
+<main>
+<p class="pr">PR・アフィリエイトリンクを含みます</p>
+<h1>電動歯ブラシ 替えブラシ互換チェッカー</h1>
+<p class="lead">本体の型番や商品名から、使える純正替えブラシの種類を判定します。メーカーが公表している互換ルールだけを使い、出典を示します。</p>
+<p>本体の型番（ソニッケアーは「HX」、Philips One は「HY」、ブラウン オーラルBは「D」で始まることが多い）は、本体の底や取扱説明書で確認できます。</p>
+<div class="scroll"><table><thead><tr><th>本体（型番・名称の手がかり）</th><th>使える替えブラシ</th><th>メーカーの記載</th></tr></thead><tbody>
+<tr><td>Philips<br><small><code>^HY\d{4} / Philips\s*One|フィリップス\s*ワン</code></small></td>
+<td><strong>Philips One 専用ブラシヘッド</strong><br><span class="verdict">メーカーが明記</span></td>
+<td><small>“Philips One および Philips One for Kids ブラシヘッドは、Philips One および Philips One for Kids にのみ対応しています。”</small><br><a href="https://www.philips.co.jp/c-f/XC000006597/">www.philips.co.jp</a></td></tr>
+<tr><td>Philips Sonicare<br><small><code>エッセンス|Essence</code></small></td>
+<td><strong>旧エッセンス用のねじ込み式ブラシヘッド</strong><br><span class="verdict">要確認（機種により異なる）</span></td>
+<td><small>“エッセンスの旧モデルには、大きめのねじ込み式ブラシヘッドが付いています。”</small><br><a href="https://www.philips.co.jp/c-f/XC000006597/">www.philips.co.jp</a></td></tr>
+<tr><td>Philips Sonicare<br><small><code>^HX\d{4} / ソニッケアー|Sonicare</code></small></td>
+<td><strong>ソニッケアー はめ込み式ブラシヘッド</strong><br><span class="verdict">メーカーが明記</span><br><a href="https://bufeks.github.io/LAB/shelf/c/sonicare-heads/">ソニッケアー純正替えブラシ</a><br><small>純正品の最安は1本あたり¥358</small></td>
+<td><small>“標準的なはめ込み式ブラシヘッドは、ほとんどのソニッケアー充電式歯ブラシに使用できます。”</small><br><a href="https://www.philips.co.jp/c-f/XC000006597/">www.philips.co.jp</a></td></tr>
+<tr><td>Braun Oral-B<br><small><code>^IO[A-Z0-9]* / \biO\b|iOシリーズ|オーラルB\s*iO</code></small></td>
+<td><strong>オーラルB iO 専用替えブラシ</strong><br><span class="verdict">メーカーが明記</span></td>
+<td><small>“「iOシリーズ」については専用の替えブラシがございます。他の替えブラシとの互換性はありませんので、ご注意ください。”</small><br><a href="https://www.oralb-braun-onlinestore.jp/f/faq">www.oralb-braun-onlinestore.jp</a></td></tr>
+<tr><td>Braun Oral-B<br><small><code>ソニック|パルソニック|Pulsonic</code></small></td>
+<td><strong>オーラルB 楕円型替えブラシ（音波式の機種）</strong><br><span class="verdict">要確認（機種により異なる）</span></td>
+<td><small>“丸型ブラシと楕円型ブラシは、お使いいただく本体の機種が異なりますので、ご注意ください。”</small><br><a href="https://www.oralb-braun-onlinestore.jp/f/faq">www.oralb-braun-onlinestore.jp</a></td></tr>
+<tr><td>Braun Oral-B<br><small><code>^D\d{2,3} / オーラルB|オーラルビー|Oral-?B|ブラウン</code></small></td>
+<td><strong>ブラウン オーラルB 丸型替えブラシ</strong><br><span class="verdict">メーカーが明記</span><br><a href="https://bufeks.github.io/LAB/shelf/c/oralb-heads/">ブラウン オーラルB 純正替えブラシ（丸型）</a><br><small>純正品の最安は1本あたり¥720</small></td>
+<td><small>“どの替えブラシも、ブラウン（オーラルB）電動歯ブラシ本体に装着できる…※「iOシリーズ」については専用の替えブラシがございます。”</small><br><a href="https://www.oralb-braun-onlinestore.jp/f/faq">www.oralb-braun-onlinestore.jp</a></td></tr>
+</tbody></table></div>
+<p><small>どのルールにも当てはまらない本体は判定しません。メーカーのサイトまたは取扱説明書で確認してください。</small></p>
+<p class="data">このページのデータ: <a href="https://bufeks.github.io/LAB/shelf/api/v1/compat.json">JSON</a> ・ MCP: <code>check_compatibility</code></p>
+</main>
+<footer>
+<p>PR: 購入リンクはアフィリエイトリンクです（楽天アフィリエイト、バリューコマース経由のYahoo!ショッピング）。リンク経由で購入されると運営者に紹介料が入りますが、価格は変わらず、順位は公開している計算式だけで決まり、紹介料の率は順位にもストアの選び方にも影響しません。</p>
+<p><a href="https://developers.rakuten.com/">Supported by Rakuten Developers</a> ・ <span style="margin:15px 15px 15px 15px"><a href="https://developer.yahoo.co.jp/sitemap/">Webサービス by Yahoo! JAPAN</a></span> ・ <a href="https://bufeks.github.io/LAB/shelf/llms.txt">llms.txt</a> ・ <a href="https://bufeks.github.io/LAB/shelf/openapi.json">OpenAPI</a> ・ <a href="https://bufeks.github.io/LAB/shelf/about/">AIエージェント向け利用方法</a></p>
+</footer>
+</body>
+</html>

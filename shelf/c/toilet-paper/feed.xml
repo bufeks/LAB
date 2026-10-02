@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="ja">
+  <id>https://bufeks.github.io/LAB/shelf/c/toilet-paper/feed.xml</id>
+  <title>SHELF — トイレットペーパー: いつもより安い商品</title>
+  <link rel="self" href="https://bufeks.github.io/LAB/shelf/c/toilet-paper/feed.xml"/>
+  <link rel="alternate" href="https://bufeks.github.io/LAB/shelf/c/toilet-paper/"/>
+  <updated>2026-10-02T14:45:15+09:00</updated>
+  <author><name>SHELF</name></author>
+  <entry>
+    <id>https://bufeks.github.io/LAB/shelf/c/toilet-paper/feed.xml#sample%3Atoilet-paper-4@4130</id>
+    <title>(サンプル) トイレットペーパー D 3倍巻き 8ロール 150m シングル</title>
+    <link rel="alternate" href="https://bufeks.github.io/LAB/shelf/c/toilet-paper/"/>
+    <updated>2026-10-02T14:45:15+09:00</updated>
+    <summary>¥4,130（いつもは¥4,710、12.3%安い）</summary>
+  </entry>
+  <entry>
+    <id>https://bufeks.github.io/LAB/shelf/c/toilet-paper/feed.xml#sample%3Atoilet-paper-1@4190</id>
+    <title>(サンプル) トイレットペーパー A 12ロール 50m ダブル</title>
+    <link rel="alternate" href="https://bufeks.github.io/LAB/shelf/c/toilet-paper/"/>
+    <updated>2026-10-02T14:45:15+09:00</updated>
+    <summary>¥4,190（いつもは¥4,780、12.3%安い）</summary>
+  </entry>
+</feed>

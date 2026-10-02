@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+  <id>https://bufeks.github.io/LAB/shelf/en/c/air-purifier/feed.xml</id>
+  <title>SHELF — Air purifiers: Cheaper than usual</title>
+  <link rel="self" href="https://bufeks.github.io/LAB/shelf/en/c/air-purifier/feed.xml"/>
+  <link rel="alternate" href="https://bufeks.github.io/LAB/shelf/en/c/air-purifier/"/>
+  <updated>2026-10-02T14:45:15+09:00</updated>
+  <author><name>SHELF</name></author>
+  <entry>
+    <id>https://bufeks.github.io/LAB/shelf/en/c/air-purifier/feed.xml#sample%3Aair-purifier-4@21780</id>
+    <title>(サンプル) 空気清浄機 D 8畳 HEPA</title>
+    <link rel="alternate" href="https://bufeks.github.io/LAB/shelf/en/c/air-purifier/"/>
+    <updated>2026-10-02T14:45:15+09:00</updated>
+    <summary>¥21,780 (usually ¥24,860, 12.4% lower)</summary>
+  </entry>
+  <entry>
+    <id>https://bufeks.github.io/LAB/shelf/en/c/air-purifier/feed.xml#sample%3Aair-purifier-1@22200</id>
+    <title>(サンプル) 空気清浄機 A スーパーSALE 25畳 HEPA</title>
+    <link rel="alternate" href="https://bufeks.github.io/LAB/shelf/en/c/air-purifier/"/>
+    <updated>2026-10-02T14:45:15+09:00</updated>
+    <summary>¥22,200 (usually ¥25,310, 12.3% lower)</summary>
+  </entry>
+</feed>

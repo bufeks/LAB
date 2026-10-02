@@ -1,11 +1,11 @@
 {
  "categoryId": "humidifier",
- "date": "2026-09-30",
- "fetchedAt": "2026-09-30T01:01:12+09:00",
+ "date": "2026-10-02",
+ "fetchedAt": "2026-10-02T14:45:15+09:00",
  "items": [
   {
    "id": "sample:humidifier-6",
-   "source": "sample",
+   "source": "rakuten",
    "name": "(サンプル) 加湿器 F 超音波式 アロマ対応 8畳",
    "caption": "",
    "shop": "サンプルショップ",
@@ -26,12 +26,13 @@
     "room_tatami": 8,
     "type": "ultrasonic"
    },
+   "claimed": null,
    "otherOffers": [],
    "rank": 1,
    "priceStats": {
     "points": 31,
     "windowDays": 31,
-    "firstSeen": "2026-08-31",
+    "firstSeen": "2026-09-02",
     "min90": 9280,
     "median90": 9560,
     "max90": 10060,
@@ -39,30 +40,30 @@
    },
    "priceWeekly": [
     [
-     "2026-08-31",
+     "2026-09-04",
      9410
     ],
     [
-     "2026-09-04",
+     "2026-09-11",
      9300
     ],
     [
-     "2026-09-10",
+     "2026-09-18",
      9300
     ],
     [
-     "2026-09-22",
+     "2026-09-25",
      9340
     ],
     [
-     "2026-09-29",
+     "2026-10-02",
      9280
     ]
    ]
   },
   {
    "id": "sample:humidifier-2",
-   "source": "sample",
+   "source": "rakuten",
    "name": "(サンプル) 加湿器 B 気化式 18畳 700mL/h タンク4.2L",
    "caption": "",
    "shop": "サンプルショップ",
@@ -78,19 +79,20 @@
    "available": true,
    "title": "(サンプル) 加湿器 B 気化式 18畳 700mL/h タンク4.2L",
    "variants": false,
-   "score": 4.617,
+   "score": 4.614,
    "facets": {
     "rated_ml_h": 700,
     "room_tatami": 18,
     "tank_l": 4.2,
     "type": "evaporative"
    },
+   "claimed": null,
    "otherOffers": [],
    "rank": 2,
    "priceStats": {
     "points": 31,
     "windowDays": 31,
-    "firstSeen": "2026-08-31",
+    "firstSeen": "2026-09-02",
     "min90": 15090,
     "median90": 15450,
     "max90": 15950,
@@ -98,30 +100,30 @@
    },
    "priceWeekly": [
     [
-     "2026-09-02",
+     "2026-09-04",
      15090
     ],
     [
-     "2026-09-03",
+     "2026-09-11",
      15160
     ],
     [
-     "2026-09-15",
+     "2026-09-18",
      15150
     ],
     [
-     "2026-09-23",
+     "2026-09-25",
      15150
     ],
     [
-     "2026-09-28",
+     "2026-10-02",
      15210
     ]
    ]
   },
   {
    "id": "sample:humidifier-3",
-   "source": "sample",
+   "source": "rakuten",
    "name": "(サンプル) 加湿器 C 超音波式 6畳 300mL/h タンク2.5L",
    "caption": "",
    "shop": "サンプルショップ",
@@ -144,12 +146,13 @@
     "tank_l": 2.5,
     "type": "ultrasonic"
    },
+   "claimed": null,
    "otherOffers": [],
    "rank": 3,
    "priceStats": {
     "points": 31,
     "windowDays": 31,
-    "firstSeen": "2026-08-31",
+    "firstSeen": "2026-09-02",
     "min90": 7800,
     "median90": 8040,
     "max90": 8460,
@@ -157,30 +160,30 @@
    },
    "priceWeekly": [
     [
-     "2026-08-31",
+     "2026-09-04",
      7910
     ],
     [
-     "2026-09-04",
+     "2026-09-11",
      7820
     ],
     [
-     "2026-09-13",
+     "2026-09-18",
      7920
     ],
     [
-     "2026-09-22",
+     "2026-09-25",
      7850
     ],
     [
-     "2026-09-25",
+     "2026-10-02",
      7800
     ]
    ]
   },
   {
    "id": "sample:humidifier-5",
-   "source": "sample",
+   "source": "rakuten",
    "name": "(サンプル) 加湿器 E スチーム式 10畳 タンク2.2L",
    "caption": "",
    "shop": "サンプルショップ",
@@ -196,18 +199,19 @@
    "available": true,
    "title": "(サンプル) 加湿器 E スチーム式 10畳 タンク2.2L",
    "variants": false,
-   "score": 4.093,
+   "score": 4.091,
    "facets": {
     "room_tatami": 10,
     "tank_l": 2.2,
     "type": "steam"
    },
+   "claimed": null,
    "otherOffers": [],
    "rank": 4,
    "priceStats": {
     "points": 31,
     "windowDays": 31,
-    "firstSeen": "2026-08-31",
+    "firstSeen": "2026-09-02",
     "min90": 4190,
     "median90": 4310,
     "max90": 4450,
@@ -215,97 +219,38 @@
    },
    "priceWeekly": [
     [
-     "2026-09-02",
+     "2026-09-04",
      4210
     ],
     [
-     "2026-09-08",
+     "2026-09-11",
      4230
     ],
     [
-     "2026-09-11",
+     "2026-09-18",
      4190
     ],
     [
-     "2026-09-23",
+     "2026-09-25",
      4270
     ],
     [
-     "2026-09-27",
+     "2026-10-02",
      4220
     ]
    ]
   },
   {
-   "id": "sample:humidifier-4",
-   "source": "sample",
-   "name": "(サンプル) 加湿器 D ハイブリッド 14畳 600mL/h タンク4.0L",
-   "caption": "",
-   "shop": "サンプルショップ",
-   "price": 7250,
-   "shippingIncluded": false,
-   "pointRate": 1,
-   "rating": 4.03,
-   "reviews": 3768,
-   "productUrl": "https://search.rakuten.co.jp/search/mall/%E5%8A%A0%E6%B9%BF%E5%99%A8/",
-   "buyUrl": "https://search.rakuten.co.jp/search/mall/%E5%8A%A0%E6%B9%BF%E5%99%A8/",
-   "affiliate": false,
-   "image": null,
-   "available": true,
-   "title": "(サンプル) 加湿器 D ハイブリッド 14畳 600mL/h タンク4.0L",
-   "variants": false,
-   "score": 4.033,
-   "facets": {
-    "rated_ml_h": 600,
-    "room_tatami": 14,
-    "tank_l": 4,
-    "type": "hybrid"
-   },
-   "otherOffers": [],
-   "rank": 5,
-   "priceStats": {
-    "points": 31,
-    "windowDays": 31,
-    "firstSeen": "2026-08-31",
-    "min90": 7250,
-    "median90": 8280,
-    "max90": 8510,
-    "verdict": "lowest_observed"
-   },
-   "priceWeekly": [
-    [
-     "2026-08-31",
-     8210
-    ],
-    [
-     "2026-09-05",
-     8130
-    ],
-    [
-     "2026-09-15",
-     8110
-    ],
-    [
-     "2026-09-19",
-     8120
-    ],
-    [
-     "2026-09-30",
-     7250
-    ]
-   ]
-  },
-  {
-   "id": "sample:humidifier-1",
-   "source": "sample",
+   "id": "sample-y:humidifier-1",
+   "source": "yahoo",
    "name": "(サンプル) 加湿器 A スチーム式 木造8畳/プレハブ13畳 480mL/h タンク3.0L",
    "caption": "",
-   "shop": "サンプルショップ",
-   "price": 15290,
+   "shop": "サンプルストア",
+   "price": 14220,
    "shippingIncluded": true,
    "pointRate": 1,
    "rating": 3.98,
-   "reviews": 272,
+   "reviews": 91,
    "productUrl": "https://search.rakuten.co.jp/search/mall/%E5%8A%A0%E6%B9%BF%E5%99%A8/",
    "buyUrl": "https://search.rakuten.co.jp/search/mall/%E5%8A%A0%E6%B9%BF%E5%99%A8/",
    "affiliate": false,
@@ -313,58 +258,141 @@
    "available": true,
    "title": "(サンプル) 加湿器 A スチーム式 木造8畳/プレハブ13畳 480mL/h タンク3.0L",
    "variants": false,
-   "score": 4.026,
+   "score": 4.074,
    "facets": {
     "rated_ml_h": 480,
     "room_tatami": 13,
     "tank_l": 3,
     "type": "steam"
    },
-   "otherOffers": [],
-   "rank": 6,
+   "claimed": null,
+   "otherOffers": [
+    {
+     "id": "sample:humidifier-1",
+     "store": "rakuten",
+     "shop": "サンプルショップ",
+     "price": 15290,
+     "shippingIncluded": true,
+     "buyUrl": "https://search.rakuten.co.jp/search/mall/%E5%8A%A0%E6%B9%BF%E5%99%A8/",
+     "affiliate": false
+    }
+   ],
+   "rank": 5,
    "priceStats": {
     "points": 31,
     "windowDays": 31,
-    "firstSeen": "2026-08-31",
-    "min90": 15290,
-    "median90": 17440,
-    "max90": 18030,
+    "firstSeen": "2026-09-02",
+    "min90": 14220,
+    "median90": 16290,
+    "max90": 16730,
     "verdict": "lowest_observed"
    },
    "priceWeekly": [
     [
-     "2026-08-31",
-     17310
-    ],
-    [
-     "2026-09-03",
-     17140
+     "2026-09-04",
+     16100
     ],
     [
      "2026-09-11",
-     17340
+     16020
     ],
     [
-     "2026-09-23",
-     17090
+     "2026-09-18",
+     15930
     ],
     [
-     "2026-09-30",
-     15290
+     "2026-09-25",
+     15970
+    ],
+    [
+     "2026-10-02",
+     14220
+    ]
+   ]
+  },
+  {
+   "id": "sample-y:humidifier-2",
+   "source": "yahoo",
+   "name": "(サンプル) 加湿器 D ハイブリッド 14畳 600mL/h タンク4.0L",
+   "caption": "",
+   "shop": "サンプルストア",
+   "price": 7540,
+   "shippingIncluded": true,
+   "pointRate": 1,
+   "rating": 4.03,
+   "reviews": 1256,
+   "productUrl": "https://search.rakuten.co.jp/search/mall/%E5%8A%A0%E6%B9%BF%E5%99%A8/",
+   "buyUrl": "https://search.rakuten.co.jp/search/mall/%E5%8A%A0%E6%B9%BF%E5%99%A8/",
+   "affiliate": false,
+   "image": null,
+   "available": true,
+   "title": "(サンプル) 加湿器 D ハイブリッド 14畳 600mL/h タンク4.0L",
+   "variants": false,
+   "score": 4.038,
+   "facets": {
+    "rated_ml_h": 600,
+    "room_tatami": 14,
+    "tank_l": 4,
+    "type": "hybrid"
+   },
+   "claimed": null,
+   "otherOffers": [
+    {
+     "id": "sample:humidifier-4",
+     "store": "rakuten",
+     "shop": "サンプルショップ",
+     "price": 7250,
+     "shippingIncluded": false,
+     "buyUrl": "https://search.rakuten.co.jp/search/mall/%E5%8A%A0%E6%B9%BF%E5%99%A8/",
+     "affiliate": false
+    }
+   ],
+   "rank": 6,
+   "priceStats": {
+    "points": 31,
+    "windowDays": 31,
+    "firstSeen": "2026-09-02",
+    "min90": 7320,
+    "median90": 7500,
+    "max90": 7750,
+    "verdict": "usual"
+   },
+   "priceWeekly": [
+    [
+     "2026-09-04",
+     7380
+    ],
+    [
+     "2026-09-11",
+     7350
+    ],
+    [
+     "2026-09-18",
+     7320
+    ],
+    [
+     "2026-09-25",
+     7520
+    ],
+    [
+     "2026-10-02",
+     7330
     ]
    ]
   }
  ],
  "stats": {
-  "candidates": 6,
+  "candidates": 8,
   "ranked": 6,
-  "rejected": {},
-  "meanRating": 4.27,
+  "rejected": {
+   "duplicate": 2
+  },
+  "meanRating": 4.25,
   "priorWeight": 50
  },
  "picks": {
   "best": "sample:humidifier-6",
   "budget": "sample:humidifier-3",
-  "deal": "sample:humidifier-4"
+  "deal": "sample-y:humidifier-1"
  }
 }

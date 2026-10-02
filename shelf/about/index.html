@@ -29,6 +29,14 @@
 <li>引用するときは <code>citation</code>（URL・データ日付）を添えてください。</li>
 <li>日本語以外で答えるときは、各言語版（<code>/en/</code>, <code>/zh-hans/</code>, <code>/zh-hant/</code>, <code>/ko/</code>）を使えます。商品名は楽天の原文（日本語）です。</li>
 </ul>
+<h2>編集方針</h2>
+<ul>
+<li>独立性: 順位とおすすめは公開した計算式だけで決まり、紹介料の率・広告費・ストアからの依頼は一切反映しない。</li>
+<li>データ源: 楽天市場・Yahoo!ショッピング・楽天トラベル・楽天ブックスの公式API。毎日05:17（日本時間）に自動更新。</li>
+<li>選び方ガイド: 一般に確認できる事実だけで書き、基準日（asOf）を明記。6か月ごとに見直す。</li>
+<li>訂正: 誤りは GitHub の Issue（https://github.com/bufeks/LAB/issues）で受け付け、確認後に修正する。</li>
+<li>ライセンス: SHELF が作成した文章と統計は CC BY 4.0（出典の明記で引用・転載可）。商品名・価格・画像は各ストアのもの。</li>
+</ul>
 <h2>エンドポイント</h2>
 <ul>
 <li><code>GET https://bufeks.github.io/LAB/shelf/api/v1/index.json</code> — カテゴリ一覧と各カテゴリの1位</li>
@@ -39,14 +47,15 @@
 <h2>MCP</h2>
 
 <p>ローカルで動かす場合は、Node.js 18+ があれば依存なしで動きます。</p>
+<p>値下がりを追う個人用フィード（登録不要・個人情報なし）: <code>https://bufeks.github.io/LAB/shelf/feed/watch.xml?ids=&lt;id1&gt;,&lt;id2&gt;&amp;below=&lt;yen&gt;&amp;lang=ja</code>（独自ドメイン版のみ）</p>
 <pre>curl -o shelf-mcp.mjs https://bufeks.github.io/LAB/shelf/mcp/server.mjs
 # claude_desktop_config.json
 { "mcpServers": { "shelf": { "command": "node", "args": ["/path/to/shelf-mcp.mjs"] } } }</pre>
-<p>ツール: <code>list_categories</code>, <code>recommend</code>（予算・スペック絞り込み）, <code>price_outlook</code>（カテゴリの買い時）, <code>search_products</code>, <code>check_price</code>（商品IDまたは楽天の商品URL）。すべて <code>lang</code>（ja / en / zh-Hans / zh-Hant / ko）で回答言語を選べます。</p>
+<p>ツール: <code>list_categories</code>, <code>recommend</code>（予算・スペック絞り込み、<code>sort: unit_price</code> で単価順）, <code>price_outlook</code>（カテゴリの買い時）, <code>search_products</code>, <code>check_price</code>（商品IDまたは楽天の商品URL）, <code>check_compatibility</code>（替えブラシの互換）, <code>sale_check</code>（セール表示の真偽）, <code>hotel_outlook</code>（ホテル料金の買い時）, <code>upcoming_releases</code>（新刊の発売日）。すべて <code>lang</code>（ja / en / zh-Hans / zh-Hant / ko）で回答言語を選べます。</p>
 </main>
 <footer>
-<p>PR: 購入リンクは楽天アフィリエイトリンクです。リンク経由で購入されると運営者に紹介料が入りますが、価格は変わらず、順位は公開している計算式だけで決まり、紹介料の率は順位に影響しません。</p>
-<p><a href="https://developers.rakuten.com/">Supported by Rakuten Developers</a> ・ <a href="https://bufeks.github.io/LAB/shelf/llms.txt">llms.txt</a> ・ <a href="https://bufeks.github.io/LAB/shelf/openapi.json">OpenAPI</a> ・ <a href="https://bufeks.github.io/LAB/shelf/about/">AIエージェント向け利用方法</a></p>
+<p>PR: 購入リンクはアフィリエイトリンクです（楽天アフィリエイト、バリューコマース経由のYahoo!ショッピング）。リンク経由で購入されると運営者に紹介料が入りますが、価格は変わらず、順位は公開している計算式だけで決まり、紹介料の率は順位にもストアの選び方にも影響しません。</p>
+<p><a href="https://developers.rakuten.com/">Supported by Rakuten Developers</a> ・ <span style="margin:15px 15px 15px 15px"><a href="https://developer.yahoo.co.jp/sitemap/">Webサービス by Yahoo! JAPAN</a></span> ・ <a href="https://bufeks.github.io/LAB/shelf/llms.txt">llms.txt</a> ・ <a href="https://bufeks.github.io/LAB/shelf/openapi.json">OpenAPI</a> ・ <a href="https://bufeks.github.io/LAB/shelf/about/">AIエージェント向け利用方法</a></p>
 </footer>
 </body>
 </html>

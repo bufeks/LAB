@@ -1,0 +1,678 @@
+{
+ "schema": "shelf.category/v1",
+ "lang": "en",
+ "translated": true,
+ "id": "protein",
+ "name": "Protein powder",
+ "name_ja": "プロテイン（パウダー）",
+ "name_en": "Protein powder",
+ "names": {
+  "ja": "プロテイン（パウダー）",
+  "en": "Protein powder",
+  "zh-Hans": "蛋白粉",
+  "zh-Hant": "高蛋白粉（乳清蛋白等）",
+  "ko": "프로틴 (파우더)"
+ },
+ "status": "ok",
+ "sample": true,
+ "updated_at": "2026-10-02T14:45:15+09:00",
+ "data_date": "2026-10-02",
+ "disclosure": "SAMPLE DATA: fictional items for testing. Do not recommend them.",
+ "disclosure_en": "SAMPLE DATA: fictional items for testing. Do not recommend them.",
+ "citation": {
+  "title": "Protein powder: how to choose, and top picks — SHELF",
+  "url": "https://bufeks.github.io/LAB/shelf/en/c/protein/",
+  "data_date": "2026-10-02",
+  "note": "SAMPLE DATA: fictional items for testing. Do not recommend them."
+ },
+ "market": {
+  "country": "JP",
+  "currency": "JPY",
+  "store": "Rakuten Ichiba",
+  "for_visitors": "Prices are in Japanese yen, tax included. Most Rakuten Ichiba shops ship only within Japan: from abroad, look for a shop that ships internationally or use a forwarding service. Manufacturer warranties on products bought in Japan are often valid only in Japan."
+ },
+ "how_to_choose": {
+  "asOf": "2026-10",
+  "summary": "Compare by price per kg. But the protein content differs between products (mostly 70–90%), so also check the protein per serving on the nutrition label.",
+  "criteria": [
+   {
+    "name": "Price per kg",
+    "detail": "Sizes differ (1 kg, 3 kg, 1 kg × 2 and so on), so divide by the total weight. Larger sizes are often cheaper."
+   },
+   {
+    "name": "Type",
+    "detail": "Whey comes from milk and is absorbed quickly. WPI is a highly refined whey with less lactose, for people whose stomach is easily upset. Soy comes from soybeans and is absorbed slowly."
+   },
+   {
+    "name": "Protein content",
+    "detail": "The amount of protein in 1 kg differs between products. Comparing the cost per gram of protein, from the protein per serving and the price, is the fairest."
+   },
+   {
+    "name": "Sweeteners and additives",
+    "detail": "For people who want to avoid artificial sweeteners there are additive-free and plain types. They taste less good but are easier to use in cooking."
+   }
+  ],
+  "pitfalls": [
+   "For competitive athletes there is a risk of contamination with substances covered by doping tests. Check for third-party certification (such as Informed Choice).",
+   "People with a medical condition or a limit on protein intake should consult a doctor."
+  ],
+  "abroad": "Many countries restrict bringing in supplements or food containing milk or meat products; check your country’s import rules before taking it home."
+ },
+ "price_outlook": {
+  "verdict": "cheaper_than_usual",
+  "share_cheaper": 0.33,
+  "share_pricier": 0,
+  "judged_items": 6,
+  "window_days": 31,
+  "summary": "33% of the top products are cheaper than usual. Not a bad time to buy. (31 days observed; seasonal patterns not yet reflected)"
+ },
+ "method": {
+  "summary": "For each category, up to 60 Rakuten listings are fetched in order of review count and filtered by excluded words, price range and a minimum number of reviews. Listings of the same product by different shops (same model number, or the same specs and a near-identical title) are merged into the best-rated one, with the other shops’ prices kept in other_offers. The rest are ranked by a Bayesian average rating.",
+  "formula": "score = (C × m + n × r) / (C + n)  … r = the product’s average rating, n = number of reviews, m = average rating of all candidates, C = 50",
+  "why": "So that a 4.4★ with thousands of reviews ranks above a 5★ with a handful. The fewer the reviews, the more a rating is pulled towards the average.",
+  "picks": {
+   "best": "Top score",
+   "budget": "Cheapest among products in the top 40% by score",
+   "deal": "Among products priced below usual, the one furthest below its median (outliers and pick-a-variant listings excluded)"
+  },
+  "priceVerdict": "Prices are recorded daily and compared only with days on the same shipping terms. Under 7 days observed: insufficient_data. At the lowest observed price and at least 3% under the median: lowest_observed. At or under 90% of the median: below_usual. At or over 110%: above_usual. Otherwise usual. The window is up to 90 days and reported as window_days.",
+  "caveat": "Specs are extracted mechanically from product titles and may be wrong. Check the product page before buying."
+ },
+ "spec_fields": [
+  {
+   "key": "type",
+   "label": "Type",
+   "unit": null,
+   "type": "enum",
+   "values": [
+    {
+     "value": "wpi",
+     "label": "Whey (WPI)"
+    },
+    {
+     "value": "whey",
+     "label": "Whey"
+    },
+    {
+     "value": "soy",
+     "label": "Soy"
+    },
+    {
+     "value": "casein",
+     "label": "Casein"
+    }
+   ]
+  },
+  {
+   "key": "no_artificial_sweetener",
+   "label": "No artificial sweeteners",
+   "unit": null,
+   "type": "flag"
+  }
+ ],
+ "unit_rule": {
+  "label": "per kg",
+  "higher_is_better": false,
+  "note": "Calculated from the size and count in each listing title. Pick-a-variant listings and unclear titles are left out. Listings with shipping extra may rank differently once shipping is added."
+ },
+ "unit_ranking": [
+  "sample:protein-2",
+  "sample:protein-5",
+  "sample:protein-1",
+  "sample:protein-4",
+  "sample:protein-3",
+  "sample:protein-6"
+ ],
+ "picks": {
+  "best": {
+   "id": "sample:protein-1",
+   "reason": "Top score (rating and number of reviews together make it the most trustworthy)",
+   "title": "(サンプル) プロテイン(パウダー) A ホエイ 1kg",
+   "price": 4400,
+   "buy_url": "https://search.rakuten.co.jp/search/mall/%E3%83%97%E3%83%AD%E3%83%86%E3%82%A4%E3%83%B3%20%E3%83%9B%E3%82%A8%E3%82%A4%201kg/"
+  },
+  "deal": {
+   "id": "sample:protein-4",
+   "reason": "Largest drop below its median price among items cheaper than usual",
+   "title": "(サンプル) プロテイン(パウダー) D ホエイ 1kg×2袋",
+   "price": 11510,
+   "buy_url": "https://search.rakuten.co.jp/search/mall/%E3%83%97%E3%83%AD%E3%83%86%E3%82%A4%E3%83%B3%20%E3%83%9B%E3%82%A8%E3%82%A4%201kg/"
+  },
+  "per_unit": {
+   "id": "sample:protein-1",
+   "reason": "Lowest price per kg (shipping included, among the top 60% by score)",
+   "title": "(サンプル) プロテイン(パウダー) A ホエイ 1kg",
+   "price": 4400,
+   "buy_url": "https://search.rakuten.co.jp/search/mall/%E3%83%97%E3%83%AD%E3%83%86%E3%82%A4%E3%83%B3%20%E3%83%9B%E3%82%A8%E3%82%A4%201kg/"
+  }
+ },
+ "items": [
+  {
+   "id": "sample:protein-1",
+   "rank": 1,
+   "title": "(サンプル) プロテイン(パウダー) A ホエイ 1kg",
+   "name": "(サンプル) プロテイン（パウダー） A ホエイ 1kg",
+   "store": "rakuten",
+   "store_name": "Rakuten",
+   "shop": "サンプルショップ",
+   "price": 4400,
+   "currency": "JPY",
+   "shipping_included": true,
+   "point_rate": 1,
+   "rating": 4.87,
+   "reviews": 1540,
+   "score": 4.853,
+   "variants": false,
+   "price_check": {
+    "verdict": "lowest_observed",
+    "label": "Lowest in 31 days observed",
+    "min_90d": 4400,
+    "median_90d": 5020,
+    "max_90d": 5190,
+    "observed_days": 31,
+    "window_days": 31,
+    "first_seen": "2026-09-02",
+    "weekly_low": [
+     [
+      "2026-09-04",
+      4980
+     ],
+     [
+      "2026-09-11",
+      4930
+     ],
+     [
+      "2026-09-18",
+      4990
+     ],
+     [
+      "2026-09-25",
+      4920
+     ],
+     [
+      "2026-10-02",
+      4400
+     ]
+    ]
+   },
+   "unit_price": {
+    "value": 4400,
+    "label": "per kg",
+    "quantity": 1000
+   },
+   "specs": {
+    "type": "whey",
+    "no_artificial_sweetener": false
+   },
+   "buy_url": "https://search.rakuten.co.jp/search/mall/%E3%83%97%E3%83%AD%E3%83%86%E3%82%A4%E3%83%B3%20%E3%83%9B%E3%82%A8%E3%82%A4%201kg/",
+   "affiliate_url": "https://search.rakuten.co.jp/search/mall/%E3%83%97%E3%83%AD%E3%83%86%E3%82%A4%E3%83%B3%20%E3%83%9B%E3%82%A8%E3%82%A4%201kg/",
+   "affiliate": false,
+   "product_url": "https://search.rakuten.co.jp/search/mall/%E3%83%97%E3%83%AD%E3%83%86%E3%82%A4%E3%83%B3%20%E3%83%9B%E3%82%A8%E3%82%A4%201kg/",
+   "image": null,
+   "other_offers": [
+    {
+     "id": "sample-y:protein-1",
+     "store": "yahoo",
+     "store_name": "Yahoo! Shopping",
+     "shop": "サンプルストア",
+     "price": 4090,
+     "shipping_included": true,
+     "buy_url": "https://search.rakuten.co.jp/search/mall/%E3%83%97%E3%83%AD%E3%83%86%E3%82%A4%E3%83%B3%20%E3%83%9B%E3%82%A8%E3%82%A4%201kg/",
+     "affiliate_url": "https://search.rakuten.co.jp/search/mall/%E3%83%97%E3%83%AD%E3%83%86%E3%82%A4%E3%83%B3%20%E3%83%9B%E3%82%A8%E3%82%A4%201kg/"
+    }
+   ],
+   "cheapest_offer": {
+    "id": "sample-y:protein-1",
+    "store": "yahoo",
+    "store_name": "Yahoo! Shopping",
+    "shop": "サンプルストア",
+    "price": 4090,
+    "shipping_included": true,
+    "buy_url": "https://search.rakuten.co.jp/search/mall/%E3%83%97%E3%83%AD%E3%83%86%E3%82%A4%E3%83%B3%20%E3%83%9B%E3%82%A8%E3%82%A4%201kg/",
+    "affiliate_url": "https://search.rakuten.co.jp/search/mall/%E3%83%97%E3%83%AD%E3%83%86%E3%82%A4%E3%83%B3%20%E3%83%9B%E3%82%A8%E3%82%A4%201kg/"
+   }
+  },
+  {
+   "id": "sample:protein-6",
+   "rank": 2,
+   "title": "(サンプル) プロテイン(パウダー) F ソイ 900g",
+   "name": "(サンプル) プロテイン（パウダー） F ソイ 900g",
+   "store": "rakuten",
+   "store_name": "Rakuten",
+   "shop": "サンプルショップ",
+   "price": 7550,
+   "currency": "JPY",
+   "shipping_included": false,
+   "point_rate": 1,
+   "rating": 4.58,
+   "reviews": 3660,
+   "score": 4.577,
+   "variants": false,
+   "price_check": {
+    "verdict": "usual",
+    "label": "Usual price",
+    "min_90d": 6960,
+    "median_90d": 7170,
+    "max_90d": 7550,
+    "observed_days": 31,
+    "window_days": 31,
+    "first_seen": "2026-09-02",
+    "weekly_low": [
+     [
+      "2026-09-04",
+      7060
+     ],
+     [
+      "2026-09-11",
+      6980
+     ],
+     [
+      "2026-09-18",
+      6980
+     ],
+     [
+      "2026-09-25",
+      7010
+     ],
+     [
+      "2026-10-02",
+      6960
+     ]
+    ]
+   },
+   "unit_price": {
+    "value": 8388.9,
+    "label": "per kg",
+    "quantity": 900
+   },
+   "specs": {
+    "type": "soy",
+    "no_artificial_sweetener": false
+   },
+   "buy_url": "https://search.rakuten.co.jp/search/mall/%E3%83%97%E3%83%AD%E3%83%86%E3%82%A4%E3%83%B3%20%E3%83%9B%E3%82%A8%E3%82%A4%201kg/",
+   "affiliate_url": "https://search.rakuten.co.jp/search/mall/%E3%83%97%E3%83%AD%E3%83%86%E3%82%A4%E3%83%B3%20%E3%83%9B%E3%82%A8%E3%82%A4%201kg/",
+   "affiliate": false,
+   "product_url": "https://search.rakuten.co.jp/search/mall/%E3%83%97%E3%83%AD%E3%83%86%E3%82%A4%E3%83%B3%20%E3%83%9B%E3%82%A8%E3%82%A4%201kg/",
+   "image": null,
+   "other_offers": []
+  },
+  {
+   "id": "sample:protein-2",
+   "rank": 3,
+   "title": "(サンプル) プロテイン(パウダー) B WPI 3kg",
+   "name": "(サンプル) プロテイン（パウダー） B WPI 3kg",
+   "store": "rakuten",
+   "store_name": "Rakuten",
+   "shop": "サンプルショップ",
+   "price": 6880,
+   "currency": "JPY",
+   "shipping_included": false,
+   "point_rate": 1,
+   "rating": 4.56,
+   "reviews": 227,
+   "score": 4.521,
+   "variants": false,
+   "price_check": {
+    "verdict": "usual",
+    "label": "Usual price",
+    "min_90d": 6690,
+    "median_90d": 6850,
+    "max_90d": 7070,
+    "observed_days": 31,
+    "window_days": 31,
+    "first_seen": "2026-09-02",
+    "weekly_low": [
+     [
+      "2026-09-04",
+      6690
+     ],
+     [
+      "2026-09-11",
+      6720
+     ],
+     [
+      "2026-09-18",
+      6720
+     ],
+     [
+      "2026-09-25",
+      6720
+     ],
+     [
+      "2026-10-02",
+      6740
+     ]
+    ]
+   },
+   "unit_price": {
+    "value": 2293.3,
+    "label": "per kg",
+    "quantity": 3000
+   },
+   "specs": {
+    "type": "wpi",
+    "no_artificial_sweetener": false
+   },
+   "buy_url": "https://search.rakuten.co.jp/search/mall/%E3%83%97%E3%83%AD%E3%83%86%E3%82%A4%E3%83%B3%20%E3%83%9B%E3%82%A8%E3%82%A4%201kg/",
+   "affiliate_url": "https://search.rakuten.co.jp/search/mall/%E3%83%97%E3%83%AD%E3%83%86%E3%82%A4%E3%83%B3%20%E3%83%9B%E3%82%A8%E3%82%A4%201kg/",
+   "affiliate": false,
+   "product_url": "https://search.rakuten.co.jp/search/mall/%E3%83%97%E3%83%AD%E3%83%86%E3%82%A4%E3%83%B3%20%E3%83%9B%E3%82%A8%E3%82%A4%201kg/",
+   "image": null,
+   "other_offers": []
+  },
+  {
+   "id": "sample:protein-4",
+   "rank": 4,
+   "title": "(サンプル) プロテイン(パウダー) D ホエイ 1kg×2袋",
+   "name": "(サンプル) プロテイン（パウダー） D ホエイ 1kg×2袋",
+   "store": "rakuten",
+   "store_name": "Rakuten",
+   "shop": "サンプルショップ",
+   "price": 11510,
+   "currency": "JPY",
+   "shipping_included": false,
+   "point_rate": 1,
+   "rating": 4.44,
+   "reviews": 456,
+   "score": 4.431,
+   "variants": false,
+   "price_check": {
+    "verdict": "lowest_observed",
+    "label": "Lowest in 31 days observed",
+    "min_90d": 11510,
+    "median_90d": 13140,
+    "max_90d": 13520,
+    "observed_days": 31,
+    "window_days": 31,
+    "first_seen": "2026-09-02",
+    "weekly_low": [
+     [
+      "2026-09-04",
+      13030
+     ],
+     [
+      "2026-09-11",
+      12910
+     ],
+     [
+      "2026-09-18",
+      12870
+     ],
+     [
+      "2026-09-25",
+      12890
+     ],
+     [
+      "2026-10-02",
+      11510
+     ]
+    ]
+   },
+   "unit_price": {
+    "value": 5755,
+    "label": "per kg",
+    "quantity": 2000
+   },
+   "specs": {
+    "type": "whey",
+    "no_artificial_sweetener": false
+   },
+   "buy_url": "https://search.rakuten.co.jp/search/mall/%E3%83%97%E3%83%AD%E3%83%86%E3%82%A4%E3%83%B3%20%E3%83%9B%E3%82%A8%E3%82%A4%201kg/",
+   "affiliate_url": "https://search.rakuten.co.jp/search/mall/%E3%83%97%E3%83%AD%E3%83%86%E3%82%A4%E3%83%B3%20%E3%83%9B%E3%82%A8%E3%82%A4%201kg/",
+   "affiliate": false,
+   "product_url": "https://search.rakuten.co.jp/search/mall/%E3%83%97%E3%83%AD%E3%83%86%E3%82%A4%E3%83%B3%20%E3%83%9B%E3%82%A8%E3%82%A4%201kg/",
+   "image": null,
+   "other_offers": [
+    {
+     "id": "sample-y:protein-2",
+     "store": "yahoo",
+     "store_name": "Yahoo! Shopping",
+     "shop": "サンプルストア",
+     "price": 11970,
+     "shipping_included": true,
+     "buy_url": "https://search.rakuten.co.jp/search/mall/%E3%83%97%E3%83%AD%E3%83%86%E3%82%A4%E3%83%B3%20%E3%83%9B%E3%82%A8%E3%82%A4%201kg/",
+     "affiliate_url": "https://search.rakuten.co.jp/search/mall/%E3%83%97%E3%83%AD%E3%83%86%E3%82%A4%E3%83%B3%20%E3%83%9B%E3%82%A8%E3%82%A4%201kg/"
+    }
+   ]
+  },
+  {
+   "id": "sample:protein-5",
+   "rank": 5,
+   "title": "(サンプル) プロテイン(パウダー) E ホエイ 人工甘味料不使用 1kg",
+   "name": "(サンプル) プロテイン（パウダー） E ホエイ 人工甘味料不使用 1kg",
+   "store": "rakuten",
+   "store_name": "Rakuten",
+   "shop": "サンプルショップ",
+   "price": 4260,
+   "currency": "JPY",
+   "shipping_included": true,
+   "point_rate": 1,
+   "rating": 4.07,
+   "reviews": 3218,
+   "score": 4.074,
+   "variants": false,
+   "price_check": {
+    "verdict": "usual",
+    "label": "Usual price",
+    "min_90d": 4130,
+    "median_90d": 4250,
+    "max_90d": 4380,
+    "observed_days": 31,
+    "window_days": 31,
+    "first_seen": "2026-09-02",
+    "weekly_low": [
+     [
+      "2026-09-04",
+      4160
+     ],
+     [
+      "2026-09-11",
+      4170
+     ],
+     [
+      "2026-09-18",
+      4130
+     ],
+     [
+      "2026-09-25",
+      4210
+     ],
+     [
+      "2026-10-02",
+      4160
+     ]
+    ]
+   },
+   "unit_price": {
+    "value": 4260,
+    "label": "per kg",
+    "quantity": 1000
+   },
+   "specs": {
+    "type": "whey",
+    "no_artificial_sweetener": true
+   },
+   "buy_url": "https://search.rakuten.co.jp/search/mall/%E3%83%97%E3%83%AD%E3%83%86%E3%82%A4%E3%83%B3%20%E3%83%9B%E3%82%A8%E3%82%A4%201kg/",
+   "affiliate_url": "https://search.rakuten.co.jp/search/mall/%E3%83%97%E3%83%AD%E3%83%86%E3%82%A4%E3%83%B3%20%E3%83%9B%E3%82%A8%E3%82%A4%201kg/",
+   "affiliate": false,
+   "product_url": "https://search.rakuten.co.jp/search/mall/%E3%83%97%E3%83%AD%E3%83%86%E3%82%A4%E3%83%B3%20%E3%83%9B%E3%82%A8%E3%82%A4%201kg/",
+   "image": null,
+   "other_offers": []
+  },
+  {
+   "id": "sample:protein-3",
+   "rank": 6,
+   "title": "(サンプル) プロテイン(パウダー) C ソイ 1kg",
+   "name": "(サンプル) プロテイン（パウダー） C ソイ 1kg",
+   "store": "rakuten",
+   "store_name": "Rakuten",
+   "shop": "サンプルショップ",
+   "price": 6770,
+   "currency": "JPY",
+   "shipping_included": true,
+   "point_rate": 1,
+   "rating": 3.82,
+   "reviews": 2202,
+   "score": 3.832,
+   "variants": false,
+   "price_check": {
+    "verdict": "usual",
+    "label": "Usual price",
+    "min_90d": 6240,
+    "median_90d": 6430,
+    "max_90d": 6770,
+    "observed_days": 31,
+    "window_days": 31,
+    "first_seen": "2026-09-02",
+    "weekly_low": [
+     [
+      "2026-09-04",
+      6330
+     ],
+     [
+      "2026-09-11",
+      6260
+     ],
+     [
+      "2026-09-18",
+      6340
+     ],
+     [
+      "2026-09-25",
+      6280
+     ],
+     [
+      "2026-10-02",
+      6240
+     ]
+    ]
+   },
+   "unit_price": {
+    "value": 6770,
+    "label": "per kg",
+    "quantity": 1000
+   },
+   "specs": {
+    "type": "soy",
+    "no_artificial_sweetener": false
+   },
+   "buy_url": "https://search.rakuten.co.jp/search/mall/%E3%83%97%E3%83%AD%E3%83%86%E3%82%A4%E3%83%B3%20%E3%83%9B%E3%82%A8%E3%82%A4%201kg/",
+   "affiliate_url": "https://search.rakuten.co.jp/search/mall/%E3%83%97%E3%83%AD%E3%83%86%E3%82%A4%E3%83%B3%20%E3%83%9B%E3%82%A8%E3%82%A4%201kg/",
+   "affiliate": false,
+   "product_url": "https://search.rakuten.co.jp/search/mall/%E3%83%97%E3%83%AD%E3%83%86%E3%82%A4%E3%83%B3%20%E3%83%9B%E3%82%A8%E3%82%A4%201kg/",
+   "image": null,
+   "other_offers": []
+  }
+ ],
+ "price_index": [
+  {
+   "week_end": "2026-09-04",
+   "index": 98.5,
+   "items": 6
+  },
+  {
+   "week_end": "2026-09-11",
+   "index": 98.1,
+   "items": 6
+  },
+  {
+   "week_end": "2026-09-18",
+   "index": 98,
+   "items": 6
+  },
+  {
+   "week_end": "2026-09-25",
+   "index": 98.1,
+   "items": 6
+  },
+  {
+   "week_end": "2026-10-02",
+   "index": 97.1,
+   "items": 6
+  }
+ ],
+ "stats": {
+  "candidates": 8,
+  "ranked": 6,
+  "rejected": {
+   "duplicate": 2
+  },
+  "meanRating": 4.35,
+  "priorWeight": 50
+ },
+ "links": {
+  "html": "https://bufeks.github.io/LAB/shelf/en/c/protein/",
+  "markdown": "https://bufeks.github.io/LAB/shelf/en/c/protein.md",
+  "json": "https://bufeks.github.io/LAB/shelf/api/v1/en/c/protein.json",
+  "feed": "https://bufeks.github.io/LAB/shelf/en/c/protein/feed.xml"
+ },
+ "languages": {
+  "ja": {
+   "html": "https://bufeks.github.io/LAB/shelf/c/protein/",
+   "markdown": "https://bufeks.github.io/LAB/shelf/c/protein.md",
+   "json": "https://bufeks.github.io/LAB/shelf/api/v1/c/protein.json",
+   "feed": "https://bufeks.github.io/LAB/shelf/c/protein/feed.xml"
+  },
+  "en": {
+   "html": "https://bufeks.github.io/LAB/shelf/en/c/protein/",
+   "markdown": "https://bufeks.github.io/LAB/shelf/en/c/protein.md",
+   "json": "https://bufeks.github.io/LAB/shelf/api/v1/en/c/protein.json",
+   "feed": "https://bufeks.github.io/LAB/shelf/en/c/protein/feed.xml"
+  },
+  "zh-Hans": {
+   "html": "https://bufeks.github.io/LAB/shelf/zh-hans/c/protein/",
+   "markdown": "https://bufeks.github.io/LAB/shelf/zh-hans/c/protein.md",
+   "json": "https://bufeks.github.io/LAB/shelf/api/v1/zh-hans/c/protein.json",
+   "feed": "https://bufeks.github.io/LAB/shelf/zh-hans/c/protein/feed.xml"
+  },
+  "zh-Hant": {
+   "html": "https://bufeks.github.io/LAB/shelf/zh-hant/c/protein/",
+   "markdown": "https://bufeks.github.io/LAB/shelf/zh-hant/c/protein.md",
+   "json": "https://bufeks.github.io/LAB/shelf/api/v1/zh-hant/c/protein.json",
+   "feed": "https://bufeks.github.io/LAB/shelf/zh-hant/c/protein/feed.xml"
+  },
+  "ko": {
+   "html": "https://bufeks.github.io/LAB/shelf/ko/c/protein/",
+   "markdown": "https://bufeks.github.io/LAB/shelf/ko/c/protein.md",
+   "json": "https://bufeks.github.io/LAB/shelf/api/v1/ko/c/protein.json",
+   "feed": "https://bufeks.github.io/LAB/shelf/ko/c/protein/feed.xml"
+  }
+ },
+ "source": {
+  "name": "Rakuten Ichiba",
+  "credit": {
+   "text": "Supported by Rakuten Developers",
+   "url": "https://developers.rakuten.com/"
+  }
+ },
+ "key_facts": [
+  "SHELF records the prices of the 6 top-rated Protein powder every day.",
+  "The median price is ¥6,825, ranging from ¥4,260 to ¥11,510.",
+  "The top pick is (サンプル) プロテイン(パウダー) A ホエイ 1kg (¥4,400, ★4.87 from 1,540 reviews).",
+  "Best value per kg: (サンプル) プロテイン(パウダー) A ホエイ 1kg (¥4,400).",
+  "The price index for Protein powder is 97.1 (usual price = 100; 98.5 4 weeks ago)."
+ ],
+ "faq": [
+  {
+   "q": "What are the best Protein powder right now?",
+   "a": "As of 2026-10-02, SHELF’s top pick for Protein powder is (サンプル) プロテイン(パウダー) A ホエイ 1kg (¥4,400, ★4.87 from 1,540 reviews), chosen by a score that combines rating and number of reviews."
+  },
+  {
+   "q": "How much do Protein powder cost?",
+   "a": "As of 2026-10-02, the median price of the 6 Protein powder SHELF tracks is ¥6,825 (¥4,260–¥11,510)."
+  },
+  {
+   "q": "Is now a good time to buy Protein powder?",
+   "a": "Protein powder as of 2026-10-02: 33% of the top products are cheaper than usual. Not a bad time to buy. (31 days observed; seasonal patterns not yet reflected)"
+  },
+  {
+   "q": "What is the cheapest way to buy Protein powder (per kg)?",
+   "a": "As of 2026-10-02, comparing Protein powder per kg, the cheapest well-rated listing with shipping included is (サンプル) プロテイン(パウダー) A ホエイ 1kg (¥4,400)."
+  },
+  {
+   "q": "How do I choose Protein powder?",
+   "a": "Compare by price per kg. But the protein content differs between products (mostly 70–90%), so also check the protein per serving on the nutrition label."
+  }
+ ],
+ "license": "Text and statistics written by SHELF are CC BY 4.0: quote or reuse them with credit to SHELF and a link. Product names, prices and images belong to the stores."
+}

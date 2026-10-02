@@ -24,6 +24,9 @@ export function credentialsFromEnv(env = process.env) {
     accessKey,
     affiliateId: env.RAKUTEN_AFFILIATE_ID?.trim() || undefined,
     endpoint: env.RAKUTEN_ENDPOINT || DEFAULT_ENDPOINT,
+    // Travel and Books live elsewhere on the same platform; overridable for tests.
+    travelEndpoint: env.RAKUTEN_TRAVEL_ENDPOINT || undefined,
+    booksEndpoint: env.RAKUTEN_BOOKS_ENDPOINT || undefined,
     referer: env.RAKUTEN_REFERER || 'https://bufeks.github.io/',
   };
 }
@@ -63,7 +66,7 @@ function get(url, headers) {
   });
 }
 
-async function call(creds, url) {
+export async function rakutenGet(creds, url) {
   const origin = new URL(creds.referer).origin;
   const headers = {
     'User-Agent': 'SHELF/1.0 (+https://github.com/bufeks/LAB)',
@@ -120,7 +123,7 @@ export function normalizeItem(raw) {
 export async function searchCategory(creds, category, pages = 2) {
   const items = [];
   for (let page = 1; page <= pages; page++) {
-    const data = await call(creds, buildSearchUrl(creds, category, page));
+    const data = await rakutenGet(creds, buildSearchUrl(creds, category, page));
     const list = data.Items || data.items || [];
     items.push(...list.map((x) => normalizeItem(x.Item || x)));
     if (!data.pageCount || page >= data.pageCount) break;

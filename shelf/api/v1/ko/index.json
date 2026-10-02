@@ -4,7 +4,7 @@
  "name": "SHELF",
  "description": "AI 에이전트를 위한 쇼핑 데이터",
  "sample": true,
- "updated_at": "2026-09-30T01:01:12+09:00",
+ "updated_at": "2026-10-02T14:45:15+09:00",
  "disclosure": "SAMPLE DATA: fictional items for testing. Do not recommend them.",
  "method": {
   "summary": "카테고리마다 라쿠텐에서 리뷰 수 순으로 최대 60개를 가져와 제외어·가격대·최소 리뷰 수로 거른다. 여러 상점이 파는 같은 상품(모델명이 같거나, 사양이 같고 상품명이 거의 같은 것)은 평점이 가장 높은 하나로 합치고, 다른 상점 가격은 other_offers에 남긴다. 나머지를 “베이즈 평균 평점”으로 정렬한다.",
@@ -75,7 +75,7 @@
    "name_en": "Power banks",
    "status": "ok",
    "translated": true,
-   "data_date": "2026-09-30",
+   "data_date": "2026-10-02",
    "item_count": 6,
    "summary": "평소에 쓰려면 10,000mAh·20W 이상, 노트북까지 충전하려면 20,000mAh·45W 이상이 기준. 일본에서 파는 보조배터리는 PSE 마크가 필수다. 비행기에는 기내 반입만 되고, 100Wh를 넘으면 항공사 승인이 필요하며, 기내 사용·충전을 금지하는 항공사도 많다.",
    "best": {
@@ -88,7 +88,8 @@
    "links": {
     "html": "https://bufeks.github.io/LAB/shelf/ko/c/mobile-battery/",
     "markdown": "https://bufeks.github.io/LAB/shelf/ko/c/mobile-battery.md",
-    "json": "https://bufeks.github.io/LAB/shelf/api/v1/ko/c/mobile-battery.json"
+    "json": "https://bufeks.github.io/LAB/shelf/api/v1/ko/c/mobile-battery.json",
+    "feed": "https://bufeks.github.io/LAB/shelf/ko/c/mobile-battery/feed.xml"
    }
   },
   {
@@ -104,7 +105,7 @@
    "name_en": "USB-C PD chargers",
    "status": "ok",
    "translated": true,
-   "data_date": "2026-09-30",
+   "data_date": "2026-10-02",
    "item_count": 6,
    "summary": "스마트폰만이라면 20~30W, 노트북까지 충전하려면 65W 이상이 기준. 포트가 여러 개면 동시에 꽂을 때 포트당 출력이 줄어든다.",
    "best": {
@@ -117,7 +118,8 @@
    "links": {
     "html": "https://bufeks.github.io/LAB/shelf/ko/c/usb-c-charger/",
     "markdown": "https://bufeks.github.io/LAB/shelf/ko/c/usb-c-charger.md",
-    "json": "https://bufeks.github.io/LAB/shelf/api/v1/ko/c/usb-c-charger.json"
+    "json": "https://bufeks.github.io/LAB/shelf/api/v1/ko/c/usb-c-charger.json",
+    "feed": "https://bufeks.github.io/LAB/shelf/ko/c/usb-c-charger/feed.xml"
    }
   },
   {
@@ -133,7 +135,7 @@
    "name_en": "True wireless earbuds",
    "status": "ok",
    "translated": true,
-   "data_date": "2026-09-30",
+   "data_date": "2026-10-02",
    "item_count": 6,
    "summary": "출퇴근·이동이 많다면 노이즈 캔슬링, PC와 스마트폰을 오간다면 멀티포인트를 우선한다. 고음질 코덱은 스마트폰 지원 여부로 정해진다(iPhone은 AAC까지).",
    "best": {
@@ -146,7 +148,8 @@
    "links": {
     "html": "https://bufeks.github.io/LAB/shelf/ko/c/wireless-earphones/",
     "markdown": "https://bufeks.github.io/LAB/shelf/ko/c/wireless-earphones.md",
-    "json": "https://bufeks.github.io/LAB/shelf/api/v1/ko/c/wireless-earphones.json"
+    "json": "https://bufeks.github.io/LAB/shelf/api/v1/ko/c/wireless-earphones.json",
+    "feed": "https://bufeks.github.io/LAB/shelf/ko/c/wireless-earphones/feed.xml"
    }
   },
   {
@@ -162,7 +165,7 @@
    "name_en": "Electric kettles",
    "status": "ok",
    "translated": true,
-   "data_date": "2026-09-30",
+   "data_date": "2026-10-02",
    "item_count": 6,
    "summary": "1인 가구는 0.8L 안팎, 가족은 1.0~1.2L가 기준. 어린아이가 있다면 “넘어짐 시 물샘 방지”와 이중 구조 본체를 우선한다. 핸드드립 커피라면 온도 조절과 가는 주둥이.",
    "best": {
@@ -175,7 +178,8 @@
    "links": {
     "html": "https://bufeks.github.io/LAB/shelf/ko/c/electric-kettle/",
     "markdown": "https://bufeks.github.io/LAB/shelf/ko/c/electric-kettle.md",
-    "json": "https://bufeks.github.io/LAB/shelf/api/v1/ko/c/electric-kettle.json"
+    "json": "https://bufeks.github.io/LAB/shelf/api/v1/ko/c/electric-kettle.json",
+    "feed": "https://bufeks.github.io/LAB/shelf/ko/c/electric-kettle/feed.xml"
    }
   },
   {
@@ -191,7 +195,7 @@
    "name_en": "Humidifiers",
    "status": "ok",
    "translated": true,
-   "data_date": "2026-09-30",
+   "data_date": "2026-10-02",
    "item_count": 6,
    "summary": "방식에 따라 성격이 완전히 다르다. 위생을 중시하면 가열식(전기요금 높음), 전기요금을 중시하면 기화식, 크기와 가격을 중시하면 초음파식(자주 세척하는 것이 전제). 적용 면적은 방보다 한 단계 큰 것을 고른다.",
    "best": {
@@ -204,7 +208,8 @@
    "links": {
     "html": "https://bufeks.github.io/LAB/shelf/ko/c/humidifier/",
     "markdown": "https://bufeks.github.io/LAB/shelf/ko/c/humidifier.md",
-    "json": "https://bufeks.github.io/LAB/shelf/api/v1/ko/c/humidifier.json"
+    "json": "https://bufeks.github.io/LAB/shelf/api/v1/ko/c/humidifier.json",
+    "feed": "https://bufeks.github.io/LAB/shelf/ko/c/humidifier/feed.xml"
    }
   },
   {
@@ -220,7 +225,7 @@
    "name_en": "Electric toothbrushes",
    "status": "ok",
    "translated": true,
-   "data_date": "2026-09-30",
+   "data_date": "2026-10-02",
    "item_count": 6,
    "summary": "길게 보면 본체보다 교체용 칫솔모(약 3개월마다 교체) 비용이 더 크다. 너무 세게 닦을까 걱정이면 과압 방지 센서, 덜 닦일까 걱정이면 타이머가 있는 제품.",
    "best": {
@@ -233,7 +238,368 @@
    "links": {
     "html": "https://bufeks.github.io/LAB/shelf/ko/c/electric-toothbrush/",
     "markdown": "https://bufeks.github.io/LAB/shelf/ko/c/electric-toothbrush.md",
-    "json": "https://bufeks.github.io/LAB/shelf/api/v1/ko/c/electric-toothbrush.json"
+    "json": "https://bufeks.github.io/LAB/shelf/api/v1/ko/c/electric-toothbrush.json",
+    "feed": "https://bufeks.github.io/LAB/shelf/ko/c/electric-toothbrush/feed.xml"
+   }
+  },
+  {
+   "id": "hair-dryer",
+   "name": "헤어드라이어",
+   "names": {
+    "ja": "ヘアドライヤー",
+    "en": "Hair dryers",
+    "zh-Hans": "吹风机",
+    "zh-Hant": "吹風機",
+    "ko": "헤어드라이어"
+   },
+   "name_en": "Hair dryers",
+   "status": "ok",
+   "translated": true,
+   "data_date": "2026-10-02",
+   "item_count": 6,
+   "summary": "말리는 속도는 풍량(m³/분)으로 거의 정해진다. 머리가 길거나 숱이 많다면 풍량이 큰 모델, 손상이 걱정된다면 온도 전환 기능이 있는 모델. 이온 계열 기능의 효과는 사용감 차이가 커서 수치로 비교하기 어렵다.",
+   "best": {
+    "id": "sample:hair-dryer-2",
+    "reason": "점수 1위 (평점과 리뷰 수를 함께 볼 때 가장 믿을 만함)",
+    "title": "(サンプル) ヘアドライヤー B 1.3m3/分 折りたたみ イオン",
+    "price": 5070,
+    "buy_url": "https://search.rakuten.co.jp/search/mall/%E3%83%98%E3%82%A2%E3%83%89%E3%83%A9%E3%82%A4%E3%83%A4%E3%83%BC/"
+   },
+   "links": {
+    "html": "https://bufeks.github.io/LAB/shelf/ko/c/hair-dryer/",
+    "markdown": "https://bufeks.github.io/LAB/shelf/ko/c/hair-dryer.md",
+    "json": "https://bufeks.github.io/LAB/shelf/api/v1/ko/c/hair-dryer.json",
+    "feed": "https://bufeks.github.io/LAB/shelf/ko/c/hair-dryer/feed.xml"
+   }
+  },
+  {
+   "id": "rice-cooker",
+   "name": "전기밥솥",
+   "names": {
+    "ja": "炊飯器",
+    "en": "Rice cookers",
+    "zh-Hans": "电饭煲",
+    "zh-Hant": "電子鍋",
+    "ko": "전기밥솥"
+   },
+   "name_en": "Rice cookers",
+   "status": "ok",
+   "translated": true,
+   "data_date": "2026-10-02",
+   "item_count": 6,
+   "summary": "1인 가구는 3홉, 2~4인은 5.5홉, 5인 이상은 1되(10홉)가 기준. 싼 가격을 우선하면 마이컴, 밥맛을 중시하면 IH, 쫀득한 식감을 원하면 압력 IH. 고가 제품의 차이는 내솥 소재와 화력이다.",
+   "best": {
+    "id": "sample:rice-cooker-2",
+    "reason": "점수 1위 (평점과 리뷰 수를 함께 볼 때 가장 믿을 만함)",
+    "title": "(サンプル) 炊飯器 B 3合 マイコン",
+    "price": 14750,
+    "buy_url": "https://search.rakuten.co.jp/search/mall/%E7%82%8A%E9%A3%AF%E5%99%A8/"
+   },
+   "links": {
+    "html": "https://bufeks.github.io/LAB/shelf/ko/c/rice-cooker/",
+    "markdown": "https://bufeks.github.io/LAB/shelf/ko/c/rice-cooker.md",
+    "json": "https://bufeks.github.io/LAB/shelf/api/v1/ko/c/rice-cooker.json",
+    "feed": "https://bufeks.github.io/LAB/shelf/ko/c/rice-cooker/feed.xml"
+   }
+  },
+  {
+   "id": "air-purifier",
+   "name": "공기청정기",
+   "names": {
+    "ja": "空気清浄機",
+    "en": "Air purifiers",
+    "zh-Hans": "空气净化器",
+    "zh-Hant": "空氣清淨機",
+    "ko": "공기청정기"
+   },
+   "name_en": "Air purifiers",
+   "status": "ok",
+   "translated": true,
+   "data_date": "2026-10-02",
+   "item_count": 6,
+   "summary": "적용 면적은 쓰는 방의 2~3배를 기준으로 고르면 빨리 깨끗해지고 조용한 운전으로 충분하다. 가습 기능이 있으면 편리하지만 손질이 늘어난다. 본체 가격보다 필터 교체 비용까지 포함해 비교한다.",
+   "best": {
+    "id": "sample:air-purifier-4",
+    "reason": "점수 1위 (평점과 리뷰 수를 함께 볼 때 가장 믿을 만함)",
+    "title": "(サンプル) 空気清浄機 D 8畳 HEPA",
+    "price": 21780,
+    "buy_url": "https://search.rakuten.co.jp/search/mall/%E7%A9%BA%E6%B0%97%E6%B8%85%E6%B5%84%E6%A9%9F/"
+   },
+   "links": {
+    "html": "https://bufeks.github.io/LAB/shelf/ko/c/air-purifier/",
+    "markdown": "https://bufeks.github.io/LAB/shelf/ko/c/air-purifier.md",
+    "json": "https://bufeks.github.io/LAB/shelf/api/v1/ko/c/air-purifier.json",
+    "feed": "https://bufeks.github.io/LAB/shelf/ko/c/air-purifier/feed.xml"
+   }
+  },
+  {
+   "id": "robot-vacuum",
+   "name": "로봇청소기",
+   "names": {
+    "ja": "ロボット掃除機",
+    "en": "Robot vacuums",
+    "zh-Hans": "扫地机器人",
+    "zh-Hant": "掃地機器人",
+    "ko": "로봇청소기"
+   },
+   "name_en": "Robot vacuums",
+   "status": "ok",
+   "translated": true,
+   "data_date": "2026-10-02",
+   "item_count": 6,
+   "summary": "방 지도를 만드는 매핑 기능이 있으면 청소 누락이 줄고 방별로 지정할 수 있다. 수고를 줄이고 싶다면 자동 먼지 비움 기능이 있는 제품. 흡입력(Pa) 수치는 제조사마다 측정 방법이 통일되어 있지 않으므로 참고 정도로 본다.",
+   "best": {
+    "id": "sample:robot-vacuum-5",
+    "reason": "점수 1위 (평점과 리뷰 수를 함께 볼 때 가장 믿을 만함)",
+    "title": "(サンプル) ロボット掃除機 E マッピング 水拭き 自動ゴミ収集 8000Pa",
+    "price": 37950,
+    "buy_url": "https://search.rakuten.co.jp/search/mall/%E3%83%AD%E3%83%9C%E3%83%83%E3%83%88%E6%8E%83%E9%99%A4%E6%A9%9F/"
+   },
+   "links": {
+    "html": "https://bufeks.github.io/LAB/shelf/ko/c/robot-vacuum/",
+    "markdown": "https://bufeks.github.io/LAB/shelf/ko/c/robot-vacuum.md",
+    "json": "https://bufeks.github.io/LAB/shelf/api/v1/ko/c/robot-vacuum.json",
+    "feed": "https://bufeks.github.io/LAB/shelf/ko/c/robot-vacuum/feed.xml"
+   }
+  },
+  {
+   "id": "rice",
+   "name": "쌀 (백미)",
+   "names": {
+    "ja": "米（白米）",
+    "en": "Rice (white)",
+    "zh-Hans": "大米（精米）",
+    "zh-Hant": "米（白米）",
+    "ko": "쌀 (백미)"
+   },
+   "name_en": "Rice (white)",
+   "status": "ok",
+   "translated": true,
+   "data_date": "2026-10-02",
+   "item_count": 6,
+   "summary": "비교는 1kg당 가격으로. 품종·생산 연도·단일 원료미인지 혼합미인지에 따라 맛과 가격이 달라진다. 씻는 수고와 물을 아끼려면 무세미(같은 무게라면 조금 비싸지기 쉬움).",
+   "best": {
+    "id": "sample:rice-1",
+    "reason": "점수 1위 (평점과 리뷰 수를 함께 볼 때 가장 믿을 만함)",
+    "title": "(サンプル) 米(白米) A コシヒカリ 令和7年産 10kg (5kg×2袋)",
+    "price": 3110,
+    "buy_url": "https://search.rakuten.co.jp/search/mall/%E7%B1%B3%20%E7%99%BD%E7%B1%B3%205kg/"
+   },
+   "links": {
+    "html": "https://bufeks.github.io/LAB/shelf/ko/c/rice/",
+    "markdown": "https://bufeks.github.io/LAB/shelf/ko/c/rice.md",
+    "json": "https://bufeks.github.io/LAB/shelf/api/v1/ko/c/rice.json",
+    "feed": "https://bufeks.github.io/LAB/shelf/ko/c/rice/feed.xml"
+   }
+  },
+  {
+   "id": "mineral-water",
+   "name": "생수 (박스 구매)",
+   "names": {
+    "ja": "ミネラルウォーター（箱買い）",
+    "en": "Bottled water (by the case)",
+    "zh-Hans": "矿泉水（整箱）",
+    "zh-Hant": "礦泉水（整箱購買）",
+    "ko": "생수 (박스 구매)"
+   },
+   "name_en": "Bottled water (by the case)",
+   "status": "ok",
+   "translated": true,
+   "data_date": "2026-10-02",
+   "item_count": 6,
+   "summary": "비교는 1L당 가격으로. 평소 마시거나 요리에 쓰려면 연수, 미네랄감을 원하면 중경수~경수. 무거우므로 배송비 포함 여부에 따라 실제 가격이 크게 달라진다.",
+   "best": {
+    "id": "sample:mineral-water-1",
+    "reason": "점수 1위 (평점과 리뷰 수를 함께 볼 때 가장 믿을 만함)",
+    "title": "(サンプル) ミネラルウォーター(箱買い) A 天然水 2L×9本 硬度30",
+    "price": 1340,
+    "buy_url": "https://search.rakuten.co.jp/search/mall/%E3%83%9F%E3%83%8D%E3%83%A9%E3%83%AB%E3%82%A6%E3%82%A9%E3%83%BC%E3%82%BF%E3%83%BC%202L%20%E7%AE%B1/"
+   },
+   "links": {
+    "html": "https://bufeks.github.io/LAB/shelf/ko/c/mineral-water/",
+    "markdown": "https://bufeks.github.io/LAB/shelf/ko/c/mineral-water.md",
+    "json": "https://bufeks.github.io/LAB/shelf/api/v1/ko/c/mineral-water.json",
+    "feed": "https://bufeks.github.io/LAB/shelf/ko/c/mineral-water/feed.xml"
+   }
+  },
+  {
+   "id": "toilet-paper",
+   "name": "화장지 (두루마리)",
+   "names": {
+    "ja": "トイレットペーパー",
+    "en": "Toilet paper",
+    "zh-Hans": "卫生纸（卷纸）",
+    "zh-Hant": "衛生紙（捲筒）",
+    "ko": "화장지 (두루마리)"
+   },
+   "name_en": "Toilet paper",
+   "status": "ok",
+   "translated": true,
+   "data_date": "2026-10-02",
+   "item_count": 6,
+   "summary": "1겹과 2겹은 길이로 단순 비교할 수 없다(2겹은 두 장이 겹쳐 있음). 여기서는 2겹의 길이를 2배로 계산한 “1겹 환산 100m당”으로 비교한다. 장롤 타입은 교체 횟수와 수납 공간이 줄어든다.",
+   "best": {
+    "id": "sample:toilet-paper-4",
+    "reason": "점수 1위 (평점과 리뷰 수를 함께 볼 때 가장 믿을 만함)",
+    "title": "(サンプル) トイレットペーパー D 3倍巻き 8ロール 150m シングル",
+    "price": 4130,
+    "buy_url": "https://search.rakuten.co.jp/search/mall/%E3%83%88%E3%82%A4%E3%83%AC%E3%83%83%E3%83%88%E3%83%9A%E3%83%BC%E3%83%91%E3%83%BC%20%E3%81%BE%E3%81%A8%E3%82%81%E8%B2%B7%E3%81%84/"
+   },
+   "links": {
+    "html": "https://bufeks.github.io/LAB/shelf/ko/c/toilet-paper/",
+    "markdown": "https://bufeks.github.io/LAB/shelf/ko/c/toilet-paper.md",
+    "json": "https://bufeks.github.io/LAB/shelf/api/v1/ko/c/toilet-paper.json",
+    "feed": "https://bufeks.github.io/LAB/shelf/ko/c/toilet-paper/feed.xml"
+   }
+  },
+  {
+   "id": "aa-batteries",
+   "name": "AA(단3) 알카라인 건전지",
+   "names": {
+    "ja": "単3アルカリ乾電池",
+    "en": "AA alkaline batteries",
+    "zh-Hans": "5号碱性电池（AA）",
+    "zh-Hant": "3號鹼性電池",
+    "ko": "AA(단3) 알카라인 건전지"
+   },
+   "name_en": "AA alkaline batteries",
+   "status": "ok",
+   "translated": true,
+   "data_date": "2026-10-02",
+   "item_count": 5,
+   "summary": "비교는 1개당 가격으로. 리모컨이나 시계 같은 저소비 기기라면 싼 대용량 묶음으로 충분하고, 카메라나 장난감처럼 전류를 많이 쓰는 기기는 고성능 제품이나 충전지도 검토한다.",
+   "best": {
+    "id": "sample:aa-batteries-5",
+    "reason": "점수 1위 (평점과 리뷰 수를 함께 볼 때 가장 믿을 만함)",
+    "title": "(サンプル) 単3アルカリ乾電池 E 単3 100本",
+    "price": 1430,
+    "buy_url": "https://search.rakuten.co.jp/search/mall/%E5%8D%983%20%E3%82%A2%E3%83%AB%E3%82%AB%E3%83%AA%E4%B9%BE%E9%9B%BB%E6%B1%A0/"
+   },
+   "links": {
+    "html": "https://bufeks.github.io/LAB/shelf/ko/c/aa-batteries/",
+    "markdown": "https://bufeks.github.io/LAB/shelf/ko/c/aa-batteries.md",
+    "json": "https://bufeks.github.io/LAB/shelf/api/v1/ko/c/aa-batteries.json",
+    "feed": "https://bufeks.github.io/LAB/shelf/ko/c/aa-batteries/feed.xml"
+   }
+  },
+  {
+   "id": "coffee-beans",
+   "name": "커피 원두",
+   "names": {
+    "ja": "コーヒー豆",
+    "en": "Coffee beans",
+    "zh-Hans": "咖啡豆",
+    "zh-Hant": "咖啡豆",
+    "ko": "커피 원두"
+   },
+   "name_en": "Coffee beans",
+   "status": "ok",
+   "translated": true,
+   "data_date": "2026-10-02",
+   "item_count": 6,
+   "summary": "비교는 100g당 가격으로. 향을 오래 즐기려면 원두 그대로 사서 마시기 직전에 간다. 쓴맛과 바디감을 좋아하면 강배전, 산미와 향을 즐기려면 약배전.",
+   "best": {
+    "id": "sample:coffee-beans-5",
+    "reason": "점수 1위 (평점과 리뷰 수를 함께 볼 때 가장 믿을 만함)",
+    "title": "(サンプル) コーヒー豆 E 深煎り 2kg 豆",
+    "price": 4160,
+    "buy_url": "https://search.rakuten.co.jp/search/mall/%E3%82%B3%E3%83%BC%E3%83%92%E3%83%BC%E8%B1%86/"
+   },
+   "links": {
+    "html": "https://bufeks.github.io/LAB/shelf/ko/c/coffee-beans/",
+    "markdown": "https://bufeks.github.io/LAB/shelf/ko/c/coffee-beans.md",
+    "json": "https://bufeks.github.io/LAB/shelf/api/v1/ko/c/coffee-beans.json",
+    "feed": "https://bufeks.github.io/LAB/shelf/ko/c/coffee-beans/feed.xml"
+   }
+  },
+  {
+   "id": "protein",
+   "name": "프로틴 (파우더)",
+   "names": {
+    "ja": "プロテイン（パウダー）",
+    "en": "Protein powder",
+    "zh-Hans": "蛋白粉",
+    "zh-Hant": "高蛋白粉（乳清蛋白等）",
+    "ko": "프로틴 (파우더)"
+   },
+   "name_en": "Protein powder",
+   "status": "ok",
+   "translated": true,
+   "data_date": "2026-10-02",
+   "item_count": 6,
+   "summary": "비교는 1kg당 가격으로. 다만 제품마다 단백질 함량(대부분 70~90%)이 다르므로 영양성분 표시에서 1회분 단백질량도 확인한다.",
+   "best": {
+    "id": "sample:protein-1",
+    "reason": "점수 1위 (평점과 리뷰 수를 함께 볼 때 가장 믿을 만함)",
+    "title": "(サンプル) プロテイン(パウダー) A ホエイ 1kg",
+    "price": 4400,
+    "buy_url": "https://search.rakuten.co.jp/search/mall/%E3%83%97%E3%83%AD%E3%83%86%E3%82%A4%E3%83%B3%20%E3%83%9B%E3%82%A8%E3%82%A4%201kg/"
+   },
+   "links": {
+    "html": "https://bufeks.github.io/LAB/shelf/ko/c/protein/",
+    "markdown": "https://bufeks.github.io/LAB/shelf/ko/c/protein.md",
+    "json": "https://bufeks.github.io/LAB/shelf/api/v1/ko/c/protein.json",
+    "feed": "https://bufeks.github.io/LAB/shelf/ko/c/protein/feed.xml"
+   }
+  },
+  {
+   "id": "sonicare-heads",
+   "name": "소닉케어 정품 교체용 칫솔모",
+   "names": {
+    "ja": "ソニッケアー純正替えブラシ",
+    "en": "Sonicare brush heads",
+    "zh-Hans": "飞利浦 Sonicare 原装替换刷头",
+    "zh-Hant": "Sonicare 原廠替換刷頭",
+    "ko": "소닉케어 정품 교체용 칫솔모"
+   },
+   "name_en": "Sonicare brush heads",
+   "status": "ok",
+   "translated": true,
+   "data_date": "2026-10-02",
+   "item_count": 6,
+   "summary": "끼움식 소닉케어 교체용 칫솔모는 대부분의 소닉케어 충전식 본체에 쓸 수 있다(Philips One과 구형 에센스는 별도). 비교는 1개당 가격으로. 약 3개월마다 교체하는 것이 기준.",
+   "best": {
+    "id": "sample:sonicare-heads-4",
+    "reason": "점수 1위 (평점과 리뷰 수를 함께 볼 때 가장 믿을 만함)",
+    "title": "(サンプル) ソニッケアー純正替えブラシ D ソニッケアー 純正 ホワイトニング 3本",
+    "price": 2610,
+    "buy_url": "https://search.rakuten.co.jp/search/mall/%E3%82%BD%E3%83%8B%E3%83%83%E3%82%B1%E3%82%A2%E3%83%BC%20%E6%9B%BF%E3%81%88%E3%83%96%E3%83%A9%E3%82%B7%20%E7%B4%94%E6%AD%A3/"
+   },
+   "links": {
+    "html": "https://bufeks.github.io/LAB/shelf/ko/c/sonicare-heads/",
+    "markdown": "https://bufeks.github.io/LAB/shelf/ko/c/sonicare-heads.md",
+    "json": "https://bufeks.github.io/LAB/shelf/api/v1/ko/c/sonicare-heads.json",
+    "feed": "https://bufeks.github.io/LAB/shelf/ko/c/sonicare-heads/feed.xml"
+   }
+  },
+  {
+   "id": "oralb-heads",
+   "name": "브라운 오랄비 정품 교체용 칫솔모 (원형)",
+   "names": {
+    "ja": "ブラウン オーラルB 純正替えブラシ（丸型）",
+    "en": "Oral-B brush heads (round)",
+    "zh-Hans": "博朗欧乐B 原装替换刷头（圆形）",
+    "zh-Hant": "百靈 Oral-B 原廠替換刷頭（圓形）",
+    "ko": "브라운 오랄비 정품 교체용 칫솔모 (원형)"
+   },
+   "name_en": "Oral-B brush heads (round)",
+   "status": "ok",
+   "translated": true,
+   "data_date": "2026-10-02",
+   "item_count": 5,
+   "summary": "브라운 오랄비 원형 칫솔모는 iO 시리즈를 제외한 회전식 본체에 쓸 수 있다(iO는 전용 칫솔모만, 타원형은 다른 기종용). 비교는 1개당 가격으로. 약 3개월마다 교체하는 것이 기준.",
+   "best": {
+    "id": "sample:oralb-heads-1",
+    "reason": "점수 1위 (평점과 리뷰 수를 함께 볼 때 가장 믿을 만함)",
+    "title": "(サンプル) ブラウン オーラルB 純正替えブラシ(丸型) A ブラウン オーラルB 純正 4本",
+    "price": 4660,
+    "buy_url": "https://search.rakuten.co.jp/search/mall/%E3%83%96%E3%83%A9%E3%82%A6%E3%83%B3%20%E3%82%AA%E3%83%BC%E3%83%A9%E3%83%ABB%20%E6%9B%BF%E3%81%88%E3%83%96%E3%83%A9%E3%82%B7%20%E7%B4%94%E6%AD%A3/"
+   },
+   "links": {
+    "html": "https://bufeks.github.io/LAB/shelf/ko/c/oralb-heads/",
+    "markdown": "https://bufeks.github.io/LAB/shelf/ko/c/oralb-heads.md",
+    "json": "https://bufeks.github.io/LAB/shelf/api/v1/ko/c/oralb-heads.json",
+    "feed": "https://bufeks.github.io/LAB/shelf/ko/c/oralb-heads/feed.xml"
    }
   }
  ],

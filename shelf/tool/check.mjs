@@ -44,19 +44,25 @@ export function audit() {
     if (!rec) continue;
     const m = (metrics[category.id] = { items: rec.items.length, status: rec.status });
     if (rec.status === 'stale') warnings.push(`${category.id}: data is ${rec.data_date}, older than 3 days`);
-    if (rec.status === 'no_data') errors.push(`${category.id}: no data published`);
+    if (rec.status === 'no_data') (st.skipped ? warnings : errors).push(`${category.id}: no data published${st.skipped ? ` (${st.skipped})` : ''}`);
     if (rec.items.length && rec.items.length < MIN_ITEMS) warnings.push(`${category.id}: only ${rec.items.length} items ranked`);
     if (!rec.disclosure) errors.push(`${category.id}: disclosure missing`);
     if (!fs.existsSync(path.join(OUT_DIR, 'c', `${category.id}.md`))) errors.push(`${category.id}: markdown missing`);
 
     for (const x of rec.items) {
       if (!/^https:\/\//.test(x.buy_url)) errors.push(`${category.id}: non-https buy_url on ${x.id}`);
-      if (live && x.id.startsWith('sample:')) errors.push(`${category.id}: sample item in live data`);
+      if (live && /^sample[-:]/.test(x.id)) errors.push(`${category.id}: sample item in live data`);
     }
     if (live && rec.items.length) {
       const affiliated = rec.items.filter((x) => x.affiliate).length / rec.items.length;
       m.affiliate_rate = Math.round(affiliated * 100) / 100;
-      if (affiliated < 0.9) errors.push(`${category.id}: only ${Math.round(affiliated * 100)}% of links are affiliate links (is RAKUTEN_AFFILIATE_ID set?)`);
+      // Per store, so the message names the secret that is missing.
+      const secret = { rakuten: 'RAKUTEN_AFFILIATE_ID', yahoo: 'YAHOO_VC_AFFILIATE_ID' };
+      for (const store of new Set(rec.items.map((x) => x.store || 'rakuten'))) {
+        const list = rec.items.filter((x) => (x.store || 'rakuten') === store);
+        const rate = list.filter((x) => x.affiliate).length / list.length;
+        if (rate < 0.9) errors.push(`${category.id}: only ${Math.round(rate * 100)}% of ${store} links are affiliate links (is ${secret[store] || 'the affiliate id'} set?)`);
+      }
     }
 
     // Numeric facets are what agents filter on; low coverage means the
@@ -88,7 +94,7 @@ export function audit() {
   metrics.languages = {};
   for (const L of LOCALES.filter((X) => X !== SOURCE)) {
     const untranslated = [];
-    for (const category of CATEGORIES) {
+    for (const category of CATEGORIES.filter((c) => !c.langs || c.langs.includes(L.lang))) {
       const rec = read(`api/v1/${prefix(L)}c/${category.id}.json`);
       if (!rec) continue;
       if (rec.items.length !== (metrics[category.id]?.items ?? rec.items.length)) errors.push(`${L.lang}/${category.id}: item count differs from Japanese`);
@@ -99,6 +105,19 @@ export function audit() {
     metrics.languages[L.lang] = { untranslated };
     if (untranslated.length) warnings.push(`${L.lang}: no translation for ${untranslated.join(', ')} (English shown instead)`);
   }
+
+  // Hotels and books are fetched alongside the categories.
+  for (const part of ['hotels', 'books']) {
+    const st = state[part];
+    if (st?.status === 'partial') warnings.push(`${part}: some requests failed: ${(st.errors || []).join(' | ')}`);
+    if (st?.status === 'skipped') warnings.push(`${part}: skipped (${st.reason})`);
+    if (st?.status === 'error') warnings.push(`${part}: every request failed, previous data kept: ${(st.errors || []).join(' | ')}`);
+  }
+  for (const [id, c] of Object.entries(state.categories || {})) {
+    if (c.sourceErrors?.length) warnings.push(`${id}: one store failed: ${c.sourceErrors.join(' | ')}`);
+  }
+  for (const rel of ['api/v1/sale.json', 'api/v1/compat.json', 'api/v1/hotels.json', 'api/v1/books.json']) read(rel);
+  if (!fs.existsSync(path.join(OUT_DIR, 'deals.xml'))) errors.push('deals.xml missing');
 
   const llms = fs.readFileSync(path.join(OUT_DIR, 'llms.txt'), 'utf8');
   metrics.llms_txt_bytes = Buffer.byteLength(llms);

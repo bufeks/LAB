@@ -111,6 +111,11 @@ test('dedupe: same model merges across shops, different capacities never do', ()
   const f = (name) => ({ name, facets: extractFacets({ name }, mb) });
   assert.equal(sameProduct(f('モバイルバッテリー 10000mAh 22.5W 薄型 軽量'), f('モバイルバッテリー 20000mAh 22.5W 薄型 軽量')), false);
   assert.equal(sameProduct(f('Anker PowerCore 10000 A1263 モバイルバッテリー'), f('【公式】アンカー A1263 モバイルバッテリー 10000mAh PSE 送料無料 急速充電 iPhone')), true);
+  // Different pack sizes of an otherwise identical listing stay separate.
+  const pack = (name) => ({ name, facets: {}, unit: { quantity: Number(name.match(/(\d+)(?:kg|本)$/)[1]) } });
+  assert.equal(sameProduct(pack('コシヒカリ 白米 精米 お米 単一原料米 5kg'), pack('コシヒカリ 白米 精米 お米 単一原料米 10kg')), false);
+  assert.equal(sameProduct(pack('単3形 アルカリ乾電池 長期保存 液漏れ防止 20本'), pack('単3形 アルカリ乾電池 長期保存 液漏れ防止 40本')), false);
+  assert.equal(sameProduct({ name: 'トイレットペーパー 12ロール 50m 再生紙 ダブル', facets: { ply: 'double' } }, { name: 'トイレットペーパー 12ロール 50m 再生紙 シングル', facets: { ply: 'single' } }), false);
   const k = cat('electric-kettle');
   const { items, stats } = rankCategory(
     [

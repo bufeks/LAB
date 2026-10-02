@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-Hant">
+  <id>https://bufeks.github.io/LAB/shelf/zh-hant/c/robot-vacuum/feed.xml</id>
+  <title>SHELF — 掃地機器人: 比平常便宜的商品</title>
+  <link rel="self" href="https://bufeks.github.io/LAB/shelf/zh-hant/c/robot-vacuum/feed.xml"/>
+  <link rel="alternate" href="https://bufeks.github.io/LAB/shelf/zh-hant/c/robot-vacuum/"/>
+  <updated>2026-10-02T14:45:15+09:00</updated>
+  <author><name>SHELF</name></author>
+  <entry>
+    <id>https://bufeks.github.io/LAB/shelf/zh-hant/c/robot-vacuum/feed.xml#sample%3Arobot-vacuum-4@56980</id>
+    <title>(サンプル) ロボット掃除機 D 2000Pa</title>
+    <link rel="alternate" href="https://bufeks.github.io/LAB/shelf/zh-hant/c/robot-vacuum/"/>
+    <updated>2026-10-02T14:45:15+09:00</updated>
+    <summary>56,980 日圓（平常 65,050 日圓，便宜 12.4%）</summary>
+  </entry>
+  <entry>
+    <id>https://bufeks.github.io/LAB/shelf/zh-hant/c/robot-vacuum/feed.xml#sample%3Arobot-vacuum-1@17280</id>
+    <title>(サンプル) ロボット掃除機 A LiDAR マッピング 4000Pa</title>
+    <link rel="alternate" href="https://bufeks.github.io/LAB/shelf/zh-hant/c/robot-vacuum/"/>
+    <updated>2026-10-02T14:45:15+09:00</updated>
+    <summary>17,280 日圓（平常 19,700 日圓，便宜 12.3%）</summary>
+  </entry>
+</feed>

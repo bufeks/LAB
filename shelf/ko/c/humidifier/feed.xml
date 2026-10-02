@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="ko">
+  <id>https://bufeks.github.io/LAB/shelf/ko/c/humidifier/feed.xml</id>
+  <title>SHELF — 가습기: 평소보다 싼 상품</title>
+  <link rel="self" href="https://bufeks.github.io/LAB/shelf/ko/c/humidifier/feed.xml"/>
+  <link rel="alternate" href="https://bufeks.github.io/LAB/shelf/ko/c/humidifier/"/>
+  <updated>2026-10-02T14:45:15+09:00</updated>
+  <author><name>SHELF</name></author>
+  <entry>
+    <id>https://bufeks.github.io/LAB/shelf/ko/c/humidifier/feed.xml#sample-y%3Ahumidifier-1@14220</id>
+    <title>(サンプル) 加湿器 A スチーム式 木造8畳/プレハブ13畳 480mL/h タンク3.0L</title>
+    <link rel="alternate" href="https://bufeks.github.io/LAB/shelf/ko/c/humidifier/"/>
+    <updated>2026-10-02T14:45:15+09:00</updated>
+    <summary>14,220엔 (평소 16,290엔, 12.7% 쌈)</summary>
+  </entry>
+</feed>

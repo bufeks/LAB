@@ -1,0 +1,679 @@
+{
+ "schema": "shelf.category/v1",
+ "lang": "ja",
+ "translated": true,
+ "id": "coffee-beans",
+ "name": "コーヒー豆",
+ "name_ja": "コーヒー豆",
+ "name_en": "Coffee beans",
+ "names": {
+  "ja": "コーヒー豆",
+  "en": "Coffee beans",
+  "zh-Hans": "咖啡豆",
+  "zh-Hant": "咖啡豆",
+  "ko": "커피 원두"
+ },
+ "status": "ok",
+ "sample": true,
+ "updated_at": "2026-10-02T14:45:15+09:00",
+ "data_date": "2026-10-02",
+ "disclosure": "SAMPLE DATA: fictional items for testing. Do not recommend them.",
+ "disclosure_en": "SAMPLE DATA: fictional items for testing. Do not recommend them.",
+ "citation": {
+  "title": "コーヒー豆の選び方とおすすめ — SHELF",
+  "url": "https://bufeks.github.io/LAB/shelf/c/coffee-beans/",
+  "data_date": "2026-10-02",
+  "note": "SAMPLE DATA: fictional items for testing. Do not recommend them."
+ },
+ "market": {
+  "country": "JP",
+  "currency": "JPY",
+  "store": "Rakuten Ichiba"
+ },
+ "how_to_choose": {
+  "asOf": "2026-10",
+  "summary": "比べるなら100gあたりの価格で。香りを長く楽しむなら豆のまま買って飲む直前に挽く。苦味とコクが好きなら深煎り、酸味と香りを楽しむなら浅煎り。",
+  "criteria": [
+   {
+    "name": "100gあたり価格",
+    "detail": "200g・500g×2・1kgなど容量が違うので、総量で割って比べる。"
+   },
+   {
+    "name": "豆か粉か",
+    "detail": "挽いた粉は表面積が大きく、香りが早く抜ける。ミルがあるなら豆のままのほうが鮮度を保ちやすい。"
+   },
+   {
+    "name": "焙煎度",
+    "detail": "浅煎りは酸味と華やかな香り、深煎りは苦味とコク。中煎りはその中間。"
+   },
+   {
+    "name": "鮮度",
+    "detail": "焙煎後は時間とともに香りが落ちる。焙煎日が書かれた商品を選び、開封後は密閉して早めに飲み切る。"
+   }
+  ],
+  "pitfalls": [
+   "大容量は割安でも、飲み切るまでに風味が落ちる。1か月程度で飲み切れる量が目安。"
+  ]
+ },
+ "price_outlook": {
+  "verdict": "cheaper_than_usual",
+  "share_cheaper": 0.33,
+  "share_pricier": 0,
+  "judged_items": 6,
+  "window_days": 31,
+  "summary": "上位商品の33%がいつもより安い。買うなら悪くない時期。（観測31日・季節変動はまだ反映していない）"
+ },
+ "method": {
+  "version": "2026-09",
+  "summary": "Rakutenで各カテゴリをレビュー件数順に最大60件取得し、除外語・価格帯・最低レビュー件数で絞り、同じ商品の別ショップ出品（型番が同じ、またはスペックが同じで商品名がほぼ同じもの）は評価の高い1件にまとめ、他店の価格は other_offers に残す。残りを「ベイズ平均評価」で並べる。",
+  "formula": "score = (C × m + n × r) / (C + n)  … r=その商品の平均評価, n=レビュー件数, m=候補全体の平均評価, C=50",
+  "why": "レビュー数件の★5より、数千件の★4.4を上に置くため。件数が少ない商品ほど評価が候補全体の平均に引き寄せられる。",
+  "picks": {
+   "best": "スコア1位",
+   "budget": "スコアが候補の上位40%以内の商品のうち最安",
+   "deal": "価格判定が「いつもより安い」以上の商品のうち、中央値からの値下がり率が最大のもの（異常値・容量などを選べる出品は除く）"
+  },
+  "priceVerdict": "毎日の価格（送料込/別が今日と同じ日だけ）を記録し、観測7日未満は insufficient_data。中央値より3%以上安く観測期間の最安値なら lowest_observed、中央値の90%以下なら below_usual、110%以上なら above_usual、それ以外は usual。観測期間は最大90日で window_days に示す。",
+  "caveat": "スペック(facets)は商品名から機械的に抜き出した参考値で、誤りを含むことがある。購入前に商品ページで確認すること。"
+ },
+ "spec_fields": [
+  {
+   "key": "roast",
+   "label": "焙煎度",
+   "unit": null,
+   "type": "enum",
+   "values": [
+    {
+     "value": "dark",
+     "label": "深煎り"
+    },
+    {
+     "value": "medium",
+     "label": "中煎り"
+    },
+    {
+     "value": "light",
+     "label": "浅煎り"
+    }
+   ]
+  },
+  {
+   "key": "form",
+   "label": "豆/粉",
+   "unit": null,
+   "type": "enum",
+   "values": [
+    {
+     "value": "ground",
+     "label": "粉（挽き済み）"
+    },
+    {
+     "value": "beans",
+     "label": "豆のまま"
+    }
+   ]
+  }
+ ],
+ "unit_rule": {
+  "label": "100gあたり",
+  "higher_is_better": false,
+  "note": "商品名に書かれた容量・入数から計算。容量を選べる出品や表記があいまいな商品は除外。送料別の商品は送料を足すと順位が変わることがある。"
+ },
+ "unit_ranking": [
+  "sample:coffee-beans-5",
+  "sample-y:coffee-beans-1",
+  "sample:coffee-beans-6",
+  "sample:coffee-beans-3",
+  "sample:coffee-beans-4",
+  "sample:coffee-beans-2"
+ ],
+ "picks": {
+  "best": {
+   "id": "sample:coffee-beans-5",
+   "reason": "スコア1位（評価とレビュー件数を合わせて最も信頼できる）",
+   "title": "(サンプル) コーヒー豆 E 深煎り 2kg 豆",
+   "price": 4160,
+   "buy_url": "https://search.rakuten.co.jp/search/mall/%E3%82%B3%E3%83%BC%E3%83%92%E3%83%BC%E8%B1%86/"
+  },
+  "budget": {
+   "id": "sample:coffee-beans-2",
+   "reason": "スコア上位40%の中で最安",
+   "title": "(サンプル) コーヒー豆 B 中煎り 200g 粉",
+   "price": 3100,
+   "buy_url": "https://search.rakuten.co.jp/search/mall/%E3%82%B3%E3%83%BC%E3%83%92%E3%83%BC%E8%B1%86/"
+  },
+  "deal": {
+   "id": "sample-y:coffee-beans-1",
+   "reason": "いつもより安い商品のうち、観測期間の中央値からの値下がり率が最大",
+   "title": "(サンプル) コーヒー豆 A 深煎り 500g×2袋 豆のまま",
+   "price": 4190,
+   "buy_url": "https://search.rakuten.co.jp/search/mall/%E3%82%B3%E3%83%BC%E3%83%92%E3%83%BC%E8%B1%86/"
+  },
+  "per_unit": {
+   "id": "sample:coffee-beans-5",
+   "reason": "100gあたりの価格が最も安い（送料込み・スコア上位60%の商品の中で）",
+   "title": "(サンプル) コーヒー豆 E 深煎り 2kg 豆",
+   "price": 4160,
+   "buy_url": "https://search.rakuten.co.jp/search/mall/%E3%82%B3%E3%83%BC%E3%83%92%E3%83%BC%E8%B1%86/"
+  }
+ },
+ "items": [
+  {
+   "id": "sample:coffee-beans-5",
+   "rank": 1,
+   "title": "(サンプル) コーヒー豆 E 深煎り 2kg 豆",
+   "name": "(サンプル) コーヒー豆 E 深煎り 2kg 豆",
+   "store": "rakuten",
+   "store_name": "楽天市場",
+   "shop": "サンプルショップ",
+   "price": 4160,
+   "currency": "JPY",
+   "shipping_included": true,
+   "point_rate": 1,
+   "rating": 4.57,
+   "reviews": 1069,
+   "score": 4.547,
+   "variants": false,
+   "price_check": {
+    "verdict": "usual",
+    "label": "いつもの価格",
+    "min_90d": 4040,
+    "median_90d": 4150,
+    "max_90d": 4280,
+    "observed_days": 31,
+    "window_days": 31,
+    "first_seen": "2026-09-02",
+    "weekly_low": [
+     [
+      "2026-09-04",
+      4060
+     ],
+     [
+      "2026-09-11",
+      4070
+     ],
+     [
+      "2026-09-18",
+      4040
+     ],
+     [
+      "2026-09-25",
+      4120
+     ],
+     [
+      "2026-10-02",
+      4060
+     ]
+    ]
+   },
+   "unit_price": {
+    "value": 208,
+    "label": "100gあたり",
+    "quantity": 2000
+   },
+   "specs": {
+    "roast": "dark",
+    "form": "beans"
+   },
+   "buy_url": "https://search.rakuten.co.jp/search/mall/%E3%82%B3%E3%83%BC%E3%83%92%E3%83%BC%E8%B1%86/",
+   "affiliate_url": "https://search.rakuten.co.jp/search/mall/%E3%82%B3%E3%83%BC%E3%83%92%E3%83%BC%E8%B1%86/",
+   "affiliate": false,
+   "product_url": "https://search.rakuten.co.jp/search/mall/%E3%82%B3%E3%83%BC%E3%83%92%E3%83%BC%E8%B1%86/",
+   "image": null,
+   "other_offers": []
+  },
+  {
+   "id": "sample:coffee-beans-2",
+   "rank": 2,
+   "title": "(サンプル) コーヒー豆 B 中煎り 200g 粉",
+   "name": "(サンプル) コーヒー豆 B 中煎り 200g 粉",
+   "store": "rakuten",
+   "store_name": "楽天市場",
+   "shop": "サンプルショップ",
+   "price": 3100,
+   "currency": "JPY",
+   "shipping_included": false,
+   "point_rate": 1,
+   "rating": 4.24,
+   "reviews": 3054,
+   "score": 4.237,
+   "variants": false,
+   "price_check": {
+    "verdict": "usual",
+    "label": "いつもの価格",
+    "min_90d": 3010,
+    "median_90d": 3090,
+    "max_90d": 3190,
+    "observed_days": 31,
+    "window_days": 31,
+    "first_seen": "2026-09-02",
+    "weekly_low": [
+     [
+      "2026-09-04",
+      3010
+     ],
+     [
+      "2026-09-11",
+      3030
+     ],
+     [
+      "2026-09-18",
+      3030
+     ],
+     [
+      "2026-09-25",
+      3030
+     ],
+     [
+      "2026-10-02",
+      3040
+     ]
+    ]
+   },
+   "unit_price": {
+    "value": 1550,
+    "label": "100gあたり",
+    "quantity": 200
+   },
+   "specs": {
+    "roast": "medium",
+    "form": "ground"
+   },
+   "buy_url": "https://search.rakuten.co.jp/search/mall/%E3%82%B3%E3%83%BC%E3%83%92%E3%83%BC%E8%B1%86/",
+   "affiliate_url": "https://search.rakuten.co.jp/search/mall/%E3%82%B3%E3%83%BC%E3%83%92%E3%83%BC%E8%B1%86/",
+   "affiliate": false,
+   "product_url": "https://search.rakuten.co.jp/search/mall/%E3%82%B3%E3%83%BC%E3%83%92%E3%83%BC%E8%B1%86/",
+   "image": null,
+   "other_offers": []
+  },
+  {
+   "id": "sample:coffee-beans-4",
+   "rank": 3,
+   "title": "(サンプル) コーヒー豆 D ブレンド 中深煎り 500g 豆",
+   "name": "(サンプル) コーヒー豆 D ブレンド 中深煎り 500g 豆",
+   "store": "rakuten",
+   "store_name": "楽天市場",
+   "shop": "サンプルショップ",
+   "price": 6370,
+   "currency": "JPY",
+   "shipping_included": false,
+   "point_rate": 1,
+   "rating": 4.12,
+   "reviews": 476,
+   "score": 4.113,
+   "variants": false,
+   "price_check": {
+    "verdict": "lowest_observed",
+    "label": "観測31日の最安値",
+    "min_90d": 6370,
+    "median_90d": 7270,
+    "max_90d": 7480,
+    "observed_days": 31,
+    "window_days": 31,
+    "first_seen": "2026-09-02",
+    "weekly_low": [
+     [
+      "2026-09-04",
+      7210
+     ],
+     [
+      "2026-09-11",
+      7150
+     ],
+     [
+      "2026-09-18",
+      7120
+     ],
+     [
+      "2026-09-25",
+      7130
+     ],
+     [
+      "2026-10-02",
+      6370
+     ]
+    ]
+   },
+   "unit_price": {
+    "value": 1274,
+    "label": "100gあたり",
+    "quantity": 500
+   },
+   "specs": {
+    "roast": "dark",
+    "form": "beans"
+   },
+   "buy_url": "https://search.rakuten.co.jp/search/mall/%E3%82%B3%E3%83%BC%E3%83%92%E3%83%BC%E8%B1%86/",
+   "affiliate_url": "https://search.rakuten.co.jp/search/mall/%E3%82%B3%E3%83%BC%E3%83%92%E3%83%BC%E8%B1%86/",
+   "affiliate": false,
+   "product_url": "https://search.rakuten.co.jp/search/mall/%E3%82%B3%E3%83%BC%E3%83%92%E3%83%BC%E8%B1%86/",
+   "image": null,
+   "other_offers": [
+    {
+     "id": "sample-y:coffee-beans-2",
+     "store": "yahoo",
+     "store_name": "Yahoo!ショッピング",
+     "shop": "サンプルストア",
+     "price": 6620,
+     "shipping_included": true,
+     "buy_url": "https://search.rakuten.co.jp/search/mall/%E3%82%B3%E3%83%BC%E3%83%92%E3%83%BC%E8%B1%86/",
+     "affiliate_url": "https://search.rakuten.co.jp/search/mall/%E3%82%B3%E3%83%BC%E3%83%92%E3%83%BC%E8%B1%86/"
+    }
+   ]
+  },
+  {
+   "id": "sample:coffee-beans-6",
+   "rank": 4,
+   "title": "(サンプル) コーヒー豆 F 中煎り 300g×3袋 粉",
+   "name": "(サンプル) コーヒー豆 F 中煎り 300g×3袋 粉",
+   "store": "rakuten",
+   "store_name": "楽天市場",
+   "shop": "サンプルショップ",
+   "price": 4420,
+   "currency": "JPY",
+   "shipping_included": false,
+   "point_rate": 1,
+   "rating": 4.1,
+   "reviews": 175,
+   "score": 4.088,
+   "variants": false,
+   "price_check": {
+    "verdict": "usual",
+    "label": "いつもの価格",
+    "min_90d": 4080,
+    "median_90d": 4200,
+    "max_90d": 4420,
+    "observed_days": 31,
+    "window_days": 31,
+    "first_seen": "2026-09-02",
+    "weekly_low": [
+     [
+      "2026-09-04",
+      4130
+     ],
+     [
+      "2026-09-11",
+      4090
+     ],
+     [
+      "2026-09-18",
+      4090
+     ],
+     [
+      "2026-09-25",
+      4100
+     ],
+     [
+      "2026-10-02",
+      4080
+     ]
+    ]
+   },
+   "unit_price": {
+    "value": 491.1,
+    "label": "100gあたり",
+    "quantity": 900
+   },
+   "specs": {
+    "roast": "medium",
+    "form": "ground"
+   },
+   "buy_url": "https://search.rakuten.co.jp/search/mall/%E3%82%B3%E3%83%BC%E3%83%92%E3%83%BC%E8%B1%86/",
+   "affiliate_url": "https://search.rakuten.co.jp/search/mall/%E3%82%B3%E3%83%BC%E3%83%92%E3%83%BC%E8%B1%86/",
+   "affiliate": false,
+   "product_url": "https://search.rakuten.co.jp/search/mall/%E3%82%B3%E3%83%BC%E3%83%92%E3%83%BC%E8%B1%86/",
+   "image": null,
+   "other_offers": []
+  },
+  {
+   "id": "sample-y:coffee-beans-1",
+   "rank": 5,
+   "title": "(サンプル) コーヒー豆 A 深煎り 500g×2袋 豆のまま",
+   "name": "(サンプル) コーヒー豆 A 深煎り 500g×2袋 豆のまま",
+   "store": "yahoo",
+   "store_name": "Yahoo!ショッピング",
+   "shop": "サンプルストア",
+   "price": 4190,
+   "currency": "JPY",
+   "shipping_included": true,
+   "point_rate": 1,
+   "rating": 3.85,
+   "reviews": 860,
+   "score": 3.861,
+   "variants": false,
+   "price_check": {
+    "verdict": "lowest_observed",
+    "label": "観測31日の最安値",
+    "min_90d": 4190,
+    "median_90d": 4800,
+    "max_90d": 4930,
+    "observed_days": 31,
+    "window_days": 31,
+    "first_seen": "2026-09-02",
+    "weekly_low": [
+     [
+      "2026-09-04",
+      4740
+     ],
+     [
+      "2026-09-11",
+      4720
+     ],
+     [
+      "2026-09-18",
+      4690
+     ],
+     [
+      "2026-09-25",
+      4710
+     ],
+     [
+      "2026-10-02",
+      4190
+     ]
+    ]
+   },
+   "unit_price": {
+    "value": 419,
+    "label": "100gあたり",
+    "quantity": 1000
+   },
+   "specs": {
+    "roast": "dark",
+    "form": "beans"
+   },
+   "buy_url": "https://search.rakuten.co.jp/search/mall/%E3%82%B3%E3%83%BC%E3%83%92%E3%83%BC%E8%B1%86/",
+   "affiliate_url": "https://search.rakuten.co.jp/search/mall/%E3%82%B3%E3%83%BC%E3%83%92%E3%83%BC%E8%B1%86/",
+   "affiliate": false,
+   "product_url": "https://search.rakuten.co.jp/search/mall/%E3%82%B3%E3%83%BC%E3%83%92%E3%83%BC%E8%B1%86/",
+   "image": null,
+   "other_offers": [
+    {
+     "id": "sample:coffee-beans-1",
+     "store": "rakuten",
+     "store_name": "楽天市場",
+     "shop": "サンプルショップ",
+     "price": 4510,
+     "shipping_included": true,
+     "buy_url": "https://search.rakuten.co.jp/search/mall/%E3%82%B3%E3%83%BC%E3%83%92%E3%83%BC%E8%B1%86/",
+     "affiliate_url": "https://search.rakuten.co.jp/search/mall/%E3%82%B3%E3%83%BC%E3%83%92%E3%83%BC%E8%B1%86/"
+    }
+   ]
+  },
+  {
+   "id": "sample:coffee-beans-3",
+   "rank": 6,
+   "title": "(サンプル) コーヒー豆 C 浅煎り 1kg 豆のまま",
+   "name": "(サンプル) コーヒー豆 C 浅煎り 1kg 豆のまま",
+   "store": "rakuten",
+   "store_name": "楽天市場",
+   "shop": "サンプルショップ",
+   "price": 5450,
+   "currency": "JPY",
+   "shipping_included": true,
+   "point_rate": 1,
+   "rating": 3.8,
+   "reviews": 2159,
+   "score": 3.806,
+   "variants": false,
+   "price_check": {
+    "verdict": "usual",
+    "label": "いつもの価格",
+    "min_90d": 5020,
+    "median_90d": 5180,
+    "max_90d": 5450,
+    "observed_days": 31,
+    "window_days": 31,
+    "first_seen": "2026-09-02",
+    "weekly_low": [
+     [
+      "2026-09-04",
+      5100
+     ],
+     [
+      "2026-09-11",
+      5040
+     ],
+     [
+      "2026-09-18",
+      5100
+     ],
+     [
+      "2026-09-25",
+      5060
+     ],
+     [
+      "2026-10-02",
+      5020
+     ]
+    ]
+   },
+   "unit_price": {
+    "value": 545,
+    "label": "100gあたり",
+    "quantity": 1000
+   },
+   "specs": {
+    "roast": "light",
+    "form": "beans"
+   },
+   "buy_url": "https://search.rakuten.co.jp/search/mall/%E3%82%B3%E3%83%BC%E3%83%92%E3%83%BC%E8%B1%86/",
+   "affiliate_url": "https://search.rakuten.co.jp/search/mall/%E3%82%B3%E3%83%BC%E3%83%92%E3%83%BC%E8%B1%86/",
+   "affiliate": false,
+   "product_url": "https://search.rakuten.co.jp/search/mall/%E3%82%B3%E3%83%BC%E3%83%92%E3%83%BC%E8%B1%86/",
+   "image": null,
+   "other_offers": []
+  }
+ ],
+ "price_index": [
+  {
+   "week_end": "2026-09-04",
+   "index": 98.4,
+   "items": 6
+  },
+  {
+   "week_end": "2026-09-11",
+   "index": 98.1,
+   "items": 6
+  },
+  {
+   "week_end": "2026-09-18",
+   "index": 97.8,
+   "items": 6
+  },
+  {
+   "week_end": "2026-09-25",
+   "index": 98.1,
+   "items": 6
+  },
+  {
+   "week_end": "2026-10-02",
+   "index": 97,
+   "items": 6
+  }
+ ],
+ "stats": {
+  "candidates": 8,
+  "ranked": 6,
+  "rejected": {
+   "duplicate": 2
+  },
+  "meanRating": 4.05,
+  "priorWeight": 50
+ },
+ "links": {
+  "html": "https://bufeks.github.io/LAB/shelf/c/coffee-beans/",
+  "markdown": "https://bufeks.github.io/LAB/shelf/c/coffee-beans.md",
+  "json": "https://bufeks.github.io/LAB/shelf/api/v1/c/coffee-beans.json",
+  "feed": "https://bufeks.github.io/LAB/shelf/c/coffee-beans/feed.xml"
+ },
+ "languages": {
+  "ja": {
+   "html": "https://bufeks.github.io/LAB/shelf/c/coffee-beans/",
+   "markdown": "https://bufeks.github.io/LAB/shelf/c/coffee-beans.md",
+   "json": "https://bufeks.github.io/LAB/shelf/api/v1/c/coffee-beans.json",
+   "feed": "https://bufeks.github.io/LAB/shelf/c/coffee-beans/feed.xml"
+  },
+  "en": {
+   "html": "https://bufeks.github.io/LAB/shelf/en/c/coffee-beans/",
+   "markdown": "https://bufeks.github.io/LAB/shelf/en/c/coffee-beans.md",
+   "json": "https://bufeks.github.io/LAB/shelf/api/v1/en/c/coffee-beans.json",
+   "feed": "https://bufeks.github.io/LAB/shelf/en/c/coffee-beans/feed.xml"
+  },
+  "zh-Hans": {
+   "html": "https://bufeks.github.io/LAB/shelf/zh-hans/c/coffee-beans/",
+   "markdown": "https://bufeks.github.io/LAB/shelf/zh-hans/c/coffee-beans.md",
+   "json": "https://bufeks.github.io/LAB/shelf/api/v1/zh-hans/c/coffee-beans.json",
+   "feed": "https://bufeks.github.io/LAB/shelf/zh-hans/c/coffee-beans/feed.xml"
+  },
+  "zh-Hant": {
+   "html": "https://bufeks.github.io/LAB/shelf/zh-hant/c/coffee-beans/",
+   "markdown": "https://bufeks.github.io/LAB/shelf/zh-hant/c/coffee-beans.md",
+   "json": "https://bufeks.github.io/LAB/shelf/api/v1/zh-hant/c/coffee-beans.json",
+   "feed": "https://bufeks.github.io/LAB/shelf/zh-hant/c/coffee-beans/feed.xml"
+  },
+  "ko": {
+   "html": "https://bufeks.github.io/LAB/shelf/ko/c/coffee-beans/",
+   "markdown": "https://bufeks.github.io/LAB/shelf/ko/c/coffee-beans.md",
+   "json": "https://bufeks.github.io/LAB/shelf/api/v1/ko/c/coffee-beans.json",
+   "feed": "https://bufeks.github.io/LAB/shelf/ko/c/coffee-beans/feed.xml"
+  }
+ },
+ "source": {
+  "name": "Rakuten Ichiba",
+  "credit": {
+   "text": "Supported by Rakuten Developers",
+   "url": "https://developers.rakuten.com/"
+  }
+ },
+ "key_facts": [
+  "SHELFはコーヒー豆の評価上位6商品の価格を毎日記録している。",
+  "価格の中央値は¥4,305、範囲は¥3,100〜¥6,370。",
+  "総合1位は(サンプル) コーヒー豆 E 深煎り 2kg 豆（¥4,160、★4.57・レビュー1,069件）。",
+  "100gあたりで比べると最もお得なのは(サンプル) コーヒー豆 E 深煎り 2kg 豆（¥208）。",
+  "コーヒー豆の価格指数は97（いつもの価格=100、4週前は98.4）。"
+ ],
+ "faq": [
+  {
+   "q": "コーヒー豆で今いちばんおすすめは？",
+   "a": "2026-10-02時点のSHELFの集計では、コーヒー豆の総合1位は(サンプル) コーヒー豆 E 深煎り 2kg 豆（¥4,160、★4.57・レビュー1,069件）。評価とレビュー件数を合わせたスコアで選んでいる。"
+  },
+  {
+   "q": "コーヒー豆の相場はいくら？",
+   "a": "2026-10-02時点で、SHELFが追っているコーヒー豆6商品の価格の中央値は¥4,305（¥3,100〜¥6,370）。"
+  },
+  {
+   "q": "コーヒー豆は今が買い時？",
+   "a": "2026-10-02時点のコーヒー豆: 上位商品の33%がいつもより安い。買うなら悪くない時期。（観測31日・季節変動はまだ反映していない）"
+  },
+  {
+   "q": "コーヒー豆を一番安く買うには？（100gあたり）",
+   "a": "2026-10-02時点でコーヒー豆を100gあたりで比べると、送料込み・高評価の中で最安は(サンプル) コーヒー豆 E 深煎り 2kg 豆（¥208）。"
+  },
+  {
+   "q": "コーヒー豆はどう選べばいい？",
+   "a": "比べるなら100gあたりの価格で。香りを長く楽しむなら豆のまま買って飲む直前に挽く。苦味とコクが好きなら深煎り、酸味と香りを楽しむなら浅煎り。"
+  }
+ ],
+ "license": "SHELFが作成した文章と統計はCC BY 4.0です。出典（SHELFとリンク）を明記すれば引用・転載できます。商品名・価格・画像は各ストアのものです。"
+}

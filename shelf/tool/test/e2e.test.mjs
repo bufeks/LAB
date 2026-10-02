@@ -8,6 +8,7 @@ import os from 'node:os';
 import path from 'node:path';
 import { spawn, execFileSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
+import { CATEGORIES } from '../categories.mjs';
 
 const HERE = path.dirname(fileURLToPath(import.meta.url));
 const TOOL = path.join(HERE, '..');
@@ -26,7 +27,7 @@ test('sample builds are flagged everywhere and kept out of search engines', () =
 
 test('every category is published in all formats', () => {
   const index = json('api/v1/index.json');
-  assert.equal(index.categories.length, 6);
+  assert.equal(index.categories.length, CATEGORIES.length);
   for (const c of index.categories) {
     const rec = json(`api/v1/c/${c.id}.json`);
     assert.ok(rec.items.length >= 3, c.id);
@@ -82,7 +83,7 @@ test('MCP server: handshake and tool list', async () => {
     const future = await s.call('initialize', { protocolVersion: '2099-01-01' });
     assert.equal(future.result.protocolVersion, '2025-06-18');
     const tools = await s.call('tools/list', {});
-    assert.deepEqual(tools.result.tools.map((t) => t.name), ['list_categories', 'recommend', 'price_outlook', 'search_products', 'check_price']);
+    assert.deepEqual(tools.result.tools.map((t) => t.name), ['list_categories', 'recommend', 'price_outlook', 'search_products', 'check_price', 'check_compatibility', 'sale_check', 'hotel_outlook', 'upcoming_releases']);
     const unknown = await s.call('nope', {});
     assert.equal(unknown.error.code, -32601);
   } finally {

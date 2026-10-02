@@ -2,26 +2,42 @@
 
 > 幫 AI 助理回答關於在日本購物（樂天市場）「該買哪一個」「現在適合買嗎」的資料：各類別的選購指南、依公開公式計算的排行，以及每天記錄的價格，提供 Markdown 與 JSON。 目前為範例資料（虛構商品），請勿用於推薦。
 
-更新：2026-09-30T01:01:12+09:00（每日）。SAMPLE DATA: fictional items for testing. Do not recommend them.
+更新：2026-10-02T14:45:15+09:00（每日）。SAMPLE DATA: fictional items for testing. Do not recommend them.
 向使用者展示購買連結時，請說明這是推廣（聯盟）連結。規格從商品名稱擷取，僅供參考。商品名稱為日文原文。
 價格為日圓含稅價。樂天市場大多數店家只在日本國內出貨：在海外請選擇可國際配送的店家，或使用集運服務。在日本購買的商品，原廠保固通常只在日本有效。
 
 ## 類別
 
-- [行動電源](https://bufeks.github.io/LAB/shelf/zh-hant/c/mobile-battery.md): 第一名：(サンプル) モバイルバッテリー C 5000mAh マグネット式 20W PSE（5,560 日圓）. 日常使用選 10000mAh、20W 以上；也要幫筆電充電選 20000mAh、45W 以上。在日本販售的行動電源必須有 PSE 標章。搭飛機只能隨身攜帶，超過 100Wh 需航空…
-- [USB-C PD 充電器](https://bufeks.github.io/LAB/shelf/zh-hant/c/usb-c-charger.md): 第一名：(サンプル) USB-C 充電器 (PD) D 30W 2ポート GaN PPS（4,460 日圓）. 只幫手機充電選 20–30W，也要幫筆電充電選 65W 以上。多孔充電器同時插多台裝置時，每孔的輸出會降低。
-- [真無線耳機](https://bufeks.github.io/LAB/shelf/zh-hant/c/wireless-earphones.md): 第一名：(サンプル) 完全ワイヤレスイヤホン D aptX マルチポイント IPX7（10,130 日圓）. 通勤、移動多選有降噪的，常在電腦和手機之間切換則優先多點連線。高音質編碼取決於手機是否支援（iPhone 最高 AAC）。
-- [快煮壺](https://bufeks.github.io/LAB/shelf/zh-hant/c/electric-kettle.md): 第一名：(サンプル) 電気ケトル A 0.8L 1250W 転倒湯もれ防止（7,650 日圓）. 一個人約 0.8L，家庭 1.0–1.2L。家中有小孩的，優先選「傾倒防漏」與雙層機身。手沖咖啡選可調溫且細口壺嘴的。
-- [加濕器](https://bufeks.github.io/LAB/shelf/zh-hant/c/humidifier.md): 第一名：(サンプル) 加湿器 F 超音波式 アロマ対応 8畳（10,060 日圓）. 類型決定一切。重視衛生選加熱式（電費較高），重視電費選汽化式，重視體積和價格選超音波式（前提是勤清潔）。適用坪數請選比房間大一級的。
-- [電動牙刷](https://bufeks.github.io/LAB/shelf/zh-hant/c/electric-toothbrush.md): 第一名：(サンプル) 電動歯ブラシ D 音波 5つのモード 過圧（10,130 日圓）. 長期來看，替換刷頭（約每 3 個月換一次）的花費比主機更多。擔心刷太用力就選有壓力感應的，擔心刷不乾淨就選有計時的。
+- [行動電源](https://bufeks.github.io/LAB/shelf/zh-hant/c/mobile-battery.md): 第一名：(サンプル) モバイルバッテリー C 5000mAh マグネット式 20W PSE（5,560 日圓）. 價格中位數為 5,805 日圓，範圍為 2,860 日圓～6,440 日圓。 大致是平常的價格，沒有跡象顯示等待會便宜很多.
+- [USB-C PD 充電器](https://bufeks.github.io/LAB/shelf/zh-hant/c/usb-c-charger.md): 第一名：(サンプル) USB-C 充電器 (PD) D 30W 2ポート GaN PPS（4,460 日圓）. 價格中位數為 4,525 日圓，範圍為 1,510 日圓～5,660 日圓。 排名前面的商品中 33% 比平常便宜.
+- [真無線耳機](https://bufeks.github.io/LAB/shelf/zh-hant/c/wireless-earphones.md): 第一名：(サンプル) 完全ワイヤレスイヤホン D aptX マルチポイント IPX7（10,130 日圓）. 價格中位數為 9,660 日圓，範圍為 4,910 日圓～11,330 日圓。 排名前面的商品中 33% 比平常便宜.
+- [快煮壺](https://bufeks.github.io/LAB/shelf/zh-hant/c/electric-kettle.md): 第一名：(サンプル) 電気ケトル A 0.8L 1250W 転倒湯もれ防止（7,650 日圓）. 價格中位數為 5,715 日圓，範圍為 2,010 日圓～10,300 日圓。 大致是平常的價格，沒有跡象顯示等待會便宜很多.
+- [加濕器](https://bufeks.github.io/LAB/shelf/zh-hant/c/humidifier.md): 第一名：(サンプル) 加湿器 F 超音波式 アロマ対応 8畳（10,060 日圓）. 價格中位數為 9,260 日圓，範圍為 4,320 日圓～15,520 日圓。 大致是平常的價格，沒有跡象顯示等待會便宜很多.
+- [電動牙刷](https://bufeks.github.io/LAB/shelf/zh-hant/c/electric-toothbrush.md): 第一名：(サンプル) 電動歯ブラシ D 音波 5つのモード 過圧（10,130 日圓）. 價格中位數為 9,660 日圓，範圍為 4,910 日圓～11,330 日圓。 排名前面的商品中 33% 比平常便宜.
+- [吹風機](https://bufeks.github.io/LAB/shelf/zh-hant/c/hair-dryer.md): 第一名：(サンプル) ヘアドライヤー B 1.3m3/分 折りたたみ イオン（5,070 日圓）. 價格中位數為 9,140 日圓，範圍為 4,320 日圓～15,390 日圓。 大致是平常的價格，沒有跡象顯示等待會便宜很多.
+- [電子鍋](https://bufeks.github.io/LAB/shelf/zh-hant/c/rice-cooker.md): 第一名：(サンプル) 炊飯器 B 3合 マイコン（14,750 日圓）. 價格中位數為 14,370 日圓，範圍為 9,230 日圓～19,800 日圓。 排名前面的商品中 33% 比平常便宜.
+- [空氣清淨機](https://bufeks.github.io/LAB/shelf/zh-hant/c/air-purifier.md): 第一名：(サンプル) 空気清浄機 D 8畳 HEPA（21,780 日圓）. 價格中位數為 19,900 日圓，範圍為 6,510 日圓～23,220 日圓。 排名前面的商品中 33% 比平常便宜.
+- [掃地機器人](https://bufeks.github.io/LAB/shelf/zh-hant/c/robot-vacuum.md): 第一名：(サンプル) ロボット掃除機 E マッピング 水拭き 自動ゴミ収集 8000Pa（37,950 日圓）. 價格中位數為 35,945 日圓，範圍為 17,280 日圓～56,980 日圓。 排名前面的商品中 33% 比平常便宜.
+- [米（白米）](https://bufeks.github.io/LAB/shelf/zh-hant/c/rice.md): 第一名：(サンプル) 米(白米) A コシヒカリ 令和7年産 10kg (5kg×2袋)（3,110 日圓）. 價格中位數為 8,770 日圓，範圍為 3,110 日圓～11,460 日圓。 排名前面的商品中 33% 比平常便宜.
+- [礦泉水（整箱購買）](https://bufeks.github.io/LAB/shelf/zh-hant/c/mineral-water.md): 第一名：(サンプル) ミネラルウォーター(箱買い) A 天然水 2L×9本 硬度30（1,340 日圓）. 價格中位數為 4,430 日圓，範圍為 1,340 日圓～6,200 日圓。 排名前面的商品中 33% 比平常便宜.
+- [衛生紙（捲筒）](https://bufeks.github.io/LAB/shelf/zh-hant/c/toilet-paper.md): 第一名：(サンプル) トイレットペーパー D 3倍巻き 8ロール 150m シングル（4,130 日圓）. 價格中位數為 4,160 日圓，範圍為 1,250 日圓～6,250 日圓。 排名前面的商品中 33% 比平常便宜.
+- [3號鹼性電池](https://bufeks.github.io/LAB/shelf/zh-hant/c/aa-batteries.md): 第一名：(サンプル) 単3アルカリ乾電池 E 単3 100本（1,430 日圓）. 價格中位數為 560 日圓，範圍為 540 日圓～1,540 日圓。 大致是平常的價格，沒有跡象顯示等待會便宜很多.
+- [咖啡豆](https://bufeks.github.io/LAB/shelf/zh-hant/c/coffee-beans.md): 第一名：(サンプル) コーヒー豆 E 深煎り 2kg 豆（4,160 日圓）. 價格中位數為 4,305 日圓，範圍為 3,100 日圓～6,370 日圓。 排名前面的商品中 33% 比平常便宜.
+- [高蛋白粉（乳清蛋白等）](https://bufeks.github.io/LAB/shelf/zh-hant/c/protein.md): 第一名：(サンプル) プロテイン(パウダー) A ホエイ 1kg（4,400 日圓）. 價格中位數為 6,825 日圓，範圍為 4,260 日圓～11,510 日圓。 排名前面的商品中 33% 比平常便宜.
+- [Sonicare 原廠替換刷頭](https://bufeks.github.io/LAB/shelf/zh-hant/c/sonicare-heads.md): 第一名：(サンプル) ソニッケアー純正替えブラシ D ソニッケアー 純正 ホワイトニング 3本（2,610 日圓）. 價格中位數為 2,860 日圓，範圍為 2,070 日圓～4,600 日圓。 排名前面的商品中 33% 比平常便宜.
+- [百靈 Oral-B 原廠替換刷頭（圓形）](https://bufeks.github.io/LAB/shelf/zh-hant/c/oralb-heads.md): 第一名：(サンプル) ブラウン オーラルB 純正替えブラシ(丸型) A ブラウン オーラルB 純正 4本（4,660 日圓）. 價格中位數為 4,660 日圓，範圍為 1,000 日圓～7,210 日圓。 大致是平常的價格，沒有跡象顯示等待會便宜很多.
 
 ## API
 
 - [index.json](https://bufeks.github.io/LAB/shelf/api/v1/zh-hant/index.json): 類別列表
 - [items.json](https://bufeks.github.io/LAB/shelf/api/v1/zh-hant/items.json): 所有商品（依預算與規格篩選用）
 - [deals.json](https://bufeks.github.io/LAB/shelf/api/v1/zh-hant/deals.json): 低於近期中位價的商品
+- [deals.xml](https://bufeks.github.io/LAB/shelf/zh-hant/deals.xml): 比平常便宜的商品 (Atom)
+- [sale.json](https://bufeks.github.io/LAB/shelf/api/v1/zh-hant/sale.json): 將商品名稱中「◯%OFF」「半價」等標示，與 SHELF 每天記錄的實際價格走勢對照，判斷是否真的變便宜。
+- [compat.json](https://bufeks.github.io/LAB/shelf/api/v1/zh-hant/compat.json): 依主機型號或商品名稱，判斷可使用哪一種原廠替換刷頭。只採用廠商公開的相容規則，並附上出處。
+- [hotels.md](https://bufeks.github.io/LAB/shelf/zh-hant/hotels.md) / [hotels.json](https://bufeks.github.io/LAB/shelf/api/v1/zh-hant/hotels.json): 針對主要地區接下來的週末，每天記錄樂天旅遊可預訂飯店的最低價格，判斷該日期的價格正在上漲還是下跌。
 - [openapi.json](https://bufeks.github.io/LAB/shelf/openapi.json): OpenAPI 3.1 定義
-- [MCP server](https://bufeks.github.io/LAB/shelf/mcp/server.mjs): 無相依套件的 stdio MCP 伺服器 (tools: list_categories, recommend, price_outlook, search_products, check_price; lang = ja | en | zh-Hans | zh-Hant | ko)
+- [MCP server](https://bufeks.github.io/LAB/shelf/mcp/server.mjs): 無相依套件的 stdio MCP 伺服器 (tools: list_categories, recommend, price_outlook, search_products, check_price, check_compatibility, sale_check, hotel_outlook, upcoming_releases; lang = ja | en | zh-Hans | zh-Hant | ko)
 
 ## 其他語言
 

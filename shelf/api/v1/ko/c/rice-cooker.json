@@ -1,0 +1,638 @@
+{
+ "schema": "shelf.category/v1",
+ "lang": "ko",
+ "translated": true,
+ "id": "rice-cooker",
+ "name": "전기밥솥",
+ "name_ja": "炊飯器",
+ "name_en": "Rice cookers",
+ "names": {
+  "ja": "炊飯器",
+  "en": "Rice cookers",
+  "zh-Hans": "电饭煲",
+  "zh-Hant": "電子鍋",
+  "ko": "전기밥솥"
+ },
+ "status": "ok",
+ "sample": true,
+ "updated_at": "2026-10-02T14:45:15+09:00",
+ "data_date": "2026-10-02",
+ "disclosure": "SAMPLE DATA: fictional items for testing. Do not recommend them.",
+ "disclosure_en": "SAMPLE DATA: fictional items for testing. Do not recommend them.",
+ "citation": {
+  "title": "전기밥솥 고르는 법과 추천 — SHELF",
+  "url": "https://bufeks.github.io/LAB/shelf/ko/c/rice-cooker/",
+  "data_date": "2026-10-02",
+  "note": "SAMPLE DATA: fictional items for testing. Do not recommend them."
+ },
+ "market": {
+  "country": "JP",
+  "currency": "JPY",
+  "store": "Rakuten Ichiba",
+  "for_visitors": "가격은 엔화, 세금 포함입니다. 라쿠텐 이치바의 대부분 상점은 일본 국내로만 배송합니다. 해외에서는 해외 배송을 하는 상점을 찾거나 배송 대행 서비스를 이용하세요. 일본에서 산 제품의 제조사 보증은 일본 안에서만 유효한 경우가 많습니다."
+ },
+ "how_to_choose": {
+  "asOf": "2026-10",
+  "summary": "1인 가구는 3홉, 2~4인은 5.5홉, 5인 이상은 1되(10홉)가 기준. 싼 가격을 우선하면 마이컴, 밥맛을 중시하면 IH, 쫀득한 식감을 원하면 압력 IH. 고가 제품의 차이는 내솥 소재와 화력이다.",
+  "criteria": [
+   {
+    "name": "용량",
+    "detail": "최대 용량의 절반 정도를 짓는 일이 많다면 한 단계 작은 쪽이 밥이 고르게 된다."
+   },
+   {
+    "name": "가열 방식",
+    "detail": "마이컴은 바닥 히터로 가열하며 저렴하다. IH는 솥 전체를 가열해 화력이 강하다. 압력 IH는 압력을 가해 고온으로 지어 쫀득해지기 쉽다."
+   },
+   {
+    "name": "내솥",
+    "detail": "두꺼운 솥이나 뚝배기·철·구리 등 소재에 따라 축열성이 달라진다. 가격 차이의 대부분은 여기서 나온다."
+   },
+   {
+    "name": "손질",
+    "detail": "매번 씻는 부품(안쪽 뚜껑·증기구)이 적을수록 계속 쓰기 쉽다."
+   },
+   {
+    "name": "보온",
+    "detail": "오래 보온하면 밥이 누렇게 변하거나 마르기 쉽다. 냉동 보관한다면 보온 성능보다 밥맛을 중시한다."
+   }
+  ],
+  "pitfalls": [
+   "내솥 코팅이 상하면 교체 비용이 든다. 교체용 내솥 가격도 확인해 둔다."
+  ],
+  "abroad": "일본의 100V 전용 설계이며 제조사는 일본 내 사용만 지원한다. 한국의 220V에서는 절대 쓰지 말 것(변압기 없이는 고장·화재 위험). 해외용으로 따로 나온 모델도 있다."
+ },
+ "price_outlook": {
+  "verdict": "cheaper_than_usual",
+  "share_cheaper": 0.33,
+  "share_pricier": 0,
+  "judged_items": 6,
+  "window_days": 31,
+  "summary": "상위 상품의 33%가 평소보다 싸다. 사기에 나쁘지 않은 시기. (31일 관측, 계절 변동은 아직 반영되지 않음)"
+ },
+ "method": {
+  "summary": "카테고리마다 라쿠텐에서 리뷰 수 순으로 최대 60개를 가져와 제외어·가격대·최소 리뷰 수로 거른다. 여러 상점이 파는 같은 상품(모델명이 같거나, 사양이 같고 상품명이 거의 같은 것)은 평점이 가장 높은 하나로 합치고, 다른 상점 가격은 other_offers에 남긴다. 나머지를 “베이즈 평균 평점”으로 정렬한다.",
+  "formula": "score = (C × m + n × r) / (C + n)  … r = 해당 상품 평균 평점, n = 리뷰 수, m = 전체 후보의 평균 평점, C = 50",
+  "why": "리뷰 몇 건의 ★5보다 리뷰 수천 건의 ★4.4를 위에 두기 위해서다. 리뷰가 적을수록 평점이 전체 평균 쪽으로 당겨진다.",
+  "picks": {
+   "best": "점수 1위",
+   "budget": "점수 상위 40% 상품 중 최저가",
+   "deal": "평소보다 싼 상품 중 중앙값 대비 하락 폭이 가장 큰 것 (이상값과 옵션 선택형 상품 제외)"
+  },
+  "priceVerdict": "매일 가격을 기록하고, 배송 조건이 같은 날끼리만 비교한다. 관측 7일 미만은 insufficient_data, 관측 기간 최저가이면서 중앙값보다 3% 이상 싸면 lowest_observed, 중앙값의 90% 이하면 below_usual, 110% 이상이면 above_usual, 그 외는 usual. 관측 기간은 최대 90일이며 window_days에 표시한다.",
+  "caveat": "사양은 상품명에서 기계적으로 추출한 참고값이라 틀릴 수 있다. 구매 전에 상품 페이지에서 확인할 것."
+ },
+ "spec_fields": [
+  {
+   "key": "cups",
+   "label": "취사 용량",
+   "unit": "홉 (1홉 약 180ml)",
+   "type": "number"
+  },
+  {
+   "key": "heating",
+   "label": "가열 방식",
+   "unit": null,
+   "type": "enum",
+   "values": [
+    {
+     "value": "pressure_ih",
+     "label": "압력 IH"
+    },
+    {
+     "value": "ih",
+     "label": "IH"
+    },
+    {
+     "value": "microcomputer",
+     "label": "마이컴 (열판식)"
+    }
+   ]
+  },
+  {
+   "key": "timer",
+   "label": "예약 타이머",
+   "unit": null,
+   "type": "flag"
+  }
+ ],
+ "picks": {
+  "best": {
+   "id": "sample:rice-cooker-2",
+   "reason": "점수 1위 (평점과 리뷰 수를 함께 볼 때 가장 믿을 만함)",
+   "title": "(サンプル) 炊飯器 B 3合 マイコン",
+   "price": 14750,
+   "buy_url": "https://search.rakuten.co.jp/search/mall/%E7%82%8A%E9%A3%AF%E5%99%A8/"
+  },
+  "budget": {
+   "id": "sample:rice-cooker-5",
+   "reason": "점수 상위 40% 중 최저가",
+   "title": "(サンプル) 炊飯器 E 3合 IH",
+   "price": 9230,
+   "buy_url": "https://search.rakuten.co.jp/search/mall/%E7%82%8A%E9%A3%AF%E5%99%A8/"
+  },
+  "deal": {
+   "id": "sample-y:rice-cooker-1",
+   "reason": "평소보다 싼 상품 중 중앙값 대비 하락 폭이 가장 큼",
+   "title": "(サンプル) 炊飯器 A 半額 5.5合 圧力IH 予約",
+   "price": 19800,
+   "buy_url": "https://search.rakuten.co.jp/search/mall/%E7%82%8A%E9%A3%AF%E5%99%A8/"
+  }
+ },
+ "items": [
+  {
+   "id": "sample:rice-cooker-2",
+   "rank": 1,
+   "title": "(サンプル) 炊飯器 B 3合 マイコン",
+   "name": "(サンプル) 炊飯器 B 3合 マイコン",
+   "store": "rakuten",
+   "store_name": "라쿠텐 이치바",
+   "shop": "サンプルショップ",
+   "price": 14750,
+   "currency": "JPY",
+   "shipping_included": false,
+   "point_rate": 1,
+   "rating": 4.8,
+   "reviews": 2057,
+   "score": 4.792,
+   "variants": false,
+   "price_check": {
+    "verdict": "usual",
+    "label": "평소 가격",
+    "min_90d": 14340,
+    "median_90d": 14680,
+    "max_90d": 15160,
+    "observed_days": 31,
+    "window_days": 31,
+    "first_seen": "2026-09-02",
+    "weekly_low": [
+     [
+      "2026-09-04",
+      14340
+     ],
+     [
+      "2026-09-11",
+      14410
+     ],
+     [
+      "2026-09-18",
+      14400
+     ],
+     [
+      "2026-09-25",
+      14400
+     ],
+     [
+      "2026-10-02",
+      14460
+     ]
+    ]
+   },
+   "specs": {
+    "cups": 3,
+    "heating": "microcomputer",
+    "timer": false
+   },
+   "buy_url": "https://search.rakuten.co.jp/search/mall/%E7%82%8A%E9%A3%AF%E5%99%A8/",
+   "affiliate_url": "https://search.rakuten.co.jp/search/mall/%E7%82%8A%E9%A3%AF%E5%99%A8/",
+   "affiliate": false,
+   "product_url": "https://search.rakuten.co.jp/search/mall/%E7%82%8A%E9%A3%AF%E5%99%A8/",
+   "image": null,
+   "other_offers": []
+  },
+  {
+   "id": "sample:rice-cooker-4",
+   "rank": 2,
+   "title": "(サンプル) 炊飯器 D 1升 圧力IH",
+   "name": "(サンプル) 炊飯器 D 1升 圧力IH",
+   "store": "rakuten",
+   "store_name": "라쿠텐 이치바",
+   "shop": "サンプルショップ",
+   "price": 13470,
+   "currency": "JPY",
+   "shipping_included": false,
+   "point_rate": 1,
+   "rating": 4.78,
+   "reviews": 3383,
+   "score": 4.775,
+   "variants": false,
+   "price_check": {
+    "verdict": "lowest_observed",
+    "label": "관측 31일 중 최저가",
+    "min_90d": 13470,
+    "median_90d": 15380,
+    "max_90d": 15820,
+    "observed_days": 31,
+    "window_days": 31,
+    "first_seen": "2026-09-02",
+    "weekly_low": [
+     [
+      "2026-09-04",
+      15250
+     ],
+     [
+      "2026-09-11",
+      15110
+     ],
+     [
+      "2026-09-18",
+      15060
+     ],
+     [
+      "2026-09-25",
+      15080
+     ],
+     [
+      "2026-10-02",
+      13470
+     ]
+    ]
+   },
+   "specs": {
+    "heating": "pressure_ih",
+    "timer": false
+   },
+   "buy_url": "https://search.rakuten.co.jp/search/mall/%E7%82%8A%E9%A3%AF%E5%99%A8/",
+   "affiliate_url": "https://search.rakuten.co.jp/search/mall/%E7%82%8A%E9%A3%AF%E5%99%A8/",
+   "affiliate": false,
+   "product_url": "https://search.rakuten.co.jp/search/mall/%E7%82%8A%E9%A3%AF%E5%99%A8/",
+   "image": null,
+   "other_offers": [
+    {
+     "id": "sample-y:rice-cooker-2",
+     "store": "yahoo",
+     "store_name": "Yahoo! 쇼핑",
+     "shop": "サンプルストア",
+     "price": 14010,
+     "shipping_included": true,
+     "buy_url": "https://search.rakuten.co.jp/search/mall/%E7%82%8A%E9%A3%AF%E5%99%A8/",
+     "affiliate_url": "https://search.rakuten.co.jp/search/mall/%E7%82%8A%E9%A3%AF%E5%99%A8/"
+    }
+   ]
+  },
+  {
+   "id": "sample:rice-cooker-5",
+   "rank": 3,
+   "title": "(サンプル) 炊飯器 E 3合 IH",
+   "name": "(サンプル) 炊飯器 E 3合 IH",
+   "store": "rakuten",
+   "store_name": "라쿠텐 이치바",
+   "shop": "サンプルショップ",
+   "price": 9230,
+   "currency": "JPY",
+   "shipping_included": true,
+   "point_rate": 1,
+   "rating": 4.47,
+   "reviews": 1628,
+   "score": 4.47,
+   "variants": false,
+   "price_check": {
+    "verdict": "usual",
+    "label": "평소 가격",
+    "min_90d": 8960,
+    "median_90d": 9200,
+    "max_90d": 9500,
+    "observed_days": 31,
+    "window_days": 31,
+    "first_seen": "2026-09-02",
+    "weekly_low": [
+     [
+      "2026-09-04",
+      9000
+     ],
+     [
+      "2026-09-11",
+      9030
+     ],
+     [
+      "2026-09-18",
+      8960
+     ],
+     [
+      "2026-09-25",
+      9130
+     ],
+     [
+      "2026-10-02",
+      9020
+     ]
+    ]
+   },
+   "specs": {
+    "cups": 3,
+    "heating": "ih",
+    "timer": false
+   },
+   "buy_url": "https://search.rakuten.co.jp/search/mall/%E7%82%8A%E9%A3%AF%E5%99%A8/",
+   "affiliate_url": "https://search.rakuten.co.jp/search/mall/%E7%82%8A%E9%A3%AF%E5%99%A8/",
+   "affiliate": false,
+   "product_url": "https://search.rakuten.co.jp/search/mall/%E7%82%8A%E9%A3%AF%E5%99%A8/",
+   "image": null,
+   "other_offers": []
+  },
+  {
+   "id": "sample-y:rice-cooker-1",
+   "rank": 4,
+   "title": "(サンプル) 炊飯器 A 半額 5.5合 圧力IH 予約",
+   "name": "(サンプル) 炊飯器 A 半額 5.5合 圧力IH 予約",
+   "store": "yahoo",
+   "store_name": "Yahoo! 쇼핑",
+   "shop": "サンプルストア",
+   "price": 19800,
+   "currency": "JPY",
+   "shipping_included": true,
+   "point_rate": 1,
+   "rating": 4.42,
+   "reviews": 971,
+   "score": 4.422,
+   "variants": false,
+   "price_check": {
+    "verdict": "lowest_observed",
+    "label": "관측 31일 중 최저가",
+    "min_90d": 19800,
+    "median_90d": 22690,
+    "max_90d": 23300,
+    "observed_days": 31,
+    "window_days": 31,
+    "first_seen": "2026-09-02",
+    "weekly_low": [
+     [
+      "2026-09-04",
+      22420
+     ],
+     [
+      "2026-09-11",
+      22300
+     ],
+     [
+      "2026-09-18",
+      22180
+     ],
+     [
+      "2026-09-25",
+      22240
+     ],
+     [
+      "2026-10-02",
+      19800
+     ]
+    ]
+   },
+   "sale_check": {
+    "claimed_pct": 50,
+    "claimed_yen": null,
+    "claimed_up_to": false,
+    "verdict": "smaller_than_claimed",
+    "actual_drop_pct": 12.7,
+    "label": "표시만큼 싸지 않음"
+   },
+   "specs": {
+    "cups": 5.5,
+    "heating": "pressure_ih",
+    "timer": true
+   },
+   "buy_url": "https://search.rakuten.co.jp/search/mall/%E7%82%8A%E9%A3%AF%E5%99%A8/",
+   "affiliate_url": "https://search.rakuten.co.jp/search/mall/%E7%82%8A%E9%A3%AF%E5%99%A8/",
+   "affiliate": false,
+   "product_url": "https://search.rakuten.co.jp/search/mall/%E7%82%8A%E9%A3%AF%E5%99%A8/",
+   "image": null,
+   "other_offers": [
+    {
+     "id": "sample:rice-cooker-1",
+     "store": "rakuten",
+     "store_name": "라쿠텐 이치바",
+     "shop": "サンプルショップ",
+     "price": 21290,
+     "shipping_included": true,
+     "buy_url": "https://search.rakuten.co.jp/search/mall/%E7%82%8A%E9%A3%AF%E5%99%A8/",
+     "affiliate_url": "https://search.rakuten.co.jp/search/mall/%E7%82%8A%E9%A3%AF%E5%99%A8/"
+    }
+   ]
+  },
+  {
+   "id": "sample:rice-cooker-6",
+   "rank": 5,
+   "title": "(サンプル) 炊飯器 F 5.5合 マイコン 予約",
+   "name": "(サンプル) 炊飯器 F 5.5合 マイコン 予約",
+   "store": "rakuten",
+   "store_name": "라쿠텐 이치바",
+   "shop": "サンプルショップ",
+   "price": 13990,
+   "currency": "JPY",
+   "shipping_included": false,
+   "point_rate": 1,
+   "rating": 4.34,
+   "reviews": 1624,
+   "score": 4.343,
+   "variants": false,
+   "price_check": {
+    "verdict": "usual",
+    "label": "평소 가격",
+    "min_90d": 12900,
+    "median_90d": 13290,
+    "max_90d": 13990,
+    "observed_days": 31,
+    "window_days": 31,
+    "first_seen": "2026-09-02",
+    "weekly_low": [
+     [
+      "2026-09-04",
+      13080
+     ],
+     [
+      "2026-09-11",
+      12930
+     ],
+     [
+      "2026-09-18",
+      12940
+     ],
+     [
+      "2026-09-25",
+      12990
+     ],
+     [
+      "2026-10-02",
+      12900
+     ]
+    ]
+   },
+   "specs": {
+    "cups": 5.5,
+    "heating": "microcomputer",
+    "timer": true
+   },
+   "buy_url": "https://search.rakuten.co.jp/search/mall/%E7%82%8A%E9%A3%AF%E5%99%A8/",
+   "affiliate_url": "https://search.rakuten.co.jp/search/mall/%E7%82%8A%E9%A3%AF%E5%99%A8/",
+   "affiliate": false,
+   "product_url": "https://search.rakuten.co.jp/search/mall/%E7%82%8A%E9%A3%AF%E5%99%A8/",
+   "image": null,
+   "other_offers": []
+  },
+  {
+   "id": "sample:rice-cooker-3",
+   "rank": 6,
+   "title": "(サンプル) 炊飯器 C 5.5合 IH 予約",
+   "name": "(サンプル) 炊飯器 C 5.5合 IH 予約",
+   "store": "rakuten",
+   "store_name": "라쿠텐 이치바",
+   "shop": "サンプルショップ",
+   "price": 18800,
+   "currency": "JPY",
+   "shipping_included": true,
+   "point_rate": 1,
+   "rating": 3.89,
+   "reviews": 3352,
+   "score": 3.898,
+   "variants": false,
+   "price_check": {
+    "verdict": "usual",
+    "label": "평소 가격",
+    "min_90d": 17330,
+    "median_90d": 17870,
+    "max_90d": 18800,
+    "observed_days": 31,
+    "window_days": 31,
+    "first_seen": "2026-09-02",
+    "weekly_low": [
+     [
+      "2026-09-04",
+      17580
+     ],
+     [
+      "2026-09-11",
+      17380
+     ],
+     [
+      "2026-09-18",
+      17600
+     ],
+     [
+      "2026-09-25",
+      17450
+     ],
+     [
+      "2026-10-02",
+      17330
+     ]
+    ]
+   },
+   "specs": {
+    "cups": 5.5,
+    "heating": "ih",
+    "timer": true
+   },
+   "buy_url": "https://search.rakuten.co.jp/search/mall/%E7%82%8A%E9%A3%AF%E5%99%A8/",
+   "affiliate_url": "https://search.rakuten.co.jp/search/mall/%E7%82%8A%E9%A3%AF%E5%99%A8/",
+   "affiliate": false,
+   "product_url": "https://search.rakuten.co.jp/search/mall/%E7%82%8A%E9%A3%AF%E5%99%A8/",
+   "image": null,
+   "other_offers": []
+  }
+ ],
+ "price_index": [
+  {
+   "week_end": "2026-09-04",
+   "index": 98.4,
+   "items": 6
+  },
+  {
+   "week_end": "2026-09-11",
+   "index": 98.2,
+   "items": 6
+  },
+  {
+   "week_end": "2026-09-18",
+   "index": 97.8,
+   "items": 6
+  },
+  {
+   "week_end": "2026-09-25",
+   "index": 98,
+   "items": 6
+  },
+  {
+   "week_end": "2026-10-02",
+   "index": 97,
+   "items": 6
+  }
+ ],
+ "stats": {
+  "candidates": 8,
+  "ranked": 6,
+  "rejected": {
+   "duplicate": 2
+  },
+  "meanRating": 4.45,
+  "priorWeight": 50
+ },
+ "links": {
+  "html": "https://bufeks.github.io/LAB/shelf/ko/c/rice-cooker/",
+  "markdown": "https://bufeks.github.io/LAB/shelf/ko/c/rice-cooker.md",
+  "json": "https://bufeks.github.io/LAB/shelf/api/v1/ko/c/rice-cooker.json",
+  "feed": "https://bufeks.github.io/LAB/shelf/ko/c/rice-cooker/feed.xml"
+ },
+ "languages": {
+  "ja": {
+   "html": "https://bufeks.github.io/LAB/shelf/c/rice-cooker/",
+   "markdown": "https://bufeks.github.io/LAB/shelf/c/rice-cooker.md",
+   "json": "https://bufeks.github.io/LAB/shelf/api/v1/c/rice-cooker.json",
+   "feed": "https://bufeks.github.io/LAB/shelf/c/rice-cooker/feed.xml"
+  },
+  "en": {
+   "html": "https://bufeks.github.io/LAB/shelf/en/c/rice-cooker/",
+   "markdown": "https://bufeks.github.io/LAB/shelf/en/c/rice-cooker.md",
+   "json": "https://bufeks.github.io/LAB/shelf/api/v1/en/c/rice-cooker.json",
+   "feed": "https://bufeks.github.io/LAB/shelf/en/c/rice-cooker/feed.xml"
+  },
+  "zh-Hans": {
+   "html": "https://bufeks.github.io/LAB/shelf/zh-hans/c/rice-cooker/",
+   "markdown": "https://bufeks.github.io/LAB/shelf/zh-hans/c/rice-cooker.md",
+   "json": "https://bufeks.github.io/LAB/shelf/api/v1/zh-hans/c/rice-cooker.json",
+   "feed": "https://bufeks.github.io/LAB/shelf/zh-hans/c/rice-cooker/feed.xml"
+  },
+  "zh-Hant": {
+   "html": "https://bufeks.github.io/LAB/shelf/zh-hant/c/rice-cooker/",
+   "markdown": "https://bufeks.github.io/LAB/shelf/zh-hant/c/rice-cooker.md",
+   "json": "https://bufeks.github.io/LAB/shelf/api/v1/zh-hant/c/rice-cooker.json",
+   "feed": "https://bufeks.github.io/LAB/shelf/zh-hant/c/rice-cooker/feed.xml"
+  },
+  "ko": {
+   "html": "https://bufeks.github.io/LAB/shelf/ko/c/rice-cooker/",
+   "markdown": "https://bufeks.github.io/LAB/shelf/ko/c/rice-cooker.md",
+   "json": "https://bufeks.github.io/LAB/shelf/api/v1/ko/c/rice-cooker.json",
+   "feed": "https://bufeks.github.io/LAB/shelf/ko/c/rice-cooker/feed.xml"
+  }
+ },
+ "source": {
+  "name": "Rakuten Ichiba",
+  "credit": {
+   "text": "Supported by Rakuten Developers",
+   "url": "https://developers.rakuten.com/"
+  }
+ },
+ "key_facts": [
+  "SHELF는 전기밥솥 중 평점 상위 6개 상품의 가격을 매일 기록한다.",
+  "가격의 중앙값은 14,370엔이며, 범위는 9,230엔~19,800엔이다.",
+  "종합 1위는 (サンプル) 炊飯器 B 3合 マイコン (14,750엔, ★4.80, 리뷰 2,057건)이다.",
+  "전기밥솥의 가격 지수는 97이다 (평소 가격=100, 4주 전은 98.4)."
+ ],
+ "faq": [
+  {
+   "q": "지금 가장 추천하는 전기밥솥은?",
+   "a": "2026-10-02 기준 SHELF 집계에서 전기밥솥 종합 1위는 (サンプル) 炊飯器 B 3合 マイコン (14,750엔, ★4.80, 리뷰 2,057건)이다. 평점과 리뷰 수를 함께 반영한 점수로 선정한다."
+  },
+  {
+   "q": "전기밥솥 가격은 얼마 정도인가?",
+   "a": "2026-10-02 기준 SHELF가 추적하는 전기밥솥 6개 상품의 가격 중앙값은 14,370엔 (9,230엔~19,800엔)이다."
+  },
+  {
+   "q": "전기밥솥은 지금 사도 될까?",
+   "a": "2026-10-02 기준 전기밥솥: 상위 상품의 33%가 평소보다 싸다. 사기에 나쁘지 않은 시기. (31일 관측, 계절 변동은 아직 반영되지 않음)"
+  },
+  {
+   "q": "전기밥솥은 어떻게 고르면 될까?",
+   "a": "1인 가구는 3홉, 2~4인은 5.5홉, 5인 이상은 1되(10홉)가 기준. 싼 가격을 우선하면 마이컴, 밥맛을 중시하면 IH, 쫀득한 식감을 원하면 압력 IH. 고가 제품의 차이는 내솥 소재와 화력이다."
+  }
+ ],
+ "license": "SHELF가 작성한 글과 통계는 CC BY 4.0입니다. 출처(SHELF와 링크)를 밝히면 인용·재사용할 수 있습니다. 상품명·가격·이미지는 각 스토어에 속합니다."
+}

@@ -1,0 +1,352 @@
+{
+ "categoryId": "oralb-heads",
+ "date": "2026-10-02",
+ "fetchedAt": "2026-10-02T14:45:15+09:00",
+ "items": [
+  {
+   "id": "sample:oralb-heads-1",
+   "source": "rakuten",
+   "name": "(サンプル) ブラウン オーラルB 純正替えブラシ（丸型） A ブラウン オーラルB 純正 4本",
+   "caption": "",
+   "shop": "サンプルショップ",
+   "price": 4660,
+   "shippingIncluded": true,
+   "pointRate": 1,
+   "rating": 4.67,
+   "reviews": 1757,
+   "productUrl": "https://search.rakuten.co.jp/search/mall/%E3%83%96%E3%83%A9%E3%82%A6%E3%83%B3%20%E3%82%AA%E3%83%BC%E3%83%A9%E3%83%ABB%20%E6%9B%BF%E3%81%88%E3%83%96%E3%83%A9%E3%82%B7%20%E7%B4%94%E6%AD%A3/",
+   "buyUrl": "https://search.rakuten.co.jp/search/mall/%E3%83%96%E3%83%A9%E3%82%A6%E3%83%B3%20%E3%82%AA%E3%83%BC%E3%83%A9%E3%83%ABB%20%E6%9B%BF%E3%81%88%E3%83%96%E3%83%A9%E3%82%B7%20%E7%B4%94%E6%AD%A3/",
+   "affiliate": false,
+   "image": null,
+   "available": true,
+   "title": "(サンプル) ブラウン オーラルB 純正替えブラシ(丸型) A ブラウン オーラルB 純正 4本",
+   "variants": false,
+   "score": 4.657,
+   "facets": {
+    "heads": 4,
+    "genuine": true
+   },
+   "claimed": null,
+   "unit": {
+    "quantity": 4,
+    "value": 1165
+   },
+   "otherOffers": [
+    {
+     "id": "sample-y:oralb-heads-1",
+     "store": "yahoo",
+     "shop": "サンプルストア",
+     "price": 4330,
+     "shippingIncluded": true,
+     "buyUrl": "https://search.rakuten.co.jp/search/mall/%E3%83%96%E3%83%A9%E3%82%A6%E3%83%B3%20%E3%82%AA%E3%83%BC%E3%83%A9%E3%83%ABB%20%E6%9B%BF%E3%81%88%E3%83%96%E3%83%A9%E3%82%B7%20%E7%B4%94%E6%AD%A3/",
+     "affiliate": false
+    }
+   ],
+   "rank": 1,
+   "priceStats": {
+    "points": 31,
+    "windowDays": 31,
+    "firstSeen": "2026-09-02",
+    "min90": 4660,
+    "median90": 5310,
+    "max90": 5500,
+    "verdict": "lowest_observed"
+   },
+   "priceWeekly": [
+    [
+     "2026-09-04",
+     5280
+    ],
+    [
+     "2026-09-11",
+     5220
+    ],
+    [
+     "2026-09-18",
+     5290
+    ],
+    [
+     "2026-09-25",
+     5210
+    ],
+    [
+     "2026-10-02",
+     4660
+    ]
+   ]
+  },
+  {
+   "id": "sample:oralb-heads-3",
+   "source": "rakuten",
+   "name": "(サンプル) ブラウン オーラルB 純正替えブラシ（丸型） C ブラウン 純正 8本",
+   "caption": "",
+   "shop": "サンプルショップ",
+   "price": 7210,
+   "shippingIncluded": true,
+   "pointRate": 1,
+   "rating": 4.6,
+   "reviews": 481,
+   "productUrl": "https://search.rakuten.co.jp/search/mall/%E3%83%96%E3%83%A9%E3%82%A6%E3%83%B3%20%E3%82%AA%E3%83%BC%E3%83%A9%E3%83%ABB%20%E6%9B%BF%E3%81%88%E3%83%96%E3%83%A9%E3%82%B7%20%E7%B4%94%E6%AD%A3/",
+   "buyUrl": "https://search.rakuten.co.jp/search/mall/%E3%83%96%E3%83%A9%E3%82%A6%E3%83%B3%20%E3%82%AA%E3%83%BC%E3%83%A9%E3%83%ABB%20%E6%9B%BF%E3%81%88%E3%83%96%E3%83%A9%E3%82%B7%20%E7%B4%94%E6%AD%A3/",
+   "affiliate": false,
+   "image": null,
+   "available": true,
+   "title": "(サンプル) ブラウン オーラルB 純正替えブラシ(丸型) C ブラウン 純正 8本",
+   "variants": false,
+   "score": 4.564,
+   "facets": {
+    "heads": 8,
+    "genuine": true
+   },
+   "claimed": null,
+   "unit": {
+    "quantity": 8,
+    "value": 901.3
+   },
+   "otherOffers": [],
+   "rank": 2,
+   "priceStats": {
+    "points": 31,
+    "windowDays": 31,
+    "firstSeen": "2026-09-02",
+    "min90": 6650,
+    "median90": 6850,
+    "max90": 7210,
+    "verdict": "usual"
+   },
+   "priceWeekly": [
+    [
+     "2026-09-04",
+     6740
+    ],
+    [
+     "2026-09-11",
+     6660
+    ],
+    [
+     "2026-09-18",
+     6750
+    ],
+    [
+     "2026-09-25",
+     6690
+    ],
+    [
+     "2026-10-02",
+     6650
+    ]
+   ]
+  },
+  {
+   "id": "sample:oralb-heads-6",
+   "source": "rakuten",
+   "name": "(サンプル) ブラウン オーラルB 純正替えブラシ（丸型） F オーラルB 純正 1本",
+   "caption": "",
+   "shop": "サンプルショップ",
+   "price": 1000,
+   "shippingIncluded": false,
+   "pointRate": 1,
+   "rating": 4.23,
+   "reviews": 2998,
+   "productUrl": "https://search.rakuten.co.jp/search/mall/%E3%83%96%E3%83%A9%E3%82%A6%E3%83%B3%20%E3%82%AA%E3%83%BC%E3%83%A9%E3%83%ABB%20%E6%9B%BF%E3%81%88%E3%83%96%E3%83%A9%E3%82%B7%20%E7%B4%94%E6%AD%A3/",
+   "buyUrl": "https://search.rakuten.co.jp/search/mall/%E3%83%96%E3%83%A9%E3%82%A6%E3%83%B3%20%E3%82%AA%E3%83%BC%E3%83%A9%E3%83%ABB%20%E6%9B%BF%E3%81%88%E3%83%96%E3%83%A9%E3%82%B7%20%E7%B4%94%E6%AD%A3/",
+   "affiliate": false,
+   "image": null,
+   "available": true,
+   "title": "(サンプル) ブラウン オーラルB 純正替えブラシ(丸型) F オーラルB 純正 1本",
+   "variants": false,
+   "score": 4.23,
+   "facets": {
+    "heads": 1,
+    "genuine": true
+   },
+   "claimed": null,
+   "unit": {
+    "quantity": 1,
+    "value": 1000
+   },
+   "otherOffers": [],
+   "rank": 3,
+   "priceStats": {
+    "points": 31,
+    "windowDays": 31,
+    "firstSeen": "2026-09-02",
+    "min90": 920,
+    "median90": 950,
+    "max90": 1000,
+    "verdict": "usual"
+   },
+   "priceWeekly": [
+    [
+     "2026-09-04",
+     940
+    ],
+    [
+     "2026-09-11",
+     920
+    ],
+    [
+     "2026-09-18",
+     920
+    ],
+    [
+     "2026-09-25",
+     930
+    ],
+    [
+     "2026-10-02",
+     920
+    ]
+   ]
+  },
+  {
+   "id": "sample-y:oralb-heads-2",
+   "source": "yahoo",
+   "name": "(サンプル) ブラウン オーラルB 純正替えブラシ（丸型） D オーラルB 純正 ホワイトニング 3本",
+   "caption": "",
+   "shop": "サンプルストア",
+   "price": 2160,
+   "shippingIncluded": true,
+   "pointRate": 1,
+   "rating": 3.97,
+   "reviews": 1161,
+   "productUrl": "https://search.rakuten.co.jp/search/mall/%E3%83%96%E3%83%A9%E3%82%A6%E3%83%B3%20%E3%82%AA%E3%83%BC%E3%83%A9%E3%83%ABB%20%E6%9B%BF%E3%81%88%E3%83%96%E3%83%A9%E3%82%B7%20%E7%B4%94%E6%AD%A3/",
+   "buyUrl": "https://search.rakuten.co.jp/search/mall/%E3%83%96%E3%83%A9%E3%82%A6%E3%83%B3%20%E3%82%AA%E3%83%BC%E3%83%A9%E3%83%ABB%20%E6%9B%BF%E3%81%88%E3%83%96%E3%83%A9%E3%82%B7%20%E7%B4%94%E6%AD%A3/",
+   "affiliate": false,
+   "image": null,
+   "available": true,
+   "title": "(サンプル) ブラウン オーラルB 純正替えブラシ(丸型) D オーラルB 純正 ホワイトニング 3本",
+   "variants": false,
+   "score": 3.98,
+   "facets": {
+    "heads": 3,
+    "genuine": true
+   },
+   "claimed": null,
+   "unit": {
+    "quantity": 3,
+    "value": 720
+   },
+   "otherOffers": [
+    {
+     "id": "sample:oralb-heads-4",
+     "store": "rakuten",
+     "shop": "サンプルショップ",
+     "price": 2080,
+     "shippingIncluded": false,
+     "buyUrl": "https://search.rakuten.co.jp/search/mall/%E3%83%96%E3%83%A9%E3%82%A6%E3%83%B3%20%E3%82%AA%E3%83%BC%E3%83%A9%E3%83%ABB%20%E6%9B%BF%E3%81%88%E3%83%96%E3%83%A9%E3%82%B7%20%E7%B4%94%E6%AD%A3/",
+     "affiliate": false
+    }
+   ],
+   "rank": 4,
+   "priceStats": {
+    "points": 31,
+    "windowDays": 31,
+    "firstSeen": "2026-09-02",
+    "min90": 2100,
+    "median90": 2150,
+    "max90": 2220,
+    "verdict": "usual"
+   },
+   "priceWeekly": [
+    [
+     "2026-09-04",
+     2110
+    ],
+    [
+     "2026-09-11",
+     2110
+    ],
+    [
+     "2026-09-18",
+     2100
+    ],
+    [
+     "2026-09-25",
+     2160
+    ],
+    [
+     "2026-10-02",
+     2100
+    ]
+   ]
+  },
+  {
+   "id": "sample:oralb-heads-5",
+   "source": "rakuten",
+   "name": "(サンプル) ブラウン オーラルB 純正替えブラシ（丸型） E ブラウン オーラルB 純正 6本",
+   "caption": "",
+   "shop": "サンプルショップ",
+   "price": 5120,
+   "shippingIncluded": true,
+   "pointRate": 1,
+   "rating": 3.95,
+   "reviews": 551,
+   "productUrl": "https://search.rakuten.co.jp/search/mall/%E3%83%96%E3%83%A9%E3%82%A6%E3%83%B3%20%E3%82%AA%E3%83%BC%E3%83%A9%E3%83%ABB%20%E6%9B%BF%E3%81%88%E3%83%96%E3%83%A9%E3%82%B7%20%E7%B4%94%E6%AD%A3/",
+   "buyUrl": "https://search.rakuten.co.jp/search/mall/%E3%83%96%E3%83%A9%E3%82%A6%E3%83%B3%20%E3%82%AA%E3%83%BC%E3%83%A9%E3%83%ABB%20%E6%9B%BF%E3%81%88%E3%83%96%E3%83%A9%E3%82%B7%20%E7%B4%94%E6%AD%A3/",
+   "affiliate": false,
+   "image": null,
+   "available": true,
+   "title": "(サンプル) ブラウン オーラルB 純正替えブラシ(丸型) E ブラウン オーラルB 純正 6本",
+   "variants": false,
+   "score": 3.972,
+   "facets": {
+    "heads": 6,
+    "genuine": true
+   },
+   "claimed": null,
+   "unit": {
+    "quantity": 6,
+    "value": 853.3
+   },
+   "otherOffers": [],
+   "rank": 5,
+   "priceStats": {
+    "points": 31,
+    "windowDays": 31,
+    "firstSeen": "2026-09-02",
+    "min90": 4970,
+    "median90": 5110,
+    "max90": 5270,
+    "verdict": "usual"
+   },
+   "priceWeekly": [
+    [
+     "2026-09-04",
+     4990
+    ],
+    [
+     "2026-09-11",
+     5010
+    ],
+    [
+     "2026-09-18",
+     4970
+    ],
+    [
+     "2026-09-25",
+     5070
+    ],
+    [
+     "2026-10-02",
+     5000
+    ]
+   ]
+  }
+ ],
+ "stats": {
+  "candidates": 8,
+  "ranked": 5,
+  "rejected": {
+   "below_price_range": 1,
+   "duplicate": 2
+  },
+  "meanRating": 4.22,
+  "priorWeight": 50
+ },
+ "picks": {
+  "best": "sample:oralb-heads-1",
+  "deal": "sample:oralb-heads-1",
+  "per_unit": "sample:oralb-heads-3"
+ }
+}

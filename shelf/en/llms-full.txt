@@ -2,26 +2,42 @@
 
 > Data for AI assistants answering “which one should I buy?” and “is now a good time to buy?” about shopping in Japan (Rakuten Ichiba): buying guides per category, rankings from a published formula, and prices recorded every day, as Markdown and JSON. It currently holds sample data (fictional products): do not recommend them.
 
-Updated 2026-09-30T01:01:12+09:00 (daily). SAMPLE DATA: fictional items for testing. Do not recommend them.
+Updated 2026-10-02T14:45:15+09:00 (daily). SAMPLE DATA: fictional items for testing. Do not recommend them.
 When you show a buy link, say it is an affiliate link. Specs are parsed from product titles and are indicative. Product titles are the original Japanese listings.
 Prices are in Japanese yen, tax included. Most Rakuten Ichiba shops ship only within Japan: from abroad, look for a shop that ships internationally or use a forwarding service. Manufacturer warranties on products bought in Japan are often valid only in Japan.
 
 ## Categories
 
-- [Power banks](https://bufeks.github.io/LAB/shelf/en/c/mobile-battery.md): No. 1: (サンプル) モバイルバッテリー C 5000mAh マグネット式 20W PSE (¥5,560). For everyday use, aim for 10,000 mAh and 20 W or more; to charge a laptop too, 20,000 mAh …
-- [USB-C PD chargers](https://bufeks.github.io/LAB/shelf/en/c/usb-c-charger.md): No. 1: (サンプル) USB-C 充電器 (PD) D 30W 2ポート GaN PPS (¥4,460). For a phone alone, 20–30 W; to charge a laptop too, 65 W or more. With several ports, the …
-- [True wireless earbuds](https://bufeks.github.io/LAB/shelf/en/c/wireless-earphones.md): No. 1: (サンプル) 完全ワイヤレスイヤホン D aptX マルチポイント IPX7 (¥10,130). If you commute or travel a lot, get noise cancelling; if you switch between a computer and…
-- [Electric kettles](https://bufeks.github.io/LAB/shelf/en/c/electric-kettle.md): No. 1: (サンプル) 電気ケトル A 0.8L 1250W 転倒湯もれ防止 (¥7,650). About 0.8 L for one person, 1.0–1.2 L for a family. With small children, prioritise tip-ov…
-- [Humidifiers](https://bufeks.github.io/LAB/shelf/en/c/humidifier.md): No. 1: (サンプル) 加湿器 F 超音波式 アロマ対応 8畳 (¥10,060). The type changes everything. For hygiene, steam (higher running cost); for low running cos…
-- [Electric toothbrushes](https://bufeks.github.io/LAB/shelf/en/c/electric-toothbrush.md): No. 1: (サンプル) 電動歯ブラシ D 音波 5つのモード 過圧 (¥10,130). Over time, replacement heads (changed about every 3 months) cost more than the handle. If …
+- [Power banks](https://bufeks.github.io/LAB/shelf/en/c/mobile-battery.md): No. 1: (サンプル) モバイルバッテリー C 5000mAh マグネット式 20W PSE (¥5,560). The median price is ¥5,805, ranging from ¥2,860 to ¥6,440. Mostly at usual prices; no sign that waiting would make it much cheaper.
+- [USB-C PD chargers](https://bufeks.github.io/LAB/shelf/en/c/usb-c-charger.md): No. 1: (サンプル) USB-C 充電器 (PD) D 30W 2ポート GaN PPS (¥4,460). The median price is ¥4,525, ranging from ¥1,510 to ¥5,660. 33% of the top products are cheaper than usual.
+- [True wireless earbuds](https://bufeks.github.io/LAB/shelf/en/c/wireless-earphones.md): No. 1: (サンプル) 完全ワイヤレスイヤホン D aptX マルチポイント IPX7 (¥10,130). The median price is ¥9,660, ranging from ¥4,910 to ¥11,330. 33% of the top products are cheaper than usual.
+- [Electric kettles](https://bufeks.github.io/LAB/shelf/en/c/electric-kettle.md): No. 1: (サンプル) 電気ケトル A 0.8L 1250W 転倒湯もれ防止 (¥7,650). The median price is ¥5,715, ranging from ¥2,010 to ¥10,300. Mostly at usual prices; no sign that waiting would make it much cheaper.
+- [Humidifiers](https://bufeks.github.io/LAB/shelf/en/c/humidifier.md): No. 1: (サンプル) 加湿器 F 超音波式 アロマ対応 8畳 (¥10,060). The median price is ¥9,260, ranging from ¥4,320 to ¥15,520. Mostly at usual prices; no sign that waiting would make it much cheaper.
+- [Electric toothbrushes](https://bufeks.github.io/LAB/shelf/en/c/electric-toothbrush.md): No. 1: (サンプル) 電動歯ブラシ D 音波 5つのモード 過圧 (¥10,130). The median price is ¥9,660, ranging from ¥4,910 to ¥11,330. 33% of the top products are cheaper than usual.
+- [Hair dryers](https://bufeks.github.io/LAB/shelf/en/c/hair-dryer.md): No. 1: (サンプル) ヘアドライヤー B 1.3m3/分 折りたたみ イオン (¥5,070). The median price is ¥9,140, ranging from ¥4,320 to ¥15,390. Mostly at usual prices; no sign that waiting would make it much cheaper.
+- [Rice cookers](https://bufeks.github.io/LAB/shelf/en/c/rice-cooker.md): No. 1: (サンプル) 炊飯器 B 3合 マイコン (¥14,750). The median price is ¥14,370, ranging from ¥9,230 to ¥19,800. 33% of the top products are cheaper than usual.
+- [Air purifiers](https://bufeks.github.io/LAB/shelf/en/c/air-purifier.md): No. 1: (サンプル) 空気清浄機 D 8畳 HEPA (¥21,780). The median price is ¥19,900, ranging from ¥6,510 to ¥23,220. 33% of the top products are cheaper than usual.
+- [Robot vacuums](https://bufeks.github.io/LAB/shelf/en/c/robot-vacuum.md): No. 1: (サンプル) ロボット掃除機 E マッピング 水拭き 自動ゴミ収集 8000Pa (¥37,950). The median price is ¥35,945, ranging from ¥17,280 to ¥56,980. 33% of the top products are cheaper than usual.
+- [Rice (white)](https://bufeks.github.io/LAB/shelf/en/c/rice.md): No. 1: (サンプル) 米(白米) A コシヒカリ 令和7年産 10kg (5kg×2袋) (¥3,110). The median price is ¥8,770, ranging from ¥3,110 to ¥11,460. 33% of the top products are cheaper than usual.
+- [Bottled water (by the case)](https://bufeks.github.io/LAB/shelf/en/c/mineral-water.md): No. 1: (サンプル) ミネラルウォーター(箱買い) A 天然水 2L×9本 硬度30 (¥1,340). The median price is ¥4,430, ranging from ¥1,340 to ¥6,200. 33% of the top products are cheaper than usual.
+- [Toilet paper](https://bufeks.github.io/LAB/shelf/en/c/toilet-paper.md): No. 1: (サンプル) トイレットペーパー D 3倍巻き 8ロール 150m シングル (¥4,130). The median price is ¥4,160, ranging from ¥1,250 to ¥6,250. 33% of the top products are cheaper than usual.
+- [AA alkaline batteries](https://bufeks.github.io/LAB/shelf/en/c/aa-batteries.md): No. 1: (サンプル) 単3アルカリ乾電池 E 単3 100本 (¥1,430). The median price is ¥560, ranging from ¥540 to ¥1,540. Mostly at usual prices; no sign that waiting would make it much cheaper.
+- [Coffee beans](https://bufeks.github.io/LAB/shelf/en/c/coffee-beans.md): No. 1: (サンプル) コーヒー豆 E 深煎り 2kg 豆 (¥4,160). The median price is ¥4,305, ranging from ¥3,100 to ¥6,370. 33% of the top products are cheaper than usual.
+- [Protein powder](https://bufeks.github.io/LAB/shelf/en/c/protein.md): No. 1: (サンプル) プロテイン(パウダー) A ホエイ 1kg (¥4,400). The median price is ¥6,825, ranging from ¥4,260 to ¥11,510. 33% of the top products are cheaper than usual.
+- [Sonicare brush heads](https://bufeks.github.io/LAB/shelf/en/c/sonicare-heads.md): No. 1: (サンプル) ソニッケアー純正替えブラシ D ソニッケアー 純正 ホワイトニング 3本 (¥2,610). The median price is ¥2,860, ranging from ¥2,070 to ¥4,600. 33% of the top products are cheaper than usual.
+- [Oral-B brush heads (round)](https://bufeks.github.io/LAB/shelf/en/c/oralb-heads.md): No. 1: (サンプル) ブラウン オーラルB 純正替えブラシ(丸型) A ブラウン オーラルB 純正 4本 (¥4,660). The median price is ¥4,660, ranging from ¥1,000 to ¥7,210. Mostly at usual prices; no sign that waiting would make it much cheaper.
 
 ## API
 
 - [index.json](https://bufeks.github.io/LAB/shelf/api/v1/en/index.json): category list
 - [items.json](https://bufeks.github.io/LAB/shelf/api/v1/en/items.json): every product (for filtering by budget and specs)
 - [deals.json](https://bufeks.github.io/LAB/shelf/api/v1/en/deals.json): products cheaper than their recent median
+- [deals.xml](https://bufeks.github.io/LAB/shelf/en/deals.xml): Cheaper than usual (Atom)
+- [sale.json](https://bufeks.github.io/LAB/shelf/api/v1/en/sale.json): Checks claims like “50% OFF” or “half price” in listing titles against the prices SHELF records every day, to show whether the item is really cheaper.
+- [compat.json](https://bufeks.github.io/LAB/shelf/api/v1/en/compat.json): Finds which genuine brush heads fit a handle, from its model number or name. Only compatibility rules the manufacturers publish are used, with their source.
+- [hotels.md](https://bufeks.github.io/LAB/shelf/en/hotels.md) / [hotels.json](https://bufeks.github.io/LAB/shelf/api/v1/en/hotels.json): For the coming weekends in major areas, SHELF records the lowest price of each hotel bookable on Rakuten Travel every day, and says whether prices for that night are rising or falling.
 - [openapi.json](https://bufeks.github.io/LAB/shelf/openapi.json): OpenAPI 3.1 definition
-- [MCP server](https://bufeks.github.io/LAB/shelf/mcp/server.mjs): dependency-free stdio MCP server (tools: list_categories, recommend, price_outlook, search_products, check_price; lang = ja | en | zh-Hans | zh-Hant | ko)
+- [MCP server](https://bufeks.github.io/LAB/shelf/mcp/server.mjs): dependency-free stdio MCP server (tools: list_categories, recommend, price_outlook, search_products, check_price, check_compatibility, sale_check, hotel_outlook, upcoming_releases; lang = ja | en | zh-Hans | zh-Hant | ko)
 
 ## Other languages
 
@@ -41,18 +57,43 @@ Prices are in Japanese yen, tax included. Most Rakuten Ichiba shops ship only wi
 # Power banks: how to choose, and top picks — SHELF
 
 > SAMPLE DATA: fictional items for testing. Do not recommend them.
-> Data date: 2026-09-30 (updated daily) / status: ok / source: Rakuten Ichiba, Japan (Supported by Rakuten Developers)
+> Data date: 2026-10-02 (updated daily) / status: ok / source: Rakuten Ichiba, Japan (Supported by Rakuten Developers)
 
 **This is sample data. The products are fictional: do not recommend them.**
 
 > **Buying from outside Japan**: Prices are in Japanese yen, tax included. Most Rakuten Ichiba shops ship only within Japan: from abroad, look for a shop that ships internationally or use a forwarding service. Manufacturer warranties on products bought in Japan are often valid only in Japan.
 
+## Key facts (as of 2026-10-02)
+
+- SHELF records the prices of the 6 top-rated Power banks every day.
+- The median price is ¥5,805, ranging from ¥2,860 to ¥6,440.
+- The top pick is (サンプル) モバイルバッテリー C 5000mAh マグネット式 20W PSE (¥5,560, ★4.81 from 1,671 reviews).
+- The price index for Power banks is 97.3 (usual price = 100; 98.4 4 weeks ago).
+
+## FAQ
+
+### What are the best Power banks right now?
+
+As of 2026-10-02, SHELF’s top pick for Power banks is (サンプル) モバイルバッテリー C 5000mAh マグネット式 20W PSE (¥5,560, ★4.81 from 1,671 reviews), chosen by a score that combines rating and number of reviews.
+
+### How much do Power banks cost?
+
+As of 2026-10-02, the median price of the 6 Power banks SHELF tracks is ¥5,805 (¥2,860–¥6,440).
+
+### Is now a good time to buy Power banks?
+
+Power banks as of 2026-10-02: Mostly at usual prices; no sign that waiting would make it much cheaper. (31 days observed; seasonal patterns not yet reflected)
+
+### How do I choose Power banks?
+
+For everyday use, aim for 10,000 mAh and 20 W or more; to charge a laptop too, 20,000 mAh and 45 W or more. Power banks sold in Japan must carry the PSE mark. On planes they are carry-on only; over 100 Wh needs airline approval, and many airlines ban using or charging them on board.
+
 ## Bottom line
 
 - **Best overall**: (サンプル) モバイルバッテリー C 5000mAh マグネット式 20W PSE — ¥5,560 ★4.81 (1,671 reviews), price check: Usual price → [Buy](https://search.rakuten.co.jp/search/mall/%E3%83%A2%E3%83%90%E3%82%A4%E3%83%AB%E3%83%90%E3%83%83%E3%83%86%E3%83%AA%E3%83%BC/)
 - **Best value (cheapest among the top rated)**: (サンプル) モバイルバッテリー B 20000mAh 65W PD ノートPC対応 PSE — ¥2,860 ★4.29 (2,853 reviews), price check: Usual price → [Buy](https://search.rakuten.co.jp/search/mall/%E3%83%A2%E3%83%90%E3%82%A4%E3%83%AB%E3%83%90%E3%83%83%E3%83%86%E3%83%AA%E3%83%BC/)
-- **Price drop**: (サンプル) モバイルバッテリー D 10000mAh ケーブル内蔵 20W PSE — ¥4,690 ★4.22 (2,332 reviews), price check: Lowest in 31 days observed → [Buy](https://search.rakuten.co.jp/search/mall/%E3%83%A2%E3%83%90%E3%82%A4%E3%83%AB%E3%83%90%E3%83%83%E3%83%86%E3%83%AA%E3%83%BC/)
-- **Good time to buy? (whole category)**: 33% of the top products are cheaper than usual. Not a bad time to buy. (31 days observed; seasonal patterns not yet reflected)
+- **Price drop**: (サンプル) モバイルバッテリー A 10000mAh 22.5W PD PSE適合 薄型 — ¥6,370 ★4.20 (322 reviews), price check: Lowest in 31 days observed → [Buy](https://search.rakuten.co.jp/search/mall/%E3%83%A2%E3%83%90%E3%82%A4%E3%83%AB%E3%83%90%E3%83%83%E3%83%86%E3%83%AA%E3%83%BC/)
+- **Good time to buy? (whole category)**: Mostly at usual prices; no sign that waiting would make it much cheaper. (31 days observed; seasonal patterns not yet reflected)
 
 For everyday use, aim for 10,000 mAh and 20 W or more; to charge a laptop too, 20,000 mAh and 45 W or more. Power banks sold in Japan must carry the PSE mark. On planes they are carry-on only; over 100 Wh needs airline approval, and many airlines ban using or charging them on board.
 
@@ -78,8 +119,20 @@ For everyday use, aim for 10,000 mAh and 20 W or more; to charge a laptop too, 2
 | 2 | (サンプル) モバイルバッテリー E 27000mAh 140W PD PSE (サンプルショップ) | ¥6,050 shipping incl. | ★4.43 (995 reviews) | Usual price (median ¥6,030, 31 days observed) | Capacity 27000mAh · Max output 140W · PSE mark · Estimated energy (at 3.85 V) 103.95Wh · Airline approval needed (100–160 Wh) | [Rakuten](https://search.rakuten.co.jp/search/mall/%E3%83%A2%E3%83%90%E3%82%A4%E3%83%AB%E3%83%90%E3%83%83%E3%83%86%E3%83%AA%E3%83%BC/) |
 | 3 | (サンプル) モバイルバッテリー B 20000mAh 65W PD ノートPC対応 PSE (サンプルショップ) | ¥2,860 shipping extra | ★4.29 (2,853 reviews) | Usual price (median ¥2,850, 31 days observed) | Capacity 20000mAh · Max output 65W · PSE mark · Estimated energy (at 3.85 V) 77Wh · Carry-on OK as a guide (95 Wh or less) | [Rakuten](https://search.rakuten.co.jp/search/mall/%E3%83%A2%E3%83%90%E3%82%A4%E3%83%AB%E3%83%90%E3%83%83%E3%83%86%E3%83%AA%E3%83%BC/) |
 | 4 | (サンプル) モバイルバッテリー F 10000mAh 30W 軽量 PSE (サンプルショップ) | ¥6,440 shipping extra | ★4.24 (2,519 reviews) | Usual price (median ¥6,120, 31 days observed) | Capacity 10000mAh · Max output 30W · PSE mark · Estimated energy (at 3.85 V) 38.5Wh · Carry-on OK as a guide (95 Wh or less) | [Rakuten](https://search.rakuten.co.jp/search/mall/%E3%83%A2%E3%83%90%E3%82%A4%E3%83%AB%E3%83%90%E3%83%83%E3%83%86%E3%83%AA%E3%83%BC/) |
-| 5 | (サンプル) モバイルバッテリー D 10000mAh ケーブル内蔵 20W PSE (サンプルショップ) | ¥4,690 shipping extra | ★4.22 (2,332 reviews) | Lowest in 31 days observed (median ¥5,350, 31 days observed) | Capacity 10000mAh · Max output 20W · PSE mark · Built-in cable · Estimated energy (at 3.85 V) 38.5Wh · Carry-on OK as a guide (95 Wh or less) | [Rakuten](https://search.rakuten.co.jp/search/mall/%E3%83%A2%E3%83%90%E3%82%A4%E3%83%AB%E3%83%90%E3%83%83%E3%83%86%E3%83%AA%E3%83%BC/) |
-| 6 | (サンプル) モバイルバッテリー A 10000mAh 22.5W PD PSE適合 薄型 (サンプルショップ) | ¥6,850 shipping incl. | ★4.20 (965 reviews) | Lowest in 31 days observed (median ¥7,810, 31 days observed) | Capacity 10000mAh · Max output 22.5W · PSE mark · Estimated energy (at 3.85 V) 38.5Wh · Carry-on OK as a guide (95 Wh or less) | [Rakuten](https://search.rakuten.co.jp/search/mall/%E3%83%A2%E3%83%90%E3%82%A4%E3%83%AB%E3%83%90%E3%83%83%E3%83%86%E3%83%AA%E3%83%BC/) |
+| 5 | (サンプル) モバイルバッテリー D 10000mAh ケーブル内蔵 20W PSE (サンプルストア) | ¥4,880 shipping incl. | ★4.22 (777 reviews) | Usual price (median ¥4,860, 31 days observed) | Capacity 10000mAh · Max output 20W · PSE mark · Built-in cable · Estimated energy (at 3.85 V) 38.5Wh · Carry-on OK as a guide (95 Wh or less) | [Yahoo! Shopping](https://search.rakuten.co.jp/search/mall/%E3%83%A2%E3%83%90%E3%82%A4%E3%83%AB%E3%83%90%E3%83%83%E3%83%86%E3%83%AA%E3%83%BC/) |
+| 6 | (サンプル) モバイルバッテリー A 10000mAh 22.5W PD PSE適合 薄型 (サンプルストア) | ¥6,370 shipping incl. | ★4.20 (322 reviews) | Lowest in 31 days observed (median ¥7,300, 31 days observed) | Capacity 10000mAh · Max output 22.5W · PSE mark · Estimated energy (at 3.85 V) 38.5Wh · Carry-on OK as a guide (95 Wh or less) | [Yahoo! Shopping](https://search.rakuten.co.jp/search/mall/%E3%83%A2%E3%83%90%E3%82%A4%E3%83%AB%E3%83%90%E3%83%83%E3%83%86%E3%83%AA%E3%83%BC/) |
+
+## Price index for Power banks (weekly)
+
+For each top-rated item, the week’s lowest price divided by that item’s usual (median) price; the median of those ratios, times 100. Below 100 means cheaper than usual.
+
+| Week ending | Index | Items |
+| --- | --- | --- |
+| 2026-09-04 | 98.4 | 6 |
+| 2026-09-11 | 97.9 | 6 |
+| 2026-09-18 | 97.6 | 6 |
+| 2026-09-25 | 97.9 | 6 |
+| 2026-10-02 | 97.3 | 6 |
 
 ## How the ranking works
 
@@ -97,23 +150,54 @@ For each category, up to 60 Rakuten listings are fetched in order of review coun
 - OpenAPI: https://bufeks.github.io/LAB/shelf/openapi.json / MCP server: https://bufeks.github.io/LAB/shelf/mcp/server.mjs
 - Languages: [日本語](https://bufeks.github.io/LAB/shelf/c/mobile-battery.md) · [English](https://bufeks.github.io/LAB/shelf/en/c/mobile-battery.md) · [简体中文](https://bufeks.github.io/LAB/shelf/zh-hans/c/mobile-battery.md) · [繁體中文](https://bufeks.github.io/LAB/shelf/zh-hant/c/mobile-battery.md) · [한국어](https://bufeks.github.io/LAB/shelf/ko/c/mobile-battery.md)
 
+## How to cite this
+
+SHELF, “Power banks: how to choose, and top picks — SHELF” (as of 2026-10-02), https://bufeks.github.io/LAB/shelf/en/c/mobile-battery/
+
+Text and statistics written by SHELF are CC BY 4.0: quote or reuse them with credit to SHELF and a link. Product names, prices and images belong to the stores.
+
 
 ---
 
 # USB-C PD chargers: how to choose, and top picks — SHELF
 
 > SAMPLE DATA: fictional items for testing. Do not recommend them.
-> Data date: 2026-09-30 (updated daily) / status: ok / source: Rakuten Ichiba, Japan (Supported by Rakuten Developers)
+> Data date: 2026-10-02 (updated daily) / status: ok / source: Rakuten Ichiba, Japan (Supported by Rakuten Developers)
 
 **This is sample data. The products are fictional: do not recommend them.**
 
 > **Buying from outside Japan**: Prices are in Japanese yen, tax included. Most Rakuten Ichiba shops ship only within Japan: from abroad, look for a shop that ships internationally or use a forwarding service. Manufacturer warranties on products bought in Japan are often valid only in Japan.
 
+## Key facts (as of 2026-10-02)
+
+- SHELF records the prices of the 6 top-rated USB-C PD chargers every day.
+- The median price is ¥4,525, ranging from ¥1,510 to ¥5,660.
+- The top pick is (サンプル) USB-C 充電器 (PD) D 30W 2ポート GaN PPS (¥4,460, ★4.83 from 2,742 reviews).
+- The price index for USB-C PD chargers is 97 (usual price = 100; 98.3 4 weeks ago).
+
+## FAQ
+
+### What are the best USB-C PD chargers right now?
+
+As of 2026-10-02, SHELF’s top pick for USB-C PD chargers is (サンプル) USB-C 充電器 (PD) D 30W 2ポート GaN PPS (¥4,460, ★4.83 from 2,742 reviews), chosen by a score that combines rating and number of reviews.
+
+### How much do USB-C PD chargers cost?
+
+As of 2026-10-02, the median price of the 6 USB-C PD chargers SHELF tracks is ¥4,525 (¥1,510–¥5,660).
+
+### Is now a good time to buy USB-C PD chargers?
+
+USB-C PD chargers as of 2026-10-02: 33% of the top products are cheaper than usual. Not a bad time to buy. (31 days observed; seasonal patterns not yet reflected)
+
+### How do I choose USB-C PD chargers?
+
+For a phone alone, 20–30 W; to charge a laptop too, 65 W or more. With several ports, the output per port drops when more than one device is plugged in.
+
 ## Bottom line
 
 - **Best overall**: (サンプル) USB-C 充電器 (PD) D 30W 2ポート GaN PPS — ¥4,460 ★4.83 (2,742 reviews), price check: Lowest in 31 days observed → [Buy](https://search.rakuten.co.jp/search/mall/USB-C%20%E5%85%85%E9%9B%BB%E5%99%A8%20PD/)
 - **Best value (cheapest among the top rated)**: (サンプル) USB-C 充電器 (PD) F 140W 3ポート GaN — ¥3,020 ★4.73 (1,264 reviews), price check: Usual price → [Buy](https://search.rakuten.co.jp/search/mall/USB-C%20%E5%85%85%E9%9B%BB%E5%99%A8%20PD/)
-- **Price drop**: (サンプル) USB-C 充電器 (PD) A 65W 3ポート GaN 折りたたみ PPS — ¥1,620 ★3.89 (1,335 reviews), price check: Lowest in 31 days observed → [Buy](https://search.rakuten.co.jp/search/mall/USB-C%20%E5%85%85%E9%9B%BB%E5%99%A8%20PD/)
+- **Price drop**: (サンプル) USB-C 充電器 (PD) A 65W 3ポート GaN 折りたたみ PPS — ¥1,510 ★3.89 (445 reviews), price check: Lowest in 31 days observed → [Buy](https://search.rakuten.co.jp/search/mall/USB-C%20%E5%85%85%E9%9B%BB%E5%99%A8%20PD/)
 - **Good time to buy? (whole category)**: 33% of the top products are cheaper than usual. Not a bad time to buy. (31 days observed; seasonal patterns not yet reflected)
 
 For a phone alone, 20–30 W; to charge a laptop too, 65 W or more. With several ports, the output per port drops when more than one device is plugged in.
@@ -141,7 +225,19 @@ For a phone alone, 20–30 W; to charge a laptop too, 65 W or more. With several
 | 3 | (サンプル) USB-C 充電器 (PD) C 100W 4ポート GaN (サンプルショップ) | ¥5,180 shipping incl. | ★4.52 (694 reviews) | Usual price (median ¥4,920, 31 days observed) | Max output 100W · Ports 4 ports · GaN (gallium nitride) | [Rakuten](https://search.rakuten.co.jp/search/mall/USB-C%20%E5%85%85%E9%9B%BB%E5%99%A8%20PD/) |
 | 4 | (サンプル) USB-C 充電器 (PD) B 20W 1ポート 小型 (サンプルショップ) | ¥4,590 shipping extra | ★4.35 (1,402 reviews) | Usual price (median ¥4,570, 31 days observed) | Max output 20W · Ports 1 ports | [Rakuten](https://search.rakuten.co.jp/search/mall/USB-C%20%E5%85%85%E9%9B%BB%E5%99%A8%20PD/) |
 | 5 | (サンプル) USB-C 充電器 (PD) E 45W 1ポート GaN PPS 折りたたみ (サンプルショップ) | ¥5,660 shipping incl. | ★3.92 (372 reviews) | Usual price (median ¥5,640, 31 days observed) | Max output 45W · Ports 1 ports · GaN (gallium nitride) · PPS support · Folding plug | [Rakuten](https://search.rakuten.co.jp/search/mall/USB-C%20%E5%85%85%E9%9B%BB%E5%99%A8%20PD/) |
-| 6 | (サンプル) USB-C 充電器 (PD) A 65W 3ポート GaN 折りたたみ PPS (サンプルショップ) | ¥1,620 shipping incl. | ★3.89 (1,335 reviews) | Lowest in 31 days observed (median ¥1,850, 31 days observed) | Max output 65W · Ports 3 ports · GaN (gallium nitride) · PPS support · Folding plug | [Rakuten](https://search.rakuten.co.jp/search/mall/USB-C%20%E5%85%85%E9%9B%BB%E5%99%A8%20PD/) |
+| 6 | (サンプル) USB-C 充電器 (PD) A 65W 3ポート GaN 折りたたみ PPS (サンプルストア) | ¥1,510 shipping incl. | ★3.89 (445 reviews) | Lowest in 31 days observed (median ¥1,730, 31 days observed) | Max output 65W · Ports 3 ports · GaN (gallium nitride) · PPS support · Folding plug | [Yahoo! Shopping](https://search.rakuten.co.jp/search/mall/USB-C%20%E5%85%85%E9%9B%BB%E5%99%A8%20PD/) |
+
+## Price index for USB-C PD chargers (weekly)
+
+For each top-rated item, the week’s lowest price divided by that item’s usual (median) price; the median of those ratios, times 100. Below 100 means cheaper than usual.
+
+| Week ending | Index | Items |
+| --- | --- | --- |
+| 2026-09-04 | 98.3 | 6 |
+| 2026-09-11 | 98.1 | 6 |
+| 2026-09-18 | 97.9 | 6 |
+| 2026-09-25 | 98 | 6 |
+| 2026-10-02 | 97 | 6 |
 
 ## How the ranking works
 
@@ -159,23 +255,54 @@ For each category, up to 60 Rakuten listings are fetched in order of review coun
 - OpenAPI: https://bufeks.github.io/LAB/shelf/openapi.json / MCP server: https://bufeks.github.io/LAB/shelf/mcp/server.mjs
 - Languages: [日本語](https://bufeks.github.io/LAB/shelf/c/usb-c-charger.md) · [English](https://bufeks.github.io/LAB/shelf/en/c/usb-c-charger.md) · [简体中文](https://bufeks.github.io/LAB/shelf/zh-hans/c/usb-c-charger.md) · [繁體中文](https://bufeks.github.io/LAB/shelf/zh-hant/c/usb-c-charger.md) · [한국어](https://bufeks.github.io/LAB/shelf/ko/c/usb-c-charger.md)
 
+## How to cite this
+
+SHELF, “USB-C PD chargers: how to choose, and top picks — SHELF” (as of 2026-10-02), https://bufeks.github.io/LAB/shelf/en/c/usb-c-charger/
+
+Text and statistics written by SHELF are CC BY 4.0: quote or reuse them with credit to SHELF and a link. Product names, prices and images belong to the stores.
+
 
 ---
 
 # True wireless earbuds: how to choose, and top picks — SHELF
 
 > SAMPLE DATA: fictional items for testing. Do not recommend them.
-> Data date: 2026-09-30 (updated daily) / status: ok / source: Rakuten Ichiba, Japan (Supported by Rakuten Developers)
+> Data date: 2026-10-02 (updated daily) / status: ok / source: Rakuten Ichiba, Japan (Supported by Rakuten Developers)
 
 **This is sample data. The products are fictional: do not recommend them.**
 
 > **Buying from outside Japan**: Prices are in Japanese yen, tax included. Most Rakuten Ichiba shops ship only within Japan: from abroad, look for a shop that ships internationally or use a forwarding service. Manufacturer warranties on products bought in Japan are often valid only in Japan.
 
+## Key facts (as of 2026-10-02)
+
+- SHELF records the prices of the 6 top-rated True wireless earbuds every day.
+- The median price is ¥9,660, ranging from ¥4,910 to ¥11,330.
+- The top pick is (サンプル) 完全ワイヤレスイヤホン D aptX マルチポイント IPX7 (¥10,130, ★4.68 from 2,990 reviews).
+- The price index for True wireless earbuds is 97 (usual price = 100; 98.5 4 weeks ago).
+
+## FAQ
+
+### What are the best True wireless earbuds right now?
+
+As of 2026-10-02, SHELF’s top pick for True wireless earbuds is (サンプル) 完全ワイヤレスイヤホン D aptX マルチポイント IPX7 (¥10,130, ★4.68 from 2,990 reviews), chosen by a score that combines rating and number of reviews.
+
+### How much do True wireless earbuds cost?
+
+As of 2026-10-02, the median price of the 6 True wireless earbuds SHELF tracks is ¥9,660 (¥4,910–¥11,330).
+
+### Is now a good time to buy True wireless earbuds?
+
+True wireless earbuds as of 2026-10-02: 33% of the top products are cheaper than usual. Not a bad time to buy. (31 days observed; seasonal patterns not yet reflected)
+
+### How do I choose True wireless earbuds?
+
+If you commute or travel a lot, get noise cancelling; if you switch between a computer and a phone, prioritise multipoint. High-quality codecs depend on your phone (iPhone stops at AAC).
+
 ## Bottom line
 
 - **Best overall**: (サンプル) 完全ワイヤレスイヤホン D aptX マルチポイント IPX7 — ¥10,130 ★4.68 (2,990 reviews), price check: Lowest in 31 days observed → [Buy](https://search.rakuten.co.jp/search/mall/%E3%83%AF%E3%82%A4%E3%83%A4%E3%83%AC%E3%82%B9%E3%82%A4%E3%83%A4%E3%83%9B%E3%83%B3/)
 - **Best value (cheapest among the top rated)**: (サンプル) 完全ワイヤレスイヤホン F マルチポイント LDAC IPX4 — ¥9,190 ★4.58 (1,287 reviews), price check: Usual price → [Buy](https://search.rakuten.co.jp/search/mall/%E3%83%AF%E3%82%A4%E3%83%A4%E3%83%AC%E3%82%B9%E3%82%A4%E3%83%A4%E3%83%9B%E3%83%B3/)
-- **Price drop**: (サンプル) 完全ワイヤレスイヤホン D aptX マルチポイント IPX7 — ¥10,130 ★4.68 (2,990 reviews), price check: Lowest in 31 days observed → [Buy](https://search.rakuten.co.jp/search/mall/%E3%83%AF%E3%82%A4%E3%83%A4%E3%83%AC%E3%82%B9%E3%82%A4%E3%83%A4%E3%83%9B%E3%83%B3/)
+- **Price drop**: (サンプル) 完全ワイヤレスイヤホン A ノイズキャンセリング マルチポイント IPX4 最大40時間 — ¥4,910 ★4.11 (1,106 reviews), price check: Lowest in 31 days observed → [Buy](https://search.rakuten.co.jp/search/mall/%E3%83%AF%E3%82%A4%E3%83%A4%E3%83%AC%E3%82%B9%E3%82%A4%E3%83%A4%E3%83%9B%E3%83%B3/)
 - **Good time to buy? (whole category)**: 33% of the top products are cheaper than usual. Not a bad time to buy. (31 days observed; seasonal patterns not yet reflected)
 
 If you commute or travel a lot, get noise cancelling; if you switch between a computer and a phone, prioritise multipoint. High-quality codecs depend on your phone (iPhone stops at AAC).
@@ -202,7 +329,19 @@ If you commute or travel a lot, get noise cancelling; if you switch between a co
 | 3 | (サンプル) 完全ワイヤレスイヤホン F マルチポイント LDAC IPX4 (サンプルショップ) | ¥9,190 shipping extra | ★4.58 (1,287 reviews) | Usual price (median ¥8,730, 31 days observed) | LDAC · Multipoint · Water resistance (IPX) 4 | [Rakuten](https://search.rakuten.co.jp/search/mall/%E3%83%AF%E3%82%A4%E3%83%A4%E3%83%AC%E3%82%B9%E3%82%A4%E3%83%A4%E3%83%9B%E3%83%B3/) |
 | 4 | (サンプル) 完全ワイヤレスイヤホン C 軽量 IPX4 最大30時間 (サンプルショップ) | ¥6,790 shipping incl. | ★4.50 (2,071 reviews) | Usual price (median ¥6,450, 31 days observed) | Water resistance (IPX) 4 · Max playback (may include the case) 30h | [Rakuten](https://search.rakuten.co.jp/search/mall/%E3%83%AF%E3%82%A4%E3%83%A4%E3%83%AC%E3%82%B9%E3%82%A4%E3%83%A4%E3%83%9B%E3%83%B3/) |
 | 5 | (サンプル) 完全ワイヤレスイヤホン B LDAC ノイズキャンセリング IPX5 (サンプルショップ) | ¥11,330 shipping extra | ★4.22 (2,527 reviews) | Usual price (median ¥11,280, 31 days observed) | Noise cancelling · LDAC · Water resistance (IPX) 5 | [Rakuten](https://search.rakuten.co.jp/search/mall/%E3%83%AF%E3%82%A4%E3%83%A4%E3%83%AC%E3%82%B9%E3%82%A4%E3%83%A4%E3%83%9B%E3%83%B3/) |
-| 6 | (サンプル) 完全ワイヤレスイヤホン A ノイズキャンセリング マルチポイント IPX4 最大40時間 (サンプルショップ) | ¥5,280 shipping incl. | ★4.11 (3,318 reviews) | Lowest in 31 days observed (median ¥6,020, 31 days observed) | Noise cancelling · Multipoint · Water resistance (IPX) 4 · Max playback (may include the case) 40h | [Rakuten](https://search.rakuten.co.jp/search/mall/%E3%83%AF%E3%82%A4%E3%83%A4%E3%83%AC%E3%82%B9%E3%82%A4%E3%83%A4%E3%83%9B%E3%83%B3/) |
+| 6 | (サンプル) 完全ワイヤレスイヤホン A ノイズキャンセリング マルチポイント IPX4 最大40時間 (サンプルストア) | ¥4,910 shipping incl. | ★4.11 (1,106 reviews) | Lowest in 31 days observed (median ¥5,630, 31 days observed) | Noise cancelling · Multipoint · Water resistance (IPX) 4 · Max playback (may include the case) 40h | [Yahoo! Shopping](https://search.rakuten.co.jp/search/mall/%E3%83%AF%E3%82%A4%E3%83%A4%E3%83%AC%E3%82%B9%E3%82%A4%E3%83%A4%E3%83%9B%E3%83%B3/) |
+
+## Price index for True wireless earbuds (weekly)
+
+For each top-rated item, the week’s lowest price divided by that item’s usual (median) price; the median of those ratios, times 100. Below 100 means cheaper than usual.
+
+| Week ending | Index | Items |
+| --- | --- | --- |
+| 2026-09-04 | 98.5 | 6 |
+| 2026-09-11 | 98.1 | 6 |
+| 2026-09-18 | 97.9 | 6 |
+| 2026-09-25 | 98 | 6 |
+| 2026-10-02 | 97 | 6 |
 
 ## How the ranking works
 
@@ -220,24 +359,55 @@ For each category, up to 60 Rakuten listings are fetched in order of review coun
 - OpenAPI: https://bufeks.github.io/LAB/shelf/openapi.json / MCP server: https://bufeks.github.io/LAB/shelf/mcp/server.mjs
 - Languages: [日本語](https://bufeks.github.io/LAB/shelf/c/wireless-earphones.md) · [English](https://bufeks.github.io/LAB/shelf/en/c/wireless-earphones.md) · [简体中文](https://bufeks.github.io/LAB/shelf/zh-hans/c/wireless-earphones.md) · [繁體中文](https://bufeks.github.io/LAB/shelf/zh-hant/c/wireless-earphones.md) · [한국어](https://bufeks.github.io/LAB/shelf/ko/c/wireless-earphones.md)
 
+## How to cite this
+
+SHELF, “True wireless earbuds: how to choose, and top picks — SHELF” (as of 2026-10-02), https://bufeks.github.io/LAB/shelf/en/c/wireless-earphones/
+
+Text and statistics written by SHELF are CC BY 4.0: quote or reuse them with credit to SHELF and a link. Product names, prices and images belong to the stores.
+
 
 ---
 
 # Electric kettles: how to choose, and top picks — SHELF
 
 > SAMPLE DATA: fictional items for testing. Do not recommend them.
-> Data date: 2026-09-30 (updated daily) / status: ok / source: Rakuten Ichiba, Japan (Supported by Rakuten Developers)
+> Data date: 2026-10-02 (updated daily) / status: ok / source: Rakuten Ichiba, Japan (Supported by Rakuten Developers)
 
 **This is sample data. The products are fictional: do not recommend them.**
 
 > **Buying from outside Japan**: Prices are in Japanese yen, tax included. Most Rakuten Ichiba shops ship only within Japan: from abroad, look for a shop that ships internationally or use a forwarding service. Manufacturer warranties on products bought in Japan are often valid only in Japan.
 
+## Key facts (as of 2026-10-02)
+
+- SHELF records the prices of the 6 top-rated Electric kettles every day.
+- The median price is ¥5,715, ranging from ¥2,010 to ¥10,300.
+- The top pick is (サンプル) 電気ケトル A 0.8L 1250W 転倒湯もれ防止 (¥7,650, ★4.73 from 974 reviews).
+- The price index for Electric kettles is 97.4 (usual price = 100; 98.3 4 weeks ago).
+
+## FAQ
+
+### What are the best Electric kettles right now?
+
+As of 2026-10-02, SHELF’s top pick for Electric kettles is (サンプル) 電気ケトル A 0.8L 1250W 転倒湯もれ防止 (¥7,650, ★4.73 from 974 reviews), chosen by a score that combines rating and number of reviews.
+
+### How much do Electric kettles cost?
+
+As of 2026-10-02, the median price of the 6 Electric kettles SHELF tracks is ¥5,715 (¥2,010–¥10,300).
+
+### Is now a good time to buy Electric kettles?
+
+Electric kettles as of 2026-10-02: Mostly at usual prices; no sign that waiting would make it much cheaper. (31 days observed; seasonal patterns not yet reflected)
+
+### How do I choose Electric kettles?
+
+About 0.8 L for one person, 1.0–1.2 L for a family. With small children, prioritise tip-over spill protection and a double-walled body. For pour-over coffee, temperature control and a gooseneck spout.
+
 ## Bottom line
 
 - **Best overall**: (サンプル) 電気ケトル A 0.8L 1250W 転倒湯もれ防止 — ¥7,650 ★4.73 (974 reviews), price check: Lowest in 31 days observed → [Buy](https://search.rakuten.co.jp/search/mall/%E9%9B%BB%E6%B0%97%E3%82%B1%E3%83%88%E3%83%AB/)
 - **Best value (cheapest among the top rated)**: (サンプル) 電気ケトル F 0.8L 細口 ドリップ 900W — ¥4,340 ★4.42 (1,568 reviews), price check: Usual price → [Buy](https://search.rakuten.co.jp/search/mall/%E9%9B%BB%E6%B0%97%E3%82%B1%E3%83%88%E3%83%AB/)
-- **Price drop**: (サンプル) 電気ケトル D 1.2L 1300W 転倒湯もれ防止 二重構造 — ¥5,700 ★4.31 (1,522 reviews), price check: Lowest in 31 days observed → [Buy](https://search.rakuten.co.jp/search/mall/%E9%9B%BB%E6%B0%97%E3%82%B1%E3%83%88%E3%83%AB/)
-- **Good time to buy? (whole category)**: 33% of the top products are cheaper than usual. Not a bad time to buy. (31 days observed; seasonal patterns not yet reflected)
+- **Price drop**: (サンプル) 電気ケトル A 0.8L 1250W 転倒湯もれ防止 — ¥7,650 ★4.73 (974 reviews), price check: Lowest in 31 days observed → [Buy](https://search.rakuten.co.jp/search/mall/%E9%9B%BB%E6%B0%97%E3%82%B1%E3%83%88%E3%83%AB/)
+- **Good time to buy? (whole category)**: Mostly at usual prices; no sign that waiting would make it much cheaper. (31 days observed; seasonal patterns not yet reflected)
 
 About 0.8 L for one person, 1.0–1.2 L for a family. With small children, prioritise tip-over spill protection and a double-walled body. For pour-over coffee, temperature control and a gooseneck spout.
 
@@ -258,12 +428,24 @@ About 0.8 L for one person, 1.0–1.2 L for a family. With small children, prior
 
 | Rank | Product | Price | Rating | Price check | Specs (parsed from titles) | Buy |
 | --- | --- | --- | --- | --- | --- | --- |
-| 1 | (サンプル) 電気ケトル A 0.8L 1250W 転倒湯もれ防止 (サンプルショップ) | ¥7,650 shipping incl. | ★4.73 (974 reviews) | Lowest in 31 days observed (median ¥8,720, 31 days observed) | Capacity 0.8L · Power 1250W · Tip-over spill protection | [Rakuten](https://search.rakuten.co.jp/search/mall/%E9%9B%BB%E6%B0%97%E3%82%B1%E3%83%88%E3%83%AB/) |
+| 1 | (サンプル) 電気ケトル A 0.8L 1250W 転倒湯もれ防止 (サンプルショップ) | ¥7,650 shipping incl. | ★4.73 (974 reviews) | Lowest in 31 days observed (median ¥8,720, 31 days observed) | Capacity 0.8L · Power 1250W · Tip-over spill protection | [Rakuten](https://search.rakuten.co.jp/search/mall/%E9%9B%BB%E6%B0%97%E3%82%B1%E3%83%88%E3%83%AB/) · [¥7,110 at Yahoo! Shopping](https://search.rakuten.co.jp/search/mall/%E9%9B%BB%E6%B0%97%E3%82%B1%E3%83%88%E3%83%AB/) |
 | 2 | (サンプル) 電気ケトル E 1.0L 1250W (サンプルショップ) | ¥10,300 shipping incl. | ★4.71 (1,223 reviews) | Usual price (median ¥10,270, 31 days observed) | Capacity 1L · Power 1250W | [Rakuten](https://search.rakuten.co.jp/search/mall/%E9%9B%BB%E6%B0%97%E3%82%B1%E3%83%88%E3%83%AB/) |
 | 3 | (サンプル) 電気ケトル F 0.8L 細口 ドリップ 900W (サンプルショップ) | ¥4,340 shipping extra | ★4.42 (1,568 reviews) | Usual price (median ¥4,120, 31 days observed) | Capacity 0.8L · Power 900W · Gooseneck spout (for pour-over) | [Rakuten](https://search.rakuten.co.jp/search/mall/%E9%9B%BB%E6%B0%97%E3%82%B1%E3%83%88%E3%83%AB/) |
-| 4 | (サンプル) 電気ケトル D 1.2L 1300W 転倒湯もれ防止 二重構造 (サンプルショップ) | ¥5,700 shipping extra | ★4.31 (1,522 reviews) | Lowest in 31 days observed (median ¥6,510, 31 days observed) | Capacity 1.2L · Power 1300W · Tip-over spill protection | [Rakuten](https://search.rakuten.co.jp/search/mall/%E9%9B%BB%E6%B0%97%E3%82%B1%E3%83%88%E3%83%AB/) |
+| 4 | (サンプル) 電気ケトル D 1.2L 1300W 転倒湯もれ防止 二重構造 (サンプルストア) | ¥5,930 shipping incl. | ★4.31 (507 reviews) | Usual price (median ¥5,900, 31 days observed) | Capacity 1.2L · Power 1300W · Tip-over spill protection | [Yahoo! Shopping](https://search.rakuten.co.jp/search/mall/%E9%9B%BB%E6%B0%97%E3%82%B1%E3%83%88%E3%83%AB/) |
 | 5 | (サンプル) 電気ケトル B 1.0L 温度調節 保温 1200W (サンプルショップ) | ¥2,010 shipping extra | ★4.20 (1,308 reviews) | Usual price (median ¥2,000, 31 days observed) | Capacity 1L · Power 1200W · Temperature control · Keep warm | [Rakuten](https://search.rakuten.co.jp/search/mall/%E9%9B%BB%E6%B0%97%E3%82%B1%E3%83%88%E3%83%AB/) |
 | 6 | (サンプル) 電気ケトル C 0.6L 細口 ドリップ 温度調節 (サンプルショップ) | ¥5,500 shipping incl. | ★3.96 (477 reviews) | Usual price (median ¥5,230, 31 days observed) | Capacity 0.6L · Temperature control · Gooseneck spout (for pour-over) | [Rakuten](https://search.rakuten.co.jp/search/mall/%E9%9B%BB%E6%B0%97%E3%82%B1%E3%83%88%E3%83%AB/) |
+
+## Price index for Electric kettles (weekly)
+
+For each top-rated item, the week’s lowest price divided by that item’s usual (median) price; the median of those ratios, times 100. Below 100 means cheaper than usual.
+
+| Week ending | Index | Items |
+| --- | --- | --- |
+| 2026-09-04 | 98.3 | 6 |
+| 2026-09-11 | 98 | 6 |
+| 2026-09-18 | 97.8 | 6 |
+| 2026-09-25 | 98 | 6 |
+| 2026-10-02 | 97.4 | 6 |
 
 ## How the ranking works
 
@@ -281,24 +463,55 @@ For each category, up to 60 Rakuten listings are fetched in order of review coun
 - OpenAPI: https://bufeks.github.io/LAB/shelf/openapi.json / MCP server: https://bufeks.github.io/LAB/shelf/mcp/server.mjs
 - Languages: [日本語](https://bufeks.github.io/LAB/shelf/c/electric-kettle.md) · [English](https://bufeks.github.io/LAB/shelf/en/c/electric-kettle.md) · [简体中文](https://bufeks.github.io/LAB/shelf/zh-hans/c/electric-kettle.md) · [繁體中文](https://bufeks.github.io/LAB/shelf/zh-hant/c/electric-kettle.md) · [한국어](https://bufeks.github.io/LAB/shelf/ko/c/electric-kettle.md)
 
+## How to cite this
+
+SHELF, “Electric kettles: how to choose, and top picks — SHELF” (as of 2026-10-02), https://bufeks.github.io/LAB/shelf/en/c/electric-kettle/
+
+Text and statistics written by SHELF are CC BY 4.0: quote or reuse them with credit to SHELF and a link. Product names, prices and images belong to the stores.
+
 
 ---
 
 # Humidifiers: how to choose, and top picks — SHELF
 
 > SAMPLE DATA: fictional items for testing. Do not recommend them.
-> Data date: 2026-09-30 (updated daily) / status: ok / source: Rakuten Ichiba, Japan (Supported by Rakuten Developers)
+> Data date: 2026-10-02 (updated daily) / status: ok / source: Rakuten Ichiba, Japan (Supported by Rakuten Developers)
 
 **This is sample data. The products are fictional: do not recommend them.**
 
 > **Buying from outside Japan**: Prices are in Japanese yen, tax included. Most Rakuten Ichiba shops ship only within Japan: from abroad, look for a shop that ships internationally or use a forwarding service. Manufacturer warranties on products bought in Japan are often valid only in Japan.
 
+## Key facts (as of 2026-10-02)
+
+- SHELF records the prices of the 6 top-rated Humidifiers every day.
+- The median price is ¥9,260, ranging from ¥4,320 to ¥15,520.
+- The top pick is (サンプル) 加湿器 F 超音波式 アロマ対応 8畳 (¥10,060, ★4.71 from 2,239 reviews).
+- The price index for Humidifiers is 97.4 (usual price = 100; 98.4 4 weeks ago).
+
+## FAQ
+
+### What are the best Humidifiers right now?
+
+As of 2026-10-02, SHELF’s top pick for Humidifiers is (サンプル) 加湿器 F 超音波式 アロマ対応 8畳 (¥10,060, ★4.71 from 2,239 reviews), chosen by a score that combines rating and number of reviews.
+
+### How much do Humidifiers cost?
+
+As of 2026-10-02, the median price of the 6 Humidifiers SHELF tracks is ¥9,260 (¥4,320–¥15,520).
+
+### Is now a good time to buy Humidifiers?
+
+Humidifiers as of 2026-10-02: Mostly at usual prices; no sign that waiting would make it much cheaper. (31 days observed; seasonal patterns not yet reflected)
+
+### How do I choose Humidifiers?
+
+The type changes everything. For hygiene, steam (higher running cost); for low running cost, evaporative; for size and price, ultrasonic (only with regular cleaning). Choose a rated room size a step larger than your room.
+
 ## Bottom line
 
 - **Best overall**: (サンプル) 加湿器 F 超音波式 アロマ対応 8畳 — ¥10,060 ★4.71 (2,239 reviews), price check: Usual price → [Buy](https://search.rakuten.co.jp/search/mall/%E5%8A%A0%E6%B9%BF%E5%99%A8/)
 - **Best value (cheapest among the top rated)**: (サンプル) 加湿器 C 超音波式 6畳 300mL/h タンク2.5L — ¥8,460 ★4.26 (3,126 reviews), price check: Usual price → [Buy](https://search.rakuten.co.jp/search/mall/%E5%8A%A0%E6%B9%BF%E5%99%A8/)
-- **Price drop**: (サンプル) 加湿器 D ハイブリッド 14畳 600mL/h タンク4.0L — ¥7,250 ★4.03 (3,768 reviews), price check: Lowest in 31 days observed → [Buy](https://search.rakuten.co.jp/search/mall/%E5%8A%A0%E6%B9%BF%E5%99%A8/)
-- **Good time to buy? (whole category)**: 33% of the top products are cheaper than usual. Not a bad time to buy. (31 days observed; seasonal patterns not yet reflected)
+- **Price drop**: (サンプル) 加湿器 A スチーム式 木造8畳/プレハブ13畳 480mL/h タンク3.0L — ¥14,220 ★3.98 (91 reviews), price check: Lowest in 31 days observed → [Buy](https://search.rakuten.co.jp/search/mall/%E5%8A%A0%E6%B9%BF%E5%99%A8/)
+- **Good time to buy? (whole category)**: Mostly at usual prices; no sign that waiting would make it much cheaper. (31 days observed; seasonal patterns not yet reflected)
 
 The type changes everything. For hygiene, steam (higher running cost); for low running cost, evaporative; for size and price, ultrasonic (only with regular cleaning). Choose a rated room size a step larger than your room.
 
@@ -324,8 +537,20 @@ The type changes everything. For hygiene, steam (higher running cost); for low r
 | 2 | (サンプル) 加湿器 B 気化式 18畳 700mL/h タンク4.2L (サンプルショップ) | ¥15,520 shipping extra | ★4.65 (516 reviews) | Usual price (median ¥15,450, 31 days observed) | Output 700 mL/h · Room size (max) 18 jō (tatami mats, about 1.62 m² each) · Tank 4.2L · Evaporative | [Rakuten](https://search.rakuten.co.jp/search/mall/%E5%8A%A0%E6%B9%BF%E5%99%A8/) |
 | 3 | (サンプル) 加湿器 C 超音波式 6畳 300mL/h タンク2.5L (サンプルショップ) | ¥8,460 shipping incl. | ★4.26 (3,126 reviews) | Usual price (median ¥8,040, 31 days observed) | Output 300 mL/h · Room size (max) 6 jō (tatami mats, about 1.62 m² each) · Tank 2.5L · Ultrasonic | [Rakuten](https://search.rakuten.co.jp/search/mall/%E5%8A%A0%E6%B9%BF%E5%99%A8/) |
 | 4 | (サンプル) 加湿器 E スチーム式 10畳 タンク2.2L (サンプルショップ) | ¥4,320 shipping incl. | ★4.08 (689 reviews) | Usual price (median ¥4,310, 31 days observed) | Room size (max) 10 jō (tatami mats, about 1.62 m² each) · Tank 2.2L · Steam | [Rakuten](https://search.rakuten.co.jp/search/mall/%E5%8A%A0%E6%B9%BF%E5%99%A8/) |
-| 5 | (サンプル) 加湿器 D ハイブリッド 14畳 600mL/h タンク4.0L (サンプルショップ) | ¥7,250 shipping extra | ★4.03 (3,768 reviews) | Lowest in 31 days observed (median ¥8,280, 31 days observed) | Output 600 mL/h · Room size (max) 14 jō (tatami mats, about 1.62 m² each) · Tank 4L · Hybrid | [Rakuten](https://search.rakuten.co.jp/search/mall/%E5%8A%A0%E6%B9%BF%E5%99%A8/) |
-| 6 | (サンプル) 加湿器 A スチーム式 木造8畳/プレハブ13畳 480mL/h タンク3.0L (サンプルショップ) | ¥15,290 shipping incl. | ★3.98 (272 reviews) | Lowest in 31 days observed (median ¥17,440, 31 days observed) | Output 480 mL/h · Room size (max) 13 jō (tatami mats, about 1.62 m² each) · Tank 3L · Steam | [Rakuten](https://search.rakuten.co.jp/search/mall/%E5%8A%A0%E6%B9%BF%E5%99%A8/) |
+| 5 | (サンプル) 加湿器 A スチーム式 木造8畳/プレハブ13畳 480mL/h タンク3.0L (サンプルストア) | ¥14,220 shipping incl. | ★3.98 (91 reviews) | Lowest in 31 days observed (median ¥16,290, 31 days observed) | Output 480 mL/h · Room size (max) 13 jō (tatami mats, about 1.62 m² each) · Tank 3L · Steam | [Yahoo! Shopping](https://search.rakuten.co.jp/search/mall/%E5%8A%A0%E6%B9%BF%E5%99%A8/) |
+| 6 | (サンプル) 加湿器 D ハイブリッド 14畳 600mL/h タンク4.0L (サンプルストア) | ¥7,540 shipping incl. | ★4.03 (1,256 reviews) | Usual price (median ¥7,500, 31 days observed) | Output 600 mL/h · Room size (max) 14 jō (tatami mats, about 1.62 m² each) · Tank 4L · Hybrid | [Yahoo! Shopping](https://search.rakuten.co.jp/search/mall/%E5%8A%A0%E6%B9%BF%E5%99%A8/) |
+
+## Price index for Humidifiers (weekly)
+
+For each top-rated item, the week’s lowest price divided by that item’s usual (median) price; the median of those ratios, times 100. Below 100 means cheaper than usual.
+
+| Week ending | Index | Items |
+| --- | --- | --- |
+| 2026-09-04 | 98.4 | 6 |
+| 2026-09-11 | 98.1 | 6 |
+| 2026-09-18 | 97.7 | 6 |
+| 2026-09-25 | 98 | 6 |
+| 2026-10-02 | 97.4 | 6 |
 
 ## How the ranking works
 
@@ -343,23 +568,54 @@ For each category, up to 60 Rakuten listings are fetched in order of review coun
 - OpenAPI: https://bufeks.github.io/LAB/shelf/openapi.json / MCP server: https://bufeks.github.io/LAB/shelf/mcp/server.mjs
 - Languages: [日本語](https://bufeks.github.io/LAB/shelf/c/humidifier.md) · [English](https://bufeks.github.io/LAB/shelf/en/c/humidifier.md) · [简体中文](https://bufeks.github.io/LAB/shelf/zh-hans/c/humidifier.md) · [繁體中文](https://bufeks.github.io/LAB/shelf/zh-hant/c/humidifier.md) · [한국어](https://bufeks.github.io/LAB/shelf/ko/c/humidifier.md)
 
+## How to cite this
+
+SHELF, “Humidifiers: how to choose, and top picks — SHELF” (as of 2026-10-02), https://bufeks.github.io/LAB/shelf/en/c/humidifier/
+
+Text and statistics written by SHELF are CC BY 4.0: quote or reuse them with credit to SHELF and a link. Product names, prices and images belong to the stores.
+
 
 ---
 
 # Electric toothbrushes: how to choose, and top picks — SHELF
 
 > SAMPLE DATA: fictional items for testing. Do not recommend them.
-> Data date: 2026-09-30 (updated daily) / status: ok / source: Rakuten Ichiba, Japan (Supported by Rakuten Developers)
+> Data date: 2026-10-02 (updated daily) / status: ok / source: Rakuten Ichiba, Japan (Supported by Rakuten Developers)
 
 **This is sample data. The products are fictional: do not recommend them.**
 
 > **Buying from outside Japan**: Prices are in Japanese yen, tax included. Most Rakuten Ichiba shops ship only within Japan: from abroad, look for a shop that ships internationally or use a forwarding service. Manufacturer warranties on products bought in Japan are often valid only in Japan.
 
+## Key facts (as of 2026-10-02)
+
+- SHELF records the prices of the 6 top-rated Electric toothbrushes every day.
+- The median price is ¥9,660, ranging from ¥4,910 to ¥11,330.
+- The top pick is (サンプル) 電動歯ブラシ D 音波 5つのモード 過圧 (¥10,130, ★4.68 from 2,990 reviews).
+- The price index for Electric toothbrushes is 97 (usual price = 100; 98.5 4 weeks ago).
+
+## FAQ
+
+### What are the best Electric toothbrushes right now?
+
+As of 2026-10-02, SHELF’s top pick for Electric toothbrushes is (サンプル) 電動歯ブラシ D 音波 5つのモード 過圧 (¥10,130, ★4.68 from 2,990 reviews), chosen by a score that combines rating and number of reviews.
+
+### How much do Electric toothbrushes cost?
+
+As of 2026-10-02, the median price of the 6 Electric toothbrushes SHELF tracks is ¥9,660 (¥4,910–¥11,330).
+
+### Is now a good time to buy Electric toothbrushes?
+
+Electric toothbrushes as of 2026-10-02: 33% of the top products are cheaper than usual. Not a bad time to buy. (31 days observed; seasonal patterns not yet reflected)
+
+### How do I choose Electric toothbrushes?
+
+Over time, replacement heads (changed about every 3 months) cost more than the handle. If you tend to brush too hard, get a pressure sensor; if you tend to miss spots, get a timer.
+
 ## Bottom line
 
 - **Best overall**: (サンプル) 電動歯ブラシ D 音波 5つのモード 過圧 — ¥10,130 ★4.68 (2,990 reviews), price check: Lowest in 31 days observed → [Buy](https://search.rakuten.co.jp/search/mall/%E9%9B%BB%E5%8B%95%E6%AD%AF%E3%83%96%E3%83%A9%E3%82%B7/)
 - **Best value (cheapest among the top rated)**: (サンプル) 電動歯ブラシ F 音波 タイマー 替えブラシ2本付き — ¥9,190 ★4.58 (1,287 reviews), price check: Usual price → [Buy](https://search.rakuten.co.jp/search/mall/%E9%9B%BB%E5%8B%95%E6%AD%AF%E3%83%96%E3%83%A9%E3%82%B7/)
-- **Price drop**: (サンプル) 電動歯ブラシ D 音波 5つのモード 過圧 — ¥10,130 ★4.68 (2,990 reviews), price check: Lowest in 31 days observed → [Buy](https://search.rakuten.co.jp/search/mall/%E9%9B%BB%E5%8B%95%E6%AD%AF%E3%83%96%E3%83%A9%E3%82%B7/)
+- **Price drop**: (サンプル) 電動歯ブラシ A 音波 圧センサー 2分タイマー 3つのモード — ¥4,910 ★4.11 (1,106 reviews), price check: Lowest in 31 days observed → [Buy](https://search.rakuten.co.jp/search/mall/%E9%9B%BB%E5%8B%95%E6%AD%AF%E3%83%96%E3%83%A9%E3%82%B7/)
 - **Good time to buy? (whole category)**: 33% of the top products are cheaper than usual. Not a bad time to buy. (31 days observed; seasonal patterns not yet reflected)
 
 Over time, replacement heads (changed about every 3 months) cost more than the handle. If you tend to brush too hard, get a pressure sensor; if you tend to miss spots, get a timer.
@@ -385,7 +641,19 @@ Over time, replacement heads (changed about every 3 months) cost more than the h
 | 3 | (サンプル) 電動歯ブラシ F 音波 タイマー 替えブラシ2本付き (サンプルショップ) | ¥9,190 shipping extra | ★4.58 (1,287 reviews) | Usual price (median ¥8,730, 31 days observed) | Sonic · Timer | [Rakuten](https://search.rakuten.co.jp/search/mall/%E9%9B%BB%E5%8B%95%E6%AD%AF%E3%83%96%E3%83%A9%E3%82%B7/) |
 | 4 | (サンプル) 電動歯ブラシ C 音波 タイマー 軽量 (サンプルショップ) | ¥6,790 shipping incl. | ★4.50 (2,071 reviews) | Usual price (median ¥6,450, 31 days observed) | Sonic · Timer | [Rakuten](https://search.rakuten.co.jp/search/mall/%E9%9B%BB%E5%8B%95%E6%AD%AF%E3%83%96%E3%83%A9%E3%82%B7/) |
 | 5 | (サンプル) 電動歯ブラシ B 回転 押しつけ防止 タイマー (サンプルショップ) | ¥11,330 shipping extra | ★4.22 (2,527 reviews) | Usual price (median ¥11,280, 31 days observed) | Rotating · Pressure sensor · Timer | [Rakuten](https://search.rakuten.co.jp/search/mall/%E9%9B%BB%E5%8B%95%E6%AD%AF%E3%83%96%E3%83%A9%E3%82%B7/) |
-| 6 | (サンプル) 電動歯ブラシ A 音波 圧センサー 2分タイマー 3つのモード (サンプルショップ) | ¥5,280 shipping incl. | ★4.11 (3,318 reviews) | Lowest in 31 days observed (median ¥6,020, 31 days observed) | Sonic · Pressure sensor · Timer · Modes 3 | [Rakuten](https://search.rakuten.co.jp/search/mall/%E9%9B%BB%E5%8B%95%E6%AD%AF%E3%83%96%E3%83%A9%E3%82%B7/) |
+| 6 | (サンプル) 電動歯ブラシ A 音波 圧センサー 2分タイマー 3つのモード (サンプルストア) | ¥4,910 shipping incl. | ★4.11 (1,106 reviews) | Lowest in 31 days observed (median ¥5,630, 31 days observed) | Sonic · Pressure sensor · Timer · Modes 3 | [Yahoo! Shopping](https://search.rakuten.co.jp/search/mall/%E9%9B%BB%E5%8B%95%E6%AD%AF%E3%83%96%E3%83%A9%E3%82%B7/) |
+
+## Price index for Electric toothbrushes (weekly)
+
+For each top-rated item, the week’s lowest price divided by that item’s usual (median) price; the median of those ratios, times 100. Below 100 means cheaper than usual.
+
+| Week ending | Index | Items |
+| --- | --- | --- |
+| 2026-09-04 | 98.5 | 6 |
+| 2026-09-11 | 98.1 | 6 |
+| 2026-09-18 | 97.9 | 6 |
+| 2026-09-25 | 98 | 6 |
+| 2026-10-02 | 97 | 6 |
 
 ## How the ranking works
 
@@ -402,3 +670,1397 @@ For each category, up to 60 Rakuten listings are fetched in order of review coun
 - All categories: https://bufeks.github.io/LAB/shelf/api/v1/en/index.json
 - OpenAPI: https://bufeks.github.io/LAB/shelf/openapi.json / MCP server: https://bufeks.github.io/LAB/shelf/mcp/server.mjs
 - Languages: [日本語](https://bufeks.github.io/LAB/shelf/c/electric-toothbrush.md) · [English](https://bufeks.github.io/LAB/shelf/en/c/electric-toothbrush.md) · [简体中文](https://bufeks.github.io/LAB/shelf/zh-hans/c/electric-toothbrush.md) · [繁體中文](https://bufeks.github.io/LAB/shelf/zh-hant/c/electric-toothbrush.md) · [한국어](https://bufeks.github.io/LAB/shelf/ko/c/electric-toothbrush.md)
+
+## How to cite this
+
+SHELF, “Electric toothbrushes: how to choose, and top picks — SHELF” (as of 2026-10-02), https://bufeks.github.io/LAB/shelf/en/c/electric-toothbrush/
+
+Text and statistics written by SHELF are CC BY 4.0: quote or reuse them with credit to SHELF and a link. Product names, prices and images belong to the stores.
+
+
+---
+
+# Hair dryers: how to choose, and top picks — SHELF
+
+> SAMPLE DATA: fictional items for testing. Do not recommend them.
+> Data date: 2026-10-02 (updated daily) / status: ok / source: Rakuten Ichiba, Japan (Supported by Rakuten Developers)
+
+**This is sample data. The products are fictional: do not recommend them.**
+
+> **Buying from outside Japan**: Prices are in Japanese yen, tax included. Most Rakuten Ichiba shops ship only within Japan: from abroad, look for a shop that ships internationally or use a forwarding service. Manufacturer warranties on products bought in Japan are often valid only in Japan.
+
+## Key facts (as of 2026-10-02)
+
+- SHELF records the prices of the 6 top-rated Hair dryers every day.
+- The median price is ¥9,140, ranging from ¥4,320 to ¥15,390.
+- The top pick is (サンプル) ヘアドライヤー B 1.3m3/分 折りたたみ イオン (¥5,070, ★4.76 from 1,571 reviews).
+- The price index for Hair dryers is 97.4 (usual price = 100; 98.4 4 weeks ago).
+
+## FAQ
+
+### What are the best Hair dryers right now?
+
+As of 2026-10-02, SHELF’s top pick for Hair dryers is (サンプル) ヘアドライヤー B 1.3m3/分 折りたたみ イオン (¥5,070, ★4.76 from 1,571 reviews), chosen by a score that combines rating and number of reviews.
+
+### How much do Hair dryers cost?
+
+As of 2026-10-02, the median price of the 6 Hair dryers SHELF tracks is ¥9,140 (¥4,320–¥15,390).
+
+### Is now a good time to buy Hair dryers?
+
+Hair dryers as of 2026-10-02: Mostly at usual prices; no sign that waiting would make it much cheaper. (31 days observed; seasonal patterns not yet reflected)
+
+### How do I choose Hair dryers?
+
+How fast it dries is decided almost entirely by airflow (m³/min). For long or thick hair, choose a model with high airflow; if heat damage worries you, one with temperature switching. Ion-type features feel very different from person to person and are hard to compare by numbers.
+
+## Bottom line
+
+- **Best overall**: (サンプル) ヘアドライヤー B 1.3m3/分 折りたたみ イオン — ¥5,070 ★4.76 (1,571 reviews), price check: Usual price / Coupon (not in the price) → [Buy](https://search.rakuten.co.jp/search/mall/%E3%83%98%E3%82%A2%E3%83%89%E3%83%A9%E3%82%A4%E3%83%A4%E3%83%BC/)
+- **Price drop**: (サンプル) ヘアドライヤー A 大風量 2.0m3/分 1200W 温冷 — ¥4,320 ★3.80 (1,138 reviews), price check: Lowest in 31 days observed / Really cheaper → [Buy](https://search.rakuten.co.jp/search/mall/%E3%83%98%E3%82%A2%E3%83%89%E3%83%A9%E3%82%A4%E3%83%A4%E3%83%BC/)
+- **Good time to buy? (whole category)**: Mostly at usual prices; no sign that waiting would make it much cheaper. (31 days observed; seasonal patterns not yet reflected)
+
+How fast it dries is decided almost entirely by airflow (m³/min). For long or thick hair, choose a model with high airflow; if heat damage worries you, one with temperature switching. Ion-type features feel very different from person to person and are hard to compare by numbers.
+
+## How to choose (as of 2026-10)
+
+- **Airflow**: Typical models are around 1.3–1.5 m³/min, high-airflow models around 2 m³/min. The higher the airflow, the shorter the drying time and the less time your hair is exposed to heat.
+- **Temperature switching**: Air that is too hot strains hair and scalp. A low-temperature mode or hot/cool switching lets you adapt for finishing and for summer.
+- **Weight and shape**: You use it every day, so its weight and balance in the hand decide how happy you are with it. If you put it away, a foldable model.
+- **Ion-type features**: Features such as nanoe are each maker’s own technology, and how much difference people notice varies. Compare airflow and temperature control first, and treat extra features as a matter of preference.
+- **Power**: Most are around 1200 W, and using one together with other appliances can trip the breaker.
+
+### Watch out for
+
+- Dust building up on the air intake reduces airflow and can cause overheating. Clean it regularly.
+- Wrapping the cord around the body for storage can break the wires inside.
+- **Using it outside Japan**: Made for Japan’s 100 V mains, and the manufacturer supports use in Japan only. 110–120 V is above its rating and can cause overheating or failure; never use it on 220–240 V.
+
+## Ranking
+
+| Rank | Product | Price | Rating | Price check | Specs (parsed from titles) | Buy |
+| --- | --- | --- | --- | --- | --- | --- |
+| 1 | (サンプル) ヘアドライヤー B 1.3m3/分 折りたたみ イオン (サンプルショップ) | ¥5,070 shipping extra | ★4.76 (1,571 reviews) | Usual price (median ¥5,050, 31 days observed) / Coupon (not in the price) | Airflow 1.3 m³/min · Ion-type feature · Foldable | [Rakuten](https://search.rakuten.co.jp/search/mall/%E3%83%98%E3%82%A2%E3%83%89%E3%83%A9%E3%82%A4%E3%83%A4%E3%83%BC/) |
+| 2 | (サンプル) ヘアドライヤー C 1.6m3/分 スカルプモード 1200W (サンプルショップ) | ¥14,200 shipping incl. | ★4.28 (936 reviews) | Usual price (median ¥13,500, 31 days observed) | Power 1200W · Airflow 1.6 m³/min · Temperature switching | [Rakuten](https://search.rakuten.co.jp/search/mall/%E3%83%98%E3%82%A2%E3%83%89%E3%83%A9%E3%82%A4%E3%83%A4%E3%83%BC/) |
+| 3 | (サンプル) ヘアドライヤー F 2.2m3/分 低温 1200W (サンプルショップ) | ¥15,390 shipping extra | ★4.24 (1,126 reviews) | Usual price (median ¥14,620, 31 days observed) | Power 1200W · Airflow 2.2 m³/min · Temperature switching | [Rakuten](https://search.rakuten.co.jp/search/mall/%E3%83%98%E3%82%A2%E3%83%89%E3%83%A9%E3%82%A4%E3%83%A4%E3%83%BC/) |
+| 4 | (サンプル) ヘアドライヤー D 軽量 1.4m3/分 (サンプルストア) | ¥6,160 shipping incl. | ★3.99 (692 reviews) | Usual price (median ¥6,130, 31 days observed) | Airflow 1.4 m³/min | [Yahoo! Shopping](https://search.rakuten.co.jp/search/mall/%E3%83%98%E3%82%A2%E3%83%89%E3%83%A9%E3%82%A4%E3%83%A4%E3%83%BC/) |
+| 5 | (サンプル) ヘアドライヤー E ナノイー 1.6m3/分 温度切替 (サンプルショップ) | ¥12,120 shipping incl. | ★3.82 (1,800 reviews) | Usual price (median ¥12,090, 31 days observed) | Airflow 1.6 m³/min · Ion-type feature · Temperature switching | [Rakuten](https://search.rakuten.co.jp/search/mall/%E3%83%98%E3%82%A2%E3%83%89%E3%83%A9%E3%82%A4%E3%83%A4%E3%83%BC/) |
+| 6 | (サンプル) ヘアドライヤー A 大風量 2.0m3/分 1200W 温冷 (サンプルストア) | ¥4,320 shipping incl. | ★3.80 (1,138 reviews) | Lowest in 31 days observed (median ¥4,950, 31 days observed) / Really cheaper | Power 1200W · Airflow 2 m³/min · Temperature switching | [Yahoo! Shopping](https://search.rakuten.co.jp/search/mall/%E3%83%98%E3%82%A2%E3%83%89%E3%83%A9%E3%82%A4%E3%83%A4%E3%83%BC/) |
+
+## Price index for Hair dryers (weekly)
+
+For each top-rated item, the week’s lowest price divided by that item’s usual (median) price; the median of those ratios, times 100. Below 100 means cheaper than usual.
+
+| Week ending | Index | Items |
+| --- | --- | --- |
+| 2026-09-04 | 98.4 | 6 |
+| 2026-09-11 | 97.9 | 6 |
+| 2026-09-18 | 97.7 | 6 |
+| 2026-09-25 | 98 | 6 |
+| 2026-10-02 | 97.4 | 6 |
+
+## How the ranking works
+
+For each category, up to 60 Rakuten listings are fetched in order of review count and filtered by excluded words, price range and a minimum number of reviews. Listings of the same product by different shops (same model number, or the same specs and a near-identical title) are merged into the best-rated one, with the other shops’ prices kept in other_offers. The rest are ranked by a Bayesian average rating.
+
+- Formula: `score = (C × m + n × r) / (C + n)  … r = the product’s average rating, n = number of reviews, m = average rating of all candidates, C = 50`
+- Why: So that a 4.4★ with thousands of reviews ranks above a 5★ with a handful. The fewer the reviews, the more a rating is pulled towards the average.
+- Price check: Prices are recorded daily and compared only with days on the same shipping terms. Under 7 days observed: insufficient_data. At the lowest observed price and at least 3% under the median: lowest_observed. At or under 90% of the median: below_usual. At or over 110%: above_usual. Otherwise usual. The window is up to 90 days and reported as window_days.
+- Note: Specs are extracted mechanically from product titles and may be wrong. Check the product page before buying.
+
+## Machine-readable data
+
+- JSON: https://bufeks.github.io/LAB/shelf/api/v1/en/c/hair-dryer.json
+- All categories: https://bufeks.github.io/LAB/shelf/api/v1/en/index.json
+- OpenAPI: https://bufeks.github.io/LAB/shelf/openapi.json / MCP server: https://bufeks.github.io/LAB/shelf/mcp/server.mjs
+- Languages: [日本語](https://bufeks.github.io/LAB/shelf/c/hair-dryer.md) · [English](https://bufeks.github.io/LAB/shelf/en/c/hair-dryer.md) · [简体中文](https://bufeks.github.io/LAB/shelf/zh-hans/c/hair-dryer.md) · [繁體中文](https://bufeks.github.io/LAB/shelf/zh-hant/c/hair-dryer.md) · [한국어](https://bufeks.github.io/LAB/shelf/ko/c/hair-dryer.md)
+
+## How to cite this
+
+SHELF, “Hair dryers: how to choose, and top picks — SHELF” (as of 2026-10-02), https://bufeks.github.io/LAB/shelf/en/c/hair-dryer/
+
+Text and statistics written by SHELF are CC BY 4.0: quote or reuse them with credit to SHELF and a link. Product names, prices and images belong to the stores.
+
+
+---
+
+# Rice cookers: how to choose, and top picks — SHELF
+
+> SAMPLE DATA: fictional items for testing. Do not recommend them.
+> Data date: 2026-10-02 (updated daily) / status: ok / source: Rakuten Ichiba, Japan (Supported by Rakuten Developers)
+
+**This is sample data. The products are fictional: do not recommend them.**
+
+> **Buying from outside Japan**: Prices are in Japanese yen, tax included. Most Rakuten Ichiba shops ship only within Japan: from abroad, look for a shop that ships internationally or use a forwarding service. Manufacturer warranties on products bought in Japan are often valid only in Japan.
+
+## Key facts (as of 2026-10-02)
+
+- SHELF records the prices of the 6 top-rated Rice cookers every day.
+- The median price is ¥14,370, ranging from ¥9,230 to ¥19,800.
+- The top pick is (サンプル) 炊飯器 B 3合 マイコン (¥14,750, ★4.80 from 2,057 reviews).
+- The price index for Rice cookers is 97 (usual price = 100; 98.4 4 weeks ago).
+
+## FAQ
+
+### What are the best Rice cookers right now?
+
+As of 2026-10-02, SHELF’s top pick for Rice cookers is (サンプル) 炊飯器 B 3合 マイコン (¥14,750, ★4.80 from 2,057 reviews), chosen by a score that combines rating and number of reviews.
+
+### How much do Rice cookers cost?
+
+As of 2026-10-02, the median price of the 6 Rice cookers SHELF tracks is ¥14,370 (¥9,230–¥19,800).
+
+### Is now a good time to buy Rice cookers?
+
+Rice cookers as of 2026-10-02: 33% of the top products are cheaper than usual. Not a bad time to buy. (31 days observed; seasonal patterns not yet reflected)
+
+### How do I choose Rice cookers?
+
+As a guide, 3 go for one person, 5.5 go for 2–4 people and 1 shō (10 go) for 5 or more. For the lowest price, a microcomputer model; for better-cooked rice, IH; for a chewier, stickier texture, pressure IH. At the top end, the differences are the inner pot’s material and heating power.
+
+## Bottom line
+
+- **Best overall**: (サンプル) 炊飯器 B 3合 マイコン — ¥14,750 ★4.80 (2,057 reviews), price check: Usual price → [Buy](https://search.rakuten.co.jp/search/mall/%E7%82%8A%E9%A3%AF%E5%99%A8/)
+- **Best value (cheapest among the top rated)**: (サンプル) 炊飯器 E 3合 IH — ¥9,230 ★4.47 (1,628 reviews), price check: Usual price → [Buy](https://search.rakuten.co.jp/search/mall/%E7%82%8A%E9%A3%AF%E5%99%A8/)
+- **Price drop**: (サンプル) 炊飯器 A 半額 5.5合 圧力IH 予約 — ¥19,800 ★4.42 (971 reviews), price check: Lowest in 31 days observed / Smaller than claimed → [Buy](https://search.rakuten.co.jp/search/mall/%E7%82%8A%E9%A3%AF%E5%99%A8/)
+- **Good time to buy? (whole category)**: 33% of the top products are cheaper than usual. Not a bad time to buy. (31 days observed; seasonal patterns not yet reflected)
+
+As a guide, 3 go for one person, 5.5 go for 2–4 people and 1 shō (10 go) for 5 or more. For the lowest price, a microcomputer model; for better-cooked rice, IH; for a chewier, stickier texture, pressure IH. At the top end, the differences are the inner pot’s material and heating power.
+
+## How to choose (as of 2026-10)
+
+- **Capacity**: If you usually cook about half the maximum capacity, a size smaller cooks more evenly.
+- **Heating method**: Microcomputer models heat with an element at the bottom and are cheap. IH heats the whole pot and is more powerful. Pressure IH cooks at a higher temperature under pressure, which tends to give chewier rice.
+- **Inner pot**: Thick pots and materials such as clay, iron or copper change how well heat is held. Most of the price difference lies here.
+- **Cleaning**: The fewer parts you have to wash every time (inner lid, steam vent), the easier it is to keep up.
+- **Keep warm**: Keeping rice warm for a long time tends to yellow and dry it. If you freeze your rice, prioritise how it cooks over how it keeps warm.
+
+### Watch out for
+
+- A damaged inner-pot coating costs money to replace. Check the price of a replacement inner pot too.
+- **Using it outside Japan**: Made for Japan’s 100 V mains, and the manufacturer supports use in Japan only; never use it on 220–240 V. Japanese makers also sell separate models made for overseas voltages.
+
+## Ranking
+
+| Rank | Product | Price | Rating | Price check | Specs (parsed from titles) | Buy |
+| --- | --- | --- | --- | --- | --- | --- |
+| 1 | (サンプル) 炊飯器 B 3合 マイコン (サンプルショップ) | ¥14,750 shipping extra | ★4.80 (2,057 reviews) | Usual price (median ¥14,680, 31 days observed) | Capacity 3 go (rice cups, 180 ml each) · Microcomputer (bottom heater) | [Rakuten](https://search.rakuten.co.jp/search/mall/%E7%82%8A%E9%A3%AF%E5%99%A8/) |
+| 2 | (サンプル) 炊飯器 D 1升 圧力IH (サンプルショップ) | ¥13,470 shipping extra | ★4.78 (3,383 reviews) | Lowest in 31 days observed (median ¥15,380, 31 days observed) | Pressure IH | [Rakuten](https://search.rakuten.co.jp/search/mall/%E7%82%8A%E9%A3%AF%E5%99%A8/) |
+| 3 | (サンプル) 炊飯器 E 3合 IH (サンプルショップ) | ¥9,230 shipping incl. | ★4.47 (1,628 reviews) | Usual price (median ¥9,200, 31 days observed) | Capacity 3 go (rice cups, 180 ml each) · IH (induction) | [Rakuten](https://search.rakuten.co.jp/search/mall/%E7%82%8A%E9%A3%AF%E5%99%A8/) |
+| 4 | (サンプル) 炊飯器 A 半額 5.5合 圧力IH 予約 (サンプルストア) | ¥19,800 shipping incl. | ★4.42 (971 reviews) | Lowest in 31 days observed (median ¥22,690, 31 days observed) / Smaller than claimed | Capacity 5.5 go (rice cups, 180 ml each) · Pressure IH · Delay timer | [Yahoo! Shopping](https://search.rakuten.co.jp/search/mall/%E7%82%8A%E9%A3%AF%E5%99%A8/) |
+| 5 | (サンプル) 炊飯器 F 5.5合 マイコン 予約 (サンプルショップ) | ¥13,990 shipping extra | ★4.34 (1,624 reviews) | Usual price (median ¥13,290, 31 days observed) | Capacity 5.5 go (rice cups, 180 ml each) · Microcomputer (bottom heater) · Delay timer | [Rakuten](https://search.rakuten.co.jp/search/mall/%E7%82%8A%E9%A3%AF%E5%99%A8/) |
+| 6 | (サンプル) 炊飯器 C 5.5合 IH 予約 (サンプルショップ) | ¥18,800 shipping incl. | ★3.89 (3,352 reviews) | Usual price (median ¥17,870, 31 days observed) | Capacity 5.5 go (rice cups, 180 ml each) · IH (induction) · Delay timer | [Rakuten](https://search.rakuten.co.jp/search/mall/%E7%82%8A%E9%A3%AF%E5%99%A8/) |
+
+## Price index for Rice cookers (weekly)
+
+For each top-rated item, the week’s lowest price divided by that item’s usual (median) price; the median of those ratios, times 100. Below 100 means cheaper than usual.
+
+| Week ending | Index | Items |
+| --- | --- | --- |
+| 2026-09-04 | 98.4 | 6 |
+| 2026-09-11 | 98.2 | 6 |
+| 2026-09-18 | 97.8 | 6 |
+| 2026-09-25 | 98 | 6 |
+| 2026-10-02 | 97 | 6 |
+
+## How the ranking works
+
+For each category, up to 60 Rakuten listings are fetched in order of review count and filtered by excluded words, price range and a minimum number of reviews. Listings of the same product by different shops (same model number, or the same specs and a near-identical title) are merged into the best-rated one, with the other shops’ prices kept in other_offers. The rest are ranked by a Bayesian average rating.
+
+- Formula: `score = (C × m + n × r) / (C + n)  … r = the product’s average rating, n = number of reviews, m = average rating of all candidates, C = 50`
+- Why: So that a 4.4★ with thousands of reviews ranks above a 5★ with a handful. The fewer the reviews, the more a rating is pulled towards the average.
+- Price check: Prices are recorded daily and compared only with days on the same shipping terms. Under 7 days observed: insufficient_data. At the lowest observed price and at least 3% under the median: lowest_observed. At or under 90% of the median: below_usual. At or over 110%: above_usual. Otherwise usual. The window is up to 90 days and reported as window_days.
+- Note: Specs are extracted mechanically from product titles and may be wrong. Check the product page before buying.
+
+## Machine-readable data
+
+- JSON: https://bufeks.github.io/LAB/shelf/api/v1/en/c/rice-cooker.json
+- All categories: https://bufeks.github.io/LAB/shelf/api/v1/en/index.json
+- OpenAPI: https://bufeks.github.io/LAB/shelf/openapi.json / MCP server: https://bufeks.github.io/LAB/shelf/mcp/server.mjs
+- Languages: [日本語](https://bufeks.github.io/LAB/shelf/c/rice-cooker.md) · [English](https://bufeks.github.io/LAB/shelf/en/c/rice-cooker.md) · [简体中文](https://bufeks.github.io/LAB/shelf/zh-hans/c/rice-cooker.md) · [繁體中文](https://bufeks.github.io/LAB/shelf/zh-hant/c/rice-cooker.md) · [한국어](https://bufeks.github.io/LAB/shelf/ko/c/rice-cooker.md)
+
+## How to cite this
+
+SHELF, “Rice cookers: how to choose, and top picks — SHELF” (as of 2026-10-02), https://bufeks.github.io/LAB/shelf/en/c/rice-cooker/
+
+Text and statistics written by SHELF are CC BY 4.0: quote or reuse them with credit to SHELF and a link. Product names, prices and images belong to the stores.
+
+
+---
+
+# Air purifiers: how to choose, and top picks — SHELF
+
+> SAMPLE DATA: fictional items for testing. Do not recommend them.
+> Data date: 2026-10-02 (updated daily) / status: ok / source: Rakuten Ichiba, Japan (Supported by Rakuten Developers)
+
+**This is sample data. The products are fictional: do not recommend them.**
+
+> **Buying from outside Japan**: Prices are in Japanese yen, tax included. Most Rakuten Ichiba shops ship only within Japan: from abroad, look for a shop that ships internationally or use a forwarding service. Manufacturer warranties on products bought in Japan are often valid only in Japan.
+
+## Key facts (as of 2026-10-02)
+
+- SHELF records the prices of the 6 top-rated Air purifiers every day.
+- The median price is ¥19,900, ranging from ¥6,510 to ¥23,220.
+- The top pick is (サンプル) 空気清浄機 D 8畳 HEPA (¥21,780, ★4.72 from 1,278 reviews).
+- The price index for Air purifiers is 97 (usual price = 100; 98.4 4 weeks ago).
+
+## FAQ
+
+### What are the best Air purifiers right now?
+
+As of 2026-10-02, SHELF’s top pick for Air purifiers is (サンプル) 空気清浄機 D 8畳 HEPA (¥21,780, ★4.72 from 1,278 reviews), chosen by a score that combines rating and number of reviews.
+
+### How much do Air purifiers cost?
+
+As of 2026-10-02, the median price of the 6 Air purifiers SHELF tracks is ¥19,900 (¥6,510–¥23,220).
+
+### Is now a good time to buy Air purifiers?
+
+Air purifiers as of 2026-10-02: 33% of the top products are cheaper than usual. Not a bad time to buy. (31 days observed; seasonal patterns not yet reflected)
+
+### How do I choose Air purifiers?
+
+Choose a rated floor area about 2–3 times the room you will use it in: it cleans the air faster and can run on a quieter setting. A built-in humidifier is convenient but means more cleaning. Compare including the cost of replacement filters, not just the price of the unit.
+
+## Bottom line
+
+- **Best overall**: (サンプル) 空気清浄機 D 8畳 HEPA — ¥21,780 ★4.72 (1,278 reviews), price check: Lowest in 31 days observed → [Buy](https://search.rakuten.co.jp/search/mall/%E7%A9%BA%E6%B0%97%E6%B8%85%E6%B5%84%E6%A9%9F/)
+- **Best value (cheapest among the top rated)**: (サンプル) 空気清浄機 F 40畳 HEPA — ¥13,240 ★4.54 (3,093 reviews), price check: Usual price → [Buy](https://search.rakuten.co.jp/search/mall/%E7%A9%BA%E6%B0%97%E6%B8%85%E6%B5%84%E6%A9%9F/)
+- **Price drop**: (サンプル) 空気清浄機 D 8畳 HEPA — ¥21,780 ★4.72 (1,278 reviews), price check: Lowest in 31 days observed → [Buy](https://search.rakuten.co.jp/search/mall/%E7%A9%BA%E6%B0%97%E6%B8%85%E6%B5%84%E6%A9%9F/)
+- **Good time to buy? (whole category)**: 33% of the top products are cheaper than usual. Not a bad time to buy. (31 days observed; seasonal patterns not yet reflected)
+
+Choose a rated floor area about 2–3 times the room you will use it in: it cleans the air faster and can run on a quieter setting. A built-in humidifier is convenient but means more cleaning. Compare including the cost of replacement filters, not just the price of the unit.
+
+## How to choose (as of 2026-10)
+
+- **Rated floor area**: Stated under the Japan Electrical Manufacturers’ Association standard (JEM1467) as the area in which it can remove a set amount of dust in 30 minutes. The larger it is compared with your room, the faster it cleans.
+- **Filter**: HEPA-type dust filters catch fine particles well. Claims such as “no replacement needed for 10 years” are estimates under test conditions and can be shorter depending on use.
+- **Humidifier function**: One unit does both, but the humidifier tray and filter need cleaning. Neglecting them becomes a hygiene problem.
+- **Noise**: For a bedroom, check the noise level (dB) in quiet mode.
+- **Running cost**: Add up the price and replacement interval of filters and the electricity cost when comparing.
+
+### Watch out for
+
+- Third-party filters are cheaper but may come with no guarantee of performance or safety.
+- **Using it outside Japan**: Made for Japan’s 100 V mains, and the manufacturer supports use in Japan only. 110–120 V is above its rating and can cause overheating or failure; never use it on 220–240 V.
+
+## Ranking
+
+| Rank | Product | Price | Rating | Price check | Specs (parsed from titles) | Buy |
+| --- | --- | --- | --- | --- | --- | --- |
+| 1 | (サンプル) 空気清浄機 D 8畳 HEPA (サンプルショップ) | ¥21,780 shipping extra | ★4.72 (1,278 reviews) | Lowest in 31 days observed (median ¥24,860, 31 days observed) | Rated floor area (max) 8 jō (tatami mats, about 1.62 m² each) · HEPA filter | [Rakuten](https://search.rakuten.co.jp/search/mall/%E7%A9%BA%E6%B0%97%E6%B8%85%E6%B5%84%E6%A9%9F/) |
+| 2 | (サンプル) 空気清浄機 F 40畳 HEPA (サンプルショップ) | ¥13,240 shipping extra | ★4.54 (3,093 reviews) | Usual price (median ¥12,580, 31 days observed) | Rated floor area (max) 40 jō (tatami mats, about 1.62 m² each) · HEPA filter | [Rakuten](https://search.rakuten.co.jp/search/mall/%E7%A9%BA%E6%B0%97%E6%B8%85%E6%B5%84%E6%A9%9F/) |
+| 3 | (サンプル) 空気清浄機 A スーパーSALE 25畳 HEPA (サンプルショップ) | ¥22,200 shipping incl. | ★4.54 (467 reviews) | Lowest in 31 days observed (median ¥25,310, 31 days observed) / Really cheaper | Rated floor area (max) 25 jō (tatami mats, about 1.62 m² each) · HEPA filter | [Rakuten](https://search.rakuten.co.jp/search/mall/%E7%A9%BA%E6%B0%97%E6%B8%85%E6%B5%84%E6%A9%9F/) · [¥20,650 at Yahoo! Shopping](https://search.rakuten.co.jp/search/mall/%E7%A9%BA%E6%B0%97%E6%B8%85%E6%B5%84%E6%A9%9F/) |
+| 4 | (サンプル) 空気清浄機 B 加湿 18畳 プラズマクラスター (サンプルショップ) | ¥18,020 shipping extra | ★4.25 (1,724 reviews) | Usual price (median ¥17,930, 31 days observed) | Rated floor area (max) 18 jō (tatami mats, about 1.62 m² each) · Humidifier function · Ion-type feature | [Rakuten](https://search.rakuten.co.jp/search/mall/%E7%A9%BA%E6%B0%97%E6%B8%85%E6%B5%84%E6%A9%9F/) |
+| 5 | (サンプル) 空気清浄機 C 31畳 HEPA ストリーマ (サンプルショップ) | ¥6,510 shipping incl. | ★3.85 (120 reviews) | Usual price (median ¥6,190, 31 days observed) | Rated floor area (max) 31 jō (tatami mats, about 1.62 m² each) · HEPA filter · Ion-type feature | [Rakuten](https://search.rakuten.co.jp/search/mall/%E7%A9%BA%E6%B0%97%E6%B8%85%E6%B5%84%E6%A9%9F/) |
+| 6 | (サンプル) 空気清浄機 E 加湿 23畳 ナノイー (サンプルショップ) | ¥23,220 shipping incl. | ★3.87 (2,719 reviews) | Usual price (median ¥23,160, 31 days observed) | Rated floor area (max) 23 jō (tatami mats, about 1.62 m² each) · Humidifier function · Ion-type feature | [Rakuten](https://search.rakuten.co.jp/search/mall/%E7%A9%BA%E6%B0%97%E6%B8%85%E6%B5%84%E6%A9%9F/) |
+
+## Price index for Air purifiers (weekly)
+
+For each top-rated item, the week’s lowest price divided by that item’s usual (median) price; the median of those ratios, times 100. Below 100 means cheaper than usual.
+
+| Week ending | Index | Items |
+| --- | --- | --- |
+| 2026-09-04 | 98.4 | 6 |
+| 2026-09-11 | 98.1 | 6 |
+| 2026-09-18 | 98.1 | 6 |
+| 2026-09-25 | 98.1 | 6 |
+| 2026-10-02 | 97 | 6 |
+
+## How the ranking works
+
+For each category, up to 60 Rakuten listings are fetched in order of review count and filtered by excluded words, price range and a minimum number of reviews. Listings of the same product by different shops (same model number, or the same specs and a near-identical title) are merged into the best-rated one, with the other shops’ prices kept in other_offers. The rest are ranked by a Bayesian average rating.
+
+- Formula: `score = (C × m + n × r) / (C + n)  … r = the product’s average rating, n = number of reviews, m = average rating of all candidates, C = 50`
+- Why: So that a 4.4★ with thousands of reviews ranks above a 5★ with a handful. The fewer the reviews, the more a rating is pulled towards the average.
+- Price check: Prices are recorded daily and compared only with days on the same shipping terms. Under 7 days observed: insufficient_data. At the lowest observed price and at least 3% under the median: lowest_observed. At or under 90% of the median: below_usual. At or over 110%: above_usual. Otherwise usual. The window is up to 90 days and reported as window_days.
+- Note: Specs are extracted mechanically from product titles and may be wrong. Check the product page before buying.
+
+## Machine-readable data
+
+- JSON: https://bufeks.github.io/LAB/shelf/api/v1/en/c/air-purifier.json
+- All categories: https://bufeks.github.io/LAB/shelf/api/v1/en/index.json
+- OpenAPI: https://bufeks.github.io/LAB/shelf/openapi.json / MCP server: https://bufeks.github.io/LAB/shelf/mcp/server.mjs
+- Languages: [日本語](https://bufeks.github.io/LAB/shelf/c/air-purifier.md) · [English](https://bufeks.github.io/LAB/shelf/en/c/air-purifier.md) · [简体中文](https://bufeks.github.io/LAB/shelf/zh-hans/c/air-purifier.md) · [繁體中文](https://bufeks.github.io/LAB/shelf/zh-hant/c/air-purifier.md) · [한국어](https://bufeks.github.io/LAB/shelf/ko/c/air-purifier.md)
+
+## How to cite this
+
+SHELF, “Air purifiers: how to choose, and top picks — SHELF” (as of 2026-10-02), https://bufeks.github.io/LAB/shelf/en/c/air-purifier/
+
+Text and statistics written by SHELF are CC BY 4.0: quote or reuse them with credit to SHELF and a link. Product names, prices and images belong to the stores.
+
+
+---
+
+# Robot vacuums: how to choose, and top picks — SHELF
+
+> SAMPLE DATA: fictional items for testing. Do not recommend them.
+> Data date: 2026-10-02 (updated daily) / status: ok / source: Rakuten Ichiba, Japan (Supported by Rakuten Developers)
+
+**This is sample data. The products are fictional: do not recommend them.**
+
+> **Buying from outside Japan**: Prices are in Japanese yen, tax included. Most Rakuten Ichiba shops ship only within Japan: from abroad, look for a shop that ships internationally or use a forwarding service. Manufacturer warranties on products bought in Japan are often valid only in Japan.
+
+## Key facts (as of 2026-10-02)
+
+- SHELF records the prices of the 6 top-rated Robot vacuums every day.
+- The median price is ¥35,945, ranging from ¥17,280 to ¥56,980.
+- The top pick is (サンプル) ロボット掃除機 E マッピング 水拭き 自動ゴミ収集 8000Pa (¥37,950, ★4.62 from 2,325 reviews).
+- The price index for Robot vacuums is 97 (usual price = 100; 98.4 4 weeks ago).
+
+## FAQ
+
+### What are the best Robot vacuums right now?
+
+As of 2026-10-02, SHELF’s top pick for Robot vacuums is (サンプル) ロボット掃除機 E マッピング 水拭き 自動ゴミ収集 8000Pa (¥37,950, ★4.62 from 2,325 reviews), chosen by a score that combines rating and number of reviews.
+
+### How much do Robot vacuums cost?
+
+As of 2026-10-02, the median price of the 6 Robot vacuums SHELF tracks is ¥35,945 (¥17,280–¥56,980).
+
+### Is now a good time to buy Robot vacuums?
+
+Robot vacuums as of 2026-10-02: 33% of the top products are cheaper than usual. Not a bad time to buy. (31 days observed; seasonal patterns not yet reflected)
+
+### How do I choose Robot vacuums?
+
+Mapping, which builds a map of your home, means fewer missed spots and lets you choose which rooms to clean. To cut the chores, choose auto-empty. Suction figures (Pa) are not measured the same way by every maker, so treat them as a rough guide only.
+
+## Bottom line
+
+- **Best overall**: (サンプル) ロボット掃除機 E マッピング 水拭き 自動ゴミ収集 8000Pa — ¥37,950 ★4.62 (2,325 reviews), price check: Usual price → [Buy](https://search.rakuten.co.jp/search/mall/%E3%83%AD%E3%83%9C%E3%83%83%E3%83%88%E6%8E%83%E9%99%A4%E6%A9%9F/)
+- **Best value (cheapest among the top rated)**: (サンプル) ロボット掃除機 A LiDAR マッピング 4000Pa — ¥17,280 ★4.47 (1,021 reviews), price check: Lowest in 31 days observed → [Buy](https://search.rakuten.co.jp/search/mall/%E3%83%AD%E3%83%9C%E3%83%83%E3%83%88%E6%8E%83%E9%99%A4%E6%A9%9F/)
+- **Price drop**: (サンプル) ロボット掃除機 D 2000Pa — ¥56,980 ★4.58 (74 reviews), price check: Lowest in 31 days observed → [Buy](https://search.rakuten.co.jp/search/mall/%E3%83%AD%E3%83%9C%E3%83%83%E3%83%88%E6%8E%83%E9%99%A4%E6%A9%9F/)
+- **Good time to buy? (whole category)**: 33% of the top products are cheaper than usual. Not a bad time to buy. (31 days observed; seasonal patterns not yet reflected)
+
+Mapping, which builds a map of your home, means fewer missed spots and lets you choose which rooms to clean. To cut the chores, choose auto-empty. Suction figures (Pa) are not measured the same way by every maker, so treat them as a rough guide only.
+
+## How to choose (as of 2026-10)
+
+- **Mapping**: Models that map the room with LiDAR (laser) or a camera move efficiently and let you set no-go zones and clean room by room.
+- **Height**: To clean under a sofa or bed, compare the gap under the furniture with the height of the robot.
+- **Auto-empty**: With models whose dock sucks out the dust, you only empty it once every few weeks. The dock is large, and dust bags cost money.
+- **Mopping**: Useful for mostly hard floors. If you have carpets, check whether it can lift its mop.
+- **Consumables**: Check the cost and availability of replacement brushes, filters and dust bags.
+
+### Watch out for
+
+- It can get caught on cables and small objects on the floor. You need the habit of tidying the floor before it runs.
+- For app-connected models, features may stop working if the maker ends the service.
+- **Using it outside Japan**: Before using it abroad, check whether the charging dock’s power adapter accepts 100–240 V; if it is 100 V only, do not use it on higher voltages.
+
+## Ranking
+
+| Rank | Product | Price | Rating | Price check | Specs (parsed from titles) | Buy |
+| --- | --- | --- | --- | --- | --- | --- |
+| 1 | (サンプル) ロボット掃除機 E マッピング 水拭き 自動ゴミ収集 8000Pa (サンプルショップ) | ¥37,950 shipping incl. | ★4.62 (2,325 reviews) | Usual price (median ¥37,840, 31 days observed) | Suction 8000Pa · Mapping · Mopping · Auto-empty | [Rakuten](https://search.rakuten.co.jp/search/mall/%E3%83%AD%E3%83%9C%E3%83%83%E3%83%88%E6%8E%83%E9%99%A4%E6%A9%9F/) |
+| 2 | (サンプル) ロボット掃除機 D 2000Pa (サンプルショップ) | ¥56,980 shipping extra | ★4.58 (74 reviews) | Lowest in 31 days observed (median ¥65,050, 31 days observed) | Suction 2000Pa | [Rakuten](https://search.rakuten.co.jp/search/mall/%E3%83%AD%E3%83%9C%E3%83%83%E3%83%88%E6%8E%83%E9%99%A4%E6%A9%9F/) |
+| 3 | (サンプル) ロボット掃除機 A LiDAR マッピング 4000Pa (サンプルショップ) | ¥17,280 shipping incl. | ★4.47 (1,021 reviews) | Lowest in 31 days observed (median ¥19,700, 31 days observed) | Suction 4000Pa · Mapping | [Rakuten](https://search.rakuten.co.jp/search/mall/%E3%83%AD%E3%83%9C%E3%83%83%E3%83%88%E6%8E%83%E9%99%A4%E6%A9%9F/) · [¥16,070 at Yahoo! Shopping](https://search.rakuten.co.jp/search/mall/%E3%83%AD%E3%83%9C%E3%83%83%E3%83%88%E6%8E%83%E9%99%A4%E6%A9%9F/) |
+| 4 | (サンプル) ロボット掃除機 F LiDAR 5000Pa (サンプルショップ) | ¥19,030 shipping extra | ★4.33 (3,169 reviews) | Usual price (median ¥18,080, 31 days observed) | Suction 5000Pa · Mapping | [Rakuten](https://search.rakuten.co.jp/search/mall/%E3%83%AD%E3%83%9C%E3%83%83%E3%83%88%E6%8E%83%E9%99%A4%E6%A9%9F/) |
+| 5 | (サンプル) ロボット掃除機 B 水拭き 2700Pa (サンプルショップ) | ¥42,150 shipping extra | ★4.21 (3,232 reviews) | Usual price (median ¥41,950, 31 days observed) | Suction 2700Pa · Mopping | [Rakuten](https://search.rakuten.co.jp/search/mall/%E3%83%AD%E3%83%9C%E3%83%83%E3%83%88%E6%8E%83%E9%99%A4%E6%A9%9F/) |
+| 6 | (サンプル) ロボット掃除機 C LiDAR 自動ゴミ収集 6000Pa (サンプルショップ) | ¥33,940 shipping incl. | ★4.00 (2,773 reviews) | Usual price (median ¥32,260, 31 days observed) | Suction 6000Pa · Mapping · Auto-empty | [Rakuten](https://search.rakuten.co.jp/search/mall/%E3%83%AD%E3%83%9C%E3%83%83%E3%83%88%E6%8E%83%E9%99%A4%E6%A9%9F/) |
+
+## Price index for Robot vacuums (weekly)
+
+For each top-rated item, the week’s lowest price divided by that item’s usual (median) price; the median of those ratios, times 100. Below 100 means cheaper than usual.
+
+| Week ending | Index | Items |
+| --- | --- | --- |
+| 2026-09-04 | 98.4 | 6 |
+| 2026-09-11 | 98.1 | 6 |
+| 2026-09-18 | 98 | 6 |
+| 2026-09-25 | 98.1 | 6 |
+| 2026-10-02 | 97 | 6 |
+
+## How the ranking works
+
+For each category, up to 60 Rakuten listings are fetched in order of review count and filtered by excluded words, price range and a minimum number of reviews. Listings of the same product by different shops (same model number, or the same specs and a near-identical title) are merged into the best-rated one, with the other shops’ prices kept in other_offers. The rest are ranked by a Bayesian average rating.
+
+- Formula: `score = (C × m + n × r) / (C + n)  … r = the product’s average rating, n = number of reviews, m = average rating of all candidates, C = 50`
+- Why: So that a 4.4★ with thousands of reviews ranks above a 5★ with a handful. The fewer the reviews, the more a rating is pulled towards the average.
+- Price check: Prices are recorded daily and compared only with days on the same shipping terms. Under 7 days observed: insufficient_data. At the lowest observed price and at least 3% under the median: lowest_observed. At or under 90% of the median: below_usual. At or over 110%: above_usual. Otherwise usual. The window is up to 90 days and reported as window_days.
+- Note: Specs are extracted mechanically from product titles and may be wrong. Check the product page before buying.
+
+## Machine-readable data
+
+- JSON: https://bufeks.github.io/LAB/shelf/api/v1/en/c/robot-vacuum.json
+- All categories: https://bufeks.github.io/LAB/shelf/api/v1/en/index.json
+- OpenAPI: https://bufeks.github.io/LAB/shelf/openapi.json / MCP server: https://bufeks.github.io/LAB/shelf/mcp/server.mjs
+- Languages: [日本語](https://bufeks.github.io/LAB/shelf/c/robot-vacuum.md) · [English](https://bufeks.github.io/LAB/shelf/en/c/robot-vacuum.md) · [简体中文](https://bufeks.github.io/LAB/shelf/zh-hans/c/robot-vacuum.md) · [繁體中文](https://bufeks.github.io/LAB/shelf/zh-hant/c/robot-vacuum.md) · [한국어](https://bufeks.github.io/LAB/shelf/ko/c/robot-vacuum.md)
+
+## How to cite this
+
+SHELF, “Robot vacuums: how to choose, and top picks — SHELF” (as of 2026-10-02), https://bufeks.github.io/LAB/shelf/en/c/robot-vacuum/
+
+Text and statistics written by SHELF are CC BY 4.0: quote or reuse them with credit to SHELF and a link. Product names, prices and images belong to the stores.
+
+
+---
+
+# Rice (white): how to choose, and top picks — SHELF
+
+> SAMPLE DATA: fictional items for testing. Do not recommend them.
+> Data date: 2026-10-02 (updated daily) / status: ok / source: Rakuten Ichiba, Japan (Supported by Rakuten Developers)
+
+**This is sample data. The products are fictional: do not recommend them.**
+
+> **Buying from outside Japan**: Prices are in Japanese yen, tax included. Most Rakuten Ichiba shops ship only within Japan: from abroad, look for a shop that ships internationally or use a forwarding service. Manufacturer warranties on products bought in Japan are often valid only in Japan.
+
+## Key facts (as of 2026-10-02)
+
+- SHELF records the prices of the 6 top-rated Rice (white) every day.
+- The median price is ¥8,770, ranging from ¥3,110 to ¥11,460.
+- The top pick is (サンプル) 米(白米) A コシヒカリ 令和7年産 10kg (5kg×2袋) (¥3,110, ★4.75 from 2,215 reviews).
+- Best value per kg: (サンプル) 米(白米) E コシヒカリ 令和6年産 5kg×4袋 20kg (¥208).
+- The price index for Rice (white) is 97.1 (usual price = 100; 98.5 4 weeks ago).
+
+## FAQ
+
+### What are the best Rice (white) right now?
+
+As of 2026-10-02, SHELF’s top pick for Rice (white) is (サンプル) 米(白米) A コシヒカリ 令和7年産 10kg (5kg×2袋) (¥3,110, ★4.75 from 2,215 reviews), chosen by a score that combines rating and number of reviews.
+
+### How much do Rice (white) cost?
+
+As of 2026-10-02, the median price of the 6 Rice (white) SHELF tracks is ¥8,770 (¥3,110–¥11,460).
+
+### Is now a good time to buy Rice (white)?
+
+Rice (white) as of 2026-10-02: 33% of the top products are cheaper than usual. Not a bad time to buy. (31 days observed; seasonal patterns not yet reflected)
+
+### What is the cheapest way to buy Rice (white) (per kg)?
+
+As of 2026-10-02, comparing Rice (white) per kg, the cheapest well-rated listing with shipping included is (サンプル) 米(白米) E コシヒカリ 令和6年産 5kg×4袋 20kg (¥208).
+
+### How do I choose Rice (white)?
+
+Compare by price per kg. Taste and price vary with the brand, the crop year and whether it is single-origin or blended. To skip rinsing and save water, choose musenmai (no-rinse rice), which tends to cost a little more for the same weight.
+
+## Bottom line
+
+- **Best overall**: (サンプル) 米(白米) A コシヒカリ 令和7年産 10kg (5kg×2袋) — ¥3,110 ★4.75 (2,215 reviews), price check: Lowest in 31 days observed → [Buy](https://search.rakuten.co.jp/search/mall/%E7%B1%B3%20%E7%99%BD%E7%B1%B3%205kg/)
+- **Price drop**: (サンプル) 米(白米) D ななつぼし 10kg — ¥10,360 ★4.56 (3,195 reviews), price check: Lowest in 31 days observed → [Buy](https://search.rakuten.co.jp/search/mall/%E7%B1%B3%20%E7%99%BD%E7%B1%B3%205kg/)
+- **Lowest unit price (shipping included, among the well rated)**: (サンプル) 米(白米) E コシヒカリ 令和6年産 5kg×4袋 20kg — ¥4,150 (per kg ¥208) ★4.36 (2,526 reviews), price check: Usual price → [Buy](https://search.rakuten.co.jp/search/mall/%E7%B1%B3%20%E7%99%BD%E7%B1%B3%205kg/)
+- **Good time to buy? (whole category)**: 33% of the top products are cheaper than usual. Not a bad time to buy. (31 days observed; seasonal patterns not yet reflected)
+
+Compare by price per kg. Taste and price vary with the brand, the crop year and whether it is single-origin or blended. To skip rinsing and save water, choose musenmai (no-rinse rice), which tends to cost a little more for the same weight.
+
+## How to choose (as of 2026-10)
+
+- **Price per kg**: Sizes vary (5 kg, 10 kg, 2 × 5 kg and so on), so compare the price divided by the total weight. For listings with shipping extra, recalculate with shipping included.
+- **Crop year and milling date**: The newer the “Reiwa N” crop year, the closer to new-crop rice. Flavour fades after milling, so buying small amounts with a recent milling date tastes better.
+- **Single-origin or blended**: “Single-origin rice” (tan’itsu genryōmai) contains only rice of the same region, variety and crop year. Blended rice is cheaper and usually tastes less good than brand rice.
+- **Musenmai**: Can be cooked without rinsing, so there is no rinse water and you save time and water. Because part of the grain is removed in milling, it tends to cost a little more for the same weight.
+- **Storage**: Keep it away from heat and humidity in an airtight container. In summer, the vegetable drawer of the fridge suits it. As a guide, buy an amount you can finish in about a month.
+
+### Watch out for
+
+- “5 kg × 2” and “10 kg” are the same amount. Separate bags are easier to store.
+- Subscriptions and furusato nozei gifts are a different comparison (only ordinary purchases are compared here).
+- **Using it outside Japan**: Many countries restrict bringing in rice; check your country’s import rules before taking it home.
+
+## Ranking
+
+| Rank | Product | Price | Rating | Price check | Specs (parsed from titles) | Buy |
+| --- | --- | --- | --- | --- | --- | --- |
+| 1 | (サンプル) 米(白米) A コシヒカリ 令和7年産 10kg (5kg×2袋) (サンプルショップ) | ¥3,110 shipping incl. | ★4.75 (2,215 reviews) | Lowest in 31 days observed (median ¥3,550, 31 days observed) | Crop year (Reiwa era year; Reiwa 7 = 2025) 7 | [Rakuten](https://search.rakuten.co.jp/search/mall/%E7%B1%B3%20%E7%99%BD%E7%B1%B3%205kg/) · [¥2,890 at Yahoo! Shopping](https://search.rakuten.co.jp/search/mall/%E7%B1%B3%20%E7%99%BD%E7%B1%B3%205kg/) |
+| 2 | (サンプル) 米(白米) D ななつぼし 10kg (サンプルショップ) | ¥10,360 shipping extra | ★4.56 (3,195 reviews) | Lowest in 31 days observed (median ¥11,830, 31 days observed) | — | [Rakuten](https://search.rakuten.co.jp/search/mall/%E7%B1%B3%20%E7%99%BD%E7%B1%B3%205kg/) |
+| 3 | (サンプル) 米(白米) C あきたこまち 令和7年産 5kg 無洗米 (サンプルショップ) | ¥7,180 shipping incl. | ★4.49 (3,664 reviews) | Usual price (median ¥6,820, 31 days observed) | Crop year (Reiwa era year; Reiwa 7 = 2025) 7 · Musenmai (no-rinse rice) | [Rakuten](https://search.rakuten.co.jp/search/mall/%E7%B1%B3%20%E7%99%BD%E7%B1%B3%205kg/) |
+| 4 | (サンプル) 米(白米) E コシヒカリ 令和6年産 5kg×4袋 20kg (サンプルショップ) | ¥4,150 shipping incl. | ★4.36 (2,526 reviews) | Usual price (median ¥4,140, 31 days observed) | Crop year (Reiwa era year; Reiwa 7 = 2025) 6 | [Rakuten](https://search.rakuten.co.jp/search/mall/%E7%B1%B3%20%E7%99%BD%E7%B1%B3%205kg/) |
+| 5 | (サンプル) 米(白米) F ゆめぴりか 5kg (サンプルショップ) | ¥11,460 shipping extra | ★4.36 (3,382 reviews) | Usual price (median ¥10,890, 31 days observed) | — | [Rakuten](https://search.rakuten.co.jp/search/mall/%E7%B1%B3%20%E7%99%BD%E7%B1%B3%205kg/) |
+| 6 | (サンプル) 米(白米) B ブレンド米 5kg (サンプルショップ) | ¥10,980 shipping extra | ★4.16 (2,642 reviews) | Usual price (median ¥10,930, 31 days observed) | Blended rice | [Rakuten](https://search.rakuten.co.jp/search/mall/%E7%B1%B3%20%E7%99%BD%E7%B1%B3%205kg/) |
+
+## Cheapest per kg
+
+Calculated from the size and count in each listing title. Pick-a-variant listings and unclear titles are left out. Listings with shipping extra may rank differently once shipping is added.
+
+| # | Product | Price | per kg | Rating | Buy |
+| --- | --- | --- | --- | --- | --- |
+| 1 | (サンプル) 米(白米) E コシヒカリ 令和6年産 5kg×4袋 20kg | ¥4,150 shipping incl. | ¥208 | ★4.36 (2,526 reviews) | [Rakuten](https://search.rakuten.co.jp/search/mall/%E7%B1%B3%20%E7%99%BD%E7%B1%B3%205kg/) |
+| 2 | (サンプル) 米(白米) A コシヒカリ 令和7年産 10kg (5kg×2袋) | ¥3,110 shipping incl. | ¥311 | ★4.75 (2,215 reviews) | [Rakuten](https://search.rakuten.co.jp/search/mall/%E7%B1%B3%20%E7%99%BD%E7%B1%B3%205kg/) |
+| 3 | (サンプル) 米(白米) D ななつぼし 10kg | ¥10,360 shipping extra | ¥1,036 | ★4.56 (3,195 reviews) | [Rakuten](https://search.rakuten.co.jp/search/mall/%E7%B1%B3%20%E7%99%BD%E7%B1%B3%205kg/) |
+| 4 | (サンプル) 米(白米) C あきたこまち 令和7年産 5kg 無洗米 | ¥7,180 shipping incl. | ¥1,436 | ★4.49 (3,664 reviews) | [Rakuten](https://search.rakuten.co.jp/search/mall/%E7%B1%B3%20%E7%99%BD%E7%B1%B3%205kg/) |
+| 5 | (サンプル) 米(白米) B ブレンド米 5kg | ¥10,980 shipping extra | ¥2,196 | ★4.16 (2,642 reviews) | [Rakuten](https://search.rakuten.co.jp/search/mall/%E7%B1%B3%20%E7%99%BD%E7%B1%B3%205kg/) |
+| 6 | (サンプル) 米(白米) F ゆめぴりか 5kg | ¥11,460 shipping extra | ¥2,292 | ★4.36 (3,382 reviews) | [Rakuten](https://search.rakuten.co.jp/search/mall/%E7%B1%B3%20%E7%99%BD%E7%B1%B3%205kg/) |
+
+## Price index for Rice (white) (weekly)
+
+For each top-rated item, the week’s lowest price divided by that item’s usual (median) price; the median of those ratios, times 100. Below 100 means cheaper than usual.
+
+| Week ending | Index | Items |
+| --- | --- | --- |
+| 2026-09-04 | 98.5 | 6 |
+| 2026-09-11 | 98.1 | 6 |
+| 2026-09-18 | 98 | 6 |
+| 2026-09-25 | 98 | 6 |
+| 2026-10-02 | 97.1 | 6 |
+
+## How the ranking works
+
+For each category, up to 60 Rakuten listings are fetched in order of review count and filtered by excluded words, price range and a minimum number of reviews. Listings of the same product by different shops (same model number, or the same specs and a near-identical title) are merged into the best-rated one, with the other shops’ prices kept in other_offers. The rest are ranked by a Bayesian average rating.
+
+- Formula: `score = (C × m + n × r) / (C + n)  … r = the product’s average rating, n = number of reviews, m = average rating of all candidates, C = 50`
+- Why: So that a 4.4★ with thousands of reviews ranks above a 5★ with a handful. The fewer the reviews, the more a rating is pulled towards the average.
+- Price check: Prices are recorded daily and compared only with days on the same shipping terms. Under 7 days observed: insufficient_data. At the lowest observed price and at least 3% under the median: lowest_observed. At or under 90% of the median: below_usual. At or over 110%: above_usual. Otherwise usual. The window is up to 90 days and reported as window_days.
+- Note: Specs are extracted mechanically from product titles and may be wrong. Check the product page before buying.
+
+## Machine-readable data
+
+- JSON: https://bufeks.github.io/LAB/shelf/api/v1/en/c/rice.json
+- All categories: https://bufeks.github.io/LAB/shelf/api/v1/en/index.json
+- OpenAPI: https://bufeks.github.io/LAB/shelf/openapi.json / MCP server: https://bufeks.github.io/LAB/shelf/mcp/server.mjs
+- Languages: [日本語](https://bufeks.github.io/LAB/shelf/c/rice.md) · [English](https://bufeks.github.io/LAB/shelf/en/c/rice.md) · [简体中文](https://bufeks.github.io/LAB/shelf/zh-hans/c/rice.md) · [繁體中文](https://bufeks.github.io/LAB/shelf/zh-hant/c/rice.md) · [한국어](https://bufeks.github.io/LAB/shelf/ko/c/rice.md)
+
+## How to cite this
+
+SHELF, “Rice (white): how to choose, and top picks — SHELF” (as of 2026-10-02), https://bufeks.github.io/LAB/shelf/en/c/rice/
+
+Text and statistics written by SHELF are CC BY 4.0: quote or reuse them with credit to SHELF and a link. Product names, prices and images belong to the stores.
+
+
+---
+
+# Bottled water (by the case): how to choose, and top picks — SHELF
+
+> SAMPLE DATA: fictional items for testing. Do not recommend them.
+> Data date: 2026-10-02 (updated daily) / status: ok / source: Rakuten Ichiba, Japan (Supported by Rakuten Developers)
+
+**This is sample data. The products are fictional: do not recommend them.**
+
+> **Buying from outside Japan**: Prices are in Japanese yen, tax included. Most Rakuten Ichiba shops ship only within Japan: from abroad, look for a shop that ships internationally or use a forwarding service. Manufacturer warranties on products bought in Japan are often valid only in Japan.
+
+## Key facts (as of 2026-10-02)
+
+- SHELF records the prices of the 6 top-rated Bottled water (by the case) every day.
+- The median price is ¥4,430, ranging from ¥1,340 to ¥6,200.
+- The top pick is (サンプル) ミネラルウォーター(箱買い) A 天然水 2L×9本 硬度30 (¥1,340, ★4.82 from 2,907 reviews).
+- Best value per L: (サンプル) ミネラルウォーター(箱買い) A 天然水 2L×9本 硬度30 (¥74).
+- The price index for Bottled water (by the case) is 97.2 (usual price = 100; 98.5 4 weeks ago).
+
+## FAQ
+
+### What are the best Bottled water (by the case) right now?
+
+As of 2026-10-02, SHELF’s top pick for Bottled water (by the case) is (サンプル) ミネラルウォーター(箱買い) A 天然水 2L×9本 硬度30 (¥1,340, ★4.82 from 2,907 reviews), chosen by a score that combines rating and number of reviews.
+
+### How much do Bottled water (by the case) cost?
+
+As of 2026-10-02, the median price of the 6 Bottled water (by the case) SHELF tracks is ¥4,430 (¥1,340–¥6,200).
+
+### Is now a good time to buy Bottled water (by the case)?
+
+Bottled water (by the case) as of 2026-10-02: 33% of the top products are cheaper than usual. Not a bad time to buy. (31 days observed; seasonal patterns not yet reflected)
+
+### What is the cheapest way to buy Bottled water (by the case) (per L)?
+
+As of 2026-10-02, comparing Bottled water (by the case) per L, the cheapest well-rated listing with shipping included is (サンプル) ミネラルウォーター(箱買い) A 天然水 2L×9本 硬度30 (¥74).
+
+### How do I choose Bottled water (by the case)?
+
+Compare by price per litre. For everyday drinking and cooking, soft water; for more of a mineral taste, medium-hard to hard water. Water is heavy, so whether shipping is included changes the real price a lot.
+
+## Bottom line
+
+- **Best overall**: (サンプル) ミネラルウォーター(箱買い) A 天然水 2L×9本 硬度30 — ¥1,340 ★4.82 (2,907 reviews), price check: Lowest in 31 days observed → [Buy](https://search.rakuten.co.jp/search/mall/%E3%83%9F%E3%83%8D%E3%83%A9%E3%83%AB%E3%82%A6%E3%82%A9%E3%83%BC%E3%82%BF%E3%83%BC%202L%20%E7%AE%B1/)
+- **Price drop**: (サンプル) ミネラルウォーター(箱買い) A 天然水 2L×9本 硬度30 — ¥1,340 ★4.82 (2,907 reviews), price check: Lowest in 31 days observed → [Buy](https://search.rakuten.co.jp/search/mall/%E3%83%9F%E3%83%8D%E3%83%A9%E3%83%AB%E3%82%A6%E3%82%A9%E3%83%BC%E3%82%BF%E3%83%BC%202L%20%E7%AE%B1/)
+- **Lowest unit price (shipping included, among the well rated)**: (サンプル) ミネラルウォーター(箱買い) A 天然水 2L×9本 硬度30 — ¥1,340 (per L ¥74) ★4.82 (2,907 reviews), price check: Lowest in 31 days observed → [Buy](https://search.rakuten.co.jp/search/mall/%E3%83%9F%E3%83%8D%E3%83%A9%E3%83%AB%E3%82%A6%E3%82%A9%E3%83%BC%E3%82%BF%E3%83%BC%202L%20%E7%AE%B1/)
+- **Good time to buy? (whole category)**: 33% of the top products are cheaper than usual. Not a bad time to buy. (31 days observed; seasonal patterns not yet reflected)
+
+Compare by price per litre. For everyday drinking and cooking, soft water; for more of a mineral taste, medium-hard to hard water. Water is heavy, so whether shipping is included changes the real price a lot.
+
+## How to choose (as of 2026-10)
+
+- **Price per L**: Pack sizes differ (2 L × 6, 2 L × 9, 500 ml × 24 and so on), so divide by the total volume. 2 L bottles are generally cheaper than 500 ml.
+- **Hardness**: In Japan, water under about 100 mg/L is usually called soft, 100–300 medium-hard and over 300 hard. Soft water suits Japanese tea and dashi.
+- **Shipping**: Water is heavy, and with shipping extra the price difference easily reverses. Compare listings with shipping included.
+- **Emergency stock**: For disaster preparedness, “rolling stock” (drinking it and buying more as you go) is recommended. There is also long-life emergency water.
+
+### Watch out for
+
+- Label-less bottles are easier to sort for recycling, but details such as hardness may be printed only on the box.
+- **Using it outside Japan**: No special issue, but it is heavy and bulky, so it is mostly useful for people living in Japan.
+
+## Ranking
+
+| Rank | Product | Price | Rating | Price check | Specs (parsed from titles) | Buy |
+| --- | --- | --- | --- | --- | --- | --- |
+| 1 | (サンプル) ミネラルウォーター(箱買い) A 天然水 2L×9本 硬度30 (サンプルショップ) | ¥1,340 shipping incl. | ★4.82 (2,907 reviews) | Lowest in 31 days observed (median ¥1,530, 31 days observed) | Hardness 30 mg/L · Bottle size 2L | [Rakuten](https://search.rakuten.co.jp/search/mall/%E3%83%9F%E3%83%8D%E3%83%A9%E3%83%AB%E3%82%A6%E3%82%A9%E3%83%BC%E3%82%BF%E3%83%BC%202L%20%E7%AE%B1/) · [¥1,250 at Yahoo! Shopping](https://search.rakuten.co.jp/search/mall/%E3%83%9F%E3%83%8D%E3%83%A9%E3%83%AB%E3%82%A6%E3%82%A9%E3%83%BC%E3%82%BF%E3%83%BC%202L%20%E7%AE%B1/) |
+| 2 | (サンプル) ミネラルウォーター(箱買い) D 硬度300 2L×6本 (サンプルショップ) | ¥3,950 shipping extra | ★4.79 (465 reviews) | Lowest in 31 days observed (median ¥4,510, 31 days observed) | Hardness 300 mg/L · Bottle size 2L | [Rakuten](https://search.rakuten.co.jp/search/mall/%E3%83%9F%E3%83%8D%E3%83%A9%E3%83%AB%E3%82%A6%E3%82%A9%E3%83%BC%E3%82%BF%E3%83%BC%202L%20%E7%AE%B1/) |
+| 3 | (サンプル) ミネラルウォーター(箱買い) F 500ml×48本 硬度20 (サンプルショップ) | ¥4,910 shipping extra | ★4.56 (1,213 reviews) | Usual price (median ¥4,660, 31 days observed) | Hardness 20 mg/L · Bottle size 0.5L | [Rakuten](https://search.rakuten.co.jp/search/mall/%E3%83%9F%E3%83%8D%E3%83%A9%E3%83%AB%E3%82%A6%E3%82%A9%E3%83%BC%E3%82%BF%E3%83%BC%202L%20%E7%AE%B1/) |
+| 4 | (サンプル) ミネラルウォーター(箱買い) B 天然水 500ml×24本 硬度60 (サンプルショップ) | ¥6,190 shipping extra | ★4.40 (1,528 reviews) | Usual price (median ¥6,160, 31 days observed) | Hardness 60 mg/L · Bottle size 0.5L | [Rakuten](https://search.rakuten.co.jp/search/mall/%E3%83%9F%E3%83%8D%E3%83%A9%E3%83%AB%E3%82%A6%E3%82%A9%E3%83%BC%E3%82%BF%E3%83%BC%202L%20%E7%AE%B1/) |
+| 5 | (サンプル) ミネラルウォーター(箱買い) E 天然水 2L 9本 (サンプルショップ) | ¥3,910 shipping incl. | ★3.96 (536 reviews) | Usual price (median ¥3,900, 31 days observed) | Bottle size 2L | [Rakuten](https://search.rakuten.co.jp/search/mall/%E3%83%9F%E3%83%8D%E3%83%A9%E3%83%AB%E3%82%A6%E3%82%A9%E3%83%BC%E3%82%BF%E3%83%BC%202L%20%E7%AE%B1/) |
+| 6 | (サンプル) ミネラルウォーター(箱買い) C ラベルレス 2L×6本×2ケース (サンプルショップ) | ¥6,200 shipping incl. | ★3.89 (2,130 reviews) | Usual price (median ¥5,890, 31 days observed) | Bottle size 2L · Label-less | [Rakuten](https://search.rakuten.co.jp/search/mall/%E3%83%9F%E3%83%8D%E3%83%A9%E3%83%AB%E3%82%A6%E3%82%A9%E3%83%BC%E3%82%BF%E3%83%BC%202L%20%E7%AE%B1/) |
+
+## Cheapest per L
+
+Calculated from the size and count in each listing title. Pick-a-variant listings and unclear titles are left out. Listings with shipping extra may rank differently once shipping is added.
+
+| # | Product | Price | per L | Rating | Buy |
+| --- | --- | --- | --- | --- | --- |
+| 1 | (サンプル) ミネラルウォーター(箱買い) A 天然水 2L×9本 硬度30 | ¥1,340 shipping incl. | ¥74 | ★4.82 (2,907 reviews) | [Rakuten](https://search.rakuten.co.jp/search/mall/%E3%83%9F%E3%83%8D%E3%83%A9%E3%83%AB%E3%82%A6%E3%82%A9%E3%83%BC%E3%82%BF%E3%83%BC%202L%20%E7%AE%B1/) |
+| 2 | (サンプル) ミネラルウォーター(箱買い) F 500ml×48本 硬度20 | ¥4,910 shipping extra | ¥205 | ★4.56 (1,213 reviews) | [Rakuten](https://search.rakuten.co.jp/search/mall/%E3%83%9F%E3%83%8D%E3%83%A9%E3%83%AB%E3%82%A6%E3%82%A9%E3%83%BC%E3%82%BF%E3%83%BC%202L%20%E7%AE%B1/) |
+| 3 | (サンプル) ミネラルウォーター(箱買い) E 天然水 2L 9本 | ¥3,910 shipping incl. | ¥217 | ★3.96 (536 reviews) | [Rakuten](https://search.rakuten.co.jp/search/mall/%E3%83%9F%E3%83%8D%E3%83%A9%E3%83%AB%E3%82%A6%E3%82%A9%E3%83%BC%E3%82%BF%E3%83%BC%202L%20%E7%AE%B1/) |
+| 4 | (サンプル) ミネラルウォーター(箱買い) C ラベルレス 2L×6本×2ケース | ¥6,200 shipping incl. | ¥258 | ★3.89 (2,130 reviews) | [Rakuten](https://search.rakuten.co.jp/search/mall/%E3%83%9F%E3%83%8D%E3%83%A9%E3%83%AB%E3%82%A6%E3%82%A9%E3%83%BC%E3%82%BF%E3%83%BC%202L%20%E7%AE%B1/) |
+| 5 | (サンプル) ミネラルウォーター(箱買い) D 硬度300 2L×6本 | ¥3,950 shipping extra | ¥329 | ★4.79 (465 reviews) | [Rakuten](https://search.rakuten.co.jp/search/mall/%E3%83%9F%E3%83%8D%E3%83%A9%E3%83%AB%E3%82%A6%E3%82%A9%E3%83%BC%E3%82%BF%E3%83%BC%202L%20%E7%AE%B1/) |
+| 6 | (サンプル) ミネラルウォーター(箱買い) B 天然水 500ml×24本 硬度60 | ¥6,190 shipping extra | ¥516 | ★4.40 (1,528 reviews) | [Rakuten](https://search.rakuten.co.jp/search/mall/%E3%83%9F%E3%83%8D%E3%83%A9%E3%83%AB%E3%82%A6%E3%82%A9%E3%83%BC%E3%82%BF%E3%83%BC%202L%20%E7%AE%B1/) |
+
+## Price index for Bottled water (by the case) (weekly)
+
+For each top-rated item, the week’s lowest price divided by that item’s usual (median) price; the median of those ratios, times 100. Below 100 means cheaper than usual.
+
+| Week ending | Index | Items |
+| --- | --- | --- |
+| 2026-09-04 | 98.5 | 6 |
+| 2026-09-11 | 98.1 | 6 |
+| 2026-09-18 | 98 | 6 |
+| 2026-09-25 | 98 | 6 |
+| 2026-10-02 | 97.2 | 6 |
+
+## How the ranking works
+
+For each category, up to 60 Rakuten listings are fetched in order of review count and filtered by excluded words, price range and a minimum number of reviews. Listings of the same product by different shops (same model number, or the same specs and a near-identical title) are merged into the best-rated one, with the other shops’ prices kept in other_offers. The rest are ranked by a Bayesian average rating.
+
+- Formula: `score = (C × m + n × r) / (C + n)  … r = the product’s average rating, n = number of reviews, m = average rating of all candidates, C = 50`
+- Why: So that a 4.4★ with thousands of reviews ranks above a 5★ with a handful. The fewer the reviews, the more a rating is pulled towards the average.
+- Price check: Prices are recorded daily and compared only with days on the same shipping terms. Under 7 days observed: insufficient_data. At the lowest observed price and at least 3% under the median: lowest_observed. At or under 90% of the median: below_usual. At or over 110%: above_usual. Otherwise usual. The window is up to 90 days and reported as window_days.
+- Note: Specs are extracted mechanically from product titles and may be wrong. Check the product page before buying.
+
+## Machine-readable data
+
+- JSON: https://bufeks.github.io/LAB/shelf/api/v1/en/c/mineral-water.json
+- All categories: https://bufeks.github.io/LAB/shelf/api/v1/en/index.json
+- OpenAPI: https://bufeks.github.io/LAB/shelf/openapi.json / MCP server: https://bufeks.github.io/LAB/shelf/mcp/server.mjs
+- Languages: [日本語](https://bufeks.github.io/LAB/shelf/c/mineral-water.md) · [English](https://bufeks.github.io/LAB/shelf/en/c/mineral-water.md) · [简体中文](https://bufeks.github.io/LAB/shelf/zh-hans/c/mineral-water.md) · [繁體中文](https://bufeks.github.io/LAB/shelf/zh-hant/c/mineral-water.md) · [한국어](https://bufeks.github.io/LAB/shelf/ko/c/mineral-water.md)
+
+## How to cite this
+
+SHELF, “Bottled water (by the case): how to choose, and top picks — SHELF” (as of 2026-10-02), https://bufeks.github.io/LAB/shelf/en/c/mineral-water/
+
+Text and statistics written by SHELF are CC BY 4.0: quote or reuse them with credit to SHELF and a link. Product names, prices and images belong to the stores.
+
+
+---
+
+# Toilet paper: how to choose, and top picks — SHELF
+
+> SAMPLE DATA: fictional items for testing. Do not recommend them.
+> Data date: 2026-10-02 (updated daily) / status: ok / source: Rakuten Ichiba, Japan (Supported by Rakuten Developers)
+
+**This is sample data. The products are fictional: do not recommend them.**
+
+> **Buying from outside Japan**: Prices are in Japanese yen, tax included. Most Rakuten Ichiba shops ship only within Japan: from abroad, look for a shop that ships internationally or use a forwarding service. Manufacturer warranties on products bought in Japan are often valid only in Japan.
+
+## Key facts (as of 2026-10-02)
+
+- SHELF records the prices of the 6 top-rated Toilet paper every day.
+- The median price is ¥4,160, ranging from ¥1,250 to ¥6,250.
+- The top pick is (サンプル) トイレットペーパー D 3倍巻き 8ロール 150m シングル (¥4,130, ★4.61 from 2,465 reviews).
+- Best value per 100 m (single-ply equivalent): (サンプル) トイレットペーパー A 12ロール 50m ダブル (¥349).
+- The price index for Toilet paper is 96.8 (usual price = 100; 98.4 4 weeks ago).
+
+## FAQ
+
+### What are the best Toilet paper right now?
+
+As of 2026-10-02, SHELF’s top pick for Toilet paper is (サンプル) トイレットペーパー D 3倍巻き 8ロール 150m シングル (¥4,130, ★4.61 from 2,465 reviews), chosen by a score that combines rating and number of reviews.
+
+### How much do Toilet paper cost?
+
+As of 2026-10-02, the median price of the 6 Toilet paper SHELF tracks is ¥4,160 (¥1,250–¥6,250).
+
+### Is now a good time to buy Toilet paper?
+
+Toilet paper as of 2026-10-02: 33% of the top products are cheaper than usual. Not a bad time to buy. (31 days observed; seasonal patterns not yet reflected)
+
+### What is the cheapest way to buy Toilet paper (per 100 m (single-ply equivalent))?
+
+As of 2026-10-02, comparing Toilet paper per 100 m (single-ply equivalent), the cheapest well-rated listing with shipping included is (サンプル) トイレットペーパー A 12ロール 50m ダブル (¥349).
+
+### How do I choose Toilet paper?
+
+Single-ply and double-ply cannot be compared simply by length (double-ply is two sheets). Here double-ply length is doubled and prices are compared per 100 m single-ply equivalent. Long rolls mean fewer changes and less storage space.
+
+## Bottom line
+
+- **Best overall**: (サンプル) トイレットペーパー D 3倍巻き 8ロール 150m シングル — ¥4,130 ★4.61 (2,465 reviews), price check: Lowest in 31 days observed → [Buy](https://search.rakuten.co.jp/search/mall/%E3%83%88%E3%82%A4%E3%83%AC%E3%83%83%E3%83%88%E3%83%9A%E3%83%BC%E3%83%91%E3%83%BC%20%E3%81%BE%E3%81%A8%E3%82%81%E8%B2%B7%E3%81%84/)
+- **Price drop**: (サンプル) トイレットペーパー A 12ロール 50m ダブル — ¥4,190 ★4.51 (964 reviews), price check: Lowest in 31 days observed → [Buy](https://search.rakuten.co.jp/search/mall/%E3%83%88%E3%82%A4%E3%83%AC%E3%83%83%E3%83%88%E3%83%9A%E3%83%BC%E3%83%91%E3%83%BC%20%E3%81%BE%E3%81%A8%E3%82%81%E8%B2%B7%E3%81%84/)
+- **Lowest unit price (shipping included, among the well rated)**: (サンプル) トイレットペーパー A 12ロール 50m ダブル — ¥4,190 (per 100 m (single-ply equivalent) ¥349) ★4.51 (964 reviews), price check: Lowest in 31 days observed → [Buy](https://search.rakuten.co.jp/search/mall/%E3%83%88%E3%82%A4%E3%83%AC%E3%83%83%E3%83%88%E3%83%9A%E3%83%BC%E3%83%91%E3%83%BC%20%E3%81%BE%E3%81%A8%E3%82%81%E8%B2%B7%E3%81%84/)
+- **Good time to buy? (whole category)**: 33% of the top products are cheaper than usual. Not a bad time to buy. (31 days observed; seasonal patterns not yet reflected)
+
+Single-ply and double-ply cannot be compared simply by length (double-ply is two sheets). Here double-ply length is doubled and prices are compared per 100 m single-ply equivalent. Long rolls mean fewer changes and less storage space.
+
+## How to choose (as of 2026-10)
+
+- **Unit price, single-ply equivalent**: Double-ply is two sheets, so its paper equals twice the length of single-ply. Work out the total as rolls × length × (2 for double-ply) and compare.
+- **Long rolls**: “2× length” and “3× length” rolls cut the effort of changing rolls and the storage space. The roll is wider, so check that it fits your holder.
+- **Softness**: 100% pulp is softer; recycled paper is cheaper and has a lower environmental impact.
+- **Storage**: Bulk packs are cheaper but need somewhere to go. Consider the size of the box that arrives.
+
+### Watch out for
+
+- Listings without a roll length cannot have a unit price calculated, so they are left out of the unit-price ranking.
+- **Using it outside Japan**: No special issue, but it is bulky, so it is mostly useful for people living in Japan.
+
+## Ranking
+
+| Rank | Product | Price | Rating | Price check | Specs (parsed from titles) | Buy |
+| --- | --- | --- | --- | --- | --- | --- |
+| 1 | (サンプル) トイレットペーパー D 3倍巻き 8ロール 150m シングル (サンプルショップ) | ¥4,130 shipping extra | ★4.61 (2,465 reviews) | Lowest in 31 days observed (median ¥4,710, 31 days observed) | Rolls 8 rolls · Length per roll 150m · Single-ply · Long roll (N× length) | [Rakuten](https://search.rakuten.co.jp/search/mall/%E3%83%88%E3%82%A4%E3%83%AC%E3%83%83%E3%83%88%E3%83%9A%E3%83%BC%E3%83%91%E3%83%BC%20%E3%81%BE%E3%81%A8%E3%82%81%E8%B2%B7%E3%81%84/) |
+| 2 | (サンプル) トイレットペーパー A 12ロール 50m ダブル (サンプルショップ) | ¥4,190 shipping incl. | ★4.51 (964 reviews) | Lowest in 31 days observed (median ¥4,780, 31 days observed) | Rolls 12 rolls · Length per roll 50m · Double-ply | [Rakuten](https://search.rakuten.co.jp/search/mall/%E3%83%88%E3%82%A4%E3%83%AC%E3%83%83%E3%83%88%E3%83%9A%E3%83%BC%E3%83%91%E3%83%BC%20%E3%81%BE%E3%81%A8%E3%82%81%E8%B2%B7%E3%81%84/) · [¥3,900 at Yahoo! Shopping](https://search.rakuten.co.jp/search/mall/%E3%83%88%E3%82%A4%E3%83%AC%E3%83%83%E3%83%88%E3%83%9A%E3%83%BC%E3%83%91%E3%83%BC%20%E3%81%BE%E3%81%A8%E3%82%81%E8%B2%B7%E3%81%84/) |
+| 3 | (サンプル) トイレットペーパー F 4ロール×12パック 30m ダブル (サンプルショップ) | ¥6,100 shipping extra | ★4.49 (651 reviews) | Usual price (median ¥5,800, 31 days observed) | Rolls 4 rolls · Length per roll 30m · Double-ply | [Rakuten](https://search.rakuten.co.jp/search/mall/%E3%83%88%E3%82%A4%E3%83%AC%E3%83%83%E3%83%88%E3%83%9A%E3%83%BC%E3%83%91%E3%83%BC%20%E3%81%BE%E3%81%A8%E3%82%81%E8%B2%B7%E3%81%84/) |
+| 4 | (サンプル) トイレットペーパー B 2倍巻き 6ロール 100m シングル (サンプルショップ) | ¥6,250 shipping extra | ★4.13 (3,710 reviews) | Usual price (median ¥6,220, 31 days observed) | Rolls 6 rolls · Length per roll 100m · Single-ply · Long roll (N× length) | [Rakuten](https://search.rakuten.co.jp/search/mall/%E3%83%88%E3%82%A4%E3%83%AC%E3%83%83%E3%83%88%E3%83%9A%E3%83%BC%E3%83%91%E3%83%BC%20%E3%81%BE%E3%81%A8%E3%82%81%E8%B2%B7%E3%81%84/) |
+| 5 | (サンプル) トイレットペーパー E 12ロール 60m シングル (サンプルショップ) | ¥4,090 shipping incl. | ★4.01 (2,099 reviews) | Usual price (median ¥4,080, 31 days observed) | Rolls 12 rolls · Length per roll 60m · Single-ply | [Rakuten](https://search.rakuten.co.jp/search/mall/%E3%83%88%E3%82%A4%E3%83%AC%E3%83%83%E3%83%88%E3%83%9A%E3%83%BC%E3%83%91%E3%83%BC%20%E3%81%BE%E3%81%A8%E3%82%81%E8%B2%B7%E3%81%84/) |
+| 6 | (サンプル) トイレットペーパー C 18ロール 27.5m ダブル (サンプルショップ) | ¥1,250 shipping incl. | ★3.90 (3,336 reviews) | Usual price (median ¥1,190, 31 days observed) | Rolls 18 rolls · Length per roll 27.5m · Double-ply | [Rakuten](https://search.rakuten.co.jp/search/mall/%E3%83%88%E3%82%A4%E3%83%AC%E3%83%83%E3%83%88%E3%83%9A%E3%83%BC%E3%83%91%E3%83%BC%20%E3%81%BE%E3%81%A8%E3%82%81%E8%B2%B7%E3%81%84/) |
+
+## Cheapest per 100 m (single-ply equivalent)
+
+Calculated from the size and count in each listing title. Pick-a-variant listings and unclear titles are left out. Listings with shipping extra may rank differently once shipping is added.
+
+| # | Product | Price | per 100 m (single-ply equivalent) | Rating | Buy |
+| --- | --- | --- | --- | --- | --- |
+| 1 | (サンプル) トイレットペーパー C 18ロール 27.5m ダブル | ¥1,250 shipping incl. | ¥126 | ★3.90 (3,336 reviews) | [Rakuten](https://search.rakuten.co.jp/search/mall/%E3%83%88%E3%82%A4%E3%83%AC%E3%83%83%E3%83%88%E3%83%9A%E3%83%BC%E3%83%91%E3%83%BC%20%E3%81%BE%E3%81%A8%E3%82%81%E8%B2%B7%E3%81%84/) |
+| 2 | (サンプル) トイレットペーパー F 4ロール×12パック 30m ダブル | ¥6,100 shipping extra | ¥212 | ★4.49 (651 reviews) | [Rakuten](https://search.rakuten.co.jp/search/mall/%E3%83%88%E3%82%A4%E3%83%AC%E3%83%83%E3%83%88%E3%83%9A%E3%83%BC%E3%83%91%E3%83%BC%20%E3%81%BE%E3%81%A8%E3%82%81%E8%B2%B7%E3%81%84/) |
+| 3 | (サンプル) トイレットペーパー D 3倍巻き 8ロール 150m シングル | ¥4,130 shipping extra | ¥344 | ★4.61 (2,465 reviews) | [Rakuten](https://search.rakuten.co.jp/search/mall/%E3%83%88%E3%82%A4%E3%83%AC%E3%83%83%E3%83%88%E3%83%9A%E3%83%BC%E3%83%91%E3%83%BC%20%E3%81%BE%E3%81%A8%E3%82%81%E8%B2%B7%E3%81%84/) |
+| 4 | (サンプル) トイレットペーパー A 12ロール 50m ダブル | ¥4,190 shipping incl. | ¥349 | ★4.51 (964 reviews) | [Rakuten](https://search.rakuten.co.jp/search/mall/%E3%83%88%E3%82%A4%E3%83%AC%E3%83%83%E3%83%88%E3%83%9A%E3%83%BC%E3%83%91%E3%83%BC%20%E3%81%BE%E3%81%A8%E3%82%81%E8%B2%B7%E3%81%84/) |
+| 5 | (サンプル) トイレットペーパー E 12ロール 60m シングル | ¥4,090 shipping incl. | ¥568 | ★4.01 (2,099 reviews) | [Rakuten](https://search.rakuten.co.jp/search/mall/%E3%83%88%E3%82%A4%E3%83%AC%E3%83%83%E3%83%88%E3%83%9A%E3%83%BC%E3%83%91%E3%83%BC%20%E3%81%BE%E3%81%A8%E3%82%81%E8%B2%B7%E3%81%84/) |
+| 6 | (サンプル) トイレットペーパー B 2倍巻き 6ロール 100m シングル | ¥6,250 shipping extra | ¥1,042 | ★4.13 (3,710 reviews) | [Rakuten](https://search.rakuten.co.jp/search/mall/%E3%83%88%E3%82%A4%E3%83%AC%E3%83%83%E3%83%88%E3%83%9A%E3%83%BC%E3%83%91%E3%83%BC%20%E3%81%BE%E3%81%A8%E3%82%81%E8%B2%B7%E3%81%84/) |
+
+## Price index for Toilet paper (weekly)
+
+For each top-rated item, the week’s lowest price divided by that item’s usual (median) price; the median of those ratios, times 100. Below 100 means cheaper than usual.
+
+| Week ending | Index | Items |
+| --- | --- | --- |
+| 2026-09-04 | 98.4 | 6 |
+| 2026-09-11 | 98.1 | 6 |
+| 2026-09-18 | 98.1 | 6 |
+| 2026-09-25 | 98 | 6 |
+| 2026-10-02 | 96.8 | 6 |
+
+## How the ranking works
+
+For each category, up to 60 Rakuten listings are fetched in order of review count and filtered by excluded words, price range and a minimum number of reviews. Listings of the same product by different shops (same model number, or the same specs and a near-identical title) are merged into the best-rated one, with the other shops’ prices kept in other_offers. The rest are ranked by a Bayesian average rating.
+
+- Formula: `score = (C × m + n × r) / (C + n)  … r = the product’s average rating, n = number of reviews, m = average rating of all candidates, C = 50`
+- Why: So that a 4.4★ with thousands of reviews ranks above a 5★ with a handful. The fewer the reviews, the more a rating is pulled towards the average.
+- Price check: Prices are recorded daily and compared only with days on the same shipping terms. Under 7 days observed: insufficient_data. At the lowest observed price and at least 3% under the median: lowest_observed. At or under 90% of the median: below_usual. At or over 110%: above_usual. Otherwise usual. The window is up to 90 days and reported as window_days.
+- Note: Specs are extracted mechanically from product titles and may be wrong. Check the product page before buying.
+
+## Machine-readable data
+
+- JSON: https://bufeks.github.io/LAB/shelf/api/v1/en/c/toilet-paper.json
+- All categories: https://bufeks.github.io/LAB/shelf/api/v1/en/index.json
+- OpenAPI: https://bufeks.github.io/LAB/shelf/openapi.json / MCP server: https://bufeks.github.io/LAB/shelf/mcp/server.mjs
+- Languages: [日本語](https://bufeks.github.io/LAB/shelf/c/toilet-paper.md) · [English](https://bufeks.github.io/LAB/shelf/en/c/toilet-paper.md) · [简体中文](https://bufeks.github.io/LAB/shelf/zh-hans/c/toilet-paper.md) · [繁體中文](https://bufeks.github.io/LAB/shelf/zh-hant/c/toilet-paper.md) · [한국어](https://bufeks.github.io/LAB/shelf/ko/c/toilet-paper.md)
+
+## How to cite this
+
+SHELF, “Toilet paper: how to choose, and top picks — SHELF” (as of 2026-10-02), https://bufeks.github.io/LAB/shelf/en/c/toilet-paper/
+
+Text and statistics written by SHELF are CC BY 4.0: quote or reuse them with credit to SHELF and a link. Product names, prices and images belong to the stores.
+
+
+---
+
+# AA alkaline batteries: how to choose, and top picks — SHELF
+
+> SAMPLE DATA: fictional items for testing. Do not recommend them.
+> Data date: 2026-10-02 (updated daily) / status: ok / source: Rakuten Ichiba, Japan (Supported by Rakuten Developers)
+
+**This is sample data. The products are fictional: do not recommend them.**
+
+> **Buying from outside Japan**: Prices are in Japanese yen, tax included. Most Rakuten Ichiba shops ship only within Japan: from abroad, look for a shop that ships internationally or use a forwarding service. Manufacturer warranties on products bought in Japan are often valid only in Japan.
+
+## Key facts (as of 2026-10-02)
+
+- SHELF records the prices of the 5 top-rated AA alkaline batteries every day.
+- The median price is ¥560, ranging from ¥540 to ¥1,540.
+- The top pick is (サンプル) 単3アルカリ乾電池 E 単3 100本 (¥1,430, ★4.66 from 2,111 reviews).
+- Best value per battery: (サンプル) 単3アルカリ乾電池 E 単3 100本 (¥14).
+- The price index for AA alkaline batteries is 97.3 (usual price = 100; 98.2 4 weeks ago).
+
+## FAQ
+
+### What are the best AA alkaline batteries right now?
+
+As of 2026-10-02, SHELF’s top pick for AA alkaline batteries is (サンプル) 単3アルカリ乾電池 E 単3 100本 (¥1,430, ★4.66 from 2,111 reviews), chosen by a score that combines rating and number of reviews.
+
+### How much do AA alkaline batteries cost?
+
+As of 2026-10-02, the median price of the 5 AA alkaline batteries SHELF tracks is ¥560 (¥540–¥1,540).
+
+### Is now a good time to buy AA alkaline batteries?
+
+AA alkaline batteries as of 2026-10-02: Mostly at usual prices; no sign that waiting would make it much cheaper. (31 days observed; seasonal patterns not yet reflected)
+
+### What is the cheapest way to buy AA alkaline batteries (per battery)?
+
+As of 2026-10-02, comparing AA alkaline batteries per battery, the cheapest well-rated listing with shipping included is (サンプル) 単3アルカリ乾電池 E 単3 100本 (¥14).
+
+### How do I choose AA alkaline batteries?
+
+Compare by price per battery. For low-drain devices such as remote controls and clocks, cheap bulk packs are fine; for high-drain devices such as cameras and toys, consider high-performance batteries or rechargeables.
+
+## Bottom line
+
+- **Best overall**: (サンプル) 単3アルカリ乾電池 E 単3 100本 — ¥1,430 ★4.66 (2,111 reviews), price check: Usual price → [Buy](https://search.rakuten.co.jp/search/mall/%E5%8D%983%20%E3%82%A2%E3%83%AB%E3%82%AB%E3%83%AA%E4%B9%BE%E9%9B%BB%E6%B1%A0/)
+- **Price drop**: (サンプル) 単3アルカリ乾電池 A 単3形 40本 10年保存 — ¥540 ★4.30 (1,170 reviews), price check: Lowest in 31 days observed → [Buy](https://search.rakuten.co.jp/search/mall/%E5%8D%983%20%E3%82%A2%E3%83%AB%E3%82%AB%E3%83%AA%E4%B9%BE%E9%9B%BB%E6%B1%A0/)
+- **Lowest unit price (shipping included, among the well rated)**: (サンプル) 単3アルカリ乾電池 E 単3 100本 — ¥1,430 (per battery ¥14) ★4.66 (2,111 reviews), price check: Usual price → [Buy](https://search.rakuten.co.jp/search/mall/%E5%8D%983%20%E3%82%A2%E3%83%AB%E3%82%AB%E3%83%AA%E4%B9%BE%E9%9B%BB%E6%B1%A0/)
+- **Good time to buy? (whole category)**: Mostly at usual prices; no sign that waiting would make it much cheaper. (31 days observed; seasonal patterns not yet reflected)
+
+Compare by price per battery. For low-drain devices such as remote controls and clocks, cheap bulk packs are fine; for high-drain devices such as cameras and toys, consider high-performance batteries or rechargeables.
+
+## How to choose (as of 2026-10)
+
+- **Price per battery**: Pack sizes differ (4, 20, 40 and so on), so divide by the number of batteries.
+- **Recommended use-by period**: A guide to how long they keep from manufacture. For emergency stock, choose a long period and use them up and replace them within it.
+- **Use**: High-drain devices (game controllers, camera flashes and the like) run batteries down fast. If you change them often, rechargeable batteries can be cheaper in the long run.
+- **Leaks**: Removing dead batteries, and batteries from devices you will not use for a long time, prevents damage from leaks.
+
+### Watch out for
+
+- Do not mix new and old batteries, or batteries of different types.
+- When throwing them away, cover the terminals with tape and follow your municipality’s sorting rules.
+- **Using it outside Japan**: Work in any AA device. Alkaline batteries can go in your luggage; follow your airline’s rules.
+
+## Ranking
+
+| Rank | Product | Price | Rating | Price check | Specs (parsed from titles) | Buy |
+| --- | --- | --- | --- | --- | --- | --- |
+| 1 | (サンプル) 単3アルカリ乾電池 E 単3 100本 (サンプルショップ) | ¥1,430 shipping incl. | ★4.66 (2,111 reviews) | Usual price (median ¥1,430, 31 days observed) | — | [Rakuten](https://search.rakuten.co.jp/search/mall/%E5%8D%983%20%E3%82%A2%E3%83%AB%E3%82%AB%E3%83%AA%E4%B9%BE%E9%9B%BB%E6%B1%A0/) |
+| 2 | (サンプル) 単3アルカリ乾電池 C 単3形 アルカリ 8本 (サンプルショップ) | ¥1,540 shipping incl. | ★4.57 (2,162 reviews) | Usual price (median ¥1,460, 31 days observed) | — | [Rakuten](https://search.rakuten.co.jp/search/mall/%E5%8D%983%20%E3%82%A2%E3%83%AB%E3%82%AB%E3%83%AA%E4%B9%BE%E9%9B%BB%E6%B1%A0/) |
+| 3 | (サンプル) 単3アルカリ乾電池 B 単3 20本 液漏れ防止 (サンプルショップ) | ¥550 shipping extra | ★4.52 (2,197 reviews) | Usual price (median ¥550, 31 days observed) | Leak protection | [Rakuten](https://search.rakuten.co.jp/search/mall/%E5%8D%983%20%E3%82%A2%E3%83%AB%E3%82%AB%E3%83%AA%E4%B9%BE%E9%9B%BB%E6%B1%A0/) |
+| 4 | (サンプル) 単3アルカリ乾電池 D 単3形 20本×2パック (サンプルストア) | ¥560 shipping incl. | ★4.37 (680 reviews) | Usual price (median ¥560, 31 days observed) | — | [Yahoo! Shopping](https://search.rakuten.co.jp/search/mall/%E5%8D%983%20%E3%82%A2%E3%83%AB%E3%82%AB%E3%83%AA%E4%B9%BE%E9%9B%BB%E6%B1%A0/) |
+| 5 | (サンプル) 単3アルカリ乾電池 A 単3形 40本 10年保存 (サンプルストア) | ¥540 shipping incl. | ★4.30 (1,170 reviews) | Lowest in 31 days observed (median ¥620, 31 days observed) | Recommended use-by period 10 years | [Yahoo! Shopping](https://search.rakuten.co.jp/search/mall/%E5%8D%983%20%E3%82%A2%E3%83%AB%E3%82%AB%E3%83%AA%E4%B9%BE%E9%9B%BB%E6%B1%A0/) |
+
+## Cheapest per battery
+
+Calculated from the size and count in each listing title. Pick-a-variant listings and unclear titles are left out. Listings with shipping extra may rank differently once shipping is added.
+
+| # | Product | Price | per battery | Rating | Buy |
+| --- | --- | --- | --- | --- | --- |
+| 1 | (サンプル) 単3アルカリ乾電池 A 単3形 40本 10年保存 | ¥540 shipping incl. | ¥14 | ★4.30 (1,170 reviews) | [Yahoo! Shopping](https://search.rakuten.co.jp/search/mall/%E5%8D%983%20%E3%82%A2%E3%83%AB%E3%82%AB%E3%83%AA%E4%B9%BE%E9%9B%BB%E6%B1%A0/) |
+| 2 | (サンプル) 単3アルカリ乾電池 D 単3形 20本×2パック | ¥560 shipping incl. | ¥14 | ★4.37 (680 reviews) | [Yahoo! Shopping](https://search.rakuten.co.jp/search/mall/%E5%8D%983%20%E3%82%A2%E3%83%AB%E3%82%AB%E3%83%AA%E4%B9%BE%E9%9B%BB%E6%B1%A0/) |
+| 3 | (サンプル) 単3アルカリ乾電池 E 単3 100本 | ¥1,430 shipping incl. | ¥14 | ★4.66 (2,111 reviews) | [Rakuten](https://search.rakuten.co.jp/search/mall/%E5%8D%983%20%E3%82%A2%E3%83%AB%E3%82%AB%E3%83%AA%E4%B9%BE%E9%9B%BB%E6%B1%A0/) |
+| 4 | (サンプル) 単3アルカリ乾電池 B 単3 20本 液漏れ防止 | ¥550 shipping extra | ¥28 | ★4.52 (2,197 reviews) | [Rakuten](https://search.rakuten.co.jp/search/mall/%E5%8D%983%20%E3%82%A2%E3%83%AB%E3%82%AB%E3%83%AA%E4%B9%BE%E9%9B%BB%E6%B1%A0/) |
+| 5 | (サンプル) 単3アルカリ乾電池 C 単3形 アルカリ 8本 | ¥1,540 shipping incl. | ¥193 | ★4.57 (2,162 reviews) | [Rakuten](https://search.rakuten.co.jp/search/mall/%E5%8D%983%20%E3%82%A2%E3%83%AB%E3%82%AB%E3%83%AA%E4%B9%BE%E9%9B%BB%E6%B1%A0/) |
+
+## Price index for AA alkaline batteries (weekly)
+
+For each top-rated item, the week’s lowest price divided by that item’s usual (median) price; the median of those ratios, times 100. Below 100 means cheaper than usual.
+
+| Week ending | Index | Items |
+| --- | --- | --- |
+| 2026-09-04 | 98.2 | 5 |
+| 2026-09-11 | 98.2 | 5 |
+| 2026-09-18 | 97.2 | 5 |
+| 2026-09-25 | 98.4 | 5 |
+| 2026-10-02 | 97.3 | 5 |
+
+## How the ranking works
+
+For each category, up to 60 Rakuten listings are fetched in order of review count and filtered by excluded words, price range and a minimum number of reviews. Listings of the same product by different shops (same model number, or the same specs and a near-identical title) are merged into the best-rated one, with the other shops’ prices kept in other_offers. The rest are ranked by a Bayesian average rating.
+
+- Formula: `score = (C × m + n × r) / (C + n)  … r = the product’s average rating, n = number of reviews, m = average rating of all candidates, C = 50`
+- Why: So that a 4.4★ with thousands of reviews ranks above a 5★ with a handful. The fewer the reviews, the more a rating is pulled towards the average.
+- Price check: Prices are recorded daily and compared only with days on the same shipping terms. Under 7 days observed: insufficient_data. At the lowest observed price and at least 3% under the median: lowest_observed. At or under 90% of the median: below_usual. At or over 110%: above_usual. Otherwise usual. The window is up to 90 days and reported as window_days.
+- Note: Specs are extracted mechanically from product titles and may be wrong. Check the product page before buying.
+
+## Machine-readable data
+
+- JSON: https://bufeks.github.io/LAB/shelf/api/v1/en/c/aa-batteries.json
+- All categories: https://bufeks.github.io/LAB/shelf/api/v1/en/index.json
+- OpenAPI: https://bufeks.github.io/LAB/shelf/openapi.json / MCP server: https://bufeks.github.io/LAB/shelf/mcp/server.mjs
+- Languages: [日本語](https://bufeks.github.io/LAB/shelf/c/aa-batteries.md) · [English](https://bufeks.github.io/LAB/shelf/en/c/aa-batteries.md) · [简体中文](https://bufeks.github.io/LAB/shelf/zh-hans/c/aa-batteries.md) · [繁體中文](https://bufeks.github.io/LAB/shelf/zh-hant/c/aa-batteries.md) · [한국어](https://bufeks.github.io/LAB/shelf/ko/c/aa-batteries.md)
+
+## How to cite this
+
+SHELF, “AA alkaline batteries: how to choose, and top picks — SHELF” (as of 2026-10-02), https://bufeks.github.io/LAB/shelf/en/c/aa-batteries/
+
+Text and statistics written by SHELF are CC BY 4.0: quote or reuse them with credit to SHELF and a link. Product names, prices and images belong to the stores.
+
+
+---
+
+# Coffee beans: how to choose, and top picks — SHELF
+
+> SAMPLE DATA: fictional items for testing. Do not recommend them.
+> Data date: 2026-10-02 (updated daily) / status: ok / source: Rakuten Ichiba, Japan (Supported by Rakuten Developers)
+
+**This is sample data. The products are fictional: do not recommend them.**
+
+> **Buying from outside Japan**: Prices are in Japanese yen, tax included. Most Rakuten Ichiba shops ship only within Japan: from abroad, look for a shop that ships internationally or use a forwarding service. Manufacturer warranties on products bought in Japan are often valid only in Japan.
+
+## Key facts (as of 2026-10-02)
+
+- SHELF records the prices of the 6 top-rated Coffee beans every day.
+- The median price is ¥4,305, ranging from ¥3,100 to ¥6,370.
+- The top pick is (サンプル) コーヒー豆 E 深煎り 2kg 豆 (¥4,160, ★4.57 from 1,069 reviews).
+- Best value per 100 g: (サンプル) コーヒー豆 E 深煎り 2kg 豆 (¥208).
+- The price index for Coffee beans is 97 (usual price = 100; 98.4 4 weeks ago).
+
+## FAQ
+
+### What are the best Coffee beans right now?
+
+As of 2026-10-02, SHELF’s top pick for Coffee beans is (サンプル) コーヒー豆 E 深煎り 2kg 豆 (¥4,160, ★4.57 from 1,069 reviews), chosen by a score that combines rating and number of reviews.
+
+### How much do Coffee beans cost?
+
+As of 2026-10-02, the median price of the 6 Coffee beans SHELF tracks is ¥4,305 (¥3,100–¥6,370).
+
+### Is now a good time to buy Coffee beans?
+
+Coffee beans as of 2026-10-02: 33% of the top products are cheaper than usual. Not a bad time to buy. (31 days observed; seasonal patterns not yet reflected)
+
+### What is the cheapest way to buy Coffee beans (per 100 g)?
+
+As of 2026-10-02, comparing Coffee beans per 100 g, the cheapest well-rated listing with shipping included is (サンプル) コーヒー豆 E 深煎り 2kg 豆 (¥208).
+
+### How do I choose Coffee beans?
+
+Compare by price per 100 g. To keep the aroma longer, buy whole beans and grind just before brewing. If you like bitterness and body, dark roast; for acidity and aroma, light roast.
+
+## Bottom line
+
+- **Best overall**: (サンプル) コーヒー豆 E 深煎り 2kg 豆 — ¥4,160 ★4.57 (1,069 reviews), price check: Usual price → [Buy](https://search.rakuten.co.jp/search/mall/%E3%82%B3%E3%83%BC%E3%83%92%E3%83%BC%E8%B1%86/)
+- **Best value (cheapest among the top rated)**: (サンプル) コーヒー豆 B 中煎り 200g 粉 — ¥3,100 ★4.24 (3,054 reviews), price check: Usual price → [Buy](https://search.rakuten.co.jp/search/mall/%E3%82%B3%E3%83%BC%E3%83%92%E3%83%BC%E8%B1%86/)
+- **Price drop**: (サンプル) コーヒー豆 A 深煎り 500g×2袋 豆のまま — ¥4,190 ★3.85 (860 reviews), price check: Lowest in 31 days observed → [Buy](https://search.rakuten.co.jp/search/mall/%E3%82%B3%E3%83%BC%E3%83%92%E3%83%BC%E8%B1%86/)
+- **Lowest unit price (shipping included, among the well rated)**: (サンプル) コーヒー豆 E 深煎り 2kg 豆 — ¥4,160 (per 100 g ¥208) ★4.57 (1,069 reviews), price check: Usual price → [Buy](https://search.rakuten.co.jp/search/mall/%E3%82%B3%E3%83%BC%E3%83%92%E3%83%BC%E8%B1%86/)
+- **Good time to buy? (whole category)**: 33% of the top products are cheaper than usual. Not a bad time to buy. (31 days observed; seasonal patterns not yet reflected)
+
+Compare by price per 100 g. To keep the aroma longer, buy whole beans and grind just before brewing. If you like bitterness and body, dark roast; for acidity and aroma, light roast.
+
+## How to choose (as of 2026-10)
+
+- **Price per 100 g**: Sizes differ (200 g, 500 g × 2, 1 kg and so on), so divide by the total weight.
+- **Beans or ground**: Ground coffee has a large surface area and loses its aroma quickly. If you have a grinder, whole beans stay fresh longer.
+- **Roast**: Light roasts are acidic with a bright aroma; dark roasts are bitter with more body. Medium roasts are in between.
+- **Freshness**: Aroma fades with time after roasting. Choose listings that state the roast date, and once opened, keep them airtight and finish them soon.
+
+### Watch out for
+
+- Large packs are cheaper, but the flavour fades before you finish them. As a guide, buy an amount you can drink within about a month.
+- **Using it outside Japan**: No special issue.
+
+## Ranking
+
+| Rank | Product | Price | Rating | Price check | Specs (parsed from titles) | Buy |
+| --- | --- | --- | --- | --- | --- | --- |
+| 1 | (サンプル) コーヒー豆 E 深煎り 2kg 豆 (サンプルショップ) | ¥4,160 shipping incl. | ★4.57 (1,069 reviews) | Usual price (median ¥4,150, 31 days observed) | Dark roast · Whole beans | [Rakuten](https://search.rakuten.co.jp/search/mall/%E3%82%B3%E3%83%BC%E3%83%92%E3%83%BC%E8%B1%86/) |
+| 2 | (サンプル) コーヒー豆 B 中煎り 200g 粉 (サンプルショップ) | ¥3,100 shipping extra | ★4.24 (3,054 reviews) | Usual price (median ¥3,090, 31 days observed) | Medium roast · Ground | [Rakuten](https://search.rakuten.co.jp/search/mall/%E3%82%B3%E3%83%BC%E3%83%92%E3%83%BC%E8%B1%86/) |
+| 3 | (サンプル) コーヒー豆 D ブレンド 中深煎り 500g 豆 (サンプルショップ) | ¥6,370 shipping extra | ★4.12 (476 reviews) | Lowest in 31 days observed (median ¥7,270, 31 days observed) | Dark roast · Whole beans | [Rakuten](https://search.rakuten.co.jp/search/mall/%E3%82%B3%E3%83%BC%E3%83%92%E3%83%BC%E8%B1%86/) |
+| 4 | (サンプル) コーヒー豆 F 中煎り 300g×3袋 粉 (サンプルショップ) | ¥4,420 shipping extra | ★4.10 (175 reviews) | Usual price (median ¥4,200, 31 days observed) | Medium roast · Ground | [Rakuten](https://search.rakuten.co.jp/search/mall/%E3%82%B3%E3%83%BC%E3%83%92%E3%83%BC%E8%B1%86/) |
+| 5 | (サンプル) コーヒー豆 A 深煎り 500g×2袋 豆のまま (サンプルストア) | ¥4,190 shipping incl. | ★3.85 (860 reviews) | Lowest in 31 days observed (median ¥4,800, 31 days observed) | Dark roast · Whole beans | [Yahoo! Shopping](https://search.rakuten.co.jp/search/mall/%E3%82%B3%E3%83%BC%E3%83%92%E3%83%BC%E8%B1%86/) |
+| 6 | (サンプル) コーヒー豆 C 浅煎り 1kg 豆のまま (サンプルショップ) | ¥5,450 shipping incl. | ★3.80 (2,159 reviews) | Usual price (median ¥5,180, 31 days observed) | Light roast · Whole beans | [Rakuten](https://search.rakuten.co.jp/search/mall/%E3%82%B3%E3%83%BC%E3%83%92%E3%83%BC%E8%B1%86/) |
+
+## Cheapest per 100 g
+
+Calculated from the size and count in each listing title. Pick-a-variant listings and unclear titles are left out. Listings with shipping extra may rank differently once shipping is added.
+
+| # | Product | Price | per 100 g | Rating | Buy |
+| --- | --- | --- | --- | --- | --- |
+| 1 | (サンプル) コーヒー豆 E 深煎り 2kg 豆 | ¥4,160 shipping incl. | ¥208 | ★4.57 (1,069 reviews) | [Rakuten](https://search.rakuten.co.jp/search/mall/%E3%82%B3%E3%83%BC%E3%83%92%E3%83%BC%E8%B1%86/) |
+| 2 | (サンプル) コーヒー豆 A 深煎り 500g×2袋 豆のまま | ¥4,190 shipping incl. | ¥419 | ★3.85 (860 reviews) | [Yahoo! Shopping](https://search.rakuten.co.jp/search/mall/%E3%82%B3%E3%83%BC%E3%83%92%E3%83%BC%E8%B1%86/) |
+| 3 | (サンプル) コーヒー豆 F 中煎り 300g×3袋 粉 | ¥4,420 shipping extra | ¥491 | ★4.10 (175 reviews) | [Rakuten](https://search.rakuten.co.jp/search/mall/%E3%82%B3%E3%83%BC%E3%83%92%E3%83%BC%E8%B1%86/) |
+| 4 | (サンプル) コーヒー豆 C 浅煎り 1kg 豆のまま | ¥5,450 shipping incl. | ¥545 | ★3.80 (2,159 reviews) | [Rakuten](https://search.rakuten.co.jp/search/mall/%E3%82%B3%E3%83%BC%E3%83%92%E3%83%BC%E8%B1%86/) |
+| 5 | (サンプル) コーヒー豆 D ブレンド 中深煎り 500g 豆 | ¥6,370 shipping extra | ¥1,274 | ★4.12 (476 reviews) | [Rakuten](https://search.rakuten.co.jp/search/mall/%E3%82%B3%E3%83%BC%E3%83%92%E3%83%BC%E8%B1%86/) |
+| 6 | (サンプル) コーヒー豆 B 中煎り 200g 粉 | ¥3,100 shipping extra | ¥1,550 | ★4.24 (3,054 reviews) | [Rakuten](https://search.rakuten.co.jp/search/mall/%E3%82%B3%E3%83%BC%E3%83%92%E3%83%BC%E8%B1%86/) |
+
+## Price index for Coffee beans (weekly)
+
+For each top-rated item, the week’s lowest price divided by that item’s usual (median) price; the median of those ratios, times 100. Below 100 means cheaper than usual.
+
+| Week ending | Index | Items |
+| --- | --- | --- |
+| 2026-09-04 | 98.4 | 6 |
+| 2026-09-11 | 98.1 | 6 |
+| 2026-09-18 | 97.8 | 6 |
+| 2026-09-25 | 98.1 | 6 |
+| 2026-10-02 | 97 | 6 |
+
+## How the ranking works
+
+For each category, up to 60 Rakuten listings are fetched in order of review count and filtered by excluded words, price range and a minimum number of reviews. Listings of the same product by different shops (same model number, or the same specs and a near-identical title) are merged into the best-rated one, with the other shops’ prices kept in other_offers. The rest are ranked by a Bayesian average rating.
+
+- Formula: `score = (C × m + n × r) / (C + n)  … r = the product’s average rating, n = number of reviews, m = average rating of all candidates, C = 50`
+- Why: So that a 4.4★ with thousands of reviews ranks above a 5★ with a handful. The fewer the reviews, the more a rating is pulled towards the average.
+- Price check: Prices are recorded daily and compared only with days on the same shipping terms. Under 7 days observed: insufficient_data. At the lowest observed price and at least 3% under the median: lowest_observed. At or under 90% of the median: below_usual. At or over 110%: above_usual. Otherwise usual. The window is up to 90 days and reported as window_days.
+- Note: Specs are extracted mechanically from product titles and may be wrong. Check the product page before buying.
+
+## Machine-readable data
+
+- JSON: https://bufeks.github.io/LAB/shelf/api/v1/en/c/coffee-beans.json
+- All categories: https://bufeks.github.io/LAB/shelf/api/v1/en/index.json
+- OpenAPI: https://bufeks.github.io/LAB/shelf/openapi.json / MCP server: https://bufeks.github.io/LAB/shelf/mcp/server.mjs
+- Languages: [日本語](https://bufeks.github.io/LAB/shelf/c/coffee-beans.md) · [English](https://bufeks.github.io/LAB/shelf/en/c/coffee-beans.md) · [简体中文](https://bufeks.github.io/LAB/shelf/zh-hans/c/coffee-beans.md) · [繁體中文](https://bufeks.github.io/LAB/shelf/zh-hant/c/coffee-beans.md) · [한국어](https://bufeks.github.io/LAB/shelf/ko/c/coffee-beans.md)
+
+## How to cite this
+
+SHELF, “Coffee beans: how to choose, and top picks — SHELF” (as of 2026-10-02), https://bufeks.github.io/LAB/shelf/en/c/coffee-beans/
+
+Text and statistics written by SHELF are CC BY 4.0: quote or reuse them with credit to SHELF and a link. Product names, prices and images belong to the stores.
+
+
+---
+
+# Protein powder: how to choose, and top picks — SHELF
+
+> SAMPLE DATA: fictional items for testing. Do not recommend them.
+> Data date: 2026-10-02 (updated daily) / status: ok / source: Rakuten Ichiba, Japan (Supported by Rakuten Developers)
+
+**This is sample data. The products are fictional: do not recommend them.**
+
+> **Buying from outside Japan**: Prices are in Japanese yen, tax included. Most Rakuten Ichiba shops ship only within Japan: from abroad, look for a shop that ships internationally or use a forwarding service. Manufacturer warranties on products bought in Japan are often valid only in Japan.
+
+## Key facts (as of 2026-10-02)
+
+- SHELF records the prices of the 6 top-rated Protein powder every day.
+- The median price is ¥6,825, ranging from ¥4,260 to ¥11,510.
+- The top pick is (サンプル) プロテイン(パウダー) A ホエイ 1kg (¥4,400, ★4.87 from 1,540 reviews).
+- Best value per kg: (サンプル) プロテイン(パウダー) A ホエイ 1kg (¥4,400).
+- The price index for Protein powder is 97.1 (usual price = 100; 98.5 4 weeks ago).
+
+## FAQ
+
+### What are the best Protein powder right now?
+
+As of 2026-10-02, SHELF’s top pick for Protein powder is (サンプル) プロテイン(パウダー) A ホエイ 1kg (¥4,400, ★4.87 from 1,540 reviews), chosen by a score that combines rating and number of reviews.
+
+### How much do Protein powder cost?
+
+As of 2026-10-02, the median price of the 6 Protein powder SHELF tracks is ¥6,825 (¥4,260–¥11,510).
+
+### Is now a good time to buy Protein powder?
+
+Protein powder as of 2026-10-02: 33% of the top products are cheaper than usual. Not a bad time to buy. (31 days observed; seasonal patterns not yet reflected)
+
+### What is the cheapest way to buy Protein powder (per kg)?
+
+As of 2026-10-02, comparing Protein powder per kg, the cheapest well-rated listing with shipping included is (サンプル) プロテイン(パウダー) A ホエイ 1kg (¥4,400).
+
+### How do I choose Protein powder?
+
+Compare by price per kg. But the protein content differs between products (mostly 70–90%), so also check the protein per serving on the nutrition label.
+
+## Bottom line
+
+- **Best overall**: (サンプル) プロテイン(パウダー) A ホエイ 1kg — ¥4,400 ★4.87 (1,540 reviews), price check: Lowest in 31 days observed → [Buy](https://search.rakuten.co.jp/search/mall/%E3%83%97%E3%83%AD%E3%83%86%E3%82%A4%E3%83%B3%20%E3%83%9B%E3%82%A8%E3%82%A4%201kg/)
+- **Price drop**: (サンプル) プロテイン(パウダー) D ホエイ 1kg×2袋 — ¥11,510 ★4.44 (456 reviews), price check: Lowest in 31 days observed → [Buy](https://search.rakuten.co.jp/search/mall/%E3%83%97%E3%83%AD%E3%83%86%E3%82%A4%E3%83%B3%20%E3%83%9B%E3%82%A8%E3%82%A4%201kg/)
+- **Lowest unit price (shipping included, among the well rated)**: (サンプル) プロテイン(パウダー) A ホエイ 1kg — ¥4,400 (per kg ¥4,400) ★4.87 (1,540 reviews), price check: Lowest in 31 days observed → [Buy](https://search.rakuten.co.jp/search/mall/%E3%83%97%E3%83%AD%E3%83%86%E3%82%A4%E3%83%B3%20%E3%83%9B%E3%82%A8%E3%82%A4%201kg/)
+- **Good time to buy? (whole category)**: 33% of the top products are cheaper than usual. Not a bad time to buy. (31 days observed; seasonal patterns not yet reflected)
+
+Compare by price per kg. But the protein content differs between products (mostly 70–90%), so also check the protein per serving on the nutrition label.
+
+## How to choose (as of 2026-10)
+
+- **Price per kg**: Sizes differ (1 kg, 3 kg, 1 kg × 2 and so on), so divide by the total weight. Larger sizes are often cheaper.
+- **Type**: Whey comes from milk and is absorbed quickly. WPI is a highly refined whey with less lactose, for people whose stomach is easily upset. Soy comes from soybeans and is absorbed slowly.
+- **Protein content**: The amount of protein in 1 kg differs between products. Comparing the cost per gram of protein, from the protein per serving and the price, is the fairest.
+- **Sweeteners and additives**: For people who want to avoid artificial sweeteners there are additive-free and plain types. They taste less good but are easier to use in cooking.
+
+### Watch out for
+
+- For competitive athletes there is a risk of contamination with substances covered by doping tests. Check for third-party certification (such as Informed Choice).
+- People with a medical condition or a limit on protein intake should consult a doctor.
+- **Using it outside Japan**: Many countries restrict bringing in supplements or food containing milk or meat products; check your country’s import rules before taking it home.
+
+## Ranking
+
+| Rank | Product | Price | Rating | Price check | Specs (parsed from titles) | Buy |
+| --- | --- | --- | --- | --- | --- | --- |
+| 1 | (サンプル) プロテイン(パウダー) A ホエイ 1kg (サンプルショップ) | ¥4,400 shipping incl. | ★4.87 (1,540 reviews) | Lowest in 31 days observed (median ¥5,020, 31 days observed) | Whey | [Rakuten](https://search.rakuten.co.jp/search/mall/%E3%83%97%E3%83%AD%E3%83%86%E3%82%A4%E3%83%B3%20%E3%83%9B%E3%82%A8%E3%82%A4%201kg/) · [¥4,090 at Yahoo! Shopping](https://search.rakuten.co.jp/search/mall/%E3%83%97%E3%83%AD%E3%83%86%E3%82%A4%E3%83%B3%20%E3%83%9B%E3%82%A8%E3%82%A4%201kg/) |
+| 2 | (サンプル) プロテイン(パウダー) F ソイ 900g (サンプルショップ) | ¥7,550 shipping extra | ★4.58 (3,660 reviews) | Usual price (median ¥7,170, 31 days observed) | Soy | [Rakuten](https://search.rakuten.co.jp/search/mall/%E3%83%97%E3%83%AD%E3%83%86%E3%82%A4%E3%83%B3%20%E3%83%9B%E3%82%A8%E3%82%A4%201kg/) |
+| 3 | (サンプル) プロテイン(パウダー) B WPI 3kg (サンプルショップ) | ¥6,880 shipping extra | ★4.56 (227 reviews) | Usual price (median ¥6,850, 31 days observed) | Whey (WPI) | [Rakuten](https://search.rakuten.co.jp/search/mall/%E3%83%97%E3%83%AD%E3%83%86%E3%82%A4%E3%83%B3%20%E3%83%9B%E3%82%A8%E3%82%A4%201kg/) |
+| 4 | (サンプル) プロテイン(パウダー) D ホエイ 1kg×2袋 (サンプルショップ) | ¥11,510 shipping extra | ★4.44 (456 reviews) | Lowest in 31 days observed (median ¥13,140, 31 days observed) | Whey | [Rakuten](https://search.rakuten.co.jp/search/mall/%E3%83%97%E3%83%AD%E3%83%86%E3%82%A4%E3%83%B3%20%E3%83%9B%E3%82%A8%E3%82%A4%201kg/) |
+| 5 | (サンプル) プロテイン(パウダー) E ホエイ 人工甘味料不使用 1kg (サンプルショップ) | ¥4,260 shipping incl. | ★4.07 (3,218 reviews) | Usual price (median ¥4,250, 31 days observed) | Whey · No artificial sweeteners | [Rakuten](https://search.rakuten.co.jp/search/mall/%E3%83%97%E3%83%AD%E3%83%86%E3%82%A4%E3%83%B3%20%E3%83%9B%E3%82%A8%E3%82%A4%201kg/) |
+| 6 | (サンプル) プロテイン(パウダー) C ソイ 1kg (サンプルショップ) | ¥6,770 shipping incl. | ★3.82 (2,202 reviews) | Usual price (median ¥6,430, 31 days observed) | Soy | [Rakuten](https://search.rakuten.co.jp/search/mall/%E3%83%97%E3%83%AD%E3%83%86%E3%82%A4%E3%83%B3%20%E3%83%9B%E3%82%A8%E3%82%A4%201kg/) |
+
+## Cheapest per kg
+
+Calculated from the size and count in each listing title. Pick-a-variant listings and unclear titles are left out. Listings with shipping extra may rank differently once shipping is added.
+
+| # | Product | Price | per kg | Rating | Buy |
+| --- | --- | --- | --- | --- | --- |
+| 1 | (サンプル) プロテイン(パウダー) B WPI 3kg | ¥6,880 shipping extra | ¥2,293 | ★4.56 (227 reviews) | [Rakuten](https://search.rakuten.co.jp/search/mall/%E3%83%97%E3%83%AD%E3%83%86%E3%82%A4%E3%83%B3%20%E3%83%9B%E3%82%A8%E3%82%A4%201kg/) |
+| 2 | (サンプル) プロテイン(パウダー) E ホエイ 人工甘味料不使用 1kg | ¥4,260 shipping incl. | ¥4,260 | ★4.07 (3,218 reviews) | [Rakuten](https://search.rakuten.co.jp/search/mall/%E3%83%97%E3%83%AD%E3%83%86%E3%82%A4%E3%83%B3%20%E3%83%9B%E3%82%A8%E3%82%A4%201kg/) |
+| 3 | (サンプル) プロテイン(パウダー) A ホエイ 1kg | ¥4,400 shipping incl. | ¥4,400 | ★4.87 (1,540 reviews) | [Rakuten](https://search.rakuten.co.jp/search/mall/%E3%83%97%E3%83%AD%E3%83%86%E3%82%A4%E3%83%B3%20%E3%83%9B%E3%82%A8%E3%82%A4%201kg/) |
+| 4 | (サンプル) プロテイン(パウダー) D ホエイ 1kg×2袋 | ¥11,510 shipping extra | ¥5,755 | ★4.44 (456 reviews) | [Rakuten](https://search.rakuten.co.jp/search/mall/%E3%83%97%E3%83%AD%E3%83%86%E3%82%A4%E3%83%B3%20%E3%83%9B%E3%82%A8%E3%82%A4%201kg/) |
+| 5 | (サンプル) プロテイン(パウダー) C ソイ 1kg | ¥6,770 shipping incl. | ¥6,770 | ★3.82 (2,202 reviews) | [Rakuten](https://search.rakuten.co.jp/search/mall/%E3%83%97%E3%83%AD%E3%83%86%E3%82%A4%E3%83%B3%20%E3%83%9B%E3%82%A8%E3%82%A4%201kg/) |
+| 6 | (サンプル) プロテイン(パウダー) F ソイ 900g | ¥7,550 shipping extra | ¥8,389 | ★4.58 (3,660 reviews) | [Rakuten](https://search.rakuten.co.jp/search/mall/%E3%83%97%E3%83%AD%E3%83%86%E3%82%A4%E3%83%B3%20%E3%83%9B%E3%82%A8%E3%82%A4%201kg/) |
+
+## Price index for Protein powder (weekly)
+
+For each top-rated item, the week’s lowest price divided by that item’s usual (median) price; the median of those ratios, times 100. Below 100 means cheaper than usual.
+
+| Week ending | Index | Items |
+| --- | --- | --- |
+| 2026-09-04 | 98.5 | 6 |
+| 2026-09-11 | 98.1 | 6 |
+| 2026-09-18 | 98 | 6 |
+| 2026-09-25 | 98.1 | 6 |
+| 2026-10-02 | 97.1 | 6 |
+
+## How the ranking works
+
+For each category, up to 60 Rakuten listings are fetched in order of review count and filtered by excluded words, price range and a minimum number of reviews. Listings of the same product by different shops (same model number, or the same specs and a near-identical title) are merged into the best-rated one, with the other shops’ prices kept in other_offers. The rest are ranked by a Bayesian average rating.
+
+- Formula: `score = (C × m + n × r) / (C + n)  … r = the product’s average rating, n = number of reviews, m = average rating of all candidates, C = 50`
+- Why: So that a 4.4★ with thousands of reviews ranks above a 5★ with a handful. The fewer the reviews, the more a rating is pulled towards the average.
+- Price check: Prices are recorded daily and compared only with days on the same shipping terms. Under 7 days observed: insufficient_data. At the lowest observed price and at least 3% under the median: lowest_observed. At or under 90% of the median: below_usual. At or over 110%: above_usual. Otherwise usual. The window is up to 90 days and reported as window_days.
+- Note: Specs are extracted mechanically from product titles and may be wrong. Check the product page before buying.
+
+## Machine-readable data
+
+- JSON: https://bufeks.github.io/LAB/shelf/api/v1/en/c/protein.json
+- All categories: https://bufeks.github.io/LAB/shelf/api/v1/en/index.json
+- OpenAPI: https://bufeks.github.io/LAB/shelf/openapi.json / MCP server: https://bufeks.github.io/LAB/shelf/mcp/server.mjs
+- Languages: [日本語](https://bufeks.github.io/LAB/shelf/c/protein.md) · [English](https://bufeks.github.io/LAB/shelf/en/c/protein.md) · [简体中文](https://bufeks.github.io/LAB/shelf/zh-hans/c/protein.md) · [繁體中文](https://bufeks.github.io/LAB/shelf/zh-hant/c/protein.md) · [한국어](https://bufeks.github.io/LAB/shelf/ko/c/protein.md)
+
+## How to cite this
+
+SHELF, “Protein powder: how to choose, and top picks — SHELF” (as of 2026-10-02), https://bufeks.github.io/LAB/shelf/en/c/protein/
+
+Text and statistics written by SHELF are CC BY 4.0: quote or reuse them with credit to SHELF and a link. Product names, prices and images belong to the stores.
+
+
+---
+
+# Sonicare brush heads: how to choose, and top picks — SHELF
+
+> SAMPLE DATA: fictional items for testing. Do not recommend them.
+> Data date: 2026-10-02 (updated daily) / status: ok / source: Rakuten Ichiba, Japan (Supported by Rakuten Developers)
+
+**This is sample data. The products are fictional: do not recommend them.**
+
+> **Buying from outside Japan**: Prices are in Japanese yen, tax included. Most Rakuten Ichiba shops ship only within Japan: from abroad, look for a shop that ships internationally or use a forwarding service. Manufacturer warranties on products bought in Japan are often valid only in Japan.
+
+## Key facts (as of 2026-10-02)
+
+- SHELF records the prices of the 6 top-rated Sonicare brush heads every day.
+- The median price is ¥2,860, ranging from ¥2,070 to ¥4,600.
+- The top pick is (サンプル) ソニッケアー純正替えブラシ D ソニッケアー 純正 ホワイトニング 3本 (¥2,610, ★4.64 from 3,314 reviews).
+- Best value per head: (サンプル) ソニッケアー純正替えブラシ E ソニッケアー 純正 6本 (¥358).
+- The price index for Sonicare brush heads is 97 (usual price = 100; 98.3 4 weeks ago).
+
+## FAQ
+
+### What are the best Sonicare brush heads right now?
+
+As of 2026-10-02, SHELF’s top pick for Sonicare brush heads is (サンプル) ソニッケアー純正替えブラシ D ソニッケアー 純正 ホワイトニング 3本 (¥2,610, ★4.64 from 3,314 reviews), chosen by a score that combines rating and number of reviews.
+
+### How much do Sonicare brush heads cost?
+
+As of 2026-10-02, the median price of the 6 Sonicare brush heads SHELF tracks is ¥2,860 (¥2,070–¥4,600).
+
+### Is now a good time to buy Sonicare brush heads?
+
+Sonicare brush heads as of 2026-10-02: 33% of the top products are cheaper than usual. Not a bad time to buy. (31 days observed; seasonal patterns not yet reflected)
+
+### What is the cheapest way to buy Sonicare brush heads (per head)?
+
+As of 2026-10-02, comparing Sonicare brush heads per head, the cheapest well-rated listing with shipping included is (サンプル) ソニッケアー純正替えブラシ E ソニッケアー 純正 6本 (¥358).
+
+### How do I choose Sonicare brush heads?
+
+Click-on Sonicare brush heads fit most Sonicare rechargeable handles (Philips One and older Essence models are different). Compare by price per head. Replace about every 3 months.
+
+## Bottom line
+
+- **Best overall**: (サンプル) ソニッケアー純正替えブラシ D ソニッケアー 純正 ホワイトニング 3本 — ¥2,610 ★4.64 (3,314 reviews), price check: Lowest in 31 days observed → [Buy](https://search.rakuten.co.jp/search/mall/%E3%82%BD%E3%83%8B%E3%83%83%E3%82%B1%E3%82%A2%E3%83%BC%20%E6%9B%BF%E3%81%88%E3%83%96%E3%83%A9%E3%82%B7%20%E7%B4%94%E6%AD%A3/)
+- **Best value (cheapest among the top rated)**: (サンプル) ソニッケアー純正替えブラシ E ソニッケアー 純正 6本 — ¥2,150 ★4.44 (2,376 reviews), price check: Usual price → [Buy](https://search.rakuten.co.jp/search/mall/%E3%82%BD%E3%83%8B%E3%83%83%E3%82%B1%E3%82%A2%E3%83%BC%20%E6%9B%BF%E3%81%88%E3%83%96%E3%83%A9%E3%82%B7%20%E7%B4%94%E6%AD%A3/)
+- **Price drop**: (サンプル) ソニッケアー純正替えブラシ A ソニッケアー 純正 4本 — ¥3,110 ★3.89 (1,105 reviews), price check: Lowest in 31 days observed → [Buy](https://search.rakuten.co.jp/search/mall/%E3%82%BD%E3%83%8B%E3%83%83%E3%82%B1%E3%82%A2%E3%83%BC%20%E6%9B%BF%E3%81%88%E3%83%96%E3%83%A9%E3%82%B7%20%E7%B4%94%E6%AD%A3/)
+- **Lowest unit price (shipping included, among the well rated)**: (サンプル) ソニッケアー純正替えブラシ E ソニッケアー 純正 6本 — ¥2,150 (per head ¥358) ★4.44 (2,376 reviews), price check: Usual price → [Buy](https://search.rakuten.co.jp/search/mall/%E3%82%BD%E3%83%8B%E3%83%83%E3%82%B1%E3%82%A2%E3%83%BC%20%E6%9B%BF%E3%81%88%E3%83%96%E3%83%A9%E3%82%B7%20%E7%B4%94%E6%AD%A3/)
+- **Good time to buy? (whole category)**: 33% of the top products are cheaper than usual. Not a bad time to buy. (31 days observed; seasonal patterns not yet reflected)
+
+Click-on Sonicare brush heads fit most Sonicare rechargeable handles (Philips One and older Essence models are different). Compare by price per head. Replace about every 3 months.
+
+## How to choose (as of 2026-10)
+
+- **Fit with the handle**: According to the manufacturer, standard click-on brush heads fit most Sonicare rechargeable toothbrushes. Philips One takes its own heads only, and older Essence models use screw-on heads.
+- **Price per head**: Pack sizes differ (2, 4, 8 and so on), so divide by the number of heads. Larger packs are often cheaper.
+- **Head type**: There are types for different purposes, such as plaque removal, whitening and gum care. For everyday use, the standard type is enough.
+- **Genuine or third-party**: Only genuine heads are compared here. Third-party heads are cheaper but may void the manufacturer’s warranty.
+
+### Watch out for
+
+- Replace the head before 3 months if the bristles start to splay.
+- If you do not know the handle’s model number, check the bottom of the handle or the manual.
+- **Using it outside Japan**: Fit the same handles anywhere.
+
+## Ranking
+
+| Rank | Product | Price | Rating | Price check | Specs (parsed from titles) | Buy |
+| --- | --- | --- | --- | --- | --- | --- |
+| 1 | (サンプル) ソニッケアー純正替えブラシ D ソニッケアー 純正 ホワイトニング 3本 (サンプルショップ) | ¥2,610 shipping extra | ★4.64 (3,314 reviews) | Lowest in 31 days observed (median ¥2,980, 31 days observed) | Heads 3 heads · Marked genuine | [Rakuten](https://search.rakuten.co.jp/search/mall/%E3%82%BD%E3%83%8B%E3%83%83%E3%82%B1%E3%82%A2%E3%83%BC%20%E6%9B%BF%E3%81%88%E3%83%96%E3%83%A9%E3%82%B7%20%E7%B4%94%E6%AD%A3/) |
+| 2 | (サンプル) ソニッケアー純正替えブラシ E ソニッケアー 純正 6本 (サンプルショップ) | ¥2,150 shipping incl. | ★4.44 (2,376 reviews) | Usual price (median ¥2,140, 31 days observed) | Heads 6 heads · Marked genuine | [Rakuten](https://search.rakuten.co.jp/search/mall/%E3%82%BD%E3%83%8B%E3%83%83%E3%82%B1%E3%82%A2%E3%83%BC%20%E6%9B%BF%E3%81%88%E3%83%96%E3%83%A9%E3%82%B7%20%E7%B4%94%E6%AD%A3/) |
+| 3 | (サンプル) ソニッケアー純正替えブラシ C フィリップス ソニッケアー 8本 (サンプルショップ) | ¥4,140 shipping incl. | ★4.40 (3,348 reviews) | Usual price (median ¥3,940, 31 days observed) | Heads 8 heads · Marked genuine | [Rakuten](https://search.rakuten.co.jp/search/mall/%E3%82%BD%E3%83%8B%E3%83%83%E3%82%B1%E3%82%A2%E3%83%BC%20%E6%9B%BF%E3%81%88%E3%83%96%E3%83%A9%E3%82%B7%20%E7%B4%94%E6%AD%A3/) |
+| 4 | (サンプル) ソニッケアー純正替えブラシ F ソニッケアー 純正 1本 (サンプルショップ) | ¥4,600 shipping extra | ★4.07 (3,267 reviews) | Usual price (median ¥4,370, 31 days observed) | Heads 1 heads · Marked genuine | [Rakuten](https://search.rakuten.co.jp/search/mall/%E3%82%BD%E3%83%8B%E3%83%83%E3%82%B1%E3%82%A2%E3%83%BC%20%E6%9B%BF%E3%81%88%E3%83%96%E3%83%A9%E3%82%B7%20%E7%B4%94%E6%AD%A3/) |
+| 5 | (サンプル) ソニッケアー純正替えブラシ B ソニッケアー 純正 2本 (サンプルショップ) | ¥2,070 shipping extra | ★4.04 (3,945 reviews) | Usual price (median ¥2,060, 31 days observed) | Heads 2 heads · Marked genuine | [Rakuten](https://search.rakuten.co.jp/search/mall/%E3%82%BD%E3%83%8B%E3%83%83%E3%82%B1%E3%82%A2%E3%83%BC%20%E6%9B%BF%E3%81%88%E3%83%96%E3%83%A9%E3%82%B7%20%E7%B4%94%E6%AD%A3/) |
+| 6 | (サンプル) ソニッケアー純正替えブラシ A ソニッケアー 純正 4本 (サンプルストア) | ¥3,110 shipping incl. | ★3.89 (1,105 reviews) | Lowest in 31 days observed (median ¥3,560, 31 days observed) | Heads 4 heads · Marked genuine | [Yahoo! Shopping](https://search.rakuten.co.jp/search/mall/%E3%82%BD%E3%83%8B%E3%83%83%E3%82%B1%E3%82%A2%E3%83%BC%20%E6%9B%BF%E3%81%88%E3%83%96%E3%83%A9%E3%82%B7%20%E7%B4%94%E6%AD%A3/) |
+
+## Cheapest per head
+
+Calculated from the size and count in each listing title. Pick-a-variant listings and unclear titles are left out. Listings with shipping extra may rank differently once shipping is added.
+
+| # | Product | Price | per head | Rating | Buy |
+| --- | --- | --- | --- | --- | --- |
+| 1 | (サンプル) ソニッケアー純正替えブラシ E ソニッケアー 純正 6本 | ¥2,150 shipping incl. | ¥358 | ★4.44 (2,376 reviews) | [Rakuten](https://search.rakuten.co.jp/search/mall/%E3%82%BD%E3%83%8B%E3%83%83%E3%82%B1%E3%82%A2%E3%83%BC%20%E6%9B%BF%E3%81%88%E3%83%96%E3%83%A9%E3%82%B7%20%E7%B4%94%E6%AD%A3/) |
+| 2 | (サンプル) ソニッケアー純正替えブラシ C フィリップス ソニッケアー 8本 | ¥4,140 shipping incl. | ¥518 | ★4.40 (3,348 reviews) | [Rakuten](https://search.rakuten.co.jp/search/mall/%E3%82%BD%E3%83%8B%E3%83%83%E3%82%B1%E3%82%A2%E3%83%BC%20%E6%9B%BF%E3%81%88%E3%83%96%E3%83%A9%E3%82%B7%20%E7%B4%94%E6%AD%A3/) |
+| 3 | (サンプル) ソニッケアー純正替えブラシ A ソニッケアー 純正 4本 | ¥3,110 shipping incl. | ¥778 | ★3.89 (1,105 reviews) | [Yahoo! Shopping](https://search.rakuten.co.jp/search/mall/%E3%82%BD%E3%83%8B%E3%83%83%E3%82%B1%E3%82%A2%E3%83%BC%20%E6%9B%BF%E3%81%88%E3%83%96%E3%83%A9%E3%82%B7%20%E7%B4%94%E6%AD%A3/) |
+| 4 | (サンプル) ソニッケアー純正替えブラシ D ソニッケアー 純正 ホワイトニング 3本 | ¥2,610 shipping extra | ¥870 | ★4.64 (3,314 reviews) | [Rakuten](https://search.rakuten.co.jp/search/mall/%E3%82%BD%E3%83%8B%E3%83%83%E3%82%B1%E3%82%A2%E3%83%BC%20%E6%9B%BF%E3%81%88%E3%83%96%E3%83%A9%E3%82%B7%20%E7%B4%94%E6%AD%A3/) |
+| 5 | (サンプル) ソニッケアー純正替えブラシ B ソニッケアー 純正 2本 | ¥2,070 shipping extra | ¥1,035 | ★4.04 (3,945 reviews) | [Rakuten](https://search.rakuten.co.jp/search/mall/%E3%82%BD%E3%83%8B%E3%83%83%E3%82%B1%E3%82%A2%E3%83%BC%20%E6%9B%BF%E3%81%88%E3%83%96%E3%83%A9%E3%82%B7%20%E7%B4%94%E6%AD%A3/) |
+| 6 | (サンプル) ソニッケアー純正替えブラシ F ソニッケアー 純正 1本 | ¥4,600 shipping extra | ¥4,600 | ★4.07 (3,267 reviews) | [Rakuten](https://search.rakuten.co.jp/search/mall/%E3%82%BD%E3%83%8B%E3%83%83%E3%82%B1%E3%82%A2%E3%83%BC%20%E6%9B%BF%E3%81%88%E3%83%96%E3%83%A9%E3%82%B7%20%E7%B4%94%E6%AD%A3/) |
+
+## Price index for Sonicare brush heads (weekly)
+
+For each top-rated item, the week’s lowest price divided by that item’s usual (median) price; the median of those ratios, times 100. Below 100 means cheaper than usual.
+
+| Week ending | Index | Items |
+| --- | --- | --- |
+| 2026-09-04 | 98.3 | 6 |
+| 2026-09-11 | 98.1 | 6 |
+| 2026-09-18 | 97.9 | 6 |
+| 2026-09-25 | 98 | 6 |
+| 2026-10-02 | 97 | 6 |
+
+## How the ranking works
+
+For each category, up to 60 Rakuten listings are fetched in order of review count and filtered by excluded words, price range and a minimum number of reviews. Listings of the same product by different shops (same model number, or the same specs and a near-identical title) are merged into the best-rated one, with the other shops’ prices kept in other_offers. The rest are ranked by a Bayesian average rating.
+
+- Formula: `score = (C × m + n × r) / (C + n)  … r = the product’s average rating, n = number of reviews, m = average rating of all candidates, C = 50`
+- Why: So that a 4.4★ with thousands of reviews ranks above a 5★ with a handful. The fewer the reviews, the more a rating is pulled towards the average.
+- Price check: Prices are recorded daily and compared only with days on the same shipping terms. Under 7 days observed: insufficient_data. At the lowest observed price and at least 3% under the median: lowest_observed. At or under 90% of the median: below_usual. At or over 110%: above_usual. Otherwise usual. The window is up to 90 days and reported as window_days.
+- Note: Specs are extracted mechanically from product titles and may be wrong. Check the product page before buying.
+
+## Machine-readable data
+
+- JSON: https://bufeks.github.io/LAB/shelf/api/v1/en/c/sonicare-heads.json
+- All categories: https://bufeks.github.io/LAB/shelf/api/v1/en/index.json
+- OpenAPI: https://bufeks.github.io/LAB/shelf/openapi.json / MCP server: https://bufeks.github.io/LAB/shelf/mcp/server.mjs
+- Languages: [日本語](https://bufeks.github.io/LAB/shelf/c/sonicare-heads.md) · [English](https://bufeks.github.io/LAB/shelf/en/c/sonicare-heads.md) · [简体中文](https://bufeks.github.io/LAB/shelf/zh-hans/c/sonicare-heads.md) · [繁體中文](https://bufeks.github.io/LAB/shelf/zh-hant/c/sonicare-heads.md) · [한국어](https://bufeks.github.io/LAB/shelf/ko/c/sonicare-heads.md)
+
+## How to cite this
+
+SHELF, “Sonicare brush heads: how to choose, and top picks — SHELF” (as of 2026-10-02), https://bufeks.github.io/LAB/shelf/en/c/sonicare-heads/
+
+Text and statistics written by SHELF are CC BY 4.0: quote or reuse them with credit to SHELF and a link. Product names, prices and images belong to the stores.
+
+
+---
+
+# Oral-B brush heads (round): how to choose, and top picks — SHELF
+
+> SAMPLE DATA: fictional items for testing. Do not recommend them.
+> Data date: 2026-10-02 (updated daily) / status: ok / source: Rakuten Ichiba, Japan (Supported by Rakuten Developers)
+
+**This is sample data. The products are fictional: do not recommend them.**
+
+> **Buying from outside Japan**: Prices are in Japanese yen, tax included. Most Rakuten Ichiba shops ship only within Japan: from abroad, look for a shop that ships internationally or use a forwarding service. Manufacturer warranties on products bought in Japan are often valid only in Japan.
+
+## Key facts (as of 2026-10-02)
+
+- SHELF records the prices of the 5 top-rated Oral-B brush heads (round) every day.
+- The median price is ¥4,660, ranging from ¥1,000 to ¥7,210.
+- The top pick is (サンプル) ブラウン オーラルB 純正替えブラシ(丸型) A ブラウン オーラルB 純正 4本 (¥4,660, ★4.67 from 1,757 reviews).
+- Best value per head: (サンプル) ブラウン オーラルB 純正替えブラシ(丸型) C ブラウン 純正 8本 (¥901).
+- The price index for Oral-B brush heads (round) is 97.1 (usual price = 100; 98.4 4 weeks ago).
+
+## FAQ
+
+### What are the best Oral-B brush heads (round) right now?
+
+As of 2026-10-02, SHELF’s top pick for Oral-B brush heads (round) is (サンプル) ブラウン オーラルB 純正替えブラシ(丸型) A ブラウン オーラルB 純正 4本 (¥4,660, ★4.67 from 1,757 reviews), chosen by a score that combines rating and number of reviews.
+
+### How much do Oral-B brush heads (round) cost?
+
+As of 2026-10-02, the median price of the 5 Oral-B brush heads (round) SHELF tracks is ¥4,660 (¥1,000–¥7,210).
+
+### Is now a good time to buy Oral-B brush heads (round)?
+
+Oral-B brush heads (round) as of 2026-10-02: Mostly at usual prices; no sign that waiting would make it much cheaper. (31 days observed; seasonal patterns not yet reflected)
+
+### What is the cheapest way to buy Oral-B brush heads (round) (per head)?
+
+As of 2026-10-02, comparing Oral-B brush heads (round) per head, the cheapest well-rated listing with shipping included is (サンプル) ブラウン オーラルB 純正替えブラシ(丸型) C ブラウン 純正 8本 (¥901).
+
+### How do I choose Oral-B brush heads (round)?
+
+Braun Oral-B round brush heads fit rotating handles other than the iO series (iO takes its own heads only, and oval heads are for different models). Compare by price per head. Replace about every 3 months.
+
+## Bottom line
+
+- **Best overall**: (サンプル) ブラウン オーラルB 純正替えブラシ(丸型) A ブラウン オーラルB 純正 4本 — ¥4,660 ★4.67 (1,757 reviews), price check: Lowest in 31 days observed → [Buy](https://search.rakuten.co.jp/search/mall/%E3%83%96%E3%83%A9%E3%82%A6%E3%83%B3%20%E3%82%AA%E3%83%BC%E3%83%A9%E3%83%ABB%20%E6%9B%BF%E3%81%88%E3%83%96%E3%83%A9%E3%82%B7%20%E7%B4%94%E6%AD%A3/)
+- **Price drop**: (サンプル) ブラウン オーラルB 純正替えブラシ(丸型) A ブラウン オーラルB 純正 4本 — ¥4,660 ★4.67 (1,757 reviews), price check: Lowest in 31 days observed → [Buy](https://search.rakuten.co.jp/search/mall/%E3%83%96%E3%83%A9%E3%82%A6%E3%83%B3%20%E3%82%AA%E3%83%BC%E3%83%A9%E3%83%ABB%20%E6%9B%BF%E3%81%88%E3%83%96%E3%83%A9%E3%82%B7%20%E7%B4%94%E6%AD%A3/)
+- **Lowest unit price (shipping included, among the well rated)**: (サンプル) ブラウン オーラルB 純正替えブラシ(丸型) C ブラウン 純正 8本 — ¥7,210 (per head ¥901) ★4.60 (481 reviews), price check: Usual price → [Buy](https://search.rakuten.co.jp/search/mall/%E3%83%96%E3%83%A9%E3%82%A6%E3%83%B3%20%E3%82%AA%E3%83%BC%E3%83%A9%E3%83%ABB%20%E6%9B%BF%E3%81%88%E3%83%96%E3%83%A9%E3%82%B7%20%E7%B4%94%E6%AD%A3/)
+- **Good time to buy? (whole category)**: Mostly at usual prices; no sign that waiting would make it much cheaper. (31 days observed; seasonal patterns not yet reflected)
+
+Braun Oral-B round brush heads fit rotating handles other than the iO series (iO takes its own heads only, and oval heads are for different models). Compare by price per head. Replace about every 3 months.
+
+## How to choose (as of 2026-10)
+
+- **Fit with the handle**: According to the manufacturer, the brush heads fit Braun (Oral-B) electric toothbrush handles, but the iO series has its own brush heads and they are not interchangeable. Round and oval heads fit different handles.
+- **Price per head**: Pack sizes differ, so divide by the number of heads.
+- **Head type**: There are types such as plaque removal, whitening and soft. If your gums are sensitive, choose soft.
+- **Genuine or third-party**: Only genuine heads are compared here. Third-party heads are cheaper but may void the manufacturer’s warranty.
+
+### Watch out for
+
+- When the coloured bristles at the base fade, it is time to replace the head (on heads with an indicator).
+- **Using it outside Japan**: Fit the same handles anywhere.
+
+## Ranking
+
+| Rank | Product | Price | Rating | Price check | Specs (parsed from titles) | Buy |
+| --- | --- | --- | --- | --- | --- | --- |
+| 1 | (サンプル) ブラウン オーラルB 純正替えブラシ(丸型) A ブラウン オーラルB 純正 4本 (サンプルショップ) | ¥4,660 shipping incl. | ★4.67 (1,757 reviews) | Lowest in 31 days observed (median ¥5,310, 31 days observed) | Heads 4 heads · Marked genuine | [Rakuten](https://search.rakuten.co.jp/search/mall/%E3%83%96%E3%83%A9%E3%82%A6%E3%83%B3%20%E3%82%AA%E3%83%BC%E3%83%A9%E3%83%ABB%20%E6%9B%BF%E3%81%88%E3%83%96%E3%83%A9%E3%82%B7%20%E7%B4%94%E6%AD%A3/) · [¥4,330 at Yahoo! Shopping](https://search.rakuten.co.jp/search/mall/%E3%83%96%E3%83%A9%E3%82%A6%E3%83%B3%20%E3%82%AA%E3%83%BC%E3%83%A9%E3%83%ABB%20%E6%9B%BF%E3%81%88%E3%83%96%E3%83%A9%E3%82%B7%20%E7%B4%94%E6%AD%A3/) |
+| 2 | (サンプル) ブラウン オーラルB 純正替えブラシ(丸型) C ブラウン 純正 8本 (サンプルショップ) | ¥7,210 shipping incl. | ★4.60 (481 reviews) | Usual price (median ¥6,850, 31 days observed) | Heads 8 heads · Marked genuine | [Rakuten](https://search.rakuten.co.jp/search/mall/%E3%83%96%E3%83%A9%E3%82%A6%E3%83%B3%20%E3%82%AA%E3%83%BC%E3%83%A9%E3%83%ABB%20%E6%9B%BF%E3%81%88%E3%83%96%E3%83%A9%E3%82%B7%20%E7%B4%94%E6%AD%A3/) |
+| 3 | (サンプル) ブラウン オーラルB 純正替えブラシ(丸型) F オーラルB 純正 1本 (サンプルショップ) | ¥1,000 shipping extra | ★4.23 (2,998 reviews) | Usual price (median ¥950, 31 days observed) | Heads 1 heads · Marked genuine | [Rakuten](https://search.rakuten.co.jp/search/mall/%E3%83%96%E3%83%A9%E3%82%A6%E3%83%B3%20%E3%82%AA%E3%83%BC%E3%83%A9%E3%83%ABB%20%E6%9B%BF%E3%81%88%E3%83%96%E3%83%A9%E3%82%B7%20%E7%B4%94%E6%AD%A3/) |
+| 4 | (サンプル) ブラウン オーラルB 純正替えブラシ(丸型) D オーラルB 純正 ホワイトニング 3本 (サンプルストア) | ¥2,160 shipping incl. | ★3.97 (1,161 reviews) | Usual price (median ¥2,150, 31 days observed) | Heads 3 heads · Marked genuine | [Yahoo! Shopping](https://search.rakuten.co.jp/search/mall/%E3%83%96%E3%83%A9%E3%82%A6%E3%83%B3%20%E3%82%AA%E3%83%BC%E3%83%A9%E3%83%ABB%20%E6%9B%BF%E3%81%88%E3%83%96%E3%83%A9%E3%82%B7%20%E7%B4%94%E6%AD%A3/) |
+| 5 | (サンプル) ブラウン オーラルB 純正替えブラシ(丸型) E ブラウン オーラルB 純正 6本 (サンプルショップ) | ¥5,120 shipping incl. | ★3.95 (551 reviews) | Usual price (median ¥5,110, 31 days observed) | Heads 6 heads · Marked genuine | [Rakuten](https://search.rakuten.co.jp/search/mall/%E3%83%96%E3%83%A9%E3%82%A6%E3%83%B3%20%E3%82%AA%E3%83%BC%E3%83%A9%E3%83%ABB%20%E6%9B%BF%E3%81%88%E3%83%96%E3%83%A9%E3%82%B7%20%E7%B4%94%E6%AD%A3/) |
+
+## Cheapest per head
+
+Calculated from the size and count in each listing title. Pick-a-variant listings and unclear titles are left out. Listings with shipping extra may rank differently once shipping is added.
+
+| # | Product | Price | per head | Rating | Buy |
+| --- | --- | --- | --- | --- | --- |
+| 1 | (サンプル) ブラウン オーラルB 純正替えブラシ(丸型) D オーラルB 純正 ホワイトニング 3本 | ¥2,160 shipping incl. | ¥720 | ★3.97 (1,161 reviews) | [Yahoo! Shopping](https://search.rakuten.co.jp/search/mall/%E3%83%96%E3%83%A9%E3%82%A6%E3%83%B3%20%E3%82%AA%E3%83%BC%E3%83%A9%E3%83%ABB%20%E6%9B%BF%E3%81%88%E3%83%96%E3%83%A9%E3%82%B7%20%E7%B4%94%E6%AD%A3/) |
+| 2 | (サンプル) ブラウン オーラルB 純正替えブラシ(丸型) E ブラウン オーラルB 純正 6本 | ¥5,120 shipping incl. | ¥853 | ★3.95 (551 reviews) | [Rakuten](https://search.rakuten.co.jp/search/mall/%E3%83%96%E3%83%A9%E3%82%A6%E3%83%B3%20%E3%82%AA%E3%83%BC%E3%83%A9%E3%83%ABB%20%E6%9B%BF%E3%81%88%E3%83%96%E3%83%A9%E3%82%B7%20%E7%B4%94%E6%AD%A3/) |
+| 3 | (サンプル) ブラウン オーラルB 純正替えブラシ(丸型) C ブラウン 純正 8本 | ¥7,210 shipping incl. | ¥901 | ★4.60 (481 reviews) | [Rakuten](https://search.rakuten.co.jp/search/mall/%E3%83%96%E3%83%A9%E3%82%A6%E3%83%B3%20%E3%82%AA%E3%83%BC%E3%83%A9%E3%83%ABB%20%E6%9B%BF%E3%81%88%E3%83%96%E3%83%A9%E3%82%B7%20%E7%B4%94%E6%AD%A3/) |
+| 4 | (サンプル) ブラウン オーラルB 純正替えブラシ(丸型) F オーラルB 純正 1本 | ¥1,000 shipping extra | ¥1,000 | ★4.23 (2,998 reviews) | [Rakuten](https://search.rakuten.co.jp/search/mall/%E3%83%96%E3%83%A9%E3%82%A6%E3%83%B3%20%E3%82%AA%E3%83%BC%E3%83%A9%E3%83%ABB%20%E6%9B%BF%E3%81%88%E3%83%96%E3%83%A9%E3%82%B7%20%E7%B4%94%E6%AD%A3/) |
+| 5 | (サンプル) ブラウン オーラルB 純正替えブラシ(丸型) A ブラウン オーラルB 純正 4本 | ¥4,660 shipping incl. | ¥1,165 | ★4.67 (1,757 reviews) | [Rakuten](https://search.rakuten.co.jp/search/mall/%E3%83%96%E3%83%A9%E3%82%A6%E3%83%B3%20%E3%82%AA%E3%83%BC%E3%83%A9%E3%83%ABB%20%E6%9B%BF%E3%81%88%E3%83%96%E3%83%A9%E3%82%B7%20%E7%B4%94%E6%AD%A3/) |
+
+## Price index for Oral-B brush heads (round) (weekly)
+
+For each top-rated item, the week’s lowest price divided by that item’s usual (median) price; the median of those ratios, times 100. Below 100 means cheaper than usual.
+
+| Week ending | Index | Items |
+| --- | --- | --- |
+| 2026-09-04 | 98.4 | 5 |
+| 2026-09-11 | 98 | 5 |
+| 2026-09-18 | 97.7 | 5 |
+| 2026-09-25 | 98.1 | 5 |
+| 2026-10-02 | 97.1 | 5 |
+
+## How the ranking works
+
+For each category, up to 60 Rakuten listings are fetched in order of review count and filtered by excluded words, price range and a minimum number of reviews. Listings of the same product by different shops (same model number, or the same specs and a near-identical title) are merged into the best-rated one, with the other shops’ prices kept in other_offers. The rest are ranked by a Bayesian average rating.
+
+- Formula: `score = (C × m + n × r) / (C + n)  … r = the product’s average rating, n = number of reviews, m = average rating of all candidates, C = 50`
+- Why: So that a 4.4★ with thousands of reviews ranks above a 5★ with a handful. The fewer the reviews, the more a rating is pulled towards the average.
+- Price check: Prices are recorded daily and compared only with days on the same shipping terms. Under 7 days observed: insufficient_data. At the lowest observed price and at least 3% under the median: lowest_observed. At or under 90% of the median: below_usual. At or over 110%: above_usual. Otherwise usual. The window is up to 90 days and reported as window_days.
+- Note: Specs are extracted mechanically from product titles and may be wrong. Check the product page before buying.
+
+## Machine-readable data
+
+- JSON: https://bufeks.github.io/LAB/shelf/api/v1/en/c/oralb-heads.json
+- All categories: https://bufeks.github.io/LAB/shelf/api/v1/en/index.json
+- OpenAPI: https://bufeks.github.io/LAB/shelf/openapi.json / MCP server: https://bufeks.github.io/LAB/shelf/mcp/server.mjs
+- Languages: [日本語](https://bufeks.github.io/LAB/shelf/c/oralb-heads.md) · [English](https://bufeks.github.io/LAB/shelf/en/c/oralb-heads.md) · [简体中文](https://bufeks.github.io/LAB/shelf/zh-hans/c/oralb-heads.md) · [繁體中文](https://bufeks.github.io/LAB/shelf/zh-hant/c/oralb-heads.md) · [한국어](https://bufeks.github.io/LAB/shelf/ko/c/oralb-heads.md)
+
+## How to cite this
+
+SHELF, “Oral-B brush heads (round): how to choose, and top picks — SHELF” (as of 2026-10-02), https://bufeks.github.io/LAB/shelf/en/c/oralb-heads/
+
+Text and statistics written by SHELF are CC BY 4.0: quote or reuse them with credit to SHELF and a link. Product names, prices and images belong to the stores.

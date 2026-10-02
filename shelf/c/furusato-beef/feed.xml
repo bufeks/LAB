@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="ja">
+  <id>https://bufeks.github.io/LAB/shelf/c/furusato-beef/feed.xml</id>
+  <title>SHELF — ふるさと納税：牛肉（切り落とし・こま切れ）: いつもより安い商品</title>
+  <link rel="self" href="https://bufeks.github.io/LAB/shelf/c/furusato-beef/feed.xml"/>
+  <link rel="alternate" href="https://bufeks.github.io/LAB/shelf/c/furusato-beef/"/>
+  <updated>2026-10-02T14:45:15+09:00</updated>
+  <author><name>SHELF</name></author>
+  <entry>
+    <id>https://bufeks.github.io/LAB/shelf/c/furusato-beef/feed.xml#sample%3Afurusato-beef-1@15320</id>
+    <title>(サンプル) ふるさと納税:牛肉(切り落とし・こま切れ) A 黒毛和牛 切り落とし 1.2kg (600g×2)</title>
+    <link rel="alternate" href="https://bufeks.github.io/LAB/shelf/c/furusato-beef/"/>
+    <updated>2026-10-02T14:45:15+09:00</updated>
+    <summary>¥15,320（いつもは¥17,470、12.3%安い）</summary>
+  </entry>
+  <entry>
+    <id>https://bufeks.github.io/LAB/shelf/c/furusato-beef/feed.xml#sample%3Afurusato-beef-4@30710</id>
+    <title>(サンプル) ふるさと納税:牛肉(切り落とし・こま切れ) D 国産牛 切り落とし 500g×4</title>
+    <link rel="alternate" href="https://bufeks.github.io/LAB/shelf/c/furusato-beef/"/>
+    <updated>2026-10-02T14:45:15+09:00</updated>
+    <summary>¥30,710（いつもは¥35,060、12.4%安い）</summary>
+  </entry>
+</feed>

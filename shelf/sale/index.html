@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>セール価格の真偽チェック｜SHELF</title>
+<meta name="description" content="商品名の「◯%OFF」「半額」などの表示を、SHELFが毎日記録している実際の価格の推移と照らし合わせ、本当に安くなっているかを判定します。">
+<meta name="robots" content="noindex">
+<link rel="canonical" href="https://bufeks.github.io/LAB/shelf/sale/">
+<link rel="alternate" type="application/json" href="https://bufeks.github.io/LAB/shelf/api/v1/sale.json">
+<link rel="alternate" hreflang="ja" href="https://bufeks.github.io/LAB/shelf/sale/">
+<link rel="alternate" hreflang="en" href="https://bufeks.github.io/LAB/shelf/en/sale/">
+<link rel="alternate" hreflang="zh-Hans" href="https://bufeks.github.io/LAB/shelf/zh-hans/sale/">
+<link rel="alternate" hreflang="zh-Hant" href="https://bufeks.github.io/LAB/shelf/zh-hant/sale/">
+<link rel="alternate" hreflang="ko" href="https://bufeks.github.io/LAB/shelf/ko/sale/">
+<link rel="alternate" hreflang="x-default" href="https://bufeks.github.io/LAB/shelf/en/sale/">
+<link rel="stylesheet" href="../assets/style.css">
+
+</head>
+<body>
+<header class="top"><a class="brand" href="https://bufeks.github.io/LAB/shelf/">SHELF</a><span class="tag">AIエージェントのための買い物データ</span><nav class="langs" aria-label="Languages"><b>日本語</b> <a href="https://bufeks.github.io/LAB/shelf/en/sale/" hreflang="en">English</a> <a href="https://bufeks.github.io/LAB/shelf/zh-hans/sale/" hreflang="zh-Hans">简体中文</a> <a href="https://bufeks.github.io/LAB/shelf/zh-hant/sale/" hreflang="zh-Hant">繁體中文</a> <a href="https://bufeks.github.io/LAB/shelf/ko/sale/" hreflang="ko">한국어</a></nav></header>
+<p class="sample">サンプルデータ表示中：実在の商品ではありません（楽天APIキー設定後に実データへ切り替わります）</p>
+<main>
+<p class="pr">PR・アフィリエイトリンクを含みます</p>
+<h1>セール価格の真偽チェック</h1>
+<p class="lead">商品名の「◯%OFF」「半額」などの表示を、SHELFが毎日記録している実際の価格の推移と照らし合わせ、本当に安くなっているかを判定します。</p>
+<p class="meta">データ日付 2026-10-02・毎日自動更新・4商品</p>
+<h2>今日のイベント</h2>
+<p>大型セールは検知されていません。</p>
+<h2><span class="sale s-genuine">本当に安い</span> (2)</h2>
+<p><small>いつもの価格から実際に下がっている商品。</small></p>
+<ul class="sale-list"><li><a href="https://bufeks.github.io/LAB/shelf/c/hair-dryer/">ヘアドライヤー</a> — <span lang="ja">(サンプル) ヘアドライヤー A 大風量 2.0m3/分 1200W 温冷</span><br><strong>¥4,320</strong> · 表示: 20%OFF · 実際: いつも（中央値¥4,950）より12.7%安い</li>
+<li><a href="https://bufeks.github.io/LAB/shelf/c/air-purifier/">空気清浄機</a> — <span lang="ja">(サンプル) 空気清浄機 A スーパーSALE 25畳 HEPA</span><br><strong>¥22,200</strong> · 表示: 15%OFF · 実際: いつも（中央値¥25,310）より12.3%安い</li></ul>
+<h2><span class="sale s-smaller_than_claimed">表示ほど安くない</span> (1)</h2>
+<p><small>下がってはいるが、表示された割引率よりかなり小さい商品。</small></p>
+<ul class="sale-list"><li><a href="https://bufeks.github.io/LAB/shelf/c/rice-cooker/">炊飯器</a> — <span lang="ja">(サンプル) 炊飯器 A 半額 5.5合 圧力IH 予約</span><br><strong>¥19,800</strong> · 表示: 50%OFF · 実際: いつも（中央値¥22,690）より12.7%安い</li></ul>
+
+<h2><span class="sale s-coupon">クーポン割引（価格に未反映）</span> (1)</h2>
+<p><small>クーポンを使うと安くなる商品。表示価格にはクーポンが含まれていないので、条件と上限を確認する。</small></p>
+<ul class="sale-list"><li><a href="https://bufeks.github.io/LAB/shelf/c/hair-dryer/">ヘアドライヤー</a> — <span lang="ja">(サンプル) ヘアドライヤー B 1.3m3/分 折りたたみ イオン</span><br><strong>¥5,070</strong> · 表示: 最大30%OFF</li></ul>
+
+<h2>ランキングの決め方</h2><p>判定は、その商品自身の過去の価格（送料条件が同じ日の中央値、最大90日）と今日の価格の差で行います。ショップが表示する「通常価格」「定価」は使いません。表示の半分以上（「最大◯%」は4分の1以上）かつ5%以上下がっていれば「本当に安い」、3%以上なら「表示ほど安くない」、それ未満は「いつもと同じ価格」。クーポンは表示価格に含まれないので別扱い。観測7日未満は「未検証」。</p>
+<p class="data">このページのデータ: <a href="https://bufeks.github.io/LAB/shelf/api/v1/sale.json">JSON</a></p>
+</main>
+<footer>
+<p>PR: 購入リンクはアフィリエイトリンクです（楽天アフィリエイト、バリューコマース経由のYahoo!ショッピング）。リンク経由で購入されると運営者に紹介料が入りますが、価格は変わらず、順位は公開している計算式だけで決まり、紹介料の率は順位にもストアの選び方にも影響しません。</p>
+<p><a href="https://developers.rakuten.com/">Supported by Rakuten Developers</a> ・ <span style="margin:15px 15px 15px 15px"><a href="https://developer.yahoo.co.jp/sitemap/">Webサービス by Yahoo! JAPAN</a></span> ・ <a href="https://bufeks.github.io/LAB/shelf/llms.txt">llms.txt</a> ・ <a href="https://bufeks.github.io/LAB/shelf/openapi.json">OpenAPI</a> ・ <a href="https://bufeks.github.io/LAB/shelf/about/">AIエージェント向け利用方法</a></p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>電動牙刷替換刷頭相容性檢查｜SHELF</title>
+<meta name="description" content="依主機型號或商品名稱，判斷可使用哪一種原廠替換刷頭。只採用廠商公開的相容規則，並附上出處。">
+<link rel="canonical" href="https://bufeks.github.io/LAB/shelf/zh-hant/compat/">
+<link rel="alternate" type="application/json" href="https://bufeks.github.io/LAB/shelf/api/v1/zh-hant/compat.json">
+<link rel="alternate" hreflang="ja" href="https://bufeks.github.io/LAB/shelf/compat/">
+<link rel="alternate" hreflang="en" href="https://bufeks.github.io/LAB/shelf/en/compat/">
+<link rel="alternate" hreflang="zh-Hans" href="https://bufeks.github.io/LAB/shelf/zh-hans/compat/">
+<link rel="alternate" hreflang="zh-Hant" href="https://bufeks.github.io/LAB/shelf/zh-hant/compat/">
+<link rel="alternate" hreflang="ko" href="https://bufeks.github.io/LAB/shelf/ko/compat/">
+<link rel="alternate" hreflang="x-default" href="https://bufeks.github.io/LAB/shelf/en/compat/">
+<link rel="stylesheet" href="../../assets/style.css">
+
+</head>
+<body>
+<header class="top"><a class="brand" href="https://bufeks.github.io/LAB/shelf/zh-hant/">SHELF</a><span class="tag">給 AI 代理的購物資料</span><nav class="langs" aria-label="語言"><a href="https://bufeks.github.io/LAB/shelf/compat/" hreflang="ja">日本語</a> <a href="https://bufeks.github.io/LAB/shelf/en/compat/" hreflang="en">English</a> <a href="https://bufeks.github.io/LAB/shelf/zh-hans/compat/" hreflang="zh-Hans">简体中文</a> <b>繁體中文</b> <a href="https://bufeks.github.io/LAB/shelf/ko/compat/" hreflang="ko">한국어</a></nav></header>
+<p class="sample">目前顯示範例資料：並非真實商品（設定樂天 API 金鑰後會切換為真實資料）</p>
+<main>
+<p class="pr">廣告 · 含推廣連結</p>
+<h1>電動牙刷替換刷頭相容性檢查</h1>
+<p class="lead">依主機型號或商品名稱，判斷可使用哪一種原廠替換刷頭。只採用廠商公開的相容規則，並附上出處。</p>
+<p>主機型號（Sonicare 多以「HX」開頭，Philips One 多以「HY」開頭，百靈 Oral-B 多以「D」開頭）可在主機底部或使用說明書上確認。</p>
+<div class="scroll"><table><thead><tr><th>主機（型號或名稱線索）</th><th>可用的替換刷頭</th><th>廠商說明</th></tr></thead><tbody>
+<tr><td>Philips<br><small><code>^HY\d{4} / Philips\s*One|フィリップス\s*ワン</code></small></td>
+<td><strong>Philips One 專用刷頭</strong><br><span class="verdict">廠商明確標示</span></td>
+<td><small>“Philips One および Philips One for Kids ブラシヘッドは、Philips One および Philips One for Kids にのみ対応しています。”</small><br><a href="https://www.philips.co.jp/c-f/XC000006597/">www.philips.co.jp</a></td></tr>
+<tr><td>Philips Sonicare<br><small><code>エッセンス|Essence</code></small></td>
+<td><strong>舊款 Essence 用的旋入式刷頭</strong><br><span class="verdict">需確認（依機型而異）</span></td>
+<td><small>“エッセンスの旧モデルには、大きめのねじ込み式ブラシヘッドが付いています。”</small><br><a href="https://www.philips.co.jp/c-f/XC000006597/">www.philips.co.jp</a></td></tr>
+<tr><td>Philips Sonicare<br><small><code>^HX\d{4} / ソニッケアー|Sonicare</code></small></td>
+<td><strong>Sonicare 卡扣式刷頭</strong><br><span class="verdict">廠商明確標示</span><br><a href="https://bufeks.github.io/LAB/shelf/zh-hant/c/sonicare-heads/">Sonicare 原廠替換刷頭</a><br><small>原廠刷頭最低每支 358 日圓</small></td>
+<td><small>“標準的なはめ込み式ブラシヘッドは、ほとんどのソニッケアー充電式歯ブラシに使用できます。”</small><br><a href="https://www.philips.co.jp/c-f/XC000006597/">www.philips.co.jp</a></td></tr>
+<tr><td>Braun Oral-B<br><small><code>^IO[A-Z0-9]* / \biO\b|iOシリーズ|オーラルB\s*iO</code></small></td>
+<td><strong>Oral-B iO 專用替換刷頭</strong><br><span class="verdict">廠商明確標示</span></td>
+<td><small>“「iOシリーズ」については専用の替えブラシがございます。他の替えブラシとの互換性はありませんので、ご注意ください。”</small><br><a href="https://www.oralb-braun-onlinestore.jp/f/faq">www.oralb-braun-onlinestore.jp</a></td></tr>
+<tr><td>Braun Oral-B<br><small><code>ソニック|パルソニック|Pulsonic</code></small></td>
+<td><strong>Oral-B 橢圓形替換刷頭（音波式機型）</strong><br><span class="verdict">需確認（依機型而異）</span></td>
+<td><small>“丸型ブラシと楕円型ブラシは、お使いいただく本体の機種が異なりますので、ご注意ください。”</small><br><a href="https://www.oralb-braun-onlinestore.jp/f/faq">www.oralb-braun-onlinestore.jp</a></td></tr>
+<tr><td>Braun Oral-B<br><small><code>^D\d{2,3} / オーラルB|オーラルビー|Oral-?B|ブラウン</code></small></td>
+<td><strong>百靈 Oral-B 圓形替換刷頭</strong><br><span class="verdict">廠商明確標示</span><br><a href="https://bufeks.github.io/LAB/shelf/zh-hant/c/oralb-heads/">百靈 Oral-B 原廠替換刷頭（圓形）</a><br><small>原廠刷頭最低每支 720 日圓</small></td>
+<td><small>“どの替えブラシも、ブラウン（オーラルB）電動歯ブラシ本体に装着できる…※「iOシリーズ」については専用の替えブラシがございます。”</small><br><a href="https://www.oralb-braun-onlinestore.jp/f/faq">www.oralb-braun-onlinestore.jp</a></td></tr>
+</tbody></table></div>
+<p><small>不符合任何規則的主機不做判斷。請至廠商網站或查看使用說明書確認。</small></p>
+<p class="data">本頁資料: <a href="https://bufeks.github.io/LAB/shelf/api/v1/zh-hant/compat.json">JSON</a> ・ MCP: <code>check_compatibility</code></p>
+</main>
+<footer>
+<p>廣告：購買連結為推廣（聯盟）連結（樂天聯盟行銷，以及透過 ValueCommerce 的 Yahoo!購物）。透過連結購買時營運者會獲得佣金，但價格不變。排名只由公開的公式決定，佣金比例既不影響排名，也不影響顯示哪家商店。</p>
+<p><a href="https://developers.rakuten.com/">Supported by Rakuten Developers</a> ・ <span style="margin:15px 15px 15px 15px"><a href="https://developer.yahoo.co.jp/sitemap/">Web Services by Yahoo! JAPAN</a></span> ・ <a href="https://bufeks.github.io/LAB/shelf/zh-hant/llms.txt">llms.txt</a> ・ <a href="https://bufeks.github.io/LAB/shelf/openapi.json">OpenAPI</a> ・ <a href="https://bufeks.github.io/LAB/shelf/en/about/">代理使用說明（English）</a></p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,413 @@
+{
+ "categoryId": "protein",
+ "date": "2026-10-02",
+ "fetchedAt": "2026-10-02T14:45:15+09:00",
+ "items": [
+  {
+   "id": "sample:protein-1",
+   "source": "rakuten",
+   "name": "(サンプル) プロテイン（パウダー） A ホエイ 1kg",
+   "caption": "",
+   "shop": "サンプルショップ",
+   "price": 4400,
+   "shippingIncluded": true,
+   "pointRate": 1,
+   "rating": 4.87,
+   "reviews": 1540,
+   "productUrl": "https://search.rakuten.co.jp/search/mall/%E3%83%97%E3%83%AD%E3%83%86%E3%82%A4%E3%83%B3%20%E3%83%9B%E3%82%A8%E3%82%A4%201kg/",
+   "buyUrl": "https://search.rakuten.co.jp/search/mall/%E3%83%97%E3%83%AD%E3%83%86%E3%82%A4%E3%83%B3%20%E3%83%9B%E3%82%A8%E3%82%A4%201kg/",
+   "affiliate": false,
+   "image": null,
+   "available": true,
+   "title": "(サンプル) プロテイン(パウダー) A ホエイ 1kg",
+   "variants": false,
+   "score": 4.853,
+   "facets": {
+    "type": "whey",
+    "no_artificial_sweetener": false
+   },
+   "claimed": null,
+   "unit": {
+    "quantity": 1000,
+    "value": 4400
+   },
+   "otherOffers": [
+    {
+     "id": "sample-y:protein-1",
+     "store": "yahoo",
+     "shop": "サンプルストア",
+     "price": 4090,
+     "shippingIncluded": true,
+     "buyUrl": "https://search.rakuten.co.jp/search/mall/%E3%83%97%E3%83%AD%E3%83%86%E3%82%A4%E3%83%B3%20%E3%83%9B%E3%82%A8%E3%82%A4%201kg/",
+     "affiliate": false
+    }
+   ],
+   "rank": 1,
+   "priceStats": {
+    "points": 31,
+    "windowDays": 31,
+    "firstSeen": "2026-09-02",
+    "min90": 4400,
+    "median90": 5020,
+    "max90": 5190,
+    "verdict": "lowest_observed"
+   },
+   "priceWeekly": [
+    [
+     "2026-09-04",
+     4980
+    ],
+    [
+     "2026-09-11",
+     4930
+    ],
+    [
+     "2026-09-18",
+     4990
+    ],
+    [
+     "2026-09-25",
+     4920
+    ],
+    [
+     "2026-10-02",
+     4400
+    ]
+   ]
+  },
+  {
+   "id": "sample:protein-6",
+   "source": "rakuten",
+   "name": "(サンプル) プロテイン（パウダー） F ソイ 900g",
+   "caption": "",
+   "shop": "サンプルショップ",
+   "price": 7550,
+   "shippingIncluded": false,
+   "pointRate": 1,
+   "rating": 4.58,
+   "reviews": 3660,
+   "productUrl": "https://search.rakuten.co.jp/search/mall/%E3%83%97%E3%83%AD%E3%83%86%E3%82%A4%E3%83%B3%20%E3%83%9B%E3%82%A8%E3%82%A4%201kg/",
+   "buyUrl": "https://search.rakuten.co.jp/search/mall/%E3%83%97%E3%83%AD%E3%83%86%E3%82%A4%E3%83%B3%20%E3%83%9B%E3%82%A8%E3%82%A4%201kg/",
+   "affiliate": false,
+   "image": null,
+   "available": true,
+   "title": "(サンプル) プロテイン(パウダー) F ソイ 900g",
+   "variants": false,
+   "score": 4.577,
+   "facets": {
+    "type": "soy",
+    "no_artificial_sweetener": false
+   },
+   "claimed": null,
+   "unit": {
+    "quantity": 900,
+    "value": 8388.9
+   },
+   "otherOffers": [],
+   "rank": 2,
+   "priceStats": {
+    "points": 31,
+    "windowDays": 31,
+    "firstSeen": "2026-09-02",
+    "min90": 6960,
+    "median90": 7170,
+    "max90": 7550,
+    "verdict": "usual"
+   },
+   "priceWeekly": [
+    [
+     "2026-09-04",
+     7060
+    ],
+    [
+     "2026-09-11",
+     6980
+    ],
+    [
+     "2026-09-18",
+     6980
+    ],
+    [
+     "2026-09-25",
+     7010
+    ],
+    [
+     "2026-10-02",
+     6960
+    ]
+   ]
+  },
+  {
+   "id": "sample:protein-2",
+   "source": "rakuten",
+   "name": "(サンプル) プロテイン（パウダー） B WPI 3kg",
+   "caption": "",
+   "shop": "サンプルショップ",
+   "price": 6880,
+   "shippingIncluded": false,
+   "pointRate": 1,
+   "rating": 4.56,
+   "reviews": 227,
+   "productUrl": "https://search.rakuten.co.jp/search/mall/%E3%83%97%E3%83%AD%E3%83%86%E3%82%A4%E3%83%B3%20%E3%83%9B%E3%82%A8%E3%82%A4%201kg/",
+   "buyUrl": "https://search.rakuten.co.jp/search/mall/%E3%83%97%E3%83%AD%E3%83%86%E3%82%A4%E3%83%B3%20%E3%83%9B%E3%82%A8%E3%82%A4%201kg/",
+   "affiliate": false,
+   "image": null,
+   "available": true,
+   "title": "(サンプル) プロテイン(パウダー) B WPI 3kg",
+   "variants": false,
+   "score": 4.521,
+   "facets": {
+    "type": "wpi",
+    "no_artificial_sweetener": false
+   },
+   "claimed": null,
+   "unit": {
+    "quantity": 3000,
+    "value": 2293.3
+   },
+   "otherOffers": [],
+   "rank": 3,
+   "priceStats": {
+    "points": 31,
+    "windowDays": 31,
+    "firstSeen": "2026-09-02",
+    "min90": 6690,
+    "median90": 6850,
+    "max90": 7070,
+    "verdict": "usual"
+   },
+   "priceWeekly": [
+    [
+     "2026-09-04",
+     6690
+    ],
+    [
+     "2026-09-11",
+     6720
+    ],
+    [
+     "2026-09-18",
+     6720
+    ],
+    [
+     "2026-09-25",
+     6720
+    ],
+    [
+     "2026-10-02",
+     6740
+    ]
+   ]
+  },
+  {
+   "id": "sample:protein-4",
+   "source": "rakuten",
+   "name": "(サンプル) プロテイン（パウダー） D ホエイ 1kg×2袋",
+   "caption": "",
+   "shop": "サンプルショップ",
+   "price": 11510,
+   "shippingIncluded": false,
+   "pointRate": 1,
+   "rating": 4.44,
+   "reviews": 456,
+   "productUrl": "https://search.rakuten.co.jp/search/mall/%E3%83%97%E3%83%AD%E3%83%86%E3%82%A4%E3%83%B3%20%E3%83%9B%E3%82%A8%E3%82%A4%201kg/",
+   "buyUrl": "https://search.rakuten.co.jp/search/mall/%E3%83%97%E3%83%AD%E3%83%86%E3%82%A4%E3%83%B3%20%E3%83%9B%E3%82%A8%E3%82%A4%201kg/",
+   "affiliate": false,
+   "image": null,
+   "available": true,
+   "title": "(サンプル) プロテイン(パウダー) D ホエイ 1kg×2袋",
+   "variants": false,
+   "score": 4.431,
+   "facets": {
+    "type": "whey",
+    "no_artificial_sweetener": false
+   },
+   "claimed": null,
+   "unit": {
+    "quantity": 2000,
+    "value": 5755
+   },
+   "otherOffers": [
+    {
+     "id": "sample-y:protein-2",
+     "store": "yahoo",
+     "shop": "サンプルストア",
+     "price": 11970,
+     "shippingIncluded": true,
+     "buyUrl": "https://search.rakuten.co.jp/search/mall/%E3%83%97%E3%83%AD%E3%83%86%E3%82%A4%E3%83%B3%20%E3%83%9B%E3%82%A8%E3%82%A4%201kg/",
+     "affiliate": false
+    }
+   ],
+   "rank": 4,
+   "priceStats": {
+    "points": 31,
+    "windowDays": 31,
+    "firstSeen": "2026-09-02",
+    "min90": 11510,
+    "median90": 13140,
+    "max90": 13520,
+    "verdict": "lowest_observed"
+   },
+   "priceWeekly": [
+    [
+     "2026-09-04",
+     13030
+    ],
+    [
+     "2026-09-11",
+     12910
+    ],
+    [
+     "2026-09-18",
+     12870
+    ],
+    [
+     "2026-09-25",
+     12890
+    ],
+    [
+     "2026-10-02",
+     11510
+    ]
+   ]
+  },
+  {
+   "id": "sample:protein-5",
+   "source": "rakuten",
+   "name": "(サンプル) プロテイン（パウダー） E ホエイ 人工甘味料不使用 1kg",
+   "caption": "",
+   "shop": "サンプルショップ",
+   "price": 4260,
+   "shippingIncluded": true,
+   "pointRate": 1,
+   "rating": 4.07,
+   "reviews": 3218,
+   "productUrl": "https://search.rakuten.co.jp/search/mall/%E3%83%97%E3%83%AD%E3%83%86%E3%82%A4%E3%83%B3%20%E3%83%9B%E3%82%A8%E3%82%A4%201kg/",
+   "buyUrl": "https://search.rakuten.co.jp/search/mall/%E3%83%97%E3%83%AD%E3%83%86%E3%82%A4%E3%83%B3%20%E3%83%9B%E3%82%A8%E3%82%A4%201kg/",
+   "affiliate": false,
+   "image": null,
+   "available": true,
+   "title": "(サンプル) プロテイン(パウダー) E ホエイ 人工甘味料不使用 1kg",
+   "variants": false,
+   "score": 4.074,
+   "facets": {
+    "type": "whey",
+    "no_artificial_sweetener": true
+   },
+   "claimed": null,
+   "unit": {
+    "quantity": 1000,
+    "value": 4260
+   },
+   "otherOffers": [],
+   "rank": 5,
+   "priceStats": {
+    "points": 31,
+    "windowDays": 31,
+    "firstSeen": "2026-09-02",
+    "min90": 4130,
+    "median90": 4250,
+    "max90": 4380,
+    "verdict": "usual"
+   },
+   "priceWeekly": [
+    [
+     "2026-09-04",
+     4160
+    ],
+    [
+     "2026-09-11",
+     4170
+    ],
+    [
+     "2026-09-18",
+     4130
+    ],
+    [
+     "2026-09-25",
+     4210
+    ],
+    [
+     "2026-10-02",
+     4160
+    ]
+   ]
+  },
+  {
+   "id": "sample:protein-3",
+   "source": "rakuten",
+   "name": "(サンプル) プロテイン（パウダー） C ソイ 1kg",
+   "caption": "",
+   "shop": "サンプルショップ",
+   "price": 6770,
+   "shippingIncluded": true,
+   "pointRate": 1,
+   "rating": 3.82,
+   "reviews": 2202,
+   "productUrl": "https://search.rakuten.co.jp/search/mall/%E3%83%97%E3%83%AD%E3%83%86%E3%82%A4%E3%83%B3%20%E3%83%9B%E3%82%A8%E3%82%A4%201kg/",
+   "buyUrl": "https://search.rakuten.co.jp/search/mall/%E3%83%97%E3%83%AD%E3%83%86%E3%82%A4%E3%83%B3%20%E3%83%9B%E3%82%A8%E3%82%A4%201kg/",
+   "affiliate": false,
+   "image": null,
+   "available": true,
+   "title": "(サンプル) プロテイン(パウダー) C ソイ 1kg",
+   "variants": false,
+   "score": 3.832,
+   "facets": {
+    "type": "soy",
+    "no_artificial_sweetener": false
+   },
+   "claimed": null,
+   "unit": {
+    "quantity": 1000,
+    "value": 6770
+   },
+   "otherOffers": [],
+   "rank": 6,
+   "priceStats": {
+    "points": 31,
+    "windowDays": 31,
+    "firstSeen": "2026-09-02",
+    "min90": 6240,
+    "median90": 6430,
+    "max90": 6770,
+    "verdict": "usual"
+   },
+   "priceWeekly": [
+    [
+     "2026-09-04",
+     6330
+    ],
+    [
+     "2026-09-11",
+     6260
+    ],
+    [
+     "2026-09-18",
+     6340
+    ],
+    [
+     "2026-09-25",
+     6280
+    ],
+    [
+     "2026-10-02",
+     6240
+    ]
+   ]
+  }
+ ],
+ "stats": {
+  "candidates": 8,
+  "ranked": 6,
+  "rejected": {
+   "duplicate": 2
+  },
+  "meanRating": 4.35,
+  "priorWeight": 50
+ },
+ "picks": {
+  "best": "sample:protein-1",
+  "deal": "sample:protein-4",
+  "per_unit": "sample:protein-1"
+ }
+}

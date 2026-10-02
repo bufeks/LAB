@@ -1,0 +1,2102 @@
+{
+ "date": "2026-10-02",
+ "fetchedAt": "2026-10-02T14:45:15+09:00",
+ "nights": [
+  "2026-10-03",
+  "2026-10-09",
+  "2026-10-10",
+  "2026-10-16",
+  "2026-10-17",
+  "2026-10-23",
+  "2026-10-24",
+  "2026-10-30"
+ ],
+ "areas": {
+  "tokyo-shinjuku": {
+   "2026-10-03": {
+    "level": 24750,
+    "min": 17400,
+    "available": 20,
+    "cheapest": [
+     {
+      "id": "sample-hotel:tokyo-shinjuku-1",
+      "name": "(サンプル) ホテル A",
+      "url": "https://travel.rakuten.co.jp/",
+      "price": 17400,
+      "rating": 3.6,
+      "reviews": 50,
+      "station": null,
+      "image": null
+     },
+     {
+      "id": "sample-hotel:tokyo-shinjuku-2",
+      "name": "(サンプル) ホテル B",
+      "url": "https://travel.rakuten.co.jp/",
+      "price": 19500,
+      "rating": 4.3,
+      "reviews": 90,
+      "station": null,
+      "image": null
+     },
+     {
+      "id": "sample-hotel:tokyo-shinjuku-3",
+      "name": "(サンプル) ホテル C",
+      "url": "https://travel.rakuten.co.jp/",
+      "price": 21600,
+      "rating": 3.7,
+      "reviews": 130,
+      "station": null,
+      "image": null
+     }
+    ]
+   },
+   "2026-10-09": {
+    "level": 22550,
+    "min": 15900,
+    "available": 20,
+    "cheapest": [
+     {
+      "id": "sample-hotel:tokyo-shinjuku-1",
+      "name": "(サンプル) ホテル A",
+      "url": "https://travel.rakuten.co.jp/",
+      "price": 15900,
+      "rating": 3.6,
+      "reviews": 50,
+      "station": null,
+      "image": null
+     },
+     {
+      "id": "sample-hotel:tokyo-shinjuku-2",
+      "name": "(サンプル) ホテル B",
+      "url": "https://travel.rakuten.co.jp/",
+      "price": 17800,
+      "rating": 4.3,
+      "reviews": 90,
+      "station": null,
+      "image": null
+     },
+     {
+      "id": "sample-hotel:tokyo-shinjuku-3",
+      "name": "(サンプル) ホテル C",
+      "url": "https://travel.rakuten.co.jp/",
+      "price": 19700,
+      "rating": 3.7,
+      "reviews": 130,
+      "station": null,
+      "image": null
+     }
+    ]
+   },
+   "2026-10-10": {
+    "level": 24750,
+    "min": 17400,
+    "available": 20,
+    "cheapest": [
+     {
+      "id": "sample-hotel:tokyo-shinjuku-1",
+      "name": "(サンプル) ホテル A",
+      "url": "https://travel.rakuten.co.jp/",
+      "price": 17400,
+      "rating": 3.6,
+      "reviews": 50,
+      "station": null,
+      "image": null
+     },
+     {
+      "id": "sample-hotel:tokyo-shinjuku-2",
+      "name": "(サンプル) ホテル B",
+      "url": "https://travel.rakuten.co.jp/",
+      "price": 19500,
+      "rating": 4.3,
+      "reviews": 90,
+      "station": null,
+      "image": null
+     },
+     {
+      "id": "sample-hotel:tokyo-shinjuku-3",
+      "name": "(サンプル) ホテル C",
+      "url": "https://travel.rakuten.co.jp/",
+      "price": 21600,
+      "rating": 3.7,
+      "reviews": 130,
+      "station": null,
+      "image": null
+     }
+    ]
+   },
+   "2026-10-16": {
+    "level": 22550,
+    "min": 15900,
+    "available": 20,
+    "cheapest": [
+     {
+      "id": "sample-hotel:tokyo-shinjuku-1",
+      "name": "(サンプル) ホテル A",
+      "url": "https://travel.rakuten.co.jp/",
+      "price": 15900,
+      "rating": 3.6,
+      "reviews": 50,
+      "station": null,
+      "image": null
+     },
+     {
+      "id": "sample-hotel:tokyo-shinjuku-2",
+      "name": "(サンプル) ホテル B",
+      "url": "https://travel.rakuten.co.jp/",
+      "price": 17800,
+      "rating": 4.3,
+      "reviews": 90,
+      "station": null,
+      "image": null
+     },
+     {
+      "id": "sample-hotel:tokyo-shinjuku-3",
+      "name": "(サンプル) ホテル C",
+      "url": "https://travel.rakuten.co.jp/",
+      "price": 19700,
+      "rating": 3.7,
+      "reviews": 130,
+      "station": null,
+      "image": null
+     }
+    ]
+   },
+   "2026-10-17": {
+    "level": 24750,
+    "min": 17400,
+    "available": 20,
+    "cheapest": [
+     {
+      "id": "sample-hotel:tokyo-shinjuku-1",
+      "name": "(サンプル) ホテル A",
+      "url": "https://travel.rakuten.co.jp/",
+      "price": 17400,
+      "rating": 3.6,
+      "reviews": 50,
+      "station": null,
+      "image": null
+     },
+     {
+      "id": "sample-hotel:tokyo-shinjuku-2",
+      "name": "(サンプル) ホテル B",
+      "url": "https://travel.rakuten.co.jp/",
+      "price": 19500,
+      "rating": 4.3,
+      "reviews": 90,
+      "station": null,
+      "image": null
+     },
+     {
+      "id": "sample-hotel:tokyo-shinjuku-3",
+      "name": "(サンプル) ホテル C",
+      "url": "https://travel.rakuten.co.jp/",
+      "price": 21600,
+      "rating": 3.7,
+      "reviews": 130,
+      "station": null,
+      "image": null
+     }
+    ]
+   },
+   "2026-10-23": {
+    "level": 22550,
+    "min": 15900,
+    "available": 20,
+    "cheapest": [
+     {
+      "id": "sample-hotel:tokyo-shinjuku-1",
+      "name": "(サンプル) ホテル A",
+      "url": "https://travel.rakuten.co.jp/",
+      "price": 15900,
+      "rating": 3.6,
+      "reviews": 50,
+      "station": null,
+      "image": null
+     },
+     {
+      "id": "sample-hotel:tokyo-shinjuku-2",
+      "name": "(サンプル) ホテル B",
+      "url": "https://travel.rakuten.co.jp/",
+      "price": 17800,
+      "rating": 4.3,
+      "reviews": 90,
+      "station": null,
+      "image": null
+     },
+     {
+      "id": "sample-hotel:tokyo-shinjuku-3",
+      "name": "(サンプル) ホテル C",
+      "url": "https://travel.rakuten.co.jp/",
+      "price": 19700,
+      "rating": 3.7,
+      "reviews": 130,
+      "station": null,
+      "image": null
+     }
+    ]
+   },
+   "2026-10-24": {
+    "level": 24750,
+    "min": 17400,
+    "available": 20,
+    "cheapest": [
+     {
+      "id": "sample-hotel:tokyo-shinjuku-1",
+      "name": "(サンプル) ホテル A",
+      "url": "https://travel.rakuten.co.jp/",
+      "price": 17400,
+      "rating": 3.6,
+      "reviews": 50,
+      "station": null,
+      "image": null
+     },
+     {
+      "id": "sample-hotel:tokyo-shinjuku-2",
+      "name": "(サンプル) ホテル B",
+      "url": "https://travel.rakuten.co.jp/",
+      "price": 19500,
+      "rating": 4.3,
+      "reviews": 90,
+      "station": null,
+      "image": null
+     },
+     {
+      "id": "sample-hotel:tokyo-shinjuku-3",
+      "name": "(サンプル) ホテル C",
+      "url": "https://travel.rakuten.co.jp/",
+      "price": 21600,
+      "rating": 3.7,
+      "reviews": 130,
+      "station": null,
+      "image": null
+     }
+    ]
+   },
+   "2026-10-30": {
+    "level": 22550,
+    "min": 15900,
+    "available": 20,
+    "cheapest": [
+     {
+      "id": "sample-hotel:tokyo-shinjuku-1",
+      "name": "(サンプル) ホテル A",
+      "url": "https://travel.rakuten.co.jp/",
+      "price": 15900,
+      "rating": 3.6,
+      "reviews": 50,
+      "station": null,
+      "image": null
+     },
+     {
+      "id": "sample-hotel:tokyo-shinjuku-2",
+      "name": "(サンプル) ホテル B",
+      "url": "https://travel.rakuten.co.jp/",
+      "price": 17800,
+      "rating": 4.3,
+      "reviews": 90,
+      "station": null,
+      "image": null
+     },
+     {
+      "id": "sample-hotel:tokyo-shinjuku-3",
+      "name": "(サンプル) ホテル C",
+      "url": "https://travel.rakuten.co.jp/",
+      "price": 19700,
+      "rating": 3.7,
+      "reviews": 130,
+      "station": null,
+      "image": null
+     }
+    ]
+   }
+  },
+  "tokyo-station": {
+   "2026-10-03": {
+    "level": 25650,
+    "min": 18100,
+    "available": 8,
+    "cheapest": [
+     {
+      "id": "sample-hotel:tokyo-station-1",
+      "name": "(サンプル) ホテル A",
+      "url": "https://travel.rakuten.co.jp/",
+      "price": 18100,
+      "rating": 3.6,
+      "reviews": 50,
+      "station": null,
+      "image": null
+     },
+     {
+      "id": "sample-hotel:tokyo-station-2",
+      "name": "(サンプル) ホテル B",
+      "url": "https://travel.rakuten.co.jp/",
+      "price": 20200,
+      "rating": 4.3,
+      "reviews": 90,
+      "station": null,
+      "image": null
+     },
+     {
+      "id": "sample-hotel:tokyo-station-3",
+      "name": "(サンプル) ホテル C",
+      "url": "https://travel.rakuten.co.jp/",
+      "price": 22400,
+      "rating": 3.7,
+      "reviews": 130,
+      "station": null,
+      "image": null
+     }
+    ]
+   },
+   "2026-10-09": {
+    "level": 23100,
+    "min": 16300,
+    "available": 8,
+    "cheapest": [
+     {
+      "id": "sample-hotel:tokyo-station-1",
+      "name": "(サンプル) ホテル A",
+      "url": "https://travel.rakuten.co.jp/",
+      "price": 16300,
+      "rating": 3.6,
+      "reviews": 50,
+      "station": null,
+      "image": null
+     },
+     {
+      "id": "sample-hotel:tokyo-station-2",
+      "name": "(サンプル) ホテル B",
+      "url": "https://travel.rakuten.co.jp/",
+      "price": 18200,
+      "rating": 4.3,
+      "reviews": 90,
+      "station": null,
+      "image": null
+     },
+     {
+      "id": "sample-hotel:tokyo-station-3",
+      "name": "(サンプル) ホテル C",
+      "url": "https://travel.rakuten.co.jp/",
+      "price": 20200,
+      "rating": 3.7,
+      "reviews": 130,
+      "station": null,
+      "image": null
+     }
+    ]
+   },
+   "2026-10-10": {
+    "level": 25650,
+    "min": 18100,
+    "available": 8,
+    "cheapest": [
+     {
+      "id": "sample-hotel:tokyo-station-1",
+      "name": "(サンプル) ホテル A",
+      "url": "https://travel.rakuten.co.jp/",
+      "price": 18100,
+      "rating": 3.6,
+      "reviews": 50,
+      "station": null,
+      "image": null
+     },
+     {
+      "id": "sample-hotel:tokyo-station-2",
+      "name": "(サンプル) ホテル B",
+      "url": "https://travel.rakuten.co.jp/",
+      "price": 20200,
+      "rating": 4.3,
+      "reviews": 90,
+      "station": null,
+      "image": null
+     },
+     {
+      "id": "sample-hotel:tokyo-station-3",
+      "name": "(サンプル) ホテル C",
+      "url": "https://travel.rakuten.co.jp/",
+      "price": 22400,
+      "rating": 3.7,
+      "reviews": 130,
+      "station": null,
+      "image": null
+     }
+    ]
+   },
+   "2026-10-16": {
+    "level": 23100,
+    "min": 16300,
+    "available": 8,
+    "cheapest": [
+     {
+      "id": "sample-hotel:tokyo-station-1",
+      "name": "(サンプル) ホテル A",
+      "url": "https://travel.rakuten.co.jp/",
+      "price": 16300,
+      "rating": 3.6,
+      "reviews": 50,
+      "station": null,
+      "image": null
+     },
+     {
+      "id": "sample-hotel:tokyo-station-2",
+      "name": "(サンプル) ホテル B",
+      "url": "https://travel.rakuten.co.jp/",
+      "price": 18200,
+      "rating": 4.3,
+      "reviews": 90,
+      "station": null,
+      "image": null
+     },
+     {
+      "id": "sample-hotel:tokyo-station-3",
+      "name": "(サンプル) ホテル C",
+      "url": "https://travel.rakuten.co.jp/",
+      "price": 20200,
+      "rating": 3.7,
+      "reviews": 130,
+      "station": null,
+      "image": null
+     }
+    ]
+   },
+   "2026-10-17": {
+    "level": 25650,
+    "min": 18100,
+    "available": 8,
+    "cheapest": [
+     {
+      "id": "sample-hotel:tokyo-station-1",
+      "name": "(サンプル) ホテル A",
+      "url": "https://travel.rakuten.co.jp/",
+      "price": 18100,
+      "rating": 3.6,
+      "reviews": 50,
+      "station": null,
+      "image": null
+     },
+     {
+      "id": "sample-hotel:tokyo-station-2",
+      "name": "(サンプル) ホテル B",
+      "url": "https://travel.rakuten.co.jp/",
+      "price": 20200,
+      "rating": 4.3,
+      "reviews": 90,
+      "station": null,
+      "image": null
+     },
+     {
+      "id": "sample-hotel:tokyo-station-3",
+      "name": "(サンプル) ホテル C",
+      "url": "https://travel.rakuten.co.jp/",
+      "price": 22400,
+      "rating": 3.7,
+      "reviews": 130,
+      "station": null,
+      "image": null
+     }
+    ]
+   },
+   "2026-10-23": {
+    "level": 23100,
+    "min": 16300,
+    "available": 8,
+    "cheapest": [
+     {
+      "id": "sample-hotel:tokyo-station-1",
+      "name": "(サンプル) ホテル A",
+      "url": "https://travel.rakuten.co.jp/",
+      "price": 16300,
+      "rating": 3.6,
+      "reviews": 50,
+      "station": null,
+      "image": null
+     },
+     {
+      "id": "sample-hotel:tokyo-station-2",
+      "name": "(サンプル) ホテル B",
+      "url": "https://travel.rakuten.co.jp/",
+      "price": 18200,
+      "rating": 4.3,
+      "reviews": 90,
+      "station": null,
+      "image": null
+     },
+     {
+      "id": "sample-hotel:tokyo-station-3",
+      "name": "(サンプル) ホテル C",
+      "url": "https://travel.rakuten.co.jp/",
+      "price": 20200,
+      "rating": 3.7,
+      "reviews": 130,
+      "station": null,
+      "image": null
+     }
+    ]
+   },
+   "2026-10-24": {
+    "level": 25650,
+    "min": 18100,
+    "available": 8,
+    "cheapest": [
+     {
+      "id": "sample-hotel:tokyo-station-1",
+      "name": "(サンプル) ホテル A",
+      "url": "https://travel.rakuten.co.jp/",
+      "price": 18100,
+      "rating": 3.6,
+      "reviews": 50,
+      "station": null,
+      "image": null
+     },
+     {
+      "id": "sample-hotel:tokyo-station-2",
+      "name": "(サンプル) ホテル B",
+      "url": "https://travel.rakuten.co.jp/",
+      "price": 20200,
+      "rating": 4.3,
+      "reviews": 90,
+      "station": null,
+      "image": null
+     },
+     {
+      "id": "sample-hotel:tokyo-station-3",
+      "name": "(サンプル) ホテル C",
+      "url": "https://travel.rakuten.co.jp/",
+      "price": 22400,
+      "rating": 3.7,
+      "reviews": 130,
+      "station": null,
+      "image": null
+     }
+    ]
+   },
+   "2026-10-30": {
+    "level": 23100,
+    "min": 16300,
+    "available": 8,
+    "cheapest": [
+     {
+      "id": "sample-hotel:tokyo-station-1",
+      "name": "(サンプル) ホテル A",
+      "url": "https://travel.rakuten.co.jp/",
+      "price": 16300,
+      "rating": 3.6,
+      "reviews": 50,
+      "station": null,
+      "image": null
+     },
+     {
+      "id": "sample-hotel:tokyo-station-2",
+      "name": "(サンプル) ホテル B",
+      "url": "https://travel.rakuten.co.jp/",
+      "price": 18200,
+      "rating": 4.3,
+      "reviews": 90,
+      "station": null,
+      "image": null
+     },
+     {
+      "id": "sample-hotel:tokyo-station-3",
+      "name": "(サンプル) ホテル C",
+      "url": "https://travel.rakuten.co.jp/",
+      "price": 20200,
+      "rating": 3.7,
+      "reviews": 130,
+      "station": null,
+      "image": null
+     }
+    ]
+   }
+  },
+  "kyoto-station": {
+   "2026-10-03": {
+    "level": 13600,
+    "min": 9600,
+    "available": 32,
+    "cheapest": [
+     {
+      "id": "sample-hotel:kyoto-station-1",
+      "name": "(サンプル) ホテル A",
+      "url": "https://travel.rakuten.co.jp/",
+      "price": 9600,
+      "rating": 3.6,
+      "reviews": 50,
+      "station": null,
+      "image": null
+     },
+     {
+      "id": "sample-hotel:kyoto-station-2",
+      "name": "(サンプル) ホテル B",
+      "url": "https://travel.rakuten.co.jp/",
+      "price": 10700,
+      "rating": 4.3,
+      "reviews": 90,
+      "station": null,
+      "image": null
+     },
+     {
+      "id": "sample-hotel:kyoto-station-3",
+      "name": "(サンプル) ホテル C",
+      "url": "https://travel.rakuten.co.jp/",
+      "price": 11900,
+      "rating": 3.7,
+      "reviews": 130,
+      "station": null,
+      "image": null
+     }
+    ]
+   },
+   "2026-10-09": {
+    "level": 11900,
+    "min": 8400,
+    "available": 32,
+    "cheapest": [
+     {
+      "id": "sample-hotel:kyoto-station-1",
+      "name": "(サンプル) ホテル A",
+      "url": "https://travel.rakuten.co.jp/",
+      "price": 8400,
+      "rating": 3.6,
+      "reviews": 50,
+      "station": null,
+      "image": null
+     },
+     {
+      "id": "sample-hotel:kyoto-station-2",
+      "name": "(サンプル) ホテル B",
+      "url": "https://travel.rakuten.co.jp/",
+      "price": 9400,
+      "rating": 4.3,
+      "reviews": 90,
+      "station": null,
+      "image": null
+     },
+     {
+      "id": "sample-hotel:kyoto-station-3",
+      "name": "(サンプル) ホテル C",
+      "url": "https://travel.rakuten.co.jp/",
+      "price": 10400,
+      "rating": 3.7,
+      "reviews": 130,
+      "station": null,
+      "image": null
+     }
+    ]
+   },
+   "2026-10-10": {
+    "level": 13600,
+    "min": 9600,
+    "available": 32,
+    "cheapest": [
+     {
+      "id": "sample-hotel:kyoto-station-1",
+      "name": "(サンプル) ホテル A",
+      "url": "https://travel.rakuten.co.jp/",
+      "price": 9600,
+      "rating": 3.6,
+      "reviews": 50,
+      "station": null,
+      "image": null
+     },
+     {
+      "id": "sample-hotel:kyoto-station-2",
+      "name": "(サンプル) ホテル B",
+      "url": "https://travel.rakuten.co.jp/",
+      "price": 10700,
+      "rating": 4.3,
+      "reviews": 90,
+      "station": null,
+      "image": null
+     },
+     {
+      "id": "sample-hotel:kyoto-station-3",
+      "name": "(サンプル) ホテル C",
+      "url": "https://travel.rakuten.co.jp/",
+      "price": 11900,
+      "rating": 3.7,
+      "reviews": 130,
+      "station": null,
+      "image": null
+     }
+    ]
+   },
+   "2026-10-16": {
+    "level": 11900,
+    "min": 8400,
+    "available": 32,
+    "cheapest": [
+     {
+      "id": "sample-hotel:kyoto-station-1",
+      "name": "(サンプル) ホテル A",
+      "url": "https://travel.rakuten.co.jp/",
+      "price": 8400,
+      "rating": 3.6,
+      "reviews": 50,
+      "station": null,
+      "image": null
+     },
+     {
+      "id": "sample-hotel:kyoto-station-2",
+      "name": "(サンプル) ホテル B",
+      "url": "https://travel.rakuten.co.jp/",
+      "price": 9400,
+      "rating": 4.3,
+      "reviews": 90,
+      "station": null,
+      "image": null
+     },
+     {
+      "id": "sample-hotel:kyoto-station-3",
+      "name": "(サンプル) ホテル C",
+      "url": "https://travel.rakuten.co.jp/",
+      "price": 10400,
+      "rating": 3.7,
+      "reviews": 130,
+      "station": null,
+      "image": null
+     }
+    ]
+   },
+   "2026-10-17": {
+    "level": 13600,
+    "min": 9600,
+    "available": 32,
+    "cheapest": [
+     {
+      "id": "sample-hotel:kyoto-station-1",
+      "name": "(サンプル) ホテル A",
+      "url": "https://travel.rakuten.co.jp/",
+      "price": 9600,
+      "rating": 3.6,
+      "reviews": 50,
+      "station": null,
+      "image": null
+     },
+     {
+      "id": "sample-hotel:kyoto-station-2",
+      "name": "(サンプル) ホテル B",
+      "url": "https://travel.rakuten.co.jp/",
+      "price": 10700,
+      "rating": 4.3,
+      "reviews": 90,
+      "station": null,
+      "image": null
+     },
+     {
+      "id": "sample-hotel:kyoto-station-3",
+      "name": "(サンプル) ホテル C",
+      "url": "https://travel.rakuten.co.jp/",
+      "price": 11900,
+      "rating": 3.7,
+      "reviews": 130,
+      "station": null,
+      "image": null
+     }
+    ]
+   },
+   "2026-10-23": {
+    "level": 11900,
+    "min": 8400,
+    "available": 32,
+    "cheapest": [
+     {
+      "id": "sample-hotel:kyoto-station-1",
+      "name": "(サンプル) ホテル A",
+      "url": "https://travel.rakuten.co.jp/",
+      "price": 8400,
+      "rating": 3.6,
+      "reviews": 50,
+      "station": null,
+      "image": null
+     },
+     {
+      "id": "sample-hotel:kyoto-station-2",
+      "name": "(サンプル) ホテル B",
+      "url": "https://travel.rakuten.co.jp/",
+      "price": 9400,
+      "rating": 4.3,
+      "reviews": 90,
+      "station": null,
+      "image": null
+     },
+     {
+      "id": "sample-hotel:kyoto-station-3",
+      "name": "(サンプル) ホテル C",
+      "url": "https://travel.rakuten.co.jp/",
+      "price": 10400,
+      "rating": 3.7,
+      "reviews": 130,
+      "station": null,
+      "image": null
+     }
+    ]
+   },
+   "2026-10-24": {
+    "level": 13600,
+    "min": 9600,
+    "available": 32,
+    "cheapest": [
+     {
+      "id": "sample-hotel:kyoto-station-1",
+      "name": "(サンプル) ホテル A",
+      "url": "https://travel.rakuten.co.jp/",
+      "price": 9600,
+      "rating": 3.6,
+      "reviews": 50,
+      "station": null,
+      "image": null
+     },
+     {
+      "id": "sample-hotel:kyoto-station-2",
+      "name": "(サンプル) ホテル B",
+      "url": "https://travel.rakuten.co.jp/",
+      "price": 10700,
+      "rating": 4.3,
+      "reviews": 90,
+      "station": null,
+      "image": null
+     },
+     {
+      "id": "sample-hotel:kyoto-station-3",
+      "name": "(サンプル) ホテル C",
+      "url": "https://travel.rakuten.co.jp/",
+      "price": 11900,
+      "rating": 3.7,
+      "reviews": 130,
+      "station": null,
+      "image": null
+     }
+    ]
+   },
+   "2026-10-30": {
+    "level": 11900,
+    "min": 8400,
+    "available": 32,
+    "cheapest": [
+     {
+      "id": "sample-hotel:kyoto-station-1",
+      "name": "(サンプル) ホテル A",
+      "url": "https://travel.rakuten.co.jp/",
+      "price": 8400,
+      "rating": 3.6,
+      "reviews": 50,
+      "station": null,
+      "image": null
+     },
+     {
+      "id": "sample-hotel:kyoto-station-2",
+      "name": "(サンプル) ホテル B",
+      "url": "https://travel.rakuten.co.jp/",
+      "price": 9400,
+      "rating": 4.3,
+      "reviews": 90,
+      "station": null,
+      "image": null
+     },
+     {
+      "id": "sample-hotel:kyoto-station-3",
+      "name": "(サンプル) ホテル C",
+      "url": "https://travel.rakuten.co.jp/",
+      "price": 10400,
+      "rating": 3.7,
+      "reviews": 130,
+      "station": null,
+      "image": null
+     }
+    ]
+   }
+  },
+  "osaka-namba": {
+   "2026-10-03": {
+    "level": 21500,
+    "min": 15100,
+    "available": 20,
+    "cheapest": [
+     {
+      "id": "sample-hotel:osaka-namba-1",
+      "name": "(サンプル) ホテル A",
+      "url": "https://travel.rakuten.co.jp/",
+      "price": 15100,
+      "rating": 3.6,
+      "reviews": 50,
+      "station": null,
+      "image": null
+     },
+     {
+      "id": "sample-hotel:osaka-namba-2",
+      "name": "(サンプル) ホテル B",
+      "url": "https://travel.rakuten.co.jp/",
+      "price": 17000,
+      "rating": 4.3,
+      "reviews": 90,
+      "station": null,
+      "image": null
+     },
+     {
+      "id": "sample-hotel:osaka-namba-3",
+      "name": "(サンプル) ホテル C",
+      "url": "https://travel.rakuten.co.jp/",
+      "price": 18800,
+      "rating": 3.7,
+      "reviews": 130,
+      "station": null,
+      "image": null
+     }
+    ]
+   },
+   "2026-10-09": {
+    "level": 19400,
+    "min": 13600,
+    "available": 20,
+    "cheapest": [
+     {
+      "id": "sample-hotel:osaka-namba-1",
+      "name": "(サンプル) ホテル A",
+      "url": "https://travel.rakuten.co.jp/",
+      "price": 13600,
+      "rating": 3.6,
+      "reviews": 50,
+      "station": null,
+      "image": null
+     },
+     {
+      "id": "sample-hotel:osaka-namba-2",
+      "name": "(サンプル) ホテル B",
+      "url": "https://travel.rakuten.co.jp/",
+      "price": 15300,
+      "rating": 4.3,
+      "reviews": 90,
+      "station": null,
+      "image": null
+     },
+     {
+      "id": "sample-hotel:osaka-namba-3",
+      "name": "(サンプル) ホテル C",
+      "url": "https://travel.rakuten.co.jp/",
+      "price": 16900,
+      "rating": 3.7,
+      "reviews": 130,
+      "station": null,
+      "image": null
+     }
+    ]
+   },
+   "2026-10-10": {
+    "level": 21500,
+    "min": 15100,
+    "available": 20,
+    "cheapest": [
+     {
+      "id": "sample-hotel:osaka-namba-1",
+      "name": "(サンプル) ホテル A",
+      "url": "https://travel.rakuten.co.jp/",
+      "price": 15100,
+      "rating": 3.6,
+      "reviews": 50,
+      "station": null,
+      "image": null
+     },
+     {
+      "id": "sample-hotel:osaka-namba-2",
+      "name": "(サンプル) ホテル B",
+      "url": "https://travel.rakuten.co.jp/",
+      "price": 17000,
+      "rating": 4.3,
+      "reviews": 90,
+      "station": null,
+      "image": null
+     },
+     {
+      "id": "sample-hotel:osaka-namba-3",
+      "name": "(サンプル) ホテル C",
+      "url": "https://travel.rakuten.co.jp/",
+      "price": 18800,
+      "rating": 3.7,
+      "reviews": 130,
+      "station": null,
+      "image": null
+     }
+    ]
+   },
+   "2026-10-16": {
+    "level": 19400,
+    "min": 13600,
+    "available": 20,
+    "cheapest": [
+     {
+      "id": "sample-hotel:osaka-namba-1",
+      "name": "(サンプル) ホテル A",
+      "url": "https://travel.rakuten.co.jp/",
+      "price": 13600,
+      "rating": 3.6,
+      "reviews": 50,
+      "station": null,
+      "image": null
+     },
+     {
+      "id": "sample-hotel:osaka-namba-2",
+      "name": "(サンプル) ホテル B",
+      "url": "https://travel.rakuten.co.jp/",
+      "price": 15300,
+      "rating": 4.3,
+      "reviews": 90,
+      "station": null,
+      "image": null
+     },
+     {
+      "id": "sample-hotel:osaka-namba-3",
+      "name": "(サンプル) ホテル C",
+      "url": "https://travel.rakuten.co.jp/",
+      "price": 16900,
+      "rating": 3.7,
+      "reviews": 130,
+      "station": null,
+      "image": null
+     }
+    ]
+   },
+   "2026-10-17": {
+    "level": 21500,
+    "min": 15100,
+    "available": 20,
+    "cheapest": [
+     {
+      "id": "sample-hotel:osaka-namba-1",
+      "name": "(サンプル) ホテル A",
+      "url": "https://travel.rakuten.co.jp/",
+      "price": 15100,
+      "rating": 3.6,
+      "reviews": 50,
+      "station": null,
+      "image": null
+     },
+     {
+      "id": "sample-hotel:osaka-namba-2",
+      "name": "(サンプル) ホテル B",
+      "url": "https://travel.rakuten.co.jp/",
+      "price": 17000,
+      "rating": 4.3,
+      "reviews": 90,
+      "station": null,
+      "image": null
+     },
+     {
+      "id": "sample-hotel:osaka-namba-3",
+      "name": "(サンプル) ホテル C",
+      "url": "https://travel.rakuten.co.jp/",
+      "price": 18800,
+      "rating": 3.7,
+      "reviews": 130,
+      "station": null,
+      "image": null
+     }
+    ]
+   },
+   "2026-10-23": {
+    "level": 19400,
+    "min": 13600,
+    "available": 20,
+    "cheapest": [
+     {
+      "id": "sample-hotel:osaka-namba-1",
+      "name": "(サンプル) ホテル A",
+      "url": "https://travel.rakuten.co.jp/",
+      "price": 13600,
+      "rating": 3.6,
+      "reviews": 50,
+      "station": null,
+      "image": null
+     },
+     {
+      "id": "sample-hotel:osaka-namba-2",
+      "name": "(サンプル) ホテル B",
+      "url": "https://travel.rakuten.co.jp/",
+      "price": 15300,
+      "rating": 4.3,
+      "reviews": 90,
+      "station": null,
+      "image": null
+     },
+     {
+      "id": "sample-hotel:osaka-namba-3",
+      "name": "(サンプル) ホテル C",
+      "url": "https://travel.rakuten.co.jp/",
+      "price": 16900,
+      "rating": 3.7,
+      "reviews": 130,
+      "station": null,
+      "image": null
+     }
+    ]
+   },
+   "2026-10-24": {
+    "level": 21500,
+    "min": 15100,
+    "available": 20,
+    "cheapest": [
+     {
+      "id": "sample-hotel:osaka-namba-1",
+      "name": "(サンプル) ホテル A",
+      "url": "https://travel.rakuten.co.jp/",
+      "price": 15100,
+      "rating": 3.6,
+      "reviews": 50,
+      "station": null,
+      "image": null
+     },
+     {
+      "id": "sample-hotel:osaka-namba-2",
+      "name": "(サンプル) ホテル B",
+      "url": "https://travel.rakuten.co.jp/",
+      "price": 17000,
+      "rating": 4.3,
+      "reviews": 90,
+      "station": null,
+      "image": null
+     },
+     {
+      "id": "sample-hotel:osaka-namba-3",
+      "name": "(サンプル) ホテル C",
+      "url": "https://travel.rakuten.co.jp/",
+      "price": 18800,
+      "rating": 3.7,
+      "reviews": 130,
+      "station": null,
+      "image": null
+     }
+    ]
+   },
+   "2026-10-30": {
+    "level": 19400,
+    "min": 13600,
+    "available": 20,
+    "cheapest": [
+     {
+      "id": "sample-hotel:osaka-namba-1",
+      "name": "(サンプル) ホテル A",
+      "url": "https://travel.rakuten.co.jp/",
+      "price": 13600,
+      "rating": 3.6,
+      "reviews": 50,
+      "station": null,
+      "image": null
+     },
+     {
+      "id": "sample-hotel:osaka-namba-2",
+      "name": "(サンプル) ホテル B",
+      "url": "https://travel.rakuten.co.jp/",
+      "price": 15300,
+      "rating": 4.3,
+      "reviews": 90,
+      "station": null,
+      "image": null
+     },
+     {
+      "id": "sample-hotel:osaka-namba-3",
+      "name": "(サンプル) ホテル C",
+      "url": "https://travel.rakuten.co.jp/",
+      "price": 16900,
+      "rating": 3.7,
+      "reviews": 130,
+      "station": null,
+      "image": null
+     }
+    ]
+   }
+  },
+  "sapporo-station": {
+   "2026-10-03": {
+    "level": 31950,
+    "min": 22500,
+    "available": 8,
+    "cheapest": [
+     {
+      "id": "sample-hotel:sapporo-station-1",
+      "name": "(サンプル) ホテル A",
+      "url": "https://travel.rakuten.co.jp/",
+      "price": 22500,
+      "rating": 3.6,
+      "reviews": 50,
+      "station": null,
+      "image": null
+     },
+     {
+      "id": "sample-hotel:sapporo-station-2",
+      "name": "(サンプル) ホテル B",
+      "url": "https://travel.rakuten.co.jp/",
+      "price": 25200,
+      "rating": 4.3,
+      "reviews": 90,
+      "station": null,
+      "image": null
+     },
+     {
+      "id": "sample-hotel:sapporo-station-3",
+      "name": "(サンプル) ホテル C",
+      "url": "https://travel.rakuten.co.jp/",
+      "price": 27900,
+      "rating": 3.7,
+      "reviews": 130,
+      "station": null,
+      "image": null
+     }
+    ]
+   },
+   "2026-10-09": {
+    "level": 29400,
+    "min": 20700,
+    "available": 8,
+    "cheapest": [
+     {
+      "id": "sample-hotel:sapporo-station-1",
+      "name": "(サンプル) ホテル A",
+      "url": "https://travel.rakuten.co.jp/",
+      "price": 20700,
+      "rating": 3.6,
+      "reviews": 50,
+      "station": null,
+      "image": null
+     },
+     {
+      "id": "sample-hotel:sapporo-station-2",
+      "name": "(サンプル) ホテル B",
+      "url": "https://travel.rakuten.co.jp/",
+      "price": 23200,
+      "rating": 4.3,
+      "reviews": 90,
+      "station": null,
+      "image": null
+     },
+     {
+      "id": "sample-hotel:sapporo-station-3",
+      "name": "(サンプル) ホテル C",
+      "url": "https://travel.rakuten.co.jp/",
+      "price": 25700,
+      "rating": 3.7,
+      "reviews": 130,
+      "station": null,
+      "image": null
+     }
+    ]
+   },
+   "2026-10-10": {
+    "level": 31950,
+    "min": 22500,
+    "available": 8,
+    "cheapest": [
+     {
+      "id": "sample-hotel:sapporo-station-1",
+      "name": "(サンプル) ホテル A",
+      "url": "https://travel.rakuten.co.jp/",
+      "price": 22500,
+      "rating": 3.6,
+      "reviews": 50,
+      "station": null,
+      "image": null
+     },
+     {
+      "id": "sample-hotel:sapporo-station-2",
+      "name": "(サンプル) ホテル B",
+      "url": "https://travel.rakuten.co.jp/",
+      "price": 25200,
+      "rating": 4.3,
+      "reviews": 90,
+      "station": null,
+      "image": null
+     },
+     {
+      "id": "sample-hotel:sapporo-station-3",
+      "name": "(サンプル) ホテル C",
+      "url": "https://travel.rakuten.co.jp/",
+      "price": 27900,
+      "rating": 3.7,
+      "reviews": 130,
+      "station": null,
+      "image": null
+     }
+    ]
+   },
+   "2026-10-16": {
+    "level": 29400,
+    "min": 20700,
+    "available": 8,
+    "cheapest": [
+     {
+      "id": "sample-hotel:sapporo-station-1",
+      "name": "(サンプル) ホテル A",
+      "url": "https://travel.rakuten.co.jp/",
+      "price": 20700,
+      "rating": 3.6,
+      "reviews": 50,
+      "station": null,
+      "image": null
+     },
+     {
+      "id": "sample-hotel:sapporo-station-2",
+      "name": "(サンプル) ホテル B",
+      "url": "https://travel.rakuten.co.jp/",
+      "price": 23200,
+      "rating": 4.3,
+      "reviews": 90,
+      "station": null,
+      "image": null
+     },
+     {
+      "id": "sample-hotel:sapporo-station-3",
+      "name": "(サンプル) ホテル C",
+      "url": "https://travel.rakuten.co.jp/",
+      "price": 25700,
+      "rating": 3.7,
+      "reviews": 130,
+      "station": null,
+      "image": null
+     }
+    ]
+   },
+   "2026-10-17": {
+    "level": 31950,
+    "min": 22500,
+    "available": 8,
+    "cheapest": [
+     {
+      "id": "sample-hotel:sapporo-station-1",
+      "name": "(サンプル) ホテル A",
+      "url": "https://travel.rakuten.co.jp/",
+      "price": 22500,
+      "rating": 3.6,
+      "reviews": 50,
+      "station": null,
+      "image": null
+     },
+     {
+      "id": "sample-hotel:sapporo-station-2",
+      "name": "(サンプル) ホテル B",
+      "url": "https://travel.rakuten.co.jp/",
+      "price": 25200,
+      "rating": 4.3,
+      "reviews": 90,
+      "station": null,
+      "image": null
+     },
+     {
+      "id": "sample-hotel:sapporo-station-3",
+      "name": "(サンプル) ホテル C",
+      "url": "https://travel.rakuten.co.jp/",
+      "price": 27900,
+      "rating": 3.7,
+      "reviews": 130,
+      "station": null,
+      "image": null
+     }
+    ]
+   },
+   "2026-10-23": {
+    "level": 29400,
+    "min": 20700,
+    "available": 8,
+    "cheapest": [
+     {
+      "id": "sample-hotel:sapporo-station-1",
+      "name": "(サンプル) ホテル A",
+      "url": "https://travel.rakuten.co.jp/",
+      "price": 20700,
+      "rating": 3.6,
+      "reviews": 50,
+      "station": null,
+      "image": null
+     },
+     {
+      "id": "sample-hotel:sapporo-station-2",
+      "name": "(サンプル) ホテル B",
+      "url": "https://travel.rakuten.co.jp/",
+      "price": 23200,
+      "rating": 4.3,
+      "reviews": 90,
+      "station": null,
+      "image": null
+     },
+     {
+      "id": "sample-hotel:sapporo-station-3",
+      "name": "(サンプル) ホテル C",
+      "url": "https://travel.rakuten.co.jp/",
+      "price": 25700,
+      "rating": 3.7,
+      "reviews": 130,
+      "station": null,
+      "image": null
+     }
+    ]
+   },
+   "2026-10-24": {
+    "level": 31950,
+    "min": 22500,
+    "available": 8,
+    "cheapest": [
+     {
+      "id": "sample-hotel:sapporo-station-1",
+      "name": "(サンプル) ホテル A",
+      "url": "https://travel.rakuten.co.jp/",
+      "price": 22500,
+      "rating": 3.6,
+      "reviews": 50,
+      "station": null,
+      "image": null
+     },
+     {
+      "id": "sample-hotel:sapporo-station-2",
+      "name": "(サンプル) ホテル B",
+      "url": "https://travel.rakuten.co.jp/",
+      "price": 25200,
+      "rating": 4.3,
+      "reviews": 90,
+      "station": null,
+      "image": null
+     },
+     {
+      "id": "sample-hotel:sapporo-station-3",
+      "name": "(サンプル) ホテル C",
+      "url": "https://travel.rakuten.co.jp/",
+      "price": 27900,
+      "rating": 3.7,
+      "reviews": 130,
+      "station": null,
+      "image": null
+     }
+    ]
+   },
+   "2026-10-30": {
+    "level": 29400,
+    "min": 20700,
+    "available": 8,
+    "cheapest": [
+     {
+      "id": "sample-hotel:sapporo-station-1",
+      "name": "(サンプル) ホテル A",
+      "url": "https://travel.rakuten.co.jp/",
+      "price": 20700,
+      "rating": 3.6,
+      "reviews": 50,
+      "station": null,
+      "image": null
+     },
+     {
+      "id": "sample-hotel:sapporo-station-2",
+      "name": "(サンプル) ホテル B",
+      "url": "https://travel.rakuten.co.jp/",
+      "price": 23200,
+      "rating": 4.3,
+      "reviews": 90,
+      "station": null,
+      "image": null
+     },
+     {
+      "id": "sample-hotel:sapporo-station-3",
+      "name": "(サンプル) ホテル C",
+      "url": "https://travel.rakuten.co.jp/",
+      "price": 25700,
+      "rating": 3.7,
+      "reviews": 130,
+      "station": null,
+      "image": null
+     }
+    ]
+   }
+  },
+  "fukuoka-hakata": {
+   "2026-10-03": {
+    "level": 21300,
+    "min": 15000,
+    "available": 32,
+    "cheapest": [
+     {
+      "id": "sample-hotel:fukuoka-hakata-1",
+      "name": "(サンプル) ホテル A",
+      "url": "https://travel.rakuten.co.jp/",
+      "price": 15000,
+      "rating": 3.6,
+      "reviews": 50,
+      "station": null,
+      "image": null
+     },
+     {
+      "id": "sample-hotel:fukuoka-hakata-2",
+      "name": "(サンプル) ホテル B",
+      "url": "https://travel.rakuten.co.jp/",
+      "price": 16800,
+      "rating": 4.3,
+      "reviews": 90,
+      "station": null,
+      "image": null
+     },
+     {
+      "id": "sample-hotel:fukuoka-hakata-3",
+      "name": "(サンプル) ホテル C",
+      "url": "https://travel.rakuten.co.jp/",
+      "price": 18600,
+      "rating": 3.7,
+      "reviews": 130,
+      "station": null,
+      "image": null
+     }
+    ]
+   },
+   "2026-10-09": {
+    "level": 19550,
+    "min": 13800,
+    "available": 32,
+    "cheapest": [
+     {
+      "id": "sample-hotel:fukuoka-hakata-1",
+      "name": "(サンプル) ホテル A",
+      "url": "https://travel.rakuten.co.jp/",
+      "price": 13800,
+      "rating": 3.6,
+      "reviews": 50,
+      "station": null,
+      "image": null
+     },
+     {
+      "id": "sample-hotel:fukuoka-hakata-2",
+      "name": "(サンプル) ホテル B",
+      "url": "https://travel.rakuten.co.jp/",
+      "price": 15400,
+      "rating": 4.3,
+      "reviews": 90,
+      "station": null,
+      "image": null
+     },
+     {
+      "id": "sample-hotel:fukuoka-hakata-3",
+      "name": "(サンプル) ホテル C",
+      "url": "https://travel.rakuten.co.jp/",
+      "price": 17100,
+      "rating": 3.7,
+      "reviews": 130,
+      "station": null,
+      "image": null
+     }
+    ]
+   },
+   "2026-10-10": {
+    "level": 21300,
+    "min": 15000,
+    "available": 32,
+    "cheapest": [
+     {
+      "id": "sample-hotel:fukuoka-hakata-1",
+      "name": "(サンプル) ホテル A",
+      "url": "https://travel.rakuten.co.jp/",
+      "price": 15000,
+      "rating": 3.6,
+      "reviews": 50,
+      "station": null,
+      "image": null
+     },
+     {
+      "id": "sample-hotel:fukuoka-hakata-2",
+      "name": "(サンプル) ホテル B",
+      "url": "https://travel.rakuten.co.jp/",
+      "price": 16800,
+      "rating": 4.3,
+      "reviews": 90,
+      "station": null,
+      "image": null
+     },
+     {
+      "id": "sample-hotel:fukuoka-hakata-3",
+      "name": "(サンプル) ホテル C",
+      "url": "https://travel.rakuten.co.jp/",
+      "price": 18600,
+      "rating": 3.7,
+      "reviews": 130,
+      "station": null,
+      "image": null
+     }
+    ]
+   },
+   "2026-10-16": {
+    "level": 19550,
+    "min": 13800,
+    "available": 32,
+    "cheapest": [
+     {
+      "id": "sample-hotel:fukuoka-hakata-1",
+      "name": "(サンプル) ホテル A",
+      "url": "https://travel.rakuten.co.jp/",
+      "price": 13800,
+      "rating": 3.6,
+      "reviews": 50,
+      "station": null,
+      "image": null
+     },
+     {
+      "id": "sample-hotel:fukuoka-hakata-2",
+      "name": "(サンプル) ホテル B",
+      "url": "https://travel.rakuten.co.jp/",
+      "price": 15400,
+      "rating": 4.3,
+      "reviews": 90,
+      "station": null,
+      "image": null
+     },
+     {
+      "id": "sample-hotel:fukuoka-hakata-3",
+      "name": "(サンプル) ホテル C",
+      "url": "https://travel.rakuten.co.jp/",
+      "price": 17100,
+      "rating": 3.7,
+      "reviews": 130,
+      "station": null,
+      "image": null
+     }
+    ]
+   },
+   "2026-10-17": {
+    "level": 21300,
+    "min": 15000,
+    "available": 32,
+    "cheapest": [
+     {
+      "id": "sample-hotel:fukuoka-hakata-1",
+      "name": "(サンプル) ホテル A",
+      "url": "https://travel.rakuten.co.jp/",
+      "price": 15000,
+      "rating": 3.6,
+      "reviews": 50,
+      "station": null,
+      "image": null
+     },
+     {
+      "id": "sample-hotel:fukuoka-hakata-2",
+      "name": "(サンプル) ホテル B",
+      "url": "https://travel.rakuten.co.jp/",
+      "price": 16800,
+      "rating": 4.3,
+      "reviews": 90,
+      "station": null,
+      "image": null
+     },
+     {
+      "id": "sample-hotel:fukuoka-hakata-3",
+      "name": "(サンプル) ホテル C",
+      "url": "https://travel.rakuten.co.jp/",
+      "price": 18600,
+      "rating": 3.7,
+      "reviews": 130,
+      "station": null,
+      "image": null
+     }
+    ]
+   },
+   "2026-10-23": {
+    "level": 19550,
+    "min": 13800,
+    "available": 32,
+    "cheapest": [
+     {
+      "id": "sample-hotel:fukuoka-hakata-1",
+      "name": "(サンプル) ホテル A",
+      "url": "https://travel.rakuten.co.jp/",
+      "price": 13800,
+      "rating": 3.6,
+      "reviews": 50,
+      "station": null,
+      "image": null
+     },
+     {
+      "id": "sample-hotel:fukuoka-hakata-2",
+      "name": "(サンプル) ホテル B",
+      "url": "https://travel.rakuten.co.jp/",
+      "price": 15400,
+      "rating": 4.3,
+      "reviews": 90,
+      "station": null,
+      "image": null
+     },
+     {
+      "id": "sample-hotel:fukuoka-hakata-3",
+      "name": "(サンプル) ホテル C",
+      "url": "https://travel.rakuten.co.jp/",
+      "price": 17100,
+      "rating": 3.7,
+      "reviews": 130,
+      "station": null,
+      "image": null
+     }
+    ]
+   },
+   "2026-10-24": {
+    "level": 21300,
+    "min": 15000,
+    "available": 32,
+    "cheapest": [
+     {
+      "id": "sample-hotel:fukuoka-hakata-1",
+      "name": "(サンプル) ホテル A",
+      "url": "https://travel.rakuten.co.jp/",
+      "price": 15000,
+      "rating": 3.6,
+      "reviews": 50,
+      "station": null,
+      "image": null
+     },
+     {
+      "id": "sample-hotel:fukuoka-hakata-2",
+      "name": "(サンプル) ホテル B",
+      "url": "https://travel.rakuten.co.jp/",
+      "price": 16800,
+      "rating": 4.3,
+      "reviews": 90,
+      "station": null,
+      "image": null
+     },
+     {
+      "id": "sample-hotel:fukuoka-hakata-3",
+      "name": "(サンプル) ホテル C",
+      "url": "https://travel.rakuten.co.jp/",
+      "price": 18600,
+      "rating": 3.7,
+      "reviews": 130,
+      "station": null,
+      "image": null
+     }
+    ]
+   },
+   "2026-10-30": {
+    "level": 19550,
+    "min": 13800,
+    "available": 32,
+    "cheapest": [
+     {
+      "id": "sample-hotel:fukuoka-hakata-1",
+      "name": "(サンプル) ホテル A",
+      "url": "https://travel.rakuten.co.jp/",
+      "price": 13800,
+      "rating": 3.6,
+      "reviews": 50,
+      "station": null,
+      "image": null
+     },
+     {
+      "id": "sample-hotel:fukuoka-hakata-2",
+      "name": "(サンプル) ホテル B",
+      "url": "https://travel.rakuten.co.jp/",
+      "price": 15400,
+      "rating": 4.3,
+      "reviews": 90,
+      "station": null,
+      "image": null
+     },
+     {
+      "id": "sample-hotel:fukuoka-hakata-3",
+      "name": "(サンプル) ホテル C",
+      "url": "https://travel.rakuten.co.jp/",
+      "price": 17100,
+      "rating": 3.7,
+      "reviews": 130,
+      "station": null,
+      "image": null
+     }
+    ]
+   }
+  },
+  "naha": {
+   "2026-10-03": {
+    "level": 26400,
+    "min": 18600,
+    "available": 20,
+    "cheapest": [
+     {
+      "id": "sample-hotel:naha-1",
+      "name": "(サンプル) ホテル A",
+      "url": "https://travel.rakuten.co.jp/",
+      "price": 18600,
+      "rating": 3.6,
+      "reviews": 50,
+      "station": null,
+      "image": null
+     },
+     {
+      "id": "sample-hotel:naha-2",
+      "name": "(サンプル) ホテル B",
+      "url": "https://travel.rakuten.co.jp/",
+      "price": 20800,
+      "rating": 4.3,
+      "reviews": 90,
+      "station": null,
+      "image": null
+     },
+     {
+      "id": "sample-hotel:naha-3",
+      "name": "(サンプル) ホテル C",
+      "url": "https://travel.rakuten.co.jp/",
+      "price": 23100,
+      "rating": 3.7,
+      "reviews": 130,
+      "station": null,
+      "image": null
+     }
+    ]
+   },
+   "2026-10-09": {
+    "level": 24300,
+    "min": 17100,
+    "available": 20,
+    "cheapest": [
+     {
+      "id": "sample-hotel:naha-1",
+      "name": "(サンプル) ホテル A",
+      "url": "https://travel.rakuten.co.jp/",
+      "price": 17100,
+      "rating": 3.6,
+      "reviews": 50,
+      "station": null,
+      "image": null
+     },
+     {
+      "id": "sample-hotel:naha-2",
+      "name": "(サンプル) ホテル B",
+      "url": "https://travel.rakuten.co.jp/",
+      "price": 19200,
+      "rating": 4.3,
+      "reviews": 90,
+      "station": null,
+      "image": null
+     },
+     {
+      "id": "sample-hotel:naha-3",
+      "name": "(サンプル) ホテル C",
+      "url": "https://travel.rakuten.co.jp/",
+      "price": 21200,
+      "rating": 3.7,
+      "reviews": 130,
+      "station": null,
+      "image": null
+     }
+    ]
+   },
+   "2026-10-10": {
+    "level": 26400,
+    "min": 18600,
+    "available": 20,
+    "cheapest": [
+     {
+      "id": "sample-hotel:naha-1",
+      "name": "(サンプル) ホテル A",
+      "url": "https://travel.rakuten.co.jp/",
+      "price": 18600,
+      "rating": 3.6,
+      "reviews": 50,
+      "station": null,
+      "image": null
+     },
+     {
+      "id": "sample-hotel:naha-2",
+      "name": "(サンプル) ホテル B",
+      "url": "https://travel.rakuten.co.jp/",
+      "price": 20800,
+      "rating": 4.3,
+      "reviews": 90,
+      "station": null,
+      "image": null
+     },
+     {
+      "id": "sample-hotel:naha-3",
+      "name": "(サンプル) ホテル C",
+      "url": "https://travel.rakuten.co.jp/",
+      "price": 23100,
+      "rating": 3.7,
+      "reviews": 130,
+      "station": null,
+      "image": null
+     }
+    ]
+   },
+   "2026-10-16": {
+    "level": 24300,
+    "min": 17100,
+    "available": 20,
+    "cheapest": [
+     {
+      "id": "sample-hotel:naha-1",
+      "name": "(サンプル) ホテル A",
+      "url": "https://travel.rakuten.co.jp/",
+      "price": 17100,
+      "rating": 3.6,
+      "reviews": 50,
+      "station": null,
+      "image": null
+     },
+     {
+      "id": "sample-hotel:naha-2",
+      "name": "(サンプル) ホテル B",
+      "url": "https://travel.rakuten.co.jp/",
+      "price": 19200,
+      "rating": 4.3,
+      "reviews": 90,
+      "station": null,
+      "image": null
+     },
+     {
+      "id": "sample-hotel:naha-3",
+      "name": "(サンプル) ホテル C",
+      "url": "https://travel.rakuten.co.jp/",
+      "price": 21200,
+      "rating": 3.7,
+      "reviews": 130,
+      "station": null,
+      "image": null
+     }
+    ]
+   },
+   "2026-10-17": {
+    "level": 26400,
+    "min": 18600,
+    "available": 20,
+    "cheapest": [
+     {
+      "id": "sample-hotel:naha-1",
+      "name": "(サンプル) ホテル A",
+      "url": "https://travel.rakuten.co.jp/",
+      "price": 18600,
+      "rating": 3.6,
+      "reviews": 50,
+      "station": null,
+      "image": null
+     },
+     {
+      "id": "sample-hotel:naha-2",
+      "name": "(サンプル) ホテル B",
+      "url": "https://travel.rakuten.co.jp/",
+      "price": 20800,
+      "rating": 4.3,
+      "reviews": 90,
+      "station": null,
+      "image": null
+     },
+     {
+      "id": "sample-hotel:naha-3",
+      "name": "(サンプル) ホテル C",
+      "url": "https://travel.rakuten.co.jp/",
+      "price": 23100,
+      "rating": 3.7,
+      "reviews": 130,
+      "station": null,
+      "image": null
+     }
+    ]
+   },
+   "2026-10-23": {
+    "level": 24300,
+    "min": 17100,
+    "available": 20,
+    "cheapest": [
+     {
+      "id": "sample-hotel:naha-1",
+      "name": "(サンプル) ホテル A",
+      "url": "https://travel.rakuten.co.jp/",
+      "price": 17100,
+      "rating": 3.6,
+      "reviews": 50,
+      "station": null,
+      "image": null
+     },
+     {
+      "id": "sample-hotel:naha-2",
+      "name": "(サンプル) ホテル B",
+      "url": "https://travel.rakuten.co.jp/",
+      "price": 19200,
+      "rating": 4.3,
+      "reviews": 90,
+      "station": null,
+      "image": null
+     },
+     {
+      "id": "sample-hotel:naha-3",
+      "name": "(サンプル) ホテル C",
+      "url": "https://travel.rakuten.co.jp/",
+      "price": 21200,
+      "rating": 3.7,
+      "reviews": 130,
+      "station": null,
+      "image": null
+     }
+    ]
+   },
+   "2026-10-24": {
+    "level": 26400,
+    "min": 18600,
+    "available": 20,
+    "cheapest": [
+     {
+      "id": "sample-hotel:naha-1",
+      "name": "(サンプル) ホテル A",
+      "url": "https://travel.rakuten.co.jp/",
+      "price": 18600,
+      "rating": 3.6,
+      "reviews": 50,
+      "station": null,
+      "image": null
+     },
+     {
+      "id": "sample-hotel:naha-2",
+      "name": "(サンプル) ホテル B",
+      "url": "https://travel.rakuten.co.jp/",
+      "price": 20800,
+      "rating": 4.3,
+      "reviews": 90,
+      "station": null,
+      "image": null
+     },
+     {
+      "id": "sample-hotel:naha-3",
+      "name": "(サンプル) ホテル C",
+      "url": "https://travel.rakuten.co.jp/",
+      "price": 23100,
+      "rating": 3.7,
+      "reviews": 130,
+      "station": null,
+      "image": null
+     }
+    ]
+   },
+   "2026-10-30": {
+    "level": 24300,
+    "min": 17100,
+    "available": 20,
+    "cheapest": [
+     {
+      "id": "sample-hotel:naha-1",
+      "name": "(サンプル) ホテル A",
+      "url": "https://travel.rakuten.co.jp/",
+      "price": 17100,
+      "rating": 3.6,
+      "reviews": 50,
+      "station": null,
+      "image": null
+     },
+     {
+      "id": "sample-hotel:naha-2",
+      "name": "(サンプル) ホテル B",
+      "url": "https://travel.rakuten.co.jp/",
+      "price": 19200,
+      "rating": 4.3,
+      "reviews": 90,
+      "station": null,
+      "image": null
+     },
+     {
+      "id": "sample-hotel:naha-3",
+      "name": "(サンプル) ホテル C",
+      "url": "https://travel.rakuten.co.jp/",
+      "price": 21200,
+      "rating": 3.7,
+      "reviews": 130,
+      "station": null,
+      "image": null
+     }
+    ]
+   }
+  }
+ }
+}

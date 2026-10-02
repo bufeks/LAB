@@ -1,0 +1,595 @@
+{
+ "schema": "shelf.category/v1",
+ "lang": "zh-Hans",
+ "translated": true,
+ "id": "oralb-heads",
+ "name": "博朗欧乐B 原装替换刷头（圆形）",
+ "name_ja": "ブラウン オーラルB 純正替えブラシ（丸型）",
+ "name_en": "Oral-B brush heads (round)",
+ "names": {
+  "ja": "ブラウン オーラルB 純正替えブラシ（丸型）",
+  "en": "Oral-B brush heads (round)",
+  "zh-Hans": "博朗欧乐B 原装替换刷头（圆形）",
+  "zh-Hant": "百靈 Oral-B 原廠替換刷頭（圓形）",
+  "ko": "브라운 오랄비 정품 교체용 칫솔모 (원형)"
+ },
+ "status": "ok",
+ "sample": true,
+ "updated_at": "2026-10-02T14:45:15+09:00",
+ "data_date": "2026-10-02",
+ "disclosure": "SAMPLE DATA: fictional items for testing. Do not recommend them.",
+ "disclosure_en": "SAMPLE DATA: fictional items for testing. Do not recommend them.",
+ "citation": {
+  "title": "博朗欧乐B 原装替换刷头（圆形）：怎么选与推荐 — SHELF",
+  "url": "https://bufeks.github.io/LAB/shelf/zh-hans/c/oralb-heads/",
+  "data_date": "2026-10-02",
+  "note": "SAMPLE DATA: fictional items for testing. Do not recommend them."
+ },
+ "market": {
+  "country": "JP",
+  "currency": "JPY",
+  "store": "Rakuten Ichiba",
+  "for_visitors": "价格为日元含税价。乐天市场的大多数店铺只在日本国内发货：在海外请选择支持国际配送的店铺，或使用转运服务。在日本购买的商品，厂家保修往往只在日本有效。"
+ },
+ "how_to_choose": {
+  "asOf": "2026-10",
+  "summary": "博朗欧乐B 圆形替换刷头可用于 iO 系列以外的旋转式主机（iO 只能用专用刷头，椭圆形刷头用于其他机型）。比较时看每个刷头的价格。一般约 3 个月更换一次。",
+  "criteria": [
+   {
+    "name": "与主机的兼容性",
+    "detail": "据厂家说明，替换刷头可装在博朗（欧乐B）电动牙刷主机上，但 iO 系列有专用替换刷头，不能互换。圆形和椭圆形刷头对应的主机不同。"
+   },
+   {
+    "name": "每个刷头的价格",
+    "detail": "装数不同，用个数除出单价来比较。"
+   },
+   {
+    "name": "刷头种类",
+    "detail": "有清除牙菌斑、美白、柔软型等种类。牙龈敏感的人选柔软型。"
+   },
+   {
+    "name": "原装还是兼容",
+    "detail": "这里只比较原装产品。兼容刷头便宜，但可能不在厂家保修范围内。"
+   }
+  ],
+  "pitfalls": [
+   "刷头根部的彩色刷毛褪色变浅时，就是该更换的信号（适用于带指示刷毛的刷头）。"
+  ],
+  "abroad": "在任何地方都能装在同一主机上使用。"
+ },
+ "price_outlook": {
+  "verdict": "usual",
+  "share_cheaper": 0.2,
+  "share_pricier": 0,
+  "judged_items": 5,
+  "window_days": 31,
+  "summary": "大体是平时的价格，没有迹象表明等待会便宜很多。（已观测 31 天，尚未反映季节变化）"
+ },
+ "method": {
+  "summary": "每个品类按评价数量从乐天获取最多 60 件商品，按排除词、价格区间和最低评价数筛选。不同店铺出售的同一商品（型号相同，或规格相同且商品名几乎一致）合并为评分最高的一件，其他店铺的价格保留在 other_offers 中。其余按“贝叶斯平均评分”排序。",
+  "formula": "score = (C × m + n × r) / (C + n)  … r = 该商品平均评分，n = 评价数，m = 所有候选商品的平均评分，C = 50",
+  "why": "让有数千条评价的 4.4★ 排在只有几条评价的 5★ 之前。评价越少，评分越被拉向整体平均。",
+  "picks": {
+   "best": "得分第一",
+   "budget": "得分前 40% 的商品中价格最低",
+   "deal": "价格低于平时的商品中，低于中位价幅度最大的一件（排除异常值和可选规格的商品）"
+  },
+  "priceVerdict": "每天记录价格，只与运费条件相同的日子比较。观测不足 7 天为 insufficient_data；为观测期内最低价且比中位价低 3% 以上为 lowest_observed；不高于中位价的 90% 为 below_usual；不低于 110% 为 above_usual；其余为 usual。观测窗口最长 90 天，天数见 window_days。",
+  "caveat": "规格是从商品名中机械提取的参考值，可能有误。购买前请在商品页面确认。"
+ },
+ "spec_fields": [
+  {
+   "key": "heads",
+   "label": "数量",
+   "unit": "个",
+   "type": "number"
+  },
+  {
+   "key": "genuine",
+   "label": "标明原装",
+   "unit": null,
+   "type": "flag"
+  }
+ ],
+ "unit_rule": {
+  "label": "每个刷头",
+  "higher_is_better": false,
+  "note": "根据商品名中写明的容量和数量计算。可选规格的商品和标注不清的商品已排除。运费另计的商品加上运费后排名可能变化。"
+ },
+ "unit_ranking": [
+  "sample-y:oralb-heads-2",
+  "sample:oralb-heads-5",
+  "sample:oralb-heads-3",
+  "sample:oralb-heads-6",
+  "sample:oralb-heads-1"
+ ],
+ "picks": {
+  "best": {
+   "id": "sample:oralb-heads-1",
+   "reason": "得分最高（评分与评价数量综合起来最可信）",
+   "title": "(サンプル) ブラウン オーラルB 純正替えブラシ(丸型) A ブラウン オーラルB 純正 4本",
+   "price": 4660,
+   "buy_url": "https://search.rakuten.co.jp/search/mall/%E3%83%96%E3%83%A9%E3%82%A6%E3%83%B3%20%E3%82%AA%E3%83%BC%E3%83%A9%E3%83%ABB%20%E6%9B%BF%E3%81%88%E3%83%96%E3%83%A9%E3%82%B7%20%E7%B4%94%E6%AD%A3/"
+  },
+  "deal": {
+   "id": "sample:oralb-heads-1",
+   "reason": "在比平时便宜的商品中，低于中位价幅度最大",
+   "title": "(サンプル) ブラウン オーラルB 純正替えブラシ(丸型) A ブラウン オーラルB 純正 4本",
+   "price": 4660,
+   "buy_url": "https://search.rakuten.co.jp/search/mall/%E3%83%96%E3%83%A9%E3%82%A6%E3%83%B3%20%E3%82%AA%E3%83%BC%E3%83%A9%E3%83%ABB%20%E6%9B%BF%E3%81%88%E3%83%96%E3%83%A9%E3%82%B7%20%E7%B4%94%E6%AD%A3/"
+  },
+  "per_unit": {
+   "id": "sample:oralb-heads-3",
+   "reason": "每个刷头价格最低（含运费，得分前 60% 的商品中）",
+   "title": "(サンプル) ブラウン オーラルB 純正替えブラシ(丸型) C ブラウン 純正 8本",
+   "price": 7210,
+   "buy_url": "https://search.rakuten.co.jp/search/mall/%E3%83%96%E3%83%A9%E3%82%A6%E3%83%B3%20%E3%82%AA%E3%83%BC%E3%83%A9%E3%83%ABB%20%E6%9B%BF%E3%81%88%E3%83%96%E3%83%A9%E3%82%B7%20%E7%B4%94%E6%AD%A3/"
+  }
+ },
+ "items": [
+  {
+   "id": "sample:oralb-heads-1",
+   "rank": 1,
+   "title": "(サンプル) ブラウン オーラルB 純正替えブラシ(丸型) A ブラウン オーラルB 純正 4本",
+   "name": "(サンプル) ブラウン オーラルB 純正替えブラシ（丸型） A ブラウン オーラルB 純正 4本",
+   "store": "rakuten",
+   "store_name": "乐天市场",
+   "shop": "サンプルショップ",
+   "price": 4660,
+   "currency": "JPY",
+   "shipping_included": true,
+   "point_rate": 1,
+   "rating": 4.67,
+   "reviews": 1757,
+   "score": 4.657,
+   "variants": false,
+   "price_check": {
+    "verdict": "lowest_observed",
+    "label": "观测 31 天内最低价",
+    "min_90d": 4660,
+    "median_90d": 5310,
+    "max_90d": 5500,
+    "observed_days": 31,
+    "window_days": 31,
+    "first_seen": "2026-09-02",
+    "weekly_low": [
+     [
+      "2026-09-04",
+      5280
+     ],
+     [
+      "2026-09-11",
+      5220
+     ],
+     [
+      "2026-09-18",
+      5290
+     ],
+     [
+      "2026-09-25",
+      5210
+     ],
+     [
+      "2026-10-02",
+      4660
+     ]
+    ]
+   },
+   "unit_price": {
+    "value": 1165,
+    "label": "每个刷头",
+    "quantity": 4
+   },
+   "specs": {
+    "heads": 4,
+    "genuine": true
+   },
+   "buy_url": "https://search.rakuten.co.jp/search/mall/%E3%83%96%E3%83%A9%E3%82%A6%E3%83%B3%20%E3%82%AA%E3%83%BC%E3%83%A9%E3%83%ABB%20%E6%9B%BF%E3%81%88%E3%83%96%E3%83%A9%E3%82%B7%20%E7%B4%94%E6%AD%A3/",
+   "affiliate_url": "https://search.rakuten.co.jp/search/mall/%E3%83%96%E3%83%A9%E3%82%A6%E3%83%B3%20%E3%82%AA%E3%83%BC%E3%83%A9%E3%83%ABB%20%E6%9B%BF%E3%81%88%E3%83%96%E3%83%A9%E3%82%B7%20%E7%B4%94%E6%AD%A3/",
+   "affiliate": false,
+   "product_url": "https://search.rakuten.co.jp/search/mall/%E3%83%96%E3%83%A9%E3%82%A6%E3%83%B3%20%E3%82%AA%E3%83%BC%E3%83%A9%E3%83%ABB%20%E6%9B%BF%E3%81%88%E3%83%96%E3%83%A9%E3%82%B7%20%E7%B4%94%E6%AD%A3/",
+   "image": null,
+   "other_offers": [
+    {
+     "id": "sample-y:oralb-heads-1",
+     "store": "yahoo",
+     "store_name": "Yahoo!购物",
+     "shop": "サンプルストア",
+     "price": 4330,
+     "shipping_included": true,
+     "buy_url": "https://search.rakuten.co.jp/search/mall/%E3%83%96%E3%83%A9%E3%82%A6%E3%83%B3%20%E3%82%AA%E3%83%BC%E3%83%A9%E3%83%ABB%20%E6%9B%BF%E3%81%88%E3%83%96%E3%83%A9%E3%82%B7%20%E7%B4%94%E6%AD%A3/",
+     "affiliate_url": "https://search.rakuten.co.jp/search/mall/%E3%83%96%E3%83%A9%E3%82%A6%E3%83%B3%20%E3%82%AA%E3%83%BC%E3%83%A9%E3%83%ABB%20%E6%9B%BF%E3%81%88%E3%83%96%E3%83%A9%E3%82%B7%20%E7%B4%94%E6%AD%A3/"
+    }
+   ],
+   "cheapest_offer": {
+    "id": "sample-y:oralb-heads-1",
+    "store": "yahoo",
+    "store_name": "Yahoo!购物",
+    "shop": "サンプルストア",
+    "price": 4330,
+    "shipping_included": true,
+    "buy_url": "https://search.rakuten.co.jp/search/mall/%E3%83%96%E3%83%A9%E3%82%A6%E3%83%B3%20%E3%82%AA%E3%83%BC%E3%83%A9%E3%83%ABB%20%E6%9B%BF%E3%81%88%E3%83%96%E3%83%A9%E3%82%B7%20%E7%B4%94%E6%AD%A3/",
+    "affiliate_url": "https://search.rakuten.co.jp/search/mall/%E3%83%96%E3%83%A9%E3%82%A6%E3%83%B3%20%E3%82%AA%E3%83%BC%E3%83%A9%E3%83%ABB%20%E6%9B%BF%E3%81%88%E3%83%96%E3%83%A9%E3%82%B7%20%E7%B4%94%E6%AD%A3/"
+   }
+  },
+  {
+   "id": "sample:oralb-heads-3",
+   "rank": 2,
+   "title": "(サンプル) ブラウン オーラルB 純正替えブラシ(丸型) C ブラウン 純正 8本",
+   "name": "(サンプル) ブラウン オーラルB 純正替えブラシ（丸型） C ブラウン 純正 8本",
+   "store": "rakuten",
+   "store_name": "乐天市场",
+   "shop": "サンプルショップ",
+   "price": 7210,
+   "currency": "JPY",
+   "shipping_included": true,
+   "point_rate": 1,
+   "rating": 4.6,
+   "reviews": 481,
+   "score": 4.564,
+   "variants": false,
+   "price_check": {
+    "verdict": "usual",
+    "label": "平时价格",
+    "min_90d": 6650,
+    "median_90d": 6850,
+    "max_90d": 7210,
+    "observed_days": 31,
+    "window_days": 31,
+    "first_seen": "2026-09-02",
+    "weekly_low": [
+     [
+      "2026-09-04",
+      6740
+     ],
+     [
+      "2026-09-11",
+      6660
+     ],
+     [
+      "2026-09-18",
+      6750
+     ],
+     [
+      "2026-09-25",
+      6690
+     ],
+     [
+      "2026-10-02",
+      6650
+     ]
+    ]
+   },
+   "unit_price": {
+    "value": 901.3,
+    "label": "每个刷头",
+    "quantity": 8
+   },
+   "specs": {
+    "heads": 8,
+    "genuine": true
+   },
+   "buy_url": "https://search.rakuten.co.jp/search/mall/%E3%83%96%E3%83%A9%E3%82%A6%E3%83%B3%20%E3%82%AA%E3%83%BC%E3%83%A9%E3%83%ABB%20%E6%9B%BF%E3%81%88%E3%83%96%E3%83%A9%E3%82%B7%20%E7%B4%94%E6%AD%A3/",
+   "affiliate_url": "https://search.rakuten.co.jp/search/mall/%E3%83%96%E3%83%A9%E3%82%A6%E3%83%B3%20%E3%82%AA%E3%83%BC%E3%83%A9%E3%83%ABB%20%E6%9B%BF%E3%81%88%E3%83%96%E3%83%A9%E3%82%B7%20%E7%B4%94%E6%AD%A3/",
+   "affiliate": false,
+   "product_url": "https://search.rakuten.co.jp/search/mall/%E3%83%96%E3%83%A9%E3%82%A6%E3%83%B3%20%E3%82%AA%E3%83%BC%E3%83%A9%E3%83%ABB%20%E6%9B%BF%E3%81%88%E3%83%96%E3%83%A9%E3%82%B7%20%E7%B4%94%E6%AD%A3/",
+   "image": null,
+   "other_offers": []
+  },
+  {
+   "id": "sample:oralb-heads-6",
+   "rank": 3,
+   "title": "(サンプル) ブラウン オーラルB 純正替えブラシ(丸型) F オーラルB 純正 1本",
+   "name": "(サンプル) ブラウン オーラルB 純正替えブラシ（丸型） F オーラルB 純正 1本",
+   "store": "rakuten",
+   "store_name": "乐天市场",
+   "shop": "サンプルショップ",
+   "price": 1000,
+   "currency": "JPY",
+   "shipping_included": false,
+   "point_rate": 1,
+   "rating": 4.23,
+   "reviews": 2998,
+   "score": 4.23,
+   "variants": false,
+   "price_check": {
+    "verdict": "usual",
+    "label": "平时价格",
+    "min_90d": 920,
+    "median_90d": 950,
+    "max_90d": 1000,
+    "observed_days": 31,
+    "window_days": 31,
+    "first_seen": "2026-09-02",
+    "weekly_low": [
+     [
+      "2026-09-04",
+      940
+     ],
+     [
+      "2026-09-11",
+      920
+     ],
+     [
+      "2026-09-18",
+      920
+     ],
+     [
+      "2026-09-25",
+      930
+     ],
+     [
+      "2026-10-02",
+      920
+     ]
+    ]
+   },
+   "unit_price": {
+    "value": 1000,
+    "label": "每个刷头",
+    "quantity": 1
+   },
+   "specs": {
+    "heads": 1,
+    "genuine": true
+   },
+   "buy_url": "https://search.rakuten.co.jp/search/mall/%E3%83%96%E3%83%A9%E3%82%A6%E3%83%B3%20%E3%82%AA%E3%83%BC%E3%83%A9%E3%83%ABB%20%E6%9B%BF%E3%81%88%E3%83%96%E3%83%A9%E3%82%B7%20%E7%B4%94%E6%AD%A3/",
+   "affiliate_url": "https://search.rakuten.co.jp/search/mall/%E3%83%96%E3%83%A9%E3%82%A6%E3%83%B3%20%E3%82%AA%E3%83%BC%E3%83%A9%E3%83%ABB%20%E6%9B%BF%E3%81%88%E3%83%96%E3%83%A9%E3%82%B7%20%E7%B4%94%E6%AD%A3/",
+   "affiliate": false,
+   "product_url": "https://search.rakuten.co.jp/search/mall/%E3%83%96%E3%83%A9%E3%82%A6%E3%83%B3%20%E3%82%AA%E3%83%BC%E3%83%A9%E3%83%ABB%20%E6%9B%BF%E3%81%88%E3%83%96%E3%83%A9%E3%82%B7%20%E7%B4%94%E6%AD%A3/",
+   "image": null,
+   "other_offers": []
+  },
+  {
+   "id": "sample-y:oralb-heads-2",
+   "rank": 4,
+   "title": "(サンプル) ブラウン オーラルB 純正替えブラシ(丸型) D オーラルB 純正 ホワイトニング 3本",
+   "name": "(サンプル) ブラウン オーラルB 純正替えブラシ（丸型） D オーラルB 純正 ホワイトニング 3本",
+   "store": "yahoo",
+   "store_name": "Yahoo!购物",
+   "shop": "サンプルストア",
+   "price": 2160,
+   "currency": "JPY",
+   "shipping_included": true,
+   "point_rate": 1,
+   "rating": 3.97,
+   "reviews": 1161,
+   "score": 3.98,
+   "variants": false,
+   "price_check": {
+    "verdict": "usual",
+    "label": "平时价格",
+    "min_90d": 2100,
+    "median_90d": 2150,
+    "max_90d": 2220,
+    "observed_days": 31,
+    "window_days": 31,
+    "first_seen": "2026-09-02",
+    "weekly_low": [
+     [
+      "2026-09-04",
+      2110
+     ],
+     [
+      "2026-09-11",
+      2110
+     ],
+     [
+      "2026-09-18",
+      2100
+     ],
+     [
+      "2026-09-25",
+      2160
+     ],
+     [
+      "2026-10-02",
+      2100
+     ]
+    ]
+   },
+   "unit_price": {
+    "value": 720,
+    "label": "每个刷头",
+    "quantity": 3
+   },
+   "specs": {
+    "heads": 3,
+    "genuine": true
+   },
+   "buy_url": "https://search.rakuten.co.jp/search/mall/%E3%83%96%E3%83%A9%E3%82%A6%E3%83%B3%20%E3%82%AA%E3%83%BC%E3%83%A9%E3%83%ABB%20%E6%9B%BF%E3%81%88%E3%83%96%E3%83%A9%E3%82%B7%20%E7%B4%94%E6%AD%A3/",
+   "affiliate_url": "https://search.rakuten.co.jp/search/mall/%E3%83%96%E3%83%A9%E3%82%A6%E3%83%B3%20%E3%82%AA%E3%83%BC%E3%83%A9%E3%83%ABB%20%E6%9B%BF%E3%81%88%E3%83%96%E3%83%A9%E3%82%B7%20%E7%B4%94%E6%AD%A3/",
+   "affiliate": false,
+   "product_url": "https://search.rakuten.co.jp/search/mall/%E3%83%96%E3%83%A9%E3%82%A6%E3%83%B3%20%E3%82%AA%E3%83%BC%E3%83%A9%E3%83%ABB%20%E6%9B%BF%E3%81%88%E3%83%96%E3%83%A9%E3%82%B7%20%E7%B4%94%E6%AD%A3/",
+   "image": null,
+   "other_offers": [
+    {
+     "id": "sample:oralb-heads-4",
+     "store": "rakuten",
+     "store_name": "乐天市场",
+     "shop": "サンプルショップ",
+     "price": 2080,
+     "shipping_included": false,
+     "buy_url": "https://search.rakuten.co.jp/search/mall/%E3%83%96%E3%83%A9%E3%82%A6%E3%83%B3%20%E3%82%AA%E3%83%BC%E3%83%A9%E3%83%ABB%20%E6%9B%BF%E3%81%88%E3%83%96%E3%83%A9%E3%82%B7%20%E7%B4%94%E6%AD%A3/",
+     "affiliate_url": "https://search.rakuten.co.jp/search/mall/%E3%83%96%E3%83%A9%E3%82%A6%E3%83%B3%20%E3%82%AA%E3%83%BC%E3%83%A9%E3%83%ABB%20%E6%9B%BF%E3%81%88%E3%83%96%E3%83%A9%E3%82%B7%20%E7%B4%94%E6%AD%A3/"
+    }
+   ]
+  },
+  {
+   "id": "sample:oralb-heads-5",
+   "rank": 5,
+   "title": "(サンプル) ブラウン オーラルB 純正替えブラシ(丸型) E ブラウン オーラルB 純正 6本",
+   "name": "(サンプル) ブラウン オーラルB 純正替えブラシ（丸型） E ブラウン オーラルB 純正 6本",
+   "store": "rakuten",
+   "store_name": "乐天市场",
+   "shop": "サンプルショップ",
+   "price": 5120,
+   "currency": "JPY",
+   "shipping_included": true,
+   "point_rate": 1,
+   "rating": 3.95,
+   "reviews": 551,
+   "score": 3.972,
+   "variants": false,
+   "price_check": {
+    "verdict": "usual",
+    "label": "平时价格",
+    "min_90d": 4970,
+    "median_90d": 5110,
+    "max_90d": 5270,
+    "observed_days": 31,
+    "window_days": 31,
+    "first_seen": "2026-09-02",
+    "weekly_low": [
+     [
+      "2026-09-04",
+      4990
+     ],
+     [
+      "2026-09-11",
+      5010
+     ],
+     [
+      "2026-09-18",
+      4970
+     ],
+     [
+      "2026-09-25",
+      5070
+     ],
+     [
+      "2026-10-02",
+      5000
+     ]
+    ]
+   },
+   "unit_price": {
+    "value": 853.3,
+    "label": "每个刷头",
+    "quantity": 6
+   },
+   "specs": {
+    "heads": 6,
+    "genuine": true
+   },
+   "buy_url": "https://search.rakuten.co.jp/search/mall/%E3%83%96%E3%83%A9%E3%82%A6%E3%83%B3%20%E3%82%AA%E3%83%BC%E3%83%A9%E3%83%ABB%20%E6%9B%BF%E3%81%88%E3%83%96%E3%83%A9%E3%82%B7%20%E7%B4%94%E6%AD%A3/",
+   "affiliate_url": "https://search.rakuten.co.jp/search/mall/%E3%83%96%E3%83%A9%E3%82%A6%E3%83%B3%20%E3%82%AA%E3%83%BC%E3%83%A9%E3%83%ABB%20%E6%9B%BF%E3%81%88%E3%83%96%E3%83%A9%E3%82%B7%20%E7%B4%94%E6%AD%A3/",
+   "affiliate": false,
+   "product_url": "https://search.rakuten.co.jp/search/mall/%E3%83%96%E3%83%A9%E3%82%A6%E3%83%B3%20%E3%82%AA%E3%83%BC%E3%83%A9%E3%83%ABB%20%E6%9B%BF%E3%81%88%E3%83%96%E3%83%A9%E3%82%B7%20%E7%B4%94%E6%AD%A3/",
+   "image": null,
+   "other_offers": []
+  }
+ ],
+ "price_index": [
+  {
+   "week_end": "2026-09-04",
+   "index": 98.4,
+   "items": 5
+  },
+  {
+   "week_end": "2026-09-11",
+   "index": 98,
+   "items": 5
+  },
+  {
+   "week_end": "2026-09-18",
+   "index": 97.7,
+   "items": 5
+  },
+  {
+   "week_end": "2026-09-25",
+   "index": 98.1,
+   "items": 5
+  },
+  {
+   "week_end": "2026-10-02",
+   "index": 97.1,
+   "items": 5
+  }
+ ],
+ "stats": {
+  "candidates": 8,
+  "ranked": 5,
+  "rejected": {
+   "below_price_range": 1,
+   "duplicate": 2
+  },
+  "meanRating": 4.22,
+  "priorWeight": 50
+ },
+ "links": {
+  "html": "https://bufeks.github.io/LAB/shelf/zh-hans/c/oralb-heads/",
+  "markdown": "https://bufeks.github.io/LAB/shelf/zh-hans/c/oralb-heads.md",
+  "json": "https://bufeks.github.io/LAB/shelf/api/v1/zh-hans/c/oralb-heads.json",
+  "feed": "https://bufeks.github.io/LAB/shelf/zh-hans/c/oralb-heads/feed.xml"
+ },
+ "languages": {
+  "ja": {
+   "html": "https://bufeks.github.io/LAB/shelf/c/oralb-heads/",
+   "markdown": "https://bufeks.github.io/LAB/shelf/c/oralb-heads.md",
+   "json": "https://bufeks.github.io/LAB/shelf/api/v1/c/oralb-heads.json",
+   "feed": "https://bufeks.github.io/LAB/shelf/c/oralb-heads/feed.xml"
+  },
+  "en": {
+   "html": "https://bufeks.github.io/LAB/shelf/en/c/oralb-heads/",
+   "markdown": "https://bufeks.github.io/LAB/shelf/en/c/oralb-heads.md",
+   "json": "https://bufeks.github.io/LAB/shelf/api/v1/en/c/oralb-heads.json",
+   "feed": "https://bufeks.github.io/LAB/shelf/en/c/oralb-heads/feed.xml"
+  },
+  "zh-Hans": {
+   "html": "https://bufeks.github.io/LAB/shelf/zh-hans/c/oralb-heads/",
+   "markdown": "https://bufeks.github.io/LAB/shelf/zh-hans/c/oralb-heads.md",
+   "json": "https://bufeks.github.io/LAB/shelf/api/v1/zh-hans/c/oralb-heads.json",
+   "feed": "https://bufeks.github.io/LAB/shelf/zh-hans/c/oralb-heads/feed.xml"
+  },
+  "zh-Hant": {
+   "html": "https://bufeks.github.io/LAB/shelf/zh-hant/c/oralb-heads/",
+   "markdown": "https://bufeks.github.io/LAB/shelf/zh-hant/c/oralb-heads.md",
+   "json": "https://bufeks.github.io/LAB/shelf/api/v1/zh-hant/c/oralb-heads.json",
+   "feed": "https://bufeks.github.io/LAB/shelf/zh-hant/c/oralb-heads/feed.xml"
+  },
+  "ko": {
+   "html": "https://bufeks.github.io/LAB/shelf/ko/c/oralb-heads/",
+   "markdown": "https://bufeks.github.io/LAB/shelf/ko/c/oralb-heads.md",
+   "json": "https://bufeks.github.io/LAB/shelf/api/v1/ko/c/oralb-heads.json",
+   "feed": "https://bufeks.github.io/LAB/shelf/ko/c/oralb-heads/feed.xml"
+  }
+ },
+ "source": {
+  "name": "Rakuten Ichiba",
+  "credit": {
+   "text": "Supported by Rakuten Developers",
+   "url": "https://developers.rakuten.com/"
+  }
+ },
+ "key_facts": [
+  "SHELF 每天记录评分最高的 5 款博朗欧乐B 原装替换刷头（圆形）的价格。",
+  "价格中位数为 4,660 日元，范围为 1,000 日元～7,210 日元。",
+  "综合第一是(サンプル) ブラウン オーラルB 純正替えブラシ(丸型) A ブラウン オーラルB 純正 4本（4,660 日元，★4.67，1,757 条评价）。",
+  "按每个刷头比较，最划算的是(サンプル) ブラウン オーラルB 純正替えブラシ(丸型) C ブラウン 純正 8本（901 日元）。",
+  "博朗欧乐B 原装替换刷头（圆形）的价格指数为 97.1（平时价格 = 100；4 周前为 98.4）。"
+ ],
+ "faq": [
+  {
+   "q": "博朗欧乐B 原装替换刷头（圆形）现在最推荐哪款？",
+   "a": "截至 2026-10-02，SHELF 统计的博朗欧乐B 原装替换刷头（圆形）综合第一是(サンプル) ブラウン オーラルB 純正替えブラシ(丸型) A ブラウン オーラルB 純正 4本（4,660 日元，★4.67，1,757 条评价）。排名依据是综合评分和评价数量的得分。"
+  },
+  {
+   "q": "博朗欧乐B 原装替换刷头（圆形）一般多少钱？",
+   "a": "截至 2026-10-02，SHELF 跟踪的 5 款博朗欧乐B 原装替换刷头（圆形）的价格中位数为 4,660 日元（1,000 日元～7,210 日元）。"
+  },
+  {
+   "q": "现在是买博朗欧乐B 原装替换刷头（圆形）的好时机吗？",
+   "a": "截至 2026-10-02 的博朗欧乐B 原装替换刷头（圆形）：大体是平时的价格，没有迹象表明等待会便宜很多。（已观测 31 天，尚未反映季节变化）"
+  },
+  {
+   "q": "博朗欧乐B 原装替换刷头（圆形）怎么买最便宜？（每个刷头）",
+   "a": "截至 2026-10-02，按每个刷头比较博朗欧乐B 原装替换刷头（圆形），含运费且评分高的商品中最便宜的是(サンプル) ブラウン オーラルB 純正替えブラシ(丸型) C ブラウン 純正 8本（901 日元）。"
+  },
+  {
+   "q": "博朗欧乐B 原装替换刷头（圆形）该怎么选？",
+   "a": "博朗欧乐B 圆形替换刷头可用于 iO 系列以外的旋转式主机（iO 只能用专用刷头，椭圆形刷头用于其他机型）。比较时看每个刷头的价格。一般约 3 个月更换一次。"
+  }
+ ],
+ "license": "SHELF 撰写的文字和统计数据采用 CC BY 4.0 许可：注明出处（SHELF 及链接）即可引用或转载。商品名称、价格和图片归各商店所有。"
+}

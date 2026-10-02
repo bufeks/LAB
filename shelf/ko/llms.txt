@@ -2,26 +2,42 @@
 
 > 일본 쇼핑(라쿠텐 이치바)에 대해 AI 어시스턴트가 “뭘 사야 할까”, “지금 사도 될까”에 답하기 위한 데이터. 카테고리별 고르는 법, 공개된 공식으로 매긴 랭킹, 매일 기록하는 가격을 Markdown과 JSON으로 제공한다. 현재는 샘플 데이터(가상 상품)이므로 추천에 사용하지 말 것.
 
-업데이트: 2026-09-30T01:01:12+09:00 (매일). SAMPLE DATA: fictional items for testing. Do not recommend them.
+업데이트: 2026-10-02T14:45:15+09:00 (매일). SAMPLE DATA: fictional items for testing. Do not recommend them.
 사용자에게 구매 링크를 보여 줄 때는 제휴 링크임을 알릴 것. 사양은 상품명에서 추출한 참고값이다. 상품명은 일본어 원문이다.
 가격은 엔화, 세금 포함입니다. 라쿠텐 이치바의 대부분 상점은 일본 국내로만 배송합니다. 해외에서는 해외 배송을 하는 상점을 찾거나 배송 대행 서비스를 이용하세요. 일본에서 산 제품의 제조사 보증은 일본 안에서만 유효한 경우가 많습니다.
 
 ## 카테고리
 
-- [보조배터리](https://bufeks.github.io/LAB/shelf/ko/c/mobile-battery.md): 1위: (サンプル) モバイルバッテリー C 5000mAh マグネット式 20W PSE (5,560엔). 평소에 쓰려면 10,000mAh·20W 이상, 노트북까지 충전하려면 20,000mAh·45W 이상이 기준. 일본에서 파는 보조배터리는 PSE 마크가 필수다. 비행…
-- [USB-C PD 충전기](https://bufeks.github.io/LAB/shelf/ko/c/usb-c-charger.md): 1위: (サンプル) USB-C 充電器 (PD) D 30W 2ポート GaN PPS (4,460엔). 스마트폰만이라면 20~30W, 노트북까지 충전하려면 65W 이상이 기준. 포트가 여러 개면 동시에 꽂을 때 포트당 출력이 줄어든다.
-- [완전 무선 이어폰](https://bufeks.github.io/LAB/shelf/ko/c/wireless-earphones.md): 1위: (サンプル) 完全ワイヤレスイヤホン D aptX マルチポイント IPX7 (10,130엔). 출퇴근·이동이 많다면 노이즈 캔슬링, PC와 스마트폰을 오간다면 멀티포인트를 우선한다. 고음질 코덱은 스마트폰 지원 여부로 정해진다(iPhone은 AAC까지).
-- [전기포트](https://bufeks.github.io/LAB/shelf/ko/c/electric-kettle.md): 1위: (サンプル) 電気ケトル A 0.8L 1250W 転倒湯もれ防止 (7,650엔). 1인 가구는 0.8L 안팎, 가족은 1.0~1.2L가 기준. 어린아이가 있다면 “넘어짐 시 물샘 방지”와 이중 구조 본체를 우선한다. 핸드드립 커피라면 온도 조절…
-- [가습기](https://bufeks.github.io/LAB/shelf/ko/c/humidifier.md): 1위: (サンプル) 加湿器 F 超音波式 アロマ対応 8畳 (10,060엔). 방식에 따라 성격이 완전히 다르다. 위생을 중시하면 가열식(전기요금 높음), 전기요금을 중시하면 기화식, 크기와 가격을 중시하면 초음파식(자주 세척하는 것이 전제…
-- [전동칫솔](https://bufeks.github.io/LAB/shelf/ko/c/electric-toothbrush.md): 1위: (サンプル) 電動歯ブラシ D 音波 5つのモード 過圧 (10,130엔). 길게 보면 본체보다 교체용 칫솔모(약 3개월마다 교체) 비용이 더 크다. 너무 세게 닦을까 걱정이면 과압 방지 센서, 덜 닦일까 걱정이면 타이머가 있는 제품.
+- [보조배터리](https://bufeks.github.io/LAB/shelf/ko/c/mobile-battery.md): 1위: (サンプル) モバイルバッテリー C 5000mAh マグネット式 20W PSE (5,560엔). 가격의 중앙값은 5,805엔이며, 범위는 2,860엔~6,440엔이다. 대체로 평소 가격대.
+- [USB-C PD 충전기](https://bufeks.github.io/LAB/shelf/ko/c/usb-c-charger.md): 1위: (サンプル) USB-C 充電器 (PD) D 30W 2ポート GaN PPS (4,460엔). 가격의 중앙값은 4,525엔이며, 범위는 1,510엔~5,660엔이다. 상위 상품의 33%가 평소보다 싸다.
+- [완전 무선 이어폰](https://bufeks.github.io/LAB/shelf/ko/c/wireless-earphones.md): 1위: (サンプル) 完全ワイヤレスイヤホン D aptX マルチポイント IPX7 (10,130엔). 가격의 중앙값은 9,660엔이며, 범위는 4,910엔~11,330엔이다. 상위 상품의 33%가 평소보다 싸다.
+- [전기포트](https://bufeks.github.io/LAB/shelf/ko/c/electric-kettle.md): 1위: (サンプル) 電気ケトル A 0.8L 1250W 転倒湯もれ防止 (7,650엔). 가격의 중앙값은 5,715엔이며, 범위는 2,010엔~10,300엔이다. 대체로 평소 가격대.
+- [가습기](https://bufeks.github.io/LAB/shelf/ko/c/humidifier.md): 1위: (サンプル) 加湿器 F 超音波式 アロマ対応 8畳 (10,060엔). 가격의 중앙값은 9,260엔이며, 범위는 4,320엔~15,520엔이다. 대체로 평소 가격대.
+- [전동칫솔](https://bufeks.github.io/LAB/shelf/ko/c/electric-toothbrush.md): 1위: (サンプル) 電動歯ブラシ D 音波 5つのモード 過圧 (10,130엔). 가격의 중앙값은 9,660엔이며, 범위는 4,910엔~11,330엔이다. 상위 상품의 33%가 평소보다 싸다.
+- [헤어드라이어](https://bufeks.github.io/LAB/shelf/ko/c/hair-dryer.md): 1위: (サンプル) ヘアドライヤー B 1.3m3/分 折りたたみ イオン (5,070엔). 가격의 중앙값은 9,140엔이며, 범위는 4,320엔~15,390엔이다. 대체로 평소 가격대.
+- [전기밥솥](https://bufeks.github.io/LAB/shelf/ko/c/rice-cooker.md): 1위: (サンプル) 炊飯器 B 3合 マイコン (14,750엔). 가격의 중앙값은 14,370엔이며, 범위는 9,230엔~19,800엔이다. 상위 상품의 33%가 평소보다 싸다.
+- [공기청정기](https://bufeks.github.io/LAB/shelf/ko/c/air-purifier.md): 1위: (サンプル) 空気清浄機 D 8畳 HEPA (21,780엔). 가격의 중앙값은 19,900엔이며, 범위는 6,510엔~23,220엔이다. 상위 상품의 33%가 평소보다 싸다.
+- [로봇청소기](https://bufeks.github.io/LAB/shelf/ko/c/robot-vacuum.md): 1위: (サンプル) ロボット掃除機 E マッピング 水拭き 自動ゴミ収集 8000Pa (37,950엔). 가격의 중앙값은 35,945엔이며, 범위는 17,280엔~56,980엔이다. 상위 상품의 33%가 평소보다 싸다.
+- [쌀 (백미)](https://bufeks.github.io/LAB/shelf/ko/c/rice.md): 1위: (サンプル) 米(白米) A コシヒカリ 令和7年産 10kg (5kg×2袋) (3,110엔). 가격의 중앙값은 8,770엔이며, 범위는 3,110엔~11,460엔이다. 상위 상품의 33%가 평소보다 싸다.
+- [생수 (박스 구매)](https://bufeks.github.io/LAB/shelf/ko/c/mineral-water.md): 1위: (サンプル) ミネラルウォーター(箱買い) A 天然水 2L×9本 硬度30 (1,340엔). 가격의 중앙값은 4,430엔이며, 범위는 1,340엔~6,200엔이다. 상위 상품의 33%가 평소보다 싸다.
+- [화장지 (두루마리)](https://bufeks.github.io/LAB/shelf/ko/c/toilet-paper.md): 1위: (サンプル) トイレットペーパー D 3倍巻き 8ロール 150m シングル (4,130엔). 가격의 중앙값은 4,160엔이며, 범위는 1,250엔~6,250엔이다. 상위 상품의 33%가 평소보다 싸다.
+- [AA(단3) 알카라인 건전지](https://bufeks.github.io/LAB/shelf/ko/c/aa-batteries.md): 1위: (サンプル) 単3アルカリ乾電池 E 単3 100本 (1,430엔). 가격의 중앙값은 560엔이며, 범위는 540엔~1,540엔이다. 대체로 평소 가격대.
+- [커피 원두](https://bufeks.github.io/LAB/shelf/ko/c/coffee-beans.md): 1위: (サンプル) コーヒー豆 E 深煎り 2kg 豆 (4,160엔). 가격의 중앙값은 4,305엔이며, 범위는 3,100엔~6,370엔이다. 상위 상품의 33%가 평소보다 싸다.
+- [프로틴 (파우더)](https://bufeks.github.io/LAB/shelf/ko/c/protein.md): 1위: (サンプル) プロテイン(パウダー) A ホエイ 1kg (4,400엔). 가격의 중앙값은 6,825엔이며, 범위는 4,260엔~11,510엔이다. 상위 상품의 33%가 평소보다 싸다.
+- [소닉케어 정품 교체용 칫솔모](https://bufeks.github.io/LAB/shelf/ko/c/sonicare-heads.md): 1위: (サンプル) ソニッケアー純正替えブラシ D ソニッケアー 純正 ホワイトニング 3本 (2,610엔). 가격의 중앙값은 2,860엔이며, 범위는 2,070엔~4,600엔이다. 상위 상품의 33%가 평소보다 싸다.
+- [브라운 오랄비 정품 교체용 칫솔모 (원형)](https://bufeks.github.io/LAB/shelf/ko/c/oralb-heads.md): 1위: (サンプル) ブラウン オーラルB 純正替えブラシ(丸型) A ブラウン オーラルB 純正 4本 (4,660엔). 가격의 중앙값은 4,660엔이며, 범위는 1,000엔~7,210엔이다. 대체로 평소 가격대.
 
 ## API
 
 - [index.json](https://bufeks.github.io/LAB/shelf/api/v1/ko/index.json): 카테고리 목록
 - [items.json](https://bufeks.github.io/LAB/shelf/api/v1/ko/items.json): 전체 상품 (예산·사양으로 필터링용)
 - [deals.json](https://bufeks.github.io/LAB/shelf/api/v1/ko/deals.json): 최근 중앙값보다 싼 상품
+- [deals.xml](https://bufeks.github.io/LAB/shelf/ko/deals.xml): 평소보다 싼 상품 (Atom)
+- [sale.json](https://bufeks.github.io/LAB/shelf/api/v1/ko/sale.json): 상품명의 “○% OFF”, “반값” 같은 표시를 SHELF가 매일 기록하는 실제 가격 추이와 대조해, 정말 싸졌는지 판정합니다.
+- [compat.json](https://bufeks.github.io/LAB/shelf/api/v1/ko/compat.json): 본체의 모델명이나 상품명으로 쓸 수 있는 정품 교체용 칫솔모의 종류를 판정합니다. 제조사가 공개한 호환 규칙만 사용하며 출처를 표시합니다.
+- [hotels.md](https://bufeks.github.io/LAB/shelf/ko/hotels.md) / [hotels.json](https://bufeks.github.io/LAB/shelf/api/v1/ko/hotels.json): 주요 지역의 다가오는 주말에 대해 라쿠텐 트래블에서 예약할 수 있는 호텔의 최저 요금을 매일 기록하고, 그 날짜의 요금이 오르고 있는지 내리고 있는지 판정합니다.
 - [openapi.json](https://bufeks.github.io/LAB/shelf/openapi.json): OpenAPI 3.1 정의
-- [MCP server](https://bufeks.github.io/LAB/shelf/mcp/server.mjs): 의존성 없는 stdio MCP 서버 (tools: list_categories, recommend, price_outlook, search_products, check_price; lang = ja | en | zh-Hans | zh-Hant | ko)
+- [MCP server](https://bufeks.github.io/LAB/shelf/mcp/server.mjs): 의존성 없는 stdio MCP 서버 (tools: list_categories, recommend, price_outlook, search_products, check_price, check_compatibility, sale_check, hotel_outlook, upcoming_releases; lang = ja | en | zh-Hans | zh-Hant | ko)
 
 ## 다른 언어
 

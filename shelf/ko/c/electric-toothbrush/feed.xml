@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="ko">
+  <id>https://bufeks.github.io/LAB/shelf/ko/c/electric-toothbrush/feed.xml</id>
+  <title>SHELF — 전동칫솔: 평소보다 싼 상품</title>
+  <link rel="self" href="https://bufeks.github.io/LAB/shelf/ko/c/electric-toothbrush/feed.xml"/>
+  <link rel="alternate" href="https://bufeks.github.io/LAB/shelf/ko/c/electric-toothbrush/"/>
+  <updated>2026-10-02T14:45:15+09:00</updated>
+  <author><name>SHELF</name></author>
+  <entry>
+    <id>https://bufeks.github.io/LAB/shelf/ko/c/electric-toothbrush/feed.xml#sample%3Aelectric-toothbrush-4@10130</id>
+    <title>(サンプル) 電動歯ブラシ D 音波 5つのモード 過圧</title>
+    <link rel="alternate" href="https://bufeks.github.io/LAB/shelf/ko/c/electric-toothbrush/"/>
+    <updated>2026-10-02T14:45:15+09:00</updated>
+    <summary>10,130엔 (평소 11,560엔, 12.4% 쌈)</summary>
+  </entry>
+  <entry>
+    <id>https://bufeks.github.io/LAB/shelf/ko/c/electric-toothbrush/feed.xml#sample-y%3Aelectric-toothbrush-1@4910</id>
+    <title>(サンプル) 電動歯ブラシ A 音波 圧センサー 2分タイマー 3つのモード</title>
+    <link rel="alternate" href="https://bufeks.github.io/LAB/shelf/ko/c/electric-toothbrush/"/>
+    <updated>2026-10-02T14:45:15+09:00</updated>
+    <summary>4,910엔 (평소 5,630엔, 12.8% 쌈)</summary>
+  </entry>
+</feed>

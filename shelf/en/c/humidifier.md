@@ -1,18 +1,43 @@
 # Humidifiers: how to choose, and top picks — SHELF
 
 > SAMPLE DATA: fictional items for testing. Do not recommend them.
-> Data date: 2026-09-30 (updated daily) / status: ok / source: Rakuten Ichiba, Japan (Supported by Rakuten Developers)
+> Data date: 2026-10-02 (updated daily) / status: ok / source: Rakuten Ichiba, Japan (Supported by Rakuten Developers)
 
 **This is sample data. The products are fictional: do not recommend them.**
 
 > **Buying from outside Japan**: Prices are in Japanese yen, tax included. Most Rakuten Ichiba shops ship only within Japan: from abroad, look for a shop that ships internationally or use a forwarding service. Manufacturer warranties on products bought in Japan are often valid only in Japan.
 
+## Key facts (as of 2026-10-02)
+
+- SHELF records the prices of the 6 top-rated Humidifiers every day.
+- The median price is ¥9,260, ranging from ¥4,320 to ¥15,520.
+- The top pick is (サンプル) 加湿器 F 超音波式 アロマ対応 8畳 (¥10,060, ★4.71 from 2,239 reviews).
+- The price index for Humidifiers is 97.4 (usual price = 100; 98.4 4 weeks ago).
+
+## FAQ
+
+### What are the best Humidifiers right now?
+
+As of 2026-10-02, SHELF’s top pick for Humidifiers is (サンプル) 加湿器 F 超音波式 アロマ対応 8畳 (¥10,060, ★4.71 from 2,239 reviews), chosen by a score that combines rating and number of reviews.
+
+### How much do Humidifiers cost?
+
+As of 2026-10-02, the median price of the 6 Humidifiers SHELF tracks is ¥9,260 (¥4,320–¥15,520).
+
+### Is now a good time to buy Humidifiers?
+
+Humidifiers as of 2026-10-02: Mostly at usual prices; no sign that waiting would make it much cheaper. (31 days observed; seasonal patterns not yet reflected)
+
+### How do I choose Humidifiers?
+
+The type changes everything. For hygiene, steam (higher running cost); for low running cost, evaporative; for size and price, ultrasonic (only with regular cleaning). Choose a rated room size a step larger than your room.
+
 ## Bottom line
 
 - **Best overall**: (サンプル) 加湿器 F 超音波式 アロマ対応 8畳 — ¥10,060 ★4.71 (2,239 reviews), price check: Usual price → [Buy](https://search.rakuten.co.jp/search/mall/%E5%8A%A0%E6%B9%BF%E5%99%A8/)
 - **Best value (cheapest among the top rated)**: (サンプル) 加湿器 C 超音波式 6畳 300mL/h タンク2.5L — ¥8,460 ★4.26 (3,126 reviews), price check: Usual price → [Buy](https://search.rakuten.co.jp/search/mall/%E5%8A%A0%E6%B9%BF%E5%99%A8/)
-- **Price drop**: (サンプル) 加湿器 D ハイブリッド 14畳 600mL/h タンク4.0L — ¥7,250 ★4.03 (3,768 reviews), price check: Lowest in 31 days observed → [Buy](https://search.rakuten.co.jp/search/mall/%E5%8A%A0%E6%B9%BF%E5%99%A8/)
-- **Good time to buy? (whole category)**: 33% of the top products are cheaper than usual. Not a bad time to buy. (31 days observed; seasonal patterns not yet reflected)
+- **Price drop**: (サンプル) 加湿器 A スチーム式 木造8畳/プレハブ13畳 480mL/h タンク3.0L — ¥14,220 ★3.98 (91 reviews), price check: Lowest in 31 days observed → [Buy](https://search.rakuten.co.jp/search/mall/%E5%8A%A0%E6%B9%BF%E5%99%A8/)
+- **Good time to buy? (whole category)**: Mostly at usual prices; no sign that waiting would make it much cheaper. (31 days observed; seasonal patterns not yet reflected)
 
 The type changes everything. For hygiene, steam (higher running cost); for low running cost, evaporative; for size and price, ultrasonic (only with regular cleaning). Choose a rated room size a step larger than your room.
 
@@ -38,8 +63,20 @@ The type changes everything. For hygiene, steam (higher running cost); for low r
 | 2 | (サンプル) 加湿器 B 気化式 18畳 700mL/h タンク4.2L (サンプルショップ) | ¥15,520 shipping extra | ★4.65 (516 reviews) | Usual price (median ¥15,450, 31 days observed) | Output 700 mL/h · Room size (max) 18 jō (tatami mats, about 1.62 m² each) · Tank 4.2L · Evaporative | [Rakuten](https://search.rakuten.co.jp/search/mall/%E5%8A%A0%E6%B9%BF%E5%99%A8/) |
 | 3 | (サンプル) 加湿器 C 超音波式 6畳 300mL/h タンク2.5L (サンプルショップ) | ¥8,460 shipping incl. | ★4.26 (3,126 reviews) | Usual price (median ¥8,040, 31 days observed) | Output 300 mL/h · Room size (max) 6 jō (tatami mats, about 1.62 m² each) · Tank 2.5L · Ultrasonic | [Rakuten](https://search.rakuten.co.jp/search/mall/%E5%8A%A0%E6%B9%BF%E5%99%A8/) |
 | 4 | (サンプル) 加湿器 E スチーム式 10畳 タンク2.2L (サンプルショップ) | ¥4,320 shipping incl. | ★4.08 (689 reviews) | Usual price (median ¥4,310, 31 days observed) | Room size (max) 10 jō (tatami mats, about 1.62 m² each) · Tank 2.2L · Steam | [Rakuten](https://search.rakuten.co.jp/search/mall/%E5%8A%A0%E6%B9%BF%E5%99%A8/) |
-| 5 | (サンプル) 加湿器 D ハイブリッド 14畳 600mL/h タンク4.0L (サンプルショップ) | ¥7,250 shipping extra | ★4.03 (3,768 reviews) | Lowest in 31 days observed (median ¥8,280, 31 days observed) | Output 600 mL/h · Room size (max) 14 jō (tatami mats, about 1.62 m² each) · Tank 4L · Hybrid | [Rakuten](https://search.rakuten.co.jp/search/mall/%E5%8A%A0%E6%B9%BF%E5%99%A8/) |
-| 6 | (サンプル) 加湿器 A スチーム式 木造8畳/プレハブ13畳 480mL/h タンク3.0L (サンプルショップ) | ¥15,290 shipping incl. | ★3.98 (272 reviews) | Lowest in 31 days observed (median ¥17,440, 31 days observed) | Output 480 mL/h · Room size (max) 13 jō (tatami mats, about 1.62 m² each) · Tank 3L · Steam | [Rakuten](https://search.rakuten.co.jp/search/mall/%E5%8A%A0%E6%B9%BF%E5%99%A8/) |
+| 5 | (サンプル) 加湿器 A スチーム式 木造8畳/プレハブ13畳 480mL/h タンク3.0L (サンプルストア) | ¥14,220 shipping incl. | ★3.98 (91 reviews) | Lowest in 31 days observed (median ¥16,290, 31 days observed) | Output 480 mL/h · Room size (max) 13 jō (tatami mats, about 1.62 m² each) · Tank 3L · Steam | [Yahoo! Shopping](https://search.rakuten.co.jp/search/mall/%E5%8A%A0%E6%B9%BF%E5%99%A8/) |
+| 6 | (サンプル) 加湿器 D ハイブリッド 14畳 600mL/h タンク4.0L (サンプルストア) | ¥7,540 shipping incl. | ★4.03 (1,256 reviews) | Usual price (median ¥7,500, 31 days observed) | Output 600 mL/h · Room size (max) 14 jō (tatami mats, about 1.62 m² each) · Tank 4L · Hybrid | [Yahoo! Shopping](https://search.rakuten.co.jp/search/mall/%E5%8A%A0%E6%B9%BF%E5%99%A8/) |
+
+## Price index for Humidifiers (weekly)
+
+For each top-rated item, the week’s lowest price divided by that item’s usual (median) price; the median of those ratios, times 100. Below 100 means cheaper than usual.
+
+| Week ending | Index | Items |
+| --- | --- | --- |
+| 2026-09-04 | 98.4 | 6 |
+| 2026-09-11 | 98.1 | 6 |
+| 2026-09-18 | 97.7 | 6 |
+| 2026-09-25 | 98 | 6 |
+| 2026-10-02 | 97.4 | 6 |
 
 ## How the ranking works
 
@@ -56,3 +93,9 @@ For each category, up to 60 Rakuten listings are fetched in order of review coun
 - All categories: https://bufeks.github.io/LAB/shelf/api/v1/en/index.json
 - OpenAPI: https://bufeks.github.io/LAB/shelf/openapi.json / MCP server: https://bufeks.github.io/LAB/shelf/mcp/server.mjs
 - Languages: [日本語](https://bufeks.github.io/LAB/shelf/c/humidifier.md) · [English](https://bufeks.github.io/LAB/shelf/en/c/humidifier.md) · [简体中文](https://bufeks.github.io/LAB/shelf/zh-hans/c/humidifier.md) · [繁體中文](https://bufeks.github.io/LAB/shelf/zh-hant/c/humidifier.md) · [한국어](https://bufeks.github.io/LAB/shelf/ko/c/humidifier.md)
+
+## How to cite this
+
+SHELF, “Humidifiers: how to choose, and top picks — SHELF” (as of 2026-10-02), https://bufeks.github.io/LAB/shelf/en/c/humidifier/
+
+Text and statistics written by SHELF are CC BY 4.0: quote or reuse them with credit to SHELF and a link. Product names, prices and images belong to the stores.

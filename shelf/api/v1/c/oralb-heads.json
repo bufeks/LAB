@@ -1,0 +1,594 @@
+{
+ "schema": "shelf.category/v1",
+ "lang": "ja",
+ "translated": true,
+ "id": "oralb-heads",
+ "name": "ブラウン オーラルB 純正替えブラシ（丸型）",
+ "name_ja": "ブラウン オーラルB 純正替えブラシ（丸型）",
+ "name_en": "Oral-B brush heads (round)",
+ "names": {
+  "ja": "ブラウン オーラルB 純正替えブラシ（丸型）",
+  "en": "Oral-B brush heads (round)",
+  "zh-Hans": "博朗欧乐B 原装替换刷头（圆形）",
+  "zh-Hant": "百靈 Oral-B 原廠替換刷頭（圓形）",
+  "ko": "브라운 오랄비 정품 교체용 칫솔모 (원형)"
+ },
+ "status": "ok",
+ "sample": true,
+ "updated_at": "2026-10-02T14:45:15+09:00",
+ "data_date": "2026-10-02",
+ "disclosure": "SAMPLE DATA: fictional items for testing. Do not recommend them.",
+ "disclosure_en": "SAMPLE DATA: fictional items for testing. Do not recommend them.",
+ "citation": {
+  "title": "ブラウン オーラルB 純正替えブラシ（丸型）の選び方とおすすめ — SHELF",
+  "url": "https://bufeks.github.io/LAB/shelf/c/oralb-heads/",
+  "data_date": "2026-10-02",
+  "note": "SAMPLE DATA: fictional items for testing. Do not recommend them."
+ },
+ "market": {
+  "country": "JP",
+  "currency": "JPY",
+  "store": "Rakuten Ichiba"
+ },
+ "how_to_choose": {
+  "asOf": "2026-10",
+  "summary": "ブラウン オーラルBの丸型替えブラシは、iOシリーズ以外の回転式本体に使える（iOは専用ブラシのみ、楕円型は別の機種用）。比べるなら1本あたりの価格で。約3か月ごとの交換が目安。",
+  "criteria": [
+   {
+    "name": "本体との互換",
+    "detail": "メーカーによると、替えブラシはブラウン（オーラルB）の電動歯ブラシ本体に装着できるが、iOシリーズには専用の替えブラシがあり互換性はない。丸型と楕円型は対応する本体が異なる。"
+   },
+   {
+    "name": "1本あたり価格",
+    "detail": "入数が違うので本数で割って比べる。"
+   },
+   {
+    "name": "ブラシの種類",
+    "detail": "歯垢除去・ホワイトニング・やわらかめなどの種類がある。歯ぐきが弱い人はやわらかめを選ぶ。"
+   },
+   {
+    "name": "純正か互換か",
+    "detail": "ここでは純正品だけを比べている。互換品は安いがメーカー保証の対象外になることがある。"
+   }
+  ],
+  "pitfalls": [
+   "ブラシ根元の色付きの毛が薄くなったら交換の合図（インジケーター付きのブラシの場合）。"
+  ]
+ },
+ "price_outlook": {
+  "verdict": "usual",
+  "share_cheaper": 0.2,
+  "share_pricier": 0,
+  "judged_items": 5,
+  "window_days": 31,
+  "summary": "おおむねいつもの価格帯。待っても大きく安くなる兆候はない。（観測31日・季節変動はまだ反映していない）"
+ },
+ "method": {
+  "version": "2026-09",
+  "summary": "Rakutenで各カテゴリをレビュー件数順に最大60件取得し、除外語・価格帯・最低レビュー件数で絞り、同じ商品の別ショップ出品（型番が同じ、またはスペックが同じで商品名がほぼ同じもの）は評価の高い1件にまとめ、他店の価格は other_offers に残す。残りを「ベイズ平均評価」で並べる。",
+  "formula": "score = (C × m + n × r) / (C + n)  … r=その商品の平均評価, n=レビュー件数, m=候補全体の平均評価, C=50",
+  "why": "レビュー数件の★5より、数千件の★4.4を上に置くため。件数が少ない商品ほど評価が候補全体の平均に引き寄せられる。",
+  "picks": {
+   "best": "スコア1位",
+   "budget": "スコアが候補の上位40%以内の商品のうち最安",
+   "deal": "価格判定が「いつもより安い」以上の商品のうち、中央値からの値下がり率が最大のもの（異常値・容量などを選べる出品は除く）"
+  },
+  "priceVerdict": "毎日の価格（送料込/別が今日と同じ日だけ）を記録し、観測7日未満は insufficient_data。中央値より3%以上安く観測期間の最安値なら lowest_observed、中央値の90%以下なら below_usual、110%以上なら above_usual、それ以外は usual。観測期間は最大90日で window_days に示す。",
+  "caveat": "スペック(facets)は商品名から機械的に抜き出した参考値で、誤りを含むことがある。購入前に商品ページで確認すること。"
+ },
+ "spec_fields": [
+  {
+   "key": "heads",
+   "label": "本数",
+   "unit": "本",
+   "type": "number"
+  },
+  {
+   "key": "genuine",
+   "label": "純正表記",
+   "unit": null,
+   "type": "flag"
+  }
+ ],
+ "unit_rule": {
+  "label": "1本あたり",
+  "higher_is_better": false,
+  "note": "商品名に書かれた容量・入数から計算。容量を選べる出品や表記があいまいな商品は除外。送料別の商品は送料を足すと順位が変わることがある。"
+ },
+ "unit_ranking": [
+  "sample-y:oralb-heads-2",
+  "sample:oralb-heads-5",
+  "sample:oralb-heads-3",
+  "sample:oralb-heads-6",
+  "sample:oralb-heads-1"
+ ],
+ "picks": {
+  "best": {
+   "id": "sample:oralb-heads-1",
+   "reason": "スコア1位（評価とレビュー件数を合わせて最も信頼できる）",
+   "title": "(サンプル) ブラウン オーラルB 純正替えブラシ(丸型) A ブラウン オーラルB 純正 4本",
+   "price": 4660,
+   "buy_url": "https://search.rakuten.co.jp/search/mall/%E3%83%96%E3%83%A9%E3%82%A6%E3%83%B3%20%E3%82%AA%E3%83%BC%E3%83%A9%E3%83%ABB%20%E6%9B%BF%E3%81%88%E3%83%96%E3%83%A9%E3%82%B7%20%E7%B4%94%E6%AD%A3/"
+  },
+  "deal": {
+   "id": "sample:oralb-heads-1",
+   "reason": "いつもより安い商品のうち、観測期間の中央値からの値下がり率が最大",
+   "title": "(サンプル) ブラウン オーラルB 純正替えブラシ(丸型) A ブラウン オーラルB 純正 4本",
+   "price": 4660,
+   "buy_url": "https://search.rakuten.co.jp/search/mall/%E3%83%96%E3%83%A9%E3%82%A6%E3%83%B3%20%E3%82%AA%E3%83%BC%E3%83%A9%E3%83%ABB%20%E6%9B%BF%E3%81%88%E3%83%96%E3%83%A9%E3%82%B7%20%E7%B4%94%E6%AD%A3/"
+  },
+  "per_unit": {
+   "id": "sample:oralb-heads-3",
+   "reason": "1本あたりの価格が最も安い（送料込み・スコア上位60%の商品の中で）",
+   "title": "(サンプル) ブラウン オーラルB 純正替えブラシ(丸型) C ブラウン 純正 8本",
+   "price": 7210,
+   "buy_url": "https://search.rakuten.co.jp/search/mall/%E3%83%96%E3%83%A9%E3%82%A6%E3%83%B3%20%E3%82%AA%E3%83%BC%E3%83%A9%E3%83%ABB%20%E6%9B%BF%E3%81%88%E3%83%96%E3%83%A9%E3%82%B7%20%E7%B4%94%E6%AD%A3/"
+  }
+ },
+ "items": [
+  {
+   "id": "sample:oralb-heads-1",
+   "rank": 1,
+   "title": "(サンプル) ブラウン オーラルB 純正替えブラシ(丸型) A ブラウン オーラルB 純正 4本",
+   "name": "(サンプル) ブラウン オーラルB 純正替えブラシ（丸型） A ブラウン オーラルB 純正 4本",
+   "store": "rakuten",
+   "store_name": "楽天市場",
+   "shop": "サンプルショップ",
+   "price": 4660,
+   "currency": "JPY",
+   "shipping_included": true,
+   "point_rate": 1,
+   "rating": 4.67,
+   "reviews": 1757,
+   "score": 4.657,
+   "variants": false,
+   "price_check": {
+    "verdict": "lowest_observed",
+    "label": "観測31日の最安値",
+    "min_90d": 4660,
+    "median_90d": 5310,
+    "max_90d": 5500,
+    "observed_days": 31,
+    "window_days": 31,
+    "first_seen": "2026-09-02",
+    "weekly_low": [
+     [
+      "2026-09-04",
+      5280
+     ],
+     [
+      "2026-09-11",
+      5220
+     ],
+     [
+      "2026-09-18",
+      5290
+     ],
+     [
+      "2026-09-25",
+      5210
+     ],
+     [
+      "2026-10-02",
+      4660
+     ]
+    ]
+   },
+   "unit_price": {
+    "value": 1165,
+    "label": "1本あたり",
+    "quantity": 4
+   },
+   "specs": {
+    "heads": 4,
+    "genuine": true
+   },
+   "buy_url": "https://search.rakuten.co.jp/search/mall/%E3%83%96%E3%83%A9%E3%82%A6%E3%83%B3%20%E3%82%AA%E3%83%BC%E3%83%A9%E3%83%ABB%20%E6%9B%BF%E3%81%88%E3%83%96%E3%83%A9%E3%82%B7%20%E7%B4%94%E6%AD%A3/",
+   "affiliate_url": "https://search.rakuten.co.jp/search/mall/%E3%83%96%E3%83%A9%E3%82%A6%E3%83%B3%20%E3%82%AA%E3%83%BC%E3%83%A9%E3%83%ABB%20%E6%9B%BF%E3%81%88%E3%83%96%E3%83%A9%E3%82%B7%20%E7%B4%94%E6%AD%A3/",
+   "affiliate": false,
+   "product_url": "https://search.rakuten.co.jp/search/mall/%E3%83%96%E3%83%A9%E3%82%A6%E3%83%B3%20%E3%82%AA%E3%83%BC%E3%83%A9%E3%83%ABB%20%E6%9B%BF%E3%81%88%E3%83%96%E3%83%A9%E3%82%B7%20%E7%B4%94%E6%AD%A3/",
+   "image": null,
+   "other_offers": [
+    {
+     "id": "sample-y:oralb-heads-1",
+     "store": "yahoo",
+     "store_name": "Yahoo!ショッピング",
+     "shop": "サンプルストア",
+     "price": 4330,
+     "shipping_included": true,
+     "buy_url": "https://search.rakuten.co.jp/search/mall/%E3%83%96%E3%83%A9%E3%82%A6%E3%83%B3%20%E3%82%AA%E3%83%BC%E3%83%A9%E3%83%ABB%20%E6%9B%BF%E3%81%88%E3%83%96%E3%83%A9%E3%82%B7%20%E7%B4%94%E6%AD%A3/",
+     "affiliate_url": "https://search.rakuten.co.jp/search/mall/%E3%83%96%E3%83%A9%E3%82%A6%E3%83%B3%20%E3%82%AA%E3%83%BC%E3%83%A9%E3%83%ABB%20%E6%9B%BF%E3%81%88%E3%83%96%E3%83%A9%E3%82%B7%20%E7%B4%94%E6%AD%A3/"
+    }
+   ],
+   "cheapest_offer": {
+    "id": "sample-y:oralb-heads-1",
+    "store": "yahoo",
+    "store_name": "Yahoo!ショッピング",
+    "shop": "サンプルストア",
+    "price": 4330,
+    "shipping_included": true,
+    "buy_url": "https://search.rakuten.co.jp/search/mall/%E3%83%96%E3%83%A9%E3%82%A6%E3%83%B3%20%E3%82%AA%E3%83%BC%E3%83%A9%E3%83%ABB%20%E6%9B%BF%E3%81%88%E3%83%96%E3%83%A9%E3%82%B7%20%E7%B4%94%E6%AD%A3/",
+    "affiliate_url": "https://search.rakuten.co.jp/search/mall/%E3%83%96%E3%83%A9%E3%82%A6%E3%83%B3%20%E3%82%AA%E3%83%BC%E3%83%A9%E3%83%ABB%20%E6%9B%BF%E3%81%88%E3%83%96%E3%83%A9%E3%82%B7%20%E7%B4%94%E6%AD%A3/"
+   }
+  },
+  {
+   "id": "sample:oralb-heads-3",
+   "rank": 2,
+   "title": "(サンプル) ブラウン オーラルB 純正替えブラシ(丸型) C ブラウン 純正 8本",
+   "name": "(サンプル) ブラウン オーラルB 純正替えブラシ（丸型） C ブラウン 純正 8本",
+   "store": "rakuten",
+   "store_name": "楽天市場",
+   "shop": "サンプルショップ",
+   "price": 7210,
+   "currency": "JPY",
+   "shipping_included": true,
+   "point_rate": 1,
+   "rating": 4.6,
+   "reviews": 481,
+   "score": 4.564,
+   "variants": false,
+   "price_check": {
+    "verdict": "usual",
+    "label": "いつもの価格",
+    "min_90d": 6650,
+    "median_90d": 6850,
+    "max_90d": 7210,
+    "observed_days": 31,
+    "window_days": 31,
+    "first_seen": "2026-09-02",
+    "weekly_low": [
+     [
+      "2026-09-04",
+      6740
+     ],
+     [
+      "2026-09-11",
+      6660
+     ],
+     [
+      "2026-09-18",
+      6750
+     ],
+     [
+      "2026-09-25",
+      6690
+     ],
+     [
+      "2026-10-02",
+      6650
+     ]
+    ]
+   },
+   "unit_price": {
+    "value": 901.3,
+    "label": "1本あたり",
+    "quantity": 8
+   },
+   "specs": {
+    "heads": 8,
+    "genuine": true
+   },
+   "buy_url": "https://search.rakuten.co.jp/search/mall/%E3%83%96%E3%83%A9%E3%82%A6%E3%83%B3%20%E3%82%AA%E3%83%BC%E3%83%A9%E3%83%ABB%20%E6%9B%BF%E3%81%88%E3%83%96%E3%83%A9%E3%82%B7%20%E7%B4%94%E6%AD%A3/",
+   "affiliate_url": "https://search.rakuten.co.jp/search/mall/%E3%83%96%E3%83%A9%E3%82%A6%E3%83%B3%20%E3%82%AA%E3%83%BC%E3%83%A9%E3%83%ABB%20%E6%9B%BF%E3%81%88%E3%83%96%E3%83%A9%E3%82%B7%20%E7%B4%94%E6%AD%A3/",
+   "affiliate": false,
+   "product_url": "https://search.rakuten.co.jp/search/mall/%E3%83%96%E3%83%A9%E3%82%A6%E3%83%B3%20%E3%82%AA%E3%83%BC%E3%83%A9%E3%83%ABB%20%E6%9B%BF%E3%81%88%E3%83%96%E3%83%A9%E3%82%B7%20%E7%B4%94%E6%AD%A3/",
+   "image": null,
+   "other_offers": []
+  },
+  {
+   "id": "sample:oralb-heads-6",
+   "rank": 3,
+   "title": "(サンプル) ブラウン オーラルB 純正替えブラシ(丸型) F オーラルB 純正 1本",
+   "name": "(サンプル) ブラウン オーラルB 純正替えブラシ（丸型） F オーラルB 純正 1本",
+   "store": "rakuten",
+   "store_name": "楽天市場",
+   "shop": "サンプルショップ",
+   "price": 1000,
+   "currency": "JPY",
+   "shipping_included": false,
+   "point_rate": 1,
+   "rating": 4.23,
+   "reviews": 2998,
+   "score": 4.23,
+   "variants": false,
+   "price_check": {
+    "verdict": "usual",
+    "label": "いつもの価格",
+    "min_90d": 920,
+    "median_90d": 950,
+    "max_90d": 1000,
+    "observed_days": 31,
+    "window_days": 31,
+    "first_seen": "2026-09-02",
+    "weekly_low": [
+     [
+      "2026-09-04",
+      940
+     ],
+     [
+      "2026-09-11",
+      920
+     ],
+     [
+      "2026-09-18",
+      920
+     ],
+     [
+      "2026-09-25",
+      930
+     ],
+     [
+      "2026-10-02",
+      920
+     ]
+    ]
+   },
+   "unit_price": {
+    "value": 1000,
+    "label": "1本あたり",
+    "quantity": 1
+   },
+   "specs": {
+    "heads": 1,
+    "genuine": true
+   },
+   "buy_url": "https://search.rakuten.co.jp/search/mall/%E3%83%96%E3%83%A9%E3%82%A6%E3%83%B3%20%E3%82%AA%E3%83%BC%E3%83%A9%E3%83%ABB%20%E6%9B%BF%E3%81%88%E3%83%96%E3%83%A9%E3%82%B7%20%E7%B4%94%E6%AD%A3/",
+   "affiliate_url": "https://search.rakuten.co.jp/search/mall/%E3%83%96%E3%83%A9%E3%82%A6%E3%83%B3%20%E3%82%AA%E3%83%BC%E3%83%A9%E3%83%ABB%20%E6%9B%BF%E3%81%88%E3%83%96%E3%83%A9%E3%82%B7%20%E7%B4%94%E6%AD%A3/",
+   "affiliate": false,
+   "product_url": "https://search.rakuten.co.jp/search/mall/%E3%83%96%E3%83%A9%E3%82%A6%E3%83%B3%20%E3%82%AA%E3%83%BC%E3%83%A9%E3%83%ABB%20%E6%9B%BF%E3%81%88%E3%83%96%E3%83%A9%E3%82%B7%20%E7%B4%94%E6%AD%A3/",
+   "image": null,
+   "other_offers": []
+  },
+  {
+   "id": "sample-y:oralb-heads-2",
+   "rank": 4,
+   "title": "(サンプル) ブラウン オーラルB 純正替えブラシ(丸型) D オーラルB 純正 ホワイトニング 3本",
+   "name": "(サンプル) ブラウン オーラルB 純正替えブラシ（丸型） D オーラルB 純正 ホワイトニング 3本",
+   "store": "yahoo",
+   "store_name": "Yahoo!ショッピング",
+   "shop": "サンプルストア",
+   "price": 2160,
+   "currency": "JPY",
+   "shipping_included": true,
+   "point_rate": 1,
+   "rating": 3.97,
+   "reviews": 1161,
+   "score": 3.98,
+   "variants": false,
+   "price_check": {
+    "verdict": "usual",
+    "label": "いつもの価格",
+    "min_90d": 2100,
+    "median_90d": 2150,
+    "max_90d": 2220,
+    "observed_days": 31,
+    "window_days": 31,
+    "first_seen": "2026-09-02",
+    "weekly_low": [
+     [
+      "2026-09-04",
+      2110
+     ],
+     [
+      "2026-09-11",
+      2110
+     ],
+     [
+      "2026-09-18",
+      2100
+     ],
+     [
+      "2026-09-25",
+      2160
+     ],
+     [
+      "2026-10-02",
+      2100
+     ]
+    ]
+   },
+   "unit_price": {
+    "value": 720,
+    "label": "1本あたり",
+    "quantity": 3
+   },
+   "specs": {
+    "heads": 3,
+    "genuine": true
+   },
+   "buy_url": "https://search.rakuten.co.jp/search/mall/%E3%83%96%E3%83%A9%E3%82%A6%E3%83%B3%20%E3%82%AA%E3%83%BC%E3%83%A9%E3%83%ABB%20%E6%9B%BF%E3%81%88%E3%83%96%E3%83%A9%E3%82%B7%20%E7%B4%94%E6%AD%A3/",
+   "affiliate_url": "https://search.rakuten.co.jp/search/mall/%E3%83%96%E3%83%A9%E3%82%A6%E3%83%B3%20%E3%82%AA%E3%83%BC%E3%83%A9%E3%83%ABB%20%E6%9B%BF%E3%81%88%E3%83%96%E3%83%A9%E3%82%B7%20%E7%B4%94%E6%AD%A3/",
+   "affiliate": false,
+   "product_url": "https://search.rakuten.co.jp/search/mall/%E3%83%96%E3%83%A9%E3%82%A6%E3%83%B3%20%E3%82%AA%E3%83%BC%E3%83%A9%E3%83%ABB%20%E6%9B%BF%E3%81%88%E3%83%96%E3%83%A9%E3%82%B7%20%E7%B4%94%E6%AD%A3/",
+   "image": null,
+   "other_offers": [
+    {
+     "id": "sample:oralb-heads-4",
+     "store": "rakuten",
+     "store_name": "楽天市場",
+     "shop": "サンプルショップ",
+     "price": 2080,
+     "shipping_included": false,
+     "buy_url": "https://search.rakuten.co.jp/search/mall/%E3%83%96%E3%83%A9%E3%82%A6%E3%83%B3%20%E3%82%AA%E3%83%BC%E3%83%A9%E3%83%ABB%20%E6%9B%BF%E3%81%88%E3%83%96%E3%83%A9%E3%82%B7%20%E7%B4%94%E6%AD%A3/",
+     "affiliate_url": "https://search.rakuten.co.jp/search/mall/%E3%83%96%E3%83%A9%E3%82%A6%E3%83%B3%20%E3%82%AA%E3%83%BC%E3%83%A9%E3%83%ABB%20%E6%9B%BF%E3%81%88%E3%83%96%E3%83%A9%E3%82%B7%20%E7%B4%94%E6%AD%A3/"
+    }
+   ]
+  },
+  {
+   "id": "sample:oralb-heads-5",
+   "rank": 5,
+   "title": "(サンプル) ブラウン オーラルB 純正替えブラシ(丸型) E ブラウン オーラルB 純正 6本",
+   "name": "(サンプル) ブラウン オーラルB 純正替えブラシ（丸型） E ブラウン オーラルB 純正 6本",
+   "store": "rakuten",
+   "store_name": "楽天市場",
+   "shop": "サンプルショップ",
+   "price": 5120,
+   "currency": "JPY",
+   "shipping_included": true,
+   "point_rate": 1,
+   "rating": 3.95,
+   "reviews": 551,
+   "score": 3.972,
+   "variants": false,
+   "price_check": {
+    "verdict": "usual",
+    "label": "いつもの価格",
+    "min_90d": 4970,
+    "median_90d": 5110,
+    "max_90d": 5270,
+    "observed_days": 31,
+    "window_days": 31,
+    "first_seen": "2026-09-02",
+    "weekly_low": [
+     [
+      "2026-09-04",
+      4990
+     ],
+     [
+      "2026-09-11",
+      5010
+     ],
+     [
+      "2026-09-18",
+      4970
+     ],
+     [
+      "2026-09-25",
+      5070
+     ],
+     [
+      "2026-10-02",
+      5000
+     ]
+    ]
+   },
+   "unit_price": {
+    "value": 853.3,
+    "label": "1本あたり",
+    "quantity": 6
+   },
+   "specs": {
+    "heads": 6,
+    "genuine": true
+   },
+   "buy_url": "https://search.rakuten.co.jp/search/mall/%E3%83%96%E3%83%A9%E3%82%A6%E3%83%B3%20%E3%82%AA%E3%83%BC%E3%83%A9%E3%83%ABB%20%E6%9B%BF%E3%81%88%E3%83%96%E3%83%A9%E3%82%B7%20%E7%B4%94%E6%AD%A3/",
+   "affiliate_url": "https://search.rakuten.co.jp/search/mall/%E3%83%96%E3%83%A9%E3%82%A6%E3%83%B3%20%E3%82%AA%E3%83%BC%E3%83%A9%E3%83%ABB%20%E6%9B%BF%E3%81%88%E3%83%96%E3%83%A9%E3%82%B7%20%E7%B4%94%E6%AD%A3/",
+   "affiliate": false,
+   "product_url": "https://search.rakuten.co.jp/search/mall/%E3%83%96%E3%83%A9%E3%82%A6%E3%83%B3%20%E3%82%AA%E3%83%BC%E3%83%A9%E3%83%ABB%20%E6%9B%BF%E3%81%88%E3%83%96%E3%83%A9%E3%82%B7%20%E7%B4%94%E6%AD%A3/",
+   "image": null,
+   "other_offers": []
+  }
+ ],
+ "price_index": [
+  {
+   "week_end": "2026-09-04",
+   "index": 98.4,
+   "items": 5
+  },
+  {
+   "week_end": "2026-09-11",
+   "index": 98,
+   "items": 5
+  },
+  {
+   "week_end": "2026-09-18",
+   "index": 97.7,
+   "items": 5
+  },
+  {
+   "week_end": "2026-09-25",
+   "index": 98.1,
+   "items": 5
+  },
+  {
+   "week_end": "2026-10-02",
+   "index": 97.1,
+   "items": 5
+  }
+ ],
+ "stats": {
+  "candidates": 8,
+  "ranked": 5,
+  "rejected": {
+   "below_price_range": 1,
+   "duplicate": 2
+  },
+  "meanRating": 4.22,
+  "priorWeight": 50
+ },
+ "links": {
+  "html": "https://bufeks.github.io/LAB/shelf/c/oralb-heads/",
+  "markdown": "https://bufeks.github.io/LAB/shelf/c/oralb-heads.md",
+  "json": "https://bufeks.github.io/LAB/shelf/api/v1/c/oralb-heads.json",
+  "feed": "https://bufeks.github.io/LAB/shelf/c/oralb-heads/feed.xml"
+ },
+ "languages": {
+  "ja": {
+   "html": "https://bufeks.github.io/LAB/shelf/c/oralb-heads/",
+   "markdown": "https://bufeks.github.io/LAB/shelf/c/oralb-heads.md",
+   "json": "https://bufeks.github.io/LAB/shelf/api/v1/c/oralb-heads.json",
+   "feed": "https://bufeks.github.io/LAB/shelf/c/oralb-heads/feed.xml"
+  },
+  "en": {
+   "html": "https://bufeks.github.io/LAB/shelf/en/c/oralb-heads/",
+   "markdown": "https://bufeks.github.io/LAB/shelf/en/c/oralb-heads.md",
+   "json": "https://bufeks.github.io/LAB/shelf/api/v1/en/c/oralb-heads.json",
+   "feed": "https://bufeks.github.io/LAB/shelf/en/c/oralb-heads/feed.xml"
+  },
+  "zh-Hans": {
+   "html": "https://bufeks.github.io/LAB/shelf/zh-hans/c/oralb-heads/",
+   "markdown": "https://bufeks.github.io/LAB/shelf/zh-hans/c/oralb-heads.md",
+   "json": "https://bufeks.github.io/LAB/shelf/api/v1/zh-hans/c/oralb-heads.json",
+   "feed": "https://bufeks.github.io/LAB/shelf/zh-hans/c/oralb-heads/feed.xml"
+  },
+  "zh-Hant": {
+   "html": "https://bufeks.github.io/LAB/shelf/zh-hant/c/oralb-heads/",
+   "markdown": "https://bufeks.github.io/LAB/shelf/zh-hant/c/oralb-heads.md",
+   "json": "https://bufeks.github.io/LAB/shelf/api/v1/zh-hant/c/oralb-heads.json",
+   "feed": "https://bufeks.github.io/LAB/shelf/zh-hant/c/oralb-heads/feed.xml"
+  },
+  "ko": {
+   "html": "https://bufeks.github.io/LAB/shelf/ko/c/oralb-heads/",
+   "markdown": "https://bufeks.github.io/LAB/shelf/ko/c/oralb-heads.md",
+   "json": "https://bufeks.github.io/LAB/shelf/api/v1/ko/c/oralb-heads.json",
+   "feed": "https://bufeks.github.io/LAB/shelf/ko/c/oralb-heads/feed.xml"
+  }
+ },
+ "source": {
+  "name": "Rakuten Ichiba",
+  "credit": {
+   "text": "Supported by Rakuten Developers",
+   "url": "https://developers.rakuten.com/"
+  }
+ },
+ "key_facts": [
+  "SHELFはブラウン オーラルB 純正替えブラシ（丸型）の評価上位5商品の価格を毎日記録している。",
+  "価格の中央値は¥4,660、範囲は¥1,000〜¥7,210。",
+  "総合1位は(サンプル) ブラウン オーラルB 純正替えブラシ(丸型) A ブラウン オーラルB 純正 4本（¥4,660、★4.67・レビュー1,757件）。",
+  "1本あたりで比べると最もお得なのは(サンプル) ブラウン オーラルB 純正替えブラシ(丸型) C ブラウン 純正 8本（¥901）。",
+  "ブラウン オーラルB 純正替えブラシ（丸型）の価格指数は97.1（いつもの価格=100、4週前は98.4）。"
+ ],
+ "faq": [
+  {
+   "q": "ブラウン オーラルB 純正替えブラシ（丸型）で今いちばんおすすめは？",
+   "a": "2026-10-02時点のSHELFの集計では、ブラウン オーラルB 純正替えブラシ（丸型）の総合1位は(サンプル) ブラウン オーラルB 純正替えブラシ(丸型) A ブラウン オーラルB 純正 4本（¥4,660、★4.67・レビュー1,757件）。評価とレビュー件数を合わせたスコアで選んでいる。"
+  },
+  {
+   "q": "ブラウン オーラルB 純正替えブラシ（丸型）の相場はいくら？",
+   "a": "2026-10-02時点で、SHELFが追っているブラウン オーラルB 純正替えブラシ（丸型）5商品の価格の中央値は¥4,660（¥1,000〜¥7,210）。"
+  },
+  {
+   "q": "ブラウン オーラルB 純正替えブラシ（丸型）は今が買い時？",
+   "a": "2026-10-02時点のブラウン オーラルB 純正替えブラシ（丸型）: おおむねいつもの価格帯。待っても大きく安くなる兆候はない。（観測31日・季節変動はまだ反映していない）"
+  },
+  {
+   "q": "ブラウン オーラルB 純正替えブラシ（丸型）を一番安く買うには？（1本あたり）",
+   "a": "2026-10-02時点でブラウン オーラルB 純正替えブラシ（丸型）を1本あたりで比べると、送料込み・高評価の中で最安は(サンプル) ブラウン オーラルB 純正替えブラシ(丸型) C ブラウン 純正 8本（¥901）。"
+  },
+  {
+   "q": "ブラウン オーラルB 純正替えブラシ（丸型）はどう選べばいい？",
+   "a": "ブラウン オーラルBの丸型替えブラシは、iOシリーズ以外の回転式本体に使える（iOは専用ブラシのみ、楕円型は別の機種用）。比べるなら1本あたりの価格で。約3か月ごとの交換が目安。"
+  }
+ ],
+ "license": "SHELFが作成した文章と統計はCC BY 4.0です。出典（SHELFとリンク）を明記すれば引用・転載できます。商品名・価格・画像は各ストアのものです。"
+}

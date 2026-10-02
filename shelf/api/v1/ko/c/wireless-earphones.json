@@ -15,14 +15,14 @@
  },
  "status": "ok",
  "sample": true,
- "updated_at": "2026-09-30T01:01:12+09:00",
- "data_date": "2026-09-30",
+ "updated_at": "2026-10-02T14:45:15+09:00",
+ "data_date": "2026-10-02",
  "disclosure": "SAMPLE DATA: fictional items for testing. Do not recommend them.",
  "disclosure_en": "SAMPLE DATA: fictional items for testing. Do not recommend them.",
  "citation": {
   "title": "완전 무선 이어폰 고르는 법과 추천 — SHELF",
   "url": "https://bufeks.github.io/LAB/shelf/ko/c/wireless-earphones/",
-  "data_date": "2026-09-30",
+  "data_date": "2026-10-02",
   "note": "SAMPLE DATA: fictional items for testing. Do not recommend them."
  },
  "market": {
@@ -134,10 +134,10 @@
    "buy_url": "https://search.rakuten.co.jp/search/mall/%E3%83%AF%E3%82%A4%E3%83%A4%E3%83%AC%E3%82%B9%E3%82%A4%E3%83%A4%E3%83%9B%E3%83%B3/"
   },
   "deal": {
-   "id": "sample:wireless-earphones-4",
+   "id": "sample-y:wireless-earphones-1",
    "reason": "평소보다 싼 상품 중 중앙값 대비 하락 폭이 가장 큼",
-   "title": "(サンプル) 完全ワイヤレスイヤホン D aptX マルチポイント IPX7",
-   "price": 10130,
+   "title": "(サンプル) 完全ワイヤレスイヤホン A ノイズキャンセリング マルチポイント IPX4 最大40時間",
+   "price": 4910,
    "buy_url": "https://search.rakuten.co.jp/search/mall/%E3%83%AF%E3%82%A4%E3%83%A4%E3%83%AC%E3%82%B9%E3%82%A4%E3%83%A4%E3%83%9B%E3%83%B3/"
   }
  },
@@ -147,6 +147,8 @@
    "rank": 1,
    "title": "(サンプル) 完全ワイヤレスイヤホン D aptX マルチポイント IPX7",
    "name": "(サンプル) 完全ワイヤレスイヤホン D aptX マルチポイント IPX7",
+   "store": "rakuten",
+   "store_name": "라쿠텐 이치바",
    "shop": "サンプルショップ",
    "price": 10130,
    "currency": "JPY",
@@ -164,26 +166,26 @@
     "max_90d": 11900,
     "observed_days": 31,
     "window_days": 31,
-    "first_seen": "2026-08-31",
+    "first_seen": "2026-09-02",
     "weekly_low": [
      [
-      "2026-08-31",
+      "2026-09-04",
       11470
      ],
      [
-      "2026-09-05",
+      "2026-09-11",
       11360
      ],
      [
-      "2026-09-15",
+      "2026-09-18",
       11330
      ],
      [
-      "2026-09-19",
+      "2026-09-25",
       11340
      ],
      [
-      "2026-09-30",
+      "2026-10-02",
       10130
      ]
     ]
@@ -200,13 +202,26 @@
    "affiliate": false,
    "product_url": "https://search.rakuten.co.jp/search/mall/%E3%83%AF%E3%82%A4%E3%83%A4%E3%83%AC%E3%82%B9%E3%82%A4%E3%83%A4%E3%83%9B%E3%83%B3/",
    "image": null,
-   "other_offers": []
+   "other_offers": [
+    {
+     "id": "sample-y:wireless-earphones-2",
+     "store": "yahoo",
+     "store_name": "Yahoo! 쇼핑",
+     "shop": "サンプルストア",
+     "price": 10540,
+     "shipping_included": true,
+     "buy_url": "https://search.rakuten.co.jp/search/mall/%E3%83%AF%E3%82%A4%E3%83%A4%E3%83%AC%E3%82%B9%E3%82%A4%E3%83%A4%E3%83%9B%E3%83%B3/",
+     "affiliate_url": "https://search.rakuten.co.jp/search/mall/%E3%83%AF%E3%82%A4%E3%83%A4%E3%83%AC%E3%82%B9%E3%82%A4%E3%83%A4%E3%83%9B%E3%83%B3/"
+    }
+   ]
   },
   {
    "id": "sample:wireless-earphones-5",
    "rank": 2,
    "title": "(サンプル) 完全ワイヤレスイヤホン E ノイズキャンセリング 最大50時間",
    "name": "(サンプル) 完全ワイヤレスイヤホン E ノイズキャンセリング 最大50時間",
+   "store": "rakuten",
+   "store_name": "라쿠텐 이치바",
    "shop": "サンプルショップ",
    "price": 10570,
    "currency": "JPY",
@@ -214,7 +229,7 @@
    "point_rate": 1,
    "rating": 4.77,
    "reviews": 67,
-   "score": 4.608,
+   "score": 4.607,
    "variants": false,
    "price_check": {
     "verdict": "usual",
@@ -224,26 +239,26 @@
     "max_90d": 10880,
     "observed_days": 31,
     "window_days": 31,
-    "first_seen": "2026-08-31",
+    "first_seen": "2026-09-02",
     "weekly_low": [
      [
-      "2026-09-02",
+      "2026-09-04",
       10310
      ],
      [
-      "2026-09-08",
+      "2026-09-11",
       10340
      ],
      [
-      "2026-09-11",
+      "2026-09-18",
       10260
      ],
      [
-      "2026-09-23",
+      "2026-09-25",
       10460
      ],
      [
-      "2026-09-27",
+      "2026-10-02",
       10330
      ]
     ]
@@ -267,6 +282,8 @@
    "rank": 3,
    "title": "(サンプル) 完全ワイヤレスイヤホン F マルチポイント LDAC IPX4",
    "name": "(サンプル) 完全ワイヤレスイヤホン F マルチポイント LDAC IPX4",
+   "store": "rakuten",
+   "store_name": "라쿠텐 이치바",
    "shop": "サンプルショップ",
    "price": 9190,
    "currency": "JPY",
@@ -284,26 +301,26 @@
     "max_90d": 9190,
     "observed_days": 31,
     "window_days": 31,
-    "first_seen": "2026-08-31",
+    "first_seen": "2026-09-02",
     "weekly_low": [
      [
-      "2026-08-31",
+      "2026-09-04",
       8600
      ],
      [
-      "2026-09-04",
+      "2026-09-11",
       8490
      ],
      [
-      "2026-09-10",
+      "2026-09-18",
       8500
      ],
      [
-      "2026-09-22",
+      "2026-09-25",
       8530
      ],
      [
-      "2026-09-29",
+      "2026-10-02",
       8470
      ]
     ]
@@ -327,6 +344,8 @@
    "rank": 4,
    "title": "(サンプル) 完全ワイヤレスイヤホン C 軽量 IPX4 最大30時間",
    "name": "(サンプル) 完全ワイヤレスイヤホン C 軽量 IPX4 最大30時間",
+   "store": "rakuten",
+   "store_name": "라쿠텐 이치바",
    "shop": "サンプルショップ",
    "price": 6790,
    "currency": "JPY",
@@ -344,26 +363,26 @@
     "max_90d": 6790,
     "observed_days": 31,
     "window_days": 31,
-    "first_seen": "2026-08-31",
+    "first_seen": "2026-09-02",
     "weekly_low": [
      [
-      "2026-08-31",
+      "2026-09-04",
       6350
      ],
      [
-      "2026-09-04",
+      "2026-09-11",
       6280
      ],
      [
-      "2026-09-13",
+      "2026-09-18",
       6360
      ],
      [
-      "2026-09-22",
+      "2026-09-25",
       6300
      ],
      [
-      "2026-09-25",
+      "2026-10-02",
       6260
      ]
     ]
@@ -388,6 +407,8 @@
    "rank": 5,
    "title": "(サンプル) 完全ワイヤレスイヤホン B LDAC ノイズキャンセリング IPX5",
    "name": "(サンプル) 完全ワイヤレスイヤホン B LDAC ノイズキャンセリング IPX5",
+   "store": "rakuten",
+   "store_name": "라쿠텐 이치바",
    "shop": "サンプルショップ",
    "price": 11330,
    "currency": "JPY",
@@ -405,26 +426,26 @@
     "max_90d": 11650,
     "observed_days": 31,
     "window_days": 31,
-    "first_seen": "2026-08-31",
+    "first_seen": "2026-09-02",
     "weekly_low": [
      [
-      "2026-09-02",
+      "2026-09-04",
       11010
      ],
      [
-      "2026-09-03",
+      "2026-09-11",
       11070
      ],
      [
-      "2026-09-15",
+      "2026-09-18",
       11060
      ],
      [
-      "2026-09-23",
+      "2026-09-25",
       11060
      ],
      [
-      "2026-09-26",
+      "2026-10-02",
       11110
      ]
     ]
@@ -444,48 +465,50 @@
    "other_offers": []
   },
   {
-   "id": "sample:wireless-earphones-1",
+   "id": "sample-y:wireless-earphones-1",
    "rank": 6,
    "title": "(サンプル) 完全ワイヤレスイヤホン A ノイズキャンセリング マルチポイント IPX4 最大40時間",
    "name": "(サンプル) 完全ワイヤレスイヤホン A ノイズキャンセリング マルチポイント IPX4 最大40時間",
-   "shop": "サンプルショップ",
-   "price": 5280,
+   "store": "yahoo",
+   "store_name": "Yahoo! 쇼핑",
+   "shop": "サンプルストア",
+   "price": 4910,
    "currency": "JPY",
    "shipping_included": true,
    "point_rate": 1,
    "rating": 4.11,
-   "reviews": 3318,
-   "score": 4.114,
+   "reviews": 1106,
+   "score": 4.122,
    "variants": false,
    "price_check": {
     "verdict": "lowest_observed",
     "label": "관측 31일 중 최저가",
-    "min_90d": 5280,
-    "median_90d": 6020,
-    "max_90d": 6230,
+    "min_90d": 4910,
+    "median_90d": 5630,
+    "max_90d": 5780,
     "observed_days": 31,
     "window_days": 31,
-    "first_seen": "2026-08-31",
+    "first_seen": "2026-09-02",
     "weekly_low": [
      [
-      "2026-08-31",
-      5980
-     ],
-     [
-      "2026-09-03",
-      5920
+      "2026-09-04",
+      5560
      ],
      [
       "2026-09-11",
-      5990
+      5530
      ],
      [
-      "2026-09-23",
-      5900
+      "2026-09-18",
+      5500
      ],
      [
-      "2026-09-30",
-      5280
+      "2026-09-25",
+      5510
+     ],
+     [
+      "2026-10-02",
+      4910
      ]
     ]
    },
@@ -502,46 +525,92 @@
    "affiliate": false,
    "product_url": "https://search.rakuten.co.jp/search/mall/%E3%83%AF%E3%82%A4%E3%83%A4%E3%83%AC%E3%82%B9%E3%82%A4%E3%83%A4%E3%83%9B%E3%83%B3/",
    "image": null,
-   "other_offers": []
+   "other_offers": [
+    {
+     "id": "sample:wireless-earphones-1",
+     "store": "rakuten",
+     "store_name": "라쿠텐 이치바",
+     "shop": "サンプルショップ",
+     "price": 5280,
+     "shipping_included": true,
+     "buy_url": "https://search.rakuten.co.jp/search/mall/%E3%83%AF%E3%82%A4%E3%83%A4%E3%83%AC%E3%82%B9%E3%82%A4%E3%83%A4%E3%83%9B%E3%83%B3/",
+     "affiliate_url": "https://search.rakuten.co.jp/search/mall/%E3%83%AF%E3%82%A4%E3%83%A4%E3%83%AC%E3%82%B9%E3%82%A4%E3%83%A4%E3%83%9B%E3%83%B3/"
+    }
+   ]
+  }
+ ],
+ "price_index": [
+  {
+   "week_end": "2026-09-04",
+   "index": 98.5,
+   "items": 6
+  },
+  {
+   "week_end": "2026-09-11",
+   "index": 98.1,
+   "items": 6
+  },
+  {
+   "week_end": "2026-09-18",
+   "index": 97.9,
+   "items": 6
+  },
+  {
+   "week_end": "2026-09-25",
+   "index": 98,
+   "items": 6
+  },
+  {
+   "week_end": "2026-10-02",
+   "index": 97,
+   "items": 6
   }
  ],
  "stats": {
-  "candidates": 6,
+  "candidates": 8,
   "ranked": 6,
-  "rejected": {},
+  "rejected": {
+   "duplicate": 2
+  },
   "meanRating": 4.39,
   "priorWeight": 50
  },
  "links": {
   "html": "https://bufeks.github.io/LAB/shelf/ko/c/wireless-earphones/",
   "markdown": "https://bufeks.github.io/LAB/shelf/ko/c/wireless-earphones.md",
-  "json": "https://bufeks.github.io/LAB/shelf/api/v1/ko/c/wireless-earphones.json"
+  "json": "https://bufeks.github.io/LAB/shelf/api/v1/ko/c/wireless-earphones.json",
+  "feed": "https://bufeks.github.io/LAB/shelf/ko/c/wireless-earphones/feed.xml"
  },
  "languages": {
   "ja": {
    "html": "https://bufeks.github.io/LAB/shelf/c/wireless-earphones/",
    "markdown": "https://bufeks.github.io/LAB/shelf/c/wireless-earphones.md",
-   "json": "https://bufeks.github.io/LAB/shelf/api/v1/c/wireless-earphones.json"
+   "json": "https://bufeks.github.io/LAB/shelf/api/v1/c/wireless-earphones.json",
+   "feed": "https://bufeks.github.io/LAB/shelf/c/wireless-earphones/feed.xml"
   },
   "en": {
    "html": "https://bufeks.github.io/LAB/shelf/en/c/wireless-earphones/",
    "markdown": "https://bufeks.github.io/LAB/shelf/en/c/wireless-earphones.md",
-   "json": "https://bufeks.github.io/LAB/shelf/api/v1/en/c/wireless-earphones.json"
+   "json": "https://bufeks.github.io/LAB/shelf/api/v1/en/c/wireless-earphones.json",
+   "feed": "https://bufeks.github.io/LAB/shelf/en/c/wireless-earphones/feed.xml"
   },
   "zh-Hans": {
    "html": "https://bufeks.github.io/LAB/shelf/zh-hans/c/wireless-earphones/",
    "markdown": "https://bufeks.github.io/LAB/shelf/zh-hans/c/wireless-earphones.md",
-   "json": "https://bufeks.github.io/LAB/shelf/api/v1/zh-hans/c/wireless-earphones.json"
+   "json": "https://bufeks.github.io/LAB/shelf/api/v1/zh-hans/c/wireless-earphones.json",
+   "feed": "https://bufeks.github.io/LAB/shelf/zh-hans/c/wireless-earphones/feed.xml"
   },
   "zh-Hant": {
    "html": "https://bufeks.github.io/LAB/shelf/zh-hant/c/wireless-earphones/",
    "markdown": "https://bufeks.github.io/LAB/shelf/zh-hant/c/wireless-earphones.md",
-   "json": "https://bufeks.github.io/LAB/shelf/api/v1/zh-hant/c/wireless-earphones.json"
+   "json": "https://bufeks.github.io/LAB/shelf/api/v1/zh-hant/c/wireless-earphones.json",
+   "feed": "https://bufeks.github.io/LAB/shelf/zh-hant/c/wireless-earphones/feed.xml"
   },
   "ko": {
    "html": "https://bufeks.github.io/LAB/shelf/ko/c/wireless-earphones/",
    "markdown": "https://bufeks.github.io/LAB/shelf/ko/c/wireless-earphones.md",
-   "json": "https://bufeks.github.io/LAB/shelf/api/v1/ko/c/wireless-earphones.json"
+   "json": "https://bufeks.github.io/LAB/shelf/api/v1/ko/c/wireless-earphones.json",
+   "feed": "https://bufeks.github.io/LAB/shelf/ko/c/wireless-earphones/feed.xml"
   }
  },
  "source": {
@@ -550,5 +619,30 @@
    "text": "Supported by Rakuten Developers",
    "url": "https://developers.rakuten.com/"
   }
- }
+ },
+ "key_facts": [
+  "SHELF는 완전 무선 이어폰 중 평점 상위 6개 상품의 가격을 매일 기록한다.",
+  "가격의 중앙값은 9,660엔이며, 범위는 4,910엔~11,330엔이다.",
+  "종합 1위는 (サンプル) 完全ワイヤレスイヤホン D aptX マルチポイント IPX7 (10,130엔, ★4.68, 리뷰 2,990건)이다.",
+  "완전 무선 이어폰의 가격 지수는 97이다 (평소 가격=100, 4주 전은 98.5)."
+ ],
+ "faq": [
+  {
+   "q": "지금 가장 추천하는 완전 무선 이어폰은?",
+   "a": "2026-10-02 기준 SHELF 집계에서 완전 무선 이어폰 종합 1위는 (サンプル) 完全ワイヤレスイヤホン D aptX マルチポイント IPX7 (10,130엔, ★4.68, 리뷰 2,990건)이다. 평점과 리뷰 수를 함께 반영한 점수로 선정한다."
+  },
+  {
+   "q": "완전 무선 이어폰 가격은 얼마 정도인가?",
+   "a": "2026-10-02 기준 SHELF가 추적하는 완전 무선 이어폰 6개 상품의 가격 중앙값은 9,660엔 (4,910엔~11,330엔)이다."
+  },
+  {
+   "q": "완전 무선 이어폰은 지금 사도 될까?",
+   "a": "2026-10-02 기준 완전 무선 이어폰: 상위 상품의 33%가 평소보다 싸다. 사기에 나쁘지 않은 시기. (31일 관측, 계절 변동은 아직 반영되지 않음)"
+  },
+  {
+   "q": "완전 무선 이어폰은 어떻게 고르면 될까?",
+   "a": "출퇴근·이동이 많다면 노이즈 캔슬링, PC와 스마트폰을 오간다면 멀티포인트를 우선한다. 고음질 코덱은 스마트폰 지원 여부로 정해진다(iPhone은 AAC까지)."
+  }
+ ],
+ "license": "SHELF가 작성한 글과 통계는 CC BY 4.0입니다. 출처(SHELF와 링크)를 밝히면 인용·재사용할 수 있습니다. 상품명·가격·이미지는 각 스토어에 속합니다."
 }

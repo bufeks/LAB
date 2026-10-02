@@ -1,0 +1,657 @@
+{
+ "schema": "shelf.category/v1",
+ "lang": "zh-Hant",
+ "translated": true,
+ "id": "sonicare-heads",
+ "name": "Sonicare 原廠替換刷頭",
+ "name_ja": "ソニッケアー純正替えブラシ",
+ "name_en": "Sonicare brush heads",
+ "names": {
+  "ja": "ソニッケアー純正替えブラシ",
+  "en": "Sonicare brush heads",
+  "zh-Hans": "飞利浦 Sonicare 原装替换刷头",
+  "zh-Hant": "Sonicare 原廠替換刷頭",
+  "ko": "소닉케어 정품 교체용 칫솔모"
+ },
+ "status": "ok",
+ "sample": true,
+ "updated_at": "2026-10-02T14:45:15+09:00",
+ "data_date": "2026-10-02",
+ "disclosure": "SAMPLE DATA: fictional items for testing. Do not recommend them.",
+ "disclosure_en": "SAMPLE DATA: fictional items for testing. Do not recommend them.",
+ "citation": {
+  "title": "Sonicare 原廠替換刷頭：怎麼選與推薦 — SHELF",
+  "url": "https://bufeks.github.io/LAB/shelf/zh-hant/c/sonicare-heads/",
+  "data_date": "2026-10-02",
+  "note": "SAMPLE DATA: fictional items for testing. Do not recommend them."
+ },
+ "market": {
+  "country": "JP",
+  "currency": "JPY",
+  "store": "Rakuten Ichiba",
+  "for_visitors": "價格為日圓含稅價。樂天市場大多數店家只在日本國內出貨：在海外請選擇可國際配送的店家，或使用集運服務。在日本購買的商品，原廠保固通常只在日本有效。"
+ },
+ "how_to_choose": {
+  "asOf": "2026-10",
+  "summary": "卡扣式的 Sonicare 替換刷頭，幾乎所有 Sonicare 充電式主機都能使用（Philips One 與舊款 Essence 除外）。比較時看每支價格。約每 3 個月更換一次。",
+  "criteria": [
+   {
+    "name": "與主機的相容性",
+    "detail": "根據廠商說明，標準卡扣式刷頭可用於幾乎所有 Sonicare 充電式電動牙刷。Philips One 只能用專用刷頭，舊款 Essence 為旋入式。"
+   },
+   {
+    "name": "每支價格",
+    "detail": "有 2 支、4 支、8 支裝等不同數量，請用支數換算比較。大包裝通常較划算。"
+   },
+   {
+    "name": "刷頭種類",
+    "detail": "有去除牙菌斑、美白、牙齦護理等不同用途的種類。日常使用選標準款就夠了。"
+   },
+   {
+    "name": "原廠或副廠",
+    "detail": "這裡只比較原廠品。副廠品便宜，但可能無法享有原廠保固。"
+   }
+  ],
+  "pitfalls": [
+   "刷毛開始外翻時，不必等到 3 個月就該更換。",
+   "不知道主機型號時，請查看主機底部或使用說明書。"
+  ],
+  "abroad": "在任何地方都能用於相同的主機。"
+ },
+ "price_outlook": {
+  "verdict": "cheaper_than_usual",
+  "share_cheaper": 0.33,
+  "share_pricier": 0,
+  "judged_items": 6,
+  "window_days": 31,
+  "summary": "排名前面的商品中 33% 比平常便宜。現在買是不錯的時機。（已觀測 31 天，尚未反映季節變化）"
+ },
+ "method": {
+  "summary": "每個類別依評價數從樂天取得最多 60 項商品，依排除字詞、價格區間與最低評價數篩選。不同店家販售的同一商品（型號相同，或規格相同且名稱幾乎一致）合併為評分最高的一項，其他店家的價格保留在 other_offers。其餘依「貝氏平均評分」排序。",
+  "formula": "score = (C × m + n × r) / (C + n)  … r = 該商品平均評分，n = 評價數，m = 所有候選商品的平均評分，C = 50",
+  "why": "讓有數千則評價的 4.4★ 排在只有幾則評價的 5★ 之前。評價越少，評分越被拉向整體平均。",
+  "picks": {
+   "best": "分數第一",
+   "budget": "分數前 40% 的商品中價格最低",
+   "deal": "價格低於平常的商品中，低於中位價幅度最大的一項（排除異常值與可選規格的商品）"
+  },
+  "priceVerdict": "每天記錄價格，只與運費條件相同的日子比較。觀測不足 7 天為 insufficient_data；為觀測期間最低價且比中位價低 3% 以上為 lowest_observed；不高於中位價的 90% 為 below_usual；不低於 110% 為 above_usual；其餘為 usual。觀測期間最長 90 天，天數見 window_days。",
+  "caveat": "規格是從商品名稱機械式擷取的參考值，可能有誤。購買前請在商品頁面確認。"
+ },
+ "spec_fields": [
+  {
+   "key": "heads",
+   "label": "支數",
+   "unit": "支",
+   "type": "number"
+  },
+  {
+   "key": "genuine",
+   "label": "標示原廠",
+   "unit": null,
+   "type": "flag"
+  }
+ ],
+ "unit_rule": {
+  "label": "每支刷頭",
+  "higher_is_better": false,
+  "note": "依商品名稱標示的容量與數量計算。可選容量的商品與標示不明確的商品不列入。運費另計的商品加上運費後名次可能改變。"
+ },
+ "unit_ranking": [
+  "sample:sonicare-heads-5",
+  "sample:sonicare-heads-3",
+  "sample-y:sonicare-heads-1",
+  "sample:sonicare-heads-4",
+  "sample:sonicare-heads-2",
+  "sample:sonicare-heads-6"
+ ],
+ "picks": {
+  "best": {
+   "id": "sample:sonicare-heads-4",
+   "reason": "分數最高（評分與評價數綜合起來最可信）",
+   "title": "(サンプル) ソニッケアー純正替えブラシ D ソニッケアー 純正 ホワイトニング 3本",
+   "price": 2610,
+   "buy_url": "https://search.rakuten.co.jp/search/mall/%E3%82%BD%E3%83%8B%E3%83%83%E3%82%B1%E3%82%A2%E3%83%BC%20%E6%9B%BF%E3%81%88%E3%83%96%E3%83%A9%E3%82%B7%20%E7%B4%94%E6%AD%A3/"
+  },
+  "budget": {
+   "id": "sample:sonicare-heads-5",
+   "reason": "分數前 40% 中價格最低",
+   "title": "(サンプル) ソニッケアー純正替えブラシ E ソニッケアー 純正 6本",
+   "price": 2150,
+   "buy_url": "https://search.rakuten.co.jp/search/mall/%E3%82%BD%E3%83%8B%E3%83%83%E3%82%B1%E3%82%A2%E3%83%BC%20%E6%9B%BF%E3%81%88%E3%83%96%E3%83%A9%E3%82%B7%20%E7%B4%94%E6%AD%A3/"
+  },
+  "deal": {
+   "id": "sample-y:sonicare-heads-1",
+   "reason": "在比平常便宜的商品中，低於中位價幅度最大",
+   "title": "(サンプル) ソニッケアー純正替えブラシ A ソニッケアー 純正 4本",
+   "price": 3110,
+   "buy_url": "https://search.rakuten.co.jp/search/mall/%E3%82%BD%E3%83%8B%E3%83%83%E3%82%B1%E3%82%A2%E3%83%BC%20%E6%9B%BF%E3%81%88%E3%83%96%E3%83%A9%E3%82%B7%20%E7%B4%94%E6%AD%A3/"
+  },
+  "per_unit": {
+   "id": "sample:sonicare-heads-5",
+   "reason": "每支刷頭價格最低（含運費，分數前 60% 的商品中）",
+   "title": "(サンプル) ソニッケアー純正替えブラシ E ソニッケアー 純正 6本",
+   "price": 2150,
+   "buy_url": "https://search.rakuten.co.jp/search/mall/%E3%82%BD%E3%83%8B%E3%83%83%E3%82%B1%E3%82%A2%E3%83%BC%20%E6%9B%BF%E3%81%88%E3%83%96%E3%83%A9%E3%82%B7%20%E7%B4%94%E6%AD%A3/"
+  }
+ },
+ "items": [
+  {
+   "id": "sample:sonicare-heads-4",
+   "rank": 1,
+   "title": "(サンプル) ソニッケアー純正替えブラシ D ソニッケアー 純正 ホワイトニング 3本",
+   "name": "(サンプル) ソニッケアー純正替えブラシ D ソニッケアー 純正 ホワイトニング 3本",
+   "store": "rakuten",
+   "store_name": "樂天市場",
+   "shop": "サンプルショップ",
+   "price": 2610,
+   "currency": "JPY",
+   "shipping_included": false,
+   "point_rate": 1,
+   "rating": 4.64,
+   "reviews": 3314,
+   "score": 4.634,
+   "variants": false,
+   "price_check": {
+    "verdict": "lowest_observed",
+    "label": "觀測 31 天內最低價",
+    "min_90d": 2610,
+    "median_90d": 2980,
+    "max_90d": 3060,
+    "observed_days": 31,
+    "window_days": 31,
+    "first_seen": "2026-09-02",
+    "weekly_low": [
+     [
+      "2026-09-04",
+      2950
+     ],
+     [
+      "2026-09-11",
+      2930
+     ],
+     [
+      "2026-09-18",
+      2920
+     ],
+     [
+      "2026-09-25",
+      2920
+     ],
+     [
+      "2026-10-02",
+      2610
+     ]
+    ]
+   },
+   "unit_price": {
+    "value": 870,
+    "label": "每支刷頭",
+    "quantity": 3
+   },
+   "specs": {
+    "heads": 3,
+    "genuine": true
+   },
+   "buy_url": "https://search.rakuten.co.jp/search/mall/%E3%82%BD%E3%83%8B%E3%83%83%E3%82%B1%E3%82%A2%E3%83%BC%20%E6%9B%BF%E3%81%88%E3%83%96%E3%83%A9%E3%82%B7%20%E7%B4%94%E6%AD%A3/",
+   "affiliate_url": "https://search.rakuten.co.jp/search/mall/%E3%82%BD%E3%83%8B%E3%83%83%E3%82%B1%E3%82%A2%E3%83%BC%20%E6%9B%BF%E3%81%88%E3%83%96%E3%83%A9%E3%82%B7%20%E7%B4%94%E6%AD%A3/",
+   "affiliate": false,
+   "product_url": "https://search.rakuten.co.jp/search/mall/%E3%82%BD%E3%83%8B%E3%83%83%E3%82%B1%E3%82%A2%E3%83%BC%20%E6%9B%BF%E3%81%88%E3%83%96%E3%83%A9%E3%82%B7%20%E7%B4%94%E6%AD%A3/",
+   "image": null,
+   "other_offers": [
+    {
+     "id": "sample-y:sonicare-heads-2",
+     "store": "yahoo",
+     "store_name": "Yahoo!購物",
+     "shop": "サンプルストア",
+     "price": 2710,
+     "shipping_included": true,
+     "buy_url": "https://search.rakuten.co.jp/search/mall/%E3%82%BD%E3%83%8B%E3%83%83%E3%82%B1%E3%82%A2%E3%83%BC%20%E6%9B%BF%E3%81%88%E3%83%96%E3%83%A9%E3%82%B7%20%E7%B4%94%E6%AD%A3/",
+     "affiliate_url": "https://search.rakuten.co.jp/search/mall/%E3%82%BD%E3%83%8B%E3%83%83%E3%82%B1%E3%82%A2%E3%83%BC%20%E6%9B%BF%E3%81%88%E3%83%96%E3%83%A9%E3%82%B7%20%E7%B4%94%E6%AD%A3/"
+    }
+   ]
+  },
+  {
+   "id": "sample:sonicare-heads-5",
+   "rank": 2,
+   "title": "(サンプル) ソニッケアー純正替えブラシ E ソニッケアー 純正 6本",
+   "name": "(サンプル) ソニッケアー純正替えブラシ E ソニッケアー 純正 6本",
+   "store": "rakuten",
+   "store_name": "樂天市場",
+   "shop": "サンプルショップ",
+   "price": 2150,
+   "currency": "JPY",
+   "shipping_included": true,
+   "point_rate": 1,
+   "rating": 4.44,
+   "reviews": 2376,
+   "score": 4.436,
+   "variants": false,
+   "price_check": {
+    "verdict": "usual",
+    "label": "平常價格",
+    "min_90d": 2090,
+    "median_90d": 2140,
+    "max_90d": 2210,
+    "observed_days": 31,
+    "window_days": 31,
+    "first_seen": "2026-09-02",
+    "weekly_low": [
+     [
+      "2026-09-04",
+      2100
+     ],
+     [
+      "2026-09-11",
+      2100
+     ],
+     [
+      "2026-09-18",
+      2090
+     ],
+     [
+      "2026-09-25",
+      2130
+     ],
+     [
+      "2026-10-02",
+      2100
+     ]
+    ]
+   },
+   "unit_price": {
+    "value": 358.3,
+    "label": "每支刷頭",
+    "quantity": 6
+   },
+   "specs": {
+    "heads": 6,
+    "genuine": true
+   },
+   "buy_url": "https://search.rakuten.co.jp/search/mall/%E3%82%BD%E3%83%8B%E3%83%83%E3%82%B1%E3%82%A2%E3%83%BC%20%E6%9B%BF%E3%81%88%E3%83%96%E3%83%A9%E3%82%B7%20%E7%B4%94%E6%AD%A3/",
+   "affiliate_url": "https://search.rakuten.co.jp/search/mall/%E3%82%BD%E3%83%8B%E3%83%83%E3%82%B1%E3%82%A2%E3%83%BC%20%E6%9B%BF%E3%81%88%E3%83%96%E3%83%A9%E3%82%B7%20%E7%B4%94%E6%AD%A3/",
+   "affiliate": false,
+   "product_url": "https://search.rakuten.co.jp/search/mall/%E3%82%BD%E3%83%8B%E3%83%83%E3%82%B1%E3%82%A2%E3%83%BC%20%E6%9B%BF%E3%81%88%E3%83%96%E3%83%A9%E3%82%B7%20%E7%B4%94%E6%AD%A3/",
+   "image": null,
+   "other_offers": []
+  },
+  {
+   "id": "sample:sonicare-heads-3",
+   "rank": 3,
+   "title": "(サンプル) ソニッケアー純正替えブラシ C フィリップス ソニッケアー 8本",
+   "name": "(サンプル) ソニッケアー純正替えブラシ C フィリップス ソニッケアー 正規品 8本",
+   "store": "rakuten",
+   "store_name": "樂天市場",
+   "shop": "サンプルショップ",
+   "price": 4140,
+   "currency": "JPY",
+   "shipping_included": true,
+   "point_rate": 1,
+   "rating": 4.4,
+   "reviews": 3348,
+   "score": 4.398,
+   "variants": false,
+   "price_check": {
+    "verdict": "usual",
+    "label": "平常價格",
+    "min_90d": 3820,
+    "median_90d": 3940,
+    "max_90d": 4140,
+    "observed_days": 31,
+    "window_days": 31,
+    "first_seen": "2026-09-02",
+    "weekly_low": [
+     [
+      "2026-09-04",
+      3870
+     ],
+     [
+      "2026-09-11",
+      3830
+     ],
+     [
+      "2026-09-18",
+      3880
+     ],
+     [
+      "2026-09-25",
+      3840
+     ],
+     [
+      "2026-10-02",
+      3820
+     ]
+    ]
+   },
+   "unit_price": {
+    "value": 517.5,
+    "label": "每支刷頭",
+    "quantity": 8
+   },
+   "specs": {
+    "heads": 8,
+    "genuine": true
+   },
+   "buy_url": "https://search.rakuten.co.jp/search/mall/%E3%82%BD%E3%83%8B%E3%83%83%E3%82%B1%E3%82%A2%E3%83%BC%20%E6%9B%BF%E3%81%88%E3%83%96%E3%83%A9%E3%82%B7%20%E7%B4%94%E6%AD%A3/",
+   "affiliate_url": "https://search.rakuten.co.jp/search/mall/%E3%82%BD%E3%83%8B%E3%83%83%E3%82%B1%E3%82%A2%E3%83%BC%20%E6%9B%BF%E3%81%88%E3%83%96%E3%83%A9%E3%82%B7%20%E7%B4%94%E6%AD%A3/",
+   "affiliate": false,
+   "product_url": "https://search.rakuten.co.jp/search/mall/%E3%82%BD%E3%83%8B%E3%83%83%E3%82%B1%E3%82%A2%E3%83%BC%20%E6%9B%BF%E3%81%88%E3%83%96%E3%83%A9%E3%82%B7%20%E7%B4%94%E6%AD%A3/",
+   "image": null,
+   "other_offers": []
+  },
+  {
+   "id": "sample:sonicare-heads-6",
+   "rank": 4,
+   "title": "(サンプル) ソニッケアー純正替えブラシ F ソニッケアー 純正 1本",
+   "name": "(サンプル) ソニッケアー純正替えブラシ F ソニッケアー 純正 1本",
+   "store": "rakuten",
+   "store_name": "樂天市場",
+   "shop": "サンプルショップ",
+   "price": 4600,
+   "currency": "JPY",
+   "shipping_included": false,
+   "point_rate": 1,
+   "rating": 4.07,
+   "reviews": 3267,
+   "score": 4.072,
+   "variants": false,
+   "price_check": {
+    "verdict": "usual",
+    "label": "平常價格",
+    "min_90d": 4240,
+    "median_90d": 4370,
+    "max_90d": 4600,
+    "observed_days": 31,
+    "window_days": 31,
+    "first_seen": "2026-09-02",
+    "weekly_low": [
+     [
+      "2026-09-04",
+      4300
+     ],
+     [
+      "2026-09-11",
+      4250
+     ],
+     [
+      "2026-09-18",
+      4250
+     ],
+     [
+      "2026-09-25",
+      4270
+     ],
+     [
+      "2026-10-02",
+      4240
+     ]
+    ]
+   },
+   "unit_price": {
+    "value": 4600,
+    "label": "每支刷頭",
+    "quantity": 1
+   },
+   "specs": {
+    "heads": 1,
+    "genuine": true
+   },
+   "buy_url": "https://search.rakuten.co.jp/search/mall/%E3%82%BD%E3%83%8B%E3%83%83%E3%82%B1%E3%82%A2%E3%83%BC%20%E6%9B%BF%E3%81%88%E3%83%96%E3%83%A9%E3%82%B7%20%E7%B4%94%E6%AD%A3/",
+   "affiliate_url": "https://search.rakuten.co.jp/search/mall/%E3%82%BD%E3%83%8B%E3%83%83%E3%82%B1%E3%82%A2%E3%83%BC%20%E6%9B%BF%E3%81%88%E3%83%96%E3%83%A9%E3%82%B7%20%E7%B4%94%E6%AD%A3/",
+   "affiliate": false,
+   "product_url": "https://search.rakuten.co.jp/search/mall/%E3%82%BD%E3%83%8B%E3%83%83%E3%82%B1%E3%82%A2%E3%83%BC%20%E6%9B%BF%E3%81%88%E3%83%96%E3%83%A9%E3%82%B7%20%E7%B4%94%E6%AD%A3/",
+   "image": null,
+   "other_offers": []
+  },
+  {
+   "id": "sample:sonicare-heads-2",
+   "rank": 5,
+   "title": "(サンプル) ソニッケアー純正替えブラシ B ソニッケアー 純正 2本",
+   "name": "(サンプル) ソニッケアー純正替えブラシ B ソニッケアー 純正 2本",
+   "store": "rakuten",
+   "store_name": "樂天市場",
+   "shop": "サンプルショップ",
+   "price": 2070,
+   "currency": "JPY",
+   "shipping_included": false,
+   "point_rate": 1,
+   "rating": 4.04,
+   "reviews": 3945,
+   "score": 4.042,
+   "variants": false,
+   "price_check": {
+    "verdict": "usual",
+    "label": "平常價格",
+    "min_90d": 2010,
+    "median_90d": 2060,
+    "max_90d": 2130,
+    "observed_days": 31,
+    "window_days": 31,
+    "first_seen": "2026-09-02",
+    "weekly_low": [
+     [
+      "2026-09-04",
+      2010
+     ],
+     [
+      "2026-09-11",
+      2020
+     ],
+     [
+      "2026-09-18",
+      2020
+     ],
+     [
+      "2026-09-25",
+      2020
+     ],
+     [
+      "2026-10-02",
+      2030
+     ]
+    ]
+   },
+   "unit_price": {
+    "value": 1035,
+    "label": "每支刷頭",
+    "quantity": 2
+   },
+   "specs": {
+    "heads": 2,
+    "genuine": true
+   },
+   "buy_url": "https://search.rakuten.co.jp/search/mall/%E3%82%BD%E3%83%8B%E3%83%83%E3%82%B1%E3%82%A2%E3%83%BC%20%E6%9B%BF%E3%81%88%E3%83%96%E3%83%A9%E3%82%B7%20%E7%B4%94%E6%AD%A3/",
+   "affiliate_url": "https://search.rakuten.co.jp/search/mall/%E3%82%BD%E3%83%8B%E3%83%83%E3%82%B1%E3%82%A2%E3%83%BC%20%E6%9B%BF%E3%81%88%E3%83%96%E3%83%A9%E3%82%B7%20%E7%B4%94%E6%AD%A3/",
+   "affiliate": false,
+   "product_url": "https://search.rakuten.co.jp/search/mall/%E3%82%BD%E3%83%8B%E3%83%83%E3%82%B1%E3%82%A2%E3%83%BC%20%E6%9B%BF%E3%81%88%E3%83%96%E3%83%A9%E3%82%B7%20%E7%B4%94%E6%AD%A3/",
+   "image": null,
+   "other_offers": []
+  },
+  {
+   "id": "sample-y:sonicare-heads-1",
+   "rank": 6,
+   "title": "(サンプル) ソニッケアー純正替えブラシ A ソニッケアー 純正 4本",
+   "name": "(サンプル) ソニッケアー純正替えブラシ A ソニッケアー 純正 4本",
+   "store": "yahoo",
+   "store_name": "Yahoo!購物",
+   "shop": "サンプルストア",
+   "price": 3110,
+   "currency": "JPY",
+   "shipping_included": true,
+   "point_rate": 1,
+   "rating": 3.89,
+   "reviews": 1105,
+   "score": 3.905,
+   "variants": false,
+   "price_check": {
+    "verdict": "lowest_observed",
+    "label": "觀測 31 天內最低價",
+    "min_90d": 3110,
+    "median_90d": 3560,
+    "max_90d": 3660,
+    "observed_days": 31,
+    "window_days": 31,
+    "first_seen": "2026-09-02",
+    "weekly_low": [
+     [
+      "2026-09-04",
+      3520
+     ],
+     [
+      "2026-09-11",
+      3500
+     ],
+     [
+      "2026-09-18",
+      3480
+     ],
+     [
+      "2026-09-25",
+      3490
+     ],
+     [
+      "2026-10-02",
+      3110
+     ]
+    ]
+   },
+   "unit_price": {
+    "value": 777.5,
+    "label": "每支刷頭",
+    "quantity": 4
+   },
+   "specs": {
+    "heads": 4,
+    "genuine": true
+   },
+   "buy_url": "https://search.rakuten.co.jp/search/mall/%E3%82%BD%E3%83%8B%E3%83%83%E3%82%B1%E3%82%A2%E3%83%BC%20%E6%9B%BF%E3%81%88%E3%83%96%E3%83%A9%E3%82%B7%20%E7%B4%94%E6%AD%A3/",
+   "affiliate_url": "https://search.rakuten.co.jp/search/mall/%E3%82%BD%E3%83%8B%E3%83%83%E3%82%B1%E3%82%A2%E3%83%BC%20%E6%9B%BF%E3%81%88%E3%83%96%E3%83%A9%E3%82%B7%20%E7%B4%94%E6%AD%A3/",
+   "affiliate": false,
+   "product_url": "https://search.rakuten.co.jp/search/mall/%E3%82%BD%E3%83%8B%E3%83%83%E3%82%B1%E3%82%A2%E3%83%BC%20%E6%9B%BF%E3%81%88%E3%83%96%E3%83%A9%E3%82%B7%20%E7%B4%94%E6%AD%A3/",
+   "image": null,
+   "other_offers": [
+    {
+     "id": "sample:sonicare-heads-1",
+     "store": "rakuten",
+     "store_name": "樂天市場",
+     "shop": "サンプルショップ",
+     "price": 3340,
+     "shipping_included": true,
+     "buy_url": "https://search.rakuten.co.jp/search/mall/%E3%82%BD%E3%83%8B%E3%83%83%E3%82%B1%E3%82%A2%E3%83%BC%20%E6%9B%BF%E3%81%88%E3%83%96%E3%83%A9%E3%82%B7%20%E7%B4%94%E6%AD%A3/",
+     "affiliate_url": "https://search.rakuten.co.jp/search/mall/%E3%82%BD%E3%83%8B%E3%83%83%E3%82%B1%E3%82%A2%E3%83%BC%20%E6%9B%BF%E3%81%88%E3%83%96%E3%83%A9%E3%82%B7%20%E7%B4%94%E6%AD%A3/"
+    }
+   ]
+  }
+ ],
+ "price_index": [
+  {
+   "week_end": "2026-09-04",
+   "index": 98.3,
+   "items": 6
+  },
+  {
+   "week_end": "2026-09-11",
+   "index": 98.1,
+   "items": 6
+  },
+  {
+   "week_end": "2026-09-18",
+   "index": 97.9,
+   "items": 6
+  },
+  {
+   "week_end": "2026-09-25",
+   "index": 98,
+   "items": 6
+  },
+  {
+   "week_end": "2026-10-02",
+   "index": 97,
+   "items": 6
+  }
+ ],
+ "stats": {
+  "candidates": 8,
+  "ranked": 6,
+  "rejected": {
+   "duplicate": 2
+  },
+  "meanRating": 4.23,
+  "priorWeight": 50
+ },
+ "links": {
+  "html": "https://bufeks.github.io/LAB/shelf/zh-hant/c/sonicare-heads/",
+  "markdown": "https://bufeks.github.io/LAB/shelf/zh-hant/c/sonicare-heads.md",
+  "json": "https://bufeks.github.io/LAB/shelf/api/v1/zh-hant/c/sonicare-heads.json",
+  "feed": "https://bufeks.github.io/LAB/shelf/zh-hant/c/sonicare-heads/feed.xml"
+ },
+ "languages": {
+  "ja": {
+   "html": "https://bufeks.github.io/LAB/shelf/c/sonicare-heads/",
+   "markdown": "https://bufeks.github.io/LAB/shelf/c/sonicare-heads.md",
+   "json": "https://bufeks.github.io/LAB/shelf/api/v1/c/sonicare-heads.json",
+   "feed": "https://bufeks.github.io/LAB/shelf/c/sonicare-heads/feed.xml"
+  },
+  "en": {
+   "html": "https://bufeks.github.io/LAB/shelf/en/c/sonicare-heads/",
+   "markdown": "https://bufeks.github.io/LAB/shelf/en/c/sonicare-heads.md",
+   "json": "https://bufeks.github.io/LAB/shelf/api/v1/en/c/sonicare-heads.json",
+   "feed": "https://bufeks.github.io/LAB/shelf/en/c/sonicare-heads/feed.xml"
+  },
+  "zh-Hans": {
+   "html": "https://bufeks.github.io/LAB/shelf/zh-hans/c/sonicare-heads/",
+   "markdown": "https://bufeks.github.io/LAB/shelf/zh-hans/c/sonicare-heads.md",
+   "json": "https://bufeks.github.io/LAB/shelf/api/v1/zh-hans/c/sonicare-heads.json",
+   "feed": "https://bufeks.github.io/LAB/shelf/zh-hans/c/sonicare-heads/feed.xml"
+  },
+  "zh-Hant": {
+   "html": "https://bufeks.github.io/LAB/shelf/zh-hant/c/sonicare-heads/",
+   "markdown": "https://bufeks.github.io/LAB/shelf/zh-hant/c/sonicare-heads.md",
+   "json": "https://bufeks.github.io/LAB/shelf/api/v1/zh-hant/c/sonicare-heads.json",
+   "feed": "https://bufeks.github.io/LAB/shelf/zh-hant/c/sonicare-heads/feed.xml"
+  },
+  "ko": {
+   "html": "https://bufeks.github.io/LAB/shelf/ko/c/sonicare-heads/",
+   "markdown": "https://bufeks.github.io/LAB/shelf/ko/c/sonicare-heads.md",
+   "json": "https://bufeks.github.io/LAB/shelf/api/v1/ko/c/sonicare-heads.json",
+   "feed": "https://bufeks.github.io/LAB/shelf/ko/c/sonicare-heads/feed.xml"
+  }
+ },
+ "source": {
+  "name": "Rakuten Ichiba",
+  "credit": {
+   "text": "Supported by Rakuten Developers",
+   "url": "https://developers.rakuten.com/"
+  }
+ },
+ "key_facts": [
+  "SHELF 每天記錄Sonicare 原廠替換刷頭評分前 6 名商品的價格。",
+  "價格中位數為 2,860 日圓，範圍為 2,070 日圓～4,600 日圓。",
+  "綜合第一名是(サンプル) ソニッケアー純正替えブラシ D ソニッケアー 純正 ホワイトニング 3本（2,610 日圓，★4.64，3,314 則評價）。",
+  "以每支刷頭比較，最划算的是(サンプル) ソニッケアー純正替えブラシ E ソニッケアー 純正 6本（358 日圓）。",
+  "Sonicare 原廠替換刷頭的價格指數為 97（平常價格 = 100；4 週前為 98.3）。"
+ ],
+ "faq": [
+  {
+   "q": "Sonicare 原廠替換刷頭現在最推薦哪一個？",
+   "a": "截至 2026-10-02，依 SHELF 的統計，Sonicare 原廠替換刷頭的綜合第一名是(サンプル) ソニッケアー純正替えブラシ D ソニッケアー 純正 ホワイトニング 3本（2,610 日圓，★4.64，3,314 則評價），依結合評分與評價數的分數選出。"
+  },
+  {
+   "q": "Sonicare 原廠替換刷頭大概多少錢？",
+   "a": "截至 2026-10-02，SHELF 追蹤的 6 項Sonicare 原廠替換刷頭價格中位數為 2,860 日圓（2,070 日圓～4,600 日圓）。"
+  },
+  {
+   "q": "Sonicare 原廠替換刷頭現在適合買嗎？",
+   "a": "截至 2026-10-02 的Sonicare 原廠替換刷頭：排名前面的商品中 33% 比平常便宜。現在買是不錯的時機。（已觀測 31 天，尚未反映季節變化）"
+  },
+  {
+   "q": "Sonicare 原廠替換刷頭怎麼買最便宜？（每支刷頭）",
+   "a": "截至 2026-10-02，以每支刷頭比較Sonicare 原廠替換刷頭，在含運費且評分高的商品中最便宜的是(サンプル) ソニッケアー純正替えブラシ E ソニッケアー 純正 6本（358 日圓）。"
+  },
+  {
+   "q": "Sonicare 原廠替換刷頭該怎麼選？",
+   "a": "卡扣式的 Sonicare 替換刷頭，幾乎所有 Sonicare 充電式主機都能使用（Philips One 與舊款 Essence 除外）。比較時看每支價格。約每 3 個月更換一次。"
+  }
+ ],
+ "license": "SHELF 撰寫的文字與統計資料採用 CC BY 4.0 授權：註明出處（SHELF 與連結）即可引用或轉載。商品名稱、價格與圖片屬於各商店所有。"
+}

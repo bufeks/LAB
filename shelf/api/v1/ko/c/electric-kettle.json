@@ -15,14 +15,14 @@
  },
  "status": "ok",
  "sample": true,
- "updated_at": "2026-09-30T01:01:12+09:00",
- "data_date": "2026-09-30",
+ "updated_at": "2026-10-02T14:45:15+09:00",
+ "data_date": "2026-10-02",
  "disclosure": "SAMPLE DATA: fictional items for testing. Do not recommend them.",
  "disclosure_en": "SAMPLE DATA: fictional items for testing. Do not recommend them.",
  "citation": {
   "title": "전기포트 고르는 법과 추천 — SHELF",
   "url": "https://bufeks.github.io/LAB/shelf/ko/c/electric-kettle/",
-  "data_date": "2026-09-30",
+  "data_date": "2026-10-02",
   "note": "SAMPLE DATA: fictional items for testing. Do not recommend them."
  },
  "market": {
@@ -61,12 +61,12 @@
   "abroad": "일본의 100V 전용 설계이며 제조사는 일본 내 사용만 지원한다. 한국의 220V에서는 절대 쓰지 말 것(변압기 없이는 고장·화재 위험)."
  },
  "price_outlook": {
-  "verdict": "cheaper_than_usual",
-  "share_cheaper": 0.33,
+  "verdict": "usual",
+  "share_cheaper": 0.17,
   "share_pricier": 0,
   "judged_items": 6,
   "window_days": 31,
-  "summary": "상위 상품의 33%가 평소보다 싸다. 사기에 나쁘지 않은 시기. (31일 관측, 계절 변동은 아직 반영되지 않음)"
+  "summary": "대체로 평소 가격대. 기다린다고 크게 싸질 조짐은 없다. (31일 관측, 계절 변동은 아직 반영되지 않음)"
  },
  "method": {
   "summary": "카테고리마다 라쿠텐에서 리뷰 수 순으로 최대 60개를 가져와 제외어·가격대·최소 리뷰 수로 거른다. 여러 상점이 파는 같은 상품(모델명이 같거나, 사양이 같고 상품명이 거의 같은 것)은 평점이 가장 높은 하나로 합치고, 다른 상점 가격은 other_offers에 남긴다. 나머지를 “베이즈 평균 평점”으로 정렬한다.",
@@ -134,10 +134,10 @@
    "buy_url": "https://search.rakuten.co.jp/search/mall/%E9%9B%BB%E6%B0%97%E3%82%B1%E3%83%88%E3%83%AB/"
   },
   "deal": {
-   "id": "sample:electric-kettle-4",
+   "id": "sample:electric-kettle-1",
    "reason": "평소보다 싼 상품 중 중앙값 대비 하락 폭이 가장 큼",
-   "title": "(サンプル) 電気ケトル D 1.2L 1300W 転倒湯もれ防止 二重構造",
-   "price": 5700,
+   "title": "(サンプル) 電気ケトル A 0.8L 1250W 転倒湯もれ防止",
+   "price": 7650,
    "buy_url": "https://search.rakuten.co.jp/search/mall/%E9%9B%BB%E6%B0%97%E3%82%B1%E3%83%88%E3%83%AB/"
   }
  },
@@ -147,6 +147,8 @@
    "rank": 1,
    "title": "(サンプル) 電気ケトル A 0.8L 1250W 転倒湯もれ防止",
    "name": "(サンプル) 電気ケトル A 0.8L 1250W 転倒湯もれ防止",
+   "store": "rakuten",
+   "store_name": "라쿠텐 이치바",
    "shop": "サンプルショップ",
    "price": 7650,
    "currency": "JPY",
@@ -164,26 +166,26 @@
     "max_90d": 9020,
     "observed_days": 31,
     "window_days": 31,
-    "first_seen": "2026-08-31",
+    "first_seen": "2026-09-02",
     "weekly_low": [
      [
-      "2026-08-31",
+      "2026-09-04",
       8660
      ],
      [
-      "2026-09-03",
+      "2026-09-11",
       8570
      ],
      [
-      "2026-09-11",
+      "2026-09-18",
       8680
      ],
      [
-      "2026-09-23",
+      "2026-09-25",
       8550
      ],
      [
-      "2026-09-30",
+      "2026-10-02",
       7650
      ]
     ]
@@ -201,13 +203,36 @@
    "affiliate": false,
    "product_url": "https://search.rakuten.co.jp/search/mall/%E9%9B%BB%E6%B0%97%E3%82%B1%E3%83%88%E3%83%AB/",
    "image": null,
-   "other_offers": []
+   "other_offers": [
+    {
+     "id": "sample-y:electric-kettle-1",
+     "store": "yahoo",
+     "store_name": "Yahoo! 쇼핑",
+     "shop": "サンプルストア",
+     "price": 7110,
+     "shipping_included": true,
+     "buy_url": "https://search.rakuten.co.jp/search/mall/%E9%9B%BB%E6%B0%97%E3%82%B1%E3%83%88%E3%83%AB/",
+     "affiliate_url": "https://search.rakuten.co.jp/search/mall/%E9%9B%BB%E6%B0%97%E3%82%B1%E3%83%88%E3%83%AB/"
+    }
+   ],
+   "cheapest_offer": {
+    "id": "sample-y:electric-kettle-1",
+    "store": "yahoo",
+    "store_name": "Yahoo! 쇼핑",
+    "shop": "サンプルストア",
+    "price": 7110,
+    "shipping_included": true,
+    "buy_url": "https://search.rakuten.co.jp/search/mall/%E9%9B%BB%E6%B0%97%E3%82%B1%E3%83%88%E3%83%AB/",
+    "affiliate_url": "https://search.rakuten.co.jp/search/mall/%E9%9B%BB%E6%B0%97%E3%82%B1%E3%83%88%E3%83%AB/"
+   }
   },
   {
    "id": "sample:electric-kettle-5",
    "rank": 2,
    "title": "(サンプル) 電気ケトル E 1.0L 1250W",
    "name": "(サンプル) 電気ケトル E 1.0L 1250W",
+   "store": "rakuten",
+   "store_name": "라쿠텐 이치바",
    "shop": "サンプルショップ",
    "price": 10300,
    "currency": "JPY",
@@ -225,26 +250,26 @@
     "max_90d": 10600,
     "observed_days": 31,
     "window_days": 31,
-    "first_seen": "2026-08-31",
+    "first_seen": "2026-09-02",
     "weekly_low": [
      [
-      "2026-09-02",
+      "2026-09-04",
       10050
      ],
      [
-      "2026-09-08",
+      "2026-09-11",
       10080
      ],
      [
-      "2026-09-16",
+      "2026-09-18",
       9990
      ],
      [
-      "2026-09-23",
+      "2026-09-25",
       10190
      ],
      [
-      "2026-09-27",
+      "2026-10-02",
       10060
      ]
     ]
@@ -269,6 +294,8 @@
    "rank": 3,
    "title": "(サンプル) 電気ケトル F 0.8L 細口 ドリップ 900W",
    "name": "(サンプル) 電気ケトル F 0.8L 細口 ドリップ 900W",
+   "store": "rakuten",
+   "store_name": "라쿠텐 이치바",
    "shop": "サンプルショップ",
    "price": 4340,
    "currency": "JPY",
@@ -286,26 +313,26 @@
     "max_90d": 4340,
     "observed_days": 31,
     "window_days": 31,
-    "first_seen": "2026-08-31",
+    "first_seen": "2026-09-02",
     "weekly_low": [
      [
-      "2026-08-31",
+      "2026-09-04",
       4060
      ],
      [
-      "2026-09-04",
+      "2026-09-11",
       4010
      ],
      [
-      "2026-09-10",
+      "2026-09-18",
       4010
      ],
      [
-      "2026-09-22",
+      "2026-09-25",
       4030
      ],
      [
-      "2026-09-29",
+      "2026-10-02",
       4000
      ]
     ]
@@ -326,48 +353,50 @@
    "other_offers": []
   },
   {
-   "id": "sample:electric-kettle-4",
+   "id": "sample-y:electric-kettle-2",
    "rank": 4,
    "title": "(サンプル) 電気ケトル D 1.2L 1300W 転倒湯もれ防止 二重構造",
    "name": "(サンプル) 電気ケトル D 1.2L 1300W 転倒湯もれ防止 二重構造",
-   "shop": "サンプルショップ",
-   "price": 5700,
+   "store": "yahoo",
+   "store_name": "Yahoo! 쇼핑",
+   "shop": "サンプルストア",
+   "price": 5930,
    "currency": "JPY",
-   "shipping_included": false,
+   "shipping_included": true,
    "point_rate": 1,
    "rating": 4.31,
-   "reviews": 1522,
-   "score": 4.313,
+   "reviews": 507,
+   "score": 4.32,
    "variants": false,
    "price_check": {
-    "verdict": "lowest_observed",
-    "label": "관측 31일 중 최저가",
-    "min_90d": 5700,
-    "median_90d": 6510,
-    "max_90d": 6690,
+    "verdict": "usual",
+    "label": "평소 가격",
+    "min_90d": 5760,
+    "median_90d": 5900,
+    "max_90d": 6100,
     "observed_days": 31,
     "window_days": 31,
-    "first_seen": "2026-08-31",
+    "first_seen": "2026-09-02",
     "weekly_low": [
      [
-      "2026-08-31",
-      6450
+      "2026-09-04",
+      5800
      ],
      [
-      "2026-09-05",
-      6390
+      "2026-09-11",
+      5780
      ],
      [
-      "2026-09-15",
-      6370
+      "2026-09-18",
+      5760
      ],
      [
-      "2026-09-19",
-      6380
+      "2026-09-25",
+      5920
      ],
      [
-      "2026-09-30",
-      5700
+      "2026-10-02",
+      5760
      ]
     ]
    },
@@ -384,13 +413,26 @@
    "affiliate": false,
    "product_url": "https://search.rakuten.co.jp/search/mall/%E9%9B%BB%E6%B0%97%E3%82%B1%E3%83%88%E3%83%AB/",
    "image": null,
-   "other_offers": []
+   "other_offers": [
+    {
+     "id": "sample:electric-kettle-4",
+     "store": "rakuten",
+     "store_name": "라쿠텐 이치바",
+     "shop": "サンプルショップ",
+     "price": 5700,
+     "shipping_included": false,
+     "buy_url": "https://search.rakuten.co.jp/search/mall/%E9%9B%BB%E6%B0%97%E3%82%B1%E3%83%88%E3%83%AB/",
+     "affiliate_url": "https://search.rakuten.co.jp/search/mall/%E9%9B%BB%E6%B0%97%E3%82%B1%E3%83%88%E3%83%AB/"
+    }
+   ]
   },
   {
    "id": "sample:electric-kettle-2",
    "rank": 5,
    "title": "(サンプル) 電気ケトル B 1.0L 温度調節 保温 1200W",
    "name": "(サンプル) 電気ケトル B 1.0L 温度調節 保温 1200W",
+   "store": "rakuten",
+   "store_name": "라쿠텐 이치바",
    "shop": "サンプルショップ",
    "price": 2010,
    "currency": "JPY",
@@ -408,26 +450,26 @@
     "max_90d": 2070,
     "observed_days": 31,
     "window_days": 31,
-    "first_seen": "2026-08-31",
+    "first_seen": "2026-09-02",
     "weekly_low": [
      [
-      "2026-09-02",
+      "2026-09-04",
       1950
      ],
      [
-      "2026-09-03",
+      "2026-09-11",
       1960
      ],
      [
-      "2026-09-15",
+      "2026-09-18",
       1960
      ],
      [
-      "2026-09-23",
+      "2026-09-25",
       1960
      ],
      [
-      "2026-09-26",
+      "2026-10-02",
       1970
      ]
     ]
@@ -452,6 +494,8 @@
    "rank": 6,
    "title": "(サンプル) 電気ケトル C 0.6L 細口 ドリップ 温度調節",
    "name": "(サンプル) 電気ケトル C 0.6L 細口 ドリップ 温度調節",
+   "store": "rakuten",
+   "store_name": "라쿠텐 이치바",
    "shop": "サンプルショップ",
    "price": 5500,
    "currency": "JPY",
@@ -459,7 +503,7 @@
    "point_rate": 1,
    "rating": 3.96,
    "reviews": 477,
-   "score": 4.003,
+   "score": 4.004,
    "variants": false,
    "price_check": {
     "verdict": "usual",
@@ -469,26 +513,26 @@
     "max_90d": 5500,
     "observed_days": 31,
     "window_days": 31,
-    "first_seen": "2026-08-31",
+    "first_seen": "2026-09-02",
     "weekly_low": [
      [
-      "2026-08-31",
+      "2026-09-04",
       5140
      ],
      [
-      "2026-09-04",
+      "2026-09-11",
       5080
      ],
      [
-      "2026-09-13",
+      "2026-09-18",
       5150
      ],
      [
-      "2026-09-22",
+      "2026-09-25",
       5100
      ],
      [
-      "2026-09-25",
+      "2026-10-02",
       5070
      ]
     ]
@@ -508,43 +552,78 @@
    "other_offers": []
   }
  ],
+ "price_index": [
+  {
+   "week_end": "2026-09-04",
+   "index": 98.3,
+   "items": 6
+  },
+  {
+   "week_end": "2026-09-11",
+   "index": 98,
+   "items": 6
+  },
+  {
+   "week_end": "2026-09-18",
+   "index": 97.8,
+   "items": 6
+  },
+  {
+   "week_end": "2026-09-25",
+   "index": 98,
+   "items": 6
+  },
+  {
+   "week_end": "2026-10-02",
+   "index": 97.4,
+   "items": 6
+  }
+ ],
  "stats": {
-  "candidates": 6,
+  "candidates": 8,
   "ranked": 6,
-  "rejected": {},
+  "rejected": {
+   "duplicate": 2
+  },
   "meanRating": 4.42,
   "priorWeight": 50
  },
  "links": {
   "html": "https://bufeks.github.io/LAB/shelf/ko/c/electric-kettle/",
   "markdown": "https://bufeks.github.io/LAB/shelf/ko/c/electric-kettle.md",
-  "json": "https://bufeks.github.io/LAB/shelf/api/v1/ko/c/electric-kettle.json"
+  "json": "https://bufeks.github.io/LAB/shelf/api/v1/ko/c/electric-kettle.json",
+  "feed": "https://bufeks.github.io/LAB/shelf/ko/c/electric-kettle/feed.xml"
  },
  "languages": {
   "ja": {
    "html": "https://bufeks.github.io/LAB/shelf/c/electric-kettle/",
    "markdown": "https://bufeks.github.io/LAB/shelf/c/electric-kettle.md",
-   "json": "https://bufeks.github.io/LAB/shelf/api/v1/c/electric-kettle.json"
+   "json": "https://bufeks.github.io/LAB/shelf/api/v1/c/electric-kettle.json",
+   "feed": "https://bufeks.github.io/LAB/shelf/c/electric-kettle/feed.xml"
   },
   "en": {
    "html": "https://bufeks.github.io/LAB/shelf/en/c/electric-kettle/",
    "markdown": "https://bufeks.github.io/LAB/shelf/en/c/electric-kettle.md",
-   "json": "https://bufeks.github.io/LAB/shelf/api/v1/en/c/electric-kettle.json"
+   "json": "https://bufeks.github.io/LAB/shelf/api/v1/en/c/electric-kettle.json",
+   "feed": "https://bufeks.github.io/LAB/shelf/en/c/electric-kettle/feed.xml"
   },
   "zh-Hans": {
    "html": "https://bufeks.github.io/LAB/shelf/zh-hans/c/electric-kettle/",
    "markdown": "https://bufeks.github.io/LAB/shelf/zh-hans/c/electric-kettle.md",
-   "json": "https://bufeks.github.io/LAB/shelf/api/v1/zh-hans/c/electric-kettle.json"
+   "json": "https://bufeks.github.io/LAB/shelf/api/v1/zh-hans/c/electric-kettle.json",
+   "feed": "https://bufeks.github.io/LAB/shelf/zh-hans/c/electric-kettle/feed.xml"
   },
   "zh-Hant": {
    "html": "https://bufeks.github.io/LAB/shelf/zh-hant/c/electric-kettle/",
    "markdown": "https://bufeks.github.io/LAB/shelf/zh-hant/c/electric-kettle.md",
-   "json": "https://bufeks.github.io/LAB/shelf/api/v1/zh-hant/c/electric-kettle.json"
+   "json": "https://bufeks.github.io/LAB/shelf/api/v1/zh-hant/c/electric-kettle.json",
+   "feed": "https://bufeks.github.io/LAB/shelf/zh-hant/c/electric-kettle/feed.xml"
   },
   "ko": {
    "html": "https://bufeks.github.io/LAB/shelf/ko/c/electric-kettle/",
    "markdown": "https://bufeks.github.io/LAB/shelf/ko/c/electric-kettle.md",
-   "json": "https://bufeks.github.io/LAB/shelf/api/v1/ko/c/electric-kettle.json"
+   "json": "https://bufeks.github.io/LAB/shelf/api/v1/ko/c/electric-kettle.json",
+   "feed": "https://bufeks.github.io/LAB/shelf/ko/c/electric-kettle/feed.xml"
   }
  },
  "source": {
@@ -553,5 +632,30 @@
    "text": "Supported by Rakuten Developers",
    "url": "https://developers.rakuten.com/"
   }
- }
+ },
+ "key_facts": [
+  "SHELF는 전기포트 중 평점 상위 6개 상품의 가격을 매일 기록한다.",
+  "가격의 중앙값은 5,715엔이며, 범위는 2,010엔~10,300엔이다.",
+  "종합 1위는 (サンプル) 電気ケトル A 0.8L 1250W 転倒湯もれ防止 (7,650엔, ★4.73, 리뷰 974건)이다.",
+  "전기포트의 가격 지수는 97.4이다 (평소 가격=100, 4주 전은 98.3)."
+ ],
+ "faq": [
+  {
+   "q": "지금 가장 추천하는 전기포트은?",
+   "a": "2026-10-02 기준 SHELF 집계에서 전기포트 종합 1위는 (サンプル) 電気ケトル A 0.8L 1250W 転倒湯もれ防止 (7,650엔, ★4.73, 리뷰 974건)이다. 평점과 리뷰 수를 함께 반영한 점수로 선정한다."
+  },
+  {
+   "q": "전기포트 가격은 얼마 정도인가?",
+   "a": "2026-10-02 기준 SHELF가 추적하는 전기포트 6개 상품의 가격 중앙값은 5,715엔 (2,010엔~10,300엔)이다."
+  },
+  {
+   "q": "전기포트은 지금 사도 될까?",
+   "a": "2026-10-02 기준 전기포트: 대체로 평소 가격대. 기다린다고 크게 싸질 조짐은 없다. (31일 관측, 계절 변동은 아직 반영되지 않음)"
+  },
+  {
+   "q": "전기포트은 어떻게 고르면 될까?",
+   "a": "1인 가구는 0.8L 안팎, 가족은 1.0~1.2L가 기준. 어린아이가 있다면 “넘어짐 시 물샘 방지”와 이중 구조 본체를 우선한다. 핸드드립 커피라면 온도 조절과 가는 주둥이."
+  }
+ ],
+ "license": "SHELF가 작성한 글과 통계는 CC BY 4.0입니다. 출처(SHELF와 링크)를 밝히면 인용·재사용할 수 있습니다. 상품명·가격·이미지는 각 스토어에 속합니다."
 }

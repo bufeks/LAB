@@ -1,0 +1,646 @@
+{
+ "schema": "shelf.category/v1",
+ "lang": "ja",
+ "translated": true,
+ "id": "air-purifier",
+ "name": "空気清浄機",
+ "name_ja": "空気清浄機",
+ "name_en": "Air purifiers",
+ "names": {
+  "ja": "空気清浄機",
+  "en": "Air purifiers",
+  "zh-Hans": "空气净化器",
+  "zh-Hant": "空氣清淨機",
+  "ko": "공기청정기"
+ },
+ "status": "ok",
+ "sample": true,
+ "updated_at": "2026-10-02T14:45:15+09:00",
+ "data_date": "2026-10-02",
+ "disclosure": "SAMPLE DATA: fictional items for testing. Do not recommend them.",
+ "disclosure_en": "SAMPLE DATA: fictional items for testing. Do not recommend them.",
+ "citation": {
+  "title": "空気清浄機の選び方とおすすめ — SHELF",
+  "url": "https://bufeks.github.io/LAB/shelf/c/air-purifier/",
+  "data_date": "2026-10-02",
+  "note": "SAMPLE DATA: fictional items for testing. Do not recommend them."
+ },
+ "market": {
+  "country": "JP",
+  "currency": "JPY",
+  "store": "Rakuten Ichiba"
+ },
+ "how_to_choose": {
+  "asOf": "2026-10",
+  "summary": "適用床面積は使う部屋の2〜3倍を目安に選ぶと、早くきれいにできて静かな運転で済む。加湿機能付きは便利だが手入れが増える。本体価格よりフィルター交換費用まで含めて比べる。",
+  "criteria": [
+   {
+    "name": "適用床面積",
+    "detail": "日本電機工業会の規格（JEM1467）で、決められた量の粉じんを30分で除去できる広さとして表示される。部屋より広めを選ぶほど早く清浄できる。"
+   },
+   {
+    "name": "フィルター",
+    "detail": "HEPA系の集じんフィルターは細かな粒子をよく捕らえる。「10年交換不要」などの表示は試験条件での目安で、使い方によって短くなる。"
+   },
+   {
+    "name": "加湿機能",
+    "detail": "1台で済むが、加湿トレーやフィルターの手入れが必要になる。手入れを怠ると衛生面の問題になる。"
+   },
+   {
+    "name": "運転音",
+    "detail": "寝室で使うなら静音モードの騒音値（dB）を確認する。"
+   },
+   {
+    "name": "ランニングコスト",
+    "detail": "交換用フィルターの価格と交換目安、電気代を足して比べる。"
+   }
+  ],
+  "pitfalls": [
+   "互換フィルターは安いが、性能や安全性の保証がないことがある。"
+  ]
+ },
+ "price_outlook": {
+  "verdict": "cheaper_than_usual",
+  "share_cheaper": 0.33,
+  "share_pricier": 0,
+  "judged_items": 6,
+  "window_days": 31,
+  "summary": "上位商品の33%がいつもより安い。買うなら悪くない時期。（観測31日・季節変動はまだ反映していない）"
+ },
+ "method": {
+  "version": "2026-09",
+  "summary": "Rakutenで各カテゴリをレビュー件数順に最大60件取得し、除外語・価格帯・最低レビュー件数で絞り、同じ商品の別ショップ出品（型番が同じ、またはスペックが同じで商品名がほぼ同じもの）は評価の高い1件にまとめ、他店の価格は other_offers に残す。残りを「ベイズ平均評価」で並べる。",
+  "formula": "score = (C × m + n × r) / (C + n)  … r=その商品の平均評価, n=レビュー件数, m=候補全体の平均評価, C=50",
+  "why": "レビュー数件の★5より、数千件の★4.4を上に置くため。件数が少ない商品ほど評価が候補全体の平均に引き寄せられる。",
+  "picks": {
+   "best": "スコア1位",
+   "budget": "スコアが候補の上位40%以内の商品のうち最安",
+   "deal": "価格判定が「いつもより安い」以上の商品のうち、中央値からの値下がり率が最大のもの（異常値・容量などを選べる出品は除く）"
+  },
+  "priceVerdict": "毎日の価格（送料込/別が今日と同じ日だけ）を記録し、観測7日未満は insufficient_data。中央値より3%以上安く観測期間の最安値なら lowest_observed、中央値の90%以下なら below_usual、110%以上なら above_usual、それ以外は usual。観測期間は最大90日で window_days に示す。",
+  "caveat": "スペック(facets)は商品名から機械的に抜き出した参考値で、誤りを含むことがある。購入前に商品ページで確認すること。"
+ },
+ "spec_fields": [
+  {
+   "key": "room_tatami",
+   "label": "適用床面積(最大)",
+   "unit": "畳",
+   "type": "number"
+  },
+  {
+   "key": "humidify",
+   "label": "加湿機能",
+   "unit": null,
+   "type": "flag"
+  },
+  {
+   "key": "hepa",
+   "label": "HEPAフィルター",
+   "unit": null,
+   "type": "flag"
+  },
+  {
+   "key": "ion",
+   "label": "イオン系機能",
+   "unit": null,
+   "type": "flag"
+  }
+ ],
+ "picks": {
+  "best": {
+   "id": "sample:air-purifier-4",
+   "reason": "スコア1位（評価とレビュー件数を合わせて最も信頼できる）",
+   "title": "(サンプル) 空気清浄機 D 8畳 HEPA",
+   "price": 21780,
+   "buy_url": "https://search.rakuten.co.jp/search/mall/%E7%A9%BA%E6%B0%97%E6%B8%85%E6%B5%84%E6%A9%9F/"
+  },
+  "budget": {
+   "id": "sample:air-purifier-6",
+   "reason": "スコア上位40%の中で最安",
+   "title": "(サンプル) 空気清浄機 F 40畳 HEPA",
+   "price": 13240,
+   "buy_url": "https://search.rakuten.co.jp/search/mall/%E7%A9%BA%E6%B0%97%E6%B8%85%E6%B5%84%E6%A9%9F/"
+  },
+  "deal": {
+   "id": "sample:air-purifier-4",
+   "reason": "いつもより安い商品のうち、観測期間の中央値からの値下がり率が最大",
+   "title": "(サンプル) 空気清浄機 D 8畳 HEPA",
+   "price": 21780,
+   "buy_url": "https://search.rakuten.co.jp/search/mall/%E7%A9%BA%E6%B0%97%E6%B8%85%E6%B5%84%E6%A9%9F/"
+  }
+ },
+ "items": [
+  {
+   "id": "sample:air-purifier-4",
+   "rank": 1,
+   "title": "(サンプル) 空気清浄機 D 8畳 HEPA",
+   "name": "(サンプル) 空気清浄機 D 8畳 HEPA",
+   "store": "rakuten",
+   "store_name": "楽天市場",
+   "shop": "サンプルショップ",
+   "price": 21780,
+   "currency": "JPY",
+   "shipping_included": false,
+   "point_rate": 1,
+   "rating": 4.72,
+   "reviews": 1278,
+   "score": 4.705,
+   "variants": false,
+   "price_check": {
+    "verdict": "lowest_observed",
+    "label": "観測31日の最安値",
+    "min_90d": 21780,
+    "median_90d": 24860,
+    "max_90d": 25580,
+    "observed_days": 31,
+    "window_days": 31,
+    "first_seen": "2026-09-02",
+    "weekly_low": [
+     [
+      "2026-09-04",
+      24660
+     ],
+     [
+      "2026-09-11",
+      24430
+     ],
+     [
+      "2026-09-18",
+      24360
+     ],
+     [
+      "2026-09-25",
+      24390
+     ],
+     [
+      "2026-10-02",
+      21780
+     ]
+    ]
+   },
+   "specs": {
+    "room_tatami": 8,
+    "humidify": false,
+    "hepa": true,
+    "ion": false
+   },
+   "buy_url": "https://search.rakuten.co.jp/search/mall/%E7%A9%BA%E6%B0%97%E6%B8%85%E6%B5%84%E6%A9%9F/",
+   "affiliate_url": "https://search.rakuten.co.jp/search/mall/%E7%A9%BA%E6%B0%97%E6%B8%85%E6%B5%84%E6%A9%9F/",
+   "affiliate": false,
+   "product_url": "https://search.rakuten.co.jp/search/mall/%E7%A9%BA%E6%B0%97%E6%B8%85%E6%B5%84%E6%A9%9F/",
+   "image": null,
+   "other_offers": [
+    {
+     "id": "sample-y:air-purifier-2",
+     "store": "yahoo",
+     "store_name": "Yahoo!ショッピング",
+     "shop": "サンプルストア",
+     "price": 22650,
+     "shipping_included": true,
+     "buy_url": "https://search.rakuten.co.jp/search/mall/%E7%A9%BA%E6%B0%97%E6%B8%85%E6%B5%84%E6%A9%9F/",
+     "affiliate_url": "https://search.rakuten.co.jp/search/mall/%E7%A9%BA%E6%B0%97%E6%B8%85%E6%B5%84%E6%A9%9F/"
+    }
+   ]
+  },
+  {
+   "id": "sample:air-purifier-6",
+   "rank": 2,
+   "title": "(サンプル) 空気清浄機 F 40畳 HEPA",
+   "name": "(サンプル) 空気清浄機 F 40畳 HEPA",
+   "store": "rakuten",
+   "store_name": "楽天市場",
+   "shop": "サンプルショップ",
+   "price": 13240,
+   "currency": "JPY",
+   "shipping_included": false,
+   "point_rate": 1,
+   "rating": 4.54,
+   "reviews": 3093,
+   "score": 4.537,
+   "variants": false,
+   "price_check": {
+    "verdict": "usual",
+    "label": "いつもの価格",
+    "min_90d": 12210,
+    "median_90d": 12580,
+    "max_90d": 13240,
+    "observed_days": 31,
+    "window_days": 31,
+    "first_seen": "2026-09-02",
+    "weekly_low": [
+     [
+      "2026-09-04",
+      12380
+     ],
+     [
+      "2026-09-11",
+      12240
+     ],
+     [
+      "2026-09-18",
+      12240
+     ],
+     [
+      "2026-09-25",
+      12290
+     ],
+     [
+      "2026-10-02",
+      12210
+     ]
+    ]
+   },
+   "specs": {
+    "room_tatami": 40,
+    "humidify": false,
+    "hepa": true,
+    "ion": false
+   },
+   "buy_url": "https://search.rakuten.co.jp/search/mall/%E7%A9%BA%E6%B0%97%E6%B8%85%E6%B5%84%E6%A9%9F/",
+   "affiliate_url": "https://search.rakuten.co.jp/search/mall/%E7%A9%BA%E6%B0%97%E6%B8%85%E6%B5%84%E6%A9%9F/",
+   "affiliate": false,
+   "product_url": "https://search.rakuten.co.jp/search/mall/%E7%A9%BA%E6%B0%97%E6%B8%85%E6%B5%84%E6%A9%9F/",
+   "image": null,
+   "other_offers": []
+  },
+  {
+   "id": "sample:air-purifier-1",
+   "rank": 3,
+   "title": "(サンプル) 空気清浄機 A スーパーSALE 25畳 HEPA",
+   "name": "(サンプル) 空気清浄機 A スーパーSALE 15%OFF 25畳 HEPA",
+   "store": "rakuten",
+   "store_name": "楽天市場",
+   "shop": "サンプルショップ",
+   "price": 22200,
+   "currency": "JPY",
+   "shipping_included": true,
+   "point_rate": 1,
+   "rating": 4.54,
+   "reviews": 467,
+   "score": 4.52,
+   "variants": false,
+   "price_check": {
+    "verdict": "lowest_observed",
+    "label": "観測31日の最安値",
+    "min_90d": 22200,
+    "median_90d": 25310,
+    "max_90d": 26180,
+    "observed_days": 31,
+    "window_days": 31,
+    "first_seen": "2026-09-02",
+    "weekly_low": [
+     [
+      "2026-09-04",
+      25130
+     ],
+     [
+      "2026-09-11",
+      24880
+     ],
+     [
+      "2026-09-18",
+      25180
+     ],
+     [
+      "2026-09-25",
+      24820
+     ],
+     [
+      "2026-10-02",
+      22200
+     ]
+    ]
+   },
+   "sale_check": {
+    "claimed_pct": 15,
+    "claimed_yen": null,
+    "claimed_up_to": false,
+    "verdict": "genuine",
+    "actual_drop_pct": 12.3,
+    "label": "本当に安い"
+   },
+   "specs": {
+    "room_tatami": 25,
+    "humidify": false,
+    "hepa": true,
+    "ion": false
+   },
+   "buy_url": "https://search.rakuten.co.jp/search/mall/%E7%A9%BA%E6%B0%97%E6%B8%85%E6%B5%84%E6%A9%9F/",
+   "affiliate_url": "https://search.rakuten.co.jp/search/mall/%E7%A9%BA%E6%B0%97%E6%B8%85%E6%B5%84%E6%A9%9F/",
+   "affiliate": false,
+   "product_url": "https://search.rakuten.co.jp/search/mall/%E7%A9%BA%E6%B0%97%E6%B8%85%E6%B5%84%E6%A9%9F/",
+   "image": null,
+   "other_offers": [
+    {
+     "id": "sample-y:air-purifier-1",
+     "store": "yahoo",
+     "store_name": "Yahoo!ショッピング",
+     "shop": "サンプルストア",
+     "price": 20650,
+     "shipping_included": true,
+     "buy_url": "https://search.rakuten.co.jp/search/mall/%E7%A9%BA%E6%B0%97%E6%B8%85%E6%B5%84%E6%A9%9F/",
+     "affiliate_url": "https://search.rakuten.co.jp/search/mall/%E7%A9%BA%E6%B0%97%E6%B8%85%E6%B5%84%E6%A9%9F/"
+    }
+   ],
+   "cheapest_offer": {
+    "id": "sample-y:air-purifier-1",
+    "store": "yahoo",
+    "store_name": "Yahoo!ショッピング",
+    "shop": "サンプルストア",
+    "price": 20650,
+    "shipping_included": true,
+    "buy_url": "https://search.rakuten.co.jp/search/mall/%E7%A9%BA%E6%B0%97%E6%B8%85%E6%B5%84%E6%A9%9F/",
+    "affiliate_url": "https://search.rakuten.co.jp/search/mall/%E7%A9%BA%E6%B0%97%E6%B8%85%E6%B5%84%E6%A9%9F/"
+   }
+  },
+  {
+   "id": "sample:air-purifier-2",
+   "rank": 4,
+   "title": "(サンプル) 空気清浄機 B 加湿 18畳 プラズマクラスター",
+   "name": "(サンプル) 空気清浄機 B 加湿 18畳 プラズマクラスター",
+   "store": "rakuten",
+   "store_name": "楽天市場",
+   "shop": "サンプルショップ",
+   "price": 18020,
+   "currency": "JPY",
+   "shipping_included": false,
+   "point_rate": 1,
+   "rating": 4.25,
+   "reviews": 1724,
+   "score": 4.252,
+   "variants": false,
+   "price_check": {
+    "verdict": "usual",
+    "label": "いつもの価格",
+    "min_90d": 17520,
+    "median_90d": 17930,
+    "max_90d": 18520,
+    "observed_days": 31,
+    "window_days": 31,
+    "first_seen": "2026-09-02",
+    "weekly_low": [
+     [
+      "2026-09-04",
+      17520
+     ],
+     [
+      "2026-09-11",
+      17600
+     ],
+     [
+      "2026-09-18",
+      17600
+     ],
+     [
+      "2026-09-25",
+      17600
+     ],
+     [
+      "2026-10-02",
+      17660
+     ]
+    ]
+   },
+   "specs": {
+    "room_tatami": 18,
+    "humidify": true,
+    "hepa": false,
+    "ion": true
+   },
+   "buy_url": "https://search.rakuten.co.jp/search/mall/%E7%A9%BA%E6%B0%97%E6%B8%85%E6%B5%84%E6%A9%9F/",
+   "affiliate_url": "https://search.rakuten.co.jp/search/mall/%E7%A9%BA%E6%B0%97%E6%B8%85%E6%B5%84%E6%A9%9F/",
+   "affiliate": false,
+   "product_url": "https://search.rakuten.co.jp/search/mall/%E7%A9%BA%E6%B0%97%E6%B8%85%E6%B5%84%E6%A9%9F/",
+   "image": null,
+   "other_offers": []
+  },
+  {
+   "id": "sample:air-purifier-3",
+   "rank": 5,
+   "title": "(サンプル) 空気清浄機 C 31畳 HEPA ストリーマ",
+   "name": "(サンプル) 空気清浄機 C 31畳 HEPA ストリーマ",
+   "store": "rakuten",
+   "store_name": "楽天市場",
+   "shop": "サンプルショップ",
+   "price": 6510,
+   "currency": "JPY",
+   "shipping_included": true,
+   "point_rate": 1,
+   "rating": 3.85,
+   "reviews": 120,
+   "score": 3.991,
+   "variants": false,
+   "price_check": {
+    "verdict": "usual",
+    "label": "いつもの価格",
+    "min_90d": 6000,
+    "median_90d": 6190,
+    "max_90d": 6510,
+    "observed_days": 31,
+    "window_days": 31,
+    "first_seen": "2026-09-02",
+    "weekly_low": [
+     [
+      "2026-09-04",
+      6090
+     ],
+     [
+      "2026-09-11",
+      6020
+     ],
+     [
+      "2026-09-18",
+      6090
+     ],
+     [
+      "2026-09-25",
+      6040
+     ],
+     [
+      "2026-10-02",
+      6000
+     ]
+    ]
+   },
+   "specs": {
+    "room_tatami": 31,
+    "humidify": false,
+    "hepa": true,
+    "ion": true
+   },
+   "buy_url": "https://search.rakuten.co.jp/search/mall/%E7%A9%BA%E6%B0%97%E6%B8%85%E6%B5%84%E6%A9%9F/",
+   "affiliate_url": "https://search.rakuten.co.jp/search/mall/%E7%A9%BA%E6%B0%97%E6%B8%85%E6%B5%84%E6%A9%9F/",
+   "affiliate": false,
+   "product_url": "https://search.rakuten.co.jp/search/mall/%E7%A9%BA%E6%B0%97%E6%B8%85%E6%B5%84%E6%A9%9F/",
+   "image": null,
+   "other_offers": []
+  },
+  {
+   "id": "sample:air-purifier-5",
+   "rank": 6,
+   "title": "(サンプル) 空気清浄機 E 加湿 23畳 ナノイー",
+   "name": "(サンプル) 空気清浄機 E 加湿 23畳 ナノイー",
+   "store": "rakuten",
+   "store_name": "楽天市場",
+   "shop": "サンプルショップ",
+   "price": 23220,
+   "currency": "JPY",
+   "shipping_included": true,
+   "point_rate": 1,
+   "rating": 3.87,
+   "reviews": 2719,
+   "score": 3.878,
+   "variants": false,
+   "price_check": {
+    "verdict": "usual",
+    "label": "いつもの価格",
+    "min_90d": 22530,
+    "median_90d": 23160,
+    "max_90d": 23890,
+    "observed_days": 31,
+    "window_days": 31,
+    "first_seen": "2026-09-02",
+    "weekly_low": [
+     [
+      "2026-09-04",
+      22650
+     ],
+     [
+      "2026-09-11",
+      22720
+     ],
+     [
+      "2026-09-18",
+      22530
+     ],
+     [
+      "2026-09-25",
+      22970
+     ],
+     [
+      "2026-10-02",
+      22690
+     ]
+    ]
+   },
+   "specs": {
+    "room_tatami": 23,
+    "humidify": true,
+    "hepa": false,
+    "ion": true
+   },
+   "buy_url": "https://search.rakuten.co.jp/search/mall/%E7%A9%BA%E6%B0%97%E6%B8%85%E6%B5%84%E6%A9%9F/",
+   "affiliate_url": "https://search.rakuten.co.jp/search/mall/%E7%A9%BA%E6%B0%97%E6%B8%85%E6%B5%84%E6%A9%9F/",
+   "affiliate": false,
+   "product_url": "https://search.rakuten.co.jp/search/mall/%E7%A9%BA%E6%B0%97%E6%B8%85%E6%B5%84%E6%A9%9F/",
+   "image": null,
+   "other_offers": []
+  }
+ ],
+ "price_index": [
+  {
+   "week_end": "2026-09-04",
+   "index": 98.4,
+   "items": 6
+  },
+  {
+   "week_end": "2026-09-11",
+   "index": 98.1,
+   "items": 6
+  },
+  {
+   "week_end": "2026-09-18",
+   "index": 98.1,
+   "items": 6
+  },
+  {
+   "week_end": "2026-09-25",
+   "index": 98.1,
+   "items": 6
+  },
+  {
+   "week_end": "2026-10-02",
+   "index": 97,
+   "items": 6
+  }
+ ],
+ "stats": {
+  "candidates": 8,
+  "ranked": 6,
+  "rejected": {
+   "duplicate": 2
+  },
+  "meanRating": 4.33,
+  "priorWeight": 50
+ },
+ "links": {
+  "html": "https://bufeks.github.io/LAB/shelf/c/air-purifier/",
+  "markdown": "https://bufeks.github.io/LAB/shelf/c/air-purifier.md",
+  "json": "https://bufeks.github.io/LAB/shelf/api/v1/c/air-purifier.json",
+  "feed": "https://bufeks.github.io/LAB/shelf/c/air-purifier/feed.xml"
+ },
+ "languages": {
+  "ja": {
+   "html": "https://bufeks.github.io/LAB/shelf/c/air-purifier/",
+   "markdown": "https://bufeks.github.io/LAB/shelf/c/air-purifier.md",
+   "json": "https://bufeks.github.io/LAB/shelf/api/v1/c/air-purifier.json",
+   "feed": "https://bufeks.github.io/LAB/shelf/c/air-purifier/feed.xml"
+  },
+  "en": {
+   "html": "https://bufeks.github.io/LAB/shelf/en/c/air-purifier/",
+   "markdown": "https://bufeks.github.io/LAB/shelf/en/c/air-purifier.md",
+   "json": "https://bufeks.github.io/LAB/shelf/api/v1/en/c/air-purifier.json",
+   "feed": "https://bufeks.github.io/LAB/shelf/en/c/air-purifier/feed.xml"
+  },
+  "zh-Hans": {
+   "html": "https://bufeks.github.io/LAB/shelf/zh-hans/c/air-purifier/",
+   "markdown": "https://bufeks.github.io/LAB/shelf/zh-hans/c/air-purifier.md",
+   "json": "https://bufeks.github.io/LAB/shelf/api/v1/zh-hans/c/air-purifier.json",
+   "feed": "https://bufeks.github.io/LAB/shelf/zh-hans/c/air-purifier/feed.xml"
+  },
+  "zh-Hant": {
+   "html": "https://bufeks.github.io/LAB/shelf/zh-hant/c/air-purifier/",
+   "markdown": "https://bufeks.github.io/LAB/shelf/zh-hant/c/air-purifier.md",
+   "json": "https://bufeks.github.io/LAB/shelf/api/v1/zh-hant/c/air-purifier.json",
+   "feed": "https://bufeks.github.io/LAB/shelf/zh-hant/c/air-purifier/feed.xml"
+  },
+  "ko": {
+   "html": "https://bufeks.github.io/LAB/shelf/ko/c/air-purifier/",
+   "markdown": "https://bufeks.github.io/LAB/shelf/ko/c/air-purifier.md",
+   "json": "https://bufeks.github.io/LAB/shelf/api/v1/ko/c/air-purifier.json",
+   "feed": "https://bufeks.github.io/LAB/shelf/ko/c/air-purifier/feed.xml"
+  }
+ },
+ "source": {
+  "name": "Rakuten Ichiba",
+  "credit": {
+   "text": "Supported by Rakuten Developers",
+   "url": "https://developers.rakuten.com/"
+  }
+ },
+ "key_facts": [
+  "SHELFは空気清浄機の評価上位6商品の価格を毎日記録している。",
+  "価格の中央値は¥19,900、範囲は¥6,510〜¥23,220。",
+  "総合1位は(サンプル) 空気清浄機 D 8畳 HEPA（¥21,780、★4.72・レビュー1,278件）。",
+  "空気清浄機の価格指数は97（いつもの価格=100、4週前は98.4）。"
+ ],
+ "faq": [
+  {
+   "q": "空気清浄機で今いちばんおすすめは？",
+   "a": "2026-10-02時点のSHELFの集計では、空気清浄機の総合1位は(サンプル) 空気清浄機 D 8畳 HEPA（¥21,780、★4.72・レビュー1,278件）。評価とレビュー件数を合わせたスコアで選んでいる。"
+  },
+  {
+   "q": "空気清浄機の相場はいくら？",
+   "a": "2026-10-02時点で、SHELFが追っている空気清浄機6商品の価格の中央値は¥19,900（¥6,510〜¥23,220）。"
+  },
+  {
+   "q": "空気清浄機は今が買い時？",
+   "a": "2026-10-02時点の空気清浄機: 上位商品の33%がいつもより安い。買うなら悪くない時期。（観測31日・季節変動はまだ反映していない）"
+  },
+  {
+   "q": "空気清浄機はどう選べばいい？",
+   "a": "適用床面積は使う部屋の2〜3倍を目安に選ぶと、早くきれいにできて静かな運転で済む。加湿機能付きは便利だが手入れが増える。本体価格よりフィルター交換費用まで含めて比べる。"
+  }
+ ],
+ "license": "SHELFが作成した文章と統計はCC BY 4.0です。出典（SHELFとリンク）を明記すれば引用・転載できます。商品名・価格・画像は各ストアのものです。"
+}

@@ -8,6 +8,7 @@
 <meta name="robots" content="noindex">
 <link rel="canonical" href="https://bufeks.github.io/LAB/shelf/en/">
 <link rel="alternate" type="text/plain" href="https://bufeks.github.io/LAB/shelf/en/llms.txt">
+<link rel="alternate" type="application/atom+xml" href="https://bufeks.github.io/LAB/shelf/en/deals.xml">
 <link rel="alternate" hreflang="ja" href="https://bufeks.github.io/LAB/shelf/">
 <link rel="alternate" hreflang="en" href="https://bufeks.github.io/LAB/shelf/en/">
 <link rel="alternate" hreflang="zh-Hans" href="https://bufeks.github.io/LAB/shelf/zh-hans/">
@@ -15,7 +16,8 @@
 <link rel="alternate" hreflang="ko" href="https://bufeks.github.io/LAB/shelf/ko/">
 <link rel="alternate" hreflang="x-default" href="https://bufeks.github.io/LAB/shelf/en/">
 <link rel="stylesheet" href="../assets/style.css">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"SHELF","url":"https://bufeks.github.io/LAB/shelf/en/","inLanguage":"en","description":"Shopping data for AI agents"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"SHELF","url":"https://bufeks.github.io/LAB/shelf/en/","inLanguage":"en","description":"Shopping data for AI agents","publisher":{"@type":"Organization","name":"SHELF","url":"https://bufeks.github.io/LAB/shelf/"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Dataset","name":"SHELF — Price history and buying guides for shopping in Japan","description":"Daily recorded prices, price verdicts, category price indexes, unit prices and buying guides for products on Rakuten Ichiba and Yahoo! Shopping.","url":"https://bufeks.github.io/LAB/shelf/en/","inLanguage":"en","license":"https://creativecommons.org/licenses/by/4.0/","creator":{"@type":"Organization","name":"SHELF","url":"https://bufeks.github.io/LAB/shelf/"},"isAccessibleForFree":true,"dateModified":"2026-10-02T14:45:15+09:00","temporalCoverage":"2026-09-04/..","spatialCoverage":"JP","keywords":["Power banks","USB-C PD chargers","True wireless earbuds","Electric kettles","Humidifiers","Electric toothbrushes","Hair dryers","Rice cookers","Air purifiers","Robot vacuums","Rice (white)","Bottled water (by the case)","Toilet paper","AA alkaline batteries","Coffee beans","Protein powder","Sonicare brush heads","Oral-B brush heads (round)"],"distribution":[{"@type":"DataDownload","encodingFormat":"application/json","contentUrl":"https://bufeks.github.io/LAB/shelf/api/v1/en/index.json"},{"@type":"DataDownload","encodingFormat":"application/json","contentUrl":"https://bufeks.github.io/LAB/shelf/api/v1/en/items.json"},{"@type":"DataDownload","encodingFormat":"text/markdown","contentUrl":"https://bufeks.github.io/LAB/shelf/en/llms-full.txt"}]}</script>
 </head>
 <body>
 <header class="top"><a class="brand" href="https://bufeks.github.io/LAB/shelf/en/">SHELF</a><span class="tag">Shopping data for AI agents</span><nav class="langs" aria-label="Languages"><a href="https://bufeks.github.io/LAB/shelf/" hreflang="ja">日本語</a> <b>English</b> <a href="https://bufeks.github.io/LAB/shelf/zh-hans/" hreflang="zh-Hans">简体中文</a> <a href="https://bufeks.github.io/LAB/shelf/zh-hant/" hreflang="zh-Hant">繁體中文</a> <a href="https://bufeks.github.io/LAB/shelf/ko/" hreflang="ko">한국어</a></nav></header>
@@ -41,19 +43,58 @@
 <small><a href="https://bufeks.github.io/LAB/shelf/en/c/humidifier.md">md</a> ・ <a href="https://bufeks.github.io/LAB/shelf/api/v1/en/c/humidifier.json">json</a></small></li>
 <li><a href="https://bufeks.github.io/LAB/shelf/en/c/electric-toothbrush/"><strong>Electric toothbrushes</strong></a>
 <span>No. 1: (サンプル) 電動歯ブラシ D 音波 5つのモード 過圧 (¥10,130)</span>
-<small><a href="https://bufeks.github.io/LAB/shelf/en/c/electric-toothbrush.md">md</a> ・ <a href="https://bufeks.github.io/LAB/shelf/api/v1/en/c/electric-toothbrush.json">json</a></small></li></ul>
+<small><a href="https://bufeks.github.io/LAB/shelf/en/c/electric-toothbrush.md">md</a> ・ <a href="https://bufeks.github.io/LAB/shelf/api/v1/en/c/electric-toothbrush.json">json</a></small></li>
+<li><a href="https://bufeks.github.io/LAB/shelf/en/c/hair-dryer/"><strong>Hair dryers</strong></a>
+<span>No. 1: (サンプル) ヘアドライヤー B 1.3m3/分 折りたたみ イオン (¥5,070)</span>
+<small><a href="https://bufeks.github.io/LAB/shelf/en/c/hair-dryer.md">md</a> ・ <a href="https://bufeks.github.io/LAB/shelf/api/v1/en/c/hair-dryer.json">json</a></small></li>
+<li><a href="https://bufeks.github.io/LAB/shelf/en/c/rice-cooker/"><strong>Rice cookers</strong></a>
+<span>No. 1: (サンプル) 炊飯器 B 3合 マイコン (¥14,750)</span>
+<small><a href="https://bufeks.github.io/LAB/shelf/en/c/rice-cooker.md">md</a> ・ <a href="https://bufeks.github.io/LAB/shelf/api/v1/en/c/rice-cooker.json">json</a></small></li>
+<li><a href="https://bufeks.github.io/LAB/shelf/en/c/air-purifier/"><strong>Air purifiers</strong></a>
+<span>No. 1: (サンプル) 空気清浄機 D 8畳 HEPA (¥21,780)</span>
+<small><a href="https://bufeks.github.io/LAB/shelf/en/c/air-purifier.md">md</a> ・ <a href="https://bufeks.github.io/LAB/shelf/api/v1/en/c/air-purifier.json">json</a></small></li>
+<li><a href="https://bufeks.github.io/LAB/shelf/en/c/robot-vacuum/"><strong>Robot vacuums</strong></a>
+<span>No. 1: (サンプル) ロボット掃除機 E マッピング 水拭き 自動ゴミ収集 8000Pa (¥37,950)</span>
+<small><a href="https://bufeks.github.io/LAB/shelf/en/c/robot-vacuum.md">md</a> ・ <a href="https://bufeks.github.io/LAB/shelf/api/v1/en/c/robot-vacuum.json">json</a></small></li>
+<li><a href="https://bufeks.github.io/LAB/shelf/en/c/rice/"><strong>Rice (white)</strong></a>
+<span>No. 1: (サンプル) 米(白米) A コシヒカリ 令和7年産 10kg (5kg×2袋) (¥3,110)</span>
+<small><a href="https://bufeks.github.io/LAB/shelf/en/c/rice.md">md</a> ・ <a href="https://bufeks.github.io/LAB/shelf/api/v1/en/c/rice.json">json</a></small></li>
+<li><a href="https://bufeks.github.io/LAB/shelf/en/c/mineral-water/"><strong>Bottled water (by the case)</strong></a>
+<span>No. 1: (サンプル) ミネラルウォーター(箱買い) A 天然水 2L×9本 硬度30 (¥1,340)</span>
+<small><a href="https://bufeks.github.io/LAB/shelf/en/c/mineral-water.md">md</a> ・ <a href="https://bufeks.github.io/LAB/shelf/api/v1/en/c/mineral-water.json">json</a></small></li>
+<li><a href="https://bufeks.github.io/LAB/shelf/en/c/toilet-paper/"><strong>Toilet paper</strong></a>
+<span>No. 1: (サンプル) トイレットペーパー D 3倍巻き 8ロール 150m シングル (¥4,130)</span>
+<small><a href="https://bufeks.github.io/LAB/shelf/en/c/toilet-paper.md">md</a> ・ <a href="https://bufeks.github.io/LAB/shelf/api/v1/en/c/toilet-paper.json">json</a></small></li>
+<li><a href="https://bufeks.github.io/LAB/shelf/en/c/aa-batteries/"><strong>AA alkaline batteries</strong></a>
+<span>No. 1: (サンプル) 単3アルカリ乾電池 E 単3 100本 (¥1,430)</span>
+<small><a href="https://bufeks.github.io/LAB/shelf/en/c/aa-batteries.md">md</a> ・ <a href="https://bufeks.github.io/LAB/shelf/api/v1/en/c/aa-batteries.json">json</a></small></li>
+<li><a href="https://bufeks.github.io/LAB/shelf/en/c/coffee-beans/"><strong>Coffee beans</strong></a>
+<span>No. 1: (サンプル) コーヒー豆 E 深煎り 2kg 豆 (¥4,160)</span>
+<small><a href="https://bufeks.github.io/LAB/shelf/en/c/coffee-beans.md">md</a> ・ <a href="https://bufeks.github.io/LAB/shelf/api/v1/en/c/coffee-beans.json">json</a></small></li>
+<li><a href="https://bufeks.github.io/LAB/shelf/en/c/protein/"><strong>Protein powder</strong></a>
+<span>No. 1: (サンプル) プロテイン(パウダー) A ホエイ 1kg (¥4,400)</span>
+<small><a href="https://bufeks.github.io/LAB/shelf/en/c/protein.md">md</a> ・ <a href="https://bufeks.github.io/LAB/shelf/api/v1/en/c/protein.json">json</a></small></li>
+<li><a href="https://bufeks.github.io/LAB/shelf/en/c/sonicare-heads/"><strong>Sonicare brush heads</strong></a>
+<span>No. 1: (サンプル) ソニッケアー純正替えブラシ D ソニッケアー 純正 ホワイトニング 3本 (¥2,610)</span>
+<small><a href="https://bufeks.github.io/LAB/shelf/en/c/sonicare-heads.md">md</a> ・ <a href="https://bufeks.github.io/LAB/shelf/api/v1/en/c/sonicare-heads.json">json</a></small></li>
+<li><a href="https://bufeks.github.io/LAB/shelf/en/c/oralb-heads/"><strong>Oral-B brush heads (round)</strong></a>
+<span>No. 1: (サンプル) ブラウン オーラルB 純正替えブラシ(丸型) A ブラウン オーラルB 純正 4本 (¥4,660)</span>
+<small><a href="https://bufeks.github.io/LAB/shelf/en/c/oralb-heads.md">md</a> ・ <a href="https://bufeks.github.io/LAB/shelf/api/v1/en/c/oralb-heads.json">json</a></small></li></ul>
 <h2>For agents</h2>
 <ul>
 <li><a href="https://bufeks.github.io/LAB/shelf/en/llms.txt">llms.txt</a> — the table of contents (read this first)</li>
 <li><a href="https://bufeks.github.io/LAB/shelf/api/v1/en/index.json">JSON API</a> ・ <a href="https://bufeks.github.io/LAB/shelf/openapi.json">OpenAPI</a>(for GPT Actions and similar)</li>
 <li><a href="https://bufeks.github.io/LAB/shelf/mcp/server.mjs">MCP server (for Claude Desktop and similar)</a></li>
-<li><a href="https://bufeks.github.io/LAB/shelf/api/v1/en/deals.json">Products cheaper than usual right now</a></li>
+<li><a href="https://bufeks.github.io/LAB/shelf/api/v1/en/deals.json">Products cheaper than usual right now</a> ・ <a href="https://bufeks.github.io/LAB/shelf/en/deals.xml">Atom</a></li>
+<li><a href="https://bufeks.github.io/LAB/shelf/en/sale/">Sale price check</a></li>
+<li><a href="https://bufeks.github.io/LAB/shelf/en/compat/">Electric toothbrush brush-head compatibility</a></li>
+<li><a href="https://bufeks.github.io/LAB/shelf/en/hotels/">Hotel prices: book now or wait? (2 adults, 1 room, 1 night)</a></li>
 </ul>
-<p class="meta">Last updated 2026-09-30T01:01:12+09:00</p>
+<p class="meta">Last updated 2026-10-02T14:45:15+09:00</p>
 </main>
 <footer>
-<p>Ad: buy links are Rakuten affiliate links. The operator earns a commission on purchases at no extra cost to you. Rankings come only from the published formula; commission rates play no part.</p>
-<p><a href="https://developers.rakuten.com/">Supported by Rakuten Developers</a> ・ <a href="https://bufeks.github.io/LAB/shelf/en/llms.txt">llms.txt</a> ・ <a href="https://bufeks.github.io/LAB/shelf/openapi.json">OpenAPI</a> ・ <a href="https://bufeks.github.io/LAB/shelf/en/about/">How agents use SHELF</a></p>
+<p>Ad: buy links are affiliate links (Rakuten Affiliate, and Yahoo! Shopping via ValueCommerce). The operator earns a commission on purchases at no extra cost to you. Rankings come only from the published formula; commission rates play no part in rankings or in which store is shown.</p>
+<p><a href="https://developers.rakuten.com/">Supported by Rakuten Developers</a> ・ <span style="margin:15px 15px 15px 15px"><a href="https://developer.yahoo.co.jp/sitemap/">Web Services by Yahoo! JAPAN</a></span> ・ <a href="https://bufeks.github.io/LAB/shelf/en/llms.txt">llms.txt</a> ・ <a href="https://bufeks.github.io/LAB/shelf/openapi.json">OpenAPI</a> ・ <a href="https://bufeks.github.io/LAB/shelf/en/about/">How agents use SHELF</a></p>
 </footer>
 </body>
 </html>

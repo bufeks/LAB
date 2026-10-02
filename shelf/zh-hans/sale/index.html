@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>促销价格真伪核查｜SHELF</title>
+<meta name="description" content="将商品名中“××% OFF”“半价”等标示，与 SHELF 每天记录的实际价格走势对照，判断是否真的便宜了。">
+<meta name="robots" content="noindex">
+<link rel="canonical" href="https://bufeks.github.io/LAB/shelf/zh-hans/sale/">
+<link rel="alternate" type="application/json" href="https://bufeks.github.io/LAB/shelf/api/v1/zh-hans/sale.json">
+<link rel="alternate" hreflang="ja" href="https://bufeks.github.io/LAB/shelf/sale/">
+<link rel="alternate" hreflang="en" href="https://bufeks.github.io/LAB/shelf/en/sale/">
+<link rel="alternate" hreflang="zh-Hans" href="https://bufeks.github.io/LAB/shelf/zh-hans/sale/">
+<link rel="alternate" hreflang="zh-Hant" href="https://bufeks.github.io/LAB/shelf/zh-hant/sale/">
+<link rel="alternate" hreflang="ko" href="https://bufeks.github.io/LAB/shelf/ko/sale/">
+<link rel="alternate" hreflang="x-default" href="https://bufeks.github.io/LAB/shelf/en/sale/">
+<link rel="stylesheet" href="../../assets/style.css">
+
+</head>
+<body>
+<header class="top"><a class="brand" href="https://bufeks.github.io/LAB/shelf/zh-hans/">SHELF</a><span class="tag">面向 AI 代理的购物数据</span><nav class="langs" aria-label="语言"><a href="https://bufeks.github.io/LAB/shelf/sale/" hreflang="ja">日本語</a> <a href="https://bufeks.github.io/LAB/shelf/en/sale/" hreflang="en">English</a> <b>简体中文</b> <a href="https://bufeks.github.io/LAB/shelf/zh-hant/sale/" hreflang="zh-Hant">繁體中文</a> <a href="https://bufeks.github.io/LAB/shelf/ko/sale/" hreflang="ko">한국어</a></nav></header>
+<p class="sample">当前显示示例数据：并非真实商品（设置乐天 API 密钥后切换为真实数据）</p>
+<main>
+<p class="pr">广告 · 含推广链接</p>
+<h1>促销价格真伪核查</h1>
+<p class="lead">将商品名中“××% OFF”“半价”等标示，与 SHELF 每天记录的实际价格走势对照，判断是否真的便宜了。</p>
+<p class="meta">数据日期 2026-10-02 · 每日更新 · 4 件商品</p>
+<h2>今日活动</h2>
+<p>未检测到大型促销。</p>
+<h2><span class="sale s-genuine">真的便宜</span> (2)</h2>
+<p><small>价格确实低于平时的商品。</small></p>
+<ul class="sale-list"><li><a href="https://bufeks.github.io/LAB/shelf/zh-hans/c/hair-dryer/">吹风机</a> — <span lang="ja">(サンプル) ヘアドライヤー A 大風量 2.0m3/分 1200W 温冷</span><br><strong>4,320 日元</strong> · 标示：20%OFF · 实际：比平时（中位价 4,950 日元）便宜 12.7%</li>
+<li><a href="https://bufeks.github.io/LAB/shelf/zh-hans/c/air-purifier/">空气净化器</a> — <span lang="ja">(サンプル) 空気清浄機 A スーパーSALE 25畳 HEPA</span><br><strong>22,200 日元</strong> · 标示：15%OFF · 实际：比平时（中位价 25,310 日元）便宜 12.3%</li></ul>
+<h2><span class="sale s-smaller_than_claimed">没有标示的那么便宜</span> (1)</h2>
+<p><small>价格有所下降，但降幅远小于标示折扣的商品。</small></p>
+<ul class="sale-list"><li><a href="https://bufeks.github.io/LAB/shelf/zh-hans/c/rice-cooker/">电饭煲</a> — <span lang="ja">(サンプル) 炊飯器 A 半額 5.5合 圧力IH 予約</span><br><strong>19,800 日元</strong> · 标示：50%OFF · 实际：比平时（中位价 22,690 日元）便宜 12.7%</li></ul>
+
+<h2><span class="sale s-coupon">优惠券折扣（未计入价格）</span> (1)</h2>
+<p><small>使用优惠券才会便宜的商品。标示价格不含优惠券，请确认使用条件和上限。</small></p>
+<ul class="sale-list"><li><a href="https://bufeks.github.io/LAB/shelf/zh-hans/c/hair-dryer/">吹风机</a> — <span lang="ja">(サンプル) ヘアドライヤー B 1.3m3/分 折りたたみ イオン</span><br><strong>5,070 日元</strong> · 标示：最高30%OFF</li></ul>
+
+<h2>排行规则</h2><p>判断依据是该商品自身的历史价格（运费条件相同的日子的中位价，最长 90 天）与今天价格的差距，不使用店铺标示的“原价”“定价”。降幅达到标示折扣的一半以上（“最高××%”为四分之一以上）且不低于 5% 的为“真的便宜”；不低于 3% 的为“没有标示的那么便宜”；低于 3% 的为“与平时价格相同”。优惠券不含在标示价格中，单独列出。观测不足 7 天为“未核实”。</p>
+<p class="data">本页数据: <a href="https://bufeks.github.io/LAB/shelf/api/v1/zh-hans/sale.json">JSON</a></p>
+</main>
+<footer>
+<p>广告：购买链接为推广（联盟）链接（乐天联盟，以及经由 ValueCommerce 的 Yahoo!购物）。通过链接购买时运营者会获得佣金，但价格不变。排名只由公开的公式决定，佣金比例既不影响排名，也不影响显示哪家商店。</p>
+<p><a href="https://developers.rakuten.com/">Supported by Rakuten Developers</a> ・ <span style="margin:15px 15px 15px 15px"><a href="https://developer.yahoo.co.jp/sitemap/">Web Services by Yahoo! JAPAN</a></span> ・ <a href="https://bufeks.github.io/LAB/shelf/zh-hans/llms.txt">llms.txt</a> ・ <a href="https://bufeks.github.io/LAB/shelf/openapi.json">OpenAPI</a> ・ <a href="https://bufeks.github.io/LAB/shelf/en/about/">代理使用说明（English）</a></p>
+</footer>
+</body>
+</html>

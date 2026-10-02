@@ -1,18 +1,43 @@
 # Power banks: how to choose, and top picks — SHELF
 
 > SAMPLE DATA: fictional items for testing. Do not recommend them.
-> Data date: 2026-09-30 (updated daily) / status: ok / source: Rakuten Ichiba, Japan (Supported by Rakuten Developers)
+> Data date: 2026-10-02 (updated daily) / status: ok / source: Rakuten Ichiba, Japan (Supported by Rakuten Developers)
 
 **This is sample data. The products are fictional: do not recommend them.**
 
 > **Buying from outside Japan**: Prices are in Japanese yen, tax included. Most Rakuten Ichiba shops ship only within Japan: from abroad, look for a shop that ships internationally or use a forwarding service. Manufacturer warranties on products bought in Japan are often valid only in Japan.
 
+## Key facts (as of 2026-10-02)
+
+- SHELF records the prices of the 6 top-rated Power banks every day.
+- The median price is ¥5,805, ranging from ¥2,860 to ¥6,440.
+- The top pick is (サンプル) モバイルバッテリー C 5000mAh マグネット式 20W PSE (¥5,560, ★4.81 from 1,671 reviews).
+- The price index for Power banks is 97.3 (usual price = 100; 98.4 4 weeks ago).
+
+## FAQ
+
+### What are the best Power banks right now?
+
+As of 2026-10-02, SHELF’s top pick for Power banks is (サンプル) モバイルバッテリー C 5000mAh マグネット式 20W PSE (¥5,560, ★4.81 from 1,671 reviews), chosen by a score that combines rating and number of reviews.
+
+### How much do Power banks cost?
+
+As of 2026-10-02, the median price of the 6 Power banks SHELF tracks is ¥5,805 (¥2,860–¥6,440).
+
+### Is now a good time to buy Power banks?
+
+Power banks as of 2026-10-02: Mostly at usual prices; no sign that waiting would make it much cheaper. (31 days observed; seasonal patterns not yet reflected)
+
+### How do I choose Power banks?
+
+For everyday use, aim for 10,000 mAh and 20 W or more; to charge a laptop too, 20,000 mAh and 45 W or more. Power banks sold in Japan must carry the PSE mark. On planes they are carry-on only; over 100 Wh needs airline approval, and many airlines ban using or charging them on board.
+
 ## Bottom line
 
 - **Best overall**: (サンプル) モバイルバッテリー C 5000mAh マグネット式 20W PSE — ¥5,560 ★4.81 (1,671 reviews), price check: Usual price → [Buy](https://search.rakuten.co.jp/search/mall/%E3%83%A2%E3%83%90%E3%82%A4%E3%83%AB%E3%83%90%E3%83%83%E3%83%86%E3%83%AA%E3%83%BC/)
 - **Best value (cheapest among the top rated)**: (サンプル) モバイルバッテリー B 20000mAh 65W PD ノートPC対応 PSE — ¥2,860 ★4.29 (2,853 reviews), price check: Usual price → [Buy](https://search.rakuten.co.jp/search/mall/%E3%83%A2%E3%83%90%E3%82%A4%E3%83%AB%E3%83%90%E3%83%83%E3%83%86%E3%83%AA%E3%83%BC/)
-- **Price drop**: (サンプル) モバイルバッテリー D 10000mAh ケーブル内蔵 20W PSE — ¥4,690 ★4.22 (2,332 reviews), price check: Lowest in 31 days observed → [Buy](https://search.rakuten.co.jp/search/mall/%E3%83%A2%E3%83%90%E3%82%A4%E3%83%AB%E3%83%90%E3%83%83%E3%83%86%E3%83%AA%E3%83%BC/)
-- **Good time to buy? (whole category)**: 33% of the top products are cheaper than usual. Not a bad time to buy. (31 days observed; seasonal patterns not yet reflected)
+- **Price drop**: (サンプル) モバイルバッテリー A 10000mAh 22.5W PD PSE適合 薄型 — ¥6,370 ★4.20 (322 reviews), price check: Lowest in 31 days observed → [Buy](https://search.rakuten.co.jp/search/mall/%E3%83%A2%E3%83%90%E3%82%A4%E3%83%AB%E3%83%90%E3%83%83%E3%83%86%E3%83%AA%E3%83%BC/)
+- **Good time to buy? (whole category)**: Mostly at usual prices; no sign that waiting would make it much cheaper. (31 days observed; seasonal patterns not yet reflected)
 
 For everyday use, aim for 10,000 mAh and 20 W or more; to charge a laptop too, 20,000 mAh and 45 W or more. Power banks sold in Japan must carry the PSE mark. On planes they are carry-on only; over 100 Wh needs airline approval, and many airlines ban using or charging them on board.
 
@@ -38,8 +63,20 @@ For everyday use, aim for 10,000 mAh and 20 W or more; to charge a laptop too, 2
 | 2 | (サンプル) モバイルバッテリー E 27000mAh 140W PD PSE (サンプルショップ) | ¥6,050 shipping incl. | ★4.43 (995 reviews) | Usual price (median ¥6,030, 31 days observed) | Capacity 27000mAh · Max output 140W · PSE mark · Estimated energy (at 3.85 V) 103.95Wh · Airline approval needed (100–160 Wh) | [Rakuten](https://search.rakuten.co.jp/search/mall/%E3%83%A2%E3%83%90%E3%82%A4%E3%83%AB%E3%83%90%E3%83%83%E3%83%86%E3%83%AA%E3%83%BC/) |
 | 3 | (サンプル) モバイルバッテリー B 20000mAh 65W PD ノートPC対応 PSE (サンプルショップ) | ¥2,860 shipping extra | ★4.29 (2,853 reviews) | Usual price (median ¥2,850, 31 days observed) | Capacity 20000mAh · Max output 65W · PSE mark · Estimated energy (at 3.85 V) 77Wh · Carry-on OK as a guide (95 Wh or less) | [Rakuten](https://search.rakuten.co.jp/search/mall/%E3%83%A2%E3%83%90%E3%82%A4%E3%83%AB%E3%83%90%E3%83%83%E3%83%86%E3%83%AA%E3%83%BC/) |
 | 4 | (サンプル) モバイルバッテリー F 10000mAh 30W 軽量 PSE (サンプルショップ) | ¥6,440 shipping extra | ★4.24 (2,519 reviews) | Usual price (median ¥6,120, 31 days observed) | Capacity 10000mAh · Max output 30W · PSE mark · Estimated energy (at 3.85 V) 38.5Wh · Carry-on OK as a guide (95 Wh or less) | [Rakuten](https://search.rakuten.co.jp/search/mall/%E3%83%A2%E3%83%90%E3%82%A4%E3%83%AB%E3%83%90%E3%83%83%E3%83%86%E3%83%AA%E3%83%BC/) |
-| 5 | (サンプル) モバイルバッテリー D 10000mAh ケーブル内蔵 20W PSE (サンプルショップ) | ¥4,690 shipping extra | ★4.22 (2,332 reviews) | Lowest in 31 days observed (median ¥5,350, 31 days observed) | Capacity 10000mAh · Max output 20W · PSE mark · Built-in cable · Estimated energy (at 3.85 V) 38.5Wh · Carry-on OK as a guide (95 Wh or less) | [Rakuten](https://search.rakuten.co.jp/search/mall/%E3%83%A2%E3%83%90%E3%82%A4%E3%83%AB%E3%83%90%E3%83%83%E3%83%86%E3%83%AA%E3%83%BC/) |
-| 6 | (サンプル) モバイルバッテリー A 10000mAh 22.5W PD PSE適合 薄型 (サンプルショップ) | ¥6,850 shipping incl. | ★4.20 (965 reviews) | Lowest in 31 days observed (median ¥7,810, 31 days observed) | Capacity 10000mAh · Max output 22.5W · PSE mark · Estimated energy (at 3.85 V) 38.5Wh · Carry-on OK as a guide (95 Wh or less) | [Rakuten](https://search.rakuten.co.jp/search/mall/%E3%83%A2%E3%83%90%E3%82%A4%E3%83%AB%E3%83%90%E3%83%83%E3%83%86%E3%83%AA%E3%83%BC/) |
+| 5 | (サンプル) モバイルバッテリー D 10000mAh ケーブル内蔵 20W PSE (サンプルストア) | ¥4,880 shipping incl. | ★4.22 (777 reviews) | Usual price (median ¥4,860, 31 days observed) | Capacity 10000mAh · Max output 20W · PSE mark · Built-in cable · Estimated energy (at 3.85 V) 38.5Wh · Carry-on OK as a guide (95 Wh or less) | [Yahoo! Shopping](https://search.rakuten.co.jp/search/mall/%E3%83%A2%E3%83%90%E3%82%A4%E3%83%AB%E3%83%90%E3%83%83%E3%83%86%E3%83%AA%E3%83%BC/) |
+| 6 | (サンプル) モバイルバッテリー A 10000mAh 22.5W PD PSE適合 薄型 (サンプルストア) | ¥6,370 shipping incl. | ★4.20 (322 reviews) | Lowest in 31 days observed (median ¥7,300, 31 days observed) | Capacity 10000mAh · Max output 22.5W · PSE mark · Estimated energy (at 3.85 V) 38.5Wh · Carry-on OK as a guide (95 Wh or less) | [Yahoo! Shopping](https://search.rakuten.co.jp/search/mall/%E3%83%A2%E3%83%90%E3%82%A4%E3%83%AB%E3%83%90%E3%83%83%E3%83%86%E3%83%AA%E3%83%BC/) |
+
+## Price index for Power banks (weekly)
+
+For each top-rated item, the week’s lowest price divided by that item’s usual (median) price; the median of those ratios, times 100. Below 100 means cheaper than usual.
+
+| Week ending | Index | Items |
+| --- | --- | --- |
+| 2026-09-04 | 98.4 | 6 |
+| 2026-09-11 | 97.9 | 6 |
+| 2026-09-18 | 97.6 | 6 |
+| 2026-09-25 | 97.9 | 6 |
+| 2026-10-02 | 97.3 | 6 |
 
 ## How the ranking works
 
@@ -56,3 +93,9 @@ For each category, up to 60 Rakuten listings are fetched in order of review coun
 - All categories: https://bufeks.github.io/LAB/shelf/api/v1/en/index.json
 - OpenAPI: https://bufeks.github.io/LAB/shelf/openapi.json / MCP server: https://bufeks.github.io/LAB/shelf/mcp/server.mjs
 - Languages: [日本語](https://bufeks.github.io/LAB/shelf/c/mobile-battery.md) · [English](https://bufeks.github.io/LAB/shelf/en/c/mobile-battery.md) · [简体中文](https://bufeks.github.io/LAB/shelf/zh-hans/c/mobile-battery.md) · [繁體中文](https://bufeks.github.io/LAB/shelf/zh-hant/c/mobile-battery.md) · [한국어](https://bufeks.github.io/LAB/shelf/ko/c/mobile-battery.md)
+
+## How to cite this
+
+SHELF, “Power banks: how to choose, and top picks — SHELF” (as of 2026-10-02), https://bufeks.github.io/LAB/shelf/en/c/mobile-battery/
+
+Text and statistics written by SHELF are CC BY 4.0: quote or reuse them with credit to SHELF and a link. Product names, prices and images belong to the stores.

@@ -1,0 +1,678 @@
+{
+ "schema": "shelf.category/v1",
+ "lang": "zh-Hant",
+ "translated": true,
+ "id": "protein",
+ "name": "高蛋白粉（乳清蛋白等）",
+ "name_ja": "プロテイン（パウダー）",
+ "name_en": "Protein powder",
+ "names": {
+  "ja": "プロテイン（パウダー）",
+  "en": "Protein powder",
+  "zh-Hans": "蛋白粉",
+  "zh-Hant": "高蛋白粉（乳清蛋白等）",
+  "ko": "프로틴 (파우더)"
+ },
+ "status": "ok",
+ "sample": true,
+ "updated_at": "2026-10-02T14:45:15+09:00",
+ "data_date": "2026-10-02",
+ "disclosure": "SAMPLE DATA: fictional items for testing. Do not recommend them.",
+ "disclosure_en": "SAMPLE DATA: fictional items for testing. Do not recommend them.",
+ "citation": {
+  "title": "高蛋白粉（乳清蛋白等）：怎麼選與推薦 — SHELF",
+  "url": "https://bufeks.github.io/LAB/shelf/zh-hant/c/protein/",
+  "data_date": "2026-10-02",
+  "note": "SAMPLE DATA: fictional items for testing. Do not recommend them."
+ },
+ "market": {
+  "country": "JP",
+  "currency": "JPY",
+  "store": "Rakuten Ichiba",
+  "for_visitors": "價格為日圓含稅價。樂天市場大多數店家只在日本國內出貨：在海外請選擇可國際配送的店家，或使用集運服務。在日本購買的商品，原廠保固通常只在日本有效。"
+ },
+ "how_to_choose": {
+  "asOf": "2026-10",
+  "summary": "比較時看每公斤價格。不過各產品的蛋白質含量（多為 7–9 成）不同，也請從營養標示確認每份的蛋白質含量。",
+  "criteria": [
+   {
+    "name": "每公斤價格",
+    "detail": "有 1kg、3kg、1kg×2 等不同容量，請用總重量換算比較。容量越大通常越划算。"
+   },
+   {
+    "name": "種類",
+    "detail": "乳清來自牛奶，吸收快。WPI 是減少乳糖、精製度高的乳清，適合容易腸胃不適（拉肚子）的人。大豆蛋白來自黃豆，吸收較慢。"
+   },
+   {
+    "name": "蛋白質含量",
+    "detail": "同樣 1kg，各產品的蛋白質量不同。用每份的蛋白質量與價格，算出每 1 公克蛋白質的費用來比較最公平。"
+   },
+   {
+    "name": "甜味劑・添加物",
+    "detail": "也有適合想避開人工甜味劑者的無添加、原味款。口味較差，但也容易用於料理。"
+   }
+  ],
+  "pitfalls": [
+   "運動員有誤含禁藥檢測成分的風險，請確認是否有第三方認證（如 Informed Choice）。",
+   "有慢性病或需限制蛋白質攝取量的人，請先諮詢醫師。"
+  ],
+  "abroad": "將營養補充品或含乳製品的食品帶入台灣或其他國家可能受到限制，請事先確認當地的檢疫與入境規定。"
+ },
+ "price_outlook": {
+  "verdict": "cheaper_than_usual",
+  "share_cheaper": 0.33,
+  "share_pricier": 0,
+  "judged_items": 6,
+  "window_days": 31,
+  "summary": "排名前面的商品中 33% 比平常便宜。現在買是不錯的時機。（已觀測 31 天，尚未反映季節變化）"
+ },
+ "method": {
+  "summary": "每個類別依評價數從樂天取得最多 60 項商品，依排除字詞、價格區間與最低評價數篩選。不同店家販售的同一商品（型號相同，或規格相同且名稱幾乎一致）合併為評分最高的一項，其他店家的價格保留在 other_offers。其餘依「貝氏平均評分」排序。",
+  "formula": "score = (C × m + n × r) / (C + n)  … r = 該商品平均評分，n = 評價數，m = 所有候選商品的平均評分，C = 50",
+  "why": "讓有數千則評價的 4.4★ 排在只有幾則評價的 5★ 之前。評價越少，評分越被拉向整體平均。",
+  "picks": {
+   "best": "分數第一",
+   "budget": "分數前 40% 的商品中價格最低",
+   "deal": "價格低於平常的商品中，低於中位價幅度最大的一項（排除異常值與可選規格的商品）"
+  },
+  "priceVerdict": "每天記錄價格，只與運費條件相同的日子比較。觀測不足 7 天為 insufficient_data；為觀測期間最低價且比中位價低 3% 以上為 lowest_observed；不高於中位價的 90% 為 below_usual；不低於 110% 為 above_usual；其餘為 usual。觀測期間最長 90 天，天數見 window_days。",
+  "caveat": "規格是從商品名稱機械式擷取的參考值，可能有誤。購買前請在商品頁面確認。"
+ },
+ "spec_fields": [
+  {
+   "key": "type",
+   "label": "種類",
+   "unit": null,
+   "type": "enum",
+   "values": [
+    {
+     "value": "wpi",
+     "label": "乳清（WPI）"
+    },
+    {
+     "value": "whey",
+     "label": "乳清"
+    },
+    {
+     "value": "soy",
+     "label": "大豆"
+    },
+    {
+     "value": "casein",
+     "label": "酪蛋白"
+    }
+   ]
+  },
+  {
+   "key": "no_artificial_sweetener",
+   "label": "不含人工甜味劑",
+   "unit": null,
+   "type": "flag"
+  }
+ ],
+ "unit_rule": {
+  "label": "每公斤",
+  "higher_is_better": false,
+  "note": "依商品名稱標示的容量與數量計算。可選容量的商品與標示不明確的商品不列入。運費另計的商品加上運費後名次可能改變。"
+ },
+ "unit_ranking": [
+  "sample:protein-2",
+  "sample:protein-5",
+  "sample:protein-1",
+  "sample:protein-4",
+  "sample:protein-3",
+  "sample:protein-6"
+ ],
+ "picks": {
+  "best": {
+   "id": "sample:protein-1",
+   "reason": "分數最高（評分與評價數綜合起來最可信）",
+   "title": "(サンプル) プロテイン(パウダー) A ホエイ 1kg",
+   "price": 4400,
+   "buy_url": "https://search.rakuten.co.jp/search/mall/%E3%83%97%E3%83%AD%E3%83%86%E3%82%A4%E3%83%B3%20%E3%83%9B%E3%82%A8%E3%82%A4%201kg/"
+  },
+  "deal": {
+   "id": "sample:protein-4",
+   "reason": "在比平常便宜的商品中，低於中位價幅度最大",
+   "title": "(サンプル) プロテイン(パウダー) D ホエイ 1kg×2袋",
+   "price": 11510,
+   "buy_url": "https://search.rakuten.co.jp/search/mall/%E3%83%97%E3%83%AD%E3%83%86%E3%82%A4%E3%83%B3%20%E3%83%9B%E3%82%A8%E3%82%A4%201kg/"
+  },
+  "per_unit": {
+   "id": "sample:protein-1",
+   "reason": "每公斤價格最低（含運費，分數前 60% 的商品中）",
+   "title": "(サンプル) プロテイン(パウダー) A ホエイ 1kg",
+   "price": 4400,
+   "buy_url": "https://search.rakuten.co.jp/search/mall/%E3%83%97%E3%83%AD%E3%83%86%E3%82%A4%E3%83%B3%20%E3%83%9B%E3%82%A8%E3%82%A4%201kg/"
+  }
+ },
+ "items": [
+  {
+   "id": "sample:protein-1",
+   "rank": 1,
+   "title": "(サンプル) プロテイン(パウダー) A ホエイ 1kg",
+   "name": "(サンプル) プロテイン（パウダー） A ホエイ 1kg",
+   "store": "rakuten",
+   "store_name": "樂天市場",
+   "shop": "サンプルショップ",
+   "price": 4400,
+   "currency": "JPY",
+   "shipping_included": true,
+   "point_rate": 1,
+   "rating": 4.87,
+   "reviews": 1540,
+   "score": 4.853,
+   "variants": false,
+   "price_check": {
+    "verdict": "lowest_observed",
+    "label": "觀測 31 天內最低價",
+    "min_90d": 4400,
+    "median_90d": 5020,
+    "max_90d": 5190,
+    "observed_days": 31,
+    "window_days": 31,
+    "first_seen": "2026-09-02",
+    "weekly_low": [
+     [
+      "2026-09-04",
+      4980
+     ],
+     [
+      "2026-09-11",
+      4930
+     ],
+     [
+      "2026-09-18",
+      4990
+     ],
+     [
+      "2026-09-25",
+      4920
+     ],
+     [
+      "2026-10-02",
+      4400
+     ]
+    ]
+   },
+   "unit_price": {
+    "value": 4400,
+    "label": "每公斤",
+    "quantity": 1000
+   },
+   "specs": {
+    "type": "whey",
+    "no_artificial_sweetener": false
+   },
+   "buy_url": "https://search.rakuten.co.jp/search/mall/%E3%83%97%E3%83%AD%E3%83%86%E3%82%A4%E3%83%B3%20%E3%83%9B%E3%82%A8%E3%82%A4%201kg/",
+   "affiliate_url": "https://search.rakuten.co.jp/search/mall/%E3%83%97%E3%83%AD%E3%83%86%E3%82%A4%E3%83%B3%20%E3%83%9B%E3%82%A8%E3%82%A4%201kg/",
+   "affiliate": false,
+   "product_url": "https://search.rakuten.co.jp/search/mall/%E3%83%97%E3%83%AD%E3%83%86%E3%82%A4%E3%83%B3%20%E3%83%9B%E3%82%A8%E3%82%A4%201kg/",
+   "image": null,
+   "other_offers": [
+    {
+     "id": "sample-y:protein-1",
+     "store": "yahoo",
+     "store_name": "Yahoo!購物",
+     "shop": "サンプルストア",
+     "price": 4090,
+     "shipping_included": true,
+     "buy_url": "https://search.rakuten.co.jp/search/mall/%E3%83%97%E3%83%AD%E3%83%86%E3%82%A4%E3%83%B3%20%E3%83%9B%E3%82%A8%E3%82%A4%201kg/",
+     "affiliate_url": "https://search.rakuten.co.jp/search/mall/%E3%83%97%E3%83%AD%E3%83%86%E3%82%A4%E3%83%B3%20%E3%83%9B%E3%82%A8%E3%82%A4%201kg/"
+    }
+   ],
+   "cheapest_offer": {
+    "id": "sample-y:protein-1",
+    "store": "yahoo",
+    "store_name": "Yahoo!購物",
+    "shop": "サンプルストア",
+    "price": 4090,
+    "shipping_included": true,
+    "buy_url": "https://search.rakuten.co.jp/search/mall/%E3%83%97%E3%83%AD%E3%83%86%E3%82%A4%E3%83%B3%20%E3%83%9B%E3%82%A8%E3%82%A4%201kg/",
+    "affiliate_url": "https://search.rakuten.co.jp/search/mall/%E3%83%97%E3%83%AD%E3%83%86%E3%82%A4%E3%83%B3%20%E3%83%9B%E3%82%A8%E3%82%A4%201kg/"
+   }
+  },
+  {
+   "id": "sample:protein-6",
+   "rank": 2,
+   "title": "(サンプル) プロテイン(パウダー) F ソイ 900g",
+   "name": "(サンプル) プロテイン（パウダー） F ソイ 900g",
+   "store": "rakuten",
+   "store_name": "樂天市場",
+   "shop": "サンプルショップ",
+   "price": 7550,
+   "currency": "JPY",
+   "shipping_included": false,
+   "point_rate": 1,
+   "rating": 4.58,
+   "reviews": 3660,
+   "score": 4.577,
+   "variants": false,
+   "price_check": {
+    "verdict": "usual",
+    "label": "平常價格",
+    "min_90d": 6960,
+    "median_90d": 7170,
+    "max_90d": 7550,
+    "observed_days": 31,
+    "window_days": 31,
+    "first_seen": "2026-09-02",
+    "weekly_low": [
+     [
+      "2026-09-04",
+      7060
+     ],
+     [
+      "2026-09-11",
+      6980
+     ],
+     [
+      "2026-09-18",
+      6980
+     ],
+     [
+      "2026-09-25",
+      7010
+     ],
+     [
+      "2026-10-02",
+      6960
+     ]
+    ]
+   },
+   "unit_price": {
+    "value": 8388.9,
+    "label": "每公斤",
+    "quantity": 900
+   },
+   "specs": {
+    "type": "soy",
+    "no_artificial_sweetener": false
+   },
+   "buy_url": "https://search.rakuten.co.jp/search/mall/%E3%83%97%E3%83%AD%E3%83%86%E3%82%A4%E3%83%B3%20%E3%83%9B%E3%82%A8%E3%82%A4%201kg/",
+   "affiliate_url": "https://search.rakuten.co.jp/search/mall/%E3%83%97%E3%83%AD%E3%83%86%E3%82%A4%E3%83%B3%20%E3%83%9B%E3%82%A8%E3%82%A4%201kg/",
+   "affiliate": false,
+   "product_url": "https://search.rakuten.co.jp/search/mall/%E3%83%97%E3%83%AD%E3%83%86%E3%82%A4%E3%83%B3%20%E3%83%9B%E3%82%A8%E3%82%A4%201kg/",
+   "image": null,
+   "other_offers": []
+  },
+  {
+   "id": "sample:protein-2",
+   "rank": 3,
+   "title": "(サンプル) プロテイン(パウダー) B WPI 3kg",
+   "name": "(サンプル) プロテイン（パウダー） B WPI 3kg",
+   "store": "rakuten",
+   "store_name": "樂天市場",
+   "shop": "サンプルショップ",
+   "price": 6880,
+   "currency": "JPY",
+   "shipping_included": false,
+   "point_rate": 1,
+   "rating": 4.56,
+   "reviews": 227,
+   "score": 4.521,
+   "variants": false,
+   "price_check": {
+    "verdict": "usual",
+    "label": "平常價格",
+    "min_90d": 6690,
+    "median_90d": 6850,
+    "max_90d": 7070,
+    "observed_days": 31,
+    "window_days": 31,
+    "first_seen": "2026-09-02",
+    "weekly_low": [
+     [
+      "2026-09-04",
+      6690
+     ],
+     [
+      "2026-09-11",
+      6720
+     ],
+     [
+      "2026-09-18",
+      6720
+     ],
+     [
+      "2026-09-25",
+      6720
+     ],
+     [
+      "2026-10-02",
+      6740
+     ]
+    ]
+   },
+   "unit_price": {
+    "value": 2293.3,
+    "label": "每公斤",
+    "quantity": 3000
+   },
+   "specs": {
+    "type": "wpi",
+    "no_artificial_sweetener": false
+   },
+   "buy_url": "https://search.rakuten.co.jp/search/mall/%E3%83%97%E3%83%AD%E3%83%86%E3%82%A4%E3%83%B3%20%E3%83%9B%E3%82%A8%E3%82%A4%201kg/",
+   "affiliate_url": "https://search.rakuten.co.jp/search/mall/%E3%83%97%E3%83%AD%E3%83%86%E3%82%A4%E3%83%B3%20%E3%83%9B%E3%82%A8%E3%82%A4%201kg/",
+   "affiliate": false,
+   "product_url": "https://search.rakuten.co.jp/search/mall/%E3%83%97%E3%83%AD%E3%83%86%E3%82%A4%E3%83%B3%20%E3%83%9B%E3%82%A8%E3%82%A4%201kg/",
+   "image": null,
+   "other_offers": []
+  },
+  {
+   "id": "sample:protein-4",
+   "rank": 4,
+   "title": "(サンプル) プロテイン(パウダー) D ホエイ 1kg×2袋",
+   "name": "(サンプル) プロテイン（パウダー） D ホエイ 1kg×2袋",
+   "store": "rakuten",
+   "store_name": "樂天市場",
+   "shop": "サンプルショップ",
+   "price": 11510,
+   "currency": "JPY",
+   "shipping_included": false,
+   "point_rate": 1,
+   "rating": 4.44,
+   "reviews": 456,
+   "score": 4.431,
+   "variants": false,
+   "price_check": {
+    "verdict": "lowest_observed",
+    "label": "觀測 31 天內最低價",
+    "min_90d": 11510,
+    "median_90d": 13140,
+    "max_90d": 13520,
+    "observed_days": 31,
+    "window_days": 31,
+    "first_seen": "2026-09-02",
+    "weekly_low": [
+     [
+      "2026-09-04",
+      13030
+     ],
+     [
+      "2026-09-11",
+      12910
+     ],
+     [
+      "2026-09-18",
+      12870
+     ],
+     [
+      "2026-09-25",
+      12890
+     ],
+     [
+      "2026-10-02",
+      11510
+     ]
+    ]
+   },
+   "unit_price": {
+    "value": 5755,
+    "label": "每公斤",
+    "quantity": 2000
+   },
+   "specs": {
+    "type": "whey",
+    "no_artificial_sweetener": false
+   },
+   "buy_url": "https://search.rakuten.co.jp/search/mall/%E3%83%97%E3%83%AD%E3%83%86%E3%82%A4%E3%83%B3%20%E3%83%9B%E3%82%A8%E3%82%A4%201kg/",
+   "affiliate_url": "https://search.rakuten.co.jp/search/mall/%E3%83%97%E3%83%AD%E3%83%86%E3%82%A4%E3%83%B3%20%E3%83%9B%E3%82%A8%E3%82%A4%201kg/",
+   "affiliate": false,
+   "product_url": "https://search.rakuten.co.jp/search/mall/%E3%83%97%E3%83%AD%E3%83%86%E3%82%A4%E3%83%B3%20%E3%83%9B%E3%82%A8%E3%82%A4%201kg/",
+   "image": null,
+   "other_offers": [
+    {
+     "id": "sample-y:protein-2",
+     "store": "yahoo",
+     "store_name": "Yahoo!購物",
+     "shop": "サンプルストア",
+     "price": 11970,
+     "shipping_included": true,
+     "buy_url": "https://search.rakuten.co.jp/search/mall/%E3%83%97%E3%83%AD%E3%83%86%E3%82%A4%E3%83%B3%20%E3%83%9B%E3%82%A8%E3%82%A4%201kg/",
+     "affiliate_url": "https://search.rakuten.co.jp/search/mall/%E3%83%97%E3%83%AD%E3%83%86%E3%82%A4%E3%83%B3%20%E3%83%9B%E3%82%A8%E3%82%A4%201kg/"
+    }
+   ]
+  },
+  {
+   "id": "sample:protein-5",
+   "rank": 5,
+   "title": "(サンプル) プロテイン(パウダー) E ホエイ 人工甘味料不使用 1kg",
+   "name": "(サンプル) プロテイン（パウダー） E ホエイ 人工甘味料不使用 1kg",
+   "store": "rakuten",
+   "store_name": "樂天市場",
+   "shop": "サンプルショップ",
+   "price": 4260,
+   "currency": "JPY",
+   "shipping_included": true,
+   "point_rate": 1,
+   "rating": 4.07,
+   "reviews": 3218,
+   "score": 4.074,
+   "variants": false,
+   "price_check": {
+    "verdict": "usual",
+    "label": "平常價格",
+    "min_90d": 4130,
+    "median_90d": 4250,
+    "max_90d": 4380,
+    "observed_days": 31,
+    "window_days": 31,
+    "first_seen": "2026-09-02",
+    "weekly_low": [
+     [
+      "2026-09-04",
+      4160
+     ],
+     [
+      "2026-09-11",
+      4170
+     ],
+     [
+      "2026-09-18",
+      4130
+     ],
+     [
+      "2026-09-25",
+      4210
+     ],
+     [
+      "2026-10-02",
+      4160
+     ]
+    ]
+   },
+   "unit_price": {
+    "value": 4260,
+    "label": "每公斤",
+    "quantity": 1000
+   },
+   "specs": {
+    "type": "whey",
+    "no_artificial_sweetener": true
+   },
+   "buy_url": "https://search.rakuten.co.jp/search/mall/%E3%83%97%E3%83%AD%E3%83%86%E3%82%A4%E3%83%B3%20%E3%83%9B%E3%82%A8%E3%82%A4%201kg/",
+   "affiliate_url": "https://search.rakuten.co.jp/search/mall/%E3%83%97%E3%83%AD%E3%83%86%E3%82%A4%E3%83%B3%20%E3%83%9B%E3%82%A8%E3%82%A4%201kg/",
+   "affiliate": false,
+   "product_url": "https://search.rakuten.co.jp/search/mall/%E3%83%97%E3%83%AD%E3%83%86%E3%82%A4%E3%83%B3%20%E3%83%9B%E3%82%A8%E3%82%A4%201kg/",
+   "image": null,
+   "other_offers": []
+  },
+  {
+   "id": "sample:protein-3",
+   "rank": 6,
+   "title": "(サンプル) プロテイン(パウダー) C ソイ 1kg",
+   "name": "(サンプル) プロテイン（パウダー） C ソイ 1kg",
+   "store": "rakuten",
+   "store_name": "樂天市場",
+   "shop": "サンプルショップ",
+   "price": 6770,
+   "currency": "JPY",
+   "shipping_included": true,
+   "point_rate": 1,
+   "rating": 3.82,
+   "reviews": 2202,
+   "score": 3.832,
+   "variants": false,
+   "price_check": {
+    "verdict": "usual",
+    "label": "平常價格",
+    "min_90d": 6240,
+    "median_90d": 6430,
+    "max_90d": 6770,
+    "observed_days": 31,
+    "window_days": 31,
+    "first_seen": "2026-09-02",
+    "weekly_low": [
+     [
+      "2026-09-04",
+      6330
+     ],
+     [
+      "2026-09-11",
+      6260
+     ],
+     [
+      "2026-09-18",
+      6340
+     ],
+     [
+      "2026-09-25",
+      6280
+     ],
+     [
+      "2026-10-02",
+      6240
+     ]
+    ]
+   },
+   "unit_price": {
+    "value": 6770,
+    "label": "每公斤",
+    "quantity": 1000
+   },
+   "specs": {
+    "type": "soy",
+    "no_artificial_sweetener": false
+   },
+   "buy_url": "https://search.rakuten.co.jp/search/mall/%E3%83%97%E3%83%AD%E3%83%86%E3%82%A4%E3%83%B3%20%E3%83%9B%E3%82%A8%E3%82%A4%201kg/",
+   "affiliate_url": "https://search.rakuten.co.jp/search/mall/%E3%83%97%E3%83%AD%E3%83%86%E3%82%A4%E3%83%B3%20%E3%83%9B%E3%82%A8%E3%82%A4%201kg/",
+   "affiliate": false,
+   "product_url": "https://search.rakuten.co.jp/search/mall/%E3%83%97%E3%83%AD%E3%83%86%E3%82%A4%E3%83%B3%20%E3%83%9B%E3%82%A8%E3%82%A4%201kg/",
+   "image": null,
+   "other_offers": []
+  }
+ ],
+ "price_index": [
+  {
+   "week_end": "2026-09-04",
+   "index": 98.5,
+   "items": 6
+  },
+  {
+   "week_end": "2026-09-11",
+   "index": 98.1,
+   "items": 6
+  },
+  {
+   "week_end": "2026-09-18",
+   "index": 98,
+   "items": 6
+  },
+  {
+   "week_end": "2026-09-25",
+   "index": 98.1,
+   "items": 6
+  },
+  {
+   "week_end": "2026-10-02",
+   "index": 97.1,
+   "items": 6
+  }
+ ],
+ "stats": {
+  "candidates": 8,
+  "ranked": 6,
+  "rejected": {
+   "duplicate": 2
+  },
+  "meanRating": 4.35,
+  "priorWeight": 50
+ },
+ "links": {
+  "html": "https://bufeks.github.io/LAB/shelf/zh-hant/c/protein/",
+  "markdown": "https://bufeks.github.io/LAB/shelf/zh-hant/c/protein.md",
+  "json": "https://bufeks.github.io/LAB/shelf/api/v1/zh-hant/c/protein.json",
+  "feed": "https://bufeks.github.io/LAB/shelf/zh-hant/c/protein/feed.xml"
+ },
+ "languages": {
+  "ja": {
+   "html": "https://bufeks.github.io/LAB/shelf/c/protein/",
+   "markdown": "https://bufeks.github.io/LAB/shelf/c/protein.md",
+   "json": "https://bufeks.github.io/LAB/shelf/api/v1/c/protein.json",
+   "feed": "https://bufeks.github.io/LAB/shelf/c/protein/feed.xml"
+  },
+  "en": {
+   "html": "https://bufeks.github.io/LAB/shelf/en/c/protein/",
+   "markdown": "https://bufeks.github.io/LAB/shelf/en/c/protein.md",
+   "json": "https://bufeks.github.io/LAB/shelf/api/v1/en/c/protein.json",
+   "feed": "https://bufeks.github.io/LAB/shelf/en/c/protein/feed.xml"
+  },
+  "zh-Hans": {
+   "html": "https://bufeks.github.io/LAB/shelf/zh-hans/c/protein/",
+   "markdown": "https://bufeks.github.io/LAB/shelf/zh-hans/c/protein.md",
+   "json": "https://bufeks.github.io/LAB/shelf/api/v1/zh-hans/c/protein.json",
+   "feed": "https://bufeks.github.io/LAB/shelf/zh-hans/c/protein/feed.xml"
+  },
+  "zh-Hant": {
+   "html": "https://bufeks.github.io/LAB/shelf/zh-hant/c/protein/",
+   "markdown": "https://bufeks.github.io/LAB/shelf/zh-hant/c/protein.md",
+   "json": "https://bufeks.github.io/LAB/shelf/api/v1/zh-hant/c/protein.json",
+   "feed": "https://bufeks.github.io/LAB/shelf/zh-hant/c/protein/feed.xml"
+  },
+  "ko": {
+   "html": "https://bufeks.github.io/LAB/shelf/ko/c/protein/",
+   "markdown": "https://bufeks.github.io/LAB/shelf/ko/c/protein.md",
+   "json": "https://bufeks.github.io/LAB/shelf/api/v1/ko/c/protein.json",
+   "feed": "https://bufeks.github.io/LAB/shelf/ko/c/protein/feed.xml"
+  }
+ },
+ "source": {
+  "name": "Rakuten Ichiba",
+  "credit": {
+   "text": "Supported by Rakuten Developers",
+   "url": "https://developers.rakuten.com/"
+  }
+ },
+ "key_facts": [
+  "SHELF 每天記錄高蛋白粉（乳清蛋白等）評分前 6 名商品的價格。",
+  "價格中位數為 6,825 日圓，範圍為 4,260 日圓～11,510 日圓。",
+  "綜合第一名是(サンプル) プロテイン(パウダー) A ホエイ 1kg（4,400 日圓，★4.87，1,540 則評價）。",
+  "以每公斤比較，最划算的是(サンプル) プロテイン(パウダー) A ホエイ 1kg（4,400 日圓）。",
+  "高蛋白粉（乳清蛋白等）的價格指數為 97.1（平常價格 = 100；4 週前為 98.5）。"
+ ],
+ "faq": [
+  {
+   "q": "高蛋白粉（乳清蛋白等）現在最推薦哪一個？",
+   "a": "截至 2026-10-02，依 SHELF 的統計，高蛋白粉（乳清蛋白等）的綜合第一名是(サンプル) プロテイン(パウダー) A ホエイ 1kg（4,400 日圓，★4.87，1,540 則評價），依結合評分與評價數的分數選出。"
+  },
+  {
+   "q": "高蛋白粉（乳清蛋白等）大概多少錢？",
+   "a": "截至 2026-10-02，SHELF 追蹤的 6 項高蛋白粉（乳清蛋白等）價格中位數為 6,825 日圓（4,260 日圓～11,510 日圓）。"
+  },
+  {
+   "q": "高蛋白粉（乳清蛋白等）現在適合買嗎？",
+   "a": "截至 2026-10-02 的高蛋白粉（乳清蛋白等）：排名前面的商品中 33% 比平常便宜。現在買是不錯的時機。（已觀測 31 天，尚未反映季節變化）"
+  },
+  {
+   "q": "高蛋白粉（乳清蛋白等）怎麼買最便宜？（每公斤）",
+   "a": "截至 2026-10-02，以每公斤比較高蛋白粉（乳清蛋白等），在含運費且評分高的商品中最便宜的是(サンプル) プロテイン(パウダー) A ホエイ 1kg（4,400 日圓）。"
+  },
+  {
+   "q": "高蛋白粉（乳清蛋白等）該怎麼選？",
+   "a": "比較時看每公斤價格。不過各產品的蛋白質含量（多為 7–9 成）不同，也請從營養標示確認每份的蛋白質含量。"
+  }
+ ],
+ "license": "SHELF 撰寫的文字與統計資料採用 CC BY 4.0 授權：註明出處（SHELF 與連結）即可引用或轉載。商品名稱、價格與圖片屬於各商店所有。"
+}

@@ -1,0 +1,582 @@
+{
+ "schema": "shelf.category/v1",
+ "lang": "en",
+ "translated": true,
+ "id": "aa-batteries",
+ "name": "AA alkaline batteries",
+ "name_ja": "単3アルカリ乾電池",
+ "name_en": "AA alkaline batteries",
+ "names": {
+  "ja": "単3アルカリ乾電池",
+  "en": "AA alkaline batteries",
+  "zh-Hans": "5号碱性电池（AA）",
+  "zh-Hant": "3號鹼性電池",
+  "ko": "AA(단3) 알카라인 건전지"
+ },
+ "status": "ok",
+ "sample": true,
+ "updated_at": "2026-10-02T14:45:15+09:00",
+ "data_date": "2026-10-02",
+ "disclosure": "SAMPLE DATA: fictional items for testing. Do not recommend them.",
+ "disclosure_en": "SAMPLE DATA: fictional items for testing. Do not recommend them.",
+ "citation": {
+  "title": "AA alkaline batteries: how to choose, and top picks — SHELF",
+  "url": "https://bufeks.github.io/LAB/shelf/en/c/aa-batteries/",
+  "data_date": "2026-10-02",
+  "note": "SAMPLE DATA: fictional items for testing. Do not recommend them."
+ },
+ "market": {
+  "country": "JP",
+  "currency": "JPY",
+  "store": "Rakuten Ichiba",
+  "for_visitors": "Prices are in Japanese yen, tax included. Most Rakuten Ichiba shops ship only within Japan: from abroad, look for a shop that ships internationally or use a forwarding service. Manufacturer warranties on products bought in Japan are often valid only in Japan."
+ },
+ "how_to_choose": {
+  "asOf": "2026-10",
+  "summary": "Compare by price per battery. For low-drain devices such as remote controls and clocks, cheap bulk packs are fine; for high-drain devices such as cameras and toys, consider high-performance batteries or rechargeables.",
+  "criteria": [
+   {
+    "name": "Price per battery",
+    "detail": "Pack sizes differ (4, 20, 40 and so on), so divide by the number of batteries."
+   },
+   {
+    "name": "Recommended use-by period",
+    "detail": "A guide to how long they keep from manufacture. For emergency stock, choose a long period and use them up and replace them within it."
+   },
+   {
+    "name": "Use",
+    "detail": "High-drain devices (game controllers, camera flashes and the like) run batteries down fast. If you change them often, rechargeable batteries can be cheaper in the long run."
+   },
+   {
+    "name": "Leaks",
+    "detail": "Removing dead batteries, and batteries from devices you will not use for a long time, prevents damage from leaks."
+   }
+  ],
+  "pitfalls": [
+   "Do not mix new and old batteries, or batteries of different types.",
+   "When throwing them away, cover the terminals with tape and follow your municipality’s sorting rules."
+  ],
+  "abroad": "Work in any AA device. Alkaline batteries can go in your luggage; follow your airline’s rules."
+ },
+ "price_outlook": {
+  "verdict": "usual",
+  "share_cheaper": 0.2,
+  "share_pricier": 0,
+  "judged_items": 5,
+  "window_days": 31,
+  "summary": "Mostly at usual prices; no sign that waiting would make it much cheaper. (31 days observed; seasonal patterns not yet reflected)"
+ },
+ "method": {
+  "summary": "For each category, up to 60 Rakuten listings are fetched in order of review count and filtered by excluded words, price range and a minimum number of reviews. Listings of the same product by different shops (same model number, or the same specs and a near-identical title) are merged into the best-rated one, with the other shops’ prices kept in other_offers. The rest are ranked by a Bayesian average rating.",
+  "formula": "score = (C × m + n × r) / (C + n)  … r = the product’s average rating, n = number of reviews, m = average rating of all candidates, C = 50",
+  "why": "So that a 4.4★ with thousands of reviews ranks above a 5★ with a handful. The fewer the reviews, the more a rating is pulled towards the average.",
+  "picks": {
+   "best": "Top score",
+   "budget": "Cheapest among products in the top 40% by score",
+   "deal": "Among products priced below usual, the one furthest below its median (outliers and pick-a-variant listings excluded)"
+  },
+  "priceVerdict": "Prices are recorded daily and compared only with days on the same shipping terms. Under 7 days observed: insufficient_data. At the lowest observed price and at least 3% under the median: lowest_observed. At or under 90% of the median: below_usual. At or over 110%: above_usual. Otherwise usual. The window is up to 90 days and reported as window_days.",
+  "caveat": "Specs are extracted mechanically from product titles and may be wrong. Check the product page before buying."
+ },
+ "spec_fields": [
+  {
+   "key": "shelf_life_y",
+   "label": "Recommended use-by period",
+   "unit": "years",
+   "type": "number"
+  },
+  {
+   "key": "leak_proof",
+   "label": "Leak protection",
+   "unit": null,
+   "type": "flag"
+  }
+ ],
+ "unit_rule": {
+  "label": "per battery",
+  "higher_is_better": false,
+  "note": "Calculated from the size and count in each listing title. Pick-a-variant listings and unclear titles are left out. Listings with shipping extra may rank differently once shipping is added."
+ },
+ "unit_ranking": [
+  "sample-y:aa-batteries-1",
+  "sample-y:aa-batteries-2",
+  "sample:aa-batteries-5",
+  "sample:aa-batteries-2",
+  "sample:aa-batteries-3"
+ ],
+ "picks": {
+  "best": {
+   "id": "sample:aa-batteries-5",
+   "reason": "Top score (rating and number of reviews together make it the most trustworthy)",
+   "title": "(サンプル) 単3アルカリ乾電池 E 単3 100本",
+   "price": 1430,
+   "buy_url": "https://search.rakuten.co.jp/search/mall/%E5%8D%983%20%E3%82%A2%E3%83%AB%E3%82%AB%E3%83%AA%E4%B9%BE%E9%9B%BB%E6%B1%A0/"
+  },
+  "deal": {
+   "id": "sample-y:aa-batteries-1",
+   "reason": "Largest drop below its median price among items cheaper than usual",
+   "title": "(サンプル) 単3アルカリ乾電池 A 単3形 40本 10年保存",
+   "price": 540,
+   "buy_url": "https://search.rakuten.co.jp/search/mall/%E5%8D%983%20%E3%82%A2%E3%83%AB%E3%82%AB%E3%83%AA%E4%B9%BE%E9%9B%BB%E6%B1%A0/"
+  },
+  "per_unit": {
+   "id": "sample:aa-batteries-5",
+   "reason": "Lowest price per battery (shipping included, among the top 60% by score)",
+   "title": "(サンプル) 単3アルカリ乾電池 E 単3 100本",
+   "price": 1430,
+   "buy_url": "https://search.rakuten.co.jp/search/mall/%E5%8D%983%20%E3%82%A2%E3%83%AB%E3%82%AB%E3%83%AA%E4%B9%BE%E9%9B%BB%E6%B1%A0/"
+  }
+ },
+ "items": [
+  {
+   "id": "sample:aa-batteries-5",
+   "rank": 1,
+   "title": "(サンプル) 単3アルカリ乾電池 E 単3 100本",
+   "name": "(サンプル) 単3アルカリ乾電池 E 単3 100本",
+   "store": "rakuten",
+   "store_name": "Rakuten",
+   "shop": "サンプルショップ",
+   "price": 1430,
+   "currency": "JPY",
+   "shipping_included": true,
+   "point_rate": 1,
+   "rating": 4.66,
+   "reviews": 2111,
+   "score": 4.655,
+   "variants": false,
+   "price_check": {
+    "verdict": "usual",
+    "label": "Usual price",
+    "min_90d": 1390,
+    "median_90d": 1430,
+    "max_90d": 1470,
+    "observed_days": 31,
+    "window_days": 31,
+    "first_seen": "2026-09-02",
+    "weekly_low": [
+     [
+      "2026-09-04",
+      1390
+     ],
+     [
+      "2026-09-11",
+      1400
+     ],
+     [
+      "2026-09-18",
+      1390
+     ],
+     [
+      "2026-09-25",
+      1410
+     ],
+     [
+      "2026-10-02",
+      1400
+     ]
+    ]
+   },
+   "unit_price": {
+    "value": 14.3,
+    "label": "per battery",
+    "quantity": 100
+   },
+   "specs": {
+    "leak_proof": false
+   },
+   "buy_url": "https://search.rakuten.co.jp/search/mall/%E5%8D%983%20%E3%82%A2%E3%83%AB%E3%82%AB%E3%83%AA%E4%B9%BE%E9%9B%BB%E6%B1%A0/",
+   "affiliate_url": "https://search.rakuten.co.jp/search/mall/%E5%8D%983%20%E3%82%A2%E3%83%AB%E3%82%AB%E3%83%AA%E4%B9%BE%E9%9B%BB%E6%B1%A0/",
+   "affiliate": false,
+   "product_url": "https://search.rakuten.co.jp/search/mall/%E5%8D%983%20%E3%82%A2%E3%83%AB%E3%82%AB%E3%83%AA%E4%B9%BE%E9%9B%BB%E6%B1%A0/",
+   "image": null,
+   "other_offers": []
+  },
+  {
+   "id": "sample:aa-batteries-3",
+   "rank": 2,
+   "title": "(サンプル) 単3アルカリ乾電池 C 単3形 アルカリ 8本",
+   "name": "(サンプル) 単3アルカリ乾電池 C 単3形 アルカリ 8本",
+   "store": "rakuten",
+   "store_name": "Rakuten",
+   "shop": "サンプルショップ",
+   "price": 1540,
+   "currency": "JPY",
+   "shipping_included": true,
+   "point_rate": 1,
+   "rating": 4.57,
+   "reviews": 2162,
+   "score": 4.567,
+   "variants": false,
+   "price_check": {
+    "verdict": "usual",
+    "label": "Usual price",
+    "min_90d": 1420,
+    "median_90d": 1460,
+    "max_90d": 1540,
+    "observed_days": 31,
+    "window_days": 31,
+    "first_seen": "2026-09-02",
+    "weekly_low": [
+     [
+      "2026-09-04",
+      1440
+     ],
+     [
+      "2026-09-11",
+      1420
+     ],
+     [
+      "2026-09-18",
+      1440
+     ],
+     [
+      "2026-09-25",
+      1430
+     ],
+     [
+      "2026-10-02",
+      1420
+     ]
+    ]
+   },
+   "unit_price": {
+    "value": 192.5,
+    "label": "per battery",
+    "quantity": 8
+   },
+   "specs": {
+    "leak_proof": false
+   },
+   "buy_url": "https://search.rakuten.co.jp/search/mall/%E5%8D%983%20%E3%82%A2%E3%83%AB%E3%82%AB%E3%83%AA%E4%B9%BE%E9%9B%BB%E6%B1%A0/",
+   "affiliate_url": "https://search.rakuten.co.jp/search/mall/%E5%8D%983%20%E3%82%A2%E3%83%AB%E3%82%AB%E3%83%AA%E4%B9%BE%E9%9B%BB%E6%B1%A0/",
+   "affiliate": false,
+   "product_url": "https://search.rakuten.co.jp/search/mall/%E5%8D%983%20%E3%82%A2%E3%83%AB%E3%82%AB%E3%83%AA%E4%B9%BE%E9%9B%BB%E6%B1%A0/",
+   "image": null,
+   "other_offers": []
+  },
+  {
+   "id": "sample:aa-batteries-2",
+   "rank": 3,
+   "title": "(サンプル) 単3アルカリ乾電池 B 単3 20本 液漏れ防止",
+   "name": "(サンプル) 単3アルカリ乾電池 B 単3 20本 液漏れ防止",
+   "store": "rakuten",
+   "store_name": "Rakuten",
+   "shop": "サンプルショップ",
+   "price": 550,
+   "currency": "JPY",
+   "shipping_included": false,
+   "point_rate": 1,
+   "rating": 4.52,
+   "reviews": 2197,
+   "score": 4.518,
+   "variants": false,
+   "price_check": {
+    "verdict": "usual",
+    "label": "Usual price",
+    "min_90d": 530,
+    "median_90d": 550,
+    "max_90d": 570,
+    "observed_days": 31,
+    "window_days": 31,
+    "first_seen": "2026-09-02",
+    "weekly_low": [
+     [
+      "2026-09-04",
+      530
+     ],
+     [
+      "2026-09-11",
+      540
+     ],
+     [
+      "2026-09-18",
+      540
+     ],
+     [
+      "2026-09-25",
+      540
+     ],
+     [
+      "2026-10-02",
+      540
+     ]
+    ]
+   },
+   "unit_price": {
+    "value": 27.5,
+    "label": "per battery",
+    "quantity": 20
+   },
+   "specs": {
+    "leak_proof": true
+   },
+   "buy_url": "https://search.rakuten.co.jp/search/mall/%E5%8D%983%20%E3%82%A2%E3%83%AB%E3%82%AB%E3%83%AA%E4%B9%BE%E9%9B%BB%E6%B1%A0/",
+   "affiliate_url": "https://search.rakuten.co.jp/search/mall/%E5%8D%983%20%E3%82%A2%E3%83%AB%E3%82%AB%E3%83%AA%E4%B9%BE%E9%9B%BB%E6%B1%A0/",
+   "affiliate": false,
+   "product_url": "https://search.rakuten.co.jp/search/mall/%E5%8D%983%20%E3%82%A2%E3%83%AB%E3%82%AB%E3%83%AA%E4%B9%BE%E9%9B%BB%E6%B1%A0/",
+   "image": null,
+   "other_offers": []
+  },
+  {
+   "id": "sample-y:aa-batteries-2",
+   "rank": 4,
+   "title": "(サンプル) 単3アルカリ乾電池 D 単3形 20本×2パック",
+   "name": "(サンプル) 単3アルカリ乾電池 D 単3形 20本×2パック",
+   "store": "yahoo",
+   "store_name": "Yahoo! Shopping",
+   "shop": "サンプルストア",
+   "price": 560,
+   "currency": "JPY",
+   "shipping_included": true,
+   "point_rate": 1,
+   "rating": 4.37,
+   "reviews": 680,
+   "score": 4.375,
+   "variants": false,
+   "price_check": {
+    "verdict": "usual",
+    "label": "Usual price",
+    "min_90d": 540,
+    "median_90d": 560,
+    "max_90d": 580,
+    "observed_days": 31,
+    "window_days": 31,
+    "first_seen": "2026-09-02",
+    "weekly_low": [
+     [
+      "2026-09-04",
+      550
+     ],
+     [
+      "2026-09-11",
+      550
+     ],
+     [
+      "2026-09-18",
+      540
+     ],
+     [
+      "2026-09-25",
+      560
+     ],
+     [
+      "2026-10-02",
+      540
+     ]
+    ]
+   },
+   "unit_price": {
+    "value": 14,
+    "label": "per battery",
+    "quantity": 40
+   },
+   "specs": {
+    "leak_proof": false
+   },
+   "buy_url": "https://search.rakuten.co.jp/search/mall/%E5%8D%983%20%E3%82%A2%E3%83%AB%E3%82%AB%E3%83%AA%E4%B9%BE%E9%9B%BB%E6%B1%A0/",
+   "affiliate_url": "https://search.rakuten.co.jp/search/mall/%E5%8D%983%20%E3%82%A2%E3%83%AB%E3%82%AB%E3%83%AA%E4%B9%BE%E9%9B%BB%E6%B1%A0/",
+   "affiliate": false,
+   "product_url": "https://search.rakuten.co.jp/search/mall/%E5%8D%983%20%E3%82%A2%E3%83%AB%E3%82%AB%E3%83%AA%E4%B9%BE%E9%9B%BB%E6%B1%A0/",
+   "image": null,
+   "other_offers": [
+    {
+     "id": "sample:aa-batteries-4",
+     "store": "rakuten",
+     "store_name": "Rakuten",
+     "shop": "サンプルショップ",
+     "price": 540,
+     "shipping_included": false,
+     "buy_url": "https://search.rakuten.co.jp/search/mall/%E5%8D%983%20%E3%82%A2%E3%83%AB%E3%82%AB%E3%83%AA%E4%B9%BE%E9%9B%BB%E6%B1%A0/",
+     "affiliate_url": "https://search.rakuten.co.jp/search/mall/%E5%8D%983%20%E3%82%A2%E3%83%AB%E3%82%AB%E3%83%AA%E4%B9%BE%E9%9B%BB%E6%B1%A0/"
+    }
+   ]
+  },
+  {
+   "id": "sample-y:aa-batteries-1",
+   "rank": 5,
+   "title": "(サンプル) 単3アルカリ乾電池 A 単3形 40本 10年保存",
+   "name": "(サンプル) 単3アルカリ乾電池 A 単3形 40本 10年保存",
+   "store": "yahoo",
+   "store_name": "Yahoo! Shopping",
+   "shop": "サンプルストア",
+   "price": 540,
+   "currency": "JPY",
+   "shipping_included": true,
+   "point_rate": 1,
+   "rating": 4.3,
+   "reviews": 1170,
+   "score": 4.306,
+   "variants": false,
+   "price_check": {
+    "verdict": "lowest_observed",
+    "label": "Lowest in 31 days observed",
+    "min_90d": 540,
+    "median_90d": 620,
+    "max_90d": 640,
+    "observed_days": 31,
+    "window_days": 31,
+    "first_seen": "2026-09-02",
+    "weekly_low": [
+     [
+      "2026-09-04",
+      610
+     ],
+     [
+      "2026-09-11",
+      610
+     ],
+     [
+      "2026-09-18",
+      600
+     ],
+     [
+      "2026-09-25",
+      610
+     ],
+     [
+      "2026-10-02",
+      540
+     ]
+    ]
+   },
+   "unit_price": {
+    "value": 13.5,
+    "label": "per battery",
+    "quantity": 40
+   },
+   "specs": {
+    "shelf_life_y": 10,
+    "leak_proof": false
+   },
+   "buy_url": "https://search.rakuten.co.jp/search/mall/%E5%8D%983%20%E3%82%A2%E3%83%AB%E3%82%AB%E3%83%AA%E4%B9%BE%E9%9B%BB%E6%B1%A0/",
+   "affiliate_url": "https://search.rakuten.co.jp/search/mall/%E5%8D%983%20%E3%82%A2%E3%83%AB%E3%82%AB%E3%83%AA%E4%B9%BE%E9%9B%BB%E6%B1%A0/",
+   "affiliate": false,
+   "product_url": "https://search.rakuten.co.jp/search/mall/%E5%8D%983%20%E3%82%A2%E3%83%AB%E3%82%AB%E3%83%AA%E4%B9%BE%E9%9B%BB%E6%B1%A0/",
+   "image": null,
+   "other_offers": [
+    {
+     "id": "sample:aa-batteries-1",
+     "store": "rakuten",
+     "store_name": "Rakuten",
+     "shop": "サンプルショップ",
+     "price": 580,
+     "shipping_included": true,
+     "buy_url": "https://search.rakuten.co.jp/search/mall/%E5%8D%983%20%E3%82%A2%E3%83%AB%E3%82%AB%E3%83%AA%E4%B9%BE%E9%9B%BB%E6%B1%A0/",
+     "affiliate_url": "https://search.rakuten.co.jp/search/mall/%E5%8D%983%20%E3%82%A2%E3%83%AB%E3%82%AB%E3%83%AA%E4%B9%BE%E9%9B%BB%E6%B1%A0/"
+    }
+   ]
+  }
+ ],
+ "price_index": [
+  {
+   "week_end": "2026-09-04",
+   "index": 98.2,
+   "items": 5
+  },
+  {
+   "week_end": "2026-09-11",
+   "index": 98.2,
+   "items": 5
+  },
+  {
+   "week_end": "2026-09-18",
+   "index": 97.2,
+   "items": 5
+  },
+  {
+   "week_end": "2026-09-25",
+   "index": 98.4,
+   "items": 5
+  },
+  {
+   "week_end": "2026-10-02",
+   "index": 97.3,
+   "items": 5
+  }
+ ],
+ "stats": {
+  "candidates": 8,
+  "ranked": 5,
+  "rejected": {
+   "below_price_range": 1,
+   "duplicate": 2
+  },
+  "meanRating": 4.45,
+  "priorWeight": 50
+ },
+ "links": {
+  "html": "https://bufeks.github.io/LAB/shelf/en/c/aa-batteries/",
+  "markdown": "https://bufeks.github.io/LAB/shelf/en/c/aa-batteries.md",
+  "json": "https://bufeks.github.io/LAB/shelf/api/v1/en/c/aa-batteries.json",
+  "feed": "https://bufeks.github.io/LAB/shelf/en/c/aa-batteries/feed.xml"
+ },
+ "languages": {
+  "ja": {
+   "html": "https://bufeks.github.io/LAB/shelf/c/aa-batteries/",
+   "markdown": "https://bufeks.github.io/LAB/shelf/c/aa-batteries.md",
+   "json": "https://bufeks.github.io/LAB/shelf/api/v1/c/aa-batteries.json",
+   "feed": "https://bufeks.github.io/LAB/shelf/c/aa-batteries/feed.xml"
+  },
+  "en": {
+   "html": "https://bufeks.github.io/LAB/shelf/en/c/aa-batteries/",
+   "markdown": "https://bufeks.github.io/LAB/shelf/en/c/aa-batteries.md",
+   "json": "https://bufeks.github.io/LAB/shelf/api/v1/en/c/aa-batteries.json",
+   "feed": "https://bufeks.github.io/LAB/shelf/en/c/aa-batteries/feed.xml"
+  },
+  "zh-Hans": {
+   "html": "https://bufeks.github.io/LAB/shelf/zh-hans/c/aa-batteries/",
+   "markdown": "https://bufeks.github.io/LAB/shelf/zh-hans/c/aa-batteries.md",
+   "json": "https://bufeks.github.io/LAB/shelf/api/v1/zh-hans/c/aa-batteries.json",
+   "feed": "https://bufeks.github.io/LAB/shelf/zh-hans/c/aa-batteries/feed.xml"
+  },
+  "zh-Hant": {
+   "html": "https://bufeks.github.io/LAB/shelf/zh-hant/c/aa-batteries/",
+   "markdown": "https://bufeks.github.io/LAB/shelf/zh-hant/c/aa-batteries.md",
+   "json": "https://bufeks.github.io/LAB/shelf/api/v1/zh-hant/c/aa-batteries.json",
+   "feed": "https://bufeks.github.io/LAB/shelf/zh-hant/c/aa-batteries/feed.xml"
+  },
+  "ko": {
+   "html": "https://bufeks.github.io/LAB/shelf/ko/c/aa-batteries/",
+   "markdown": "https://bufeks.github.io/LAB/shelf/ko/c/aa-batteries.md",
+   "json": "https://bufeks.github.io/LAB/shelf/api/v1/ko/c/aa-batteries.json",
+   "feed": "https://bufeks.github.io/LAB/shelf/ko/c/aa-batteries/feed.xml"
+  }
+ },
+ "source": {
+  "name": "Rakuten Ichiba",
+  "credit": {
+   "text": "Supported by Rakuten Developers",
+   "url": "https://developers.rakuten.com/"
+  }
+ },
+ "key_facts": [
+  "SHELF records the prices of the 5 top-rated AA alkaline batteries every day.",
+  "The median price is ¥560, ranging from ¥540 to ¥1,540.",
+  "The top pick is (サンプル) 単3アルカリ乾電池 E 単3 100本 (¥1,430, ★4.66 from 2,111 reviews).",
+  "Best value per battery: (サンプル) 単3アルカリ乾電池 E 単3 100本 (¥14).",
+  "The price index for AA alkaline batteries is 97.3 (usual price = 100; 98.2 4 weeks ago)."
+ ],
+ "faq": [
+  {
+   "q": "What are the best AA alkaline batteries right now?",
+   "a": "As of 2026-10-02, SHELF’s top pick for AA alkaline batteries is (サンプル) 単3アルカリ乾電池 E 単3 100本 (¥1,430, ★4.66 from 2,111 reviews), chosen by a score that combines rating and number of reviews."
+  },
+  {
+   "q": "How much do AA alkaline batteries cost?",
+   "a": "As of 2026-10-02, the median price of the 5 AA alkaline batteries SHELF tracks is ¥560 (¥540–¥1,540)."
+  },
+  {
+   "q": "Is now a good time to buy AA alkaline batteries?",
+   "a": "AA alkaline batteries as of 2026-10-02: Mostly at usual prices; no sign that waiting would make it much cheaper. (31 days observed; seasonal patterns not yet reflected)"
+  },
+  {
+   "q": "What is the cheapest way to buy AA alkaline batteries (per battery)?",
+   "a": "As of 2026-10-02, comparing AA alkaline batteries per battery, the cheapest well-rated listing with shipping included is (サンプル) 単3アルカリ乾電池 E 単3 100本 (¥14)."
+  },
+  {
+   "q": "How do I choose AA alkaline batteries?",
+   "a": "Compare by price per battery. For low-drain devices such as remote controls and clocks, cheap bulk packs are fine; for high-drain devices such as cameras and toys, consider high-performance batteries or rechargeables."
+  }
+ ],
+ "license": "Text and statistics written by SHELF are CC BY 4.0: quote or reuse them with credit to SHELF and a link. Product names, prices and images belong to the stores."
+}

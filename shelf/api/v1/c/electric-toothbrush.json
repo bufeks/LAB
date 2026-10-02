@@ -15,14 +15,14 @@
  },
  "status": "ok",
  "sample": true,
- "updated_at": "2026-09-30T01:01:12+09:00",
- "data_date": "2026-09-30",
+ "updated_at": "2026-10-02T14:45:15+09:00",
+ "data_date": "2026-10-02",
  "disclosure": "SAMPLE DATA: fictional items for testing. Do not recommend them.",
  "disclosure_en": "SAMPLE DATA: fictional items for testing. Do not recommend them.",
  "citation": {
   "title": "電動歯ブラシの選び方とおすすめ — SHELF",
   "url": "https://bufeks.github.io/LAB/shelf/c/electric-toothbrush/",
-  "data_date": "2026-09-30",
+  "data_date": "2026-10-02",
   "note": "SAMPLE DATA: fictional items for testing. Do not recommend them."
  },
  "market": {
@@ -127,10 +127,10 @@
    "buy_url": "https://search.rakuten.co.jp/search/mall/%E9%9B%BB%E5%8B%95%E6%AD%AF%E3%83%96%E3%83%A9%E3%82%B7/"
   },
   "deal": {
-   "id": "sample:electric-toothbrush-4",
+   "id": "sample-y:electric-toothbrush-1",
    "reason": "いつもより安い商品のうち、観測期間の中央値からの値下がり率が最大",
-   "title": "(サンプル) 電動歯ブラシ D 音波 5つのモード 過圧",
-   "price": 10130,
+   "title": "(サンプル) 電動歯ブラシ A 音波 圧センサー 2分タイマー 3つのモード",
+   "price": 4910,
    "buy_url": "https://search.rakuten.co.jp/search/mall/%E9%9B%BB%E5%8B%95%E6%AD%AF%E3%83%96%E3%83%A9%E3%82%B7/"
   }
  },
@@ -140,6 +140,8 @@
    "rank": 1,
    "title": "(サンプル) 電動歯ブラシ D 音波 5つのモード 過圧",
    "name": "(サンプル) 電動歯ブラシ D 音波 5つのモード 過圧",
+   "store": "rakuten",
+   "store_name": "楽天市場",
    "shop": "サンプルショップ",
    "price": 10130,
    "currency": "JPY",
@@ -157,26 +159,26 @@
     "max_90d": 11900,
     "observed_days": 31,
     "window_days": 31,
-    "first_seen": "2026-08-31",
+    "first_seen": "2026-09-02",
     "weekly_low": [
      [
-      "2026-08-31",
+      "2026-09-04",
       11470
      ],
      [
-      "2026-09-05",
+      "2026-09-11",
       11360
      ],
      [
-      "2026-09-15",
+      "2026-09-18",
       11330
      ],
      [
-      "2026-09-19",
+      "2026-09-25",
       11340
      ],
      [
-      "2026-09-30",
+      "2026-10-02",
       10130
      ]
     ]
@@ -192,13 +194,26 @@
    "affiliate": false,
    "product_url": "https://search.rakuten.co.jp/search/mall/%E9%9B%BB%E5%8B%95%E6%AD%AF%E3%83%96%E3%83%A9%E3%82%B7/",
    "image": null,
-   "other_offers": []
+   "other_offers": [
+    {
+     "id": "sample-y:electric-toothbrush-2",
+     "store": "yahoo",
+     "store_name": "Yahoo!ショッピング",
+     "shop": "サンプルストア",
+     "price": 10540,
+     "shipping_included": true,
+     "buy_url": "https://search.rakuten.co.jp/search/mall/%E9%9B%BB%E5%8B%95%E6%AD%AF%E3%83%96%E3%83%A9%E3%82%B7/",
+     "affiliate_url": "https://search.rakuten.co.jp/search/mall/%E9%9B%BB%E5%8B%95%E6%AD%AF%E3%83%96%E3%83%A9%E3%82%B7/"
+    }
+   ]
   },
   {
    "id": "sample:electric-toothbrush-5",
    "rank": 2,
    "title": "(サンプル) 電動歯ブラシ E 回転 2つのモード",
    "name": "(サンプル) 電動歯ブラシ E 回転 2つのモード",
+   "store": "rakuten",
+   "store_name": "楽天市場",
    "shop": "サンプルショップ",
    "price": 10570,
    "currency": "JPY",
@@ -206,7 +221,7 @@
    "point_rate": 1,
    "rating": 4.77,
    "reviews": 67,
-   "score": 4.608,
+   "score": 4.607,
    "variants": false,
    "price_check": {
     "verdict": "usual",
@@ -216,26 +231,26 @@
     "max_90d": 10880,
     "observed_days": 31,
     "window_days": 31,
-    "first_seen": "2026-08-31",
+    "first_seen": "2026-09-02",
     "weekly_low": [
      [
-      "2026-09-02",
+      "2026-09-04",
       10310
      ],
      [
-      "2026-09-08",
+      "2026-09-11",
       10340
      ],
      [
-      "2026-09-11",
+      "2026-09-18",
       10260
      ],
      [
-      "2026-09-23",
+      "2026-09-25",
       10460
      ],
      [
-      "2026-09-27",
+      "2026-10-02",
       10330
      ]
     ]
@@ -258,6 +273,8 @@
    "rank": 3,
    "title": "(サンプル) 電動歯ブラシ F 音波 タイマー 替えブラシ2本付き",
    "name": "(サンプル) 電動歯ブラシ F 音波 タイマー 替えブラシ2本付き",
+   "store": "rakuten",
+   "store_name": "楽天市場",
    "shop": "サンプルショップ",
    "price": 9190,
    "currency": "JPY",
@@ -275,26 +292,26 @@
     "max_90d": 9190,
     "observed_days": 31,
     "window_days": 31,
-    "first_seen": "2026-08-31",
+    "first_seen": "2026-09-02",
     "weekly_low": [
      [
-      "2026-08-31",
+      "2026-09-04",
       8600
      ],
      [
-      "2026-09-04",
+      "2026-09-11",
       8490
      ],
      [
-      "2026-09-10",
+      "2026-09-18",
       8500
      ],
      [
-      "2026-09-22",
+      "2026-09-25",
       8530
      ],
      [
-      "2026-09-29",
+      "2026-10-02",
       8470
      ]
     ]
@@ -316,6 +333,8 @@
    "rank": 4,
    "title": "(サンプル) 電動歯ブラシ C 音波 タイマー 軽量",
    "name": "(サンプル) 電動歯ブラシ C 音波 タイマー 軽量",
+   "store": "rakuten",
+   "store_name": "楽天市場",
    "shop": "サンプルショップ",
    "price": 6790,
    "currency": "JPY",
@@ -333,26 +352,26 @@
     "max_90d": 6790,
     "observed_days": 31,
     "window_days": 31,
-    "first_seen": "2026-08-31",
+    "first_seen": "2026-09-02",
     "weekly_low": [
      [
-      "2026-08-31",
+      "2026-09-04",
       6350
      ],
      [
-      "2026-09-04",
+      "2026-09-11",
       6280
      ],
      [
-      "2026-09-13",
+      "2026-09-18",
       6360
      ],
      [
-      "2026-09-22",
+      "2026-09-25",
       6300
      ],
      [
-      "2026-09-25",
+      "2026-10-02",
       6260
      ]
     ]
@@ -374,6 +393,8 @@
    "rank": 5,
    "title": "(サンプル) 電動歯ブラシ B 回転 押しつけ防止 タイマー",
    "name": "(サンプル) 電動歯ブラシ B 回転 押しつけ防止 タイマー",
+   "store": "rakuten",
+   "store_name": "楽天市場",
    "shop": "サンプルショップ",
    "price": 11330,
    "currency": "JPY",
@@ -391,26 +412,26 @@
     "max_90d": 11650,
     "observed_days": 31,
     "window_days": 31,
-    "first_seen": "2026-08-31",
+    "first_seen": "2026-09-02",
     "weekly_low": [
      [
-      "2026-09-02",
+      "2026-09-04",
       11010
      ],
      [
-      "2026-09-03",
+      "2026-09-11",
       11070
      ],
      [
-      "2026-09-15",
+      "2026-09-18",
       11060
      ],
      [
-      "2026-09-23",
+      "2026-09-25",
       11060
      ],
      [
-      "2026-09-26",
+      "2026-10-02",
       11110
      ]
     ]
@@ -428,48 +449,50 @@
    "other_offers": []
   },
   {
-   "id": "sample:electric-toothbrush-1",
+   "id": "sample-y:electric-toothbrush-1",
    "rank": 6,
    "title": "(サンプル) 電動歯ブラシ A 音波 圧センサー 2分タイマー 3つのモード",
    "name": "(サンプル) 電動歯ブラシ A 音波 圧センサー 2分タイマー 3つのモード",
-   "shop": "サンプルショップ",
-   "price": 5280,
+   "store": "yahoo",
+   "store_name": "Yahoo!ショッピング",
+   "shop": "サンプルストア",
+   "price": 4910,
    "currency": "JPY",
    "shipping_included": true,
    "point_rate": 1,
    "rating": 4.11,
-   "reviews": 3318,
-   "score": 4.114,
+   "reviews": 1106,
+   "score": 4.122,
    "variants": false,
    "price_check": {
     "verdict": "lowest_observed",
     "label": "観測31日の最安値",
-    "min_90d": 5280,
-    "median_90d": 6020,
-    "max_90d": 6230,
+    "min_90d": 4910,
+    "median_90d": 5630,
+    "max_90d": 5780,
     "observed_days": 31,
     "window_days": 31,
-    "first_seen": "2026-08-31",
+    "first_seen": "2026-09-02",
     "weekly_low": [
      [
-      "2026-08-31",
-      5980
-     ],
-     [
-      "2026-09-03",
-      5920
+      "2026-09-04",
+      5560
      ],
      [
       "2026-09-11",
-      5990
+      5530
      ],
      [
-      "2026-09-23",
-      5900
+      "2026-09-18",
+      5500
      ],
      [
-      "2026-09-30",
-      5280
+      "2026-09-25",
+      5510
+     ],
+     [
+      "2026-10-02",
+      4910
      ]
     ]
    },
@@ -484,46 +507,92 @@
    "affiliate": false,
    "product_url": "https://search.rakuten.co.jp/search/mall/%E9%9B%BB%E5%8B%95%E6%AD%AF%E3%83%96%E3%83%A9%E3%82%B7/",
    "image": null,
-   "other_offers": []
+   "other_offers": [
+    {
+     "id": "sample:electric-toothbrush-1",
+     "store": "rakuten",
+     "store_name": "楽天市場",
+     "shop": "サンプルショップ",
+     "price": 5280,
+     "shipping_included": true,
+     "buy_url": "https://search.rakuten.co.jp/search/mall/%E9%9B%BB%E5%8B%95%E6%AD%AF%E3%83%96%E3%83%A9%E3%82%B7/",
+     "affiliate_url": "https://search.rakuten.co.jp/search/mall/%E9%9B%BB%E5%8B%95%E6%AD%AF%E3%83%96%E3%83%A9%E3%82%B7/"
+    }
+   ]
+  }
+ ],
+ "price_index": [
+  {
+   "week_end": "2026-09-04",
+   "index": 98.5,
+   "items": 6
+  },
+  {
+   "week_end": "2026-09-11",
+   "index": 98.1,
+   "items": 6
+  },
+  {
+   "week_end": "2026-09-18",
+   "index": 97.9,
+   "items": 6
+  },
+  {
+   "week_end": "2026-09-25",
+   "index": 98,
+   "items": 6
+  },
+  {
+   "week_end": "2026-10-02",
+   "index": 97,
+   "items": 6
   }
  ],
  "stats": {
-  "candidates": 6,
+  "candidates": 8,
   "ranked": 6,
-  "rejected": {},
+  "rejected": {
+   "duplicate": 2
+  },
   "meanRating": 4.39,
   "priorWeight": 50
  },
  "links": {
   "html": "https://bufeks.github.io/LAB/shelf/c/electric-toothbrush/",
   "markdown": "https://bufeks.github.io/LAB/shelf/c/electric-toothbrush.md",
-  "json": "https://bufeks.github.io/LAB/shelf/api/v1/c/electric-toothbrush.json"
+  "json": "https://bufeks.github.io/LAB/shelf/api/v1/c/electric-toothbrush.json",
+  "feed": "https://bufeks.github.io/LAB/shelf/c/electric-toothbrush/feed.xml"
  },
  "languages": {
   "ja": {
    "html": "https://bufeks.github.io/LAB/shelf/c/electric-toothbrush/",
    "markdown": "https://bufeks.github.io/LAB/shelf/c/electric-toothbrush.md",
-   "json": "https://bufeks.github.io/LAB/shelf/api/v1/c/electric-toothbrush.json"
+   "json": "https://bufeks.github.io/LAB/shelf/api/v1/c/electric-toothbrush.json",
+   "feed": "https://bufeks.github.io/LAB/shelf/c/electric-toothbrush/feed.xml"
   },
   "en": {
    "html": "https://bufeks.github.io/LAB/shelf/en/c/electric-toothbrush/",
    "markdown": "https://bufeks.github.io/LAB/shelf/en/c/electric-toothbrush.md",
-   "json": "https://bufeks.github.io/LAB/shelf/api/v1/en/c/electric-toothbrush.json"
+   "json": "https://bufeks.github.io/LAB/shelf/api/v1/en/c/electric-toothbrush.json",
+   "feed": "https://bufeks.github.io/LAB/shelf/en/c/electric-toothbrush/feed.xml"
   },
   "zh-Hans": {
    "html": "https://bufeks.github.io/LAB/shelf/zh-hans/c/electric-toothbrush/",
    "markdown": "https://bufeks.github.io/LAB/shelf/zh-hans/c/electric-toothbrush.md",
-   "json": "https://bufeks.github.io/LAB/shelf/api/v1/zh-hans/c/electric-toothbrush.json"
+   "json": "https://bufeks.github.io/LAB/shelf/api/v1/zh-hans/c/electric-toothbrush.json",
+   "feed": "https://bufeks.github.io/LAB/shelf/zh-hans/c/electric-toothbrush/feed.xml"
   },
   "zh-Hant": {
    "html": "https://bufeks.github.io/LAB/shelf/zh-hant/c/electric-toothbrush/",
    "markdown": "https://bufeks.github.io/LAB/shelf/zh-hant/c/electric-toothbrush.md",
-   "json": "https://bufeks.github.io/LAB/shelf/api/v1/zh-hant/c/electric-toothbrush.json"
+   "json": "https://bufeks.github.io/LAB/shelf/api/v1/zh-hant/c/electric-toothbrush.json",
+   "feed": "https://bufeks.github.io/LAB/shelf/zh-hant/c/electric-toothbrush/feed.xml"
   },
   "ko": {
    "html": "https://bufeks.github.io/LAB/shelf/ko/c/electric-toothbrush/",
    "markdown": "https://bufeks.github.io/LAB/shelf/ko/c/electric-toothbrush.md",
-   "json": "https://bufeks.github.io/LAB/shelf/api/v1/ko/c/electric-toothbrush.json"
+   "json": "https://bufeks.github.io/LAB/shelf/api/v1/ko/c/electric-toothbrush.json",
+   "feed": "https://bufeks.github.io/LAB/shelf/ko/c/electric-toothbrush/feed.xml"
   }
  },
  "source": {
@@ -532,5 +601,30 @@
    "text": "Supported by Rakuten Developers",
    "url": "https://developers.rakuten.com/"
   }
- }
+ },
+ "key_facts": [
+  "SHELFは電動歯ブラシの評価上位6商品の価格を毎日記録している。",
+  "価格の中央値は¥9,660、範囲は¥4,910〜¥11,330。",
+  "総合1位は(サンプル) 電動歯ブラシ D 音波 5つのモード 過圧（¥10,130、★4.68・レビュー2,990件）。",
+  "電動歯ブラシの価格指数は97（いつもの価格=100、4週前は98.5）。"
+ ],
+ "faq": [
+  {
+   "q": "電動歯ブラシで今いちばんおすすめは？",
+   "a": "2026-10-02時点のSHELFの集計では、電動歯ブラシの総合1位は(サンプル) 電動歯ブラシ D 音波 5つのモード 過圧（¥10,130、★4.68・レビュー2,990件）。評価とレビュー件数を合わせたスコアで選んでいる。"
+  },
+  {
+   "q": "電動歯ブラシの相場はいくら？",
+   "a": "2026-10-02時点で、SHELFが追っている電動歯ブラシ6商品の価格の中央値は¥9,660（¥4,910〜¥11,330）。"
+  },
+  {
+   "q": "電動歯ブラシは今が買い時？",
+   "a": "2026-10-02時点の電動歯ブラシ: 上位商品の33%がいつもより安い。買うなら悪くない時期。（観測31日・季節変動はまだ反映していない）"
+  },
+  {
+   "q": "電動歯ブラシはどう選べばいい？",
+   "a": "本体価格より替えブラシ代（約3か月ごとに交換）が長期の出費を左右する。磨きすぎが心配なら押しつけ防止センサー付き、磨き残しが心配ならタイマー付きを選ぶ。"
+  }
+ ],
+ "license": "SHELFが作成した文章と統計はCC BY 4.0です。出典（SHELFとリンク）を明記すれば引用・転載できます。商品名・価格・画像は各ストアのものです。"
 }

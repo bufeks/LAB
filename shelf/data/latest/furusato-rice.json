@@ -1,0 +1,392 @@
+{
+ "categoryId": "furusato-rice",
+ "date": "2026-10-02",
+ "fetchedAt": "2026-10-02T14:45:15+09:00",
+ "items": [
+  {
+   "id": "sample:furusato-rice-2",
+   "source": "rakuten",
+   "name": "(サンプル) ふるさと納税：米 B ななつぼし 10kg (5kg×2袋)",
+   "caption": "",
+   "shop": "サンプルショップ",
+   "price": 11540,
+   "shippingIncluded": false,
+   "pointRate": 1,
+   "rating": 4.62,
+   "reviews": 1043,
+   "productUrl": "https://search.rakuten.co.jp/search/mall/%E3%81%B5%E3%82%8B%E3%81%95%E3%81%A8%E7%B4%8D%E7%A8%8E%20%E7%B1%B3%2010kg/",
+   "buyUrl": "https://search.rakuten.co.jp/search/mall/%E3%81%B5%E3%82%8B%E3%81%95%E3%81%A8%E7%B4%8D%E7%A8%8E%20%E7%B1%B3%2010kg/",
+   "affiliate": false,
+   "image": null,
+   "available": true,
+   "title": "(サンプル) ふるさと納税:米 B ななつぼし 10kg (5kg×2袋)",
+   "variants": false,
+   "score": 4.613,
+   "facets": {
+    "musenmai": false,
+    "subscription": false
+   },
+   "claimed": null,
+   "unit": {
+    "quantity": 10000,
+    "value": 8.67
+   },
+   "otherOffers": [],
+   "rank": 1,
+   "priceStats": {
+    "points": 31,
+    "windowDays": 31,
+    "firstSeen": "2026-09-02",
+    "min90": 11220,
+    "median90": 11490,
+    "max90": 11860,
+    "verdict": "usual"
+   },
+   "priceWeekly": [
+    [
+     "2026-09-04",
+     11220
+    ],
+    [
+     "2026-09-11",
+     11270
+    ],
+    [
+     "2026-09-18",
+     11270
+    ],
+    [
+     "2026-09-25",
+     11270
+    ],
+    [
+     "2026-10-02",
+     11310
+    ]
+   ]
+  },
+  {
+   "id": "sample:furusato-rice-6",
+   "source": "rakuten",
+   "name": "(サンプル) ふるさと納税：米 F ブランド米 つや姫 5kg",
+   "caption": "",
+   "shop": "サンプルショップ",
+   "price": 17920,
+   "shippingIncluded": false,
+   "pointRate": 1,
+   "rating": 4.55,
+   "reviews": 567,
+   "productUrl": "https://search.rakuten.co.jp/search/mall/%E3%81%B5%E3%82%8B%E3%81%95%E3%81%A8%E7%B4%8D%E7%A8%8E%20%E7%B1%B3%2010kg/",
+   "buyUrl": "https://search.rakuten.co.jp/search/mall/%E3%81%B5%E3%82%8B%E3%81%95%E3%81%A8%E7%B4%8D%E7%A8%8E%20%E7%B1%B3%2010kg/",
+   "affiliate": false,
+   "image": null,
+   "available": true,
+   "title": "(サンプル) ふるさと納税:米 F ブランド米 つや姫 5kg",
+   "variants": false,
+   "score": 4.544,
+   "facets": {
+    "musenmai": false,
+    "subscription": false
+   },
+   "claimed": null,
+   "unit": {
+    "quantity": 5000,
+    "value": 2.79
+   },
+   "otherOffers": [],
+   "rank": 2,
+   "priceStats": {
+    "points": 31,
+    "windowDays": 31,
+    "firstSeen": "2026-09-02",
+    "min90": 16520,
+    "median90": 17020,
+    "max90": 17920,
+    "verdict": "usual"
+   },
+   "priceWeekly": [
+    [
+     "2026-09-04",
+     16760
+    ],
+    [
+     "2026-09-11",
+     16560
+    ],
+    [
+     "2026-09-18",
+     16570
+    ],
+    [
+     "2026-09-25",
+     16640
+    ],
+    [
+     "2026-10-02",
+     16520
+    ]
+   ]
+  },
+  {
+   "id": "sample:furusato-rice-5",
+   "source": "rakuten",
+   "name": "(サンプル) ふるさと納税：米 E ひとめぼれ 5kg×3袋 15kg",
+   "caption": "",
+   "shop": "サンプルショップ",
+   "price": 24680,
+   "shippingIncluded": true,
+   "pointRate": 1,
+   "rating": 4.51,
+   "reviews": 1469,
+   "productUrl": "https://search.rakuten.co.jp/search/mall/%E3%81%B5%E3%82%8B%E3%81%95%E3%81%A8%E7%B4%8D%E7%A8%8E%20%E7%B1%B3%2010kg/",
+   "buyUrl": "https://search.rakuten.co.jp/search/mall/%E3%81%B5%E3%82%8B%E3%81%95%E3%81%A8%E7%B4%8D%E7%A8%8E%20%E7%B1%B3%2010kg/",
+   "affiliate": false,
+   "image": null,
+   "available": true,
+   "title": "(サンプル) ふるさと納税:米 E ひとめぼれ 5kg×3袋 15kg",
+   "variants": false,
+   "score": 4.509,
+   "facets": {
+    "musenmai": false,
+    "subscription": false
+   },
+   "claimed": null,
+   "unit": {
+    "quantity": 15000,
+    "value": 6.08
+   },
+   "otherOffers": [],
+   "rank": 3,
+   "priceStats": {
+    "points": 31,
+    "windowDays": 31,
+    "firstSeen": "2026-09-02",
+    "min90": 23950,
+    "median90": 24610,
+    "max90": 25400,
+    "verdict": "usual"
+   },
+   "priceWeekly": [
+    [
+     "2026-09-04",
+     24070
+    ],
+    [
+     "2026-09-11",
+     24140
+    ],
+    [
+     "2026-09-18",
+     23950
+    ],
+    [
+     "2026-09-25",
+     24420
+    ],
+    [
+     "2026-10-02",
+     24110
+    ]
+   ]
+  },
+  {
+   "id": "sample:furusato-rice-4",
+   "source": "rakuten",
+   "name": "(サンプル) ふるさと納税：米 D 無洗米 10kg",
+   "caption": "",
+   "shop": "サンプルショップ",
+   "price": 33640,
+   "shippingIncluded": false,
+   "pointRate": 1,
+   "rating": 4.47,
+   "reviews": 3556,
+   "productUrl": "https://search.rakuten.co.jp/search/mall/%E3%81%B5%E3%82%8B%E3%81%95%E3%81%A8%E7%B4%8D%E7%A8%8E%20%E7%B1%B3%2010kg/",
+   "buyUrl": "https://search.rakuten.co.jp/search/mall/%E3%81%B5%E3%82%8B%E3%81%95%E3%81%A8%E7%B4%8D%E7%A8%8E%20%E7%B1%B3%2010kg/",
+   "affiliate": false,
+   "image": null,
+   "available": true,
+   "title": "(サンプル) ふるさと納税:米 D 無洗米 10kg",
+   "variants": false,
+   "score": 4.47,
+   "facets": {
+    "musenmai": true,
+    "subscription": false
+   },
+   "claimed": null,
+   "unit": {
+    "quantity": 10000,
+    "value": 2.97
+   },
+   "otherOffers": [],
+   "rank": 4,
+   "priceStats": {
+    "points": 31,
+    "windowDays": 31,
+    "firstSeen": "2026-09-02",
+    "min90": 33640,
+    "median90": 38400,
+    "max90": 39500,
+    "verdict": "lowest_observed"
+   },
+   "priceWeekly": [
+    [
+     "2026-09-04",
+     38090
+    ],
+    [
+     "2026-09-11",
+     37730
+    ],
+    [
+     "2026-09-18",
+     37620
+    ],
+    [
+     "2026-09-25",
+     37660
+    ],
+    [
+     "2026-10-02",
+     33640
+    ]
+   ]
+  },
+  {
+   "id": "sample:furusato-rice-1",
+   "source": "rakuten",
+   "name": "(サンプル) ふるさと納税：米 A コシヒカリ 15kg 令和7年産",
+   "caption": "",
+   "shop": "サンプルショップ",
+   "price": 32460,
+   "shippingIncluded": true,
+   "pointRate": 1,
+   "rating": 4.45,
+   "reviews": 387,
+   "productUrl": "https://search.rakuten.co.jp/search/mall/%E3%81%B5%E3%82%8B%E3%81%95%E3%81%A8%E7%B4%8D%E7%A8%8E%20%E7%B1%B3%2010kg/",
+   "buyUrl": "https://search.rakuten.co.jp/search/mall/%E3%81%B5%E3%82%8B%E3%81%95%E3%81%A8%E7%B4%8D%E7%A8%8E%20%E7%B1%B3%2010kg/",
+   "affiliate": false,
+   "image": null,
+   "available": true,
+   "title": "(サンプル) ふるさと納税:米 A コシヒカリ 15kg 令和7年産",
+   "variants": false,
+   "score": 4.453,
+   "facets": {
+    "crop_year": 7,
+    "musenmai": false,
+    "subscription": false
+   },
+   "claimed": null,
+   "unit": {
+    "quantity": 15000,
+    "value": 4.62
+   },
+   "otherOffers": [],
+   "rank": 5,
+   "priceStats": {
+    "points": 31,
+    "windowDays": 31,
+    "firstSeen": "2026-09-02",
+    "min90": 32460,
+    "median90": 37010,
+    "max90": 38280,
+    "verdict": "lowest_observed"
+   },
+   "priceWeekly": [
+    [
+     "2026-09-04",
+     36750
+    ],
+    [
+     "2026-09-11",
+     36380
+    ],
+    [
+     "2026-09-18",
+     36810
+    ],
+    [
+     "2026-09-25",
+     36290
+    ],
+    [
+     "2026-10-02",
+     32460
+    ]
+   ]
+  },
+  {
+   "id": "sample:furusato-rice-3",
+   "source": "rakuten",
+   "name": "(サンプル) ふるさと納税：米 C あきたこまち 20kg",
+   "caption": "",
+   "shop": "サンプルショップ",
+   "price": 22690,
+   "shippingIncluded": true,
+   "pointRate": 1,
+   "rating": 4.4,
+   "reviews": 2553,
+   "productUrl": "https://search.rakuten.co.jp/search/mall/%E3%81%B5%E3%82%8B%E3%81%95%E3%81%A8%E7%B4%8D%E7%A8%8E%20%E7%B1%B3%2010kg/",
+   "buyUrl": "https://search.rakuten.co.jp/search/mall/%E3%81%B5%E3%82%8B%E3%81%95%E3%81%A8%E7%B4%8D%E7%A8%8E%20%E7%B1%B3%2010kg/",
+   "affiliate": false,
+   "image": null,
+   "available": true,
+   "title": "(サンプル) ふるさと納税:米 C あきたこまち 20kg",
+   "variants": false,
+   "score": 4.401,
+   "facets": {
+    "musenmai": false,
+    "subscription": false
+   },
+   "claimed": null,
+   "unit": {
+    "quantity": 20000,
+    "value": 8.81
+   },
+   "otherOffers": [],
+   "rank": 6,
+   "priceStats": {
+    "points": 31,
+    "windowDays": 31,
+    "firstSeen": "2026-09-02",
+    "min90": 20920,
+    "median90": 21570,
+    "max90": 22690,
+    "verdict": "usual"
+   },
+   "priceWeekly": [
+    [
+     "2026-09-04",
+     21220
+    ],
+    [
+     "2026-09-11",
+     20970
+    ],
+    [
+     "2026-09-18",
+     21240
+    ],
+    [
+     "2026-09-25",
+     21060
+    ],
+    [
+     "2026-10-02",
+     20920
+    ]
+   ]
+  }
+ ],
+ "stats": {
+  "candidates": 6,
+  "ranked": 6,
+  "rejected": {},
+  "meanRating": 4.48,
+  "priorWeight": 50
+ },
+ "picks": {
+  "best": "sample:furusato-rice-2",
+  "deal": "sample:furusato-rice-4",
+  "per_unit": "sample:furusato-rice-5"
+ }
+}

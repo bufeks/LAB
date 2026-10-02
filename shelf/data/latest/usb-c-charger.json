@@ -1,11 +1,11 @@
 {
  "categoryId": "usb-c-charger",
- "date": "2026-09-30",
- "fetchedAt": "2026-09-30T01:01:12+09:00",
+ "date": "2026-10-02",
+ "fetchedAt": "2026-10-02T14:45:15+09:00",
  "items": [
   {
    "id": "sample:usb-c-charger-4",
-   "source": "sample",
+   "source": "rakuten",
    "name": "(サンプル) USB-C 充電器 (PD) D 30W 2ポート GaN PPS",
    "caption": "",
    "shop": "サンプルショップ",
@@ -29,12 +29,23 @@
     "pps": true,
     "foldable_plug": false
    },
-   "otherOffers": [],
+   "claimed": null,
+   "otherOffers": [
+    {
+     "id": "sample-y:usb-c-charger-2",
+     "store": "yahoo",
+     "shop": "サンプルストア",
+     "price": 4640,
+     "shippingIncluded": true,
+     "buyUrl": "https://search.rakuten.co.jp/search/mall/USB-C%20%E5%85%85%E9%9B%BB%E5%99%A8%20PD/",
+     "affiliate": false
+    }
+   ],
    "rank": 1,
    "priceStats": {
     "points": 31,
     "windowDays": 31,
-    "firstSeen": "2026-08-31",
+    "firstSeen": "2026-09-02",
     "min90": 4460,
     "median90": 5090,
     "max90": 5240,
@@ -42,30 +53,30 @@
    },
    "priceWeekly": [
     [
-     "2026-08-31",
+     "2026-09-04",
      5050
     ],
     [
-     "2026-09-05",
+     "2026-09-11",
      5000
     ],
     [
-     "2026-09-15",
+     "2026-09-18",
      4990
     ],
     [
-     "2026-09-19",
+     "2026-09-25",
      4990
     ],
     [
-     "2026-09-30",
+     "2026-10-02",
      4460
     ]
    ]
   },
   {
    "id": "sample:usb-c-charger-6",
-   "source": "sample",
+   "source": "rakuten",
    "name": "(サンプル) USB-C 充電器 (PD) F 140W 3ポート GaN",
    "caption": "",
    "shop": "サンプルショップ",
@@ -89,12 +100,13 @@
     "pps": false,
     "foldable_plug": false
    },
+   "claimed": null,
    "otherOffers": [],
    "rank": 2,
    "priceStats": {
     "points": 31,
     "windowDays": 31,
-    "firstSeen": "2026-08-31",
+    "firstSeen": "2026-09-02",
     "min90": 2780,
     "median90": 2870,
     "max90": 3020,
@@ -102,30 +114,30 @@
    },
    "priceWeekly": [
     [
-     "2026-08-31",
+     "2026-09-04",
      2820
     ],
     [
-     "2026-09-04",
+     "2026-09-11",
      2790
     ],
     [
-     "2026-09-10",
+     "2026-09-18",
      2790
     ],
     [
-     "2026-09-22",
+     "2026-09-25",
      2800
     ],
     [
-     "2026-09-29",
+     "2026-10-02",
      2780
     ]
    ]
   },
   {
    "id": "sample:usb-c-charger-3",
-   "source": "sample",
+   "source": "rakuten",
    "name": "(サンプル) USB-C 充電器 (PD) C 100W 4ポート GaN",
    "caption": "",
    "shop": "サンプルショップ",
@@ -141,7 +153,7 @@
    "available": true,
    "title": "(サンプル) USB-C 充電器 (PD) C 100W 4ポート GaN",
    "variants": false,
-   "score": 4.518,
+   "score": 4.519,
    "facets": {
     "output_w": 100,
     "ports": 4,
@@ -149,12 +161,13 @@
     "pps": false,
     "foldable_plug": false
    },
+   "claimed": null,
    "otherOffers": [],
    "rank": 3,
    "priceStats": {
     "points": 31,
     "windowDays": 31,
-    "firstSeen": "2026-08-31",
+    "firstSeen": "2026-09-02",
     "min90": 4780,
     "median90": 4920,
     "max90": 5180,
@@ -162,30 +175,30 @@
    },
    "priceWeekly": [
     [
-     "2026-08-31",
+     "2026-09-04",
      4840
     ],
     [
-     "2026-09-04",
+     "2026-09-11",
      4790
     ],
     [
-     "2026-09-13",
+     "2026-09-18",
      4850
     ],
     [
-     "2026-09-22",
+     "2026-09-25",
      4810
     ],
     [
-     "2026-09-25",
+     "2026-10-02",
      4780
     ]
    ]
   },
   {
    "id": "sample:usb-c-charger-2",
-   "source": "sample",
+   "source": "rakuten",
    "name": "(サンプル) USB-C 充電器 (PD) B 20W 1ポート 小型",
    "caption": "",
    "shop": "サンプルショップ",
@@ -209,12 +222,13 @@
     "pps": false,
     "foldable_plug": false
    },
+   "claimed": null,
    "otherOffers": [],
    "rank": 4,
    "priceStats": {
     "points": 31,
     "windowDays": 31,
-    "firstSeen": "2026-08-31",
+    "firstSeen": "2026-09-02",
     "min90": 4460,
     "median90": 4570,
     "max90": 4720,
@@ -222,30 +236,30 @@
    },
    "priceWeekly": [
     [
-     "2026-09-02",
+     "2026-09-04",
      4460
     ],
     [
-     "2026-09-03",
+     "2026-09-11",
      4480
     ],
     [
-     "2026-09-15",
+     "2026-09-18",
      4480
     ],
     [
-     "2026-09-23",
+     "2026-09-25",
      4480
     ],
     [
-     "2026-09-26",
+     "2026-10-02",
      4500
     ]
    ]
   },
   {
    "id": "sample:usb-c-charger-5",
-   "source": "sample",
+   "source": "rakuten",
    "name": "(サンプル) USB-C 充電器 (PD) E 45W 1ポート GaN PPS 折りたたみ",
    "caption": "",
    "shop": "サンプルショップ",
@@ -261,7 +275,7 @@
    "available": true,
    "title": "(サンプル) USB-C 充電器 (PD) E 45W 1ポート GaN PPS 折りたたみ",
    "variants": false,
-   "score": 3.988,
+   "score": 3.989,
    "facets": {
     "output_w": 45,
     "ports": 1,
@@ -269,12 +283,13 @@
     "pps": true,
     "foldable_plug": true
    },
+   "claimed": null,
    "otherOffers": [],
    "rank": 5,
    "priceStats": {
     "points": 31,
     "windowDays": 31,
-    "firstSeen": "2026-08-31",
+    "firstSeen": "2026-09-02",
     "min90": 5490,
     "median90": 5640,
     "max90": 5820,
@@ -282,38 +297,38 @@
    },
    "priceWeekly": [
     [
-     "2026-09-02",
+     "2026-09-04",
      5520
     ],
     [
-     "2026-09-08",
+     "2026-09-11",
      5540
     ],
     [
-     "2026-09-11",
+     "2026-09-18",
      5490
     ],
     [
-     "2026-09-23",
+     "2026-09-25",
      5600
     ],
     [
-     "2026-09-27",
+     "2026-10-02",
      5530
     ]
    ]
   },
   {
-   "id": "sample:usb-c-charger-1",
-   "source": "sample",
+   "id": "sample-y:usb-c-charger-1",
+   "source": "yahoo",
    "name": "(サンプル) USB-C 充電器 (PD) A 65W 3ポート GaN 折りたたみ PPS",
    "caption": "",
-   "shop": "サンプルショップ",
-   "price": 1620,
+   "shop": "サンプルストア",
+   "price": 1510,
    "shippingIncluded": true,
    "pointRate": 1,
    "rating": 3.89,
-   "reviews": 1335,
+   "reviews": 445,
    "productUrl": "https://search.rakuten.co.jp/search/mall/USB-C%20%E5%85%85%E9%9B%BB%E5%99%A8%20PD/",
    "buyUrl": "https://search.rakuten.co.jp/search/mall/USB-C%20%E5%85%85%E9%9B%BB%E5%99%A8%20PD/",
    "affiliate": false,
@@ -321,7 +336,7 @@
    "available": true,
    "title": "(サンプル) USB-C 充電器 (PD) A 65W 3ポート GaN 折りたたみ PPS",
    "variants": false,
-   "score": 3.912,
+   "score": 3.952,
    "facets": {
     "output_w": 65,
     "ports": 3,
@@ -329,51 +344,64 @@
     "pps": true,
     "foldable_plug": true
    },
-   "otherOffers": [],
+   "claimed": null,
+   "otherOffers": [
+    {
+     "id": "sample:usb-c-charger-1",
+     "store": "rakuten",
+     "shop": "サンプルショップ",
+     "price": 1620,
+     "shippingIncluded": true,
+     "buyUrl": "https://search.rakuten.co.jp/search/mall/USB-C%20%E5%85%85%E9%9B%BB%E5%99%A8%20PD/",
+     "affiliate": false
+    }
+   ],
    "rank": 6,
    "priceStats": {
     "points": 31,
     "windowDays": 31,
-    "firstSeen": "2026-08-31",
-    "min90": 1620,
-    "median90": 1850,
-    "max90": 1910,
+    "firstSeen": "2026-09-02",
+    "min90": 1510,
+    "median90": 1730,
+    "max90": 1780,
     "verdict": "lowest_observed"
    },
    "priceWeekly": [
     [
-     "2026-08-31",
-     1830
-    ],
-    [
-     "2026-09-03",
-     1820
+     "2026-09-04",
+     1710
     ],
     [
      "2026-09-11",
-     1840
+     1700
     ],
     [
-     "2026-09-23",
-     1810
+     "2026-09-18",
+     1690
     ],
     [
-     "2026-09-30",
-     1620
+     "2026-09-25",
+     1700
+    ],
+    [
+     "2026-10-02",
+     1510
     ]
    ]
   }
  ],
  "stats": {
-  "candidates": 6,
+  "candidates": 8,
   "ranked": 6,
-  "rejected": {},
+  "rejected": {
+   "duplicate": 2
+  },
   "meanRating": 4.5,
   "priorWeight": 50
  },
  "picks": {
   "best": "sample:usb-c-charger-4",
   "budget": "sample:usb-c-charger-6",
-  "deal": "sample:usb-c-charger-1"
+  "deal": "sample-y:usb-c-charger-1"
  }
 }

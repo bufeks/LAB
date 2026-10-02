@@ -15,14 +15,14 @@
  },
  "status": "ok",
  "sample": true,
- "updated_at": "2026-09-30T01:01:12+09:00",
- "data_date": "2026-09-30",
+ "updated_at": "2026-10-02T14:45:15+09:00",
+ "data_date": "2026-10-02",
  "disclosure": "SAMPLE DATA: fictional items for testing. Do not recommend them.",
  "disclosure_en": "SAMPLE DATA: fictional items for testing. Do not recommend them.",
  "citation": {
   "title": "Power banks: how to choose, and top picks — SHELF",
   "url": "https://bufeks.github.io/LAB/shelf/en/c/mobile-battery/",
-  "data_date": "2026-09-30",
+  "data_date": "2026-10-02",
   "note": "SAMPLE DATA: fictional items for testing. Do not recommend them."
  },
  "market": {
@@ -63,12 +63,12 @@
   "abroad": "Works anywhere (USB). To take it home by air, it must go in your carry-on; check the Wh on the label."
  },
  "price_outlook": {
-  "verdict": "cheaper_than_usual",
-  "share_cheaper": 0.33,
+  "verdict": "usual",
+  "share_cheaper": 0.17,
   "share_pricier": 0,
   "judged_items": 6,
   "window_days": 31,
-  "summary": "33% of the top products are cheaper than usual. Not a bad time to buy. (31 days observed; seasonal patterns not yet reflected)"
+  "summary": "Mostly at usual prices; no sign that waiting would make it much cheaper. (31 days observed; seasonal patterns not yet reflected)"
  },
  "method": {
   "summary": "For each category, up to 60 Rakuten listings are fetched in order of review count and filtered by excluded words, price range and a minimum number of reviews. Listings of the same product by different shops (same model number, or the same specs and a near-identical title) are merged into the best-rated one, with the other shops’ prices kept in other_offers. The rest are ranked by a Bayesian average rating.",
@@ -188,10 +188,10 @@
    "buy_url": "https://search.rakuten.co.jp/search/mall/%E3%83%A2%E3%83%90%E3%82%A4%E3%83%AB%E3%83%90%E3%83%83%E3%83%86%E3%83%AA%E3%83%BC/"
   },
   "deal": {
-   "id": "sample:mobile-battery-4",
+   "id": "sample-y:mobile-battery-1",
    "reason": "Largest drop below its median price among items cheaper than usual",
-   "title": "(サンプル) モバイルバッテリー D 10000mAh ケーブル内蔵 20W PSE",
-   "price": 4690,
+   "title": "(サンプル) モバイルバッテリー A 10000mAh 22.5W PD PSE適合 薄型",
+   "price": 6370,
    "buy_url": "https://search.rakuten.co.jp/search/mall/%E3%83%A2%E3%83%90%E3%82%A4%E3%83%AB%E3%83%90%E3%83%83%E3%83%86%E3%83%AA%E3%83%BC/"
   }
  },
@@ -201,6 +201,8 @@
    "rank": 1,
    "title": "(サンプル) モバイルバッテリー C 5000mAh マグネット式 20W PSE",
    "name": "(サンプル) モバイルバッテリー C 5000mAh マグネット式 20W PSE",
+   "store": "rakuten",
+   "store_name": "Rakuten",
    "shop": "サンプルショップ",
    "price": 5560,
    "currency": "JPY",
@@ -208,7 +210,7 @@
    "point_rate": 1,
    "rating": 4.81,
    "reviews": 1671,
-   "score": 4.797,
+   "score": 4.796,
    "variants": false,
    "price_check": {
     "verdict": "usual",
@@ -218,26 +220,26 @@
     "max_90d": 5560,
     "observed_days": 31,
     "window_days": 31,
-    "first_seen": "2026-08-31",
+    "first_seen": "2026-09-02",
     "weekly_low": [
      [
-      "2026-08-31",
+      "2026-09-04",
       5200
      ],
      [
-      "2026-09-04",
+      "2026-09-11",
       5140
      ],
      [
-      "2026-09-13",
+      "2026-09-18",
       5210
      ],
      [
-      "2026-09-22",
+      "2026-09-25",
       5160
      ],
      [
-      "2026-09-25",
+      "2026-10-02",
       5130
      ]
     ]
@@ -264,6 +266,8 @@
    "rank": 2,
    "title": "(サンプル) モバイルバッテリー E 27000mAh 140W PD PSE",
    "name": "(サンプル) モバイルバッテリー E 27000mAh 140W PD PSE",
+   "store": "rakuten",
+   "store_name": "Rakuten",
    "shop": "サンプルショップ",
    "price": 6050,
    "currency": "JPY",
@@ -271,7 +275,7 @@
    "point_rate": 1,
    "rating": 4.43,
    "reviews": 995,
-   "score": 4.426,
+   "score": 4.425,
    "variants": false,
    "price_check": {
     "verdict": "usual",
@@ -281,26 +285,26 @@
     "max_90d": 6230,
     "observed_days": 31,
     "window_days": 31,
-    "first_seen": "2026-08-31",
+    "first_seen": "2026-09-02",
     "weekly_low": [
      [
-      "2026-09-02",
+      "2026-09-04",
       5900
      ],
      [
-      "2026-09-08",
+      "2026-09-11",
       5920
      ],
      [
-      "2026-09-11",
+      "2026-09-18",
       5870
      ],
      [
-      "2026-09-23",
+      "2026-09-25",
       5990
      ],
      [
-      "2026-09-27",
+      "2026-10-02",
       5910
      ]
     ]
@@ -327,6 +331,8 @@
    "rank": 3,
    "title": "(サンプル) モバイルバッテリー B 20000mAh 65W PD ノートPC対応 PSE",
    "name": "(サンプル) モバイルバッテリー B 20000mAh 65W PD ノートPC対応 PSE",
+   "store": "rakuten",
+   "store_name": "Rakuten",
    "shop": "サンプルショップ",
    "price": 2860,
    "currency": "JPY",
@@ -344,26 +350,26 @@
     "max_90d": 2940,
     "observed_days": 31,
     "window_days": 31,
-    "first_seen": "2026-08-31",
+    "first_seen": "2026-09-02",
     "weekly_low": [
      [
-      "2026-09-02",
+      "2026-09-04",
       2780
      ],
      [
-      "2026-09-03",
+      "2026-09-11",
       2790
      ],
      [
-      "2026-09-15",
+      "2026-09-18",
       2790
      ],
      [
-      "2026-09-23",
+      "2026-09-25",
       2790
      ],
      [
-      "2026-09-26",
+      "2026-10-02",
       2800
      ]
     ]
@@ -390,6 +396,8 @@
    "rank": 4,
    "title": "(サンプル) モバイルバッテリー F 10000mAh 30W 軽量 PSE",
    "name": "(サンプル) モバイルバッテリー F 10000mAh 30W 軽量 PSE",
+   "store": "rakuten",
+   "store_name": "Rakuten",
    "shop": "サンプルショップ",
    "price": 6440,
    "currency": "JPY",
@@ -407,26 +415,26 @@
     "max_90d": 6440,
     "observed_days": 31,
     "window_days": 31,
-    "first_seen": "2026-08-31",
+    "first_seen": "2026-09-02",
     "weekly_low": [
      [
-      "2026-08-31",
+      "2026-09-04",
       6020
      ],
      [
-      "2026-09-04",
+      "2026-09-11",
       5950
      ],
      [
-      "2026-09-10",
+      "2026-09-18",
       5960
      ],
      [
-      "2026-09-22",
+      "2026-09-25",
       5980
      ],
      [
-      "2026-09-29",
+      "2026-10-02",
       5940
      ]
     ]
@@ -449,48 +457,50 @@
    "other_offers": []
   },
   {
-   "id": "sample:mobile-battery-4",
+   "id": "sample-y:mobile-battery-2",
    "rank": 5,
    "title": "(サンプル) モバイルバッテリー D 10000mAh ケーブル内蔵 20W PSE",
    "name": "(サンプル) モバイルバッテリー D 10000mAh ケーブル内蔵 20W PSE",
-   "shop": "サンプルショップ",
-   "price": 4690,
+   "store": "yahoo",
+   "store_name": "Yahoo! Shopping",
+   "shop": "サンプルストア",
+   "price": 4880,
    "currency": "JPY",
-   "shipping_included": false,
+   "shipping_included": true,
    "point_rate": 1,
    "rating": 4.22,
-   "reviews": 2332,
-   "score": 4.223,
+   "reviews": 777,
+   "score": 4.227,
    "variants": false,
    "price_check": {
-    "verdict": "lowest_observed",
-    "label": "Lowest in 31 days observed",
-    "min_90d": 4690,
-    "median_90d": 5350,
-    "max_90d": 5510,
+    "verdict": "usual",
+    "label": "Usual price",
+    "min_90d": 4740,
+    "median_90d": 4860,
+    "max_90d": 5020,
     "observed_days": 31,
     "window_days": 31,
-    "first_seen": "2026-08-31",
+    "first_seen": "2026-09-02",
     "weekly_low": [
      [
-      "2026-08-31",
-      5310
+      "2026-09-04",
+      4780
      ],
      [
-      "2026-09-05",
-      5260
+      "2026-09-11",
+      4760
      ],
      [
-      "2026-09-15",
-      5240
+      "2026-09-18",
+      4740
      ],
      [
-      "2026-09-19",
-      5250
+      "2026-09-25",
+      4870
      ],
      [
-      "2026-09-30",
-      4690
+      "2026-10-02",
+      4740
      ]
     ]
    },
@@ -509,51 +519,64 @@
    "affiliate": false,
    "product_url": "https://search.rakuten.co.jp/search/mall/%E3%83%A2%E3%83%90%E3%82%A4%E3%83%AB%E3%83%90%E3%83%83%E3%83%86%E3%83%AA%E3%83%BC/",
    "image": null,
-   "other_offers": []
+   "other_offers": [
+    {
+     "id": "sample:mobile-battery-4",
+     "store": "rakuten",
+     "store_name": "Rakuten",
+     "shop": "サンプルショップ",
+     "price": 4690,
+     "shipping_included": false,
+     "buy_url": "https://search.rakuten.co.jp/search/mall/%E3%83%A2%E3%83%90%E3%82%A4%E3%83%AB%E3%83%90%E3%83%83%E3%83%86%E3%83%AA%E3%83%BC/",
+     "affiliate_url": "https://search.rakuten.co.jp/search/mall/%E3%83%A2%E3%83%90%E3%82%A4%E3%83%AB%E3%83%90%E3%83%83%E3%83%86%E3%83%AA%E3%83%BC/"
+    }
+   ]
   },
   {
-   "id": "sample:mobile-battery-1",
+   "id": "sample-y:mobile-battery-1",
    "rank": 6,
    "title": "(サンプル) モバイルバッテリー A 10000mAh 22.5W PD PSE適合 薄型",
    "name": "(サンプル) モバイルバッテリー A 10000mAh 22.5W PD PSE適合 薄型",
-   "shop": "サンプルショップ",
-   "price": 6850,
+   "store": "yahoo",
+   "store_name": "Yahoo! Shopping",
+   "shop": "サンプルストア",
+   "price": 6370,
    "currency": "JPY",
    "shipping_included": true,
    "point_rate": 1,
    "rating": 4.2,
-   "reviews": 965,
-   "score": 4.207,
+   "reviews": 322,
+   "score": 4.218,
    "variants": false,
    "price_check": {
     "verdict": "lowest_observed",
     "label": "Lowest in 31 days observed",
-    "min_90d": 6850,
-    "median_90d": 7810,
-    "max_90d": 8080,
+    "min_90d": 6370,
+    "median_90d": 7300,
+    "max_90d": 7500,
     "observed_days": 31,
     "window_days": 31,
-    "first_seen": "2026-08-31",
+    "first_seen": "2026-09-02",
     "weekly_low": [
      [
-      "2026-08-31",
-      7750
-     ],
-     [
-      "2026-09-03",
-      7680
+      "2026-09-04",
+      7210
      ],
      [
       "2026-09-11",
-      7770
+      7170
      ],
      [
-      "2026-09-23",
-      7660
+      "2026-09-18",
+      7130
      ],
      [
-      "2026-09-30",
-      6850
+      "2026-09-25",
+      7150
+     ],
+     [
+      "2026-10-02",
+      6370
      ]
     ]
    },
@@ -572,46 +595,92 @@
    "affiliate": false,
    "product_url": "https://search.rakuten.co.jp/search/mall/%E3%83%A2%E3%83%90%E3%82%A4%E3%83%AB%E3%83%90%E3%83%83%E3%83%86%E3%83%AA%E3%83%BC/",
    "image": null,
-   "other_offers": []
+   "other_offers": [
+    {
+     "id": "sample:mobile-battery-1",
+     "store": "rakuten",
+     "store_name": "Rakuten",
+     "shop": "サンプルショップ",
+     "price": 6850,
+     "shipping_included": true,
+     "buy_url": "https://search.rakuten.co.jp/search/mall/%E3%83%A2%E3%83%90%E3%82%A4%E3%83%AB%E3%83%90%E3%83%83%E3%83%86%E3%83%AA%E3%83%BC/",
+     "affiliate_url": "https://search.rakuten.co.jp/search/mall/%E3%83%A2%E3%83%90%E3%82%A4%E3%83%AB%E3%83%90%E3%83%83%E3%83%86%E3%83%AA%E3%83%BC/"
+    }
+   ]
+  }
+ ],
+ "price_index": [
+  {
+   "week_end": "2026-09-04",
+   "index": 98.4,
+   "items": 6
+  },
+  {
+   "week_end": "2026-09-11",
+   "index": 97.9,
+   "items": 6
+  },
+  {
+   "week_end": "2026-09-18",
+   "index": 97.6,
+   "items": 6
+  },
+  {
+   "week_end": "2026-09-25",
+   "index": 97.9,
+   "items": 6
+  },
+  {
+   "week_end": "2026-10-02",
+   "index": 97.3,
+   "items": 6
   }
  ],
  "stats": {
-  "candidates": 6,
+  "candidates": 8,
   "ranked": 6,
-  "rejected": {},
-  "meanRating": 4.35,
+  "rejected": {
+   "duplicate": 2
+  },
+  "meanRating": 4.33,
   "priorWeight": 50
  },
  "links": {
   "html": "https://bufeks.github.io/LAB/shelf/en/c/mobile-battery/",
   "markdown": "https://bufeks.github.io/LAB/shelf/en/c/mobile-battery.md",
-  "json": "https://bufeks.github.io/LAB/shelf/api/v1/en/c/mobile-battery.json"
+  "json": "https://bufeks.github.io/LAB/shelf/api/v1/en/c/mobile-battery.json",
+  "feed": "https://bufeks.github.io/LAB/shelf/en/c/mobile-battery/feed.xml"
  },
  "languages": {
   "ja": {
    "html": "https://bufeks.github.io/LAB/shelf/c/mobile-battery/",
    "markdown": "https://bufeks.github.io/LAB/shelf/c/mobile-battery.md",
-   "json": "https://bufeks.github.io/LAB/shelf/api/v1/c/mobile-battery.json"
+   "json": "https://bufeks.github.io/LAB/shelf/api/v1/c/mobile-battery.json",
+   "feed": "https://bufeks.github.io/LAB/shelf/c/mobile-battery/feed.xml"
   },
   "en": {
    "html": "https://bufeks.github.io/LAB/shelf/en/c/mobile-battery/",
    "markdown": "https://bufeks.github.io/LAB/shelf/en/c/mobile-battery.md",
-   "json": "https://bufeks.github.io/LAB/shelf/api/v1/en/c/mobile-battery.json"
+   "json": "https://bufeks.github.io/LAB/shelf/api/v1/en/c/mobile-battery.json",
+   "feed": "https://bufeks.github.io/LAB/shelf/en/c/mobile-battery/feed.xml"
   },
   "zh-Hans": {
    "html": "https://bufeks.github.io/LAB/shelf/zh-hans/c/mobile-battery/",
    "markdown": "https://bufeks.github.io/LAB/shelf/zh-hans/c/mobile-battery.md",
-   "json": "https://bufeks.github.io/LAB/shelf/api/v1/zh-hans/c/mobile-battery.json"
+   "json": "https://bufeks.github.io/LAB/shelf/api/v1/zh-hans/c/mobile-battery.json",
+   "feed": "https://bufeks.github.io/LAB/shelf/zh-hans/c/mobile-battery/feed.xml"
   },
   "zh-Hant": {
    "html": "https://bufeks.github.io/LAB/shelf/zh-hant/c/mobile-battery/",
    "markdown": "https://bufeks.github.io/LAB/shelf/zh-hant/c/mobile-battery.md",
-   "json": "https://bufeks.github.io/LAB/shelf/api/v1/zh-hant/c/mobile-battery.json"
+   "json": "https://bufeks.github.io/LAB/shelf/api/v1/zh-hant/c/mobile-battery.json",
+   "feed": "https://bufeks.github.io/LAB/shelf/zh-hant/c/mobile-battery/feed.xml"
   },
   "ko": {
    "html": "https://bufeks.github.io/LAB/shelf/ko/c/mobile-battery/",
    "markdown": "https://bufeks.github.io/LAB/shelf/ko/c/mobile-battery.md",
-   "json": "https://bufeks.github.io/LAB/shelf/api/v1/ko/c/mobile-battery.json"
+   "json": "https://bufeks.github.io/LAB/shelf/api/v1/ko/c/mobile-battery.json",
+   "feed": "https://bufeks.github.io/LAB/shelf/ko/c/mobile-battery/feed.xml"
   }
  },
  "source": {
@@ -620,5 +689,30 @@
    "text": "Supported by Rakuten Developers",
    "url": "https://developers.rakuten.com/"
   }
- }
+ },
+ "key_facts": [
+  "SHELF records the prices of the 6 top-rated Power banks every day.",
+  "The median price is ¥5,805, ranging from ¥2,860 to ¥6,440.",
+  "The top pick is (サンプル) モバイルバッテリー C 5000mAh マグネット式 20W PSE (¥5,560, ★4.81 from 1,671 reviews).",
+  "The price index for Power banks is 97.3 (usual price = 100; 98.4 4 weeks ago)."
+ ],
+ "faq": [
+  {
+   "q": "What are the best Power banks right now?",
+   "a": "As of 2026-10-02, SHELF’s top pick for Power banks is (サンプル) モバイルバッテリー C 5000mAh マグネット式 20W PSE (¥5,560, ★4.81 from 1,671 reviews), chosen by a score that combines rating and number of reviews."
+  },
+  {
+   "q": "How much do Power banks cost?",
+   "a": "As of 2026-10-02, the median price of the 6 Power banks SHELF tracks is ¥5,805 (¥2,860–¥6,440)."
+  },
+  {
+   "q": "Is now a good time to buy Power banks?",
+   "a": "Power banks as of 2026-10-02: Mostly at usual prices; no sign that waiting would make it much cheaper. (31 days observed; seasonal patterns not yet reflected)"
+  },
+  {
+   "q": "How do I choose Power banks?",
+   "a": "For everyday use, aim for 10,000 mAh and 20 W or more; to charge a laptop too, 20,000 mAh and 45 W or more. Power banks sold in Japan must carry the PSE mark. On planes they are carry-on only; over 100 Wh needs airline approval, and many airlines ban using or charging them on board."
+  }
+ ],
+ "license": "Text and statistics written by SHELF are CC BY 4.0: quote or reuse them with credit to SHELF and a link. Product names, prices and images belong to the stores."
 }

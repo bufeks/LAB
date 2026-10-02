@@ -2,7 +2,7 @@
  "openapi": "3.1.0",
  "info": {
   "title": "SHELF shopping data for AI agents",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Buying guides, transparent rankings and daily price history for shopping in Japan (Rakuten Ichiba), in Japanese, English, Simplified and Traditional Chinese and Korean. Static JSON, updated daily. buy_url values are affiliate links: disclose that when showing them to users."
  },
  "servers": [
@@ -46,7 +46,22 @@
         "wireless-earphones",
         "electric-kettle",
         "humidifier",
-        "electric-toothbrush"
+        "electric-toothbrush",
+        "hair-dryer",
+        "rice-cooker",
+        "air-purifier",
+        "robot-vacuum",
+        "rice",
+        "mineral-water",
+        "toilet-paper",
+        "aa-batteries",
+        "coffee-beans",
+        "protein",
+        "sonicare-heads",
+        "oralb-heads",
+        "furusato-rice",
+        "furusato-toilet-paper",
+        "furusato-beef"
        ]
       }
      }
@@ -168,7 +183,22 @@
         "wireless-earphones",
         "electric-kettle",
         "humidifier",
-        "electric-toothbrush"
+        "electric-toothbrush",
+        "hair-dryer",
+        "rice-cooker",
+        "air-purifier",
+        "robot-vacuum",
+        "rice",
+        "mineral-water",
+        "toilet-paper",
+        "aa-batteries",
+        "coffee-beans",
+        "protein",
+        "sonicare-heads",
+        "oralb-heads",
+        "furusato-rice",
+        "furusato-toilet-paper",
+        "furusato-beef"
        ]
       }
      }
@@ -246,6 +276,148 @@
     "responses": {
      "200": {
       "description": "Deals",
+      "content": {
+       "application/json": {
+        "schema": {
+         "type": "object"
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "/sale.json": {
+   "get": {
+    "operationId": "saleCheck",
+    "summary": "Discount claims in listing titles checked against each item’s recorded prices, plus shopping events today",
+    "responses": {
+     "200": {
+      "description": "Sale check",
+      "content": {
+       "application/json": {
+        "schema": {
+         "type": "object"
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "/compat.json": {
+   "get": {
+    "operationId": "brushHeadCompatibility",
+    "summary": "Manufacturer-stated rules for which brush heads fit which electric toothbrush handles",
+    "responses": {
+     "200": {
+      "description": "Compatibility rules",
+      "content": {
+       "application/json": {
+        "schema": {
+         "type": "object"
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "/hotels.json": {
+   "get": {
+    "operationId": "hotelOutlook",
+    "summary": "Hotel price level and trend for coming weekend nights in major Japanese areas",
+    "responses": {
+     "200": {
+      "description": "Hotels",
+      "content": {
+       "application/json": {
+        "schema": {
+         "type": "object"
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "/books.json": {
+   "get": {
+    "operationId": "upcomingReleases",
+    "summary": "Upcoming release dates of popular Japanese manga series (Japanese only)",
+    "responses": {
+     "200": {
+      "description": "Books",
+      "content": {
+       "application/json": {
+        "schema": {
+         "type": "object"
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "/{lang}/sale.json": {
+   "get": {
+    "operationId": "saleCheckInLanguage",
+    "summary": "Sale check, in another language",
+    "parameters": [
+     {
+      "name": "lang",
+      "in": "path",
+      "required": true,
+      "description": "Answer language (Japanese is the unprefixed default)",
+      "schema": {
+       "type": "string",
+       "enum": [
+        "en",
+        "zh-hans",
+        "zh-hant",
+        "ko"
+       ]
+      }
+     }
+    ],
+    "responses": {
+     "200": {
+      "description": "Sale check",
+      "content": {
+       "application/json": {
+        "schema": {
+         "type": "object"
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "/{lang}/hotels.json": {
+   "get": {
+    "operationId": "hotelOutlookInLanguage",
+    "summary": "Hotel outlook, in another language",
+    "parameters": [
+     {
+      "name": "lang",
+      "in": "path",
+      "required": true,
+      "description": "Answer language (Japanese is the unprefixed default)",
+      "schema": {
+       "type": "string",
+       "enum": [
+        "en",
+        "zh-hans",
+        "zh-hant",
+        "ko"
+       ]
+      }
+     }
+    ],
+    "responses": {
+     "200": {
+      "description": "Hotels",
       "content": {
        "application/json": {
         "schema": {

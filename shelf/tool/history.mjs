@@ -36,8 +36,9 @@ function median(values) {
   return s.length % 2 ? s[m] : (s[m - 1] + s[m]) / 2;
 }
 
-// Lowest price per ISO-ish week (weeks ending on the latest point), newest
-// last: small enough to ship in every record as evidence for a verdict.
+// Lowest price per week, as [week end date, price], oldest first. Weeks end
+// on `date`, so every item's series shares the same week boundaries (which
+// the category price index relies on).
 export function weeklySeries(entry, date, weeks = 13) {
   const today = dayNumber(date);
   const buckets = new Map();
@@ -45,10 +46,10 @@ export function weeklySeries(entry, date, weeks = 13) {
     const age = today - dayNumber(d);
     if (age < 0 || age >= weeks * 7) continue;
     const w = Math.floor(age / 7);
-    const cur = buckets.get(w);
-    if (!cur || p < cur[1]) buckets.set(w, [d, p]);
+    if (!buckets.has(w) || p < buckets.get(w)) buckets.set(w, p);
   }
-  return [...buckets.entries()].sort((a, b) => b[0] - a[0]).map(([, v]) => v);
+  const end = (w) => new Date((today - w * 7) * 86400000).toISOString().slice(0, 10);
+  return [...buckets.entries()].sort((a, b) => b[0] - a[0]).map(([w, p]) => [end(w), p]);
 }
 
 export function priceStats(entry, currentPrice, date, shippingIncluded) {

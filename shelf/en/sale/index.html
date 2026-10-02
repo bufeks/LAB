@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sale price check｜SHELF</title>
+<meta name="description" content="Checks claims like “50% OFF” or “half price” in listing titles against the prices SHELF records every day, to show whether the item is really cheaper.">
+<meta name="robots" content="noindex">
+<link rel="canonical" href="https://bufeks.github.io/LAB/shelf/en/sale/">
+<link rel="alternate" type="application/json" href="https://bufeks.github.io/LAB/shelf/api/v1/en/sale.json">
+<link rel="alternate" hreflang="ja" href="https://bufeks.github.io/LAB/shelf/sale/">
+<link rel="alternate" hreflang="en" href="https://bufeks.github.io/LAB/shelf/en/sale/">
+<link rel="alternate" hreflang="zh-Hans" href="https://bufeks.github.io/LAB/shelf/zh-hans/sale/">
+<link rel="alternate" hreflang="zh-Hant" href="https://bufeks.github.io/LAB/shelf/zh-hant/sale/">
+<link rel="alternate" hreflang="ko" href="https://bufeks.github.io/LAB/shelf/ko/sale/">
+<link rel="alternate" hreflang="x-default" href="https://bufeks.github.io/LAB/shelf/en/sale/">
+<link rel="stylesheet" href="../../assets/style.css">
+
+</head>
+<body>
+<header class="top"><a class="brand" href="https://bufeks.github.io/LAB/shelf/en/">SHELF</a><span class="tag">Shopping data for AI agents</span><nav class="langs" aria-label="Languages"><a href="https://bufeks.github.io/LAB/shelf/sale/" hreflang="ja">日本語</a> <b>English</b> <a href="https://bufeks.github.io/LAB/shelf/zh-hans/sale/" hreflang="zh-Hans">简体中文</a> <a href="https://bufeks.github.io/LAB/shelf/zh-hant/sale/" hreflang="zh-Hant">繁體中文</a> <a href="https://bufeks.github.io/LAB/shelf/ko/sale/" hreflang="ko">한국어</a></nav></header>
+<p class="sample">Showing sample data: these are not real products (real data starts once the Rakuten API keys are set)</p>
+<main>
+<p class="pr">Ad · contains affiliate links</p>
+<h1>Sale price check</h1>
+<p class="lead">Checks claims like “50% OFF” or “half price” in listing titles against the prices SHELF records every day, to show whether the item is really cheaper.</p>
+<p class="meta">Data date 2026-10-02 · updated daily · 4 products</p>
+<h2>Today’s events</h2>
+<p>No major sale detected.</p>
+<h2><span class="sale s-genuine">Really cheaper</span> (2)</h2>
+<p><small>Priced below its own usual level.</small></p>
+<ul class="sale-list"><li><a href="https://bufeks.github.io/LAB/shelf/en/c/hair-dryer/">Hair dryers</a> — <span lang="ja">(サンプル) ヘアドライヤー A 大風量 2.0m3/分 1200W 温冷</span><br><strong>¥4,320</strong> · claims 20%OFF · actually 12.7% below its usual ¥4,950</li>
+<li><a href="https://bufeks.github.io/LAB/shelf/en/c/air-purifier/">Air purifiers</a> — <span lang="ja">(サンプル) 空気清浄機 A スーパーSALE 25畳 HEPA</span><br><strong>¥22,200</strong> · claims 15%OFF · actually 12.3% below its usual ¥25,310</li></ul>
+<h2><span class="sale s-smaller_than_claimed">Smaller than claimed</span> (1)</h2>
+<p><small>Cheaper, but by much less than the title claims.</small></p>
+<ul class="sale-list"><li><a href="https://bufeks.github.io/LAB/shelf/en/c/rice-cooker/">Rice cookers</a> — <span lang="ja">(サンプル) 炊飯器 A 半額 5.5合 圧力IH 予約</span><br><strong>¥19,800</strong> · claims 50%OFF · actually 12.7% below its usual ¥22,690</li></ul>
+
+<h2><span class="sale s-coupon">Coupon (not in the price)</span> (1)</h2>
+<p><small>Cheaper only with a coupon, which the listed price does not include; check its conditions and cap.</small></p>
+<ul class="sale-list"><li><a href="https://bufeks.github.io/LAB/shelf/en/c/hair-dryer/">Hair dryers</a> — <span lang="ja">(サンプル) ヘアドライヤー B 1.3m3/分 折りたたみ イオン</span><br><strong>¥5,070</strong> · claims up to 30%OFF</li></ul>
+
+<h2>How the ranking works</h2><p>Each item is compared with its own price history (the median over up to 90 days, on the same shipping terms), never with a “regular price” the shop states. At least 5% below the median and at least half the claimed discount (a quarter for “up to”) is genuine; at least 3% is smaller than claimed; less is not lower than usual. Coupons are not in the listed price and are shown separately. Under 7 days of history is unverified.</p>
+<p class="data">Data on this page: <a href="https://bufeks.github.io/LAB/shelf/api/v1/en/sale.json">JSON</a></p>
+</main>
+<footer>
+<p>Ad: buy links are affiliate links (Rakuten Affiliate, and Yahoo! Shopping via ValueCommerce). The operator earns a commission on purchases at no extra cost to you. Rankings come only from the published formula; commission rates play no part in rankings or in which store is shown.</p>
+<p><a href="https://developers.rakuten.com/">Supported by Rakuten Developers</a> ・ <span style="margin:15px 15px 15px 15px"><a href="https://developer.yahoo.co.jp/sitemap/">Web Services by Yahoo! JAPAN</a></span> ・ <a href="https://bufeks.github.io/LAB/shelf/en/llms.txt">llms.txt</a> ・ <a href="https://bufeks.github.io/LAB/shelf/openapi.json">OpenAPI</a> ・ <a href="https://bufeks.github.io/LAB/shelf/en/about/">How agents use SHELF</a></p>
+</footer>
+</body>
+</html>
