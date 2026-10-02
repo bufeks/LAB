@@ -273,13 +273,14 @@ const TOOLS = [
       const matches = rec.items
         .filter((x) => (max == null || x.price <= max) && (min == null || x.price >= min))
         .filter(specFilter(rec, args.specs));
+      // Picks follow the ranking, whatever order the list is shown in.
+      const picks = picksFor([...matches]);
       if (args.sort === 'unit_price') {
         if (!rec.unit_rule) throw new UserError(`${rec.id} has no unit price; sort by rank or price instead.`);
         const dir = rec.unit_rule.higher_is_better ? -1 : 1;
         matches.sort((a, b) => (a.unit_price ? (b.unit_price ? dir * (a.unit_price.value - b.unit_price.value) : -1) : 1));
       } else if (args.sort === 'price') matches.sort((a, b) => a.price - b.price);
       const shown = matches.slice(0, toLimit(args.limit, 5, 20));
-      const picks = picksFor(matches);
       const pickText = Object.entries(picks)
         .map(([k, x]) => `- ${k}: ${x.title} ${yen(x.price)} (id ${x.id})`)
         .join('\n');

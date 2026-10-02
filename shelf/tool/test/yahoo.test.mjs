@@ -19,7 +19,7 @@ const hit = {
 
 test('credentials need an app id; the affiliate id is optional', () => {
   assert.equal(yahooCredentialsFromEnv({}), null);
-  assert.equal(yahooCredentialsFromEnv({ YAHOO_APP_ID: 'a' }).affiliateId, undefined);
+  assert.equal(yahooCredentialsFromEnv({ YAHOO_APP_ID: 'a', SHELF_QUIET: '1' }), null);
 });
 
 test('search url carries price range, stock, sort and affiliate', () => {

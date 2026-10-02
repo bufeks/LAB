@@ -14,10 +14,17 @@ const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 export function yahooCredentialsFromEnv(env = process.env) {
   const appId = env.YAHOO_APP_ID?.trim();
   if (!appId) return null;
+  // The ValueCommerce referral URL for Yahoo!ショッピング, ending in "&vc_url=".
+  const affiliateId = env.YAHOO_VC_AFFILIATE_ID?.trim();
+  if (!affiliateId) {
+    // Without it every Yahoo listing would be a plain link that can still
+    // outrank (and replace) an affiliate one, so Yahoo is left out.
+    if (!env.SHELF_QUIET) console.warn('YAHOO_APP_ID is set but YAHOO_VC_AFFILIATE_ID is not; Yahoo!ショッピング is skipped');
+    return null;
+  }
   return {
     appId,
-    // The ValueCommerce referral URL for Yahoo!ショッピング, ending in "&vc_url=".
-    affiliateId: env.YAHOO_VC_AFFILIATE_ID?.trim() || undefined,
+    affiliateId,
     endpoint: env.YAHOO_ENDPOINT || DEFAULT_ENDPOINT,
   };
 }

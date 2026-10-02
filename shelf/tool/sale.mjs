@@ -15,7 +15,10 @@ export function saleCheck(item) {
     claimed_up_to: Boolean(claimed.upTo),
   };
   if (claimed.coupon) return { ...base, verdict: 'coupon', actual_drop_pct: null };
-  if (!ps.median90 || ps.verdict === 'insufficient_data') return { ...base, verdict: 'unverified', actual_drop_pct: null };
+  // A variant listing's price is its cheapest option, and a price far below
+  // the usual level is more likely an error than a sale: neither can back a
+  // claim either way.
+  if (!ps.median90 || ps.verdict === 'insufficient_data' || item.variants || ps.suspicious) return { ...base, verdict: 'unverified', actual_drop_pct: null };
   const drop = 1 - item.price / ps.median90;
   const dropPct = Math.round(drop * 1000) / 10;
   const claimedPct = claimed.pct ?? (claimed.yen ? (claimed.yen / (item.price + claimed.yen)) * 100 : 0);

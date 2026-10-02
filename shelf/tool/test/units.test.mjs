@@ -12,6 +12,11 @@ test('mass and volume totals from real-looking titles', () => {
   assert.equal(parseQuantity('ミネラルウォーター 2Ｌ 9本', 'volume'), 18000);
   assert.equal(parseQuantity('天然水 500ml×24本×2ケース', 'volume'), 24000);
   assert.equal(parseQuantity('お茶 525ml 24本入', 'volume'), 12600);
+  // Multi-case listings: every case/box count multiplies.
+  assert.equal(parseQuantity('天然水 2L×6本入×2ケース', 'volume'), 24000);
+  assert.equal(parseQuantity('【2ケース】天然水 500ml×24本', 'volume'), 24000);
+  assert.equal(parseQuantity('天然水 2L×9本 2箱', 'volume'), 36000);
+  assert.equal(parseQuantity('天然水 2L 9本×2箱', 'volume'), 36000);
 });
 
 test('ambiguous or variant titles give no quantity', () => {
@@ -24,6 +29,9 @@ test('counts and toilet paper', () => {
   assert.equal(parseQuantity('単3形 アルカリ乾電池 40本', 'count'), 40);
   assert.equal(parseQuantity('アルカリ乾電池 単3 20本×2パック', 'count'), 40);
   assert.equal(parseQuantity('トイレットペーパー 12ロール 50m ダブル', 'paper'), 1200);
+  assert.equal(parseQuantity('単3 20本 2パック', 'count'), 40);
+  assert.equal(parseQuantity('トイレットペーパー 12ロール 8パック 25m ダブル', 'paper'), 4800);
+  assert.equal(parseQuantity('トイレットペーパー 12ロール 25m ダブル 2セット', 'paper'), 1200);
   assert.equal(parseQuantity('トイレットペーパー シングル 100m×12ロール 114mm', 'paper'), 1200);
   assert.equal(parseQuantity('トイレットペーパー 2倍巻き 12ロール', 'paper'), null);
   assert.equal(parseQuantity('トイレットペーパー 12ロール 50m', 'paper'), null);

@@ -45,7 +45,7 @@ export const COMPAT_RULES = [
   {
     id: 'oralb-io',
     brand: 'Braun Oral-B',
-    match: { model: '^IO[A-Z0-9]*', name: '\\biO\\b|iOシリーズ|オーラルB\\s*iO' },
+    match: { model: '^IOM?\\d', name: '(?<![A-Za-z])iO(?![A-Za-z])(?!S)|iOシリーズ|オーラルB\\s*iO' },
     heads: 'oralb-io',
     headCategory: null,
     confidence: 'stated',
@@ -57,7 +57,7 @@ export const COMPAT_RULES = [
   {
     id: 'oralb-sonic-oval',
     brand: 'Braun Oral-B',
-    match: { name: 'ソニック|パルソニック|Pulsonic' },
+    match: { name: '(?<!パナ)ソニック|パルソニック|Pulsonic' },
     heads: 'oralb-oval',
     headCategory: null,
     confidence: 'check',
@@ -83,18 +83,25 @@ export const COMPAT_RULES = [
 
 const clean = (s) => String(s ?? '').normalize('NFKC').trim();
 
-// Rules are tried in order (exceptions first). A model number is matched
-// against `model`; free text (a product name) against `name`.
+// A model number is the strongest evidence, so every rule's `model` pattern
+// is tried first (against the whole input and each word in it); only then
+// the `name` patterns, in order (exceptions first). "エッセンス+ HX3274" is
+// a click-on HX handle, not a legacy Essence.
+const PANASONIC = /パナソニック|Panasonic|ドルツ|Doltz/i;
+
 export function checkCompatibility(input, rules = COMPAT_RULES) {
   const text = clean(input);
   if (!text) return { input: text, rule: null, verdict: 'unknown' };
-  const model = text.toUpperCase().replace(/[\s-]/g, '');
+  const hit = (rule, matchedBy) => ({ input: text, rule: rule.id, heads: rule.heads, headCategory: rule.headCategory, verdict: rule.confidence, matchedBy, source: rule.source });
+  // Other makers' handles are out of scope: say unknown rather than match
+  // a word inside their name.
+  if (PANASONIC.test(text)) return { input: text, rule: null, verdict: 'unknown' };
+  const models = [text, ...text.split(/[\s/,、（）()]+/)].map((w) => w.toUpperCase().replace(/[\s-]/g, '')).filter(Boolean);
   for (const rule of rules) {
-    const byModel = rule.match.model && new RegExp(rule.match.model).test(model);
-    const byName = rule.match.name && new RegExp(rule.match.name, 'i').test(text);
-    if (byModel || byName) {
-      return { input: text, rule: rule.id, heads: rule.heads, headCategory: rule.headCategory, verdict: rule.confidence, matchedBy: byModel ? 'model' : 'name', source: rule.source };
-    }
+    if (rule.match.model && models.some((m) => new RegExp(rule.match.model).test(m))) return hit(rule, 'model');
+  }
+  for (const rule of rules) {
+    if (rule.match.name && new RegExp(rule.match.name, 'i').test(text)) return hit(rule, 'name');
   }
   return { input: text, rule: null, verdict: 'unknown' };
 }

@@ -165,13 +165,22 @@ const LANG_PREFIX = { ja: '', en: 'en/', 'zh-hans': 'zh-hans/', 'zh-hant': 'zh-h
 const xmlEsc = (s) => String(s ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&apos;' })[c]);
 
 async function watchFeed(env, url) {
-  const lang = LANG_PREFIX[url.searchParams.get('lang') || 'ja'] !== undefined ? url.searchParams.get('lang') || 'ja' : 'ja';
+  const asked = (url.searchParams.get('lang') || 'ja').toLowerCase();
+  const lang = Object.hasOwn(LANG_PREFIX, asked) ? asked : 'ja';
   const ids = (url.searchParams.get('ids') || '').split(',').map((s) => s.trim()).filter(Boolean).slice(0, 20);
   const below = Number(url.searchParams.get('below')) || null;
   if (!ids.length) return new Response('ids= is required (comma-separated SHELF item ids)', { status: 400 });
-  const items = (await (await asset(env, `${API_PREFIX}${LANG_PREFIX[lang]}items.json`)).json()).items;
+  let data;
+  try {
+    data = await (await asset(env, `${API_PREFIX}${LANG_PREFIX[lang]}items.json`)).json();
+  } catch {
+    return new Response('price data is unavailable right now', { status: 503, headers: { 'Retry-After': '600', ...CORS } });
+  }
+  const items = data.items || [];
   const base = `${url.origin}/${LANG_PREFIX[lang]}`;
-  const updated = new Date().toISOString();
+  // The data's own timestamp, so readers do not see every entry as new on
+  // each poll; an entry's id changes when its price does.
+  const updated = data.updated_at ? new Date(data.updated_at).toISOString() : new Date().toISOString();
   const entries = ids
     .map((id) => items.find((x) => x.id === id))
     .filter(Boolean)

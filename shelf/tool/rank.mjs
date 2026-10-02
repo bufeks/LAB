@@ -39,17 +39,30 @@ export function hasVariants(name) {
 // Discount the listing claims in its title ("50%OFF", "半額", "2,000円OFF"),
 // read before cleanTitle strips it. Used to check sale claims against the
 // price history: { pct } or { yen }, or null.
-export function claimedDiscount(name) {
-  const t = normalize(name);
+// A coupon is applied at checkout, so the listed price does not include it:
+// it is not a price cut. Coupon phrases are cut out first and the rest of the
+// title is read for real price-cut claims; `coupon: true` means the coupon is
+// the only claim ("半額クーポン"), `withCoupon` that there is one besides a
+// price cut ("30%OFF 10%OFFクーポン").
+const COUPON = /(?:最大)?\s*(?:\d{1,2}\s*[%％]|\d{1,3}(?:,\d{3})*\s*円|半額)\s*(?:OFF|オフ|引き|割引)?\s*クーポン|クーポン.{0,6}?(?:\d{1,2}\s*[%％]|\d{1,3}(?:,\d{3})*\s*円|半額)\s*(?:OFF|オフ|引き)?/gi;
+
+function priceClaim(t) {
   if (/半額/.test(t)) return { pct: 50 };
   const pcts = [...t.matchAll(/(?:最大)?\s*(\d{1,2})\s*[%％]\s*(?:OFF|オフ|引き|割引)/gi)].map((m) => Number(m[1])).filter((n) => n >= 5 && n <= 90);
-  // A coupon discount is applied at checkout, so the listed price does not
-  // include it; it is not a price cut and is reported separately.
-  const coupon = /\d\s*[%％円]\s*(?:OFF|オフ|引き)?\s*クーポン|クーポン.{0,6}\d+\s*[%％円]/i.test(t);
-  if (pcts.length) return { pct: Math.max(...pcts), upTo: /最大/.test(t), ...(coupon ? { coupon: true } : {}) };
+  if (pcts.length) return { pct: Math.max(...pcts), upTo: /最大/.test(t) };
   const yen = [...t.matchAll(/(\d{1,3}(?:,\d{3})*|\d+)\s*円\s*(?:OFF|オフ|引き)/gi)].map((m) => Number(m[1].replace(/,/g, ''))).filter((n) => n >= 100);
-  if (yen.length) return { yen: Math.max(...yen), ...(coupon ? { coupon: true } : {}) };
+  if (yen.length) return { yen: Math.max(...yen) };
   return null;
+}
+
+export function claimedDiscount(name) {
+  const t = normalize(name);
+  const coupons = t.match(COUPON) || [];
+  const price = priceClaim(t.replace(COUPON, ' '));
+  if (price) return { ...price, ...(coupons.length ? { withCoupon: true } : {}) };
+  if (!coupons.length) return null;
+  const c = priceClaim(coupons.join(' ').replace(/クーポン/g, ' OFF ')) || {};
+  return { ...c, upTo: c.upTo || /最大/.test(coupons.join(' ')), coupon: true };
 }
 
 const ALLOWED_MENTION = '(?:付き|付属|付|不要|同梱|対応|モード|入り)';
@@ -149,10 +162,17 @@ export function similarity(a, b) {
   return inter / (A.size + B.size - inter);
 }
 
-function numericSpecsConflict(a, b) {
-  for (const [k, v] of Object.entries(a.facets)) {
-    if (typeof v === 'number' && typeof b.facets[k] === 'number' && v !== b.facets[k]) return true;
+// Stated specs that differ (capacity, ply, ...) or a different pack size
+// ("5kg" vs "10kg", "20本" vs "40本") mean different products, however
+// similar the titles.
+function specsConflict(a, b) {
+  for (const [k, v] of Object.entries(a.facets || {})) {
+    const w = b.facets?.[k];
+    if ((typeof v === 'number' || typeof v === 'string') && typeof w === typeof v && v !== w) return true;
   }
+  const qa = a.unit?.quantity;
+  const qb = b.unit?.quantity;
+  if (qa && qb && qa !== qb) return true;
   return false;
 }
 
@@ -160,7 +180,7 @@ function numericSpecsConflict(a, b) {
 // one, near-identical titles count only when no stated number differs, so
 // "10000mAh" and "20000mAh" versions of one listing stay separate.
 export function sameProduct(a, b) {
-  if (numericSpecsConflict(a, b)) return false;
+  if (specsConflict(a, b)) return false;
   const ma = modelNumbers(a.name);
   const mb = modelNumbers(b.name);
   if (ma.size && mb.size) return [...ma].some((m) => mb.has(m));

@@ -27,6 +27,12 @@ test('sale check compares claims with the item’s own history', () => {
   assert.equal(saleCheck({ price: 100, claimed: null }), null);
   // "Up to 50%" is judged more leniently than a flat "50%".
   assert.equal(at(8500, '最大50%OFF'), 'genuine');
+  // Coupons are not price cuts, but do not hide a real price-cut claim.
+  assert.equal(at(5000, '半額クーポン'), 'coupon');
+  assert.equal(at(7000, '30%OFF 10%OFFクーポン'), 'genuine');
+  // Variant listings and suspicious prices cannot back a claim.
+  assert.equal(saleCheck({ price: 8000, variants: true, claimed: claimedDiscount('20%OFF'), priceStats: stats(10000) }).verdict, 'unverified');
+  assert.equal(saleCheck({ price: 3000, claimed: claimedDiscount('70%OFF'), priceStats: { ...stats(10000), suspicious: true } }).verdict, 'unverified');
 });
 
 test('events: point days by rule, big sales by how many titles mention them', () => {
@@ -44,6 +50,13 @@ test('compatibility follows manufacturer rules, exceptions first, never guesses'
   assert.equal(checkCompatibility('iO9').rule, 'oralb-io');
   assert.equal(checkCompatibility('D305').rule, 'oralb-round');
   assert.equal(checkCompatibility('Panasonic EW-DE55').verdict, 'unknown');
+  // Regressions: "ソニック" inside パナソニック, "io" inside other words, and a
+  // model number beating a name rule.
+  assert.equal(checkCompatibility('パナソニック ドルツ EW-DT72').verdict, 'unknown');
+  assert.equal(checkCompatibility('ionic').verdict, 'unknown');
+  assert.equal(checkCompatibility('iOS').verdict, 'unknown');
+  assert.equal(checkCompatibility('iOM9').rule, 'oralb-io');
+  assert.equal(checkCompatibility('エッセンス+ HX3274').rule, 'sonicare-click-on');
 });
 
 test('hotels: response parsing in both shapes, weekend nights, trends', () => {
@@ -53,6 +66,9 @@ test('hotels: response parsing in both shapes, weekend nights, trends', () => {
   assert.deepEqual(v1.hotels.map((h) => h.price), [12000, 9000]);
   assert.equal(v1.available, 42);
   assert.deepEqual(v2.hotels.map((h) => h.id), ['rt:1', 'rt:2']);
+  // Per-person charges are never mixed in with whole-room totals.
+  const perPerson = [{ hotelBasicInfo: { hotelNo: 3, hotelName: 'H3', hotelMinCharge: 4000 } }, { roomInfo: [{ dailyCharge: { rakutenCharge: 4000 } }] }];
+  assert.deepEqual(parseHotels({ hotels: [hotel(1, 12000), perPerson] }).hotels.map((h) => h.id), ['rt:1']);
   assert.deepEqual(stayDates('2026-10-02', 9), ['2026-10-03', '2026-10-09', '2026-10-10']);
   assert.equal(nightTrend([['a', 10000, 9], ['b', 10000, 8]]).verdict, 'insufficient');
   assert.equal(nightTrend([['a', 10000], ['b', 10000], ['c', 11000]]).verdict, 'rising');
@@ -67,8 +83,10 @@ test('hotels: response parsing in both shapes, weekend nights, trends', () => {
 });
 
 test('books: release dates, series filtering, iCalendar', () => {
-  assert.deepEqual(parseSalesDate('2026年10月04日頃'), { date: '2026-10-04', approx: true, precision: 'day' });
-  assert.deepEqual(parseSalesDate('2026年11月下旬'), { date: '2026-11-01', approx: true, precision: 'late-month' });
+  assert.deepEqual(parseSalesDate('2026年10月04日頃'), { date: '2026-10-04', until: '2026-10-04', approx: true, precision: 'day' });
+  // A period stays upcoming until it ends.
+  assert.deepEqual(parseSalesDate('2026年11月下旬'), { date: '2026-11-21', until: '2026-11-30', approx: true, precision: 'late-month' });
+  assert.deepEqual(parseSalesDate('2027年2月'), { date: '2027-02-01', until: '2027-02-28', approx: true, precision: 'month' });
   assert.equal(parseSalesDate('2027年'), null);
   const kept = filterSeries(
     [{ isbn: '1', title: 'ONE PIECE 112' }, { isbn: '2', title: 'ONE PIECE magazine ガイド' }, { isbn: '1', title: 'ONE PIECE 112' }, { isbn: '3', title: '別の漫画' }],
@@ -80,6 +98,14 @@ test('books: release dates, series filtering, iCalendar', () => {
   assert.match(ics, /DTSTART;VALUE=DATE:20261104\r\nDTEND;VALUE=DATE:20261105/);
   assert.match(ics, /SUMMARY:ONE PIECE 112\\, 特装版/);
   for (const line of ics.split('\r\n')) assert.ok(Buffer.byteLength(line) <= 75, line);
+  // Stable between builds of the same data; long lines fold without
+  // splitting a character.
+  const long = [{ isbn: '9', title: '😀'.repeat(40), sales_date: '2026-11-21', sales_until: '2026-11-30', sales_date_text: '2026年11月下旬', approx: true, publisher: 'x' }];
+  const a = icsCalendar(long, { name: 'S', url: 'u', stamp: '2026-10-02' });
+  assert.equal(a, icsCalendar(long, { name: 'S', url: 'u', stamp: '2026-10-02' }));
+  assert.match(a, /DTEND;VALUE=DATE:20261201/);
+  assert.ok(!a.includes('\uFFFD'));
+  assert.equal(a.replace(/\r\n /g, '').match(/😀/g).length, 40);
 });
 
 test('atom feeds escape text and carry stable entry ids', () => {

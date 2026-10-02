@@ -56,15 +56,23 @@ export function buildBooksUrl(creds, series) {
   return u;
 }
 
-// "2026年10月04日頃" -> { date: '2026-10-04', approx: true, precision: 'day' }
-// "2026年10月" -> month precision (dated the 1st); "2026年" -> null.
+// "2026年10月04日頃" -> { date: '2026-10-04', until: '2026-10-04', approx: true, precision: 'day' }
+// "2026年10月下旬" -> date '2026-10-21' (start of the period), until
+// '2026-10-31' (its end); "2026年" -> null. A volume stays "upcoming" until
+// the end of its stated period has passed.
 export function parseSalesDate(s) {
   const t = String(s || '').normalize('NFKC');
   const d = t.match(/(\d{4})年(\d{1,2})月(\d{1,2})日/);
-  if (d) return { date: `${d[1]}-${d[2].padStart(2, '0')}-${d[3].padStart(2, '0')}`, approx: /頃|予定|以降/.test(t), precision: 'day' };
+  if (d) {
+    const date = `${d[1]}-${d[2].padStart(2, '0')}-${d[3].padStart(2, '0')}`;
+    return { date, until: date, approx: /頃|予定|以降/.test(t), precision: 'day' };
+  }
   const m = t.match(/(\d{4})年(\d{1,2})月/);
-  if (m) return { date: `${m[1]}-${m[2].padStart(2, '0')}-01`, approx: true, precision: /上旬/.test(t) ? 'early-month' : /中旬/.test(t) ? 'mid-month' : /下旬/.test(t) ? 'late-month' : 'month' };
-  return null;
+  if (!m) return null;
+  const ym = `${m[1]}-${m[2].padStart(2, '0')}`;
+  const last = new Date(Date.UTC(Number(m[1]), Number(m[2]), 0)).getUTCDate();
+  const [precision, from, to] = /上旬/.test(t) ? ['early-month', 1, 10] : /中旬/.test(t) ? ['mid-month', 11, 20] : /下旬/.test(t) ? ['late-month', 21, last] : ['month', 1, last];
+  return { date: `${ym}-${String(from).padStart(2, '0')}`, until: `${ym}-${String(to).padStart(2, '0')}`, approx: true, precision };
 }
 
 export function normalizeBook(raw, series) {
@@ -78,6 +86,7 @@ export function normalizeBook(raw, series) {
     publisher: raw.publisherName,
     isbn: raw.isbn,
     sales_date: sd.date,
+    sales_until: sd.until,
     sales_date_text: raw.salesDate,
     approx: sd.approx,
     precision: sd.precision,
@@ -119,6 +128,7 @@ export function sampleSeries(series, today) {
       publisher: 'サンプル出版',
       isbn: `sample-${series.id}-${i}`,
       sales_date: date,
+      sales_until: date,
       sales_date_text: `${date.slice(0, 4)}年${date.slice(5, 7)}月${date.slice(8, 10)}日頃`,
       approx: true,
       precision: 'day',
@@ -132,18 +142,20 @@ export function sampleSeries(series, today) {
 }
 
 // iCalendar (RFC 5545) with one all-day event per upcoming volume.
-export function icsCalendar(books, { name, url }) {
+// DTSTAMP is the data date, so the file only changes when the data does.
+export function icsCalendar(books, { name, url, stamp }) {
   const fold = (line) => {
     const out = [];
-    let s = line;
-    while (Buffer.byteLength(s) > 74) {
-      let i = 74;
-      while (Buffer.byteLength(s.slice(0, i)) > 74) i--;
-      out.push(s.slice(0, i));
-      s = ` ${s.slice(i)}`;
+    let cur = '';
+    for (const ch of line) {
+      if (Buffer.byteLength(cur + ch) > (out.length ? 74 : 75)) {
+        out.push(cur);
+        cur = '';
+      }
+      cur += ch;
     }
-    out.push(s);
-    return out.join('\r\n');
+    out.push(cur);
+    return out.join('\r\n ');
   };
   const escText = (t) => String(t).replace(/\\/g, '\\\\').replace(/[,;]/g, (c) => `\\${c}`).replace(/\n/g, '\\n');
   const day = (d) => d.replace(/-/g, '');
@@ -153,9 +165,10 @@ export function icsCalendar(books, { name, url }) {
     lines.push(
       'BEGIN:VEVENT',
       `UID:${b.isbn}@shelf-books`,
-      `DTSTAMP:${new Date().toISOString().replace(/[-:]/g, '').replace(/\.\d+Z$/, 'Z')}`,
+      `DTSTAMP:${day(stamp || b.sales_date)}T000000Z`,
       `DTSTART;VALUE=DATE:${day(b.sales_date)}`,
-      `DTEND;VALUE=DATE:${day(next(b.sales_date))}`,
+      // "10月下旬" spans the whole period rather than pinning one day.
+      `DTEND;VALUE=DATE:${day(next(b.sales_until || b.sales_date))}`,
       `SUMMARY:${escText(`${b.title}${b.approx ? '（予定）' : ''}`)}`,
       `DESCRIPTION:${escText(`${b.sales_date_text} / ${b.publisher ?? ''}`)}`,
       `URL:${url}`,

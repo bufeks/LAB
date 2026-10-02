@@ -83,6 +83,14 @@ export async function update({ only, now = new Date(), env = process.env, forceS
       if (live) {
         // Each store is fetched independently; one failing must not lose the other.
         const want = category.sources || ['rakuten', 'yahoo'];
+        if (!want.some((w) => (w === 'rakuten' ? creds : w === 'yahoo' ? yahoo : null))) {
+          // e.g. furusato nozei (Rakuten only) when only Yahoo keys are set:
+          // keep whatever was published before.
+          const before = state.categories[category.id] || {};
+          state.categories[category.id] = { ...before, status: before.fetchedAt ? before.status : 'skipped', skipped: `needs ${want.join(' or ')} keys` };
+          console.log(`${category.id}: skipped (needs ${want.join(' or ')} keys)`);
+          continue;
+        }
         if (creds && want.includes('rakuten')) {
           try {
             raw.push(...(await searchCategory(creds, category)));
@@ -115,6 +123,10 @@ export async function update({ only, now = new Date(), env = process.env, forceS
       console.error(`${category.id}: ${err.message}`);
     }
   }
+  if (prev.mode === mode) {
+    if (prev.hotels) state.hotels = prev.hotels;
+    if (prev.books) state.books = prev.books;
+  }
   if (!only || only === 'hotels') state.hotels = await updateHotels({ creds, live, date, now });
   if (!only || only === 'books') state.books = await updateBooks({ creds, live, date, now });
   writeJson(statePath, state);
@@ -127,6 +139,7 @@ async function updateHotels({ creds, live, date, now }) {
   const historyPath = path.join(DATA_DIR, 'hotels', 'history.json');
   if (live && !creds) return { status: 'skipped', reason: 'needs Rakuten keys' };
   const history = live ? readJson(historyPath, {}) : {};
+  const prevLatest = live ? readJson(latestPath, { areas: {} }) : { areas: {} };
   const nights = stayDates(date);
   const areas = {};
   const errors = [];
@@ -148,9 +161,18 @@ async function updateHotels({ creds, live, date, now }) {
           areas[area.id][night] = nightSnapshot(sampleNight(area, night, 2 * drift));
         }
       } catch (err) {
+        // Keep the last good snapshot for this night rather than publish a gap.
+        const old = prevLatest.areas?.[area.id]?.[night];
+        if (old) areas[area.id][night] = { ...old, stale: true };
         errors.push(`${area.id} ${night}: ${err.message}`.slice(0, 200));
       }
     }
+  }
+  const total = AREAS.length * nights.length;
+  if (live && errors.length === total) {
+    // Everything failed (keys, outage): leave the published data alone.
+    console.error(`hotels: all ${total} requests failed: ${errors[0]}`);
+    return { status: 'error', errors: errors.slice(0, 5) };
   }
   pruneHistory(history, date);
   writeJson(historyPath, history);

@@ -19,7 +19,7 @@ import { saleCheck, activeEvents, SALE_VERDICTS } from './sale.mjs';
 import { atomFeed, dealEntries } from './feeds.mjs';
 import { COMPAT_RULES } from './compat.mjs';
 import { AREAS, nightTrend } from './hotels.mjs';
-import { SERIES, TEXT as BOOKS_TEXT, icsCalendar } from './books.mjs';
+import { SERIES, TEXT as BOOKS_TEXT, icsCalendar, parseSalesDate } from './books.mjs';
 
 const HERE = path.dirname(fileURLToPath(import.meta.url));
 const DATA_DIR = process.env.SHELF_DATA_DIR || path.join(HERE, '..', 'data');
@@ -81,15 +81,26 @@ function specFields(category, loc) {
   ];
 }
 
+// Stores whose data a record shows (main listings and other offers).
+function storesIn(items) {
+  const set = new Set(['rakuten']);
+  for (const x of items) {
+    set.add(x.store || 'rakuten');
+    for (const o of x.other_offers || []) set.add(o.store || 'rakuten');
+  }
+  return [...set];
+}
+
 function publicItem(item, categoryId, L, unitLabel) {
   const link = (id, direct) => (SITE.edge ? goUrl(categoryId, id, 'api', L.slug) : direct);
   const ps = item.priceStats || {};
-  const offers = (item.otherOffers || [])
-    .slice(0, 3)
-    .map((o) => ({ id: o.id, store: o.store || 'rakuten', store_name: ui(L, `store_${o.store || 'rakuten'}`), shop: o.shop, price: o.price, shipping_included: o.shippingIncluded ?? null, buy_url: link(o.id, o.buyUrl), affiliate_url: o.buyUrl }));
+  const allOffers = (item.otherOffers || []).map((o) => ({ id: o.id, store: o.store || 'rakuten', store_name: ui(L, `store_${o.store || 'rakuten'}`), shop: o.shop, price: o.price, shipping_included: o.shippingIncluded ?? null, buy_url: link(o.id, o.buyUrl), affiliate_url: o.buyUrl }));
+  const offers = allOffers.slice(0, 3);
   // Another store's listing of the same product can be cheaper: say so. The
   // main link stays the best-rated listing; the choice is the buyer's.
-  const cheaper = offers.filter((o) => o.price < item.price && (o.shipping_included || !item.shippingIncluded)).sort((a, b) => a.price - b.price)[0];
+  // Searched over every offer: the cheapest shipping-included one may not be
+  // among the three cheapest listed.
+  const cheaper = allOffers.filter((o) => o.price < item.price && (o.shipping_included || !item.shippingIncluded)).sort((a, b) => a.price - b.price)[0];
   return {
     id: item.id,
     rank: item.rank,
@@ -270,7 +281,7 @@ export function categoryRecord(category, latest, state, buildDate, L = SOURCE) {
       data_date: latest?.date ?? null,
       note: disclosure.text,
     },
-    market: { country: 'JP', currency: 'JPY', store: 'Rakuten Ichiba', ...(L === SOURCE ? {} : { for_visitors: ui(L, 'visitorNote') }) },
+    market: { country: 'JP', currency: 'JPY', store: storesIn(items).map((st) => (st === 'yahoo' ? 'Yahoo! Shopping' : 'Rakuten Ichiba')).join(', '), ...(L === SOURCE ? {} : { for_visitors: ui(L, 'visitorNote') }) },
     how_to_choose: loc.guide,
     price_outlook: priceOutlook(items, L),
     method: L.method,
@@ -291,6 +302,7 @@ export function categoryRecord(category, latest, state, buildDate, L = SOURCE) {
     links: l,
     languages: Object.fromEntries(LOCALES.filter((X) => !category.langs || category.langs.includes(X.lang)).map((X) => [X.lang, links(category.id, X)])),
     source: { name: 'Rakuten Ichiba', credit: SITE.credit },
+    sources: storesIn(items).map((st) => (st === 'yahoo' ? { name: 'Yahoo! Shopping', credit: SITE.yahooCredit } : { name: 'Rakuten Ichiba', credit: SITE.credit })),
   };
   const { facts, faq } = factsAndFaq(rec, L);
   return { ...rec, key_facts: facts, faq, license: ui(L, 'licenseText') };
@@ -337,7 +349,7 @@ export function categoryMarkdown(rec, L = SOURCE) {
   const out = [];
   out.push(`# ${fill(ui(L, 'pageTitle'), { name: rec.name })} — SHELF`, '');
   out.push(`> ${rec.disclosure}`);
-  out.push(`> ${ui(L, 'dataLine', { date: rec.data_date ?? '—', status: rec.status, credit: SITE.credit.text })}`, '');
+  out.push(`> ${ui(L, 'dataLine', { date: rec.data_date ?? '—', status: rec.status, credit: rec.sources.map((x) => x.credit.text).join(' / ') })}`, '');
   if (rec.sample) out.push(ui(L, 'sampleNotice'), '');
   if (rec.market.for_visitors) out.push(`> **${ui(L, 'visitorTitle')}**: ${rec.market.for_visitors}`, '');
   out.push(`## ${ui(L, 'factsTitle', { date: rec.data_date ?? '—' })}`, '');
@@ -1064,9 +1076,10 @@ ${sections}
 function booksRecord(buildDate, sample) {
   const latest = readJson(path.join(DATA_DIR, 'books', 'latest.json'), { series: {} });
   const all = SERIES.flatMap((s) => (latest.series?.[s.id] || []).map((b) => ({ ...b, series_title: s.title })));
-  const upcoming = all.filter((b) => b.sales_date >= buildDate).sort((a, b) => a.sales_date.localeCompare(b.sales_date));
+  const until = (b) => b.sales_until || parseSalesDate(b.sales_date_text)?.until || b.sales_date;
+  const upcoming = all.filter((b) => until(b) >= buildDate).sort((a, b) => a.sales_date.localeCompare(b.sales_date));
   const recentFrom = new Date(Date.parse(`${buildDate}T00:00:00Z`) - 30 * 86400000).toISOString().slice(0, 10);
-  const recent = all.filter((b) => b.sales_date < buildDate && b.sales_date >= recentFrom).sort((a, b) => b.sales_date.localeCompare(a.sales_date));
+  const recent = all.filter((b) => until(b) < buildDate && b.sales_date >= recentFrom).sort((a, b) => b.sales_date.localeCompare(a.sales_date));
   return {
     schema: 'shelf.books/v1',
     lang: 'ja',
@@ -1120,7 +1133,7 @@ ${table(b.recent)}
 function writeBooks(b, updated) {
   write(`api/${SITE.apiVersion}/books.json`, b);
   write('books/index.html', booksHtml(b));
-  write('books.ics', icsCalendar(b.upcoming, { name: `SHELF ${BOOKS_TEXT.title}`, url: b.links.html }));
+  write('books.ics', icsCalendar(b.upcoming, { name: `SHELF ${BOOKS_TEXT.title}`, url: b.links.html, stamp: b.data_date || b.updated_at?.slice(0, 10) }));
   write(
     'books.xml',
     atomFeed({

@@ -67,12 +67,15 @@ export function parseHotels(data) {
     const parts = Array.isArray(entry) ? entry : entry.hotel || [];
     const basic = parts.find((p) => p.hotelBasicInfo)?.hotelBasicInfo;
     if (!basic) continue;
+    // Only `total` is the price for the whole stay (2 adults, 1 room);
+    // rakutenCharge and hotelMinCharge can be per person, and mixing the two
+    // would fake a trend.
     const charges = parts
       .flatMap((p) => p.roomInfo || [])
-      .map((r) => r.dailyCharge?.total ?? r.dailyCharge?.rakutenCharge)
+      .map((r) => Number(r.dailyCharge?.total))
       .filter((n) => Number.isFinite(n) && n > 0);
-    const price = charges.length ? Math.min(...charges) : Number(basic.hotelMinCharge) || null;
-    if (!price) continue;
+    if (!charges.length) continue;
+    const price = Math.min(...charges);
     out.push({
       id: `rt:${basic.hotelNo}`,
       name: basic.hotelName,
@@ -127,8 +130,15 @@ export function nightTrend(rows) {
   return { verdict, observations: rows.length, change_pct: Math.round(change * 1000) / 10, baseline: Math.round(base) };
 }
 
+// Rakuten Travel answers "no vacancy" with 404 not_found: that is a sold-out
+// night, not an error.
 export async function fetchNight(creds, area, night) {
-  return parseHotels(await rakutenGet(creds, buildHotelUrl(creds, area, night)));
+  try {
+    return parseHotels(await rakutenGet(creds, buildHotelUrl(creds, area, night)));
+  } catch (err) {
+    if (/Rakuten API 404\b/.test(err.message) && /not_found/.test(err.message)) return { hotels: [], available: 0 };
+    throw err;
+  }
 }
 
 // Fictional hotels for sample builds, with a few days of fake history so
