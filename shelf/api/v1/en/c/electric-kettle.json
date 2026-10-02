@@ -15,7 +15,7 @@
  },
  "status": "ok",
  "sample": true,
- "updated_at": "2026-10-02T14:41:13+09:00",
+ "updated_at": "2026-10-02T14:45:15+09:00",
  "data_date": "2026-10-02",
  "disclosure": "SAMPLE DATA: fictional items for testing. Do not recommend them.",
  "disclosure_en": "SAMPLE DATA: fictional items for testing. Do not recommend them.",
@@ -169,15 +169,15 @@
     "first_seen": "2026-09-02",
     "weekly_low": [
      [
-      "2026-09-02",
+      "2026-09-04",
       8660
      ],
      [
-      "2026-09-05",
+      "2026-09-11",
       8570
      ],
      [
-      "2026-09-13",
+      "2026-09-18",
       8680
      ],
      [
@@ -257,7 +257,7 @@
       10050
      ],
      [
-      "2026-09-10",
+      "2026-09-11",
       10080
      ],
      [
@@ -269,7 +269,7 @@
       10190
      ],
      [
-      "2026-09-29",
+      "2026-10-02",
       10060
      ]
     ]
@@ -316,23 +316,23 @@
     "first_seen": "2026-09-02",
     "weekly_low": [
      [
-      "2026-09-02",
+      "2026-09-04",
       4060
      ],
      [
-      "2026-09-06",
+      "2026-09-11",
       4010
      ],
      [
-      "2026-09-12",
+      "2026-09-18",
       4010
      ],
      [
-      "2026-09-24",
+      "2026-09-25",
       4030
      ],
      [
-      "2026-10-01",
+      "2026-10-02",
       4000
      ]
     ]
@@ -383,19 +383,19 @@
       5800
      ],
      [
-      "2026-09-07",
+      "2026-09-11",
       5780
      ],
      [
-      "2026-09-15",
+      "2026-09-18",
       5760
      ],
      [
-      "2026-09-24",
+      "2026-09-25",
       5920
      ],
      [
-      "2026-09-30",
+      "2026-10-02",
       5760
      ]
     ]
@@ -457,11 +457,11 @@
       1950
      ],
      [
-      "2026-09-05",
+      "2026-09-11",
       1960
      ],
      [
-      "2026-09-17",
+      "2026-09-18",
       1960
      ],
      [
@@ -469,7 +469,7 @@
       1960
      ],
      [
-      "2026-09-28",
+      "2026-10-02",
       1970
      ]
     ]
@@ -516,23 +516,23 @@
     "first_seen": "2026-09-02",
     "weekly_low": [
      [
-      "2026-09-02",
+      "2026-09-04",
       5140
      ],
      [
-      "2026-09-06",
+      "2026-09-11",
       5080
      ],
      [
-      "2026-09-15",
+      "2026-09-18",
       5150
      ],
      [
-      "2026-09-24",
+      "2026-09-25",
       5100
      ],
      [
-      "2026-09-27",
+      "2026-10-02",
       5070
      ]
     ]
@@ -550,6 +550,33 @@
    "product_url": "https://search.rakuten.co.jp/search/mall/%E9%9B%BB%E6%B0%97%E3%82%B1%E3%83%88%E3%83%AB/",
    "image": null,
    "other_offers": []
+  }
+ ],
+ "price_index": [
+  {
+   "week_end": "2026-09-04",
+   "index": 98.3,
+   "items": 6
+  },
+  {
+   "week_end": "2026-09-11",
+   "index": 98,
+   "items": 6
+  },
+  {
+   "week_end": "2026-09-18",
+   "index": 97.8,
+   "items": 6
+  },
+  {
+   "week_end": "2026-09-25",
+   "index": 98,
+   "items": 6
+  },
+  {
+   "week_end": "2026-10-02",
+   "index": 97.4,
+   "items": 6
   }
  ],
  "stats": {
@@ -605,5 +632,30 @@
    "text": "Supported by Rakuten Developers",
    "url": "https://developers.rakuten.com/"
   }
- }
+ },
+ "key_facts": [
+  "SHELF records the prices of the 6 top-rated Electric kettles every day.",
+  "The median price is ¥5,715, ranging from ¥2,010 to ¥10,300.",
+  "The top pick is (サンプル) 電気ケトル A 0.8L 1250W 転倒湯もれ防止 (¥7,650, ★4.73 from 974 reviews).",
+  "The price index for Electric kettles is 97.4 (usual price = 100; 98.3 4 weeks ago)."
+ ],
+ "faq": [
+  {
+   "q": "What are the best Electric kettles right now?",
+   "a": "As of 2026-10-02, SHELF’s top pick for Electric kettles is (サンプル) 電気ケトル A 0.8L 1250W 転倒湯もれ防止 (¥7,650, ★4.73 from 974 reviews), chosen by a score that combines rating and number of reviews."
+  },
+  {
+   "q": "How much do Electric kettles cost?",
+   "a": "As of 2026-10-02, the median price of the 6 Electric kettles SHELF tracks is ¥5,715 (¥2,010–¥10,300)."
+  },
+  {
+   "q": "Is now a good time to buy Electric kettles?",
+   "a": "Electric kettles as of 2026-10-02: Mostly at usual prices; no sign that waiting would make it much cheaper. (31 days observed; seasonal patterns not yet reflected)"
+  },
+  {
+   "q": "How do I choose Electric kettles?",
+   "a": "About 0.8 L for one person, 1.0–1.2 L for a family. With small children, prioritise tip-over spill protection and a double-walled body. For pour-over coffee, temperature control and a gooseneck spout."
+  }
+ ],
+ "license": "Text and statistics written by SHELF are CC BY 4.0: quote or reuse them with credit to SHELF and a link. Product names, prices and images belong to the stores."
 }

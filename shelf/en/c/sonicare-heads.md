@@ -7,6 +7,36 @@
 
 > **Buying from outside Japan**: Prices are in Japanese yen, tax included. Most Rakuten Ichiba shops ship only within Japan: from abroad, look for a shop that ships internationally or use a forwarding service. Manufacturer warranties on products bought in Japan are often valid only in Japan.
 
+## Key facts (as of 2026-10-02)
+
+- SHELF records the prices of the 6 top-rated Sonicare brush heads every day.
+- The median price is ¥2,860, ranging from ¥2,070 to ¥4,600.
+- The top pick is (サンプル) ソニッケアー純正替えブラシ D ソニッケアー 純正 ホワイトニング 3本 (¥2,610, ★4.64 from 3,314 reviews).
+- Best value per head: (サンプル) ソニッケアー純正替えブラシ E ソニッケアー 純正 6本 (¥358).
+- The price index for Sonicare brush heads is 97 (usual price = 100; 98.3 4 weeks ago).
+
+## FAQ
+
+### What are the best Sonicare brush heads right now?
+
+As of 2026-10-02, SHELF’s top pick for Sonicare brush heads is (サンプル) ソニッケアー純正替えブラシ D ソニッケアー 純正 ホワイトニング 3本 (¥2,610, ★4.64 from 3,314 reviews), chosen by a score that combines rating and number of reviews.
+
+### How much do Sonicare brush heads cost?
+
+As of 2026-10-02, the median price of the 6 Sonicare brush heads SHELF tracks is ¥2,860 (¥2,070–¥4,600).
+
+### Is now a good time to buy Sonicare brush heads?
+
+Sonicare brush heads as of 2026-10-02: 33% of the top products are cheaper than usual. Not a bad time to buy. (31 days observed; seasonal patterns not yet reflected)
+
+### What is the cheapest way to buy Sonicare brush heads (per head)?
+
+As of 2026-10-02, comparing Sonicare brush heads per head, the cheapest well-rated listing with shipping included is (サンプル) ソニッケアー純正替えブラシ E ソニッケアー 純正 6本 (¥358).
+
+### How do I choose Sonicare brush heads?
+
+Click-on Sonicare brush heads fit most Sonicare rechargeable handles (Philips One and older Essence models are different). Compare by price per head. Replace about every 3 months.
+
 ## Bottom line
 
 - **Best overall**: (サンプル) ソニッケアー純正替えブラシ D ソニッケアー 純正 ホワイトニング 3本 — ¥2,610 ★4.64 (3,314 reviews), price check: Lowest in 31 days observed → [Buy](https://search.rakuten.co.jp/search/mall/%E3%82%BD%E3%83%8B%E3%83%83%E3%82%B1%E3%82%A2%E3%83%BC%20%E6%9B%BF%E3%81%88%E3%83%96%E3%83%A9%E3%82%B7%20%E7%B4%94%E6%AD%A3/)
@@ -54,6 +84,18 @@ Calculated from the size and count in each listing title. Pick-a-variant listing
 | 5 | (サンプル) ソニッケアー純正替えブラシ B ソニッケアー 純正 2本 | ¥2,070 shipping extra | ¥1,035 | ★4.04 (3,945 reviews) | [Rakuten](https://search.rakuten.co.jp/search/mall/%E3%82%BD%E3%83%8B%E3%83%83%E3%82%B1%E3%82%A2%E3%83%BC%20%E6%9B%BF%E3%81%88%E3%83%96%E3%83%A9%E3%82%B7%20%E7%B4%94%E6%AD%A3/) |
 | 6 | (サンプル) ソニッケアー純正替えブラシ F ソニッケアー 純正 1本 | ¥4,600 shipping extra | ¥4,600 | ★4.07 (3,267 reviews) | [Rakuten](https://search.rakuten.co.jp/search/mall/%E3%82%BD%E3%83%8B%E3%83%83%E3%82%B1%E3%82%A2%E3%83%BC%20%E6%9B%BF%E3%81%88%E3%83%96%E3%83%A9%E3%82%B7%20%E7%B4%94%E6%AD%A3/) |
 
+## Price index for Sonicare brush heads (weekly)
+
+For each top-rated item, the week’s lowest price divided by that item’s usual (median) price; the median of those ratios, times 100. Below 100 means cheaper than usual.
+
+| Week ending | Index | Items |
+| --- | --- | --- |
+| 2026-09-04 | 98.3 | 6 |
+| 2026-09-11 | 98.1 | 6 |
+| 2026-09-18 | 97.9 | 6 |
+| 2026-09-25 | 98 | 6 |
+| 2026-10-02 | 97 | 6 |
+
 ## How the ranking works
 
 For each category, up to 60 Rakuten listings are fetched in order of review count and filtered by excluded words, price range and a minimum number of reviews. Listings of the same product by different shops (same model number, or the same specs and a near-identical title) are merged into the best-rated one, with the other shops’ prices kept in other_offers. The rest are ranked by a Bayesian average rating.
@@ -69,3 +111,9 @@ For each category, up to 60 Rakuten listings are fetched in order of review coun
 - All categories: https://bufeks.github.io/LAB/shelf/api/v1/en/index.json
 - OpenAPI: https://bufeks.github.io/LAB/shelf/openapi.json / MCP server: https://bufeks.github.io/LAB/shelf/mcp/server.mjs
 - Languages: [日本語](https://bufeks.github.io/LAB/shelf/c/sonicare-heads.md) · [English](https://bufeks.github.io/LAB/shelf/en/c/sonicare-heads.md) · [简体中文](https://bufeks.github.io/LAB/shelf/zh-hans/c/sonicare-heads.md) · [繁體中文](https://bufeks.github.io/LAB/shelf/zh-hant/c/sonicare-heads.md) · [한국어](https://bufeks.github.io/LAB/shelf/ko/c/sonicare-heads.md)
+
+## How to cite this
+
+SHELF, “Sonicare brush heads: how to choose, and top picks — SHELF” (as of 2026-10-02), https://bufeks.github.io/LAB/shelf/en/c/sonicare-heads/
+
+Text and statistics written by SHELF are CC BY 4.0: quote or reuse them with credit to SHELF and a link. Product names, prices and images belong to the stores.

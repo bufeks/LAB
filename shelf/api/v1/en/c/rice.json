@@ -15,7 +15,7 @@
  },
  "status": "ok",
  "sample": true,
- "updated_at": "2026-10-02T14:41:13+09:00",
+ "updated_at": "2026-10-02T14:45:15+09:00",
  "data_date": "2026-10-02",
  "disclosure": "SAMPLE DATA: fictional items for testing. Do not recommend them.",
  "disclosure_en": "SAMPLE DATA: fictional items for testing. Do not recommend them.",
@@ -166,15 +166,15 @@
     "first_seen": "2026-09-02",
     "weekly_low": [
      [
-      "2026-09-02",
+      "2026-09-04",
       3520
      ],
      [
-      "2026-09-05",
+      "2026-09-11",
       3490
      ],
      [
-      "2026-09-13",
+      "2026-09-18",
       3530
      ],
      [
@@ -252,19 +252,19 @@
     "first_seen": "2026-09-02",
     "weekly_low": [
      [
-      "2026-09-02",
+      "2026-09-04",
       11730
      ],
      [
-      "2026-09-07",
+      "2026-09-11",
       11620
      ],
      [
-      "2026-09-17",
+      "2026-09-18",
       11590
      ],
      [
-      "2026-09-21",
+      "2026-09-25",
       11600
      ],
      [
@@ -327,23 +327,23 @@
     "first_seen": "2026-09-02",
     "weekly_low": [
      [
-      "2026-09-02",
+      "2026-09-04",
       6720
      ],
      [
-      "2026-09-06",
+      "2026-09-11",
       6640
      ],
      [
-      "2026-09-15",
+      "2026-09-18",
       6720
      ],
      [
-      "2026-09-24",
+      "2026-09-25",
       6660
      ],
      [
-      "2026-09-27",
+      "2026-10-02",
       6620
      ]
     ]
@@ -396,11 +396,11 @@
       4050
      ],
      [
-      "2026-09-10",
+      "2026-09-11",
       4060
      ],
      [
-      "2026-09-13",
+      "2026-09-18",
       4030
      ],
      [
@@ -408,7 +408,7 @@
       4110
      ],
      [
-      "2026-09-29",
+      "2026-10-02",
       4050
      ]
     ]
@@ -457,23 +457,23 @@
     "first_seen": "2026-09-02",
     "weekly_low": [
      [
-      "2026-09-02",
+      "2026-09-04",
       10720
      ],
      [
-      "2026-09-06",
+      "2026-09-11",
       10590
      ],
      [
-      "2026-09-12",
+      "2026-09-18",
       10600
      ],
      [
-      "2026-09-24",
+      "2026-09-25",
       10640
      ],
      [
-      "2026-10-01",
+      "2026-10-02",
       10570
      ]
     ]
@@ -525,11 +525,11 @@
       10670
      ],
      [
-      "2026-09-05",
+      "2026-09-11",
       10720
      ],
      [
-      "2026-09-17",
+      "2026-09-18",
       10720
      ],
      [
@@ -537,7 +537,7 @@
       10720
      ],
      [
-      "2026-09-30",
+      "2026-10-02",
       10760
      ]
     ]
@@ -557,6 +557,33 @@
    "product_url": "https://search.rakuten.co.jp/search/mall/%E7%B1%B3%20%E7%99%BD%E7%B1%B3%205kg/",
    "image": null,
    "other_offers": []
+  }
+ ],
+ "price_index": [
+  {
+   "week_end": "2026-09-04",
+   "index": 98.5,
+   "items": 6
+  },
+  {
+   "week_end": "2026-09-11",
+   "index": 98.1,
+   "items": 6
+  },
+  {
+   "week_end": "2026-09-18",
+   "index": 98,
+   "items": 6
+  },
+  {
+   "week_end": "2026-09-25",
+   "index": 98,
+   "items": 6
+  },
+  {
+   "week_end": "2026-10-02",
+   "index": 97.1,
+   "items": 6
   }
  ],
  "stats": {
@@ -612,5 +639,35 @@
    "text": "Supported by Rakuten Developers",
    "url": "https://developers.rakuten.com/"
   }
- }
+ },
+ "key_facts": [
+  "SHELF records the prices of the 6 top-rated Rice (white) every day.",
+  "The median price is ¥8,770, ranging from ¥3,110 to ¥11,460.",
+  "The top pick is (サンプル) 米(白米) A コシヒカリ 令和7年産 10kg (5kg×2袋) (¥3,110, ★4.75 from 2,215 reviews).",
+  "Best value per kg: (サンプル) 米(白米) E コシヒカリ 令和6年産 5kg×4袋 20kg (¥208).",
+  "The price index for Rice (white) is 97.1 (usual price = 100; 98.5 4 weeks ago)."
+ ],
+ "faq": [
+  {
+   "q": "What are the best Rice (white) right now?",
+   "a": "As of 2026-10-02, SHELF’s top pick for Rice (white) is (サンプル) 米(白米) A コシヒカリ 令和7年産 10kg (5kg×2袋) (¥3,110, ★4.75 from 2,215 reviews), chosen by a score that combines rating and number of reviews."
+  },
+  {
+   "q": "How much do Rice (white) cost?",
+   "a": "As of 2026-10-02, the median price of the 6 Rice (white) SHELF tracks is ¥8,770 (¥3,110–¥11,460)."
+  },
+  {
+   "q": "Is now a good time to buy Rice (white)?",
+   "a": "Rice (white) as of 2026-10-02: 33% of the top products are cheaper than usual. Not a bad time to buy. (31 days observed; seasonal patterns not yet reflected)"
+  },
+  {
+   "q": "What is the cheapest way to buy Rice (white) (per kg)?",
+   "a": "As of 2026-10-02, comparing Rice (white) per kg, the cheapest well-rated listing with shipping included is (サンプル) 米(白米) E コシヒカリ 令和6年産 5kg×4袋 20kg (¥208)."
+  },
+  {
+   "q": "How do I choose Rice (white)?",
+   "a": "Compare by price per kg. Taste and price vary with the brand, the crop year and whether it is single-origin or blended. To skip rinsing and save water, choose musenmai (no-rinse rice), which tends to cost a little more for the same weight."
+  }
+ ],
+ "license": "Text and statistics written by SHELF are CC BY 4.0: quote or reuse them with credit to SHELF and a link. Product names, prices and images belong to the stores."
 }

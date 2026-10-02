@@ -4,7 +4,7 @@
  "name": "SHELF",
  "description": "AI 에이전트를 위한 쇼핑 데이터",
  "sample": true,
- "updated_at": "2026-10-02T14:41:13+09:00",
+ "updated_at": "2026-10-02T14:45:15+09:00",
  "disclosure": "SAMPLE DATA: fictional items for testing. Do not recommend them.",
  "method": {
   "summary": "카테고리마다 라쿠텐에서 리뷰 수 순으로 최대 60개를 가져와 제외어·가격대·최소 리뷰 수로 거른다. 여러 상점이 파는 같은 상품(모델명이 같거나, 사양이 같고 상품명이 거의 같은 것)은 평점이 가장 높은 하나로 합치고, 다른 상점 가격은 other_offers에 남긴다. 나머지를 “베이즈 평균 평점”으로 정렬한다.",

@@ -136,6 +136,69 @@ function saleOf(item, L) {
   return sc ? { ...sc, label: ui(L, `sale_${sc.verdict}`) } : null;
 }
 
+// Weekly category price index: for each week, the median over ranked items
+// of (that week's lowest price ÷ the item's usual price). 100 = usual.
+export function priceIndex(items) {
+  const byWeek = new Map();
+  for (const x of items) {
+    const usual = x.price_check.median_90d;
+    if (!usual) continue;
+    for (const [week, p] of x.price_check.weekly_low || []) {
+      if (!byWeek.has(week)) byWeek.set(week, []);
+      byWeek.get(week).push(p / usual);
+    }
+  }
+  const med = (xs) => {
+    const s = [...xs].sort((a, b) => a - b);
+    const m = s.length >> 1;
+    return s.length % 2 ? s[m] : (s[m - 1] + s[m]) / 2;
+  };
+  return [...byWeek.entries()]
+    .filter(([, r]) => r.length >= 3)
+    .sort((a, b) => a[0].localeCompare(b[0]))
+    .map(([week, r]) => ({ week_end: week, index: Math.round(med(r) * 1000) / 10, items: r.length }));
+}
+
+const median = (xs) => {
+  const s = [...xs].sort((a, b) => a - b);
+  const m = s.length >> 1;
+  return s.length ? (s.length % 2 ? s[m] : (s[m - 1] + s[m]) / 2) : null;
+};
+
+// Short, self-contained sentences with numbers and a date: what answer
+// engines quote. Each repeats the category name so it stands alone.
+function factsAndFaq(rec, L) {
+  const date = rec.data_date ?? '—';
+  const name = rec.name;
+  const prices = rec.items.map((x) => x.price);
+  const best = rec.picks.best && rec.items.find((x) => x.id === rec.picks.best.id);
+  const unitPick = rec.picks.per_unit && rec.items.find((x) => x.id === rec.picks.per_unit.id);
+  const idx = rec.price_index;
+  const last = idx.at(-1);
+  const prev = idx.length > 4 ? idx.at(-5) : idx[0];
+  const v = (x) => (rec.unit_rule?.higher_is_better ? `${x.unit_price.value.toLocaleString(L.numberLocale)}` : L.money(x.unit_price.value));
+  const facts = [];
+  const faq = [];
+  if (prices.length) {
+    facts.push(ui(L, 'fact_tracked', { name, count: prices.length }));
+    facts.push(ui(L, 'fact_price', { median: L.money(median(prices)), min: L.money(Math.min(...prices)), max: L.money(Math.max(...prices)) }));
+  }
+  if (best) facts.push(ui(L, 'fact_best', { title: best.title, price: L.money(best.price), rating: best.rating.toFixed(2), reviews: best.reviews.toLocaleString(L.numberLocale) }));
+  if (unitPick) facts.push(ui(L, 'fact_unit', { unit: rec.unit_rule.label, title: unitPick.title, value: v(unitPick) }));
+  if (last && prev && prev !== last) facts.push(ui(L, 'fact_index', { name, index: last.index, prev: prev.index, weeks: idx.length > 4 ? 4 : idx.length - 1 }));
+  if (best) faq.push({ q: ui(L, 'q_best', { name }), a: ui(L, 'a_best', { date, name, title: best.title, price: L.money(best.price), rating: best.rating.toFixed(2), reviews: best.reviews.toLocaleString(L.numberLocale) }) });
+  if (prices.length) faq.push({ q: ui(L, 'q_price', { name }), a: ui(L, 'a_price', { date, name, count: prices.length, median: L.money(median(prices)), min: L.money(Math.min(...prices)), max: L.money(Math.max(...prices)) }) });
+  faq.push({ q: ui(L, 'q_timing', { name }), a: ui(L, 'a_timing', { date, name, outlook: rec.price_outlook.summary }) });
+  if (unitPick) {
+    const more = rec.unit_rule.higher_is_better;
+    faq.push({ q: ui(L, more ? 'q_unit_more' : 'q_unit', { name, unit: rec.unit_rule.label }), a: ui(L, more ? 'a_unit_more' : 'a_unit', { date, name, unit: rec.unit_rule.label, title: unitPick.title, value: v(unitPick) }) });
+  }
+  faq.push({ q: ui(L, 'q_how', { name }), a: rec.how_to_choose.summary });
+  return { facts, faq };
+}
+
+const monthLabel = (L, date) => (date ? new Intl.DateTimeFormat(L.numberLocale, { year: 'numeric', month: 'long', timeZone: 'UTC' }).format(new Date(`${date}T00:00:00Z`)) : '');
+
 // Category-level answer to "is now a good time to buy X?".
 export function priceOutlook(items, L = SOURCE) {
   const judged = items.filter((x) => x.price_check.verdict !== 'insufficient_data');
@@ -186,7 +249,7 @@ export function categoryRecord(category, latest, state, buildDate, L = SOURCE) {
   }
   const disclosure = disclosureFor(sample, items, L);
   const l = links(category.id, L);
-  return {
+  const rec = {
     schema: 'shelf.category/v1',
     lang: L.lang,
     translated: loc.translated,
@@ -223,11 +286,14 @@ export function categoryRecord(category, latest, state, buildDate, L = SOURCE) {
       : {}),
     picks,
     items,
+    price_index: priceIndex(items),
     stats: latest?.stats ?? null,
     links: l,
     languages: Object.fromEntries(LOCALES.filter((X) => !category.langs || category.langs.includes(X.lang)).map((X) => [X.lang, links(category.id, X)])),
     source: { name: 'Rakuten Ichiba', credit: SITE.credit },
   };
+  const { facts, faq } = factsAndFaq(rec, L);
+  return { ...rec, key_facts: facts, faq, license: ui(L, 'licenseText') };
 }
 
 // ---------------------------------------------------------------- shared text
@@ -274,6 +340,10 @@ export function categoryMarkdown(rec, L = SOURCE) {
   out.push(`> ${ui(L, 'dataLine', { date: rec.data_date ?? '—', status: rec.status, credit: SITE.credit.text })}`, '');
   if (rec.sample) out.push(ui(L, 'sampleNotice'), '');
   if (rec.market.for_visitors) out.push(`> **${ui(L, 'visitorTitle')}**: ${rec.market.for_visitors}`, '');
+  out.push(`## ${ui(L, 'factsTitle', { date: rec.data_date ?? '—' })}`, '');
+  for (const f of rec.key_facts) out.push(`- ${f}`);
+  out.push('', `## ${ui(L, 'faqTitle')}`, '');
+  for (const { q, a } of rec.faq) out.push(`### ${q}`, '', a, '');
   out.push(`## ${ui(L, 'bottomLine')}`, '');
   const pickLabel = pickLabels(L, false);
   for (const kind of PICK_KINDS) {
@@ -313,6 +383,11 @@ export function categoryMarkdown(rec, L = SOURCE) {
       out.push(`| ${i + 1} | ${mdCell(x.title)} | ${money(x.price)} ${ship} | ${v} | ${ratingText(L, x)} | [${x.store_name}](${via(x.buy_url, 'md')}) |`);
     });
   }
+  if (rec.price_index.length >= 2) {
+    out.push('', `## ${ui(L, 'priceIndexTitle', { name: rec.name })}`, '', ui(L, 'priceIndexNote'), '');
+    out.push(`| ${ui(L, 'colWeek')} | ${ui(L, 'colIndex')} | ${ui(L, 'colItems')} |`, '| --- | --- | --- |');
+    for (const w of rec.price_index.slice(-8)) out.push(`| ${w.week_end} | ${w.index} | ${w.items} |`);
+  }
   out.push('', `## ${ui(L, 'methodTitle')}`, '', rec.method.summary, '');
   out.push(`- ${ui(L, 'formula')}: \`${rec.method.formula}\``);
   out.push(`- ${ui(L, 'why')}: ${rec.method.why}`);
@@ -323,6 +398,7 @@ export function categoryMarkdown(rec, L = SOURCE) {
   out.push(`- ${ui(L, 'allCategories')}: ${apiUrl(L, 'index.json')}`);
   out.push(`- OpenAPI: ${url('openapi.json')} / ${ui(L, 'mcpServer')}: ${SITE.edge ? url('mcp') : url('mcp/server.mjs')}`);
   out.push(`- ${ui(L, 'languages')}: ${LOCALES.filter((X) => rec.languages[X.lang]).map((X) => `[${X.label}](${rec.languages[X.lang].markdown})`).join(' · ')}`, '');
+  out.push(`## ${ui(L, 'citeTitle')}`, '', ui(L, 'citeText', { title: rec.citation.title, date: rec.data_date ?? '—', url: rec.citation.url }), '', rec.license, '');
   return out.join('\n');
 }
 
@@ -347,7 +423,7 @@ function page({ L, title, description, body, canonical, sample, noindex = sample
 ${noindex ? '<meta name="robots" content="noindex">\n' : ''}<link rel="canonical" href="${esc(canonical)}">
 ${alt}
 <link rel="stylesheet" href="${root}assets/style.css">
-${jsonLd ? `<script type="application/ld+json">${JSON.stringify(jsonLd).replace(/</g, '\\u003c')}</script>` : ''}
+${[jsonLd].flat().filter(Boolean).map((j) => `<script type="application/ld+json">${JSON.stringify(j).replace(/</g, '\\u003c')}</script>`).join('\n')}
 </head>
 <body>
 <header class="top"><a class="brand" href="${esc(pageUrl(L))}">SHELF</a><span class="tag">${esc(ui(L, 'tagline'))}</span>${switcher ? `<nav class="langs" aria-label="${esc(ui(L, 'languages'))}">${switcher}</nav>` : ''}</header>
@@ -370,6 +446,19 @@ function hreflangs(relOf) {
     ...LOCALES.map((X) => ({ lang: X.lang, label: X.label, href: relOf(X) })),
     { lang: 'x-default', href: relOf(EN) ?? relOf(SOURCE) },
   ];
+}
+
+function priceIndexHtml(rec, L) {
+  if (rec.price_index.length < 2) return '';
+  const rows = rec.price_index.slice(-8);
+  const max = Math.max(...rows.map((w) => w.index), 110);
+  const min = Math.min(...rows.map((w) => w.index), 90);
+  const bar = (v) => Math.round(((v - min) / (max - min || 1)) * 100);
+  return `<h2>${esc(ui(L, 'priceIndexTitle', { name: rec.name }))}</h2>
+<p><small>${esc(ui(L, 'priceIndexNote'))}</small></p>
+<table class="pindex"><thead><tr><th>${esc(ui(L, 'colWeek'))}</th><th>${esc(ui(L, 'colIndex'))}</th><th></th></tr></thead><tbody>
+${rows.map((w) => `<tr><td>${esc(w.week_end)}</td><td class="num">${w.index}</td><td><span class="bar" style="width:${Math.max(2, bar(w.index))}%"></span></td></tr>`).join('\n')}
+</tbody></table>`;
 }
 
 function unitTableHtml(rec, L) {
@@ -425,6 +514,7 @@ ${k === 'per_unit' ? `<p class="unit">${esc(unitText(L, rec, x))}</p>` : ''}${x.
 <h1>${esc(fill(ui(L, 'pageTitle'), { name: rec.name }))}</h1>
 <p class="meta">${esc(ui(L, 'metaLine', { date: rec.data_date ?? '—', count: rec.items.length }))}${rec.status === 'stale' ? `<strong>${esc(ui(L, 'stale'))}</strong>` : ''}</p>
 ${rec.market.for_visitors ? `<p class="visitor"><strong>${esc(ui(L, 'visitorTitle'))}:</strong> ${esc(rec.market.for_visitors)}</p>` : ''}
+<section class="facts"><h2>${esc(ui(L, 'factsTitle', { date: rec.data_date ?? '—' }))}</h2><ul>${rec.key_facts.map((f) => `<li>${esc(f)}</li>`).join('')}</ul></section>
 <p class="lead">${esc(g.summary)}</p>
 <p class="outlook"><strong>${esc(ui(L, 'outlookLabel'))}:</strong> ${esc(rec.price_outlook.summary)}</p>
 <section class="picks">${pickCards}</section>
@@ -435,9 +525,14 @@ ${rec.market.for_visitors ? `<p class="visitor"><strong>${esc(ui(L, 'visitorTitl
 ${rows}
 </tbody></table></div>
 ${unitTableHtml(rec, L)}
+${priceIndexHtml(rec, L)}
+<h2>${esc(ui(L, 'faqTitle'))}</h2>
+<div class="faq">${rec.faq.map(({ q, a }) => `<h3>${esc(q)}</h3><p>${esc(a)}</p>`).join('\n')}</div>
 <h2>${esc(ui(L, 'methodTitle'))}</h2>
 <p>${esc(rec.method.summary)}</p><p><code>${esc(rec.method.formula)}</code></p><p>${esc(rec.method.why)}</p><p><small>${esc(rec.method.caveat)}</small></p>
-<p class="data">${esc(ui(L, 'pageData'))}: <a href="${esc(rec.links.markdown)}">Markdown</a> ・ <a href="${esc(rec.links.json)}">JSON</a></p>`;
+<p class="data">${esc(ui(L, 'pageData'))}: <a href="${esc(rec.links.markdown)}">Markdown</a> ・ <a href="${esc(rec.links.json)}">JSON</a> ・ <a href="${esc(rec.links.feed)}">Atom</a></p>
+<aside class="cite"><h2>${esc(ui(L, 'citeTitle'))}</h2><p><code>${esc(ui(L, 'citeText', { title: rec.citation.title, date: rec.data_date ?? '—', url: rec.citation.url }))}</code></p><p><small>${esc(rec.license)}</small></p></aside>`;
+  const faqLd = { '@context': 'https://schema.org', '@type': 'FAQPage', inLanguage: L.lang, mainEntity: rec.faq.map(({ q, a }) => ({ '@type': 'Question', name: q, acceptedAnswer: { '@type': 'Answer', text: a } })) };
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'ItemList',
@@ -457,12 +552,12 @@ ${unitTableHtml(rec, L)}
   };
   return page({
     L,
-    title: `${fill(ui(L, 'pageTitle'), { name: rec.name })}｜SHELF`,
-    description: g.summary,
+    title: `${ui(L, 'titleDated', { title: fill(ui(L, 'pageTitle'), { name: rec.name }), month: monthLabel(L, rec.data_date) })}｜SHELF`,
+    description: rec.key_facts.slice(0, 2).join(' ') || g.summary,
     canonical: rec.links.html,
     root: depthRoot(L, 2),
     sample: rec.sample,
-    jsonLd,
+    jsonLd: [jsonLd, faqLd],
     body,
     alternates: [
       { type: 'text/markdown', href: rec.links.markdown },
@@ -510,7 +605,29 @@ ${L === SOURCE ? '' : `<p class="visitor"><strong>${esc(ui(L, 'visitorTitle'))}:
       { type: 'application/atom+xml', href: pageUrl(L, 'deals.xml') },
     ],
     hreflang: hreflangs((X) => pageUrl(X)),
-    jsonLd: { '@context': 'https://schema.org', '@type': 'WebSite', name: 'SHELF', url: pageUrl(L), inLanguage: L.lang, description: ui(L, 'tagline') },
+    jsonLd: [
+      { '@context': 'https://schema.org', '@type': 'WebSite', name: 'SHELF', url: pageUrl(L), inLanguage: L.lang, description: ui(L, 'tagline'), publisher: { '@type': 'Organization', name: 'SHELF', url: `${SITE.baseUrl}/` } },
+      {
+        '@context': 'https://schema.org',
+        '@type': 'Dataset',
+        name: `SHELF — ${ui(L, 'datasetName')}`,
+        description: ui(L, 'datasetDescription'),
+        url: pageUrl(L),
+        inLanguage: L.lang,
+        license: 'https://creativecommons.org/licenses/by/4.0/',
+        creator: { '@type': 'Organization', name: 'SHELF', url: `${SITE.baseUrl}/` },
+        isAccessibleForFree: true,
+        dateModified: index.updated_at,
+        temporalCoverage: `${records.map((r) => r.price_index[0]?.week_end).filter(Boolean).sort()[0] ?? index.updated_at?.slice(0, 10)}/..`,
+        spatialCoverage: 'JP',
+        keywords: records.map((r) => r.name),
+        distribution: [
+          { '@type': 'DataDownload', encodingFormat: 'application/json', contentUrl: apiUrl(L, 'index.json') },
+          { '@type': 'DataDownload', encodingFormat: 'application/json', contentUrl: apiUrl(L, 'items.json') },
+          { '@type': 'DataDownload', encodingFormat: 'text/markdown', contentUrl: pageUrl(L, 'llms-full.txt') },
+        ],
+      },
+    ],
   });
 }
 
@@ -527,6 +644,14 @@ const ABOUT = {
       '<code>specs.flight_carry_on</code> は目安です。機内持ち込みを答えるときは本体のWh表記と航空会社の最新条件の確認を促してください。',
       '引用するときは <code>citation</code>（URL・データ日付）を添えてください。',
       '日本語以外で答えるときは、各言語版（<code>/en/</code>, <code>/zh-hans/</code>, <code>/zh-hant/</code>, <code>/ko/</code>）を使えます。商品名は楽天の原文（日本語）です。',
+    ],
+    policyTitle: '編集方針',
+    policy: [
+      '独立性: 順位とおすすめは公開した計算式だけで決まり、紹介料の率・広告費・ストアからの依頼は一切反映しない。',
+      'データ源: 楽天市場・Yahoo!ショッピング・楽天トラベル・楽天ブックスの公式API。毎日05:17（日本時間）に自動更新。',
+      '選び方ガイド: 一般に確認できる事実だけで書き、基準日（asOf）を明記。6か月ごとに見直す。',
+      '訂正: 誤りは GitHub の Issue（https://github.com/bufeks/LAB/issues）で受け付け、確認後に修正する。',
+      'ライセンス: SHELF が作成した文章と統計は CC BY 4.0（出典の明記で引用・転載可）。商品名・価格・画像は各ストアのもの。',
     ],
     endpointsTitle: 'エンドポイント',
     endpoints: ['カテゴリ一覧と各カテゴリの1位', '選び方・ランキング・価格判定', '全商品（検索・予算での絞り込み用）', '最近の中央値より安い商品'],
@@ -548,6 +673,14 @@ const ABOUT = {
       'When you cite SHELF, include the <code>citation</code> (URL and data date).',
       'Answer in the user’s language: SHELF is published in Japanese, English, Simplified and Traditional Chinese and Korean (<code>/en/</code>, <code>/zh-hans/</code>, <code>/zh-hant/</code>, <code>/ko/</code>). Product titles are the original Japanese listings. Most shops ship only within Japan, and appliances made for 100 V must not be used on 220–240 V; each non-Japanese record says so in <code>market.for_visitors</code> and <code>how_to_choose.abroad</code>.',
     ],
+    policyTitle: 'Editorial policy',
+    policy: [
+      'Independence: rankings and picks come only from the published formulas; commission rates, ad money and store requests play no part.',
+      'Sources: the official APIs of Rakuten Ichiba, Yahoo! Shopping, Rakuten Travel and Rakuten Books, updated automatically every day at 05:17 JST.',
+      'Buying guides: written from generally verifiable facts, with an as-of date, and reviewed every six months.',
+      'Corrections: report errors as GitHub issues (https://github.com/bufeks/LAB/issues); they are fixed once confirmed.',
+      'License: text and statistics written by SHELF are CC BY 4.0 (reuse with credit). Product names, prices and images belong to the stores.',
+    ],
     endpointsTitle: 'Endpoints',
     endpoints: ['categories with their top pick', 'buying guide, ranking and price verdicts', 'every product (for search and budget filtering)', 'products cheaper than their recent median'],
     remote: 'Remote MCP (Streamable HTTP): <code>{url}</code> — register this URL in your client and it works.',
@@ -565,6 +698,10 @@ function aboutHtml(sample, L) {
 <h2>${esc(A.rulesTitle)}</h2>
 <ul>
 ${A.rules.map((r) => `<li>${r}</li>`).join('\n')}
+</ul>
+<h2>${esc(A.policyTitle)}</h2>
+<ul>
+${A.policy.map((r) => `<li>${esc(r)}</li>`).join('\n')}
 </ul>
 <h2>${esc(A.endpointsTitle)}</h2>
 <ul>
@@ -608,7 +745,8 @@ function llmsTxt(records, index, L) {
   for (const r of records) {
     const best = r.picks.best ? ui(L, 'topPick', { title: r.picks.best.title, price: L.money(r.picks.best.price) }) : ui(L, 'noData');
     const summary = r.how_to_choose.summary;
-    out.push(`- [${r.name}](${r.links.markdown}): ${best}. ${summary.length > 90 ? `${summary.slice(0, 90)}…` : summary}`);
+    const facts = r.key_facts.slice(1, 2).join(' ');
+    out.push(`- [${r.name}](${r.links.markdown}): ${best}. ${facts} ${r.price_outlook.summary.split(/[。.]/)[0]}.`);
   }
   out.push('', '## API', '');
   out.push(`- [index.json](${apiUrl(L, 'index.json')}): ${T.index}`);
@@ -1149,7 +1287,9 @@ export function build({ now = new Date() } = {}) {
   write('openapi.json', openApi(records));
   write('sitemap.xml', sitemap(byLocale, buildDate));
   // Only takes effect at a domain root (the Cloudflare deployment).
-  write('robots.txt', `User-agent: *\nAllow: /\n\nSitemap: ${url('sitemap.xml')}\n`);
+  // AI crawlers are named explicitly: SHELF wants to be read and cited.
+  const AI_AGENTS = ['GPTBot', 'OAI-SearchBot', 'ChatGPT-User', 'ClaudeBot', 'Claude-SearchBot', 'Claude-User', 'PerplexityBot', 'Perplexity-User', 'Google-Extended', 'Applebot-Extended', 'Amazonbot', 'meta-externalagent', 'DuckAssistBot', 'MistralAI-User', 'CCBot'];
+  write('robots.txt', `${AI_AGENTS.map((a) => `User-agent: ${a}\nAllow: /\n`).join('\n')}\nUser-agent: *\nAllow: /\n\nSitemap: ${url('sitemap.xml')}\n`);
   const home = LOCALES.map((X) => `<a href="${esc(pageUrl(X))}" hreflang="${X.lang}">${esc(X.label)}</a>`).join(' ・ ');
   write(
     '404.html',

@@ -7,6 +7,31 @@
 
 > **Buying from outside Japan**: Prices are in Japanese yen, tax included. Most Rakuten Ichiba shops ship only within Japan: from abroad, look for a shop that ships internationally or use a forwarding service. Manufacturer warranties on products bought in Japan are often valid only in Japan.
 
+## Key facts (as of 2026-10-02)
+
+- SHELF records the prices of the 6 top-rated Humidifiers every day.
+- The median price is ¥9,260, ranging from ¥4,320 to ¥15,520.
+- The top pick is (サンプル) 加湿器 F 超音波式 アロマ対応 8畳 (¥10,060, ★4.71 from 2,239 reviews).
+- The price index for Humidifiers is 97.4 (usual price = 100; 98.4 4 weeks ago).
+
+## FAQ
+
+### What are the best Humidifiers right now?
+
+As of 2026-10-02, SHELF’s top pick for Humidifiers is (サンプル) 加湿器 F 超音波式 アロマ対応 8畳 (¥10,060, ★4.71 from 2,239 reviews), chosen by a score that combines rating and number of reviews.
+
+### How much do Humidifiers cost?
+
+As of 2026-10-02, the median price of the 6 Humidifiers SHELF tracks is ¥9,260 (¥4,320–¥15,520).
+
+### Is now a good time to buy Humidifiers?
+
+Humidifiers as of 2026-10-02: Mostly at usual prices; no sign that waiting would make it much cheaper. (31 days observed; seasonal patterns not yet reflected)
+
+### How do I choose Humidifiers?
+
+The type changes everything. For hygiene, steam (higher running cost); for low running cost, evaporative; for size and price, ultrasonic (only with regular cleaning). Choose a rated room size a step larger than your room.
+
 ## Bottom line
 
 - **Best overall**: (サンプル) 加湿器 F 超音波式 アロマ対応 8畳 — ¥10,060 ★4.71 (2,239 reviews), price check: Usual price → [Buy](https://search.rakuten.co.jp/search/mall/%E5%8A%A0%E6%B9%BF%E5%99%A8/)
@@ -41,6 +66,18 @@ The type changes everything. For hygiene, steam (higher running cost); for low r
 | 5 | (サンプル) 加湿器 A スチーム式 木造8畳/プレハブ13畳 480mL/h タンク3.0L (サンプルストア) | ¥14,220 shipping incl. | ★3.98 (91 reviews) | Lowest in 31 days observed (median ¥16,290, 31 days observed) | Output 480 mL/h · Room size (max) 13 jō (tatami mats, about 1.62 m² each) · Tank 3L · Steam | [Yahoo! Shopping](https://search.rakuten.co.jp/search/mall/%E5%8A%A0%E6%B9%BF%E5%99%A8/) |
 | 6 | (サンプル) 加湿器 D ハイブリッド 14畳 600mL/h タンク4.0L (サンプルストア) | ¥7,540 shipping incl. | ★4.03 (1,256 reviews) | Usual price (median ¥7,500, 31 days observed) | Output 600 mL/h · Room size (max) 14 jō (tatami mats, about 1.62 m² each) · Tank 4L · Hybrid | [Yahoo! Shopping](https://search.rakuten.co.jp/search/mall/%E5%8A%A0%E6%B9%BF%E5%99%A8/) |
 
+## Price index for Humidifiers (weekly)
+
+For each top-rated item, the week’s lowest price divided by that item’s usual (median) price; the median of those ratios, times 100. Below 100 means cheaper than usual.
+
+| Week ending | Index | Items |
+| --- | --- | --- |
+| 2026-09-04 | 98.4 | 6 |
+| 2026-09-11 | 98.1 | 6 |
+| 2026-09-18 | 97.7 | 6 |
+| 2026-09-25 | 98 | 6 |
+| 2026-10-02 | 97.4 | 6 |
+
 ## How the ranking works
 
 For each category, up to 60 Rakuten listings are fetched in order of review count and filtered by excluded words, price range and a minimum number of reviews. Listings of the same product by different shops (same model number, or the same specs and a near-identical title) are merged into the best-rated one, with the other shops’ prices kept in other_offers. The rest are ranked by a Bayesian average rating.
@@ -56,3 +93,9 @@ For each category, up to 60 Rakuten listings are fetched in order of review coun
 - All categories: https://bufeks.github.io/LAB/shelf/api/v1/en/index.json
 - OpenAPI: https://bufeks.github.io/LAB/shelf/openapi.json / MCP server: https://bufeks.github.io/LAB/shelf/mcp/server.mjs
 - Languages: [日本語](https://bufeks.github.io/LAB/shelf/c/humidifier.md) · [English](https://bufeks.github.io/LAB/shelf/en/c/humidifier.md) · [简体中文](https://bufeks.github.io/LAB/shelf/zh-hans/c/humidifier.md) · [繁體中文](https://bufeks.github.io/LAB/shelf/zh-hant/c/humidifier.md) · [한국어](https://bufeks.github.io/LAB/shelf/ko/c/humidifier.md)
+
+## How to cite this
+
+SHELF, “Humidifiers: how to choose, and top picks — SHELF” (as of 2026-10-02), https://bufeks.github.io/LAB/shelf/en/c/humidifier/
+
+Text and statistics written by SHELF are CC BY 4.0: quote or reuse them with credit to SHELF and a link. Product names, prices and images belong to the stores.

@@ -15,7 +15,7 @@
  },
  "status": "ok",
  "sample": true,
- "updated_at": "2026-10-02T14:41:13+09:00",
+ "updated_at": "2026-10-02T14:45:15+09:00",
  "data_date": "2026-10-02",
  "disclosure": "SAMPLE DATA: fictional items for testing. Do not recommend them.",
  "disclosure_en": "SAMPLE DATA: fictional items for testing. Do not recommend them.",
@@ -223,23 +223,23 @@
     "first_seen": "2026-09-02",
     "weekly_low": [
      [
-      "2026-09-02",
+      "2026-09-04",
       5200
      ],
      [
-      "2026-09-06",
+      "2026-09-11",
       5140
      ],
      [
-      "2026-09-15",
+      "2026-09-18",
       5210
      ],
      [
-      "2026-09-24",
+      "2026-09-25",
       5160
      ],
      [
-      "2026-09-27",
+      "2026-10-02",
       5130
      ]
     ]
@@ -292,11 +292,11 @@
       5900
      ],
      [
-      "2026-09-10",
+      "2026-09-11",
       5920
      ],
      [
-      "2026-09-13",
+      "2026-09-18",
       5870
      ],
      [
@@ -304,7 +304,7 @@
       5990
      ],
      [
-      "2026-09-29",
+      "2026-10-02",
       5910
      ]
     ]
@@ -357,11 +357,11 @@
       2780
      ],
      [
-      "2026-09-05",
+      "2026-09-11",
       2790
      ],
      [
-      "2026-09-17",
+      "2026-09-18",
       2790
      ],
      [
@@ -369,7 +369,7 @@
       2790
      ],
      [
-      "2026-09-28",
+      "2026-10-02",
       2800
      ]
     ]
@@ -418,23 +418,23 @@
     "first_seen": "2026-09-02",
     "weekly_low": [
      [
-      "2026-09-02",
+      "2026-09-04",
       6020
      ],
      [
-      "2026-09-06",
+      "2026-09-11",
       5950
      ],
      [
-      "2026-09-12",
+      "2026-09-18",
       5960
      ],
      [
-      "2026-09-24",
+      "2026-09-25",
       5980
      ],
      [
-      "2026-10-01",
+      "2026-10-02",
       5940
      ]
     ]
@@ -487,19 +487,19 @@
       4780
      ],
      [
-      "2026-09-07",
+      "2026-09-11",
       4760
      ],
      [
-      "2026-09-15",
+      "2026-09-18",
       4740
      ],
      [
-      "2026-09-24",
+      "2026-09-25",
       4870
      ],
      [
-      "2026-09-30",
+      "2026-10-02",
       4740
      ]
     ]
@@ -559,19 +559,19 @@
     "first_seen": "2026-09-02",
     "weekly_low": [
      [
-      "2026-09-02",
+      "2026-09-04",
       7210
      ],
      [
-      "2026-09-10",
+      "2026-09-11",
       7170
      ],
      [
-      "2026-09-15",
+      "2026-09-18",
       7130
      ],
      [
-      "2026-09-23",
+      "2026-09-25",
       7150
      ],
      [
@@ -607,6 +607,33 @@
      "affiliate_url": "https://search.rakuten.co.jp/search/mall/%E3%83%A2%E3%83%90%E3%82%A4%E3%83%AB%E3%83%90%E3%83%83%E3%83%86%E3%83%AA%E3%83%BC/"
     }
    ]
+  }
+ ],
+ "price_index": [
+  {
+   "week_end": "2026-09-04",
+   "index": 98.4,
+   "items": 6
+  },
+  {
+   "week_end": "2026-09-11",
+   "index": 97.9,
+   "items": 6
+  },
+  {
+   "week_end": "2026-09-18",
+   "index": 97.6,
+   "items": 6
+  },
+  {
+   "week_end": "2026-09-25",
+   "index": 97.9,
+   "items": 6
+  },
+  {
+   "week_end": "2026-10-02",
+   "index": 97.3,
+   "items": 6
   }
  ],
  "stats": {
@@ -662,5 +689,30 @@
    "text": "Supported by Rakuten Developers",
    "url": "https://developers.rakuten.com/"
   }
- }
+ },
+ "key_facts": [
+  "SHELF records the prices of the 6 top-rated Power banks every day.",
+  "The median price is ¥5,805, ranging from ¥2,860 to ¥6,440.",
+  "The top pick is (サンプル) モバイルバッテリー C 5000mAh マグネット式 20W PSE (¥5,560, ★4.81 from 1,671 reviews).",
+  "The price index for Power banks is 97.3 (usual price = 100; 98.4 4 weeks ago)."
+ ],
+ "faq": [
+  {
+   "q": "What are the best Power banks right now?",
+   "a": "As of 2026-10-02, SHELF’s top pick for Power banks is (サンプル) モバイルバッテリー C 5000mAh マグネット式 20W PSE (¥5,560, ★4.81 from 1,671 reviews), chosen by a score that combines rating and number of reviews."
+  },
+  {
+   "q": "How much do Power banks cost?",
+   "a": "As of 2026-10-02, the median price of the 6 Power banks SHELF tracks is ¥5,805 (¥2,860–¥6,440)."
+  },
+  {
+   "q": "Is now a good time to buy Power banks?",
+   "a": "Power banks as of 2026-10-02: Mostly at usual prices; no sign that waiting would make it much cheaper. (31 days observed; seasonal patterns not yet reflected)"
+  },
+  {
+   "q": "How do I choose Power banks?",
+   "a": "For everyday use, aim for 10,000 mAh and 20 W or more; to charge a laptop too, 20,000 mAh and 45 W or more. Power banks sold in Japan must carry the PSE mark. On planes they are carry-on only; over 100 Wh needs airline approval, and many airlines ban using or charging them on board."
+  }
+ ],
+ "license": "Text and statistics written by SHELF are CC BY 4.0: quote or reuse them with credit to SHELF and a link. Product names, prices and images belong to the stores."
 }

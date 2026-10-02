@@ -7,6 +7,36 @@
 
 > **Buying from outside Japan**: Prices are in Japanese yen, tax included. Most Rakuten Ichiba shops ship only within Japan: from abroad, look for a shop that ships internationally or use a forwarding service. Manufacturer warranties on products bought in Japan are often valid only in Japan.
 
+## Key facts (as of 2026-10-02)
+
+- SHELF records the prices of the 6 top-rated Bottled water (by the case) every day.
+- The median price is ¥4,430, ranging from ¥1,340 to ¥6,200.
+- The top pick is (サンプル) ミネラルウォーター(箱買い) A 天然水 2L×9本 硬度30 (¥1,340, ★4.82 from 2,907 reviews).
+- Best value per L: (サンプル) ミネラルウォーター(箱買い) A 天然水 2L×9本 硬度30 (¥74).
+- The price index for Bottled water (by the case) is 97.2 (usual price = 100; 98.5 4 weeks ago).
+
+## FAQ
+
+### What are the best Bottled water (by the case) right now?
+
+As of 2026-10-02, SHELF’s top pick for Bottled water (by the case) is (サンプル) ミネラルウォーター(箱買い) A 天然水 2L×9本 硬度30 (¥1,340, ★4.82 from 2,907 reviews), chosen by a score that combines rating and number of reviews.
+
+### How much do Bottled water (by the case) cost?
+
+As of 2026-10-02, the median price of the 6 Bottled water (by the case) SHELF tracks is ¥4,430 (¥1,340–¥6,200).
+
+### Is now a good time to buy Bottled water (by the case)?
+
+Bottled water (by the case) as of 2026-10-02: 33% of the top products are cheaper than usual. Not a bad time to buy. (31 days observed; seasonal patterns not yet reflected)
+
+### What is the cheapest way to buy Bottled water (by the case) (per L)?
+
+As of 2026-10-02, comparing Bottled water (by the case) per L, the cheapest well-rated listing with shipping included is (サンプル) ミネラルウォーター(箱買い) A 天然水 2L×9本 硬度30 (¥74).
+
+### How do I choose Bottled water (by the case)?
+
+Compare by price per litre. For everyday drinking and cooking, soft water; for more of a mineral taste, medium-hard to hard water. Water is heavy, so whether shipping is included changes the real price a lot.
+
 ## Bottom line
 
 - **Best overall**: (サンプル) ミネラルウォーター(箱買い) A 天然水 2L×9本 硬度30 — ¥1,340 ★4.82 (2,907 reviews), price check: Lowest in 31 days observed → [Buy](https://search.rakuten.co.jp/search/mall/%E3%83%9F%E3%83%8D%E3%83%A9%E3%83%AB%E3%82%A6%E3%82%A9%E3%83%BC%E3%82%BF%E3%83%BC%202L%20%E7%AE%B1/)
@@ -52,6 +82,18 @@ Calculated from the size and count in each listing title. Pick-a-variant listing
 | 5 | (サンプル) ミネラルウォーター(箱買い) D 硬度300 2L×6本 | ¥3,950 shipping extra | ¥329 | ★4.79 (465 reviews) | [Rakuten](https://search.rakuten.co.jp/search/mall/%E3%83%9F%E3%83%8D%E3%83%A9%E3%83%AB%E3%82%A6%E3%82%A9%E3%83%BC%E3%82%BF%E3%83%BC%202L%20%E7%AE%B1/) |
 | 6 | (サンプル) ミネラルウォーター(箱買い) B 天然水 500ml×24本 硬度60 | ¥6,190 shipping extra | ¥516 | ★4.40 (1,528 reviews) | [Rakuten](https://search.rakuten.co.jp/search/mall/%E3%83%9F%E3%83%8D%E3%83%A9%E3%83%AB%E3%82%A6%E3%82%A9%E3%83%BC%E3%82%BF%E3%83%BC%202L%20%E7%AE%B1/) |
 
+## Price index for Bottled water (by the case) (weekly)
+
+For each top-rated item, the week’s lowest price divided by that item’s usual (median) price; the median of those ratios, times 100. Below 100 means cheaper than usual.
+
+| Week ending | Index | Items |
+| --- | --- | --- |
+| 2026-09-04 | 98.5 | 6 |
+| 2026-09-11 | 98.1 | 6 |
+| 2026-09-18 | 98 | 6 |
+| 2026-09-25 | 98 | 6 |
+| 2026-10-02 | 97.2 | 6 |
+
 ## How the ranking works
 
 For each category, up to 60 Rakuten listings are fetched in order of review count and filtered by excluded words, price range and a minimum number of reviews. Listings of the same product by different shops (same model number, or the same specs and a near-identical title) are merged into the best-rated one, with the other shops’ prices kept in other_offers. The rest are ranked by a Bayesian average rating.
@@ -67,3 +109,9 @@ For each category, up to 60 Rakuten listings are fetched in order of review coun
 - All categories: https://bufeks.github.io/LAB/shelf/api/v1/en/index.json
 - OpenAPI: https://bufeks.github.io/LAB/shelf/openapi.json / MCP server: https://bufeks.github.io/LAB/shelf/mcp/server.mjs
 - Languages: [日本語](https://bufeks.github.io/LAB/shelf/c/mineral-water.md) · [English](https://bufeks.github.io/LAB/shelf/en/c/mineral-water.md) · [简体中文](https://bufeks.github.io/LAB/shelf/zh-hans/c/mineral-water.md) · [繁體中文](https://bufeks.github.io/LAB/shelf/zh-hant/c/mineral-water.md) · [한국어](https://bufeks.github.io/LAB/shelf/ko/c/mineral-water.md)
+
+## How to cite this
+
+SHELF, “Bottled water (by the case): how to choose, and top picks — SHELF” (as of 2026-10-02), https://bufeks.github.io/LAB/shelf/en/c/mineral-water/
+
+Text and statistics written by SHELF are CC BY 4.0: quote or reuse them with credit to SHELF and a link. Product names, prices and images belong to the stores.

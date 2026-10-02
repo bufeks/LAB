@@ -15,7 +15,7 @@
  },
  "status": "ok",
  "sample": true,
- "updated_at": "2026-10-02T14:41:13+09:00",
+ "updated_at": "2026-10-02T14:45:15+09:00",
  "data_date": "2026-10-02",
  "disclosure": "SAMPLE DATA: fictional items for testing. Do not recommend them.",
  "disclosure_en": "SAMPLE DATA: fictional items for testing. Do not recommend them.",
@@ -190,11 +190,11 @@
       4060
      ],
      [
-      "2026-09-10",
+      "2026-09-11",
       4070
      ],
      [
-      "2026-09-13",
+      "2026-09-18",
       4040
      ],
      [
@@ -202,7 +202,7 @@
       4120
      ],
      [
-      "2026-09-29",
+      "2026-10-02",
       4060
      ]
     ]
@@ -254,11 +254,11 @@
       3010
      ],
      [
-      "2026-09-05",
+      "2026-09-11",
       3030
      ],
      [
-      "2026-09-17",
+      "2026-09-18",
       3030
      ],
      [
@@ -266,7 +266,7 @@
       3030
      ],
      [
-      "2026-09-28",
+      "2026-10-02",
       3040
      ]
     ]
@@ -314,19 +314,19 @@
     "first_seen": "2026-09-02",
     "weekly_low": [
      [
-      "2026-09-02",
+      "2026-09-04",
       7210
      ],
      [
-      "2026-09-07",
+      "2026-09-11",
       7150
      ],
      [
-      "2026-09-17",
+      "2026-09-18",
       7120
      ],
      [
-      "2026-09-21",
+      "2026-09-25",
       7130
      ],
      [
@@ -389,23 +389,23 @@
     "first_seen": "2026-09-02",
     "weekly_low": [
      [
-      "2026-09-02",
+      "2026-09-04",
       4130
      ],
      [
-      "2026-09-06",
+      "2026-09-11",
       4090
      ],
      [
-      "2026-09-12",
+      "2026-09-18",
       4090
      ],
      [
-      "2026-09-24",
+      "2026-09-25",
       4100
      ],
      [
-      "2026-10-01",
+      "2026-10-02",
       4080
      ]
     ]
@@ -453,19 +453,19 @@
     "first_seen": "2026-09-02",
     "weekly_low": [
      [
-      "2026-09-02",
+      "2026-09-04",
       4740
      ],
      [
-      "2026-09-10",
+      "2026-09-11",
       4720
      ],
      [
-      "2026-09-15",
+      "2026-09-18",
       4690
      ],
      [
-      "2026-09-23",
+      "2026-09-25",
       4710
      ],
      [
@@ -528,23 +528,23 @@
     "first_seen": "2026-09-02",
     "weekly_low": [
      [
-      "2026-09-02",
+      "2026-09-04",
       5100
      ],
      [
-      "2026-09-06",
+      "2026-09-11",
       5040
      ],
      [
-      "2026-09-15",
+      "2026-09-18",
       5100
      ],
      [
-      "2026-09-24",
+      "2026-09-25",
       5060
      ],
      [
-      "2026-09-27",
+      "2026-10-02",
       5020
      ]
     ]
@@ -564,6 +564,33 @@
    "product_url": "https://search.rakuten.co.jp/search/mall/%E3%82%B3%E3%83%BC%E3%83%92%E3%83%BC%E8%B1%86/",
    "image": null,
    "other_offers": []
+  }
+ ],
+ "price_index": [
+  {
+   "week_end": "2026-09-04",
+   "index": 98.4,
+   "items": 6
+  },
+  {
+   "week_end": "2026-09-11",
+   "index": 98.1,
+   "items": 6
+  },
+  {
+   "week_end": "2026-09-18",
+   "index": 97.8,
+   "items": 6
+  },
+  {
+   "week_end": "2026-09-25",
+   "index": 98.1,
+   "items": 6
+  },
+  {
+   "week_end": "2026-10-02",
+   "index": 97,
+   "items": 6
   }
  ],
  "stats": {
@@ -619,5 +646,35 @@
    "text": "Supported by Rakuten Developers",
    "url": "https://developers.rakuten.com/"
   }
- }
+ },
+ "key_facts": [
+  "SHELF records the prices of the 6 top-rated Coffee beans every day.",
+  "The median price is ¥4,305, ranging from ¥3,100 to ¥6,370.",
+  "The top pick is (サンプル) コーヒー豆 E 深煎り 2kg 豆 (¥4,160, ★4.57 from 1,069 reviews).",
+  "Best value per 100 g: (サンプル) コーヒー豆 E 深煎り 2kg 豆 (¥208).",
+  "The price index for Coffee beans is 97 (usual price = 100; 98.4 4 weeks ago)."
+ ],
+ "faq": [
+  {
+   "q": "What are the best Coffee beans right now?",
+   "a": "As of 2026-10-02, SHELF’s top pick for Coffee beans is (サンプル) コーヒー豆 E 深煎り 2kg 豆 (¥4,160, ★4.57 from 1,069 reviews), chosen by a score that combines rating and number of reviews."
+  },
+  {
+   "q": "How much do Coffee beans cost?",
+   "a": "As of 2026-10-02, the median price of the 6 Coffee beans SHELF tracks is ¥4,305 (¥3,100–¥6,370)."
+  },
+  {
+   "q": "Is now a good time to buy Coffee beans?",
+   "a": "Coffee beans as of 2026-10-02: 33% of the top products are cheaper than usual. Not a bad time to buy. (31 days observed; seasonal patterns not yet reflected)"
+  },
+  {
+   "q": "What is the cheapest way to buy Coffee beans (per 100 g)?",
+   "a": "As of 2026-10-02, comparing Coffee beans per 100 g, the cheapest well-rated listing with shipping included is (サンプル) コーヒー豆 E 深煎り 2kg 豆 (¥208)."
+  },
+  {
+   "q": "How do I choose Coffee beans?",
+   "a": "Compare by price per 100 g. To keep the aroma longer, buy whole beans and grind just before brewing. If you like bitterness and body, dark roast; for acidity and aroma, light roast."
+  }
+ ],
+ "license": "Text and statistics written by SHELF are CC BY 4.0: quote or reuse them with credit to SHELF and a link. Product names, prices and images belong to the stores."
 }

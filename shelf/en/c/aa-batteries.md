@@ -7,6 +7,36 @@
 
 > **Buying from outside Japan**: Prices are in Japanese yen, tax included. Most Rakuten Ichiba shops ship only within Japan: from abroad, look for a shop that ships internationally or use a forwarding service. Manufacturer warranties on products bought in Japan are often valid only in Japan.
 
+## Key facts (as of 2026-10-02)
+
+- SHELF records the prices of the 5 top-rated AA alkaline batteries every day.
+- The median price is ¥560, ranging from ¥540 to ¥1,540.
+- The top pick is (サンプル) 単3アルカリ乾電池 E 単3 100本 (¥1,430, ★4.66 from 2,111 reviews).
+- Best value per battery: (サンプル) 単3アルカリ乾電池 E 単3 100本 (¥14).
+- The price index for AA alkaline batteries is 97.3 (usual price = 100; 98.2 4 weeks ago).
+
+## FAQ
+
+### What are the best AA alkaline batteries right now?
+
+As of 2026-10-02, SHELF’s top pick for AA alkaline batteries is (サンプル) 単3アルカリ乾電池 E 単3 100本 (¥1,430, ★4.66 from 2,111 reviews), chosen by a score that combines rating and number of reviews.
+
+### How much do AA alkaline batteries cost?
+
+As of 2026-10-02, the median price of the 5 AA alkaline batteries SHELF tracks is ¥560 (¥540–¥1,540).
+
+### Is now a good time to buy AA alkaline batteries?
+
+AA alkaline batteries as of 2026-10-02: Mostly at usual prices; no sign that waiting would make it much cheaper. (31 days observed; seasonal patterns not yet reflected)
+
+### What is the cheapest way to buy AA alkaline batteries (per battery)?
+
+As of 2026-10-02, comparing AA alkaline batteries per battery, the cheapest well-rated listing with shipping included is (サンプル) 単3アルカリ乾電池 E 単3 100本 (¥14).
+
+### How do I choose AA alkaline batteries?
+
+Compare by price per battery. For low-drain devices such as remote controls and clocks, cheap bulk packs are fine; for high-drain devices such as cameras and toys, consider high-performance batteries or rechargeables.
+
 ## Bottom line
 
 - **Best overall**: (サンプル) 単3アルカリ乾電池 E 単3 100本 — ¥1,430 ★4.66 (2,111 reviews), price check: Usual price → [Buy](https://search.rakuten.co.jp/search/mall/%E5%8D%983%20%E3%82%A2%E3%83%AB%E3%82%AB%E3%83%AA%E4%B9%BE%E9%9B%BB%E6%B1%A0/)
@@ -51,6 +81,18 @@ Calculated from the size and count in each listing title. Pick-a-variant listing
 | 4 | (サンプル) 単3アルカリ乾電池 B 単3 20本 液漏れ防止 | ¥550 shipping extra | ¥28 | ★4.52 (2,197 reviews) | [Rakuten](https://search.rakuten.co.jp/search/mall/%E5%8D%983%20%E3%82%A2%E3%83%AB%E3%82%AB%E3%83%AA%E4%B9%BE%E9%9B%BB%E6%B1%A0/) |
 | 5 | (サンプル) 単3アルカリ乾電池 C 単3形 アルカリ 8本 | ¥1,540 shipping incl. | ¥193 | ★4.57 (2,162 reviews) | [Rakuten](https://search.rakuten.co.jp/search/mall/%E5%8D%983%20%E3%82%A2%E3%83%AB%E3%82%AB%E3%83%AA%E4%B9%BE%E9%9B%BB%E6%B1%A0/) |
 
+## Price index for AA alkaline batteries (weekly)
+
+For each top-rated item, the week’s lowest price divided by that item’s usual (median) price; the median of those ratios, times 100. Below 100 means cheaper than usual.
+
+| Week ending | Index | Items |
+| --- | --- | --- |
+| 2026-09-04 | 98.2 | 5 |
+| 2026-09-11 | 98.2 | 5 |
+| 2026-09-18 | 97.2 | 5 |
+| 2026-09-25 | 98.4 | 5 |
+| 2026-10-02 | 97.3 | 5 |
+
 ## How the ranking works
 
 For each category, up to 60 Rakuten listings are fetched in order of review count and filtered by excluded words, price range and a minimum number of reviews. Listings of the same product by different shops (same model number, or the same specs and a near-identical title) are merged into the best-rated one, with the other shops’ prices kept in other_offers. The rest are ranked by a Bayesian average rating.
@@ -66,3 +108,9 @@ For each category, up to 60 Rakuten listings are fetched in order of review coun
 - All categories: https://bufeks.github.io/LAB/shelf/api/v1/en/index.json
 - OpenAPI: https://bufeks.github.io/LAB/shelf/openapi.json / MCP server: https://bufeks.github.io/LAB/shelf/mcp/server.mjs
 - Languages: [日本語](https://bufeks.github.io/LAB/shelf/c/aa-batteries.md) · [English](https://bufeks.github.io/LAB/shelf/en/c/aa-batteries.md) · [简体中文](https://bufeks.github.io/LAB/shelf/zh-hans/c/aa-batteries.md) · [繁體中文](https://bufeks.github.io/LAB/shelf/zh-hant/c/aa-batteries.md) · [한국어](https://bufeks.github.io/LAB/shelf/ko/c/aa-batteries.md)
+
+## How to cite this
+
+SHELF, “AA alkaline batteries: how to choose, and top picks — SHELF” (as of 2026-10-02), https://bufeks.github.io/LAB/shelf/en/c/aa-batteries/
+
+Text and statistics written by SHELF are CC BY 4.0: quote or reuse them with credit to SHELF and a link. Product names, prices and images belong to the stores.

@@ -7,6 +7,36 @@
 
 > **Buying from outside Japan**: Prices are in Japanese yen, tax included. Most Rakuten Ichiba shops ship only within Japan: from abroad, look for a shop that ships internationally or use a forwarding service. Manufacturer warranties on products bought in Japan are often valid only in Japan.
 
+## Key facts (as of 2026-10-02)
+
+- SHELF records the prices of the 6 top-rated Toilet paper every day.
+- The median price is ¥4,160, ranging from ¥1,250 to ¥6,250.
+- The top pick is (サンプル) トイレットペーパー D 3倍巻き 8ロール 150m シングル (¥4,130, ★4.61 from 2,465 reviews).
+- Best value per 100 m (single-ply equivalent): (サンプル) トイレットペーパー A 12ロール 50m ダブル (¥349).
+- The price index for Toilet paper is 96.8 (usual price = 100; 98.4 4 weeks ago).
+
+## FAQ
+
+### What are the best Toilet paper right now?
+
+As of 2026-10-02, SHELF’s top pick for Toilet paper is (サンプル) トイレットペーパー D 3倍巻き 8ロール 150m シングル (¥4,130, ★4.61 from 2,465 reviews), chosen by a score that combines rating and number of reviews.
+
+### How much do Toilet paper cost?
+
+As of 2026-10-02, the median price of the 6 Toilet paper SHELF tracks is ¥4,160 (¥1,250–¥6,250).
+
+### Is now a good time to buy Toilet paper?
+
+Toilet paper as of 2026-10-02: 33% of the top products are cheaper than usual. Not a bad time to buy. (31 days observed; seasonal patterns not yet reflected)
+
+### What is the cheapest way to buy Toilet paper (per 100 m (single-ply equivalent))?
+
+As of 2026-10-02, comparing Toilet paper per 100 m (single-ply equivalent), the cheapest well-rated listing with shipping included is (サンプル) トイレットペーパー A 12ロール 50m ダブル (¥349).
+
+### How do I choose Toilet paper?
+
+Single-ply and double-ply cannot be compared simply by length (double-ply is two sheets). Here double-ply length is doubled and prices are compared per 100 m single-ply equivalent. Long rolls mean fewer changes and less storage space.
+
 ## Bottom line
 
 - **Best overall**: (サンプル) トイレットペーパー D 3倍巻き 8ロール 150m シングル — ¥4,130 ★4.61 (2,465 reviews), price check: Lowest in 31 days observed → [Buy](https://search.rakuten.co.jp/search/mall/%E3%83%88%E3%82%A4%E3%83%AC%E3%83%83%E3%83%88%E3%83%9A%E3%83%BC%E3%83%91%E3%83%BC%20%E3%81%BE%E3%81%A8%E3%82%81%E8%B2%B7%E3%81%84/)
@@ -52,6 +82,18 @@ Calculated from the size and count in each listing title. Pick-a-variant listing
 | 5 | (サンプル) トイレットペーパー E 12ロール 60m シングル | ¥4,090 shipping incl. | ¥568 | ★4.01 (2,099 reviews) | [Rakuten](https://search.rakuten.co.jp/search/mall/%E3%83%88%E3%82%A4%E3%83%AC%E3%83%83%E3%83%88%E3%83%9A%E3%83%BC%E3%83%91%E3%83%BC%20%E3%81%BE%E3%81%A8%E3%82%81%E8%B2%B7%E3%81%84/) |
 | 6 | (サンプル) トイレットペーパー B 2倍巻き 6ロール 100m シングル | ¥6,250 shipping extra | ¥1,042 | ★4.13 (3,710 reviews) | [Rakuten](https://search.rakuten.co.jp/search/mall/%E3%83%88%E3%82%A4%E3%83%AC%E3%83%83%E3%83%88%E3%83%9A%E3%83%BC%E3%83%91%E3%83%BC%20%E3%81%BE%E3%81%A8%E3%82%81%E8%B2%B7%E3%81%84/) |
 
+## Price index for Toilet paper (weekly)
+
+For each top-rated item, the week’s lowest price divided by that item’s usual (median) price; the median of those ratios, times 100. Below 100 means cheaper than usual.
+
+| Week ending | Index | Items |
+| --- | --- | --- |
+| 2026-09-04 | 98.4 | 6 |
+| 2026-09-11 | 98.1 | 6 |
+| 2026-09-18 | 98.1 | 6 |
+| 2026-09-25 | 98 | 6 |
+| 2026-10-02 | 96.8 | 6 |
+
 ## How the ranking works
 
 For each category, up to 60 Rakuten listings are fetched in order of review count and filtered by excluded words, price range and a minimum number of reviews. Listings of the same product by different shops (same model number, or the same specs and a near-identical title) are merged into the best-rated one, with the other shops’ prices kept in other_offers. The rest are ranked by a Bayesian average rating.
@@ -67,3 +109,9 @@ For each category, up to 60 Rakuten listings are fetched in order of review coun
 - All categories: https://bufeks.github.io/LAB/shelf/api/v1/en/index.json
 - OpenAPI: https://bufeks.github.io/LAB/shelf/openapi.json / MCP server: https://bufeks.github.io/LAB/shelf/mcp/server.mjs
 - Languages: [日本語](https://bufeks.github.io/LAB/shelf/c/toilet-paper.md) · [English](https://bufeks.github.io/LAB/shelf/en/c/toilet-paper.md) · [简体中文](https://bufeks.github.io/LAB/shelf/zh-hans/c/toilet-paper.md) · [繁體中文](https://bufeks.github.io/LAB/shelf/zh-hant/c/toilet-paper.md) · [한국어](https://bufeks.github.io/LAB/shelf/ko/c/toilet-paper.md)
+
+## How to cite this
+
+SHELF, “Toilet paper: how to choose, and top picks — SHELF” (as of 2026-10-02), https://bufeks.github.io/LAB/shelf/en/c/toilet-paper/
+
+Text and statistics written by SHELF are CC BY 4.0: quote or reuse them with credit to SHELF and a link. Product names, prices and images belong to the stores.

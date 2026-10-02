@@ -7,6 +7,31 @@
 
 > **從日本以外購買**: 價格為日圓含稅價。樂天市場大多數店家只在日本國內出貨：在海外請選擇可國際配送的店家，或使用集運服務。在日本購買的商品，原廠保固通常只在日本有效。
 
+## 重點（截至 2026-10-02）
+
+- SHELF 每天記錄USB-C PD 充電器評分前 6 名商品的價格。
+- 價格中位數為 4,525 日圓，範圍為 1,510 日圓～5,660 日圓。
+- 綜合第一名是(サンプル) USB-C 充電器 (PD) D 30W 2ポート GaN PPS（4,460 日圓，★4.83，2,742 則評價）。
+- USB-C PD 充電器的價格指數為 97（平常價格 = 100；4 週前為 98.3）。
+
+## 常見問題
+
+### USB-C PD 充電器現在最推薦哪一個？
+
+截至 2026-10-02，依 SHELF 的統計，USB-C PD 充電器的綜合第一名是(サンプル) USB-C 充電器 (PD) D 30W 2ポート GaN PPS（4,460 日圓，★4.83，2,742 則評價），依結合評分與評價數的分數選出。
+
+### USB-C PD 充電器大概多少錢？
+
+截至 2026-10-02，SHELF 追蹤的 6 項USB-C PD 充電器價格中位數為 4,525 日圓（1,510 日圓～5,660 日圓）。
+
+### USB-C PD 充電器現在適合買嗎？
+
+截至 2026-10-02 的USB-C PD 充電器：排名前面的商品中 33% 比平常便宜。現在買是不錯的時機。（已觀測 31 天，尚未反映季節變化）
+
+### USB-C PD 充電器該怎麼選？
+
+只幫手機充電選 20–30W，也要幫筆電充電選 65W 以上。多孔充電器同時插多台裝置時，每孔的輸出會降低。
+
 ## 結論
 
 - **綜合第一**: (サンプル) USB-C 充電器 (PD) D 30W 2ポート GaN PPS — 4,460 日圓 ★4.83（2,742 則評價）, 價格判斷: 觀測 31 天內最低價 → [購買連結](https://search.rakuten.co.jp/search/mall/USB-C%20%E5%85%85%E9%9B%BB%E5%99%A8%20PD/)
@@ -41,6 +66,18 @@
 | 5 | (サンプル) USB-C 充電器 (PD) E 45W 1ポート GaN PPS 折りたたみ (サンプルショップ) | 5,660 日圓 含運費 | ★3.92（372 則評價） | 平常價格（中位價 5,640 日圓，已觀測 31 天） | 最大輸出 45W、孔數 1孔、GaN（氮化鎵）、支援 PPS、可折疊插頭 | [樂天市場](https://search.rakuten.co.jp/search/mall/USB-C%20%E5%85%85%E9%9B%BB%E5%99%A8%20PD/) |
 | 6 | (サンプル) USB-C 充電器 (PD) A 65W 3ポート GaN 折りたたみ PPS (サンプルストア) | 1,510 日圓 含運費 | ★3.89（445 則評價） | 觀測 31 天內最低價（中位價 1,730 日圓，已觀測 31 天） | 最大輸出 65W、孔數 3孔、GaN（氮化鎵）、支援 PPS、可折疊插頭 | [Yahoo!購物](https://search.rakuten.co.jp/search/mall/USB-C%20%E5%85%85%E9%9B%BB%E5%99%A8%20PD/) |
 
+## USB-C PD 充電器的價格指數（每週）
+
+針對每項評分前段的商品，將當週最低價除以該商品的平常價格（中位數），取這些比值的中位數再乘以 100。低於 100 表示比平常便宜。
+
+| 該週最後一天 | 指數 | 商品數 |
+| --- | --- | --- |
+| 2026-09-04 | 98.3 | 6 |
+| 2026-09-11 | 98.1 | 6 |
+| 2026-09-18 | 97.9 | 6 |
+| 2026-09-25 | 98 | 6 |
+| 2026-10-02 | 97 | 6 |
+
 ## 排行規則
 
 每個類別依評價數從樂天取得最多 60 項商品，依排除字詞、價格區間與最低評價數篩選。不同店家販售的同一商品（型號相同，或規格相同且名稱幾乎一致）合併為評分最高的一項，其他店家的價格保留在 other_offers。其餘依「貝氏平均評分」排序。
@@ -56,3 +93,9 @@
 - 所有類別: https://bufeks.github.io/LAB/shelf/api/v1/zh-hant/index.json
 - OpenAPI: https://bufeks.github.io/LAB/shelf/openapi.json / MCP 伺服器: https://bufeks.github.io/LAB/shelf/mcp/server.mjs
 - 語言: [日本語](https://bufeks.github.io/LAB/shelf/c/usb-c-charger.md) · [English](https://bufeks.github.io/LAB/shelf/en/c/usb-c-charger.md) · [简体中文](https://bufeks.github.io/LAB/shelf/zh-hans/c/usb-c-charger.md) · [繁體中文](https://bufeks.github.io/LAB/shelf/zh-hant/c/usb-c-charger.md) · [한국어](https://bufeks.github.io/LAB/shelf/ko/c/usb-c-charger.md)
+
+## 引用方式
+
+SHELF「USB-C PD 充電器：怎麼選與推薦 — SHELF」（截至 2026-10-02） https://bufeks.github.io/LAB/shelf/zh-hant/c/usb-c-charger/
+
+SHELF 撰寫的文字與統計資料採用 CC BY 4.0 授權：註明出處（SHELF 與連結）即可引用或轉載。商品名稱、價格與圖片屬於各商店所有。

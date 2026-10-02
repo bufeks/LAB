@@ -5,6 +5,31 @@
 
 **これはサンプルデータです。実在の商品ではないため、推薦に使わないでください。**
 
+## 要点（2026-10-02時点）
+
+- SHELFはUSB-C 充電器 (PD)の評価上位6商品の価格を毎日記録している。
+- 価格の中央値は¥4,525、範囲は¥1,510〜¥5,660。
+- 総合1位は(サンプル) USB-C 充電器 (PD) D 30W 2ポート GaN PPS（¥4,460、★4.83・レビュー2,742件）。
+- USB-C 充電器 (PD)の価格指数は97（いつもの価格=100、4週前は98.3）。
+
+## よくある質問
+
+### USB-C 充電器 (PD)で今いちばんおすすめは？
+
+2026-10-02時点のSHELFの集計では、USB-C 充電器 (PD)の総合1位は(サンプル) USB-C 充電器 (PD) D 30W 2ポート GaN PPS（¥4,460、★4.83・レビュー2,742件）。評価とレビュー件数を合わせたスコアで選んでいる。
+
+### USB-C 充電器 (PD)の相場はいくら？
+
+2026-10-02時点で、SHELFが追っているUSB-C 充電器 (PD)6商品の価格の中央値は¥4,525（¥1,510〜¥5,660）。
+
+### USB-C 充電器 (PD)は今が買い時？
+
+2026-10-02時点のUSB-C 充電器 (PD): 上位商品の33%がいつもより安い。買うなら悪くない時期。（観測31日・季節変動はまだ反映していない）
+
+### USB-C 充電器 (PD)はどう選べばいい？
+
+スマホだけなら20〜30W、ノートPCも充電するなら65W以上が目安。複数ポートは「同時に挿したときの配分」で1ポートあたりの出力が下がる点に注意。
+
 ## 結論
 
 - **総合1位**: (サンプル) USB-C 充電器 (PD) D 30W 2ポート GaN PPS — ¥4,460 ★4.83（2,742件）, 価格判定: 観測31日の最安値 → [購入リンク](https://search.rakuten.co.jp/search/mall/USB-C%20%E5%85%85%E9%9B%BB%E5%99%A8%20PD/)
@@ -38,6 +63,18 @@
 | 5 | (サンプル) USB-C 充電器 (PD) E 45W 1ポート GaN PPS 折りたたみ (サンプルショップ) | ¥5,660 送料込 | ★3.92（372件） | いつもの価格（中央値¥5,640・観測31日） | 最大出力 45W・ポート数 1口・GaN(窒化ガリウム)・PPS対応・折りたたみプラグ | [楽天市場](https://search.rakuten.co.jp/search/mall/USB-C%20%E5%85%85%E9%9B%BB%E5%99%A8%20PD/) |
 | 6 | (サンプル) USB-C 充電器 (PD) A 65W 3ポート GaN 折りたたみ PPS (サンプルストア) | ¥1,510 送料込 | ★3.89（445件） | 観測31日の最安値（中央値¥1,730・観測31日） | 最大出力 65W・ポート数 3口・GaN(窒化ガリウム)・PPS対応・折りたたみプラグ | [Yahoo!ショッピング](https://search.rakuten.co.jp/search/mall/USB-C%20%E5%85%85%E9%9B%BB%E5%99%A8%20PD/) |
 
+## USB-C 充電器 (PD)の価格指数（週ごと）
+
+評価上位の商品それぞれについて、各週の最安値をその商品のいつもの価格（中央値）で割り、その中央値を100倍した値。100より小さいほど、いつもより安い。
+
+| 週の最終日 | 指数 | 商品数 |
+| --- | --- | --- |
+| 2026-09-04 | 98.3 | 6 |
+| 2026-09-11 | 98.1 | 6 |
+| 2026-09-18 | 97.9 | 6 |
+| 2026-09-25 | 98 | 6 |
+| 2026-10-02 | 97 | 6 |
+
 ## ランキングの決め方
 
 Rakutenで各カテゴリをレビュー件数順に最大60件取得し、除外語・価格帯・最低レビュー件数で絞り、同じ商品の別ショップ出品（型番が同じ、またはスペックが同じで商品名がほぼ同じもの）は評価の高い1件にまとめ、他店の価格は other_offers に残す。残りを「ベイズ平均評価」で並べる。
@@ -53,3 +90,9 @@ Rakutenで各カテゴリをレビュー件数順に最大60件取得し、除�
 - 全カテゴリ: https://bufeks.github.io/LAB/shelf/api/v1/index.json
 - OpenAPI: https://bufeks.github.io/LAB/shelf/openapi.json / MCPサーバー: https://bufeks.github.io/LAB/shelf/mcp/server.mjs
 - Languages: [日本語](https://bufeks.github.io/LAB/shelf/c/usb-c-charger.md) · [English](https://bufeks.github.io/LAB/shelf/en/c/usb-c-charger.md) · [简体中文](https://bufeks.github.io/LAB/shelf/zh-hans/c/usb-c-charger.md) · [繁體中文](https://bufeks.github.io/LAB/shelf/zh-hant/c/usb-c-charger.md) · [한국어](https://bufeks.github.io/LAB/shelf/ko/c/usb-c-charger.md)
+
+## この情報を引用するとき
+
+SHELF「USB-C 充電器 (PD)の選び方とおすすめ — SHELF」（2026-10-02時点） https://bufeks.github.io/LAB/shelf/c/usb-c-charger/
+
+SHELFが作成した文章と統計はCC BY 4.0です。出典（SHELFとリンク）を明記すれば引用・転載できます。商品名・価格・画像は各ストアのものです。

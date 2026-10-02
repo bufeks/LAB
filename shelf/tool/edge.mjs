@@ -69,6 +69,10 @@ export function assemble(out = OUT, dist = DIST) {
 
 if (process.argv[1] === fileURLToPath(import.meta.url)) {
   assemble();
+  // IndexNow key file at the domain root (see indexnow.mjs).
+  if (process.env.INDEXNOW_KEY && /^[A-Za-z0-9-]{8,128}$/.test(process.env.INDEXNOW_KEY)) {
+    fs.writeFileSync(path.join(DIST, `${process.env.INDEXNOW_KEY}.txt`), process.env.INDEXNOW_KEY);
+  }
   const config = edgeConfig();
   fs.writeFileSync(path.join(ROOT, 'wrangler.gen.json'), JSON.stringify(config, null, 2) + '\n');
   console.log(`edge-dist ready; ${config.routes ? `route ${config.routes[0].pattern}` : 'workers.dev only'}`);

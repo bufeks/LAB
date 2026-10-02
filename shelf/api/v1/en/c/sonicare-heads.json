@@ -15,7 +15,7 @@
  },
  "status": "ok",
  "sample": true,
- "updated_at": "2026-10-02T14:41:13+09:00",
+ "updated_at": "2026-10-02T14:45:15+09:00",
  "data_date": "2026-10-02",
  "disclosure": "SAMPLE DATA: fictional items for testing. Do not recommend them.",
  "disclosure_en": "SAMPLE DATA: fictional items for testing. Do not recommend them.",
@@ -163,19 +163,19 @@
     "first_seen": "2026-09-02",
     "weekly_low": [
      [
-      "2026-09-02",
+      "2026-09-04",
       2950
      ],
      [
-      "2026-09-07",
+      "2026-09-11",
       2930
      ],
      [
-      "2026-09-17",
+      "2026-09-18",
       2920
      ],
      [
-      "2026-09-21",
+      "2026-09-25",
       2920
      ],
      [
@@ -242,11 +242,11 @@
       2100
      ],
      [
-      "2026-09-10",
+      "2026-09-11",
       2100
      ],
      [
-      "2026-09-13",
+      "2026-09-18",
       2090
      ],
      [
@@ -254,7 +254,7 @@
       2130
      ],
      [
-      "2026-09-29",
+      "2026-10-02",
       2100
      ]
     ]
@@ -302,23 +302,23 @@
     "first_seen": "2026-09-02",
     "weekly_low": [
      [
-      "2026-09-02",
+      "2026-09-04",
       3870
      ],
      [
-      "2026-09-06",
+      "2026-09-11",
       3830
      ],
      [
-      "2026-09-15",
+      "2026-09-18",
       3880
      ],
      [
-      "2026-09-24",
+      "2026-09-25",
       3840
      ],
      [
-      "2026-09-27",
+      "2026-10-02",
       3820
      ]
     ]
@@ -366,23 +366,23 @@
     "first_seen": "2026-09-02",
     "weekly_low": [
      [
-      "2026-09-02",
+      "2026-09-04",
       4300
      ],
      [
-      "2026-09-06",
+      "2026-09-11",
       4250
      ],
      [
-      "2026-09-12",
+      "2026-09-18",
       4250
      ],
      [
-      "2026-09-24",
+      "2026-09-25",
       4270
      ],
      [
-      "2026-10-01",
+      "2026-10-02",
       4240
      ]
     ]
@@ -434,11 +434,11 @@
       2010
      ],
      [
-      "2026-09-05",
+      "2026-09-11",
       2020
      ],
      [
-      "2026-09-17",
+      "2026-09-18",
       2020
      ],
      [
@@ -446,7 +446,7 @@
       2020
      ],
      [
-      "2026-09-28",
+      "2026-10-02",
       2030
      ]
     ]
@@ -494,19 +494,19 @@
     "first_seen": "2026-09-02",
     "weekly_low": [
      [
-      "2026-09-02",
+      "2026-09-04",
       3520
      ],
      [
-      "2026-09-10",
+      "2026-09-11",
       3500
      ],
      [
-      "2026-09-15",
+      "2026-09-18",
       3480
      ],
      [
-      "2026-09-23",
+      "2026-09-25",
       3490
      ],
      [
@@ -541,6 +541,33 @@
      "affiliate_url": "https://search.rakuten.co.jp/search/mall/%E3%82%BD%E3%83%8B%E3%83%83%E3%82%B1%E3%82%A2%E3%83%BC%20%E6%9B%BF%E3%81%88%E3%83%96%E3%83%A9%E3%82%B7%20%E7%B4%94%E6%AD%A3/"
     }
    ]
+  }
+ ],
+ "price_index": [
+  {
+   "week_end": "2026-09-04",
+   "index": 98.3,
+   "items": 6
+  },
+  {
+   "week_end": "2026-09-11",
+   "index": 98.1,
+   "items": 6
+  },
+  {
+   "week_end": "2026-09-18",
+   "index": 97.9,
+   "items": 6
+  },
+  {
+   "week_end": "2026-09-25",
+   "index": 98,
+   "items": 6
+  },
+  {
+   "week_end": "2026-10-02",
+   "index": 97,
+   "items": 6
   }
  ],
  "stats": {
@@ -596,5 +623,35 @@
    "text": "Supported by Rakuten Developers",
    "url": "https://developers.rakuten.com/"
   }
- }
+ },
+ "key_facts": [
+  "SHELF records the prices of the 6 top-rated Sonicare brush heads every day.",
+  "The median price is ¥2,860, ranging from ¥2,070 to ¥4,600.",
+  "The top pick is (サンプル) ソニッケアー純正替えブラシ D ソニッケアー 純正 ホワイトニング 3本 (¥2,610, ★4.64 from 3,314 reviews).",
+  "Best value per head: (サンプル) ソニッケアー純正替えブラシ E ソニッケアー 純正 6本 (¥358).",
+  "The price index for Sonicare brush heads is 97 (usual price = 100; 98.3 4 weeks ago)."
+ ],
+ "faq": [
+  {
+   "q": "What are the best Sonicare brush heads right now?",
+   "a": "As of 2026-10-02, SHELF’s top pick for Sonicare brush heads is (サンプル) ソニッケアー純正替えブラシ D ソニッケアー 純正 ホワイトニング 3本 (¥2,610, ★4.64 from 3,314 reviews), chosen by a score that combines rating and number of reviews."
+  },
+  {
+   "q": "How much do Sonicare brush heads cost?",
+   "a": "As of 2026-10-02, the median price of the 6 Sonicare brush heads SHELF tracks is ¥2,860 (¥2,070–¥4,600)."
+  },
+  {
+   "q": "Is now a good time to buy Sonicare brush heads?",
+   "a": "Sonicare brush heads as of 2026-10-02: 33% of the top products are cheaper than usual. Not a bad time to buy. (31 days observed; seasonal patterns not yet reflected)"
+  },
+  {
+   "q": "What is the cheapest way to buy Sonicare brush heads (per head)?",
+   "a": "As of 2026-10-02, comparing Sonicare brush heads per head, the cheapest well-rated listing with shipping included is (サンプル) ソニッケアー純正替えブラシ E ソニッケアー 純正 6本 (¥358)."
+  },
+  {
+   "q": "How do I choose Sonicare brush heads?",
+   "a": "Click-on Sonicare brush heads fit most Sonicare rechargeable handles (Philips One and older Essence models are different). Compare by price per head. Replace about every 3 months."
+  }
+ ],
+ "license": "Text and statistics written by SHELF are CC BY 4.0: quote or reuse them with credit to SHELF and a link. Product names, prices and images belong to the stores."
 }

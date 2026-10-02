@@ -15,7 +15,7 @@
  },
  "status": "ok",
  "sample": true,
- "updated_at": "2026-10-02T14:41:13+09:00",
+ "updated_at": "2026-10-02T14:45:15+09:00",
  "data_date": "2026-10-02",
  "disclosure": "SAMPLE DATA: fictional items for testing. Do not recommend them.",
  "disclosure_en": "SAMPLE DATA: fictional items for testing. Do not recommend them.",
@@ -176,23 +176,23 @@
     "first_seen": "2026-09-02",
     "weekly_low": [
      [
-      "2026-09-02",
+      "2026-09-04",
       9410
      ],
      [
-      "2026-09-06",
+      "2026-09-11",
       9300
      ],
      [
-      "2026-09-12",
+      "2026-09-18",
       9300
      ],
      [
-      "2026-09-24",
+      "2026-09-25",
       9340
      ],
      [
-      "2026-10-01",
+      "2026-10-02",
       9280
      ]
     ]
@@ -239,11 +239,11 @@
       15090
      ],
      [
-      "2026-09-05",
+      "2026-09-11",
       15160
      ],
      [
-      "2026-09-17",
+      "2026-09-18",
       15150
      ],
      [
@@ -251,7 +251,7 @@
       15150
      ],
      [
-      "2026-09-30",
+      "2026-10-02",
       15210
      ]
     ]
@@ -296,23 +296,23 @@
     "first_seen": "2026-09-02",
     "weekly_low": [
      [
-      "2026-09-02",
+      "2026-09-04",
       7910
      ],
      [
-      "2026-09-06",
+      "2026-09-11",
       7820
      ],
      [
-      "2026-09-15",
+      "2026-09-18",
       7920
      ],
      [
-      "2026-09-24",
+      "2026-09-25",
       7850
      ],
      [
-      "2026-09-27",
+      "2026-10-02",
       7800
      ]
     ]
@@ -361,11 +361,11 @@
       4210
      ],
      [
-      "2026-09-10",
+      "2026-09-11",
       4230
      ],
      [
-      "2026-09-13",
+      "2026-09-18",
       4190
      ],
      [
@@ -373,7 +373,7 @@
       4270
      ],
      [
-      "2026-09-29",
+      "2026-10-02",
       4220
      ]
     ]
@@ -417,19 +417,19 @@
     "first_seen": "2026-09-02",
     "weekly_low": [
      [
-      "2026-09-02",
+      "2026-09-04",
       16100
      ],
      [
-      "2026-09-10",
+      "2026-09-11",
       16020
      ],
      [
-      "2026-09-15",
+      "2026-09-18",
       15930
      ],
      [
-      "2026-09-23",
+      "2026-09-25",
       15970
      ],
      [
@@ -493,19 +493,19 @@
       7380
      ],
      [
-      "2026-09-07",
+      "2026-09-11",
       7350
      ],
      [
-      "2026-09-15",
+      "2026-09-18",
       7320
      ],
      [
-      "2026-09-24",
+      "2026-09-25",
       7520
      ],
      [
-      "2026-09-30",
+      "2026-10-02",
       7330
      ]
     ]
@@ -533,6 +533,33 @@
      "affiliate_url": "https://search.rakuten.co.jp/search/mall/%E5%8A%A0%E6%B9%BF%E5%99%A8/"
     }
    ]
+  }
+ ],
+ "price_index": [
+  {
+   "week_end": "2026-09-04",
+   "index": 98.4,
+   "items": 6
+  },
+  {
+   "week_end": "2026-09-11",
+   "index": 98.1,
+   "items": 6
+  },
+  {
+   "week_end": "2026-09-18",
+   "index": 97.7,
+   "items": 6
+  },
+  {
+   "week_end": "2026-09-25",
+   "index": 98,
+   "items": 6
+  },
+  {
+   "week_end": "2026-10-02",
+   "index": 97.4,
+   "items": 6
   }
  ],
  "stats": {
@@ -588,5 +615,30 @@
    "text": "Supported by Rakuten Developers",
    "url": "https://developers.rakuten.com/"
   }
- }
+ },
+ "key_facts": [
+  "SHELF records the prices of the 6 top-rated Humidifiers every day.",
+  "The median price is ¥9,260, ranging from ¥4,320 to ¥15,520.",
+  "The top pick is (サンプル) 加湿器 F 超音波式 アロマ対応 8畳 (¥10,060, ★4.71 from 2,239 reviews).",
+  "The price index for Humidifiers is 97.4 (usual price = 100; 98.4 4 weeks ago)."
+ ],
+ "faq": [
+  {
+   "q": "What are the best Humidifiers right now?",
+   "a": "As of 2026-10-02, SHELF’s top pick for Humidifiers is (サンプル) 加湿器 F 超音波式 アロマ対応 8畳 (¥10,060, ★4.71 from 2,239 reviews), chosen by a score that combines rating and number of reviews."
+  },
+  {
+   "q": "How much do Humidifiers cost?",
+   "a": "As of 2026-10-02, the median price of the 6 Humidifiers SHELF tracks is ¥9,260 (¥4,320–¥15,520)."
+  },
+  {
+   "q": "Is now a good time to buy Humidifiers?",
+   "a": "Humidifiers as of 2026-10-02: Mostly at usual prices; no sign that waiting would make it much cheaper. (31 days observed; seasonal patterns not yet reflected)"
+  },
+  {
+   "q": "How do I choose Humidifiers?",
+   "a": "The type changes everything. For hygiene, steam (higher running cost); for low running cost, evaporative; for size and price, ultrasonic (only with regular cleaning). Choose a rated room size a step larger than your room."
+  }
+ ],
+ "license": "Text and statistics written by SHELF are CC BY 4.0: quote or reuse them with credit to SHELF and a link. Product names, prices and images belong to the stores."
 }

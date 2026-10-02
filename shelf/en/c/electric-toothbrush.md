@@ -7,6 +7,31 @@
 
 > **Buying from outside Japan**: Prices are in Japanese yen, tax included. Most Rakuten Ichiba shops ship only within Japan: from abroad, look for a shop that ships internationally or use a forwarding service. Manufacturer warranties on products bought in Japan are often valid only in Japan.
 
+## Key facts (as of 2026-10-02)
+
+- SHELF records the prices of the 6 top-rated Electric toothbrushes every day.
+- The median price is ¥9,660, ranging from ¥4,910 to ¥11,330.
+- The top pick is (サンプル) 電動歯ブラシ D 音波 5つのモード 過圧 (¥10,130, ★4.68 from 2,990 reviews).
+- The price index for Electric toothbrushes is 97 (usual price = 100; 98.5 4 weeks ago).
+
+## FAQ
+
+### What are the best Electric toothbrushes right now?
+
+As of 2026-10-02, SHELF’s top pick for Electric toothbrushes is (サンプル) 電動歯ブラシ D 音波 5つのモード 過圧 (¥10,130, ★4.68 from 2,990 reviews), chosen by a score that combines rating and number of reviews.
+
+### How much do Electric toothbrushes cost?
+
+As of 2026-10-02, the median price of the 6 Electric toothbrushes SHELF tracks is ¥9,660 (¥4,910–¥11,330).
+
+### Is now a good time to buy Electric toothbrushes?
+
+Electric toothbrushes as of 2026-10-02: 33% of the top products are cheaper than usual. Not a bad time to buy. (31 days observed; seasonal patterns not yet reflected)
+
+### How do I choose Electric toothbrushes?
+
+Over time, replacement heads (changed about every 3 months) cost more than the handle. If you tend to brush too hard, get a pressure sensor; if you tend to miss spots, get a timer.
+
 ## Bottom line
 
 - **Best overall**: (サンプル) 電動歯ブラシ D 音波 5つのモード 過圧 — ¥10,130 ★4.68 (2,990 reviews), price check: Lowest in 31 days observed → [Buy](https://search.rakuten.co.jp/search/mall/%E9%9B%BB%E5%8B%95%E6%AD%AF%E3%83%96%E3%83%A9%E3%82%B7/)
@@ -39,6 +64,18 @@ Over time, replacement heads (changed about every 3 months) cost more than the h
 | 5 | (サンプル) 電動歯ブラシ B 回転 押しつけ防止 タイマー (サンプルショップ) | ¥11,330 shipping extra | ★4.22 (2,527 reviews) | Usual price (median ¥11,280, 31 days observed) | Rotating · Pressure sensor · Timer | [Rakuten](https://search.rakuten.co.jp/search/mall/%E9%9B%BB%E5%8B%95%E6%AD%AF%E3%83%96%E3%83%A9%E3%82%B7/) |
 | 6 | (サンプル) 電動歯ブラシ A 音波 圧センサー 2分タイマー 3つのモード (サンプルストア) | ¥4,910 shipping incl. | ★4.11 (1,106 reviews) | Lowest in 31 days observed (median ¥5,630, 31 days observed) | Sonic · Pressure sensor · Timer · Modes 3 | [Yahoo! Shopping](https://search.rakuten.co.jp/search/mall/%E9%9B%BB%E5%8B%95%E6%AD%AF%E3%83%96%E3%83%A9%E3%82%B7/) |
 
+## Price index for Electric toothbrushes (weekly)
+
+For each top-rated item, the week’s lowest price divided by that item’s usual (median) price; the median of those ratios, times 100. Below 100 means cheaper than usual.
+
+| Week ending | Index | Items |
+| --- | --- | --- |
+| 2026-09-04 | 98.5 | 6 |
+| 2026-09-11 | 98.1 | 6 |
+| 2026-09-18 | 97.9 | 6 |
+| 2026-09-25 | 98 | 6 |
+| 2026-10-02 | 97 | 6 |
+
 ## How the ranking works
 
 For each category, up to 60 Rakuten listings are fetched in order of review count and filtered by excluded words, price range and a minimum number of reviews. Listings of the same product by different shops (same model number, or the same specs and a near-identical title) are merged into the best-rated one, with the other shops’ prices kept in other_offers. The rest are ranked by a Bayesian average rating.
@@ -54,3 +91,9 @@ For each category, up to 60 Rakuten listings are fetched in order of review coun
 - All categories: https://bufeks.github.io/LAB/shelf/api/v1/en/index.json
 - OpenAPI: https://bufeks.github.io/LAB/shelf/openapi.json / MCP server: https://bufeks.github.io/LAB/shelf/mcp/server.mjs
 - Languages: [日本語](https://bufeks.github.io/LAB/shelf/c/electric-toothbrush.md) · [English](https://bufeks.github.io/LAB/shelf/en/c/electric-toothbrush.md) · [简体中文](https://bufeks.github.io/LAB/shelf/zh-hans/c/electric-toothbrush.md) · [繁體中文](https://bufeks.github.io/LAB/shelf/zh-hant/c/electric-toothbrush.md) · [한국어](https://bufeks.github.io/LAB/shelf/ko/c/electric-toothbrush.md)
+
+## How to cite this
+
+SHELF, “Electric toothbrushes: how to choose, and top picks — SHELF” (as of 2026-10-02), https://bufeks.github.io/LAB/shelf/en/c/electric-toothbrush/
+
+Text and statistics written by SHELF are CC BY 4.0: quote or reuse them with credit to SHELF and a link. Product names, prices and images belong to the stores.

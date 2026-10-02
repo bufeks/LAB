@@ -7,6 +7,36 @@
 
 > **Buying from outside Japan**: Prices are in Japanese yen, tax included. Most Rakuten Ichiba shops ship only within Japan: from abroad, look for a shop that ships internationally or use a forwarding service. Manufacturer warranties on products bought in Japan are often valid only in Japan.
 
+## Key facts (as of 2026-10-02)
+
+- SHELF records the prices of the 6 top-rated Coffee beans every day.
+- The median price is ¥4,305, ranging from ¥3,100 to ¥6,370.
+- The top pick is (サンプル) コーヒー豆 E 深煎り 2kg 豆 (¥4,160, ★4.57 from 1,069 reviews).
+- Best value per 100 g: (サンプル) コーヒー豆 E 深煎り 2kg 豆 (¥208).
+- The price index for Coffee beans is 97 (usual price = 100; 98.4 4 weeks ago).
+
+## FAQ
+
+### What are the best Coffee beans right now?
+
+As of 2026-10-02, SHELF’s top pick for Coffee beans is (サンプル) コーヒー豆 E 深煎り 2kg 豆 (¥4,160, ★4.57 from 1,069 reviews), chosen by a score that combines rating and number of reviews.
+
+### How much do Coffee beans cost?
+
+As of 2026-10-02, the median price of the 6 Coffee beans SHELF tracks is ¥4,305 (¥3,100–¥6,370).
+
+### Is now a good time to buy Coffee beans?
+
+Coffee beans as of 2026-10-02: 33% of the top products are cheaper than usual. Not a bad time to buy. (31 days observed; seasonal patterns not yet reflected)
+
+### What is the cheapest way to buy Coffee beans (per 100 g)?
+
+As of 2026-10-02, comparing Coffee beans per 100 g, the cheapest well-rated listing with shipping included is (サンプル) コーヒー豆 E 深煎り 2kg 豆 (¥208).
+
+### How do I choose Coffee beans?
+
+Compare by price per 100 g. To keep the aroma longer, buy whole beans and grind just before brewing. If you like bitterness and body, dark roast; for acidity and aroma, light roast.
+
 ## Bottom line
 
 - **Best overall**: (サンプル) コーヒー豆 E 深煎り 2kg 豆 — ¥4,160 ★4.57 (1,069 reviews), price check: Usual price → [Buy](https://search.rakuten.co.jp/search/mall/%E3%82%B3%E3%83%BC%E3%83%92%E3%83%BC%E8%B1%86/)
@@ -53,6 +83,18 @@ Calculated from the size and count in each listing title. Pick-a-variant listing
 | 5 | (サンプル) コーヒー豆 D ブレンド 中深煎り 500g 豆 | ¥6,370 shipping extra | ¥1,274 | ★4.12 (476 reviews) | [Rakuten](https://search.rakuten.co.jp/search/mall/%E3%82%B3%E3%83%BC%E3%83%92%E3%83%BC%E8%B1%86/) |
 | 6 | (サンプル) コーヒー豆 B 中煎り 200g 粉 | ¥3,100 shipping extra | ¥1,550 | ★4.24 (3,054 reviews) | [Rakuten](https://search.rakuten.co.jp/search/mall/%E3%82%B3%E3%83%BC%E3%83%92%E3%83%BC%E8%B1%86/) |
 
+## Price index for Coffee beans (weekly)
+
+For each top-rated item, the week’s lowest price divided by that item’s usual (median) price; the median of those ratios, times 100. Below 100 means cheaper than usual.
+
+| Week ending | Index | Items |
+| --- | --- | --- |
+| 2026-09-04 | 98.4 | 6 |
+| 2026-09-11 | 98.1 | 6 |
+| 2026-09-18 | 97.8 | 6 |
+| 2026-09-25 | 98.1 | 6 |
+| 2026-10-02 | 97 | 6 |
+
 ## How the ranking works
 
 For each category, up to 60 Rakuten listings are fetched in order of review count and filtered by excluded words, price range and a minimum number of reviews. Listings of the same product by different shops (same model number, or the same specs and a near-identical title) are merged into the best-rated one, with the other shops’ prices kept in other_offers. The rest are ranked by a Bayesian average rating.
@@ -68,3 +110,9 @@ For each category, up to 60 Rakuten listings are fetched in order of review coun
 - All categories: https://bufeks.github.io/LAB/shelf/api/v1/en/index.json
 - OpenAPI: https://bufeks.github.io/LAB/shelf/openapi.json / MCP server: https://bufeks.github.io/LAB/shelf/mcp/server.mjs
 - Languages: [日本語](https://bufeks.github.io/LAB/shelf/c/coffee-beans.md) · [English](https://bufeks.github.io/LAB/shelf/en/c/coffee-beans.md) · [简体中文](https://bufeks.github.io/LAB/shelf/zh-hans/c/coffee-beans.md) · [繁體中文](https://bufeks.github.io/LAB/shelf/zh-hant/c/coffee-beans.md) · [한국어](https://bufeks.github.io/LAB/shelf/ko/c/coffee-beans.md)
+
+## How to cite this
+
+SHELF, “Coffee beans: how to choose, and top picks — SHELF” (as of 2026-10-02), https://bufeks.github.io/LAB/shelf/en/c/coffee-beans/
+
+Text and statistics written by SHELF are CC BY 4.0: quote or reuse them with credit to SHELF and a link. Product names, prices and images belong to the stores.

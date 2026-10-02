@@ -286,6 +286,7 @@ const TOOLS = [
       const m = meta(rec);
       const text = [
         `# ${rec.name} (data ${rec.data_date}, status ${rec.status})`,
+        ...(rec.key_facts?.length ? [`## Key facts\n${rec.key_facts.map((f) => `- ${f}`).join('\n')}`] : []),
         rec.how_to_choose.summary,
         `## Buying guide${rec.how_to_choose.asOf ? ` (as of ${rec.how_to_choose.asOf})` : ''}\n${rec.how_to_choose.criteria.map((c) => `- ${c.name}: ${c.detail}`).join('\n')}`,
         `## Pitfalls\n${rec.how_to_choose.pitfalls.map((p) => `- ${p}`).join('\n')}`,
@@ -321,7 +322,9 @@ const TOOLS = [
         rec.price_outlook.summary,
         cheap.length ? `## Currently under their usual price\n${cheap.map((x) => line(x, rec.spec_fields)).join('\n')}` : 'No ranked item is under its usual price right now.',
       ].join('\n\n');
-      return { meta: meta(rec), text, data: { outlook: rec.price_outlook, cheaper_items: cheap } };
+      const idx = (rec.price_index || []).slice(-8);
+      const indexText = idx.length >= 2 ? `\n\n## Weekly price index (usual = 100)\n${idx.map((w) => `- week ending ${w.week_end}: ${w.index}`).join('\n')}` : '';
+      return { meta: meta(rec), text: text + indexText, data: { outlook: rec.price_outlook, price_index: idx, cheaper_items: cheap } };
     },
   },
   {

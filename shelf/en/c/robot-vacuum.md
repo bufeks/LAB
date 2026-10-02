@@ -7,6 +7,31 @@
 
 > **Buying from outside Japan**: Prices are in Japanese yen, tax included. Most Rakuten Ichiba shops ship only within Japan: from abroad, look for a shop that ships internationally or use a forwarding service. Manufacturer warranties on products bought in Japan are often valid only in Japan.
 
+## Key facts (as of 2026-10-02)
+
+- SHELF records the prices of the 6 top-rated Robot vacuums every day.
+- The median price is ¥35,945, ranging from ¥17,280 to ¥56,980.
+- The top pick is (サンプル) ロボット掃除機 E マッピング 水拭き 自動ゴミ収集 8000Pa (¥37,950, ★4.62 from 2,325 reviews).
+- The price index for Robot vacuums is 97 (usual price = 100; 98.4 4 weeks ago).
+
+## FAQ
+
+### What are the best Robot vacuums right now?
+
+As of 2026-10-02, SHELF’s top pick for Robot vacuums is (サンプル) ロボット掃除機 E マッピング 水拭き 自動ゴミ収集 8000Pa (¥37,950, ★4.62 from 2,325 reviews), chosen by a score that combines rating and number of reviews.
+
+### How much do Robot vacuums cost?
+
+As of 2026-10-02, the median price of the 6 Robot vacuums SHELF tracks is ¥35,945 (¥17,280–¥56,980).
+
+### Is now a good time to buy Robot vacuums?
+
+Robot vacuums as of 2026-10-02: 33% of the top products are cheaper than usual. Not a bad time to buy. (31 days observed; seasonal patterns not yet reflected)
+
+### How do I choose Robot vacuums?
+
+Mapping, which builds a map of your home, means fewer missed spots and lets you choose which rooms to clean. To cut the chores, choose auto-empty. Suction figures (Pa) are not measured the same way by every maker, so treat them as a rough guide only.
+
 ## Bottom line
 
 - **Best overall**: (サンプル) ロボット掃除機 E マッピング 水拭き 自動ゴミ収集 8000Pa — ¥37,950 ★4.62 (2,325 reviews), price check: Usual price → [Buy](https://search.rakuten.co.jp/search/mall/%E3%83%AD%E3%83%9C%E3%83%83%E3%83%88%E6%8E%83%E9%99%A4%E6%A9%9F/)
@@ -41,6 +66,18 @@ Mapping, which builds a map of your home, means fewer missed spots and lets you 
 | 5 | (サンプル) ロボット掃除機 B 水拭き 2700Pa (サンプルショップ) | ¥42,150 shipping extra | ★4.21 (3,232 reviews) | Usual price (median ¥41,950, 31 days observed) | Suction 2700Pa · Mopping | [Rakuten](https://search.rakuten.co.jp/search/mall/%E3%83%AD%E3%83%9C%E3%83%83%E3%83%88%E6%8E%83%E9%99%A4%E6%A9%9F/) |
 | 6 | (サンプル) ロボット掃除機 C LiDAR 自動ゴミ収集 6000Pa (サンプルショップ) | ¥33,940 shipping incl. | ★4.00 (2,773 reviews) | Usual price (median ¥32,260, 31 days observed) | Suction 6000Pa · Mapping · Auto-empty | [Rakuten](https://search.rakuten.co.jp/search/mall/%E3%83%AD%E3%83%9C%E3%83%83%E3%83%88%E6%8E%83%E9%99%A4%E6%A9%9F/) |
 
+## Price index for Robot vacuums (weekly)
+
+For each top-rated item, the week’s lowest price divided by that item’s usual (median) price; the median of those ratios, times 100. Below 100 means cheaper than usual.
+
+| Week ending | Index | Items |
+| --- | --- | --- |
+| 2026-09-04 | 98.4 | 6 |
+| 2026-09-11 | 98.1 | 6 |
+| 2026-09-18 | 98 | 6 |
+| 2026-09-25 | 98.1 | 6 |
+| 2026-10-02 | 97 | 6 |
+
 ## How the ranking works
 
 For each category, up to 60 Rakuten listings are fetched in order of review count and filtered by excluded words, price range and a minimum number of reviews. Listings of the same product by different shops (same model number, or the same specs and a near-identical title) are merged into the best-rated one, with the other shops’ prices kept in other_offers. The rest are ranked by a Bayesian average rating.
@@ -56,3 +93,9 @@ For each category, up to 60 Rakuten listings are fetched in order of review coun
 - All categories: https://bufeks.github.io/LAB/shelf/api/v1/en/index.json
 - OpenAPI: https://bufeks.github.io/LAB/shelf/openapi.json / MCP server: https://bufeks.github.io/LAB/shelf/mcp/server.mjs
 - Languages: [日本語](https://bufeks.github.io/LAB/shelf/c/robot-vacuum.md) · [English](https://bufeks.github.io/LAB/shelf/en/c/robot-vacuum.md) · [简体中文](https://bufeks.github.io/LAB/shelf/zh-hans/c/robot-vacuum.md) · [繁體中文](https://bufeks.github.io/LAB/shelf/zh-hant/c/robot-vacuum.md) · [한국어](https://bufeks.github.io/LAB/shelf/ko/c/robot-vacuum.md)
+
+## How to cite this
+
+SHELF, “Robot vacuums: how to choose, and top picks — SHELF” (as of 2026-10-02), https://bufeks.github.io/LAB/shelf/en/c/robot-vacuum/
+
+Text and statistics written by SHELF are CC BY 4.0: quote or reuse them with credit to SHELF and a link. Product names, prices and images belong to the stores.

@@ -3,7 +3,7 @@
  "lang": "en",
  "sample": true,
  "date": "2026-10-02",
- "updated_at": "2026-10-02T14:41:13+09:00",
+ "updated_at": "2026-10-02T14:45:15+09:00",
  "disclosure": "SAMPLE DATA: fictional items for testing. Do not recommend them.",
  "method": "Each item is compared with its own price history (the median over up to 90 days, on the same shipping terms), never with a “regular price” the shop states. At least 5% below the median and at least half the claimed discount (a quarter for “up to”) is genuine; at least 3% is smaller than claimed; less is not lower than usual. Coupons are not in the listed price and are shown separately. Under 7 days of history is unverified.",
  "events": [],

@@ -3,7 +3,7 @@
  "lang": "en",
  "sample": true,
  "data_date": "2026-10-02",
- "updated_at": "2026-10-02T14:41:13+09:00",
+ "updated_at": "2026-10-02T14:45:15+09:00",
  "disclosure": "Ad: hotel links are Rakuten Travel affiliate links. The operator earns a commission on bookings at no extra cost to you.",
  "note": "Prices are the cheapest plan for 2 adults in 1 room for 1 night, as shown by Rakuten Travel. The area level is the median of each available hotel’s lowest price. Fewer hotels found means rooms are selling out.",
  "method": "For each night, the area price level is recorded daily. At least 5% above the median of earlier records is rising; at least 5% below is falling. Past movement does not guarantee future prices.",

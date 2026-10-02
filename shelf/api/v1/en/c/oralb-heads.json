@@ -15,7 +15,7 @@
  },
  "status": "ok",
  "sample": true,
- "updated_at": "2026-10-02T14:41:13+09:00",
+ "updated_at": "2026-10-02T14:45:15+09:00",
  "data_date": "2026-10-02",
  "disclosure": "SAMPLE DATA: fictional items for testing. Do not recommend them.",
  "disclosure_en": "SAMPLE DATA: fictional items for testing. Do not recommend them.",
@@ -154,15 +154,15 @@
     "first_seen": "2026-09-02",
     "weekly_low": [
      [
-      "2026-09-02",
+      "2026-09-04",
       5280
      ],
      [
-      "2026-09-05",
+      "2026-09-11",
       5220
      ],
      [
-      "2026-09-13",
+      "2026-09-18",
       5290
      ],
      [
@@ -239,23 +239,23 @@
     "first_seen": "2026-09-02",
     "weekly_low": [
      [
-      "2026-09-02",
+      "2026-09-04",
       6740
      ],
      [
-      "2026-09-06",
+      "2026-09-11",
       6660
      ],
      [
-      "2026-09-15",
+      "2026-09-18",
       6750
      ],
      [
-      "2026-09-24",
+      "2026-09-25",
       6690
      ],
      [
-      "2026-09-27",
+      "2026-10-02",
       6650
      ]
     ]
@@ -303,23 +303,23 @@
     "first_seen": "2026-09-02",
     "weekly_low": [
      [
-      "2026-09-02",
+      "2026-09-04",
       940
      ],
      [
-      "2026-09-06",
+      "2026-09-11",
       920
      ],
      [
-      "2026-09-12",
+      "2026-09-18",
       920
      ],
      [
-      "2026-09-20",
+      "2026-09-25",
       930
      ],
      [
-      "2026-10-01",
+      "2026-10-02",
       920
      ]
     ]
@@ -371,19 +371,19 @@
       2110
      ],
      [
-      "2026-09-07",
+      "2026-09-11",
       2110
      ],
      [
-      "2026-09-13",
+      "2026-09-18",
       2100
      ],
      [
-      "2026-09-24",
+      "2026-09-25",
       2160
      ],
      [
-      "2026-09-30",
+      "2026-10-02",
       2100
      ]
     ]
@@ -446,11 +446,11 @@
       4990
      ],
      [
-      "2026-09-10",
+      "2026-09-11",
       5010
      ],
      [
-      "2026-09-13",
+      "2026-09-18",
       4970
      ],
      [
@@ -458,7 +458,7 @@
       5070
      ],
      [
-      "2026-09-29",
+      "2026-10-02",
       5000
      ]
     ]
@@ -478,6 +478,33 @@
    "product_url": "https://search.rakuten.co.jp/search/mall/%E3%83%96%E3%83%A9%E3%82%A6%E3%83%B3%20%E3%82%AA%E3%83%BC%E3%83%A9%E3%83%ABB%20%E6%9B%BF%E3%81%88%E3%83%96%E3%83%A9%E3%82%B7%20%E7%B4%94%E6%AD%A3/",
    "image": null,
    "other_offers": []
+  }
+ ],
+ "price_index": [
+  {
+   "week_end": "2026-09-04",
+   "index": 98.4,
+   "items": 5
+  },
+  {
+   "week_end": "2026-09-11",
+   "index": 98,
+   "items": 5
+  },
+  {
+   "week_end": "2026-09-18",
+   "index": 97.7,
+   "items": 5
+  },
+  {
+   "week_end": "2026-09-25",
+   "index": 98.1,
+   "items": 5
+  },
+  {
+   "week_end": "2026-10-02",
+   "index": 97.1,
+   "items": 5
   }
  ],
  "stats": {
@@ -534,5 +561,35 @@
    "text": "Supported by Rakuten Developers",
    "url": "https://developers.rakuten.com/"
   }
- }
+ },
+ "key_facts": [
+  "SHELF records the prices of the 5 top-rated Oral-B brush heads (round) every day.",
+  "The median price is ¥4,660, ranging from ¥1,000 to ¥7,210.",
+  "The top pick is (サンプル) ブラウン オーラルB 純正替えブラシ(丸型) A ブラウン オーラルB 純正 4本 (¥4,660, ★4.67 from 1,757 reviews).",
+  "Best value per head: (サンプル) ブラウン オーラルB 純正替えブラシ(丸型) C ブラウン 純正 8本 (¥901).",
+  "The price index for Oral-B brush heads (round) is 97.1 (usual price = 100; 98.4 4 weeks ago)."
+ ],
+ "faq": [
+  {
+   "q": "What are the best Oral-B brush heads (round) right now?",
+   "a": "As of 2026-10-02, SHELF’s top pick for Oral-B brush heads (round) is (サンプル) ブラウン オーラルB 純正替えブラシ(丸型) A ブラウン オーラルB 純正 4本 (¥4,660, ★4.67 from 1,757 reviews), chosen by a score that combines rating and number of reviews."
+  },
+  {
+   "q": "How much do Oral-B brush heads (round) cost?",
+   "a": "As of 2026-10-02, the median price of the 5 Oral-B brush heads (round) SHELF tracks is ¥4,660 (¥1,000–¥7,210)."
+  },
+  {
+   "q": "Is now a good time to buy Oral-B brush heads (round)?",
+   "a": "Oral-B brush heads (round) as of 2026-10-02: Mostly at usual prices; no sign that waiting would make it much cheaper. (31 days observed; seasonal patterns not yet reflected)"
+  },
+  {
+   "q": "What is the cheapest way to buy Oral-B brush heads (round) (per head)?",
+   "a": "As of 2026-10-02, comparing Oral-B brush heads (round) per head, the cheapest well-rated listing with shipping included is (サンプル) ブラウン オーラルB 純正替えブラシ(丸型) C ブラウン 純正 8本 (¥901)."
+  },
+  {
+   "q": "How do I choose Oral-B brush heads (round)?",
+   "a": "Braun Oral-B round brush heads fit rotating handles other than the iO series (iO takes its own heads only, and oval heads are for different models). Compare by price per head. Replace about every 3 months."
+  }
+ ],
+ "license": "Text and statistics written by SHELF are CC BY 4.0: quote or reuse them with credit to SHELF and a link. Product names, prices and images belong to the stores."
 }

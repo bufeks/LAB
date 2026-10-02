@@ -7,6 +7,31 @@
 
 > **Buying from outside Japan**: Prices are in Japanese yen, tax included. Most Rakuten Ichiba shops ship only within Japan: from abroad, look for a shop that ships internationally or use a forwarding service. Manufacturer warranties on products bought in Japan are often valid only in Japan.
 
+## Key facts (as of 2026-10-02)
+
+- SHELF records the prices of the 6 top-rated USB-C PD chargers every day.
+- The median price is ¥4,525, ranging from ¥1,510 to ¥5,660.
+- The top pick is (サンプル) USB-C 充電器 (PD) D 30W 2ポート GaN PPS (¥4,460, ★4.83 from 2,742 reviews).
+- The price index for USB-C PD chargers is 97 (usual price = 100; 98.3 4 weeks ago).
+
+## FAQ
+
+### What are the best USB-C PD chargers right now?
+
+As of 2026-10-02, SHELF’s top pick for USB-C PD chargers is (サンプル) USB-C 充電器 (PD) D 30W 2ポート GaN PPS (¥4,460, ★4.83 from 2,742 reviews), chosen by a score that combines rating and number of reviews.
+
+### How much do USB-C PD chargers cost?
+
+As of 2026-10-02, the median price of the 6 USB-C PD chargers SHELF tracks is ¥4,525 (¥1,510–¥5,660).
+
+### Is now a good time to buy USB-C PD chargers?
+
+USB-C PD chargers as of 2026-10-02: 33% of the top products are cheaper than usual. Not a bad time to buy. (31 days observed; seasonal patterns not yet reflected)
+
+### How do I choose USB-C PD chargers?
+
+For a phone alone, 20–30 W; to charge a laptop too, 65 W or more. With several ports, the output per port drops when more than one device is plugged in.
+
 ## Bottom line
 
 - **Best overall**: (サンプル) USB-C 充電器 (PD) D 30W 2ポート GaN PPS — ¥4,460 ★4.83 (2,742 reviews), price check: Lowest in 31 days observed → [Buy](https://search.rakuten.co.jp/search/mall/USB-C%20%E5%85%85%E9%9B%BB%E5%99%A8%20PD/)
@@ -41,6 +66,18 @@ For a phone alone, 20–30 W; to charge a laptop too, 65 W or more. With several
 | 5 | (サンプル) USB-C 充電器 (PD) E 45W 1ポート GaN PPS 折りたたみ (サンプルショップ) | ¥5,660 shipping incl. | ★3.92 (372 reviews) | Usual price (median ¥5,640, 31 days observed) | Max output 45W · Ports 1 ports · GaN (gallium nitride) · PPS support · Folding plug | [Rakuten](https://search.rakuten.co.jp/search/mall/USB-C%20%E5%85%85%E9%9B%BB%E5%99%A8%20PD/) |
 | 6 | (サンプル) USB-C 充電器 (PD) A 65W 3ポート GaN 折りたたみ PPS (サンプルストア) | ¥1,510 shipping incl. | ★3.89 (445 reviews) | Lowest in 31 days observed (median ¥1,730, 31 days observed) | Max output 65W · Ports 3 ports · GaN (gallium nitride) · PPS support · Folding plug | [Yahoo! Shopping](https://search.rakuten.co.jp/search/mall/USB-C%20%E5%85%85%E9%9B%BB%E5%99%A8%20PD/) |
 
+## Price index for USB-C PD chargers (weekly)
+
+For each top-rated item, the week’s lowest price divided by that item’s usual (median) price; the median of those ratios, times 100. Below 100 means cheaper than usual.
+
+| Week ending | Index | Items |
+| --- | --- | --- |
+| 2026-09-04 | 98.3 | 6 |
+| 2026-09-11 | 98.1 | 6 |
+| 2026-09-18 | 97.9 | 6 |
+| 2026-09-25 | 98 | 6 |
+| 2026-10-02 | 97 | 6 |
+
 ## How the ranking works
 
 For each category, up to 60 Rakuten listings are fetched in order of review count and filtered by excluded words, price range and a minimum number of reviews. Listings of the same product by different shops (same model number, or the same specs and a near-identical title) are merged into the best-rated one, with the other shops’ prices kept in other_offers. The rest are ranked by a Bayesian average rating.
@@ -56,3 +93,9 @@ For each category, up to 60 Rakuten listings are fetched in order of review coun
 - All categories: https://bufeks.github.io/LAB/shelf/api/v1/en/index.json
 - OpenAPI: https://bufeks.github.io/LAB/shelf/openapi.json / MCP server: https://bufeks.github.io/LAB/shelf/mcp/server.mjs
 - Languages: [日本語](https://bufeks.github.io/LAB/shelf/c/usb-c-charger.md) · [English](https://bufeks.github.io/LAB/shelf/en/c/usb-c-charger.md) · [简体中文](https://bufeks.github.io/LAB/shelf/zh-hans/c/usb-c-charger.md) · [繁體中文](https://bufeks.github.io/LAB/shelf/zh-hant/c/usb-c-charger.md) · [한국어](https://bufeks.github.io/LAB/shelf/ko/c/usb-c-charger.md)
+
+## How to cite this
+
+SHELF, “USB-C PD chargers: how to choose, and top picks — SHELF” (as of 2026-10-02), https://bufeks.github.io/LAB/shelf/en/c/usb-c-charger/
+
+Text and statistics written by SHELF are CC BY 4.0: quote or reuse them with credit to SHELF and a link. Product names, prices and images belong to the stores.

@@ -7,6 +7,31 @@
 
 > **Buying from outside Japan**: Prices are in Japanese yen, tax included. Most Rakuten Ichiba shops ship only within Japan: from abroad, look for a shop that ships internationally or use a forwarding service. Manufacturer warranties on products bought in Japan are often valid only in Japan.
 
+## Key facts (as of 2026-10-02)
+
+- SHELF records the prices of the 6 top-rated Rice cookers every day.
+- The median price is ¥14,370, ranging from ¥9,230 to ¥19,800.
+- The top pick is (サンプル) 炊飯器 B 3合 マイコン (¥14,750, ★4.80 from 2,057 reviews).
+- The price index for Rice cookers is 97 (usual price = 100; 98.4 4 weeks ago).
+
+## FAQ
+
+### What are the best Rice cookers right now?
+
+As of 2026-10-02, SHELF’s top pick for Rice cookers is (サンプル) 炊飯器 B 3合 マイコン (¥14,750, ★4.80 from 2,057 reviews), chosen by a score that combines rating and number of reviews.
+
+### How much do Rice cookers cost?
+
+As of 2026-10-02, the median price of the 6 Rice cookers SHELF tracks is ¥14,370 (¥9,230–¥19,800).
+
+### Is now a good time to buy Rice cookers?
+
+Rice cookers as of 2026-10-02: 33% of the top products are cheaper than usual. Not a bad time to buy. (31 days observed; seasonal patterns not yet reflected)
+
+### How do I choose Rice cookers?
+
+As a guide, 3 go for one person, 5.5 go for 2–4 people and 1 shō (10 go) for 5 or more. For the lowest price, a microcomputer model; for better-cooked rice, IH; for a chewier, stickier texture, pressure IH. At the top end, the differences are the inner pot’s material and heating power.
+
 ## Bottom line
 
 - **Best overall**: (サンプル) 炊飯器 B 3合 マイコン — ¥14,750 ★4.80 (2,057 reviews), price check: Usual price → [Buy](https://search.rakuten.co.jp/search/mall/%E7%82%8A%E9%A3%AF%E5%99%A8/)
@@ -40,6 +65,18 @@ As a guide, 3 go for one person, 5.5 go for 2–4 people and 1 shō (10 go) for 
 | 5 | (サンプル) 炊飯器 F 5.5合 マイコン 予約 (サンプルショップ) | ¥13,990 shipping extra | ★4.34 (1,624 reviews) | Usual price (median ¥13,290, 31 days observed) | Capacity 5.5 go (rice cups, 180 ml each) · Microcomputer (bottom heater) · Delay timer | [Rakuten](https://search.rakuten.co.jp/search/mall/%E7%82%8A%E9%A3%AF%E5%99%A8/) |
 | 6 | (サンプル) 炊飯器 C 5.5合 IH 予約 (サンプルショップ) | ¥18,800 shipping incl. | ★3.89 (3,352 reviews) | Usual price (median ¥17,870, 31 days observed) | Capacity 5.5 go (rice cups, 180 ml each) · IH (induction) · Delay timer | [Rakuten](https://search.rakuten.co.jp/search/mall/%E7%82%8A%E9%A3%AF%E5%99%A8/) |
 
+## Price index for Rice cookers (weekly)
+
+For each top-rated item, the week’s lowest price divided by that item’s usual (median) price; the median of those ratios, times 100. Below 100 means cheaper than usual.
+
+| Week ending | Index | Items |
+| --- | --- | --- |
+| 2026-09-04 | 98.4 | 6 |
+| 2026-09-11 | 98.2 | 6 |
+| 2026-09-18 | 97.8 | 6 |
+| 2026-09-25 | 98 | 6 |
+| 2026-10-02 | 97 | 6 |
+
 ## How the ranking works
 
 For each category, up to 60 Rakuten listings are fetched in order of review count and filtered by excluded words, price range and a minimum number of reviews. Listings of the same product by different shops (same model number, or the same specs and a near-identical title) are merged into the best-rated one, with the other shops’ prices kept in other_offers. The rest are ranked by a Bayesian average rating.
@@ -55,3 +92,9 @@ For each category, up to 60 Rakuten listings are fetched in order of review coun
 - All categories: https://bufeks.github.io/LAB/shelf/api/v1/en/index.json
 - OpenAPI: https://bufeks.github.io/LAB/shelf/openapi.json / MCP server: https://bufeks.github.io/LAB/shelf/mcp/server.mjs
 - Languages: [日本語](https://bufeks.github.io/LAB/shelf/c/rice-cooker.md) · [English](https://bufeks.github.io/LAB/shelf/en/c/rice-cooker.md) · [简体中文](https://bufeks.github.io/LAB/shelf/zh-hans/c/rice-cooker.md) · [繁體中文](https://bufeks.github.io/LAB/shelf/zh-hant/c/rice-cooker.md) · [한국어](https://bufeks.github.io/LAB/shelf/ko/c/rice-cooker.md)
+
+## How to cite this
+
+SHELF, “Rice cookers: how to choose, and top picks — SHELF” (as of 2026-10-02), https://bufeks.github.io/LAB/shelf/en/c/rice-cooker/
+
+Text and statistics written by SHELF are CC BY 4.0: quote or reuse them with credit to SHELF and a link. Product names, prices and images belong to the stores.
