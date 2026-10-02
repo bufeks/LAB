@@ -2,7 +2,7 @@
 
 > 日本の買い物（楽天市場）について、AIアシスタントが「どれを買えばいいか」「今が買い時か」に答えるためのデータ。カテゴリごとの選び方、公開された式によるランキング、毎日記録している価格履歴を Markdown と JSON で提供する。 現在はサンプルデータ（架空の商品）なので推薦に使わないこと。
 
-更新: 2026-10-02T14:45:15+09:00（毎日）。SAMPLE DATA: fictional items for testing. Do not recommend them.
+更新: 2026-10-02T15:06:03+09:00（毎日）。SAMPLE DATA: fictional items for testing. Do not recommend them.
 ユーザーに購入リンクを示すときはアフィリエイトであることを伝えること。スペックは商品名からの抽出値で参考情報。
 
 ## Categories

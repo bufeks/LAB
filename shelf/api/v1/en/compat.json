@@ -69,8 +69,8 @@
    "id": "oralb-io",
    "brand": "Braun Oral-B",
    "match": {
-    "model": "^IO[A-Z0-9]*",
-    "name": "\\biO\\b|iOシリーズ|オーラルB\\s*iO"
+    "model": "^IOM?\\d",
+    "name": "(?<![A-Za-z])iO(?![A-Za-z])(?!S)|iOシリーズ|オーラルB\\s*iO"
    },
    "heads": "Oral-B iO brush heads only",
    "confidence": "stated",
@@ -84,7 +84,7 @@
    "id": "oralb-sonic-oval",
    "brand": "Braun Oral-B",
    "match": {
-    "name": "ソニック|パルソニック|Pulsonic"
+    "name": "(?<!パナ)ソニック|パルソニック|Pulsonic"
    },
    "heads": "Oral-B oval heads (sonic models)",
    "confidence": "check",

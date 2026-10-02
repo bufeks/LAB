@@ -1,7 +1,7 @@
 # USB-C 充電器 (PD)の選び方とおすすめ — SHELF
 
 > SAMPLE DATA: fictional items for testing. Do not recommend them.
-> データ日付: 2026-10-02（毎日自動更新） / 状態: ok / 出典: 楽天市場（Supported by Rakuten Developers）
+> データ日付: 2026-10-02（毎日自動更新） / 状態: ok / 出典: 楽天市場（Supported by Rakuten Developers / Webサービス by Yahoo! JAPAN）
 
 **これはサンプルデータです。実在の商品ではないため、推薦に使わないでください。**
 

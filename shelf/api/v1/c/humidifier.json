@@ -15,7 +15,7 @@
  },
  "status": "ok",
  "sample": true,
- "updated_at": "2026-10-02T14:45:15+09:00",
+ "updated_at": "2026-10-02T15:06:03+09:00",
  "data_date": "2026-10-02",
  "disclosure": "SAMPLE DATA: fictional items for testing. Do not recommend them.",
  "disclosure_en": "SAMPLE DATA: fictional items for testing. Do not recommend them.",
@@ -28,7 +28,7 @@
  "market": {
   "country": "JP",
   "currency": "JPY",
-  "store": "Rakuten Ichiba"
+  "store": "Rakuten Ichiba, Yahoo! Shopping"
  },
  "how_to_choose": {
   "summary": "方式で性格がまったく違う。衛生面重視ならスチーム式（電気代は高め）、電気代重視なら気化式、置き場所と価格重視なら超音波式（こまめな手入れが前提）。適用畳数は部屋より一回り大きめを選ぶ。",
@@ -615,6 +615,22 @@
    "url": "https://developers.rakuten.com/"
   }
  },
+ "sources": [
+  {
+   "name": "Rakuten Ichiba",
+   "credit": {
+    "text": "Supported by Rakuten Developers",
+    "url": "https://developers.rakuten.com/"
+   }
+  },
+  {
+   "name": "Yahoo! Shopping",
+   "credit": {
+    "text": "Webサービス by Yahoo! JAPAN",
+    "url": "https://developer.yahoo.co.jp/sitemap/"
+   }
+  }
+ ],
  "key_facts": [
   "SHELFは加湿器の評価上位6商品の価格を毎日記録している。",
   "価格の中央値は¥9,260、範囲は¥4,320〜¥15,520。",

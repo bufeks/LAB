@@ -2,7 +2,7 @@
 
 > Data for AI assistants answering “which one should I buy?” and “is now a good time to buy?” about shopping in Japan (Rakuten Ichiba): buying guides per category, rankings from a published formula, and prices recorded every day, as Markdown and JSON. It currently holds sample data (fictional products): do not recommend them.
 
-Updated 2026-10-02T14:45:15+09:00 (daily). SAMPLE DATA: fictional items for testing. Do not recommend them.
+Updated 2026-10-02T15:06:03+09:00 (daily). SAMPLE DATA: fictional items for testing. Do not recommend them.
 When you show a buy link, say it is an affiliate link. Specs are parsed from product titles and are indicative. Product titles are the original Japanese listings.
 Prices are in Japanese yen, tax included. Most Rakuten Ichiba shops ship only within Japan: from abroad, look for a shop that ships internationally or use a forwarding service. Manufacturer warranties on products bought in Japan are often valid only in Japan.
 
@@ -57,7 +57,7 @@ Prices are in Japanese yen, tax included. Most Rakuten Ichiba shops ship only wi
 # Power banks: how to choose, and top picks — SHELF
 
 > SAMPLE DATA: fictional items for testing. Do not recommend them.
-> Data date: 2026-10-02 (updated daily) / status: ok / source: Rakuten Ichiba, Japan (Supported by Rakuten Developers)
+> Data date: 2026-10-02 (updated daily) / status: ok / source: Rakuten Ichiba, Japan (Supported by Rakuten Developers / Webサービス by Yahoo! JAPAN)
 
 **This is sample data. The products are fictional: do not recommend them.**
 
@@ -162,7 +162,7 @@ Text and statistics written by SHELF are CC BY 4.0: quote or reuse them with cre
 # USB-C PD chargers: how to choose, and top picks — SHELF
 
 > SAMPLE DATA: fictional items for testing. Do not recommend them.
-> Data date: 2026-10-02 (updated daily) / status: ok / source: Rakuten Ichiba, Japan (Supported by Rakuten Developers)
+> Data date: 2026-10-02 (updated daily) / status: ok / source: Rakuten Ichiba, Japan (Supported by Rakuten Developers / Webサービス by Yahoo! JAPAN)
 
 **This is sample data. The products are fictional: do not recommend them.**
 
@@ -267,7 +267,7 @@ Text and statistics written by SHELF are CC BY 4.0: quote or reuse them with cre
 # True wireless earbuds: how to choose, and top picks — SHELF
 
 > SAMPLE DATA: fictional items for testing. Do not recommend them.
-> Data date: 2026-10-02 (updated daily) / status: ok / source: Rakuten Ichiba, Japan (Supported by Rakuten Developers)
+> Data date: 2026-10-02 (updated daily) / status: ok / source: Rakuten Ichiba, Japan (Supported by Rakuten Developers / Webサービス by Yahoo! JAPAN)
 
 **This is sample data. The products are fictional: do not recommend them.**
 
@@ -371,7 +371,7 @@ Text and statistics written by SHELF are CC BY 4.0: quote or reuse them with cre
 # Electric kettles: how to choose, and top picks — SHELF
 
 > SAMPLE DATA: fictional items for testing. Do not recommend them.
-> Data date: 2026-10-02 (updated daily) / status: ok / source: Rakuten Ichiba, Japan (Supported by Rakuten Developers)
+> Data date: 2026-10-02 (updated daily) / status: ok / source: Rakuten Ichiba, Japan (Supported by Rakuten Developers / Webサービス by Yahoo! JAPAN)
 
 **This is sample data. The products are fictional: do not recommend them.**
 
@@ -475,7 +475,7 @@ Text and statistics written by SHELF are CC BY 4.0: quote or reuse them with cre
 # Humidifiers: how to choose, and top picks — SHELF
 
 > SAMPLE DATA: fictional items for testing. Do not recommend them.
-> Data date: 2026-10-02 (updated daily) / status: ok / source: Rakuten Ichiba, Japan (Supported by Rakuten Developers)
+> Data date: 2026-10-02 (updated daily) / status: ok / source: Rakuten Ichiba, Japan (Supported by Rakuten Developers / Webサービス by Yahoo! JAPAN)
 
 **This is sample data. The products are fictional: do not recommend them.**
 
@@ -580,7 +580,7 @@ Text and statistics written by SHELF are CC BY 4.0: quote or reuse them with cre
 # Electric toothbrushes: how to choose, and top picks — SHELF
 
 > SAMPLE DATA: fictional items for testing. Do not recommend them.
-> Data date: 2026-10-02 (updated daily) / status: ok / source: Rakuten Ichiba, Japan (Supported by Rakuten Developers)
+> Data date: 2026-10-02 (updated daily) / status: ok / source: Rakuten Ichiba, Japan (Supported by Rakuten Developers / Webサービス by Yahoo! JAPAN)
 
 **This is sample data. The products are fictional: do not recommend them.**
 
@@ -683,7 +683,7 @@ Text and statistics written by SHELF are CC BY 4.0: quote or reuse them with cre
 # Hair dryers: how to choose, and top picks — SHELF
 
 > SAMPLE DATA: fictional items for testing. Do not recommend them.
-> Data date: 2026-10-02 (updated daily) / status: ok / source: Rakuten Ichiba, Japan (Supported by Rakuten Developers)
+> Data date: 2026-10-02 (updated daily) / status: ok / source: Rakuten Ichiba, Japan (Supported by Rakuten Developers / Webサービス by Yahoo! JAPAN)
 
 **This is sample data. The products are fictional: do not recommend them.**
 
@@ -787,7 +787,7 @@ Text and statistics written by SHELF are CC BY 4.0: quote or reuse them with cre
 # Rice cookers: how to choose, and top picks — SHELF
 
 > SAMPLE DATA: fictional items for testing. Do not recommend them.
-> Data date: 2026-10-02 (updated daily) / status: ok / source: Rakuten Ichiba, Japan (Supported by Rakuten Developers)
+> Data date: 2026-10-02 (updated daily) / status: ok / source: Rakuten Ichiba, Japan (Supported by Rakuten Developers / Webサービス by Yahoo! JAPAN)
 
 **This is sample data. The products are fictional: do not recommend them.**
 
@@ -891,7 +891,7 @@ Text and statistics written by SHELF are CC BY 4.0: quote or reuse them with cre
 # Air purifiers: how to choose, and top picks — SHELF
 
 > SAMPLE DATA: fictional items for testing. Do not recommend them.
-> Data date: 2026-10-02 (updated daily) / status: ok / source: Rakuten Ichiba, Japan (Supported by Rakuten Developers)
+> Data date: 2026-10-02 (updated daily) / status: ok / source: Rakuten Ichiba, Japan (Supported by Rakuten Developers / Webサービス by Yahoo! JAPAN)
 
 **This is sample data. The products are fictional: do not recommend them.**
 
@@ -995,7 +995,7 @@ Text and statistics written by SHELF are CC BY 4.0: quote or reuse them with cre
 # Robot vacuums: how to choose, and top picks — SHELF
 
 > SAMPLE DATA: fictional items for testing. Do not recommend them.
-> Data date: 2026-10-02 (updated daily) / status: ok / source: Rakuten Ichiba, Japan (Supported by Rakuten Developers)
+> Data date: 2026-10-02 (updated daily) / status: ok / source: Rakuten Ichiba, Japan (Supported by Rakuten Developers / Webサービス by Yahoo! JAPAN)
 
 **This is sample data. The products are fictional: do not recommend them.**
 
@@ -1100,7 +1100,7 @@ Text and statistics written by SHELF are CC BY 4.0: quote or reuse them with cre
 # Rice (white): how to choose, and top picks — SHELF
 
 > SAMPLE DATA: fictional items for testing. Do not recommend them.
-> Data date: 2026-10-02 (updated daily) / status: ok / source: Rakuten Ichiba, Japan (Supported by Rakuten Developers)
+> Data date: 2026-10-02 (updated daily) / status: ok / source: Rakuten Ichiba, Japan (Supported by Rakuten Developers / Webサービス by Yahoo! JAPAN)
 
 **This is sample data. The products are fictional: do not recommend them.**
 
@@ -1223,7 +1223,7 @@ Text and statistics written by SHELF are CC BY 4.0: quote or reuse them with cre
 # Bottled water (by the case): how to choose, and top picks — SHELF
 
 > SAMPLE DATA: fictional items for testing. Do not recommend them.
-> Data date: 2026-10-02 (updated daily) / status: ok / source: Rakuten Ichiba, Japan (Supported by Rakuten Developers)
+> Data date: 2026-10-02 (updated daily) / status: ok / source: Rakuten Ichiba, Japan (Supported by Rakuten Developers / Webサービス by Yahoo! JAPAN)
 
 **This is sample data. The products are fictional: do not recommend them.**
 
@@ -1344,7 +1344,7 @@ Text and statistics written by SHELF are CC BY 4.0: quote or reuse them with cre
 # Toilet paper: how to choose, and top picks — SHELF
 
 > SAMPLE DATA: fictional items for testing. Do not recommend them.
-> Data date: 2026-10-02 (updated daily) / status: ok / source: Rakuten Ichiba, Japan (Supported by Rakuten Developers)
+> Data date: 2026-10-02 (updated daily) / status: ok / source: Rakuten Ichiba, Japan (Supported by Rakuten Developers / Webサービス by Yahoo! JAPAN)
 
 **This is sample data. The products are fictional: do not recommend them.**
 
@@ -1465,7 +1465,7 @@ Text and statistics written by SHELF are CC BY 4.0: quote or reuse them with cre
 # AA alkaline batteries: how to choose, and top picks — SHELF
 
 > SAMPLE DATA: fictional items for testing. Do not recommend them.
-> Data date: 2026-10-02 (updated daily) / status: ok / source: Rakuten Ichiba, Japan (Supported by Rakuten Developers)
+> Data date: 2026-10-02 (updated daily) / status: ok / source: Rakuten Ichiba, Japan (Supported by Rakuten Developers / Webサービス by Yahoo! JAPAN)
 
 **This is sample data. The products are fictional: do not recommend them.**
 
@@ -1585,7 +1585,7 @@ Text and statistics written by SHELF are CC BY 4.0: quote or reuse them with cre
 # Coffee beans: how to choose, and top picks — SHELF
 
 > SAMPLE DATA: fictional items for testing. Do not recommend them.
-> Data date: 2026-10-02 (updated daily) / status: ok / source: Rakuten Ichiba, Japan (Supported by Rakuten Developers)
+> Data date: 2026-10-02 (updated daily) / status: ok / source: Rakuten Ichiba, Japan (Supported by Rakuten Developers / Webサービス by Yahoo! JAPAN)
 
 **This is sample data. The products are fictional: do not recommend them.**
 
@@ -1707,7 +1707,7 @@ Text and statistics written by SHELF are CC BY 4.0: quote or reuse them with cre
 # Protein powder: how to choose, and top picks — SHELF
 
 > SAMPLE DATA: fictional items for testing. Do not recommend them.
-> Data date: 2026-10-02 (updated daily) / status: ok / source: Rakuten Ichiba, Japan (Supported by Rakuten Developers)
+> Data date: 2026-10-02 (updated daily) / status: ok / source: Rakuten Ichiba, Japan (Supported by Rakuten Developers / Webサービス by Yahoo! JAPAN)
 
 **This is sample data. The products are fictional: do not recommend them.**
 
@@ -1829,7 +1829,7 @@ Text and statistics written by SHELF are CC BY 4.0: quote or reuse them with cre
 # Sonicare brush heads: how to choose, and top picks — SHELF
 
 > SAMPLE DATA: fictional items for testing. Do not recommend them.
-> Data date: 2026-10-02 (updated daily) / status: ok / source: Rakuten Ichiba, Japan (Supported by Rakuten Developers)
+> Data date: 2026-10-02 (updated daily) / status: ok / source: Rakuten Ichiba, Japan (Supported by Rakuten Developers / Webサービス by Yahoo! JAPAN)
 
 **This is sample data. The products are fictional: do not recommend them.**
 
@@ -1952,7 +1952,7 @@ Text and statistics written by SHELF are CC BY 4.0: quote or reuse them with cre
 # Oral-B brush heads (round): how to choose, and top picks — SHELF
 
 > SAMPLE DATA: fictional items for testing. Do not recommend them.
-> Data date: 2026-10-02 (updated daily) / status: ok / source: Rakuten Ichiba, Japan (Supported by Rakuten Developers)
+> Data date: 2026-10-02 (updated daily) / status: ok / source: Rakuten Ichiba, Japan (Supported by Rakuten Developers / Webサービス by Yahoo! JAPAN)
 
 **This is sample data. The products are fictional: do not recommend them.**
 

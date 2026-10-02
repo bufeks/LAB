@@ -15,7 +15,7 @@
  },
  "status": "ok",
  "sample": true,
- "updated_at": "2026-10-02T14:45:15+09:00",
+ "updated_at": "2026-10-02T15:06:03+09:00",
  "data_date": "2026-10-02",
  "disclosure": "SAMPLE DATA: fictional items for testing. Do not recommend them.",
  "disclosure_en": "SAMPLE DATA: fictional items for testing. Do not recommend them.",
@@ -28,7 +28,7 @@
  "market": {
   "country": "JP",
   "currency": "JPY",
-  "store": "Rakuten Ichiba"
+  "store": "Rakuten Ichiba, Yahoo! Shopping"
  },
  "how_to_choose": {
   "summary": "本体価格より替えブラシ代（約3か月ごとに交換）が長期の出費を左右する。磨きすぎが心配なら押しつけ防止センサー付き、磨き残しが心配ならタイマー付きを選ぶ。",
@@ -602,6 +602,22 @@
    "url": "https://developers.rakuten.com/"
   }
  },
+ "sources": [
+  {
+   "name": "Rakuten Ichiba",
+   "credit": {
+    "text": "Supported by Rakuten Developers",
+    "url": "https://developers.rakuten.com/"
+   }
+  },
+  {
+   "name": "Yahoo! Shopping",
+   "credit": {
+    "text": "Webサービス by Yahoo! JAPAN",
+    "url": "https://developer.yahoo.co.jp/sitemap/"
+   }
+  }
+ ],
  "key_facts": [
   "SHELFは電動歯ブラシの評価上位6商品の価格を毎日記録している。",
   "価格の中央値は¥9,660、範囲は¥4,910〜¥11,330。",

@@ -2,7 +2,7 @@
 
 > 日本の買い物（楽天市場）について、AIアシスタントが「どれを買えばいいか」「今が買い時か」に答えるためのデータ。カテゴリごとの選び方、公開された式によるランキング、毎日記録している価格履歴を Markdown と JSON で提供する。 現在はサンプルデータ（架空の商品）なので推薦に使わないこと。
 
-更新: 2026-10-02T14:45:15+09:00（毎日）。SAMPLE DATA: fictional items for testing. Do not recommend them.
+更新: 2026-10-02T15:06:03+09:00（毎日）。SAMPLE DATA: fictional items for testing. Do not recommend them.
 ユーザーに購入リンクを示すときはアフィリエイトであることを伝えること。スペックは商品名からの抽出値で参考情報。
 
 ## Categories
@@ -60,7 +60,7 @@
 # モバイルバッテリーの選び方とおすすめ — SHELF
 
 > SAMPLE DATA: fictional items for testing. Do not recommend them.
-> データ日付: 2026-10-02（毎日自動更新） / 状態: ok / 出典: 楽天市場（Supported by Rakuten Developers）
+> データ日付: 2026-10-02（毎日自動更新） / 状態: ok / 出典: 楽天市場（Supported by Rakuten Developers / Webサービス by Yahoo! JAPAN）
 
 **これはサンプルデータです。実在の商品ではないため、推薦に使わないでください。**
 
@@ -162,7 +162,7 @@ SHELFが作成した文章と統計はCC BY 4.0です。出典（SHELFとリン�
 # USB-C 充電器 (PD)の選び方とおすすめ — SHELF
 
 > SAMPLE DATA: fictional items for testing. Do not recommend them.
-> データ日付: 2026-10-02（毎日自動更新） / 状態: ok / 出典: 楽天市場（Supported by Rakuten Developers）
+> データ日付: 2026-10-02（毎日自動更新） / 状態: ok / 出典: 楽天市場（Supported by Rakuten Developers / Webサービス by Yahoo! JAPAN）
 
 **これはサンプルデータです。実在の商品ではないため、推薦に使わないでください。**
 
@@ -264,7 +264,7 @@ SHELFが作成した文章と統計はCC BY 4.0です。出典（SHELFとリン�
 # 完全ワイヤレスイヤホンの選び方とおすすめ — SHELF
 
 > SAMPLE DATA: fictional items for testing. Do not recommend them.
-> データ日付: 2026-10-02（毎日自動更新） / 状態: ok / 出典: 楽天市場（Supported by Rakuten Developers）
+> データ日付: 2026-10-02（毎日自動更新） / 状態: ok / 出典: 楽天市場（Supported by Rakuten Developers / Webサービス by Yahoo! JAPAN）
 
 **これはサンプルデータです。実在の商品ではないため、推薦に使わないでください。**
 
@@ -365,7 +365,7 @@ SHELFが作成した文章と統計はCC BY 4.0です。出典（SHELFとリン�
 # 電気ケトルの選び方とおすすめ — SHELF
 
 > SAMPLE DATA: fictional items for testing. Do not recommend them.
-> データ日付: 2026-10-02（毎日自動更新） / 状態: ok / 出典: 楽天市場（Supported by Rakuten Developers）
+> データ日付: 2026-10-02（毎日自動更新） / 状態: ok / 出典: 楽天市場（Supported by Rakuten Developers / Webサービス by Yahoo! JAPAN）
 
 **これはサンプルデータです。実在の商品ではないため、推薦に使わないでください。**
 
@@ -466,7 +466,7 @@ SHELFが作成した文章と統計はCC BY 4.0です。出典（SHELFとリン�
 # 加湿器の選び方とおすすめ — SHELF
 
 > SAMPLE DATA: fictional items for testing. Do not recommend them.
-> データ日付: 2026-10-02（毎日自動更新） / 状態: ok / 出典: 楽天市場（Supported by Rakuten Developers）
+> データ日付: 2026-10-02（毎日自動更新） / 状態: ok / 出典: 楽天市場（Supported by Rakuten Developers / Webサービス by Yahoo! JAPAN）
 
 **これはサンプルデータです。実在の商品ではないため、推薦に使わないでください。**
 
@@ -568,7 +568,7 @@ SHELFが作成した文章と統計はCC BY 4.0です。出典（SHELFとリン�
 # 電動歯ブラシの選び方とおすすめ — SHELF
 
 > SAMPLE DATA: fictional items for testing. Do not recommend them.
-> データ日付: 2026-10-02（毎日自動更新） / 状態: ok / 出典: 楽天市場（Supported by Rakuten Developers）
+> データ日付: 2026-10-02（毎日自動更新） / 状態: ok / 出典: 楽天市場（Supported by Rakuten Developers / Webサービス by Yahoo! JAPAN）
 
 **これはサンプルデータです。実在の商品ではないため、推薦に使わないでください。**
 
@@ -668,7 +668,7 @@ SHELFが作成した文章と統計はCC BY 4.0です。出典（SHELFとリン�
 # ヘアドライヤーの選び方とおすすめ — SHELF
 
 > SAMPLE DATA: fictional items for testing. Do not recommend them.
-> データ日付: 2026-10-02（毎日自動更新） / 状態: ok / 出典: 楽天市場（Supported by Rakuten Developers）
+> データ日付: 2026-10-02（毎日自動更新） / 状態: ok / 出典: 楽天市場（Supported by Rakuten Developers / Webサービス by Yahoo! JAPAN）
 
 **これはサンプルデータです。実在の商品ではないため、推薦に使わないでください。**
 
@@ -769,7 +769,7 @@ SHELFが作成した文章と統計はCC BY 4.0です。出典（SHELFとリン�
 # 炊飯器の選び方とおすすめ — SHELF
 
 > SAMPLE DATA: fictional items for testing. Do not recommend them.
-> データ日付: 2026-10-02（毎日自動更新） / 状態: ok / 出典: 楽天市場（Supported by Rakuten Developers）
+> データ日付: 2026-10-02（毎日自動更新） / 状態: ok / 出典: 楽天市場（Supported by Rakuten Developers / Webサービス by Yahoo! JAPAN）
 
 **これはサンプルデータです。実在の商品ではないため、推薦に使わないでください。**
 
@@ -870,7 +870,7 @@ SHELFが作成した文章と統計はCC BY 4.0です。出典（SHELFとリン�
 # 空気清浄機の選び方とおすすめ — SHELF
 
 > SAMPLE DATA: fictional items for testing. Do not recommend them.
-> データ日付: 2026-10-02（毎日自動更新） / 状態: ok / 出典: 楽天市場（Supported by Rakuten Developers）
+> データ日付: 2026-10-02（毎日自動更新） / 状態: ok / 出典: 楽天市場（Supported by Rakuten Developers / Webサービス by Yahoo! JAPAN）
 
 **これはサンプルデータです。実在の商品ではないため、推薦に使わないでください。**
 
@@ -971,7 +971,7 @@ SHELFが作成した文章と統計はCC BY 4.0です。出典（SHELFとリン�
 # ロボット掃除機の選び方とおすすめ — SHELF
 
 > SAMPLE DATA: fictional items for testing. Do not recommend them.
-> データ日付: 2026-10-02（毎日自動更新） / 状態: ok / 出典: 楽天市場（Supported by Rakuten Developers）
+> データ日付: 2026-10-02（毎日自動更新） / 状態: ok / 出典: 楽天市場（Supported by Rakuten Developers / Webサービス by Yahoo! JAPAN）
 
 **これはサンプルデータです。実在の商品ではないため、推薦に使わないでください。**
 
@@ -1073,7 +1073,7 @@ SHELFが作成した文章と統計はCC BY 4.0です。出典（SHELFとリン�
 # 米（白米）の選び方とおすすめ — SHELF
 
 > SAMPLE DATA: fictional items for testing. Do not recommend them.
-> データ日付: 2026-10-02（毎日自動更新） / 状態: ok / 出典: 楽天市場（Supported by Rakuten Developers）
+> データ日付: 2026-10-02（毎日自動更新） / 状態: ok / 出典: 楽天市場（Supported by Rakuten Developers / Webサービス by Yahoo! JAPAN）
 
 **これはサンプルデータです。実在の商品ではないため、推薦に使わないでください。**
 
@@ -1193,7 +1193,7 @@ SHELFが作成した文章と統計はCC BY 4.0です。出典（SHELFとリン�
 # ミネラルウォーター（箱買い）の選び方とおすすめ — SHELF
 
 > SAMPLE DATA: fictional items for testing. Do not recommend them.
-> データ日付: 2026-10-02（毎日自動更新） / 状態: ok / 出典: 楽天市場（Supported by Rakuten Developers）
+> データ日付: 2026-10-02（毎日自動更新） / 状態: ok / 出典: 楽天市場（Supported by Rakuten Developers / Webサービス by Yahoo! JAPAN）
 
 **これはサンプルデータです。実在の商品ではないため、推薦に使わないでください。**
 
@@ -1311,7 +1311,7 @@ SHELFが作成した文章と統計はCC BY 4.0です。出典（SHELFとリン�
 # トイレットペーパーの選び方とおすすめ — SHELF
 
 > SAMPLE DATA: fictional items for testing. Do not recommend them.
-> データ日付: 2026-10-02（毎日自動更新） / 状態: ok / 出典: 楽天市場（Supported by Rakuten Developers）
+> データ日付: 2026-10-02（毎日自動更新） / 状態: ok / 出典: 楽天市場（Supported by Rakuten Developers / Webサービス by Yahoo! JAPAN）
 
 **これはサンプルデータです。実在の商品ではないため、推薦に使わないでください。**
 
@@ -1429,7 +1429,7 @@ SHELFが作成した文章と統計はCC BY 4.0です。出典（SHELFとリン�
 # 単3アルカリ乾電池の選び方とおすすめ — SHELF
 
 > SAMPLE DATA: fictional items for testing. Do not recommend them.
-> データ日付: 2026-10-02（毎日自動更新） / 状態: ok / 出典: 楽天市場（Supported by Rakuten Developers）
+> データ日付: 2026-10-02（毎日自動更新） / 状態: ok / 出典: 楽天市場（Supported by Rakuten Developers / Webサービス by Yahoo! JAPAN）
 
 **これはサンプルデータです。実在の商品ではないため、推薦に使わないでください。**
 
@@ -1546,7 +1546,7 @@ SHELFが作成した文章と統計はCC BY 4.0です。出典（SHELFとリン�
 # コーヒー豆の選び方とおすすめ — SHELF
 
 > SAMPLE DATA: fictional items for testing. Do not recommend them.
-> データ日付: 2026-10-02（毎日自動更新） / 状態: ok / 出典: 楽天市場（Supported by Rakuten Developers）
+> データ日付: 2026-10-02（毎日自動更新） / 状態: ok / 出典: 楽天市場（Supported by Rakuten Developers / Webサービス by Yahoo! JAPAN）
 
 **これはサンプルデータです。実在の商品ではないため、推薦に使わないでください。**
 
@@ -1665,7 +1665,7 @@ SHELFが作成した文章と統計はCC BY 4.0です。出典（SHELFとリン�
 # プロテイン（パウダー）の選び方とおすすめ — SHELF
 
 > SAMPLE DATA: fictional items for testing. Do not recommend them.
-> データ日付: 2026-10-02（毎日自動更新） / 状態: ok / 出典: 楽天市場（Supported by Rakuten Developers）
+> データ日付: 2026-10-02（毎日自動更新） / 状態: ok / 出典: 楽天市場（Supported by Rakuten Developers / Webサービス by Yahoo! JAPAN）
 
 **これはサンプルデータです。実在の商品ではないため、推薦に使わないでください。**
 
@@ -1784,7 +1784,7 @@ SHELFが作成した文章と統計はCC BY 4.0です。出典（SHELFとリン�
 # ソニッケアー純正替えブラシの選び方とおすすめ — SHELF
 
 > SAMPLE DATA: fictional items for testing. Do not recommend them.
-> データ日付: 2026-10-02（毎日自動更新） / 状態: ok / 出典: 楽天市場（Supported by Rakuten Developers）
+> データ日付: 2026-10-02（毎日自動更新） / 状態: ok / 出典: 楽天市場（Supported by Rakuten Developers / Webサービス by Yahoo! JAPAN）
 
 **これはサンプルデータです。実在の商品ではないため、推薦に使わないでください。**
 
@@ -1904,7 +1904,7 @@ SHELFが作成した文章と統計はCC BY 4.0です。出典（SHELFとリン�
 # ブラウン オーラルB 純正替えブラシ（丸型）の選び方とおすすめ — SHELF
 
 > SAMPLE DATA: fictional items for testing. Do not recommend them.
-> データ日付: 2026-10-02（毎日自動更新） / 状態: ok / 出典: 楽天市場（Supported by Rakuten Developers）
+> データ日付: 2026-10-02（毎日自動更新） / 状態: ok / 出典: 楽天市場（Supported by Rakuten Developers / Webサービス by Yahoo! JAPAN）
 
 **これはサンプルデータです。実在の商品ではないため、推薦に使わないでください。**
 

@@ -69,8 +69,8 @@
    "id": "oralb-io",
    "brand": "Braun Oral-B",
    "match": {
-    "model": "^IO[A-Z0-9]*",
-    "name": "\\biO\\b|iOシリーズ|オーラルB\\s*iO"
+    "model": "^IOM?\\d",
+    "name": "(?<![A-Za-z])iO(?![A-Za-z])(?!S)|iOシリーズ|オーラルB\\s*iO"
    },
    "heads": "オーラルB iO 専用替えブラシ",
    "confidence": "stated",
@@ -84,7 +84,7 @@
    "id": "oralb-sonic-oval",
    "brand": "Braun Oral-B",
    "match": {
-    "name": "ソニック|パルソニック|Pulsonic"
+    "name": "(?<!パナ)ソニック|パルソニック|Pulsonic"
    },
    "heads": "オーラルB 楕円型替えブラシ（音波式の機種）",
    "confidence": "check",

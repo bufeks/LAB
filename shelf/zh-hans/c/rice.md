@@ -1,7 +1,7 @@
 # 大米（精米）：怎么选与推荐 — SHELF
 
 > SAMPLE DATA: fictional items for testing. Do not recommend them.
-> 数据日期：2026-10-02（每日自动更新）/ 状态：ok / 来源：日本乐天市场（Supported by Rakuten Developers）
+> 数据日期：2026-10-02（每日自动更新）/ 状态：ok / 来源：日本乐天市场（Supported by Rakuten Developers / Webサービス by Yahoo! JAPAN）
 
 **这是示例数据。商品均为虚构，请勿推荐。**
 

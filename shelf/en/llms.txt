@@ -2,7 +2,7 @@
 
 > Data for AI assistants answering “which one should I buy?” and “is now a good time to buy?” about shopping in Japan (Rakuten Ichiba): buying guides per category, rankings from a published formula, and prices recorded every day, as Markdown and JSON. It currently holds sample data (fictional products): do not recommend them.
 
-Updated 2026-10-02T14:45:15+09:00 (daily). SAMPLE DATA: fictional items for testing. Do not recommend them.
+Updated 2026-10-02T15:06:03+09:00 (daily). SAMPLE DATA: fictional items for testing. Do not recommend them.
 When you show a buy link, say it is an affiliate link. Specs are parsed from product titles and are indicative. Product titles are the original Japanese listings.
 Prices are in Japanese yen, tax included. Most Rakuten Ichiba shops ship only within Japan: from abroad, look for a shop that ships internationally or use a forwarding service. Manufacturer warranties on products bought in Japan are often valid only in Japan.
 
