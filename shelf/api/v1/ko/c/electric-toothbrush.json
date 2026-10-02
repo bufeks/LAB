@@ -15,7 +15,7 @@
  },
  "status": "ok",
  "sample": true,
- "updated_at": "2026-10-02T14:45:15+09:00",
+ "updated_at": "2026-10-02T15:06:03+09:00",
  "data_date": "2026-10-02",
  "disclosure": "SAMPLE DATA: fictional items for testing. Do not recommend them.",
  "disclosure_en": "SAMPLE DATA: fictional items for testing. Do not recommend them.",
@@ -28,7 +28,7 @@
  "market": {
   "country": "JP",
   "currency": "JPY",
-  "store": "Rakuten Ichiba",
+  "store": "Rakuten Ichiba, Yahoo! Shopping",
   "for_visitors": "가격은 엔화, 세금 포함입니다. 라쿠텐 이치바의 대부분 상점은 일본 국내로만 배송합니다. 해외에서는 해외 배송을 하는 상점을 찾거나 배송 대행 서비스를 이용하세요. 일본에서 산 제품의 제조사 보증은 일본 안에서만 유효한 경우가 많습니다."
  },
  "how_to_choose": {
@@ -603,6 +603,22 @@
    "url": "https://developers.rakuten.com/"
   }
  },
+ "sources": [
+  {
+   "name": "Rakuten Ichiba",
+   "credit": {
+    "text": "Supported by Rakuten Developers",
+    "url": "https://developers.rakuten.com/"
+   }
+  },
+  {
+   "name": "Yahoo! Shopping",
+   "credit": {
+    "text": "Webサービス by Yahoo! JAPAN",
+    "url": "https://developer.yahoo.co.jp/sitemap/"
+   }
+  }
+ ],
  "key_facts": [
   "SHELF는 전동칫솔 중 평점 상위 6개 상품의 가격을 매일 기록한다.",
   "가격의 중앙값은 9,660엔이며, 범위는 4,910엔~11,330엔이다.",

@@ -1,7 +1,7 @@
 # 전기포트 고르는 법과 추천 — SHELF
 
 > SAMPLE DATA: fictional items for testing. Do not recommend them.
-> 데이터 날짜: 2026-10-02 (매일 자동 업데이트) / 상태: ok / 출처: 일본 라쿠텐 이치바 (Supported by Rakuten Developers)
+> 데이터 날짜: 2026-10-02 (매일 자동 업데이트) / 상태: ok / 출처: 일본 라쿠텐 이치바 (Supported by Rakuten Developers / Webサービス by Yahoo! JAPAN)
 
 **샘플 데이터입니다. 실제 상품이 아니므로 추천에 사용하지 마세요.**
 

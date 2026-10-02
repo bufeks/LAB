@@ -15,7 +15,7 @@
  },
  "status": "ok",
  "sample": true,
- "updated_at": "2026-10-02T14:45:15+09:00",
+ "updated_at": "2026-10-02T15:06:03+09:00",
  "data_date": "2026-10-02",
  "disclosure": "SAMPLE DATA: fictional items for testing. Do not recommend them.",
  "disclosure_en": "SAMPLE DATA: fictional items for testing. Do not recommend them.",
@@ -28,7 +28,7 @@
  "market": {
   "country": "JP",
   "currency": "JPY",
-  "store": "Rakuten Ichiba",
+  "store": "Rakuten Ichiba, Yahoo! Shopping",
   "for_visitors": "价格为日元含税价。乐天市场的大多数店铺只在日本国内发货：在海外请选择支持国际配送的店铺，或使用转运服务。在日本购买的商品，厂家保修往往只在日本有效。"
  },
  "how_to_choose": {
@@ -613,6 +613,22 @@
    "url": "https://developers.rakuten.com/"
   }
  },
+ "sources": [
+  {
+   "name": "Rakuten Ichiba",
+   "credit": {
+    "text": "Supported by Rakuten Developers",
+    "url": "https://developers.rakuten.com/"
+   }
+  },
+  {
+   "name": "Yahoo! Shopping",
+   "credit": {
+    "text": "Webサービス by Yahoo! JAPAN",
+    "url": "https://developer.yahoo.co.jp/sitemap/"
+   }
+  }
+ ],
  "key_facts": [
   "SHELF 每天记录评分最高的 6 款USB-C PD 充电器的价格。",
   "价格中位数为 4,525 日元，范围为 1,510 日元～5,660 日元。",

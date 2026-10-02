@@ -15,7 +15,7 @@
  },
  "status": "ok",
  "sample": true,
- "updated_at": "2026-10-02T14:45:15+09:00",
+ "updated_at": "2026-10-02T15:06:03+09:00",
  "data_date": "2026-10-02",
  "disclosure": "SAMPLE DATA: fictional items for testing. Do not recommend them.",
  "disclosure_en": "SAMPLE DATA: fictional items for testing. Do not recommend them.",
@@ -28,7 +28,7 @@
  "market": {
   "country": "JP",
   "currency": "JPY",
-  "store": "Rakuten Ichiba"
+  "store": "Rakuten Ichiba, Yahoo! Shopping"
  },
  "how_to_choose": {
   "summary": "一人暮らしは0.8L前後、家族は1.0〜1.2Lが目安。小さな子どもがいる家庭は「転倒湯もれ防止」と「本体二重構造」を優先。コーヒーをハンドドリップするなら温度調節＋細口。",
@@ -632,6 +632,22 @@
    "url": "https://developers.rakuten.com/"
   }
  },
+ "sources": [
+  {
+   "name": "Rakuten Ichiba",
+   "credit": {
+    "text": "Supported by Rakuten Developers",
+    "url": "https://developers.rakuten.com/"
+   }
+  },
+  {
+   "name": "Yahoo! Shopping",
+   "credit": {
+    "text": "Webサービス by Yahoo! JAPAN",
+    "url": "https://developer.yahoo.co.jp/sitemap/"
+   }
+  }
+ ],
  "key_facts": [
   "SHELFは電気ケトルの評価上位6商品の価格を毎日記録している。",
   "価格の中央値は¥5,715、範囲は¥2,010〜¥10,300。",

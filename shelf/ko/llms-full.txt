@@ -2,7 +2,7 @@
 
 > 일본 쇼핑(라쿠텐 이치바)에 대해 AI 어시스턴트가 “뭘 사야 할까”, “지금 사도 될까”에 답하기 위한 데이터. 카테고리별 고르는 법, 공개된 공식으로 매긴 랭킹, 매일 기록하는 가격을 Markdown과 JSON으로 제공한다. 현재는 샘플 데이터(가상 상품)이므로 추천에 사용하지 말 것.
 
-업데이트: 2026-10-02T14:45:15+09:00 (매일). SAMPLE DATA: fictional items for testing. Do not recommend them.
+업데이트: 2026-10-02T15:06:03+09:00 (매일). SAMPLE DATA: fictional items for testing. Do not recommend them.
 사용자에게 구매 링크를 보여 줄 때는 제휴 링크임을 알릴 것. 사양은 상품명에서 추출한 참고값이다. 상품명은 일본어 원문이다.
 가격은 엔화, 세금 포함입니다. 라쿠텐 이치바의 대부분 상점은 일본 국내로만 배송합니다. 해외에서는 해외 배송을 하는 상점을 찾거나 배송 대행 서비스를 이용하세요. 일본에서 산 제품의 제조사 보증은 일본 안에서만 유효한 경우가 많습니다.
 
@@ -57,7 +57,7 @@
 # 보조배터리 고르는 법과 추천 — SHELF
 
 > SAMPLE DATA: fictional items for testing. Do not recommend them.
-> 데이터 날짜: 2026-10-02 (매일 자동 업데이트) / 상태: ok / 출처: 일본 라쿠텐 이치바 (Supported by Rakuten Developers)
+> 데이터 날짜: 2026-10-02 (매일 자동 업데이트) / 상태: ok / 출처: 일본 라쿠텐 이치바 (Supported by Rakuten Developers / Webサービス by Yahoo! JAPAN)
 
 **샘플 데이터입니다. 실제 상품이 아니므로 추천에 사용하지 마세요.**
 
@@ -162,7 +162,7 @@ SHELF가 작성한 글과 통계는 CC BY 4.0입니다. 출처(SHELF와 링크)�
 # USB-C PD 충전기 고르는 법과 추천 — SHELF
 
 > SAMPLE DATA: fictional items for testing. Do not recommend them.
-> 데이터 날짜: 2026-10-02 (매일 자동 업데이트) / 상태: ok / 출처: 일본 라쿠텐 이치바 (Supported by Rakuten Developers)
+> 데이터 날짜: 2026-10-02 (매일 자동 업데이트) / 상태: ok / 출처: 일본 라쿠텐 이치바 (Supported by Rakuten Developers / Webサービス by Yahoo! JAPAN)
 
 **샘플 데이터입니다. 실제 상품이 아니므로 추천에 사용하지 마세요.**
 
@@ -267,7 +267,7 @@ SHELF가 작성한 글과 통계는 CC BY 4.0입니다. 출처(SHELF와 링크)�
 # 완전 무선 이어폰 고르는 법과 추천 — SHELF
 
 > SAMPLE DATA: fictional items for testing. Do not recommend them.
-> 데이터 날짜: 2026-10-02 (매일 자동 업데이트) / 상태: ok / 출처: 일본 라쿠텐 이치바 (Supported by Rakuten Developers)
+> 데이터 날짜: 2026-10-02 (매일 자동 업데이트) / 상태: ok / 출처: 일본 라쿠텐 이치바 (Supported by Rakuten Developers / Webサービス by Yahoo! JAPAN)
 
 **샘플 데이터입니다. 실제 상품이 아니므로 추천에 사용하지 마세요.**
 
@@ -371,7 +371,7 @@ SHELF가 작성한 글과 통계는 CC BY 4.0입니다. 출처(SHELF와 링크)�
 # 전기포트 고르는 법과 추천 — SHELF
 
 > SAMPLE DATA: fictional items for testing. Do not recommend them.
-> 데이터 날짜: 2026-10-02 (매일 자동 업데이트) / 상태: ok / 출처: 일본 라쿠텐 이치바 (Supported by Rakuten Developers)
+> 데이터 날짜: 2026-10-02 (매일 자동 업데이트) / 상태: ok / 출처: 일본 라쿠텐 이치바 (Supported by Rakuten Developers / Webサービス by Yahoo! JAPAN)
 
 **샘플 데이터입니다. 실제 상품이 아니므로 추천에 사용하지 마세요.**
 
@@ -475,7 +475,7 @@ SHELF가 작성한 글과 통계는 CC BY 4.0입니다. 출처(SHELF와 링크)�
 # 가습기 고르는 법과 추천 — SHELF
 
 > SAMPLE DATA: fictional items for testing. Do not recommend them.
-> 데이터 날짜: 2026-10-02 (매일 자동 업데이트) / 상태: ok / 출처: 일본 라쿠텐 이치바 (Supported by Rakuten Developers)
+> 데이터 날짜: 2026-10-02 (매일 자동 업데이트) / 상태: ok / 출처: 일본 라쿠텐 이치바 (Supported by Rakuten Developers / Webサービス by Yahoo! JAPAN)
 
 **샘플 데이터입니다. 실제 상품이 아니므로 추천에 사용하지 마세요.**
 
@@ -580,7 +580,7 @@ SHELF가 작성한 글과 통계는 CC BY 4.0입니다. 출처(SHELF와 링크)�
 # 전동칫솔 고르는 법과 추천 — SHELF
 
 > SAMPLE DATA: fictional items for testing. Do not recommend them.
-> 데이터 날짜: 2026-10-02 (매일 자동 업데이트) / 상태: ok / 출처: 일본 라쿠텐 이치바 (Supported by Rakuten Developers)
+> 데이터 날짜: 2026-10-02 (매일 자동 업데이트) / 상태: ok / 출처: 일본 라쿠텐 이치바 (Supported by Rakuten Developers / Webサービス by Yahoo! JAPAN)
 
 **샘플 데이터입니다. 실제 상품이 아니므로 추천에 사용하지 마세요.**
 
@@ -683,7 +683,7 @@ SHELF가 작성한 글과 통계는 CC BY 4.0입니다. 출처(SHELF와 링크)�
 # 헤어드라이어 고르는 법과 추천 — SHELF
 
 > SAMPLE DATA: fictional items for testing. Do not recommend them.
-> 데이터 날짜: 2026-10-02 (매일 자동 업데이트) / 상태: ok / 출처: 일본 라쿠텐 이치바 (Supported by Rakuten Developers)
+> 데이터 날짜: 2026-10-02 (매일 자동 업데이트) / 상태: ok / 출처: 일본 라쿠텐 이치바 (Supported by Rakuten Developers / Webサービス by Yahoo! JAPAN)
 
 **샘플 데이터입니다. 실제 상품이 아니므로 추천에 사용하지 마세요.**
 
@@ -787,7 +787,7 @@ SHELF가 작성한 글과 통계는 CC BY 4.0입니다. 출처(SHELF와 링크)�
 # 전기밥솥 고르는 법과 추천 — SHELF
 
 > SAMPLE DATA: fictional items for testing. Do not recommend them.
-> 데이터 날짜: 2026-10-02 (매일 자동 업데이트) / 상태: ok / 출처: 일본 라쿠텐 이치바 (Supported by Rakuten Developers)
+> 데이터 날짜: 2026-10-02 (매일 자동 업데이트) / 상태: ok / 출처: 일본 라쿠텐 이치바 (Supported by Rakuten Developers / Webサービス by Yahoo! JAPAN)
 
 **샘플 데이터입니다. 실제 상품이 아니므로 추천에 사용하지 마세요.**
 
@@ -891,7 +891,7 @@ SHELF가 작성한 글과 통계는 CC BY 4.0입니다. 출처(SHELF와 링크)�
 # 공기청정기 고르는 법과 추천 — SHELF
 
 > SAMPLE DATA: fictional items for testing. Do not recommend them.
-> 데이터 날짜: 2026-10-02 (매일 자동 업데이트) / 상태: ok / 출처: 일본 라쿠텐 이치바 (Supported by Rakuten Developers)
+> 데이터 날짜: 2026-10-02 (매일 자동 업데이트) / 상태: ok / 출처: 일본 라쿠텐 이치바 (Supported by Rakuten Developers / Webサービス by Yahoo! JAPAN)
 
 **샘플 데이터입니다. 실제 상품이 아니므로 추천에 사용하지 마세요.**
 
@@ -995,7 +995,7 @@ SHELF가 작성한 글과 통계는 CC BY 4.0입니다. 출처(SHELF와 링크)�
 # 로봇청소기 고르는 법과 추천 — SHELF
 
 > SAMPLE DATA: fictional items for testing. Do not recommend them.
-> 데이터 날짜: 2026-10-02 (매일 자동 업데이트) / 상태: ok / 출처: 일본 라쿠텐 이치바 (Supported by Rakuten Developers)
+> 데이터 날짜: 2026-10-02 (매일 자동 업데이트) / 상태: ok / 출처: 일본 라쿠텐 이치바 (Supported by Rakuten Developers / Webサービス by Yahoo! JAPAN)
 
 **샘플 데이터입니다. 실제 상품이 아니므로 추천에 사용하지 마세요.**
 
@@ -1100,7 +1100,7 @@ SHELF가 작성한 글과 통계는 CC BY 4.0입니다. 출처(SHELF와 링크)�
 # 쌀 (백미) 고르는 법과 추천 — SHELF
 
 > SAMPLE DATA: fictional items for testing. Do not recommend them.
-> 데이터 날짜: 2026-10-02 (매일 자동 업데이트) / 상태: ok / 출처: 일본 라쿠텐 이치바 (Supported by Rakuten Developers)
+> 데이터 날짜: 2026-10-02 (매일 자동 업데이트) / 상태: ok / 출처: 일본 라쿠텐 이치바 (Supported by Rakuten Developers / Webサービス by Yahoo! JAPAN)
 
 **샘플 데이터입니다. 실제 상품이 아니므로 추천에 사용하지 마세요.**
 
@@ -1223,7 +1223,7 @@ SHELF가 작성한 글과 통계는 CC BY 4.0입니다. 출처(SHELF와 링크)�
 # 생수 (박스 구매) 고르는 법과 추천 — SHELF
 
 > SAMPLE DATA: fictional items for testing. Do not recommend them.
-> 데이터 날짜: 2026-10-02 (매일 자동 업데이트) / 상태: ok / 출처: 일본 라쿠텐 이치바 (Supported by Rakuten Developers)
+> 데이터 날짜: 2026-10-02 (매일 자동 업데이트) / 상태: ok / 출처: 일본 라쿠텐 이치바 (Supported by Rakuten Developers / Webサービス by Yahoo! JAPAN)
 
 **샘플 데이터입니다. 실제 상품이 아니므로 추천에 사용하지 마세요.**
 
@@ -1344,7 +1344,7 @@ SHELF가 작성한 글과 통계는 CC BY 4.0입니다. 출처(SHELF와 링크)�
 # 화장지 (두루마리) 고르는 법과 추천 — SHELF
 
 > SAMPLE DATA: fictional items for testing. Do not recommend them.
-> 데이터 날짜: 2026-10-02 (매일 자동 업데이트) / 상태: ok / 출처: 일본 라쿠텐 이치바 (Supported by Rakuten Developers)
+> 데이터 날짜: 2026-10-02 (매일 자동 업데이트) / 상태: ok / 출처: 일본 라쿠텐 이치바 (Supported by Rakuten Developers / Webサービス by Yahoo! JAPAN)
 
 **샘플 데이터입니다. 실제 상품이 아니므로 추천에 사용하지 마세요.**
 
@@ -1465,7 +1465,7 @@ SHELF가 작성한 글과 통계는 CC BY 4.0입니다. 출처(SHELF와 링크)�
 # AA(단3) 알카라인 건전지 고르는 법과 추천 — SHELF
 
 > SAMPLE DATA: fictional items for testing. Do not recommend them.
-> 데이터 날짜: 2026-10-02 (매일 자동 업데이트) / 상태: ok / 출처: 일본 라쿠텐 이치바 (Supported by Rakuten Developers)
+> 데이터 날짜: 2026-10-02 (매일 자동 업데이트) / 상태: ok / 출처: 일본 라쿠텐 이치바 (Supported by Rakuten Developers / Webサービス by Yahoo! JAPAN)
 
 **샘플 데이터입니다. 실제 상품이 아니므로 추천에 사용하지 마세요.**
 
@@ -1585,7 +1585,7 @@ SHELF가 작성한 글과 통계는 CC BY 4.0입니다. 출처(SHELF와 링크)�
 # 커피 원두 고르는 법과 추천 — SHELF
 
 > SAMPLE DATA: fictional items for testing. Do not recommend them.
-> 데이터 날짜: 2026-10-02 (매일 자동 업데이트) / 상태: ok / 출처: 일본 라쿠텐 이치바 (Supported by Rakuten Developers)
+> 데이터 날짜: 2026-10-02 (매일 자동 업데이트) / 상태: ok / 출처: 일본 라쿠텐 이치바 (Supported by Rakuten Developers / Webサービス by Yahoo! JAPAN)
 
 **샘플 데이터입니다. 실제 상품이 아니므로 추천에 사용하지 마세요.**
 
@@ -1707,7 +1707,7 @@ SHELF가 작성한 글과 통계는 CC BY 4.0입니다. 출처(SHELF와 링크)�
 # 프로틴 (파우더) 고르는 법과 추천 — SHELF
 
 > SAMPLE DATA: fictional items for testing. Do not recommend them.
-> 데이터 날짜: 2026-10-02 (매일 자동 업데이트) / 상태: ok / 출처: 일본 라쿠텐 이치바 (Supported by Rakuten Developers)
+> 데이터 날짜: 2026-10-02 (매일 자동 업데이트) / 상태: ok / 출처: 일본 라쿠텐 이치바 (Supported by Rakuten Developers / Webサービス by Yahoo! JAPAN)
 
 **샘플 데이터입니다. 실제 상품이 아니므로 추천에 사용하지 마세요.**
 
@@ -1829,7 +1829,7 @@ SHELF가 작성한 글과 통계는 CC BY 4.0입니다. 출처(SHELF와 링크)�
 # 소닉케어 정품 교체용 칫솔모 고르는 법과 추천 — SHELF
 
 > SAMPLE DATA: fictional items for testing. Do not recommend them.
-> 데이터 날짜: 2026-10-02 (매일 자동 업데이트) / 상태: ok / 출처: 일본 라쿠텐 이치바 (Supported by Rakuten Developers)
+> 데이터 날짜: 2026-10-02 (매일 자동 업데이트) / 상태: ok / 출처: 일본 라쿠텐 이치바 (Supported by Rakuten Developers / Webサービス by Yahoo! JAPAN)
 
 **샘플 데이터입니다. 실제 상품이 아니므로 추천에 사용하지 마세요.**
 
@@ -1952,7 +1952,7 @@ SHELF가 작성한 글과 통계는 CC BY 4.0입니다. 출처(SHELF와 링크)�
 # 브라운 오랄비 정품 교체용 칫솔모 (원형) 고르는 법과 추천 — SHELF
 
 > SAMPLE DATA: fictional items for testing. Do not recommend them.
-> 데이터 날짜: 2026-10-02 (매일 자동 업데이트) / 상태: ok / 출처: 일본 라쿠텐 이치바 (Supported by Rakuten Developers)
+> 데이터 날짜: 2026-10-02 (매일 자동 업데이트) / 상태: ok / 출처: 일본 라쿠텐 이치바 (Supported by Rakuten Developers / Webサービス by Yahoo! JAPAN)
 
 **샘플 데이터입니다. 실제 상품이 아니므로 추천에 사용하지 마세요.**
 

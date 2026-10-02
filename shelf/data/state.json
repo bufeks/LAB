@@ -4,11 +4,11 @@
   "sample"
  ],
  "date": "2026-10-02",
- "updatedAt": "2026-10-02T14:45:15+09:00",
+ "updatedAt": "2026-10-02T15:06:03+09:00",
  "categories": {
   "mobile-battery": {
    "status": "ok",
-   "fetchedAt": "2026-10-02T14:45:15+09:00",
+   "fetchedAt": "2026-10-02T15:06:03+09:00",
    "stats": {
     "candidates": 8,
     "ranked": 6,
@@ -21,7 +21,7 @@
   },
   "usb-c-charger": {
    "status": "ok",
-   "fetchedAt": "2026-10-02T14:45:15+09:00",
+   "fetchedAt": "2026-10-02T15:06:03+09:00",
    "stats": {
     "candidates": 8,
     "ranked": 6,
@@ -34,7 +34,7 @@
   },
   "wireless-earphones": {
    "status": "ok",
-   "fetchedAt": "2026-10-02T14:45:15+09:00",
+   "fetchedAt": "2026-10-02T15:06:03+09:00",
    "stats": {
     "candidates": 8,
     "ranked": 6,
@@ -47,7 +47,7 @@
   },
   "electric-kettle": {
    "status": "ok",
-   "fetchedAt": "2026-10-02T14:45:15+09:00",
+   "fetchedAt": "2026-10-02T15:06:03+09:00",
    "stats": {
     "candidates": 8,
     "ranked": 6,
@@ -60,7 +60,7 @@
   },
   "humidifier": {
    "status": "ok",
-   "fetchedAt": "2026-10-02T14:45:15+09:00",
+   "fetchedAt": "2026-10-02T15:06:03+09:00",
    "stats": {
     "candidates": 8,
     "ranked": 6,
@@ -73,7 +73,7 @@
   },
   "electric-toothbrush": {
    "status": "ok",
-   "fetchedAt": "2026-10-02T14:45:15+09:00",
+   "fetchedAt": "2026-10-02T15:06:03+09:00",
    "stats": {
     "candidates": 8,
     "ranked": 6,
@@ -86,7 +86,7 @@
   },
   "hair-dryer": {
    "status": "ok",
-   "fetchedAt": "2026-10-02T14:45:15+09:00",
+   "fetchedAt": "2026-10-02T15:06:03+09:00",
    "stats": {
     "candidates": 8,
     "ranked": 6,
@@ -99,7 +99,7 @@
   },
   "rice-cooker": {
    "status": "ok",
-   "fetchedAt": "2026-10-02T14:45:15+09:00",
+   "fetchedAt": "2026-10-02T15:06:03+09:00",
    "stats": {
     "candidates": 8,
     "ranked": 6,
@@ -112,7 +112,7 @@
   },
   "air-purifier": {
    "status": "ok",
-   "fetchedAt": "2026-10-02T14:45:15+09:00",
+   "fetchedAt": "2026-10-02T15:06:03+09:00",
    "stats": {
     "candidates": 8,
     "ranked": 6,
@@ -125,7 +125,7 @@
   },
   "robot-vacuum": {
    "status": "ok",
-   "fetchedAt": "2026-10-02T14:45:15+09:00",
+   "fetchedAt": "2026-10-02T15:06:03+09:00",
    "stats": {
     "candidates": 8,
     "ranked": 6,
@@ -139,7 +139,7 @@
   },
   "rice": {
    "status": "ok",
-   "fetchedAt": "2026-10-02T14:45:15+09:00",
+   "fetchedAt": "2026-10-02T15:06:03+09:00",
    "stats": {
     "candidates": 8,
     "ranked": 6,
@@ -152,7 +152,7 @@
   },
   "mineral-water": {
    "status": "ok",
-   "fetchedAt": "2026-10-02T14:45:15+09:00",
+   "fetchedAt": "2026-10-02T15:06:03+09:00",
    "stats": {
     "candidates": 8,
     "ranked": 6,
@@ -165,7 +165,7 @@
   },
   "toilet-paper": {
    "status": "ok",
-   "fetchedAt": "2026-10-02T14:45:15+09:00",
+   "fetchedAt": "2026-10-02T15:06:03+09:00",
    "stats": {
     "candidates": 8,
     "ranked": 6,
@@ -178,7 +178,7 @@
   },
   "aa-batteries": {
    "status": "ok",
-   "fetchedAt": "2026-10-02T14:45:15+09:00",
+   "fetchedAt": "2026-10-02T15:06:03+09:00",
    "stats": {
     "candidates": 8,
     "ranked": 5,
@@ -192,7 +192,7 @@
   },
   "coffee-beans": {
    "status": "ok",
-   "fetchedAt": "2026-10-02T14:45:15+09:00",
+   "fetchedAt": "2026-10-02T15:06:03+09:00",
    "stats": {
     "candidates": 8,
     "ranked": 6,
@@ -205,7 +205,7 @@
   },
   "protein": {
    "status": "ok",
-   "fetchedAt": "2026-10-02T14:45:15+09:00",
+   "fetchedAt": "2026-10-02T15:06:03+09:00",
    "stats": {
     "candidates": 8,
     "ranked": 6,
@@ -218,7 +218,7 @@
   },
   "sonicare-heads": {
    "status": "ok",
-   "fetchedAt": "2026-10-02T14:45:15+09:00",
+   "fetchedAt": "2026-10-02T15:06:03+09:00",
    "stats": {
     "candidates": 8,
     "ranked": 6,
@@ -231,7 +231,7 @@
   },
   "oralb-heads": {
    "status": "ok",
-   "fetchedAt": "2026-10-02T14:45:15+09:00",
+   "fetchedAt": "2026-10-02T15:06:03+09:00",
    "stats": {
     "candidates": 8,
     "ranked": 5,
@@ -245,7 +245,7 @@
   },
   "furusato-rice": {
    "status": "ok",
-   "fetchedAt": "2026-10-02T14:45:15+09:00",
+   "fetchedAt": "2026-10-02T15:06:03+09:00",
    "stats": {
     "candidates": 6,
     "ranked": 6,
@@ -256,7 +256,7 @@
   },
   "furusato-toilet-paper": {
    "status": "ok",
-   "fetchedAt": "2026-10-02T14:45:15+09:00",
+   "fetchedAt": "2026-10-02T15:06:03+09:00",
    "stats": {
     "candidates": 6,
     "ranked": 6,
@@ -267,7 +267,7 @@
   },
   "furusato-beef": {
    "status": "ok",
-   "fetchedAt": "2026-10-02T14:45:15+09:00",
+   "fetchedAt": "2026-10-02T15:06:03+09:00",
    "stats": {
     "candidates": 6,
     "ranked": 6,

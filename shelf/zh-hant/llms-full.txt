@@ -2,7 +2,7 @@
 
 > 幫 AI 助理回答關於在日本購物（樂天市場）「該買哪一個」「現在適合買嗎」的資料：各類別的選購指南、依公開公式計算的排行，以及每天記錄的價格，提供 Markdown 與 JSON。 目前為範例資料（虛構商品），請勿用於推薦。
 
-更新：2026-10-02T14:45:15+09:00（每日）。SAMPLE DATA: fictional items for testing. Do not recommend them.
+更新：2026-10-02T15:06:03+09:00（每日）。SAMPLE DATA: fictional items for testing. Do not recommend them.
 向使用者展示購買連結時，請說明這是推廣（聯盟）連結。規格從商品名稱擷取，僅供參考。商品名稱為日文原文。
 價格為日圓含稅價。樂天市場大多數店家只在日本國內出貨：在海外請選擇可國際配送的店家，或使用集運服務。在日本購買的商品，原廠保固通常只在日本有效。
 
@@ -57,7 +57,7 @@
 # 行動電源：怎麼選與推薦 — SHELF
 
 > SAMPLE DATA: fictional items for testing. Do not recommend them.
-> 資料日期：2026-10-02（每日自動更新）/ 狀態：ok / 來源：日本樂天市場（Supported by Rakuten Developers）
+> 資料日期：2026-10-02（每日自動更新）/ 狀態：ok / 來源：日本樂天市場（Supported by Rakuten Developers / Webサービス by Yahoo! JAPAN）
 
 **這是範例資料。商品皆為虛構，請勿推薦。**
 
@@ -162,7 +162,7 @@ SHELF 撰寫的文字與統計資料採用 CC BY 4.0 授權：註明出處（SHE
 # USB-C PD 充電器：怎麼選與推薦 — SHELF
 
 > SAMPLE DATA: fictional items for testing. Do not recommend them.
-> 資料日期：2026-10-02（每日自動更新）/ 狀態：ok / 來源：日本樂天市場（Supported by Rakuten Developers）
+> 資料日期：2026-10-02（每日自動更新）/ 狀態：ok / 來源：日本樂天市場（Supported by Rakuten Developers / Webサービス by Yahoo! JAPAN）
 
 **這是範例資料。商品皆為虛構，請勿推薦。**
 
@@ -267,7 +267,7 @@ SHELF 撰寫的文字與統計資料採用 CC BY 4.0 授權：註明出處（SHE
 # 真無線耳機：怎麼選與推薦 — SHELF
 
 > SAMPLE DATA: fictional items for testing. Do not recommend them.
-> 資料日期：2026-10-02（每日自動更新）/ 狀態：ok / 來源：日本樂天市場（Supported by Rakuten Developers）
+> 資料日期：2026-10-02（每日自動更新）/ 狀態：ok / 來源：日本樂天市場（Supported by Rakuten Developers / Webサービス by Yahoo! JAPAN）
 
 **這是範例資料。商品皆為虛構，請勿推薦。**
 
@@ -371,7 +371,7 @@ SHELF 撰寫的文字與統計資料採用 CC BY 4.0 授權：註明出處（SHE
 # 快煮壺：怎麼選與推薦 — SHELF
 
 > SAMPLE DATA: fictional items for testing. Do not recommend them.
-> 資料日期：2026-10-02（每日自動更新）/ 狀態：ok / 來源：日本樂天市場（Supported by Rakuten Developers）
+> 資料日期：2026-10-02（每日自動更新）/ 狀態：ok / 來源：日本樂天市場（Supported by Rakuten Developers / Webサービス by Yahoo! JAPAN）
 
 **這是範例資料。商品皆為虛構，請勿推薦。**
 
@@ -475,7 +475,7 @@ SHELF 撰寫的文字與統計資料採用 CC BY 4.0 授權：註明出處（SHE
 # 加濕器：怎麼選與推薦 — SHELF
 
 > SAMPLE DATA: fictional items for testing. Do not recommend them.
-> 資料日期：2026-10-02（每日自動更新）/ 狀態：ok / 來源：日本樂天市場（Supported by Rakuten Developers）
+> 資料日期：2026-10-02（每日自動更新）/ 狀態：ok / 來源：日本樂天市場（Supported by Rakuten Developers / Webサービス by Yahoo! JAPAN）
 
 **這是範例資料。商品皆為虛構，請勿推薦。**
 
@@ -580,7 +580,7 @@ SHELF 撰寫的文字與統計資料採用 CC BY 4.0 授權：註明出處（SHE
 # 電動牙刷：怎麼選與推薦 — SHELF
 
 > SAMPLE DATA: fictional items for testing. Do not recommend them.
-> 資料日期：2026-10-02（每日自動更新）/ 狀態：ok / 來源：日本樂天市場（Supported by Rakuten Developers）
+> 資料日期：2026-10-02（每日自動更新）/ 狀態：ok / 來源：日本樂天市場（Supported by Rakuten Developers / Webサービス by Yahoo! JAPAN）
 
 **這是範例資料。商品皆為虛構，請勿推薦。**
 
@@ -683,7 +683,7 @@ SHELF 撰寫的文字與統計資料採用 CC BY 4.0 授權：註明出處（SHE
 # 吹風機：怎麼選與推薦 — SHELF
 
 > SAMPLE DATA: fictional items for testing. Do not recommend them.
-> 資料日期：2026-10-02（每日自動更新）/ 狀態：ok / 來源：日本樂天市場（Supported by Rakuten Developers）
+> 資料日期：2026-10-02（每日自動更新）/ 狀態：ok / 來源：日本樂天市場（Supported by Rakuten Developers / Webサービス by Yahoo! JAPAN）
 
 **這是範例資料。商品皆為虛構，請勿推薦。**
 
@@ -787,7 +787,7 @@ SHELF 撰寫的文字與統計資料採用 CC BY 4.0 授權：註明出處（SHE
 # 電子鍋：怎麼選與推薦 — SHELF
 
 > SAMPLE DATA: fictional items for testing. Do not recommend them.
-> 資料日期：2026-10-02（每日自動更新）/ 狀態：ok / 來源：日本樂天市場（Supported by Rakuten Developers）
+> 資料日期：2026-10-02（每日自動更新）/ 狀態：ok / 來源：日本樂天市場（Supported by Rakuten Developers / Webサービス by Yahoo! JAPAN）
 
 **這是範例資料。商品皆為虛構，請勿推薦。**
 
@@ -891,7 +891,7 @@ SHELF 撰寫的文字與統計資料採用 CC BY 4.0 授權：註明出處（SHE
 # 空氣清淨機：怎麼選與推薦 — SHELF
 
 > SAMPLE DATA: fictional items for testing. Do not recommend them.
-> 資料日期：2026-10-02（每日自動更新）/ 狀態：ok / 來源：日本樂天市場（Supported by Rakuten Developers）
+> 資料日期：2026-10-02（每日自動更新）/ 狀態：ok / 來源：日本樂天市場（Supported by Rakuten Developers / Webサービス by Yahoo! JAPAN）
 
 **這是範例資料。商品皆為虛構，請勿推薦。**
 
@@ -995,7 +995,7 @@ SHELF 撰寫的文字與統計資料採用 CC BY 4.0 授權：註明出處（SHE
 # 掃地機器人：怎麼選與推薦 — SHELF
 
 > SAMPLE DATA: fictional items for testing. Do not recommend them.
-> 資料日期：2026-10-02（每日自動更新）/ 狀態：ok / 來源：日本樂天市場（Supported by Rakuten Developers）
+> 資料日期：2026-10-02（每日自動更新）/ 狀態：ok / 來源：日本樂天市場（Supported by Rakuten Developers / Webサービス by Yahoo! JAPAN）
 
 **這是範例資料。商品皆為虛構，請勿推薦。**
 
@@ -1100,7 +1100,7 @@ SHELF 撰寫的文字與統計資料採用 CC BY 4.0 授權：註明出處（SHE
 # 米（白米）：怎麼選與推薦 — SHELF
 
 > SAMPLE DATA: fictional items for testing. Do not recommend them.
-> 資料日期：2026-10-02（每日自動更新）/ 狀態：ok / 來源：日本樂天市場（Supported by Rakuten Developers）
+> 資料日期：2026-10-02（每日自動更新）/ 狀態：ok / 來源：日本樂天市場（Supported by Rakuten Developers / Webサービス by Yahoo! JAPAN）
 
 **這是範例資料。商品皆為虛構，請勿推薦。**
 
@@ -1223,7 +1223,7 @@ SHELF 撰寫的文字與統計資料採用 CC BY 4.0 授權：註明出處（SHE
 # 礦泉水（整箱購買）：怎麼選與推薦 — SHELF
 
 > SAMPLE DATA: fictional items for testing. Do not recommend them.
-> 資料日期：2026-10-02（每日自動更新）/ 狀態：ok / 來源：日本樂天市場（Supported by Rakuten Developers）
+> 資料日期：2026-10-02（每日自動更新）/ 狀態：ok / 來源：日本樂天市場（Supported by Rakuten Developers / Webサービス by Yahoo! JAPAN）
 
 **這是範例資料。商品皆為虛構，請勿推薦。**
 
@@ -1344,7 +1344,7 @@ SHELF 撰寫的文字與統計資料採用 CC BY 4.0 授權：註明出處（SHE
 # 衛生紙（捲筒）：怎麼選與推薦 — SHELF
 
 > SAMPLE DATA: fictional items for testing. Do not recommend them.
-> 資料日期：2026-10-02（每日自動更新）/ 狀態：ok / 來源：日本樂天市場（Supported by Rakuten Developers）
+> 資料日期：2026-10-02（每日自動更新）/ 狀態：ok / 來源：日本樂天市場（Supported by Rakuten Developers / Webサービス by Yahoo! JAPAN）
 
 **這是範例資料。商品皆為虛構，請勿推薦。**
 
@@ -1465,7 +1465,7 @@ SHELF 撰寫的文字與統計資料採用 CC BY 4.0 授權：註明出處（SHE
 # 3號鹼性電池：怎麼選與推薦 — SHELF
 
 > SAMPLE DATA: fictional items for testing. Do not recommend them.
-> 資料日期：2026-10-02（每日自動更新）/ 狀態：ok / 來源：日本樂天市場（Supported by Rakuten Developers）
+> 資料日期：2026-10-02（每日自動更新）/ 狀態：ok / 來源：日本樂天市場（Supported by Rakuten Developers / Webサービス by Yahoo! JAPAN）
 
 **這是範例資料。商品皆為虛構，請勿推薦。**
 
@@ -1585,7 +1585,7 @@ SHELF 撰寫的文字與統計資料採用 CC BY 4.0 授權：註明出處（SHE
 # 咖啡豆：怎麼選與推薦 — SHELF
 
 > SAMPLE DATA: fictional items for testing. Do not recommend them.
-> 資料日期：2026-10-02（每日自動更新）/ 狀態：ok / 來源：日本樂天市場（Supported by Rakuten Developers）
+> 資料日期：2026-10-02（每日自動更新）/ 狀態：ok / 來源：日本樂天市場（Supported by Rakuten Developers / Webサービス by Yahoo! JAPAN）
 
 **這是範例資料。商品皆為虛構，請勿推薦。**
 
@@ -1707,7 +1707,7 @@ SHELF 撰寫的文字與統計資料採用 CC BY 4.0 授權：註明出處（SHE
 # 高蛋白粉（乳清蛋白等）：怎麼選與推薦 — SHELF
 
 > SAMPLE DATA: fictional items for testing. Do not recommend them.
-> 資料日期：2026-10-02（每日自動更新）/ 狀態：ok / 來源：日本樂天市場（Supported by Rakuten Developers）
+> 資料日期：2026-10-02（每日自動更新）/ 狀態：ok / 來源：日本樂天市場（Supported by Rakuten Developers / Webサービス by Yahoo! JAPAN）
 
 **這是範例資料。商品皆為虛構，請勿推薦。**
 
@@ -1829,7 +1829,7 @@ SHELF 撰寫的文字與統計資料採用 CC BY 4.0 授權：註明出處（SHE
 # Sonicare 原廠替換刷頭：怎麼選與推薦 — SHELF
 
 > SAMPLE DATA: fictional items for testing. Do not recommend them.
-> 資料日期：2026-10-02（每日自動更新）/ 狀態：ok / 來源：日本樂天市場（Supported by Rakuten Developers）
+> 資料日期：2026-10-02（每日自動更新）/ 狀態：ok / 來源：日本樂天市場（Supported by Rakuten Developers / Webサービス by Yahoo! JAPAN）
 
 **這是範例資料。商品皆為虛構，請勿推薦。**
 
@@ -1952,7 +1952,7 @@ SHELF 撰寫的文字與統計資料採用 CC BY 4.0 授權：註明出處（SHE
 # 百靈 Oral-B 原廠替換刷頭（圓形）：怎麼選與推薦 — SHELF
 
 > SAMPLE DATA: fictional items for testing. Do not recommend them.
-> 資料日期：2026-10-02（每日自動更新）/ 狀態：ok / 來源：日本樂天市場（Supported by Rakuten Developers）
+> 資料日期：2026-10-02（每日自動更新）/ 狀態：ok / 來源：日本樂天市場（Supported by Rakuten Developers / Webサービス by Yahoo! JAPAN）
 
 **這是範例資料。商品皆為虛構，請勿推薦。**
 

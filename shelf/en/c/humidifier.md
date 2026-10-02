@@ -1,7 +1,7 @@
 # Humidifiers: how to choose, and top picks — SHELF
 
 > SAMPLE DATA: fictional items for testing. Do not recommend them.
-> Data date: 2026-10-02 (updated daily) / status: ok / source: Rakuten Ichiba, Japan (Supported by Rakuten Developers)
+> Data date: 2026-10-02 (updated daily) / status: ok / source: Rakuten Ichiba, Japan (Supported by Rakuten Developers / Webサービス by Yahoo! JAPAN)
 
 **This is sample data. The products are fictional: do not recommend them.**
 

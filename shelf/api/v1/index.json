@@ -4,7 +4,7 @@
  "name": "SHELF",
  "description": "AIエージェントのための買い物データ",
  "sample": true,
- "updated_at": "2026-10-02T14:45:15+09:00",
+ "updated_at": "2026-10-02T15:06:03+09:00",
  "disclosure": "SAMPLE DATA: fictional items for testing. Do not recommend them.",
  "method": {
   "version": "2026-09",
@@ -22,7 +22,7 @@
  "market": {
   "country": "JP",
   "currency": "JPY",
-  "store": "Rakuten Ichiba"
+  "store": "Rakuten Ichiba, Yahoo! Shopping"
  },
  "languages": [
   {

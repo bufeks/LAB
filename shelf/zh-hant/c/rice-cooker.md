@@ -1,7 +1,7 @@
 # 電子鍋：怎麼選與推薦 — SHELF
 
 > SAMPLE DATA: fictional items for testing. Do not recommend them.
-> 資料日期：2026-10-02（每日自動更新）/ 狀態：ok / 來源：日本樂天市場（Supported by Rakuten Developers）
+> 資料日期：2026-10-02（每日自動更新）/ 狀態：ok / 來源：日本樂天市場（Supported by Rakuten Developers / Webサービス by Yahoo! JAPAN）
 
 **這是範例資料。商品皆為虛構，請勿推薦。**
 
