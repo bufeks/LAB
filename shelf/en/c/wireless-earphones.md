@@ -1,7 +1,7 @@
 # True wireless earbuds: how to choose, and top picks — SHELF
 
 > SAMPLE DATA: fictional items for testing. Do not recommend them.
-> Data date: 2026-09-30 (updated daily) / status: ok / source: Rakuten Ichiba, Japan (Supported by Rakuten Developers)
+> Data date: 2026-10-02 (updated daily) / status: ok / source: Rakuten Ichiba, Japan (Supported by Rakuten Developers)
 
 **This is sample data. The products are fictional: do not recommend them.**
 
@@ -11,7 +11,7 @@
 
 - **Best overall**: (サンプル) 完全ワイヤレスイヤホン D aptX マルチポイント IPX7 — ¥10,130 ★4.68 (2,990 reviews), price check: Lowest in 31 days observed → [Buy](https://search.rakuten.co.jp/search/mall/%E3%83%AF%E3%82%A4%E3%83%A4%E3%83%AC%E3%82%B9%E3%82%A4%E3%83%A4%E3%83%9B%E3%83%B3/)
 - **Best value (cheapest among the top rated)**: (サンプル) 完全ワイヤレスイヤホン F マルチポイント LDAC IPX4 — ¥9,190 ★4.58 (1,287 reviews), price check: Usual price → [Buy](https://search.rakuten.co.jp/search/mall/%E3%83%AF%E3%82%A4%E3%83%A4%E3%83%AC%E3%82%B9%E3%82%A4%E3%83%A4%E3%83%9B%E3%83%B3/)
-- **Price drop**: (サンプル) 完全ワイヤレスイヤホン D aptX マルチポイント IPX7 — ¥10,130 ★4.68 (2,990 reviews), price check: Lowest in 31 days observed → [Buy](https://search.rakuten.co.jp/search/mall/%E3%83%AF%E3%82%A4%E3%83%A4%E3%83%AC%E3%82%B9%E3%82%A4%E3%83%A4%E3%83%9B%E3%83%B3/)
+- **Price drop**: (サンプル) 完全ワイヤレスイヤホン A ノイズキャンセリング マルチポイント IPX4 最大40時間 — ¥4,910 ★4.11 (1,106 reviews), price check: Lowest in 31 days observed → [Buy](https://search.rakuten.co.jp/search/mall/%E3%83%AF%E3%82%A4%E3%83%A4%E3%83%AC%E3%82%B9%E3%82%A4%E3%83%A4%E3%83%9B%E3%83%B3/)
 - **Good time to buy? (whole category)**: 33% of the top products are cheaper than usual. Not a bad time to buy. (31 days observed; seasonal patterns not yet reflected)
 
 If you commute or travel a lot, get noise cancelling; if you switch between a computer and a phone, prioritise multipoint. High-quality codecs depend on your phone (iPhone stops at AAC).
@@ -38,7 +38,7 @@ If you commute or travel a lot, get noise cancelling; if you switch between a co
 | 3 | (サンプル) 完全ワイヤレスイヤホン F マルチポイント LDAC IPX4 (サンプルショップ) | ¥9,190 shipping extra | ★4.58 (1,287 reviews) | Usual price (median ¥8,730, 31 days observed) | LDAC · Multipoint · Water resistance (IPX) 4 | [Rakuten](https://search.rakuten.co.jp/search/mall/%E3%83%AF%E3%82%A4%E3%83%A4%E3%83%AC%E3%82%B9%E3%82%A4%E3%83%A4%E3%83%9B%E3%83%B3/) |
 | 4 | (サンプル) 完全ワイヤレスイヤホン C 軽量 IPX4 最大30時間 (サンプルショップ) | ¥6,790 shipping incl. | ★4.50 (2,071 reviews) | Usual price (median ¥6,450, 31 days observed) | Water resistance (IPX) 4 · Max playback (may include the case) 30h | [Rakuten](https://search.rakuten.co.jp/search/mall/%E3%83%AF%E3%82%A4%E3%83%A4%E3%83%AC%E3%82%B9%E3%82%A4%E3%83%A4%E3%83%9B%E3%83%B3/) |
 | 5 | (サンプル) 完全ワイヤレスイヤホン B LDAC ノイズキャンセリング IPX5 (サンプルショップ) | ¥11,330 shipping extra | ★4.22 (2,527 reviews) | Usual price (median ¥11,280, 31 days observed) | Noise cancelling · LDAC · Water resistance (IPX) 5 | [Rakuten](https://search.rakuten.co.jp/search/mall/%E3%83%AF%E3%82%A4%E3%83%A4%E3%83%AC%E3%82%B9%E3%82%A4%E3%83%A4%E3%83%9B%E3%83%B3/) |
-| 6 | (サンプル) 完全ワイヤレスイヤホン A ノイズキャンセリング マルチポイント IPX4 最大40時間 (サンプルショップ) | ¥5,280 shipping incl. | ★4.11 (3,318 reviews) | Lowest in 31 days observed (median ¥6,020, 31 days observed) | Noise cancelling · Multipoint · Water resistance (IPX) 4 · Max playback (may include the case) 40h | [Rakuten](https://search.rakuten.co.jp/search/mall/%E3%83%AF%E3%82%A4%E3%83%A4%E3%83%AC%E3%82%B9%E3%82%A4%E3%83%A4%E3%83%9B%E3%83%B3/) |
+| 6 | (サンプル) 完全ワイヤレスイヤホン A ノイズキャンセリング マルチポイント IPX4 最大40時間 (サンプルストア) | ¥4,910 shipping incl. | ★4.11 (1,106 reviews) | Lowest in 31 days observed (median ¥5,630, 31 days observed) | Noise cancelling · Multipoint · Water resistance (IPX) 4 · Max playback (may include the case) 40h | [Yahoo! Shopping](https://search.rakuten.co.jp/search/mall/%E3%83%AF%E3%82%A4%E3%83%A4%E3%83%AC%E3%82%B9%E3%82%A4%E3%83%A4%E3%83%9B%E3%83%B3/) |
 
 ## How the ranking works
 

@@ -88,7 +88,7 @@ export function audit() {
   metrics.languages = {};
   for (const L of LOCALES.filter((X) => X !== SOURCE)) {
     const untranslated = [];
-    for (const category of CATEGORIES) {
+    for (const category of CATEGORIES.filter((c) => !c.langs || c.langs.includes(L.lang))) {
       const rec = read(`api/v1/${prefix(L)}c/${category.id}.json`);
       if (!rec) continue;
       if (rec.items.length !== (metrics[category.id]?.items ?? rec.items.length)) errors.push(`${L.lang}/${category.id}: item count differs from Japanese`);
@@ -99,6 +99,18 @@ export function audit() {
     metrics.languages[L.lang] = { untranslated };
     if (untranslated.length) warnings.push(`${L.lang}: no translation for ${untranslated.join(', ')} (English shown instead)`);
   }
+
+  // Hotels and books are fetched alongside the categories.
+  for (const part of ['hotels', 'books']) {
+    const st = state[part];
+    if (st?.status === 'partial') warnings.push(`${part}: some requests failed: ${(st.errors || []).join(' | ')}`);
+    if (st?.status === 'skipped') warnings.push(`${part}: skipped (${st.reason})`);
+  }
+  for (const [id, c] of Object.entries(state.categories || {})) {
+    if (c.sourceErrors?.length) warnings.push(`${id}: one store failed: ${c.sourceErrors.join(' | ')}`);
+  }
+  for (const rel of ['api/v1/sale.json', 'api/v1/compat.json', 'api/v1/hotels.json', 'api/v1/books.json']) read(rel);
+  if (!fs.existsSync(path.join(OUT_DIR, 'deals.xml'))) errors.push('deals.xml missing');
 
   const llms = fs.readFileSync(path.join(OUT_DIR, 'llms.txt'), 'utf8');
   metrics.llms_txt_bytes = Buffer.byteLength(llms);

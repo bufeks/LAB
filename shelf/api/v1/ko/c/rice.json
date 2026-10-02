@@ -1,0 +1,616 @@
+{
+ "schema": "shelf.category/v1",
+ "lang": "ko",
+ "translated": true,
+ "id": "rice",
+ "name": "쌀 (백미)",
+ "name_ja": "米（白米）",
+ "name_en": "Rice (white)",
+ "names": {
+  "ja": "米（白米）",
+  "en": "Rice (white)",
+  "zh-Hans": "大米（精米）",
+  "zh-Hant": "米（白米）",
+  "ko": "쌀 (백미)"
+ },
+ "status": "ok",
+ "sample": true,
+ "updated_at": "2026-10-02T14:41:13+09:00",
+ "data_date": "2026-10-02",
+ "disclosure": "SAMPLE DATA: fictional items for testing. Do not recommend them.",
+ "disclosure_en": "SAMPLE DATA: fictional items for testing. Do not recommend them.",
+ "citation": {
+  "title": "쌀 (백미) 고르는 법과 추천 — SHELF",
+  "url": "https://bufeks.github.io/LAB/shelf/ko/c/rice/",
+  "data_date": "2026-10-02",
+  "note": "SAMPLE DATA: fictional items for testing. Do not recommend them."
+ },
+ "market": {
+  "country": "JP",
+  "currency": "JPY",
+  "store": "Rakuten Ichiba",
+  "for_visitors": "가격은 엔화, 세금 포함입니다. 라쿠텐 이치바의 대부분 상점은 일본 국내로만 배송합니다. 해외에서는 해외 배송을 하는 상점을 찾거나 배송 대행 서비스를 이용하세요. 일본에서 산 제품의 제조사 보증은 일본 안에서만 유효한 경우가 많습니다."
+ },
+ "how_to_choose": {
+  "asOf": "2026-10",
+  "summary": "비교는 1kg당 가격으로. 품종·생산 연도·단일 원료미인지 혼합미인지에 따라 맛과 가격이 달라진다. 씻는 수고와 물을 아끼려면 무세미(같은 무게라면 조금 비싸지기 쉬움).",
+  "criteria": [
+   {
+    "name": "1kg당 가격",
+    "detail": "5kg·10kg·5kg×2봉 등 용량이 제각각이므로 총량으로 나눈 단가로 비교한다. 배송비 별도 상품은 배송비를 포함해 다시 계산한다."
+   },
+   {
+    "name": "생산 연도·도정일",
+    "detail": "“레이와 ○년산”이 최근일수록 햅쌀에 가깝다. 도정 후에는 풍미가 떨어지므로 도정일이 최근인 것을 조금씩 사는 편이 맛있게 먹을 수 있다."
+   },
+   {
+    "name": "단일 원료미와 혼합미",
+    "detail": "“단일 원료미”는 산지·품종·생산 연도가 같은 쌀만 쓴 것. 혼합미는 값이 싼 편이고 맛은 브랜드 쌀보다 떨어지는 경우가 많다."
+   },
+   {
+    "name": "무세미",
+    "detail": "씻지 않고 바로 지을 수 있다. 쌀뜨물이 나오지 않아 수고와 물을 아낄 수 있다. 도정 과정에서 제거되는 부분이 있어 같은 무게라면 조금 비싸지기 쉽다."
+   },
+   {
+    "name": "보관",
+    "detail": "고온다습을 피하고 밀폐 용기에 보관한다. 여름철에는 냉장고 채소칸이 알맞다. 한 달 정도에 다 먹을 수 있는 양이 기준."
+   }
+  ],
+  "pitfalls": [
+   "“5kg×2”와 “10kg”은 같은 양이다. 봉지가 나뉘어 있으면 보관하기 쉽다.",
+   "정기 배송이나 고향납세 답례품은 따로 비교해야 한다(여기서는 일반 구매만 비교한다)."
+  ],
+  "abroad": "쌀을 한국이나 다른 나라로 가져가는 것은 제한될 수 있다. 미리 검역·수입 규정을 확인한다."
+ },
+ "price_outlook": {
+  "verdict": "cheaper_than_usual",
+  "share_cheaper": 0.33,
+  "share_pricier": 0,
+  "judged_items": 6,
+  "window_days": 31,
+  "summary": "상위 상품의 33%가 평소보다 싸다. 사기에 나쁘지 않은 시기. (31일 관측, 계절 변동은 아직 반영되지 않음)"
+ },
+ "method": {
+  "summary": "카테고리마다 라쿠텐에서 리뷰 수 순으로 최대 60개를 가져와 제외어·가격대·최소 리뷰 수로 거른다. 여러 상점이 파는 같은 상품(모델명이 같거나, 사양이 같고 상품명이 거의 같은 것)은 평점이 가장 높은 하나로 합치고, 다른 상점 가격은 other_offers에 남긴다. 나머지를 “베이즈 평균 평점”으로 정렬한다.",
+  "formula": "score = (C × m + n × r) / (C + n)  … r = 해당 상품 평균 평점, n = 리뷰 수, m = 전체 후보의 평균 평점, C = 50",
+  "why": "리뷰 몇 건의 ★5보다 리뷰 수천 건의 ★4.4를 위에 두기 위해서다. 리뷰가 적을수록 평점이 전체 평균 쪽으로 당겨진다.",
+  "picks": {
+   "best": "점수 1위",
+   "budget": "점수 상위 40% 상품 중 최저가",
+   "deal": "평소보다 싼 상품 중 중앙값 대비 하락 폭이 가장 큰 것 (이상값과 옵션 선택형 상품 제외)"
+  },
+  "priceVerdict": "매일 가격을 기록하고, 배송 조건이 같은 날끼리만 비교한다. 관측 7일 미만은 insufficient_data, 관측 기간 최저가이면서 중앙값보다 3% 이상 싸면 lowest_observed, 중앙값의 90% 이하면 below_usual, 110% 이상이면 above_usual, 그 외는 usual. 관측 기간은 최대 90일이며 window_days에 표시한다.",
+  "caveat": "사양은 상품명에서 기계적으로 추출한 참고값이라 틀릴 수 있다. 구매 전에 상품 페이지에서 확인할 것."
+ },
+ "spec_fields": [
+  {
+   "key": "crop_year",
+   "label": "생산 연도 (레이와)",
+   "unit": "년산",
+   "type": "number"
+  },
+  {
+   "key": "musenmai",
+   "label": "무세미 (씻어 나온 쌀)",
+   "unit": null,
+   "type": "flag"
+  },
+  {
+   "key": "blend",
+   "label": "혼합미",
+   "unit": null,
+   "type": "flag"
+  }
+ ],
+ "unit_rule": {
+  "label": "1kg당",
+  "higher_is_better": false,
+  "note": "상품명에 적힌 용량·개수로 계산. 용량을 고르는 옵션 선택형 상품이나 표기가 애매한 상품은 제외. 배송비 별도 상품은 배송비를 더하면 순위가 바뀔 수 있다."
+ },
+ "unit_ranking": [
+  "sample:rice-5",
+  "sample:rice-1",
+  "sample:rice-4",
+  "sample:rice-3",
+  "sample:rice-2",
+  "sample:rice-6"
+ ],
+ "picks": {
+  "best": {
+   "id": "sample:rice-1",
+   "reason": "점수 1위 (평점과 리뷰 수를 함께 볼 때 가장 믿을 만함)",
+   "title": "(サンプル) 米(白米) A コシヒカリ 令和7年産 10kg (5kg×2袋)",
+   "price": 3110,
+   "buy_url": "https://search.rakuten.co.jp/search/mall/%E7%B1%B3%20%E7%99%BD%E7%B1%B3%205kg/"
+  },
+  "deal": {
+   "id": "sample:rice-4",
+   "reason": "평소보다 싼 상품 중 중앙값 대비 하락 폭이 가장 큼",
+   "title": "(サンプル) 米(白米) D ななつぼし 10kg",
+   "price": 10360,
+   "buy_url": "https://search.rakuten.co.jp/search/mall/%E7%B1%B3%20%E7%99%BD%E7%B1%B3%205kg/"
+  },
+  "per_unit": {
+   "id": "sample:rice-5",
+   "reason": "1kg당 가격이 가장 쌈 (배송비 포함, 점수 상위 60% 상품 중)",
+   "title": "(サンプル) 米(白米) E コシヒカリ 令和6年産 5kg×4袋 20kg",
+   "price": 4150,
+   "buy_url": "https://search.rakuten.co.jp/search/mall/%E7%B1%B3%20%E7%99%BD%E7%B1%B3%205kg/"
+  }
+ },
+ "items": [
+  {
+   "id": "sample:rice-1",
+   "rank": 1,
+   "title": "(サンプル) 米(白米) A コシヒカリ 令和7年産 10kg (5kg×2袋)",
+   "name": "(サンプル) 米（白米） A コシヒカリ 令和7年産 10kg (5kg×2袋)",
+   "store": "rakuten",
+   "store_name": "라쿠텐 이치바",
+   "shop": "サンプルショップ",
+   "price": 3110,
+   "currency": "JPY",
+   "shipping_included": true,
+   "point_rate": 1,
+   "rating": 4.75,
+   "reviews": 2215,
+   "score": 4.744,
+   "variants": false,
+   "price_check": {
+    "verdict": "lowest_observed",
+    "label": "관측 31일 중 최저가",
+    "min_90d": 3110,
+    "median_90d": 3550,
+    "max_90d": 3670,
+    "observed_days": 31,
+    "window_days": 31,
+    "first_seen": "2026-09-02",
+    "weekly_low": [
+     [
+      "2026-09-02",
+      3520
+     ],
+     [
+      "2026-09-05",
+      3490
+     ],
+     [
+      "2026-09-13",
+      3530
+     ],
+     [
+      "2026-09-25",
+      3480
+     ],
+     [
+      "2026-10-02",
+      3110
+     ]
+    ]
+   },
+   "unit_price": {
+    "value": 311,
+    "label": "1kg당",
+    "quantity": 10000
+   },
+   "specs": {
+    "crop_year": 7,
+    "musenmai": false,
+    "blend": false
+   },
+   "buy_url": "https://search.rakuten.co.jp/search/mall/%E7%B1%B3%20%E7%99%BD%E7%B1%B3%205kg/",
+   "affiliate_url": "https://search.rakuten.co.jp/search/mall/%E7%B1%B3%20%E7%99%BD%E7%B1%B3%205kg/",
+   "affiliate": false,
+   "product_url": "https://search.rakuten.co.jp/search/mall/%E7%B1%B3%20%E7%99%BD%E7%B1%B3%205kg/",
+   "image": null,
+   "other_offers": [
+    {
+     "id": "sample-y:rice-1",
+     "store": "yahoo",
+     "store_name": "Yahoo! 쇼핑",
+     "shop": "サンプルストア",
+     "price": 2890,
+     "shipping_included": true,
+     "buy_url": "https://search.rakuten.co.jp/search/mall/%E7%B1%B3%20%E7%99%BD%E7%B1%B3%205kg/",
+     "affiliate_url": "https://search.rakuten.co.jp/search/mall/%E7%B1%B3%20%E7%99%BD%E7%B1%B3%205kg/"
+    }
+   ],
+   "cheapest_offer": {
+    "id": "sample-y:rice-1",
+    "store": "yahoo",
+    "store_name": "Yahoo! 쇼핑",
+    "shop": "サンプルストア",
+    "price": 2890,
+    "shipping_included": true,
+    "buy_url": "https://search.rakuten.co.jp/search/mall/%E7%B1%B3%20%E7%99%BD%E7%B1%B3%205kg/",
+    "affiliate_url": "https://search.rakuten.co.jp/search/mall/%E7%B1%B3%20%E7%99%BD%E7%B1%B3%205kg/"
+   }
+  },
+  {
+   "id": "sample:rice-4",
+   "rank": 2,
+   "title": "(サンプル) 米(白米) D ななつぼし 10kg",
+   "name": "(サンプル) 米（白米） D ななつぼし 10kg",
+   "store": "rakuten",
+   "store_name": "라쿠텐 이치바",
+   "shop": "サンプルショップ",
+   "price": 10360,
+   "currency": "JPY",
+   "shipping_included": false,
+   "point_rate": 1,
+   "rating": 4.56,
+   "reviews": 3195,
+   "score": 4.558,
+   "variants": false,
+   "price_check": {
+    "verdict": "lowest_observed",
+    "label": "관측 31일 중 최저가",
+    "min_90d": 10360,
+    "median_90d": 11830,
+    "max_90d": 12170,
+    "observed_days": 31,
+    "window_days": 31,
+    "first_seen": "2026-09-02",
+    "weekly_low": [
+     [
+      "2026-09-02",
+      11730
+     ],
+     [
+      "2026-09-07",
+      11620
+     ],
+     [
+      "2026-09-17",
+      11590
+     ],
+     [
+      "2026-09-21",
+      11600
+     ],
+     [
+      "2026-10-02",
+      10360
+     ]
+    ]
+   },
+   "unit_price": {
+    "value": 1036,
+    "label": "1kg당",
+    "quantity": 10000
+   },
+   "specs": {
+    "musenmai": false,
+    "blend": false
+   },
+   "buy_url": "https://search.rakuten.co.jp/search/mall/%E7%B1%B3%20%E7%99%BD%E7%B1%B3%205kg/",
+   "affiliate_url": "https://search.rakuten.co.jp/search/mall/%E7%B1%B3%20%E7%99%BD%E7%B1%B3%205kg/",
+   "affiliate": false,
+   "product_url": "https://search.rakuten.co.jp/search/mall/%E7%B1%B3%20%E7%99%BD%E7%B1%B3%205kg/",
+   "image": null,
+   "other_offers": [
+    {
+     "id": "sample-y:rice-2",
+     "store": "yahoo",
+     "store_name": "Yahoo! 쇼핑",
+     "shop": "サンプルストア",
+     "price": 10770,
+     "shipping_included": true,
+     "buy_url": "https://search.rakuten.co.jp/search/mall/%E7%B1%B3%20%E7%99%BD%E7%B1%B3%205kg/",
+     "affiliate_url": "https://search.rakuten.co.jp/search/mall/%E7%B1%B3%20%E7%99%BD%E7%B1%B3%205kg/"
+    }
+   ]
+  },
+  {
+   "id": "sample:rice-3",
+   "rank": 3,
+   "title": "(サンプル) 米(白米) C あきたこまち 令和7年産 5kg 無洗米",
+   "name": "(サンプル) 米（白米） C あきたこまち 令和7年産 5kg 無洗米",
+   "store": "rakuten",
+   "store_name": "라쿠텐 이치바",
+   "shop": "サンプルショップ",
+   "price": 7180,
+   "currency": "JPY",
+   "shipping_included": true,
+   "point_rate": 1,
+   "rating": 4.49,
+   "reviews": 3664,
+   "score": 4.49,
+   "variants": false,
+   "price_check": {
+    "verdict": "usual",
+    "label": "평소 가격",
+    "min_90d": 6620,
+    "median_90d": 6820,
+    "max_90d": 7180,
+    "observed_days": 31,
+    "window_days": 31,
+    "first_seen": "2026-09-02",
+    "weekly_low": [
+     [
+      "2026-09-02",
+      6720
+     ],
+     [
+      "2026-09-06",
+      6640
+     ],
+     [
+      "2026-09-15",
+      6720
+     ],
+     [
+      "2026-09-24",
+      6660
+     ],
+     [
+      "2026-09-27",
+      6620
+     ]
+    ]
+   },
+   "unit_price": {
+    "value": 1436,
+    "label": "1kg당",
+    "quantity": 5000
+   },
+   "specs": {
+    "crop_year": 7,
+    "musenmai": true,
+    "blend": false
+   },
+   "buy_url": "https://search.rakuten.co.jp/search/mall/%E7%B1%B3%20%E7%99%BD%E7%B1%B3%205kg/",
+   "affiliate_url": "https://search.rakuten.co.jp/search/mall/%E7%B1%B3%20%E7%99%BD%E7%B1%B3%205kg/",
+   "affiliate": false,
+   "product_url": "https://search.rakuten.co.jp/search/mall/%E7%B1%B3%20%E7%99%BD%E7%B1%B3%205kg/",
+   "image": null,
+   "other_offers": []
+  },
+  {
+   "id": "sample:rice-5",
+   "rank": 4,
+   "title": "(サンプル) 米(白米) E コシヒカリ 令和6年産 5kg×4袋 20kg",
+   "name": "(サンプル) 米（白米） E コシヒカリ 令和6年産 5kg×4袋 20kg",
+   "store": "rakuten",
+   "store_name": "라쿠텐 이치바",
+   "shop": "サンプルショップ",
+   "price": 4150,
+   "currency": "JPY",
+   "shipping_included": true,
+   "point_rate": 1,
+   "rating": 4.36,
+   "reviews": 2526,
+   "score": 4.362,
+   "variants": false,
+   "price_check": {
+    "verdict": "usual",
+    "label": "평소 가격",
+    "min_90d": 4030,
+    "median_90d": 4140,
+    "max_90d": 4270,
+    "observed_days": 31,
+    "window_days": 31,
+    "first_seen": "2026-09-02",
+    "weekly_low": [
+     [
+      "2026-09-04",
+      4050
+     ],
+     [
+      "2026-09-10",
+      4060
+     ],
+     [
+      "2026-09-13",
+      4030
+     ],
+     [
+      "2026-09-25",
+      4110
+     ],
+     [
+      "2026-09-29",
+      4050
+     ]
+    ]
+   },
+   "unit_price": {
+    "value": 207.5,
+    "label": "1kg당",
+    "quantity": 20000
+   },
+   "specs": {
+    "crop_year": 6,
+    "musenmai": false,
+    "blend": false
+   },
+   "buy_url": "https://search.rakuten.co.jp/search/mall/%E7%B1%B3%20%E7%99%BD%E7%B1%B3%205kg/",
+   "affiliate_url": "https://search.rakuten.co.jp/search/mall/%E7%B1%B3%20%E7%99%BD%E7%B1%B3%205kg/",
+   "affiliate": false,
+   "product_url": "https://search.rakuten.co.jp/search/mall/%E7%B1%B3%20%E7%99%BD%E7%B1%B3%205kg/",
+   "image": null,
+   "other_offers": []
+  },
+  {
+   "id": "sample:rice-6",
+   "rank": 5,
+   "title": "(サンプル) 米(白米) F ゆめぴりか 5kg",
+   "name": "(サンプル) 米（白米） F ゆめぴりか 5kg",
+   "store": "rakuten",
+   "store_name": "라쿠텐 이치바",
+   "shop": "サンプルショップ",
+   "price": 11460,
+   "currency": "JPY",
+   "shipping_included": false,
+   "point_rate": 1,
+   "rating": 4.36,
+   "reviews": 3382,
+   "score": 4.361,
+   "variants": false,
+   "price_check": {
+    "verdict": "usual",
+    "label": "평소 가격",
+    "min_90d": 10570,
+    "median_90d": 10890,
+    "max_90d": 11460,
+    "observed_days": 31,
+    "window_days": 31,
+    "first_seen": "2026-09-02",
+    "weekly_low": [
+     [
+      "2026-09-02",
+      10720
+     ],
+     [
+      "2026-09-06",
+      10590
+     ],
+     [
+      "2026-09-12",
+      10600
+     ],
+     [
+      "2026-09-24",
+      10640
+     ],
+     [
+      "2026-10-01",
+      10570
+     ]
+    ]
+   },
+   "unit_price": {
+    "value": 2292,
+    "label": "1kg당",
+    "quantity": 5000
+   },
+   "specs": {
+    "musenmai": false,
+    "blend": false
+   },
+   "buy_url": "https://search.rakuten.co.jp/search/mall/%E7%B1%B3%20%E7%99%BD%E7%B1%B3%205kg/",
+   "affiliate_url": "https://search.rakuten.co.jp/search/mall/%E7%B1%B3%20%E7%99%BD%E7%B1%B3%205kg/",
+   "affiliate": false,
+   "product_url": "https://search.rakuten.co.jp/search/mall/%E7%B1%B3%20%E7%99%BD%E7%B1%B3%205kg/",
+   "image": null,
+   "other_offers": []
+  },
+  {
+   "id": "sample:rice-2",
+   "rank": 6,
+   "title": "(サンプル) 米(白米) B ブレンド米 5kg",
+   "name": "(サンプル) 米（白米） B ブレンド米 5kg",
+   "store": "rakuten",
+   "store_name": "라쿠텐 이치바",
+   "shop": "サンプルショップ",
+   "price": 10980,
+   "currency": "JPY",
+   "shipping_included": false,
+   "point_rate": 1,
+   "rating": 4.16,
+   "reviews": 2642,
+   "score": 4.166,
+   "variants": false,
+   "price_check": {
+    "verdict": "usual",
+    "label": "평소 가격",
+    "min_90d": 10670,
+    "median_90d": 10930,
+    "max_90d": 11290,
+    "observed_days": 31,
+    "window_days": 31,
+    "first_seen": "2026-09-02",
+    "weekly_low": [
+     [
+      "2026-09-04",
+      10670
+     ],
+     [
+      "2026-09-05",
+      10720
+     ],
+     [
+      "2026-09-17",
+      10720
+     ],
+     [
+      "2026-09-25",
+      10720
+     ],
+     [
+      "2026-09-30",
+      10760
+     ]
+    ]
+   },
+   "unit_price": {
+    "value": 2196,
+    "label": "1kg당",
+    "quantity": 5000
+   },
+   "specs": {
+    "musenmai": false,
+    "blend": true
+   },
+   "buy_url": "https://search.rakuten.co.jp/search/mall/%E7%B1%B3%20%E7%99%BD%E7%B1%B3%205kg/",
+   "affiliate_url": "https://search.rakuten.co.jp/search/mall/%E7%B1%B3%20%E7%99%BD%E7%B1%B3%205kg/",
+   "affiliate": false,
+   "product_url": "https://search.rakuten.co.jp/search/mall/%E7%B1%B3%20%E7%99%BD%E7%B1%B3%205kg/",
+   "image": null,
+   "other_offers": []
+  }
+ ],
+ "stats": {
+  "candidates": 8,
+  "ranked": 6,
+  "rejected": {
+   "duplicate": 2
+  },
+  "meanRating": 4.46,
+  "priorWeight": 50
+ },
+ "links": {
+  "html": "https://bufeks.github.io/LAB/shelf/ko/c/rice/",
+  "markdown": "https://bufeks.github.io/LAB/shelf/ko/c/rice.md",
+  "json": "https://bufeks.github.io/LAB/shelf/api/v1/ko/c/rice.json",
+  "feed": "https://bufeks.github.io/LAB/shelf/ko/c/rice/feed.xml"
+ },
+ "languages": {
+  "ja": {
+   "html": "https://bufeks.github.io/LAB/shelf/c/rice/",
+   "markdown": "https://bufeks.github.io/LAB/shelf/c/rice.md",
+   "json": "https://bufeks.github.io/LAB/shelf/api/v1/c/rice.json",
+   "feed": "https://bufeks.github.io/LAB/shelf/c/rice/feed.xml"
+  },
+  "en": {
+   "html": "https://bufeks.github.io/LAB/shelf/en/c/rice/",
+   "markdown": "https://bufeks.github.io/LAB/shelf/en/c/rice.md",
+   "json": "https://bufeks.github.io/LAB/shelf/api/v1/en/c/rice.json",
+   "feed": "https://bufeks.github.io/LAB/shelf/en/c/rice/feed.xml"
+  },
+  "zh-Hans": {
+   "html": "https://bufeks.github.io/LAB/shelf/zh-hans/c/rice/",
+   "markdown": "https://bufeks.github.io/LAB/shelf/zh-hans/c/rice.md",
+   "json": "https://bufeks.github.io/LAB/shelf/api/v1/zh-hans/c/rice.json",
+   "feed": "https://bufeks.github.io/LAB/shelf/zh-hans/c/rice/feed.xml"
+  },
+  "zh-Hant": {
+   "html": "https://bufeks.github.io/LAB/shelf/zh-hant/c/rice/",
+   "markdown": "https://bufeks.github.io/LAB/shelf/zh-hant/c/rice.md",
+   "json": "https://bufeks.github.io/LAB/shelf/api/v1/zh-hant/c/rice.json",
+   "feed": "https://bufeks.github.io/LAB/shelf/zh-hant/c/rice/feed.xml"
+  },
+  "ko": {
+   "html": "https://bufeks.github.io/LAB/shelf/ko/c/rice/",
+   "markdown": "https://bufeks.github.io/LAB/shelf/ko/c/rice.md",
+   "json": "https://bufeks.github.io/LAB/shelf/api/v1/ko/c/rice.json",
+   "feed": "https://bufeks.github.io/LAB/shelf/ko/c/rice/feed.xml"
+  }
+ },
+ "source": {
+  "name": "Rakuten Ichiba",
+  "credit": {
+   "text": "Supported by Rakuten Developers",
+   "url": "https://developers.rakuten.com/"
+  }
+ }
+}

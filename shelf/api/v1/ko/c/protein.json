@@ -1,0 +1,621 @@
+{
+ "schema": "shelf.category/v1",
+ "lang": "ko",
+ "translated": true,
+ "id": "protein",
+ "name": "프로틴 (파우더)",
+ "name_ja": "プロテイン（パウダー）",
+ "name_en": "Protein powder",
+ "names": {
+  "ja": "プロテイン（パウダー）",
+  "en": "Protein powder",
+  "zh-Hans": "蛋白粉",
+  "zh-Hant": "高蛋白粉（乳清蛋白等）",
+  "ko": "프로틴 (파우더)"
+ },
+ "status": "ok",
+ "sample": true,
+ "updated_at": "2026-10-02T14:41:13+09:00",
+ "data_date": "2026-10-02",
+ "disclosure": "SAMPLE DATA: fictional items for testing. Do not recommend them.",
+ "disclosure_en": "SAMPLE DATA: fictional items for testing. Do not recommend them.",
+ "citation": {
+  "title": "프로틴 (파우더) 고르는 법과 추천 — SHELF",
+  "url": "https://bufeks.github.io/LAB/shelf/ko/c/protein/",
+  "data_date": "2026-10-02",
+  "note": "SAMPLE DATA: fictional items for testing. Do not recommend them."
+ },
+ "market": {
+  "country": "JP",
+  "currency": "JPY",
+  "store": "Rakuten Ichiba",
+  "for_visitors": "가격은 엔화, 세금 포함입니다. 라쿠텐 이치바의 대부분 상점은 일본 국내로만 배송합니다. 해외에서는 해외 배송을 하는 상점을 찾거나 배송 대행 서비스를 이용하세요. 일본에서 산 제품의 제조사 보증은 일본 안에서만 유효한 경우가 많습니다."
+ },
+ "how_to_choose": {
+  "asOf": "2026-10",
+  "summary": "비교는 1kg당 가격으로. 다만 제품마다 단백질 함량(대부분 70~90%)이 다르므로 영양성분 표시에서 1회분 단백질량도 확인한다.",
+  "criteria": [
+   {
+    "name": "1kg당 가격",
+    "detail": "1kg·3kg·1kg×2 등 용량이 다르므로 총량으로 나눠 비교한다. 대용량일수록 싼 경우가 많다."
+   },
+   {
+    "name": "종류",
+    "detail": "웨이(유청)는 우유 유래로 흡수가 빠르다. WPI는 유당을 줄인 정제도 높은 웨이로, 배가 잘 불편해지는 사람에게 맞다. 소이는 대두 유래로 흡수가 느리다."
+   },
+   {
+    "name": "단백질 함량",
+    "detail": "같은 1kg이라도 단백질 양은 제품마다 다르다. 1회분 단백질량과 가격으로 단백질 1g당 비용을 비교하는 것이 가장 공정하다."
+   },
+   {
+    "name": "감미료·첨가물",
+    "detail": "인공 감미료를 피하고 싶은 사람을 위한 무첨가·플레인 타입도 있다. 맛은 덜하지만 요리에도 쓰기 쉽다."
+   }
+  ],
+  "pitfalls": [
+   "운동선수는 도핑 검사 대상 성분이 섞여 있을 위험이 있다. 제3자 인증(인폼드 초이스 등) 여부를 확인한다.",
+   "지병이 있거나 단백질 섭취량에 제한이 있는 사람은 의사와 상담한다."
+  ],
+  "abroad": "보충제를 한국이나 다른 나라로 가져가는 것은 제한될 수 있다. 미리 검역·수입 규정을 확인한다."
+ },
+ "price_outlook": {
+  "verdict": "cheaper_than_usual",
+  "share_cheaper": 0.33,
+  "share_pricier": 0,
+  "judged_items": 6,
+  "window_days": 31,
+  "summary": "상위 상품의 33%가 평소보다 싸다. 사기에 나쁘지 않은 시기. (31일 관측, 계절 변동은 아직 반영되지 않음)"
+ },
+ "method": {
+  "summary": "카테고리마다 라쿠텐에서 리뷰 수 순으로 최대 60개를 가져와 제외어·가격대·최소 리뷰 수로 거른다. 여러 상점이 파는 같은 상품(모델명이 같거나, 사양이 같고 상품명이 거의 같은 것)은 평점이 가장 높은 하나로 합치고, 다른 상점 가격은 other_offers에 남긴다. 나머지를 “베이즈 평균 평점”으로 정렬한다.",
+  "formula": "score = (C × m + n × r) / (C + n)  … r = 해당 상품 평균 평점, n = 리뷰 수, m = 전체 후보의 평균 평점, C = 50",
+  "why": "리뷰 몇 건의 ★5보다 리뷰 수천 건의 ★4.4를 위에 두기 위해서다. 리뷰가 적을수록 평점이 전체 평균 쪽으로 당겨진다.",
+  "picks": {
+   "best": "점수 1위",
+   "budget": "점수 상위 40% 상품 중 최저가",
+   "deal": "평소보다 싼 상품 중 중앙값 대비 하락 폭이 가장 큰 것 (이상값과 옵션 선택형 상품 제외)"
+  },
+  "priceVerdict": "매일 가격을 기록하고, 배송 조건이 같은 날끼리만 비교한다. 관측 7일 미만은 insufficient_data, 관측 기간 최저가이면서 중앙값보다 3% 이상 싸면 lowest_observed, 중앙값의 90% 이하면 below_usual, 110% 이상이면 above_usual, 그 외는 usual. 관측 기간은 최대 90일이며 window_days에 표시한다.",
+  "caveat": "사양은 상품명에서 기계적으로 추출한 참고값이라 틀릴 수 있다. 구매 전에 상품 페이지에서 확인할 것."
+ },
+ "spec_fields": [
+  {
+   "key": "type",
+   "label": "종류",
+   "unit": null,
+   "type": "enum",
+   "values": [
+    {
+     "value": "wpi",
+     "label": "유청 (WPI)"
+    },
+    {
+     "value": "whey",
+     "label": "유청 (웨이)"
+    },
+    {
+     "value": "soy",
+     "label": "대두 (소이)"
+    },
+    {
+     "value": "casein",
+     "label": "카제인"
+    }
+   ]
+  },
+  {
+   "key": "no_artificial_sweetener",
+   "label": "인공 감미료 무첨가",
+   "unit": null,
+   "type": "flag"
+  }
+ ],
+ "unit_rule": {
+  "label": "1kg당",
+  "higher_is_better": false,
+  "note": "상품명에 적힌 용량·개수로 계산. 용량을 고르는 옵션 선택형 상품이나 표기가 애매한 상품은 제외. 배송비 별도 상품은 배송비를 더하면 순위가 바뀔 수 있다."
+ },
+ "unit_ranking": [
+  "sample:protein-2",
+  "sample:protein-5",
+  "sample:protein-1",
+  "sample:protein-4",
+  "sample:protein-3",
+  "sample:protein-6"
+ ],
+ "picks": {
+  "best": {
+   "id": "sample:protein-1",
+   "reason": "점수 1위 (평점과 리뷰 수를 함께 볼 때 가장 믿을 만함)",
+   "title": "(サンプル) プロテイン(パウダー) A ホエイ 1kg",
+   "price": 4400,
+   "buy_url": "https://search.rakuten.co.jp/search/mall/%E3%83%97%E3%83%AD%E3%83%86%E3%82%A4%E3%83%B3%20%E3%83%9B%E3%82%A8%E3%82%A4%201kg/"
+  },
+  "deal": {
+   "id": "sample:protein-4",
+   "reason": "평소보다 싼 상품 중 중앙값 대비 하락 폭이 가장 큼",
+   "title": "(サンプル) プロテイン(パウダー) D ホエイ 1kg×2袋",
+   "price": 11510,
+   "buy_url": "https://search.rakuten.co.jp/search/mall/%E3%83%97%E3%83%AD%E3%83%86%E3%82%A4%E3%83%B3%20%E3%83%9B%E3%82%A8%E3%82%A4%201kg/"
+  },
+  "per_unit": {
+   "id": "sample:protein-1",
+   "reason": "1kg당 가격이 가장 쌈 (배송비 포함, 점수 상위 60% 상품 중)",
+   "title": "(サンプル) プロテイン(パウダー) A ホエイ 1kg",
+   "price": 4400,
+   "buy_url": "https://search.rakuten.co.jp/search/mall/%E3%83%97%E3%83%AD%E3%83%86%E3%82%A4%E3%83%B3%20%E3%83%9B%E3%82%A8%E3%82%A4%201kg/"
+  }
+ },
+ "items": [
+  {
+   "id": "sample:protein-1",
+   "rank": 1,
+   "title": "(サンプル) プロテイン(パウダー) A ホエイ 1kg",
+   "name": "(サンプル) プロテイン（パウダー） A ホエイ 1kg",
+   "store": "rakuten",
+   "store_name": "라쿠텐 이치바",
+   "shop": "サンプルショップ",
+   "price": 4400,
+   "currency": "JPY",
+   "shipping_included": true,
+   "point_rate": 1,
+   "rating": 4.87,
+   "reviews": 1540,
+   "score": 4.853,
+   "variants": false,
+   "price_check": {
+    "verdict": "lowest_observed",
+    "label": "관측 31일 중 최저가",
+    "min_90d": 4400,
+    "median_90d": 5020,
+    "max_90d": 5190,
+    "observed_days": 31,
+    "window_days": 31,
+    "first_seen": "2026-09-02",
+    "weekly_low": [
+     [
+      "2026-09-02",
+      4980
+     ],
+     [
+      "2026-09-05",
+      4930
+     ],
+     [
+      "2026-09-13",
+      4990
+     ],
+     [
+      "2026-09-25",
+      4920
+     ],
+     [
+      "2026-10-02",
+      4400
+     ]
+    ]
+   },
+   "unit_price": {
+    "value": 4400,
+    "label": "1kg당",
+    "quantity": 1000
+   },
+   "specs": {
+    "type": "whey",
+    "no_artificial_sweetener": false
+   },
+   "buy_url": "https://search.rakuten.co.jp/search/mall/%E3%83%97%E3%83%AD%E3%83%86%E3%82%A4%E3%83%B3%20%E3%83%9B%E3%82%A8%E3%82%A4%201kg/",
+   "affiliate_url": "https://search.rakuten.co.jp/search/mall/%E3%83%97%E3%83%AD%E3%83%86%E3%82%A4%E3%83%B3%20%E3%83%9B%E3%82%A8%E3%82%A4%201kg/",
+   "affiliate": false,
+   "product_url": "https://search.rakuten.co.jp/search/mall/%E3%83%97%E3%83%AD%E3%83%86%E3%82%A4%E3%83%B3%20%E3%83%9B%E3%82%A8%E3%82%A4%201kg/",
+   "image": null,
+   "other_offers": [
+    {
+     "id": "sample-y:protein-1",
+     "store": "yahoo",
+     "store_name": "Yahoo! 쇼핑",
+     "shop": "サンプルストア",
+     "price": 4090,
+     "shipping_included": true,
+     "buy_url": "https://search.rakuten.co.jp/search/mall/%E3%83%97%E3%83%AD%E3%83%86%E3%82%A4%E3%83%B3%20%E3%83%9B%E3%82%A8%E3%82%A4%201kg/",
+     "affiliate_url": "https://search.rakuten.co.jp/search/mall/%E3%83%97%E3%83%AD%E3%83%86%E3%82%A4%E3%83%B3%20%E3%83%9B%E3%82%A8%E3%82%A4%201kg/"
+    }
+   ],
+   "cheapest_offer": {
+    "id": "sample-y:protein-1",
+    "store": "yahoo",
+    "store_name": "Yahoo! 쇼핑",
+    "shop": "サンプルストア",
+    "price": 4090,
+    "shipping_included": true,
+    "buy_url": "https://search.rakuten.co.jp/search/mall/%E3%83%97%E3%83%AD%E3%83%86%E3%82%A4%E3%83%B3%20%E3%83%9B%E3%82%A8%E3%82%A4%201kg/",
+    "affiliate_url": "https://search.rakuten.co.jp/search/mall/%E3%83%97%E3%83%AD%E3%83%86%E3%82%A4%E3%83%B3%20%E3%83%9B%E3%82%A8%E3%82%A4%201kg/"
+   }
+  },
+  {
+   "id": "sample:protein-6",
+   "rank": 2,
+   "title": "(サンプル) プロテイン(パウダー) F ソイ 900g",
+   "name": "(サンプル) プロテイン（パウダー） F ソイ 900g",
+   "store": "rakuten",
+   "store_name": "라쿠텐 이치바",
+   "shop": "サンプルショップ",
+   "price": 7550,
+   "currency": "JPY",
+   "shipping_included": false,
+   "point_rate": 1,
+   "rating": 4.58,
+   "reviews": 3660,
+   "score": 4.577,
+   "variants": false,
+   "price_check": {
+    "verdict": "usual",
+    "label": "평소 가격",
+    "min_90d": 6960,
+    "median_90d": 7170,
+    "max_90d": 7550,
+    "observed_days": 31,
+    "window_days": 31,
+    "first_seen": "2026-09-02",
+    "weekly_low": [
+     [
+      "2026-09-02",
+      7060
+     ],
+     [
+      "2026-09-06",
+      6980
+     ],
+     [
+      "2026-09-12",
+      6980
+     ],
+     [
+      "2026-09-24",
+      7010
+     ],
+     [
+      "2026-10-01",
+      6960
+     ]
+    ]
+   },
+   "unit_price": {
+    "value": 8388.9,
+    "label": "1kg당",
+    "quantity": 900
+   },
+   "specs": {
+    "type": "soy",
+    "no_artificial_sweetener": false
+   },
+   "buy_url": "https://search.rakuten.co.jp/search/mall/%E3%83%97%E3%83%AD%E3%83%86%E3%82%A4%E3%83%B3%20%E3%83%9B%E3%82%A8%E3%82%A4%201kg/",
+   "affiliate_url": "https://search.rakuten.co.jp/search/mall/%E3%83%97%E3%83%AD%E3%83%86%E3%82%A4%E3%83%B3%20%E3%83%9B%E3%82%A8%E3%82%A4%201kg/",
+   "affiliate": false,
+   "product_url": "https://search.rakuten.co.jp/search/mall/%E3%83%97%E3%83%AD%E3%83%86%E3%82%A4%E3%83%B3%20%E3%83%9B%E3%82%A8%E3%82%A4%201kg/",
+   "image": null,
+   "other_offers": []
+  },
+  {
+   "id": "sample:protein-2",
+   "rank": 3,
+   "title": "(サンプル) プロテイン(パウダー) B WPI 3kg",
+   "name": "(サンプル) プロテイン（パウダー） B WPI 3kg",
+   "store": "rakuten",
+   "store_name": "라쿠텐 이치바",
+   "shop": "サンプルショップ",
+   "price": 6880,
+   "currency": "JPY",
+   "shipping_included": false,
+   "point_rate": 1,
+   "rating": 4.56,
+   "reviews": 227,
+   "score": 4.521,
+   "variants": false,
+   "price_check": {
+    "verdict": "usual",
+    "label": "평소 가격",
+    "min_90d": 6690,
+    "median_90d": 6850,
+    "max_90d": 7070,
+    "observed_days": 31,
+    "window_days": 31,
+    "first_seen": "2026-09-02",
+    "weekly_low": [
+     [
+      "2026-09-04",
+      6690
+     ],
+     [
+      "2026-09-05",
+      6720
+     ],
+     [
+      "2026-09-17",
+      6720
+     ],
+     [
+      "2026-09-25",
+      6720
+     ],
+     [
+      "2026-09-30",
+      6740
+     ]
+    ]
+   },
+   "unit_price": {
+    "value": 2293.3,
+    "label": "1kg당",
+    "quantity": 3000
+   },
+   "specs": {
+    "type": "wpi",
+    "no_artificial_sweetener": false
+   },
+   "buy_url": "https://search.rakuten.co.jp/search/mall/%E3%83%97%E3%83%AD%E3%83%86%E3%82%A4%E3%83%B3%20%E3%83%9B%E3%82%A8%E3%82%A4%201kg/",
+   "affiliate_url": "https://search.rakuten.co.jp/search/mall/%E3%83%97%E3%83%AD%E3%83%86%E3%82%A4%E3%83%B3%20%E3%83%9B%E3%82%A8%E3%82%A4%201kg/",
+   "affiliate": false,
+   "product_url": "https://search.rakuten.co.jp/search/mall/%E3%83%97%E3%83%AD%E3%83%86%E3%82%A4%E3%83%B3%20%E3%83%9B%E3%82%A8%E3%82%A4%201kg/",
+   "image": null,
+   "other_offers": []
+  },
+  {
+   "id": "sample:protein-4",
+   "rank": 4,
+   "title": "(サンプル) プロテイン(パウダー) D ホエイ 1kg×2袋",
+   "name": "(サンプル) プロテイン（パウダー） D ホエイ 1kg×2袋",
+   "store": "rakuten",
+   "store_name": "라쿠텐 이치바",
+   "shop": "サンプルショップ",
+   "price": 11510,
+   "currency": "JPY",
+   "shipping_included": false,
+   "point_rate": 1,
+   "rating": 4.44,
+   "reviews": 456,
+   "score": 4.431,
+   "variants": false,
+   "price_check": {
+    "verdict": "lowest_observed",
+    "label": "관측 31일 중 최저가",
+    "min_90d": 11510,
+    "median_90d": 13140,
+    "max_90d": 13520,
+    "observed_days": 31,
+    "window_days": 31,
+    "first_seen": "2026-09-02",
+    "weekly_low": [
+     [
+      "2026-09-02",
+      13030
+     ],
+     [
+      "2026-09-07",
+      12910
+     ],
+     [
+      "2026-09-17",
+      12870
+     ],
+     [
+      "2026-09-21",
+      12890
+     ],
+     [
+      "2026-10-02",
+      11510
+     ]
+    ]
+   },
+   "unit_price": {
+    "value": 5755,
+    "label": "1kg당",
+    "quantity": 2000
+   },
+   "specs": {
+    "type": "whey",
+    "no_artificial_sweetener": false
+   },
+   "buy_url": "https://search.rakuten.co.jp/search/mall/%E3%83%97%E3%83%AD%E3%83%86%E3%82%A4%E3%83%B3%20%E3%83%9B%E3%82%A8%E3%82%A4%201kg/",
+   "affiliate_url": "https://search.rakuten.co.jp/search/mall/%E3%83%97%E3%83%AD%E3%83%86%E3%82%A4%E3%83%B3%20%E3%83%9B%E3%82%A8%E3%82%A4%201kg/",
+   "affiliate": false,
+   "product_url": "https://search.rakuten.co.jp/search/mall/%E3%83%97%E3%83%AD%E3%83%86%E3%82%A4%E3%83%B3%20%E3%83%9B%E3%82%A8%E3%82%A4%201kg/",
+   "image": null,
+   "other_offers": [
+    {
+     "id": "sample-y:protein-2",
+     "store": "yahoo",
+     "store_name": "Yahoo! 쇼핑",
+     "shop": "サンプルストア",
+     "price": 11970,
+     "shipping_included": true,
+     "buy_url": "https://search.rakuten.co.jp/search/mall/%E3%83%97%E3%83%AD%E3%83%86%E3%82%A4%E3%83%B3%20%E3%83%9B%E3%82%A8%E3%82%A4%201kg/",
+     "affiliate_url": "https://search.rakuten.co.jp/search/mall/%E3%83%97%E3%83%AD%E3%83%86%E3%82%A4%E3%83%B3%20%E3%83%9B%E3%82%A8%E3%82%A4%201kg/"
+    }
+   ]
+  },
+  {
+   "id": "sample:protein-5",
+   "rank": 5,
+   "title": "(サンプル) プロテイン(パウダー) E ホエイ 人工甘味料不使用 1kg",
+   "name": "(サンプル) プロテイン（パウダー） E ホエイ 人工甘味料不使用 1kg",
+   "store": "rakuten",
+   "store_name": "라쿠텐 이치바",
+   "shop": "サンプルショップ",
+   "price": 4260,
+   "currency": "JPY",
+   "shipping_included": true,
+   "point_rate": 1,
+   "rating": 4.07,
+   "reviews": 3218,
+   "score": 4.074,
+   "variants": false,
+   "price_check": {
+    "verdict": "usual",
+    "label": "평소 가격",
+    "min_90d": 4130,
+    "median_90d": 4250,
+    "max_90d": 4380,
+    "observed_days": 31,
+    "window_days": 31,
+    "first_seen": "2026-09-02",
+    "weekly_low": [
+     [
+      "2026-09-04",
+      4160
+     ],
+     [
+      "2026-09-10",
+      4170
+     ],
+     [
+      "2026-09-13",
+      4130
+     ],
+     [
+      "2026-09-25",
+      4210
+     ],
+     [
+      "2026-09-29",
+      4160
+     ]
+    ]
+   },
+   "unit_price": {
+    "value": 4260,
+    "label": "1kg당",
+    "quantity": 1000
+   },
+   "specs": {
+    "type": "whey",
+    "no_artificial_sweetener": true
+   },
+   "buy_url": "https://search.rakuten.co.jp/search/mall/%E3%83%97%E3%83%AD%E3%83%86%E3%82%A4%E3%83%B3%20%E3%83%9B%E3%82%A8%E3%82%A4%201kg/",
+   "affiliate_url": "https://search.rakuten.co.jp/search/mall/%E3%83%97%E3%83%AD%E3%83%86%E3%82%A4%E3%83%B3%20%E3%83%9B%E3%82%A8%E3%82%A4%201kg/",
+   "affiliate": false,
+   "product_url": "https://search.rakuten.co.jp/search/mall/%E3%83%97%E3%83%AD%E3%83%86%E3%82%A4%E3%83%B3%20%E3%83%9B%E3%82%A8%E3%82%A4%201kg/",
+   "image": null,
+   "other_offers": []
+  },
+  {
+   "id": "sample:protein-3",
+   "rank": 6,
+   "title": "(サンプル) プロテイン(パウダー) C ソイ 1kg",
+   "name": "(サンプル) プロテイン（パウダー） C ソイ 1kg",
+   "store": "rakuten",
+   "store_name": "라쿠텐 이치바",
+   "shop": "サンプルショップ",
+   "price": 6770,
+   "currency": "JPY",
+   "shipping_included": true,
+   "point_rate": 1,
+   "rating": 3.82,
+   "reviews": 2202,
+   "score": 3.832,
+   "variants": false,
+   "price_check": {
+    "verdict": "usual",
+    "label": "평소 가격",
+    "min_90d": 6240,
+    "median_90d": 6430,
+    "max_90d": 6770,
+    "observed_days": 31,
+    "window_days": 31,
+    "first_seen": "2026-09-02",
+    "weekly_low": [
+     [
+      "2026-09-02",
+      6330
+     ],
+     [
+      "2026-09-06",
+      6260
+     ],
+     [
+      "2026-09-15",
+      6340
+     ],
+     [
+      "2026-09-24",
+      6280
+     ],
+     [
+      "2026-09-27",
+      6240
+     ]
+    ]
+   },
+   "unit_price": {
+    "value": 6770,
+    "label": "1kg당",
+    "quantity": 1000
+   },
+   "specs": {
+    "type": "soy",
+    "no_artificial_sweetener": false
+   },
+   "buy_url": "https://search.rakuten.co.jp/search/mall/%E3%83%97%E3%83%AD%E3%83%86%E3%82%A4%E3%83%B3%20%E3%83%9B%E3%82%A8%E3%82%A4%201kg/",
+   "affiliate_url": "https://search.rakuten.co.jp/search/mall/%E3%83%97%E3%83%AD%E3%83%86%E3%82%A4%E3%83%B3%20%E3%83%9B%E3%82%A8%E3%82%A4%201kg/",
+   "affiliate": false,
+   "product_url": "https://search.rakuten.co.jp/search/mall/%E3%83%97%E3%83%AD%E3%83%86%E3%82%A4%E3%83%B3%20%E3%83%9B%E3%82%A8%E3%82%A4%201kg/",
+   "image": null,
+   "other_offers": []
+  }
+ ],
+ "stats": {
+  "candidates": 8,
+  "ranked": 6,
+  "rejected": {
+   "duplicate": 2
+  },
+  "meanRating": 4.35,
+  "priorWeight": 50
+ },
+ "links": {
+  "html": "https://bufeks.github.io/LAB/shelf/ko/c/protein/",
+  "markdown": "https://bufeks.github.io/LAB/shelf/ko/c/protein.md",
+  "json": "https://bufeks.github.io/LAB/shelf/api/v1/ko/c/protein.json",
+  "feed": "https://bufeks.github.io/LAB/shelf/ko/c/protein/feed.xml"
+ },
+ "languages": {
+  "ja": {
+   "html": "https://bufeks.github.io/LAB/shelf/c/protein/",
+   "markdown": "https://bufeks.github.io/LAB/shelf/c/protein.md",
+   "json": "https://bufeks.github.io/LAB/shelf/api/v1/c/protein.json",
+   "feed": "https://bufeks.github.io/LAB/shelf/c/protein/feed.xml"
+  },
+  "en": {
+   "html": "https://bufeks.github.io/LAB/shelf/en/c/protein/",
+   "markdown": "https://bufeks.github.io/LAB/shelf/en/c/protein.md",
+   "json": "https://bufeks.github.io/LAB/shelf/api/v1/en/c/protein.json",
+   "feed": "https://bufeks.github.io/LAB/shelf/en/c/protein/feed.xml"
+  },
+  "zh-Hans": {
+   "html": "https://bufeks.github.io/LAB/shelf/zh-hans/c/protein/",
+   "markdown": "https://bufeks.github.io/LAB/shelf/zh-hans/c/protein.md",
+   "json": "https://bufeks.github.io/LAB/shelf/api/v1/zh-hans/c/protein.json",
+   "feed": "https://bufeks.github.io/LAB/shelf/zh-hans/c/protein/feed.xml"
+  },
+  "zh-Hant": {
+   "html": "https://bufeks.github.io/LAB/shelf/zh-hant/c/protein/",
+   "markdown": "https://bufeks.github.io/LAB/shelf/zh-hant/c/protein.md",
+   "json": "https://bufeks.github.io/LAB/shelf/api/v1/zh-hant/c/protein.json",
+   "feed": "https://bufeks.github.io/LAB/shelf/zh-hant/c/protein/feed.xml"
+  },
+  "ko": {
+   "html": "https://bufeks.github.io/LAB/shelf/ko/c/protein/",
+   "markdown": "https://bufeks.github.io/LAB/shelf/ko/c/protein.md",
+   "json": "https://bufeks.github.io/LAB/shelf/api/v1/ko/c/protein.json",
+   "feed": "https://bufeks.github.io/LAB/shelf/ko/c/protein/feed.xml"
+  }
+ },
+ "source": {
+  "name": "Rakuten Ichiba",
+  "credit": {
+   "text": "Supported by Rakuten Developers",
+   "url": "https://developers.rakuten.com/"
+  }
+ }
+}

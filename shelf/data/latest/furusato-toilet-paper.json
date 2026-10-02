@@ -1,0 +1,392 @@
+{
+ "categoryId": "furusato-toilet-paper",
+ "date": "2026-10-02",
+ "fetchedAt": "2026-10-02T14:41:13+09:00",
+ "items": [
+  {
+   "id": "sample:furusato-toilet-paper-4",
+   "source": "rakuten",
+   "name": "(サンプル) ふるさと納税：トイレットペーパー D 64ロール 27.5m ダブル",
+   "caption": "",
+   "shop": "サンプルショップ",
+   "price": 25340,
+   "shippingIncluded": false,
+   "pointRate": 1,
+   "rating": 4.68,
+   "reviews": 2990,
+   "productUrl": "https://search.rakuten.co.jp/search/mall/%E3%81%B5%E3%82%8B%E3%81%95%E3%81%A8%E7%B4%8D%E7%A8%8E%20%E3%83%88%E3%82%A4%E3%83%AC%E3%83%83%E3%83%88%E3%83%9A%E3%83%BC%E3%83%91%E3%83%BC/",
+   "buyUrl": "https://search.rakuten.co.jp/search/mall/%E3%81%B5%E3%82%8B%E3%81%95%E3%81%A8%E7%B4%8D%E7%A8%8E%20%E3%83%88%E3%82%A4%E3%83%AC%E3%83%83%E3%83%88%E3%83%9A%E3%83%BC%E3%83%91%E3%83%BC/",
+   "affiliate": false,
+   "image": null,
+   "available": true,
+   "title": "(サンプル) ふるさと納税:トイレットペーパー D 64ロール 27.5m ダブル",
+   "variants": false,
+   "score": 4.675,
+   "facets": {
+    "rolls": 64,
+    "ply": "double"
+   },
+   "claimed": null,
+   "unit": {
+    "quantity": 3520,
+    "value": 13.89
+   },
+   "otherOffers": [],
+   "rank": 1,
+   "priceStats": {
+    "points": 31,
+    "windowDays": 31,
+    "firstSeen": "2026-09-02",
+    "min90": 25340,
+    "median90": 28930,
+    "max90": 29760,
+    "verdict": "lowest_observed"
+   },
+   "priceWeekly": [
+    [
+     "2026-09-02",
+     28690
+    ],
+    [
+     "2026-09-07",
+     28420
+    ],
+    [
+     "2026-09-17",
+     28340
+    ],
+    [
+     "2026-09-21",
+     28370
+    ],
+    [
+     "2026-10-02",
+     25340
+    ]
+   ]
+  },
+  {
+   "id": "sample:furusato-toilet-paper-5",
+   "source": "rakuten",
+   "name": "(サンプル) ふるさと納税：トイレットペーパー E 72ロール 55m シングル",
+   "caption": "",
+   "shop": "サンプルショップ",
+   "price": 26460,
+   "shippingIncluded": true,
+   "pointRate": 1,
+   "rating": 4.77,
+   "reviews": 67,
+   "productUrl": "https://search.rakuten.co.jp/search/mall/%E3%81%B5%E3%82%8B%E3%81%95%E3%81%A8%E7%B4%8D%E7%A8%8E%20%E3%83%88%E3%82%A4%E3%83%AC%E3%83%83%E3%83%88%E3%83%9A%E3%83%BC%E3%83%91%E3%83%BC/",
+   "buyUrl": "https://search.rakuten.co.jp/search/mall/%E3%81%B5%E3%82%8B%E3%81%95%E3%81%A8%E7%B4%8D%E7%A8%8E%20%E3%83%88%E3%82%A4%E3%83%AC%E3%83%83%E3%83%88%E3%83%9A%E3%83%BC%E3%83%91%E3%83%BC/",
+   "affiliate": false,
+   "image": null,
+   "available": true,
+   "title": "(サンプル) ふるさと納税:トイレットペーパー E 72ロール 55m シングル",
+   "variants": false,
+   "score": 4.608,
+   "facets": {
+    "rolls": 72,
+    "ply": "single"
+   },
+   "claimed": null,
+   "unit": {
+    "quantity": 3960,
+    "value": 14.97
+   },
+   "otherOffers": [],
+   "rank": 2,
+   "priceStats": {
+    "points": 31,
+    "windowDays": 31,
+    "firstSeen": "2026-09-02",
+    "min90": 25670,
+    "median90": 26390,
+    "max90": 27230,
+    "verdict": "usual"
+   },
+   "priceWeekly": [
+    [
+     "2026-09-04",
+     25810
+    ],
+    [
+     "2026-09-10",
+     25890
+    ],
+    [
+     "2026-09-18",
+     25670
+    ],
+    [
+     "2026-09-25",
+     26180
+    ],
+    [
+     "2026-09-29",
+     25850
+    ]
+   ]
+  },
+  {
+   "id": "sample:furusato-toilet-paper-6",
+   "source": "rakuten",
+   "name": "(サンプル) ふるさと納税：トイレットペーパー F 3倍巻き 24ロール 150m シングル",
+   "caption": "",
+   "shop": "サンプルショップ",
+   "price": 23000,
+   "shippingIncluded": false,
+   "pointRate": 1,
+   "rating": 4.58,
+   "reviews": 1287,
+   "productUrl": "https://search.rakuten.co.jp/search/mall/%E3%81%B5%E3%82%8B%E3%81%95%E3%81%A8%E7%B4%8D%E7%A8%8E%20%E3%83%88%E3%82%A4%E3%83%AC%E3%83%83%E3%83%88%E3%83%9A%E3%83%BC%E3%83%91%E3%83%BC/",
+   "buyUrl": "https://search.rakuten.co.jp/search/mall/%E3%81%B5%E3%82%8B%E3%81%95%E3%81%A8%E7%B4%8D%E7%A8%8E%20%E3%83%88%E3%82%A4%E3%83%AC%E3%83%83%E3%83%88%E3%83%9A%E3%83%BC%E3%83%91%E3%83%BC/",
+   "affiliate": false,
+   "image": null,
+   "available": true,
+   "title": "(サンプル) ふるさと納税:トイレットペーパー F 3倍巻き 24ロール 150m シングル",
+   "variants": false,
+   "score": 4.573,
+   "facets": {
+    "rolls": 24,
+    "ply": "single"
+   },
+   "claimed": null,
+   "unit": {
+    "quantity": 3600,
+    "value": 15.65
+   },
+   "otherOffers": [],
+   "rank": 3,
+   "priceStats": {
+    "points": 31,
+    "windowDays": 31,
+    "firstSeen": "2026-09-02",
+    "min90": 21210,
+    "median90": 21850,
+    "max90": 23000,
+    "verdict": "usual"
+   },
+   "priceWeekly": [
+    [
+     "2026-09-02",
+     21510
+    ],
+    [
+     "2026-09-06",
+     21260
+    ],
+    [
+     "2026-09-12",
+     21270
+    ],
+    [
+     "2026-09-24",
+     21360
+    ],
+    [
+     "2026-10-01",
+     21210
+    ]
+   ]
+  },
+  {
+   "id": "sample:furusato-toilet-paper-3",
+   "source": "rakuten",
+   "name": "(サンプル) ふるさと納税：トイレットペーパー C 2倍巻き 48ロール 100m シングル",
+   "caption": "",
+   "shop": "サンプルショップ",
+   "price": 17010,
+   "shippingIncluded": true,
+   "pointRate": 1,
+   "rating": 4.5,
+   "reviews": 2071,
+   "productUrl": "https://search.rakuten.co.jp/search/mall/%E3%81%B5%E3%82%8B%E3%81%95%E3%81%A8%E7%B4%8D%E7%A8%8E%20%E3%83%88%E3%82%A4%E3%83%AC%E3%83%83%E3%83%88%E3%83%9A%E3%83%BC%E3%83%91%E3%83%BC/",
+   "buyUrl": "https://search.rakuten.co.jp/search/mall/%E3%81%B5%E3%82%8B%E3%81%95%E3%81%A8%E7%B4%8D%E7%A8%8E%20%E3%83%88%E3%82%A4%E3%83%AC%E3%83%83%E3%83%88%E3%83%9A%E3%83%BC%E3%83%91%E3%83%BC/",
+   "affiliate": false,
+   "image": null,
+   "available": true,
+   "title": "(サンプル) ふるさと納税:トイレットペーパー C 2倍巻き 48ロール 100m シングル",
+   "variants": false,
+   "score": 4.497,
+   "facets": {
+    "rolls": 48,
+    "ply": "single"
+   },
+   "claimed": null,
+   "unit": {
+    "quantity": 4800,
+    "value": 28.22
+   },
+   "otherOffers": [],
+   "rank": 4,
+   "priceStats": {
+    "points": 31,
+    "windowDays": 31,
+    "firstSeen": "2026-09-02",
+    "min90": 15680,
+    "median90": 16170,
+    "max90": 17010,
+    "verdict": "usual"
+   },
+   "priceWeekly": [
+    [
+     "2026-09-02",
+     15910
+    ],
+    [
+     "2026-09-06",
+     15720
+    ],
+    [
+     "2026-09-15",
+     15930
+    ],
+    [
+     "2026-09-24",
+     15780
+    ],
+    [
+     "2026-09-27",
+     15680
+    ]
+   ]
+  },
+  {
+   "id": "sample:furusato-toilet-paper-2",
+   "source": "rakuten",
+   "name": "(サンプル) ふるさと納税：トイレットペーパー B 48ロール 60m シングル",
+   "caption": "",
+   "shop": "サンプルショップ",
+   "price": 28360,
+   "shippingIncluded": false,
+   "pointRate": 1,
+   "rating": 4.22,
+   "reviews": 2527,
+   "productUrl": "https://search.rakuten.co.jp/search/mall/%E3%81%B5%E3%82%8B%E3%81%95%E3%81%A8%E7%B4%8D%E7%A8%8E%20%E3%83%88%E3%82%A4%E3%83%AC%E3%83%83%E3%83%88%E3%83%9A%E3%83%BC%E3%83%91%E3%83%BC/",
+   "buyUrl": "https://search.rakuten.co.jp/search/mall/%E3%81%B5%E3%82%8B%E3%81%95%E3%81%A8%E7%B4%8D%E7%A8%8E%20%E3%83%88%E3%82%A4%E3%83%AC%E3%83%83%E3%83%88%E3%83%9A%E3%83%BC%E3%83%91%E3%83%BC/",
+   "affiliate": false,
+   "image": null,
+   "available": true,
+   "title": "(サンプル) ふるさと納税:トイレットペーパー B 48ロール 60m シングル",
+   "variants": false,
+   "score": 4.223,
+   "facets": {
+    "rolls": 48,
+    "ply": "single"
+   },
+   "claimed": null,
+   "unit": {
+    "quantity": 2880,
+    "value": 10.16
+   },
+   "otherOffers": [],
+   "rank": 5,
+   "priceStats": {
+    "points": 31,
+    "windowDays": 31,
+    "firstSeen": "2026-09-02",
+    "min90": 27570,
+    "median90": 28230,
+    "max90": 29150,
+    "verdict": "usual"
+   },
+   "priceWeekly": [
+    [
+     "2026-09-04",
+     27570
+    ],
+    [
+     "2026-09-05",
+     27700
+    ],
+    [
+     "2026-09-17",
+     27690
+    ],
+    [
+     "2026-09-25",
+     27690
+    ],
+    [
+     "2026-09-30",
+     27800
+    ]
+   ]
+  },
+  {
+   "id": "sample:furusato-toilet-paper-1",
+   "source": "rakuten",
+   "name": "(サンプル) ふるさと納税：トイレットペーパー A 96ロール 30m ダブル",
+   "caption": "",
+   "shop": "サンプルショップ",
+   "price": 13240,
+   "shippingIncluded": true,
+   "pointRate": 1,
+   "rating": 4.11,
+   "reviews": 3318,
+   "productUrl": "https://search.rakuten.co.jp/search/mall/%E3%81%B5%E3%82%8B%E3%81%95%E3%81%A8%E7%B4%8D%E7%A8%8E%20%E3%83%88%E3%82%A4%E3%83%AC%E3%83%83%E3%83%88%E3%83%9A%E3%83%BC%E3%83%91%E3%83%BC/",
+   "buyUrl": "https://search.rakuten.co.jp/search/mall/%E3%81%B5%E3%82%8B%E3%81%95%E3%81%A8%E7%B4%8D%E7%A8%8E%20%E3%83%88%E3%82%A4%E3%83%AC%E3%83%83%E3%83%88%E3%83%9A%E3%83%BC%E3%83%91%E3%83%BC/",
+   "affiliate": false,
+   "image": null,
+   "available": true,
+   "title": "(サンプル) ふるさと納税:トイレットペーパー A 96ロール 30m ダブル",
+   "variants": false,
+   "score": 4.114,
+   "facets": {
+    "rolls": 96,
+    "ply": "double"
+   },
+   "claimed": null,
+   "unit": {
+    "quantity": 5760,
+    "value": 43.5
+   },
+   "otherOffers": [],
+   "rank": 6,
+   "priceStats": {
+    "points": 31,
+    "windowDays": 31,
+    "firstSeen": "2026-09-02",
+    "min90": 13240,
+    "median90": 15100,
+    "max90": 15610,
+    "verdict": "lowest_observed"
+   },
+   "priceWeekly": [
+    [
+     "2026-09-02",
+     14990
+    ],
+    [
+     "2026-09-05",
+     14840
+    ],
+    [
+     "2026-09-13",
+     15020
+    ],
+    [
+     "2026-09-25",
+     14800
+    ],
+    [
+     "2026-10-02",
+     13240
+    ]
+   ]
+  }
+ ],
+ "stats": {
+  "candidates": 6,
+  "ranked": 6,
+  "rejected": {},
+  "meanRating": 4.39,
+  "priorWeight": 50
+ },
+ "picks": {
+  "best": "sample:furusato-toilet-paper-4",
+  "budget": "sample:furusato-toilet-paper-6",
+  "deal": "sample:furusato-toilet-paper-4",
+  "per_unit": "sample:furusato-toilet-paper-3"
+ }
+}

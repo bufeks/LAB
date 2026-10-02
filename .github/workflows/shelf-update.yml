@@ -21,7 +21,7 @@ concurrency:
 jobs:
   update:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 40
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -32,11 +32,11 @@ jobs:
       - name: Check credentials
         id: mode
         env:
-          HAS_KEYS: ${{ secrets.RAKUTEN_APP_ID != '' && secrets.RAKUTEN_ACCESS_KEY != '' }}
+          HAS_KEYS: ${{ (secrets.RAKUTEN_APP_ID != '' && secrets.RAKUTEN_ACCESS_KEY != '') || secrets.YAHOO_APP_ID != '' }}
         run: |
           echo "live=$HAS_KEYS" >> "$GITHUB_OUTPUT"
           if [ "$HAS_KEYS" != "true" ]; then
-            echo "::notice::RAKUTEN_APP_ID / RAKUTEN_ACCESS_KEY are not set; keeping the committed sample build."
+            echo "::notice::Neither the Rakuten keys nor YAHOO_APP_ID are set; keeping the committed sample build."
           fi
       - name: Fetch and build
         id: fetch
@@ -45,6 +45,8 @@ jobs:
           RAKUTEN_APP_ID: ${{ secrets.RAKUTEN_APP_ID }}
           RAKUTEN_ACCESS_KEY: ${{ secrets.RAKUTEN_ACCESS_KEY }}
           RAKUTEN_AFFILIATE_ID: ${{ secrets.RAKUTEN_AFFILIATE_ID }}
+          YAHOO_APP_ID: ${{ secrets.YAHOO_APP_ID }}
+          YAHOO_VC_AFFILIATE_ID: ${{ secrets.YAHOO_VC_AFFILIATE_ID }}
           RAKUTEN_REFERER: ${{ vars.RAKUTEN_REFERER }}
           SHELF_BASE_URL: ${{ vars.SHELF_BASE_URL }}
         run: node shelf/tool/update.mjs

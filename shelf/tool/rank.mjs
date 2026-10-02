@@ -1,6 +1,8 @@
 // Turns a raw candidate pool into the ranked list SHELF publishes. Pure
 // functions only, so every rule here is covered by tests.
 
+import { unitValue } from './units.mjs';
+
 export const PRIOR_WEIGHT = 50;
 const DUPLICATE_SIMILARITY = 0.8;
 
@@ -34,6 +36,22 @@ export function hasVariants(name) {
   return /選べる|サイズ選択|容量選択|選択可/.test(t) || /\d(?:\.\d+)?\s*(?:L|mAh|W|畳|ml)\s*[\/・|]\s*\d/i.test(t);
 }
 
+// Discount the listing claims in its title ("50%OFF", "半額", "2,000円OFF"),
+// read before cleanTitle strips it. Used to check sale claims against the
+// price history: { pct } or { yen }, or null.
+export function claimedDiscount(name) {
+  const t = normalize(name);
+  if (/半額/.test(t)) return { pct: 50 };
+  const pcts = [...t.matchAll(/(?:最大)?\s*(\d{1,2})\s*[%％]\s*(?:OFF|オフ|引き|割引)/gi)].map((m) => Number(m[1])).filter((n) => n >= 5 && n <= 90);
+  // A coupon discount is applied at checkout, so the listed price does not
+  // include it; it is not a price cut and is reported separately.
+  const coupon = /\d\s*[%％円]\s*(?:OFF|オフ|引き)?\s*クーポン|クーポン.{0,6}\d+\s*[%％円]/i.test(t);
+  if (pcts.length) return { pct: Math.max(...pcts), upTo: /最大/.test(t), ...(coupon ? { coupon: true } : {}) };
+  const yen = [...t.matchAll(/(\d{1,3}(?:,\d{3})*|\d+)\s*円\s*(?:OFF|オフ|引き)/gi)].map((m) => Number(m[1].replace(/,/g, ''))).filter((n) => n >= 100);
+  if (yen.length) return { yen: Math.max(...yen), ...(coupon ? { coupon: true } : {}) };
+  return null;
+}
+
 const ALLOWED_MENTION = '(?:付き|付属|付|不要|同梱|対応|モード|入り)';
 
 export function rejectReason(item, category) {
@@ -44,9 +62,16 @@ export function rejectReason(item, category) {
   if (item.reviews < (category.minReviews ?? 0)) return 'too_few_reviews';
 
   const title = cleanTitle(item.name);
+  // Checks on the raw title, before promo brackets such as 【ふるさと納税】 are stripped.
+  const raw = normalize(item.name);
+  if (category.requireRaw && !new RegExp(category.requireRaw, 'i').test(raw)) return 'not_the_product';
+  for (const pattern of category.excludeRaw || []) {
+    if (new RegExp(pattern, 'i').test(raw)) return 'excluded';
+  }
   const noun = new RegExp(category.noun, 'i');
   const at = title.search(noun);
   if (at < 0) return 'not_the_product';
+  if (category.require2 && !new RegExp(category.require2, 'i').test(title)) return 'not_the_product';
   for (const pattern of category.exclude || []) {
     if (new RegExp(pattern, 'i').test(title)) return 'excluded';
   }
@@ -178,6 +203,8 @@ export function rankCategory(rawItems, category) {
       variants: hasVariants(x.name),
       score: bayesScore(x.rating, x.reviews, mean),
       facets: extractFacets(x, category),
+      claimed: claimedDiscount(x.name),
+      ...(category.unitPrice && !hasVariants(x.name) ? { unit: unitValue(x, category.unitPrice) } : {}),
     }))
     .sort((a, b) => b.score - a.score || b.reviews - a.reviews || a.price - b.price);
 
@@ -191,7 +218,7 @@ export function rankCategory(rawItems, category) {
       continue;
     }
     rejected.duplicate = (rejected.duplicate || 0) + 1;
-    dup.otherOffers.push({ id: x.id, shop: x.shop, price: x.price, shippingIncluded: x.shippingIncluded, buyUrl: x.buyUrl });
+    dup.otherOffers.push({ id: x.id, store: x.source, shop: x.shop, price: x.price, shippingIncluded: x.shippingIncluded, buyUrl: x.buyUrl, affiliate: x.affiliate });
   }
 
   unique.forEach((x, i) => {
@@ -216,7 +243,7 @@ const CHEAP_VERDICTS = new Set(['lowest_observed', 'below_usual']);
 
 // Picks are computed after price history is attached (needs verdicts). Works
 // on any list, so the MCP server can re-run it on a filtered subset.
-export function choosePicks(items) {
+export function choosePicks(items, category = {}) {
   if (!items.length) return {};
   const scores = items.map((x) => x.score).sort((a, b) => a - b);
   const cutoff = quantile(scores, 0.6);
@@ -228,5 +255,15 @@ export function choosePicks(items) {
   const picks = { best: best.id };
   if (budget && budget.id !== best.id) picks.budget = budget.id;
   if (deal) picks.deal = deal.id;
+  // Consumables: best value per unit among well-rated, shipping-included
+  // listings (a low unit price with extra shipping is not a low price).
+  const spec = category.unitPrice;
+  if (spec) {
+    const wide = quantile(scores, 0.4);
+    const eligible = items.filter((x) => x.unit && x.shippingIncluded && x.score >= wide);
+    const better = spec.perYen ? (a, b) => b.unit.value - a.unit.value : (a, b) => a.unit.value - b.unit.value;
+    const top = eligible.sort(better)[0];
+    if (top) picks.per_unit = top.id;
+  }
   return picks;
 }

@@ -1,11 +1,11 @@
 {
  "categoryId": "mobile-battery",
- "date": "2026-09-30",
- "fetchedAt": "2026-09-30T01:01:12+09:00",
+ "date": "2026-10-02",
+ "fetchedAt": "2026-10-02T14:41:13+09:00",
  "items": [
   {
    "id": "sample:mobile-battery-3",
-   "source": "sample",
+   "source": "rakuten",
    "name": "(サンプル) モバイルバッテリー C 5000mAh マグネット式 20W PSE",
    "caption": "",
    "shop": "サンプルショップ",
@@ -21,7 +21,7 @@
    "available": true,
    "title": "(サンプル) モバイルバッテリー C 5000mAh マグネット式 20W PSE",
    "variants": false,
-   "score": 4.797,
+   "score": 4.796,
    "facets": {
     "capacity_mah": 5000,
     "output_w": 20,
@@ -32,12 +32,13 @@
     "flight_carry_on": "ok",
     "energy_wh_source": "estimated"
    },
+   "claimed": null,
    "otherOffers": [],
    "rank": 1,
    "priceStats": {
     "points": 31,
     "windowDays": 31,
-    "firstSeen": "2026-08-31",
+    "firstSeen": "2026-09-02",
     "min90": 5130,
     "median90": 5280,
     "max90": 5560,
@@ -45,30 +46,30 @@
    },
    "priceWeekly": [
     [
-     "2026-08-31",
+     "2026-09-02",
      5200
     ],
     [
-     "2026-09-04",
+     "2026-09-06",
      5140
     ],
     [
-     "2026-09-13",
+     "2026-09-15",
      5210
     ],
     [
-     "2026-09-22",
+     "2026-09-24",
      5160
     ],
     [
-     "2026-09-25",
+     "2026-09-27",
      5130
     ]
    ]
   },
   {
    "id": "sample:mobile-battery-5",
-   "source": "sample",
+   "source": "rakuten",
    "name": "(サンプル) モバイルバッテリー E 27000mAh 140W PD PSE",
    "caption": "",
    "shop": "サンプルショップ",
@@ -84,7 +85,7 @@
    "available": true,
    "title": "(サンプル) モバイルバッテリー E 27000mAh 140W PD PSE",
    "variants": false,
-   "score": 4.426,
+   "score": 4.425,
    "facets": {
     "capacity_mah": 27000,
     "output_w": 140,
@@ -95,12 +96,13 @@
     "flight_carry_on": "airline_approval_needed",
     "energy_wh_source": "estimated"
    },
+   "claimed": null,
    "otherOffers": [],
    "rank": 2,
    "priceStats": {
     "points": 31,
     "windowDays": 31,
-    "firstSeen": "2026-08-31",
+    "firstSeen": "2026-09-02",
     "min90": 5870,
     "median90": 6030,
     "max90": 6230,
@@ -108,30 +110,30 @@
    },
    "priceWeekly": [
     [
-     "2026-09-02",
+     "2026-09-04",
      5900
     ],
     [
-     "2026-09-08",
+     "2026-09-10",
      5920
     ],
     [
-     "2026-09-11",
+     "2026-09-13",
      5870
     ],
     [
-     "2026-09-23",
+     "2026-09-25",
      5990
     ],
     [
-     "2026-09-27",
+     "2026-09-29",
      5910
     ]
    ]
   },
   {
    "id": "sample:mobile-battery-2",
-   "source": "sample",
+   "source": "rakuten",
    "name": "(サンプル) モバイルバッテリー B 20000mAh 65W PD ノートPC対応 PSE",
    "caption": "",
    "shop": "サンプルショップ",
@@ -158,12 +160,13 @@
     "flight_carry_on": "ok",
     "energy_wh_source": "estimated"
    },
+   "claimed": null,
    "otherOffers": [],
    "rank": 3,
    "priceStats": {
     "points": 31,
     "windowDays": 31,
-    "firstSeen": "2026-08-31",
+    "firstSeen": "2026-09-02",
     "min90": 2780,
     "median90": 2850,
     "max90": 2940,
@@ -171,30 +174,30 @@
    },
    "priceWeekly": [
     [
-     "2026-09-02",
+     "2026-09-04",
      2780
     ],
     [
-     "2026-09-03",
+     "2026-09-05",
      2790
     ],
     [
-     "2026-09-15",
+     "2026-09-17",
      2790
     ],
     [
-     "2026-09-23",
+     "2026-09-25",
      2790
     ],
     [
-     "2026-09-26",
+     "2026-09-28",
      2800
     ]
    ]
   },
   {
    "id": "sample:mobile-battery-6",
-   "source": "sample",
+   "source": "rakuten",
    "name": "(サンプル) モバイルバッテリー F 10000mAh 30W 軽量 PSE",
    "caption": "",
    "shop": "サンプルショップ",
@@ -221,12 +224,13 @@
     "flight_carry_on": "ok",
     "energy_wh_source": "estimated"
    },
+   "claimed": null,
    "otherOffers": [],
    "rank": 4,
    "priceStats": {
     "points": 31,
     "windowDays": 31,
-    "firstSeen": "2026-08-31",
+    "firstSeen": "2026-09-02",
     "min90": 5940,
     "median90": 6120,
     "max90": 6440,
@@ -234,38 +238,38 @@
    },
    "priceWeekly": [
     [
-     "2026-08-31",
+     "2026-09-02",
      6020
     ],
     [
-     "2026-09-04",
+     "2026-09-06",
      5950
     ],
     [
-     "2026-09-10",
+     "2026-09-12",
      5960
     ],
     [
-     "2026-09-22",
+     "2026-09-24",
      5980
     ],
     [
-     "2026-09-29",
+     "2026-10-01",
      5940
     ]
    ]
   },
   {
-   "id": "sample:mobile-battery-4",
-   "source": "sample",
+   "id": "sample-y:mobile-battery-2",
+   "source": "yahoo",
    "name": "(サンプル) モバイルバッテリー D 10000mAh ケーブル内蔵 20W PSE",
    "caption": "",
-   "shop": "サンプルショップ",
-   "price": 4690,
-   "shippingIncluded": false,
+   "shop": "サンプルストア",
+   "price": 4880,
+   "shippingIncluded": true,
    "pointRate": 1,
    "rating": 4.22,
-   "reviews": 2332,
+   "reviews": 777,
    "productUrl": "https://search.rakuten.co.jp/search/mall/%E3%83%A2%E3%83%90%E3%82%A4%E3%83%AB%E3%83%90%E3%83%83%E3%83%86%E3%83%AA%E3%83%BC/",
    "buyUrl": "https://search.rakuten.co.jp/search/mall/%E3%83%A2%E3%83%90%E3%82%A4%E3%83%AB%E3%83%90%E3%83%83%E3%83%86%E3%83%AA%E3%83%BC/",
    "affiliate": false,
@@ -273,7 +277,7 @@
    "available": true,
    "title": "(サンプル) モバイルバッテリー D 10000mAh ケーブル内蔵 20W PSE",
    "variants": false,
-   "score": 4.223,
+   "score": 4.227,
    "facets": {
     "capacity_mah": 10000,
     "output_w": 20,
@@ -284,51 +288,62 @@
     "flight_carry_on": "ok",
     "energy_wh_source": "estimated"
    },
-   "otherOffers": [],
+   "claimed": null,
+   "otherOffers": [
+    {
+     "id": "sample:mobile-battery-4",
+     "store": "rakuten",
+     "shop": "サンプルショップ",
+     "price": 4690,
+     "shippingIncluded": false,
+     "buyUrl": "https://search.rakuten.co.jp/search/mall/%E3%83%A2%E3%83%90%E3%82%A4%E3%83%AB%E3%83%90%E3%83%83%E3%83%86%E3%83%AA%E3%83%BC/",
+     "affiliate": false
+    }
+   ],
    "rank": 5,
    "priceStats": {
     "points": 31,
     "windowDays": 31,
-    "firstSeen": "2026-08-31",
-    "min90": 4690,
-    "median90": 5350,
-    "max90": 5510,
-    "verdict": "lowest_observed"
+    "firstSeen": "2026-09-02",
+    "min90": 4740,
+    "median90": 4860,
+    "max90": 5020,
+    "verdict": "usual"
    },
    "priceWeekly": [
     [
-     "2026-08-31",
-     5310
+     "2026-09-04",
+     4780
     ],
     [
-     "2026-09-05",
-     5260
+     "2026-09-07",
+     4760
     ],
     [
      "2026-09-15",
-     5240
+     4740
     ],
     [
-     "2026-09-19",
-     5250
+     "2026-09-24",
+     4870
     ],
     [
      "2026-09-30",
-     4690
+     4740
     ]
    ]
   },
   {
-   "id": "sample:mobile-battery-1",
-   "source": "sample",
+   "id": "sample-y:mobile-battery-1",
+   "source": "yahoo",
    "name": "(サンプル) モバイルバッテリー A 10000mAh 22.5W PD PSE適合 薄型",
    "caption": "",
-   "shop": "サンプルショップ",
-   "price": 6850,
+   "shop": "サンプルストア",
+   "price": 6370,
    "shippingIncluded": true,
    "pointRate": 1,
    "rating": 4.2,
-   "reviews": 965,
+   "reviews": 322,
    "productUrl": "https://search.rakuten.co.jp/search/mall/%E3%83%A2%E3%83%90%E3%82%A4%E3%83%AB%E3%83%90%E3%83%83%E3%83%86%E3%83%AA%E3%83%BC/",
    "buyUrl": "https://search.rakuten.co.jp/search/mall/%E3%83%A2%E3%83%90%E3%82%A4%E3%83%AB%E3%83%90%E3%83%83%E3%83%86%E3%83%AA%E3%83%BC/",
    "affiliate": false,
@@ -336,7 +351,7 @@
    "available": true,
    "title": "(サンプル) モバイルバッテリー A 10000mAh 22.5W PD PSE適合 薄型",
    "variants": false,
-   "score": 4.207,
+   "score": 4.218,
    "facets": {
     "capacity_mah": 10000,
     "output_w": 22.5,
@@ -347,51 +362,64 @@
     "flight_carry_on": "ok",
     "energy_wh_source": "estimated"
    },
-   "otherOffers": [],
+   "claimed": null,
+   "otherOffers": [
+    {
+     "id": "sample:mobile-battery-1",
+     "store": "rakuten",
+     "shop": "サンプルショップ",
+     "price": 6850,
+     "shippingIncluded": true,
+     "buyUrl": "https://search.rakuten.co.jp/search/mall/%E3%83%A2%E3%83%90%E3%82%A4%E3%83%AB%E3%83%90%E3%83%83%E3%83%86%E3%83%AA%E3%83%BC/",
+     "affiliate": false
+    }
+   ],
    "rank": 6,
    "priceStats": {
     "points": 31,
     "windowDays": 31,
-    "firstSeen": "2026-08-31",
-    "min90": 6850,
-    "median90": 7810,
-    "max90": 8080,
+    "firstSeen": "2026-09-02",
+    "min90": 6370,
+    "median90": 7300,
+    "max90": 7500,
     "verdict": "lowest_observed"
    },
    "priceWeekly": [
     [
-     "2026-08-31",
-     7750
+     "2026-09-02",
+     7210
     ],
     [
-     "2026-09-03",
-     7680
+     "2026-09-10",
+     7170
     ],
     [
-     "2026-09-11",
-     7770
+     "2026-09-15",
+     7130
     ],
     [
      "2026-09-23",
-     7660
+     7150
     ],
     [
-     "2026-09-30",
-     6850
+     "2026-10-02",
+     6370
     ]
    ]
   }
  ],
  "stats": {
-  "candidates": 6,
+  "candidates": 8,
   "ranked": 6,
-  "rejected": {},
-  "meanRating": 4.35,
+  "rejected": {
+   "duplicate": 2
+  },
+  "meanRating": 4.33,
   "priorWeight": 50
  },
  "picks": {
   "best": "sample:mobile-battery-3",
   "budget": "sample:mobile-battery-2",
-  "deal": "sample:mobile-battery-4"
+  "deal": "sample-y:mobile-battery-1"
  }
 }

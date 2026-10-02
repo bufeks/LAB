@@ -1,0 +1,2278 @@
+{
+ "schema": "shelf.hotels/v1",
+ "lang": "zh-Hant",
+ "sample": true,
+ "data_date": "2026-10-02",
+ "updated_at": "2026-10-02T14:41:13+09:00",
+ "disclosure": "廣告：飯店連結為樂天旅遊的推廣（聯盟）連結。透過連結預訂時營運者會獲得佣金，但價格不變。",
+ "note": "價格為 2 位大人 1 間房 1 晚的最便宜方案（樂天旅遊顯示的金額）。地區價格水準是各家有空房飯店最低價格的中位數。空房減少時，找到的飯店數量也會減少。",
+ "method": "針對同一住宿日期，每天記錄價格水準；比過去紀錄的中位數高 5% 以上為「上漲中」，低 5% 以上為「下跌中」。過去的走勢不保證未來的價格。",
+ "areas": [
+  {
+   "id": "tokyo-shinjuku",
+   "name": "東京·新宿站周邊",
+   "location": {
+    "lat": 35.6896,
+    "lng": 139.7006,
+    "radius_km": 1
+   },
+   "nights": [
+    {
+     "date": "2026-10-03",
+     "weekday": "週六",
+     "days_ahead": 1,
+     "level": 24750,
+     "lowest": 17400,
+     "available": 20,
+     "trend": {
+      "verdict": "stable",
+      "observations": 3,
+      "change_pct": 0,
+      "baseline": 24750,
+      "label": "持平",
+      "advice": "沒有太大變化。"
+     },
+     "cheapest": [
+      {
+       "name": "(サンプル) ホテル A",
+       "price": 17400,
+       "rating": 3.6,
+       "reviews": 50,
+       "url": "https://travel.rakuten.co.jp/"
+      },
+      {
+       "name": "(サンプル) ホテル B",
+       "price": 19500,
+       "rating": 4.3,
+       "reviews": 90,
+       "url": "https://travel.rakuten.co.jp/"
+      },
+      {
+       "name": "(サンプル) ホテル C",
+       "price": 21600,
+       "rating": 3.7,
+       "reviews": 130,
+       "url": "https://travel.rakuten.co.jp/"
+      }
+     ]
+    },
+    {
+     "date": "2026-10-09",
+     "weekday": "週五",
+     "days_ahead": 7,
+     "level": 22550,
+     "lowest": 15900,
+     "available": 20,
+     "trend": {
+      "verdict": "stable",
+      "observations": 3,
+      "change_pct": 0,
+      "baseline": 22550,
+      "label": "持平",
+      "advice": "沒有太大變化。"
+     },
+     "cheapest": [
+      {
+       "name": "(サンプル) ホテル A",
+       "price": 15900,
+       "rating": 3.6,
+       "reviews": 50,
+       "url": "https://travel.rakuten.co.jp/"
+      },
+      {
+       "name": "(サンプル) ホテル B",
+       "price": 17800,
+       "rating": 4.3,
+       "reviews": 90,
+       "url": "https://travel.rakuten.co.jp/"
+      },
+      {
+       "name": "(サンプル) ホテル C",
+       "price": 19700,
+       "rating": 3.7,
+       "reviews": 130,
+       "url": "https://travel.rakuten.co.jp/"
+      }
+     ]
+    },
+    {
+     "date": "2026-10-10",
+     "weekday": "週六",
+     "days_ahead": 8,
+     "level": 24750,
+     "lowest": 17400,
+     "available": 20,
+     "trend": {
+      "verdict": "stable",
+      "observations": 3,
+      "change_pct": 0,
+      "baseline": 24750,
+      "label": "持平",
+      "advice": "沒有太大變化。"
+     },
+     "cheapest": [
+      {
+       "name": "(サンプル) ホテル A",
+       "price": 17400,
+       "rating": 3.6,
+       "reviews": 50,
+       "url": "https://travel.rakuten.co.jp/"
+      },
+      {
+       "name": "(サンプル) ホテル B",
+       "price": 19500,
+       "rating": 4.3,
+       "reviews": 90,
+       "url": "https://travel.rakuten.co.jp/"
+      },
+      {
+       "name": "(サンプル) ホテル C",
+       "price": 21600,
+       "rating": 3.7,
+       "reviews": 130,
+       "url": "https://travel.rakuten.co.jp/"
+      }
+     ]
+    },
+    {
+     "date": "2026-10-16",
+     "weekday": "週五",
+     "days_ahead": 14,
+     "level": 22550,
+     "lowest": 15900,
+     "available": 20,
+     "trend": {
+      "verdict": "stable",
+      "observations": 3,
+      "change_pct": 0,
+      "baseline": 22550,
+      "label": "持平",
+      "advice": "沒有太大變化。"
+     },
+     "cheapest": [
+      {
+       "name": "(サンプル) ホテル A",
+       "price": 15900,
+       "rating": 3.6,
+       "reviews": 50,
+       "url": "https://travel.rakuten.co.jp/"
+      },
+      {
+       "name": "(サンプル) ホテル B",
+       "price": 17800,
+       "rating": 4.3,
+       "reviews": 90,
+       "url": "https://travel.rakuten.co.jp/"
+      },
+      {
+       "name": "(サンプル) ホテル C",
+       "price": 19700,
+       "rating": 3.7,
+       "reviews": 130,
+       "url": "https://travel.rakuten.co.jp/"
+      }
+     ]
+    },
+    {
+     "date": "2026-10-17",
+     "weekday": "週六",
+     "days_ahead": 15,
+     "level": 24750,
+     "lowest": 17400,
+     "available": 20,
+     "trend": {
+      "verdict": "stable",
+      "observations": 3,
+      "change_pct": 0,
+      "baseline": 24750,
+      "label": "持平",
+      "advice": "沒有太大變化。"
+     },
+     "cheapest": [
+      {
+       "name": "(サンプル) ホテル A",
+       "price": 17400,
+       "rating": 3.6,
+       "reviews": 50,
+       "url": "https://travel.rakuten.co.jp/"
+      },
+      {
+       "name": "(サンプル) ホテル B",
+       "price": 19500,
+       "rating": 4.3,
+       "reviews": 90,
+       "url": "https://travel.rakuten.co.jp/"
+      },
+      {
+       "name": "(サンプル) ホテル C",
+       "price": 21600,
+       "rating": 3.7,
+       "reviews": 130,
+       "url": "https://travel.rakuten.co.jp/"
+      }
+     ]
+    },
+    {
+     "date": "2026-10-23",
+     "weekday": "週五",
+     "days_ahead": 21,
+     "level": 22550,
+     "lowest": 15900,
+     "available": 20,
+     "trend": {
+      "verdict": "stable",
+      "observations": 3,
+      "change_pct": 0,
+      "baseline": 22550,
+      "label": "持平",
+      "advice": "沒有太大變化。"
+     },
+     "cheapest": [
+      {
+       "name": "(サンプル) ホテル A",
+       "price": 15900,
+       "rating": 3.6,
+       "reviews": 50,
+       "url": "https://travel.rakuten.co.jp/"
+      },
+      {
+       "name": "(サンプル) ホテル B",
+       "price": 17800,
+       "rating": 4.3,
+       "reviews": 90,
+       "url": "https://travel.rakuten.co.jp/"
+      },
+      {
+       "name": "(サンプル) ホテル C",
+       "price": 19700,
+       "rating": 3.7,
+       "reviews": 130,
+       "url": "https://travel.rakuten.co.jp/"
+      }
+     ]
+    },
+    {
+     "date": "2026-10-24",
+     "weekday": "週六",
+     "days_ahead": 22,
+     "level": 24750,
+     "lowest": 17400,
+     "available": 20,
+     "trend": {
+      "verdict": "stable",
+      "observations": 3,
+      "change_pct": 0,
+      "baseline": 24750,
+      "label": "持平",
+      "advice": "沒有太大變化。"
+     },
+     "cheapest": [
+      {
+       "name": "(サンプル) ホテル A",
+       "price": 17400,
+       "rating": 3.6,
+       "reviews": 50,
+       "url": "https://travel.rakuten.co.jp/"
+      },
+      {
+       "name": "(サンプル) ホテル B",
+       "price": 19500,
+       "rating": 4.3,
+       "reviews": 90,
+       "url": "https://travel.rakuten.co.jp/"
+      },
+      {
+       "name": "(サンプル) ホテル C",
+       "price": 21600,
+       "rating": 3.7,
+       "reviews": 130,
+       "url": "https://travel.rakuten.co.jp/"
+      }
+     ]
+    },
+    {
+     "date": "2026-10-30",
+     "weekday": "週五",
+     "days_ahead": 28,
+     "level": 22550,
+     "lowest": 15900,
+     "available": 20,
+     "trend": {
+      "verdict": "stable",
+      "observations": 3,
+      "change_pct": 0,
+      "baseline": 22550,
+      "label": "持平",
+      "advice": "沒有太大變化。"
+     },
+     "cheapest": [
+      {
+       "name": "(サンプル) ホテル A",
+       "price": 15900,
+       "rating": 3.6,
+       "reviews": 50,
+       "url": "https://travel.rakuten.co.jp/"
+      },
+      {
+       "name": "(サンプル) ホテル B",
+       "price": 17800,
+       "rating": 4.3,
+       "reviews": 90,
+       "url": "https://travel.rakuten.co.jp/"
+      },
+      {
+       "name": "(サンプル) ホテル C",
+       "price": 19700,
+       "rating": 3.7,
+       "reviews": 130,
+       "url": "https://travel.rakuten.co.jp/"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "tokyo-station",
+   "name": "東京車站周邊",
+   "location": {
+    "lat": 35.6812,
+    "lng": 139.7671,
+    "radius_km": 1
+   },
+   "nights": [
+    {
+     "date": "2026-10-03",
+     "weekday": "週六",
+     "days_ahead": 1,
+     "level": 25650,
+     "lowest": 18100,
+     "available": 8,
+     "trend": {
+      "verdict": "rising",
+      "observations": 3,
+      "change_pct": 13,
+      "baseline": 22700,
+      "label": "上漲中",
+      "advice": "要預訂的話，越早越好。"
+     },
+     "cheapest": [
+      {
+       "name": "(サンプル) ホテル A",
+       "price": 18100,
+       "rating": 3.6,
+       "reviews": 50,
+       "url": "https://travel.rakuten.co.jp/"
+      },
+      {
+       "name": "(サンプル) ホテル B",
+       "price": 20200,
+       "rating": 4.3,
+       "reviews": 90,
+       "url": "https://travel.rakuten.co.jp/"
+      },
+      {
+       "name": "(サンプル) ホテル C",
+       "price": 22400,
+       "rating": 3.7,
+       "reviews": 130,
+       "url": "https://travel.rakuten.co.jp/"
+      }
+     ]
+    },
+    {
+     "date": "2026-10-09",
+     "weekday": "週五",
+     "days_ahead": 7,
+     "level": 23100,
+     "lowest": 16300,
+     "available": 8,
+     "trend": {
+      "verdict": "rising",
+      "observations": 3,
+      "change_pct": 12.7,
+      "baseline": 20500,
+      "label": "上漲中",
+      "advice": "要預訂的話，越早越好。"
+     },
+     "cheapest": [
+      {
+       "name": "(サンプル) ホテル A",
+       "price": 16300,
+       "rating": 3.6,
+       "reviews": 50,
+       "url": "https://travel.rakuten.co.jp/"
+      },
+      {
+       "name": "(サンプル) ホテル B",
+       "price": 18200,
+       "rating": 4.3,
+       "reviews": 90,
+       "url": "https://travel.rakuten.co.jp/"
+      },
+      {
+       "name": "(サンプル) ホテル C",
+       "price": 20200,
+       "rating": 3.7,
+       "reviews": 130,
+       "url": "https://travel.rakuten.co.jp/"
+      }
+     ]
+    },
+    {
+     "date": "2026-10-10",
+     "weekday": "週六",
+     "days_ahead": 8,
+     "level": 25650,
+     "lowest": 18100,
+     "available": 8,
+     "trend": {
+      "verdict": "rising",
+      "observations": 3,
+      "change_pct": 13,
+      "baseline": 22700,
+      "label": "上漲中",
+      "advice": "要預訂的話，越早越好。"
+     },
+     "cheapest": [
+      {
+       "name": "(サンプル) ホテル A",
+       "price": 18100,
+       "rating": 3.6,
+       "reviews": 50,
+       "url": "https://travel.rakuten.co.jp/"
+      },
+      {
+       "name": "(サンプル) ホテル B",
+       "price": 20200,
+       "rating": 4.3,
+       "reviews": 90,
+       "url": "https://travel.rakuten.co.jp/"
+      },
+      {
+       "name": "(サンプル) ホテル C",
+       "price": 22400,
+       "rating": 3.7,
+       "reviews": 130,
+       "url": "https://travel.rakuten.co.jp/"
+      }
+     ]
+    },
+    {
+     "date": "2026-10-16",
+     "weekday": "週五",
+     "days_ahead": 14,
+     "level": 23100,
+     "lowest": 16300,
+     "available": 8,
+     "trend": {
+      "verdict": "rising",
+      "observations": 3,
+      "change_pct": 12.7,
+      "baseline": 20500,
+      "label": "上漲中",
+      "advice": "要預訂的話，越早越好。"
+     },
+     "cheapest": [
+      {
+       "name": "(サンプル) ホテル A",
+       "price": 16300,
+       "rating": 3.6,
+       "reviews": 50,
+       "url": "https://travel.rakuten.co.jp/"
+      },
+      {
+       "name": "(サンプル) ホテル B",
+       "price": 18200,
+       "rating": 4.3,
+       "reviews": 90,
+       "url": "https://travel.rakuten.co.jp/"
+      },
+      {
+       "name": "(サンプル) ホテル C",
+       "price": 20200,
+       "rating": 3.7,
+       "reviews": 130,
+       "url": "https://travel.rakuten.co.jp/"
+      }
+     ]
+    },
+    {
+     "date": "2026-10-17",
+     "weekday": "週六",
+     "days_ahead": 15,
+     "level": 25650,
+     "lowest": 18100,
+     "available": 8,
+     "trend": {
+      "verdict": "rising",
+      "observations": 3,
+      "change_pct": 13,
+      "baseline": 22700,
+      "label": "上漲中",
+      "advice": "要預訂的話，越早越好。"
+     },
+     "cheapest": [
+      {
+       "name": "(サンプル) ホテル A",
+       "price": 18100,
+       "rating": 3.6,
+       "reviews": 50,
+       "url": "https://travel.rakuten.co.jp/"
+      },
+      {
+       "name": "(サンプル) ホテル B",
+       "price": 20200,
+       "rating": 4.3,
+       "reviews": 90,
+       "url": "https://travel.rakuten.co.jp/"
+      },
+      {
+       "name": "(サンプル) ホテル C",
+       "price": 22400,
+       "rating": 3.7,
+       "reviews": 130,
+       "url": "https://travel.rakuten.co.jp/"
+      }
+     ]
+    },
+    {
+     "date": "2026-10-23",
+     "weekday": "週五",
+     "days_ahead": 21,
+     "level": 23100,
+     "lowest": 16300,
+     "available": 8,
+     "trend": {
+      "verdict": "rising",
+      "observations": 3,
+      "change_pct": 12.7,
+      "baseline": 20500,
+      "label": "上漲中",
+      "advice": "要預訂的話，越早越好。"
+     },
+     "cheapest": [
+      {
+       "name": "(サンプル) ホテル A",
+       "price": 16300,
+       "rating": 3.6,
+       "reviews": 50,
+       "url": "https://travel.rakuten.co.jp/"
+      },
+      {
+       "name": "(サンプル) ホテル B",
+       "price": 18200,
+       "rating": 4.3,
+       "reviews": 90,
+       "url": "https://travel.rakuten.co.jp/"
+      },
+      {
+       "name": "(サンプル) ホテル C",
+       "price": 20200,
+       "rating": 3.7,
+       "reviews": 130,
+       "url": "https://travel.rakuten.co.jp/"
+      }
+     ]
+    },
+    {
+     "date": "2026-10-24",
+     "weekday": "週六",
+     "days_ahead": 22,
+     "level": 25650,
+     "lowest": 18100,
+     "available": 8,
+     "trend": {
+      "verdict": "rising",
+      "observations": 3,
+      "change_pct": 13,
+      "baseline": 22700,
+      "label": "上漲中",
+      "advice": "要預訂的話，越早越好。"
+     },
+     "cheapest": [
+      {
+       "name": "(サンプル) ホテル A",
+       "price": 18100,
+       "rating": 3.6,
+       "reviews": 50,
+       "url": "https://travel.rakuten.co.jp/"
+      },
+      {
+       "name": "(サンプル) ホテル B",
+       "price": 20200,
+       "rating": 4.3,
+       "reviews": 90,
+       "url": "https://travel.rakuten.co.jp/"
+      },
+      {
+       "name": "(サンプル) ホテル C",
+       "price": 22400,
+       "rating": 3.7,
+       "reviews": 130,
+       "url": "https://travel.rakuten.co.jp/"
+      }
+     ]
+    },
+    {
+     "date": "2026-10-30",
+     "weekday": "週五",
+     "days_ahead": 28,
+     "level": 23100,
+     "lowest": 16300,
+     "available": 8,
+     "trend": {
+      "verdict": "rising",
+      "observations": 3,
+      "change_pct": 12.7,
+      "baseline": 20500,
+      "label": "上漲中",
+      "advice": "要預訂的話，越早越好。"
+     },
+     "cheapest": [
+      {
+       "name": "(サンプル) ホテル A",
+       "price": 16300,
+       "rating": 3.6,
+       "reviews": 50,
+       "url": "https://travel.rakuten.co.jp/"
+      },
+      {
+       "name": "(サンプル) ホテル B",
+       "price": 18200,
+       "rating": 4.3,
+       "reviews": 90,
+       "url": "https://travel.rakuten.co.jp/"
+      },
+      {
+       "name": "(サンプル) ホテル C",
+       "price": 20200,
+       "rating": 3.7,
+       "reviews": 130,
+       "url": "https://travel.rakuten.co.jp/"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "kyoto-station",
+   "name": "京都車站周邊",
+   "location": {
+    "lat": 34.9858,
+    "lng": 135.7588,
+    "radius_km": 1
+   },
+   "nights": [
+    {
+     "date": "2026-10-03",
+     "weekday": "週六",
+     "days_ahead": 1,
+     "level": 13600,
+     "lowest": 9600,
+     "available": 32,
+     "trend": {
+      "verdict": "falling",
+      "observations": 3,
+      "change_pct": -14.3,
+      "baseline": 15875,
+      "label": "下跌中",
+      "advice": "不急的話可以再觀望（但空房會越來越少）。"
+     },
+     "cheapest": [
+      {
+       "name": "(サンプル) ホテル A",
+       "price": 9600,
+       "rating": 3.6,
+       "reviews": 50,
+       "url": "https://travel.rakuten.co.jp/"
+      },
+      {
+       "name": "(サンプル) ホテル B",
+       "price": 10700,
+       "rating": 4.3,
+       "reviews": 90,
+       "url": "https://travel.rakuten.co.jp/"
+      },
+      {
+       "name": "(サンプル) ホテル C",
+       "price": 11900,
+       "rating": 3.7,
+       "reviews": 130,
+       "url": "https://travel.rakuten.co.jp/"
+      }
+     ]
+    },
+    {
+     "date": "2026-10-09",
+     "weekday": "週五",
+     "days_ahead": 7,
+     "level": 11900,
+     "lowest": 8400,
+     "available": 32,
+     "trend": {
+      "verdict": "falling",
+      "observations": 3,
+      "change_pct": -13.9,
+      "baseline": 13825,
+      "label": "下跌中",
+      "advice": "不急的話可以再觀望（但空房會越來越少）。"
+     },
+     "cheapest": [
+      {
+       "name": "(サンプル) ホテル A",
+       "price": 8400,
+       "rating": 3.6,
+       "reviews": 50,
+       "url": "https://travel.rakuten.co.jp/"
+      },
+      {
+       "name": "(サンプル) ホテル B",
+       "price": 9400,
+       "rating": 4.3,
+       "reviews": 90,
+       "url": "https://travel.rakuten.co.jp/"
+      },
+      {
+       "name": "(サンプル) ホテル C",
+       "price": 10400,
+       "rating": 3.7,
+       "reviews": 130,
+       "url": "https://travel.rakuten.co.jp/"
+      }
+     ]
+    },
+    {
+     "date": "2026-10-10",
+     "weekday": "週六",
+     "days_ahead": 8,
+     "level": 13600,
+     "lowest": 9600,
+     "available": 32,
+     "trend": {
+      "verdict": "falling",
+      "observations": 3,
+      "change_pct": -14.3,
+      "baseline": 15875,
+      "label": "下跌中",
+      "advice": "不急的話可以再觀望（但空房會越來越少）。"
+     },
+     "cheapest": [
+      {
+       "name": "(サンプル) ホテル A",
+       "price": 9600,
+       "rating": 3.6,
+       "reviews": 50,
+       "url": "https://travel.rakuten.co.jp/"
+      },
+      {
+       "name": "(サンプル) ホテル B",
+       "price": 10700,
+       "rating": 4.3,
+       "reviews": 90,
+       "url": "https://travel.rakuten.co.jp/"
+      },
+      {
+       "name": "(サンプル) ホテル C",
+       "price": 11900,
+       "rating": 3.7,
+       "reviews": 130,
+       "url": "https://travel.rakuten.co.jp/"
+      }
+     ]
+    },
+    {
+     "date": "2026-10-16",
+     "weekday": "週五",
+     "days_ahead": 14,
+     "level": 11900,
+     "lowest": 8400,
+     "available": 32,
+     "trend": {
+      "verdict": "falling",
+      "observations": 3,
+      "change_pct": -13.9,
+      "baseline": 13825,
+      "label": "下跌中",
+      "advice": "不急的話可以再觀望（但空房會越來越少）。"
+     },
+     "cheapest": [
+      {
+       "name": "(サンプル) ホテル A",
+       "price": 8400,
+       "rating": 3.6,
+       "reviews": 50,
+       "url": "https://travel.rakuten.co.jp/"
+      },
+      {
+       "name": "(サンプル) ホテル B",
+       "price": 9400,
+       "rating": 4.3,
+       "reviews": 90,
+       "url": "https://travel.rakuten.co.jp/"
+      },
+      {
+       "name": "(サンプル) ホテル C",
+       "price": 10400,
+       "rating": 3.7,
+       "reviews": 130,
+       "url": "https://travel.rakuten.co.jp/"
+      }
+     ]
+    },
+    {
+     "date": "2026-10-17",
+     "weekday": "週六",
+     "days_ahead": 15,
+     "level": 13600,
+     "lowest": 9600,
+     "available": 32,
+     "trend": {
+      "verdict": "falling",
+      "observations": 3,
+      "change_pct": -14.3,
+      "baseline": 15875,
+      "label": "下跌中",
+      "advice": "不急的話可以再觀望（但空房會越來越少）。"
+     },
+     "cheapest": [
+      {
+       "name": "(サンプル) ホテル A",
+       "price": 9600,
+       "rating": 3.6,
+       "reviews": 50,
+       "url": "https://travel.rakuten.co.jp/"
+      },
+      {
+       "name": "(サンプル) ホテル B",
+       "price": 10700,
+       "rating": 4.3,
+       "reviews": 90,
+       "url": "https://travel.rakuten.co.jp/"
+      },
+      {
+       "name": "(サンプル) ホテル C",
+       "price": 11900,
+       "rating": 3.7,
+       "reviews": 130,
+       "url": "https://travel.rakuten.co.jp/"
+      }
+     ]
+    },
+    {
+     "date": "2026-10-23",
+     "weekday": "週五",
+     "days_ahead": 21,
+     "level": 11900,
+     "lowest": 8400,
+     "available": 32,
+     "trend": {
+      "verdict": "falling",
+      "observations": 3,
+      "change_pct": -13.9,
+      "baseline": 13825,
+      "label": "下跌中",
+      "advice": "不急的話可以再觀望（但空房會越來越少）。"
+     },
+     "cheapest": [
+      {
+       "name": "(サンプル) ホテル A",
+       "price": 8400,
+       "rating": 3.6,
+       "reviews": 50,
+       "url": "https://travel.rakuten.co.jp/"
+      },
+      {
+       "name": "(サンプル) ホテル B",
+       "price": 9400,
+       "rating": 4.3,
+       "reviews": 90,
+       "url": "https://travel.rakuten.co.jp/"
+      },
+      {
+       "name": "(サンプル) ホテル C",
+       "price": 10400,
+       "rating": 3.7,
+       "reviews": 130,
+       "url": "https://travel.rakuten.co.jp/"
+      }
+     ]
+    },
+    {
+     "date": "2026-10-24",
+     "weekday": "週六",
+     "days_ahead": 22,
+     "level": 13600,
+     "lowest": 9600,
+     "available": 32,
+     "trend": {
+      "verdict": "falling",
+      "observations": 3,
+      "change_pct": -14.3,
+      "baseline": 15875,
+      "label": "下跌中",
+      "advice": "不急的話可以再觀望（但空房會越來越少）。"
+     },
+     "cheapest": [
+      {
+       "name": "(サンプル) ホテル A",
+       "price": 9600,
+       "rating": 3.6,
+       "reviews": 50,
+       "url": "https://travel.rakuten.co.jp/"
+      },
+      {
+       "name": "(サンプル) ホテル B",
+       "price": 10700,
+       "rating": 4.3,
+       "reviews": 90,
+       "url": "https://travel.rakuten.co.jp/"
+      },
+      {
+       "name": "(サンプル) ホテル C",
+       "price": 11900,
+       "rating": 3.7,
+       "reviews": 130,
+       "url": "https://travel.rakuten.co.jp/"
+      }
+     ]
+    },
+    {
+     "date": "2026-10-30",
+     "weekday": "週五",
+     "days_ahead": 28,
+     "level": 11900,
+     "lowest": 8400,
+     "available": 32,
+     "trend": {
+      "verdict": "falling",
+      "observations": 3,
+      "change_pct": -13.9,
+      "baseline": 13825,
+      "label": "下跌中",
+      "advice": "不急的話可以再觀望（但空房會越來越少）。"
+     },
+     "cheapest": [
+      {
+       "name": "(サンプル) ホテル A",
+       "price": 8400,
+       "rating": 3.6,
+       "reviews": 50,
+       "url": "https://travel.rakuten.co.jp/"
+      },
+      {
+       "name": "(サンプル) ホテル B",
+       "price": 9400,
+       "rating": 4.3,
+       "reviews": 90,
+       "url": "https://travel.rakuten.co.jp/"
+      },
+      {
+       "name": "(サンプル) ホテル C",
+       "price": 10400,
+       "rating": 3.7,
+       "reviews": 130,
+       "url": "https://travel.rakuten.co.jp/"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "osaka-namba",
+   "name": "大阪·難波周邊",
+   "location": {
+    "lat": 34.6661,
+    "lng": 135.5003,
+    "radius_km": 1
+   },
+   "nights": [
+    {
+     "date": "2026-10-03",
+     "weekday": "週六",
+     "days_ahead": 1,
+     "level": 21500,
+     "lowest": 15100,
+     "available": 20,
+     "trend": {
+      "verdict": "stable",
+      "observations": 3,
+      "change_pct": 0,
+      "baseline": 21500,
+      "label": "持平",
+      "advice": "沒有太大變化。"
+     },
+     "cheapest": [
+      {
+       "name": "(サンプル) ホテル A",
+       "price": 15100,
+       "rating": 3.6,
+       "reviews": 50,
+       "url": "https://travel.rakuten.co.jp/"
+      },
+      {
+       "name": "(サンプル) ホテル B",
+       "price": 17000,
+       "rating": 4.3,
+       "reviews": 90,
+       "url": "https://travel.rakuten.co.jp/"
+      },
+      {
+       "name": "(サンプル) ホテル C",
+       "price": 18800,
+       "rating": 3.7,
+       "reviews": 130,
+       "url": "https://travel.rakuten.co.jp/"
+      }
+     ]
+    },
+    {
+     "date": "2026-10-09",
+     "weekday": "週五",
+     "days_ahead": 7,
+     "level": 19400,
+     "lowest": 13600,
+     "available": 20,
+     "trend": {
+      "verdict": "stable",
+      "observations": 3,
+      "change_pct": 0,
+      "baseline": 19400,
+      "label": "持平",
+      "advice": "沒有太大變化。"
+     },
+     "cheapest": [
+      {
+       "name": "(サンプル) ホテル A",
+       "price": 13600,
+       "rating": 3.6,
+       "reviews": 50,
+       "url": "https://travel.rakuten.co.jp/"
+      },
+      {
+       "name": "(サンプル) ホテル B",
+       "price": 15300,
+       "rating": 4.3,
+       "reviews": 90,
+       "url": "https://travel.rakuten.co.jp/"
+      },
+      {
+       "name": "(サンプル) ホテル C",
+       "price": 16900,
+       "rating": 3.7,
+       "reviews": 130,
+       "url": "https://travel.rakuten.co.jp/"
+      }
+     ]
+    },
+    {
+     "date": "2026-10-10",
+     "weekday": "週六",
+     "days_ahead": 8,
+     "level": 21500,
+     "lowest": 15100,
+     "available": 20,
+     "trend": {
+      "verdict": "stable",
+      "observations": 3,
+      "change_pct": 0,
+      "baseline": 21500,
+      "label": "持平",
+      "advice": "沒有太大變化。"
+     },
+     "cheapest": [
+      {
+       "name": "(サンプル) ホテル A",
+       "price": 15100,
+       "rating": 3.6,
+       "reviews": 50,
+       "url": "https://travel.rakuten.co.jp/"
+      },
+      {
+       "name": "(サンプル) ホテル B",
+       "price": 17000,
+       "rating": 4.3,
+       "reviews": 90,
+       "url": "https://travel.rakuten.co.jp/"
+      },
+      {
+       "name": "(サンプル) ホテル C",
+       "price": 18800,
+       "rating": 3.7,
+       "reviews": 130,
+       "url": "https://travel.rakuten.co.jp/"
+      }
+     ]
+    },
+    {
+     "date": "2026-10-16",
+     "weekday": "週五",
+     "days_ahead": 14,
+     "level": 19400,
+     "lowest": 13600,
+     "available": 20,
+     "trend": {
+      "verdict": "stable",
+      "observations": 3,
+      "change_pct": 0,
+      "baseline": 19400,
+      "label": "持平",
+      "advice": "沒有太大變化。"
+     },
+     "cheapest": [
+      {
+       "name": "(サンプル) ホテル A",
+       "price": 13600,
+       "rating": 3.6,
+       "reviews": 50,
+       "url": "https://travel.rakuten.co.jp/"
+      },
+      {
+       "name": "(サンプル) ホテル B",
+       "price": 15300,
+       "rating": 4.3,
+       "reviews": 90,
+       "url": "https://travel.rakuten.co.jp/"
+      },
+      {
+       "name": "(サンプル) ホテル C",
+       "price": 16900,
+       "rating": 3.7,
+       "reviews": 130,
+       "url": "https://travel.rakuten.co.jp/"
+      }
+     ]
+    },
+    {
+     "date": "2026-10-17",
+     "weekday": "週六",
+     "days_ahead": 15,
+     "level": 21500,
+     "lowest": 15100,
+     "available": 20,
+     "trend": {
+      "verdict": "stable",
+      "observations": 3,
+      "change_pct": 0,
+      "baseline": 21500,
+      "label": "持平",
+      "advice": "沒有太大變化。"
+     },
+     "cheapest": [
+      {
+       "name": "(サンプル) ホテル A",
+       "price": 15100,
+       "rating": 3.6,
+       "reviews": 50,
+       "url": "https://travel.rakuten.co.jp/"
+      },
+      {
+       "name": "(サンプル) ホテル B",
+       "price": 17000,
+       "rating": 4.3,
+       "reviews": 90,
+       "url": "https://travel.rakuten.co.jp/"
+      },
+      {
+       "name": "(サンプル) ホテル C",
+       "price": 18800,
+       "rating": 3.7,
+       "reviews": 130,
+       "url": "https://travel.rakuten.co.jp/"
+      }
+     ]
+    },
+    {
+     "date": "2026-10-23",
+     "weekday": "週五",
+     "days_ahead": 21,
+     "level": 19400,
+     "lowest": 13600,
+     "available": 20,
+     "trend": {
+      "verdict": "stable",
+      "observations": 3,
+      "change_pct": 0,
+      "baseline": 19400,
+      "label": "持平",
+      "advice": "沒有太大變化。"
+     },
+     "cheapest": [
+      {
+       "name": "(サンプル) ホテル A",
+       "price": 13600,
+       "rating": 3.6,
+       "reviews": 50,
+       "url": "https://travel.rakuten.co.jp/"
+      },
+      {
+       "name": "(サンプル) ホテル B",
+       "price": 15300,
+       "rating": 4.3,
+       "reviews": 90,
+       "url": "https://travel.rakuten.co.jp/"
+      },
+      {
+       "name": "(サンプル) ホテル C",
+       "price": 16900,
+       "rating": 3.7,
+       "reviews": 130,
+       "url": "https://travel.rakuten.co.jp/"
+      }
+     ]
+    },
+    {
+     "date": "2026-10-24",
+     "weekday": "週六",
+     "days_ahead": 22,
+     "level": 21500,
+     "lowest": 15100,
+     "available": 20,
+     "trend": {
+      "verdict": "stable",
+      "observations": 3,
+      "change_pct": 0,
+      "baseline": 21500,
+      "label": "持平",
+      "advice": "沒有太大變化。"
+     },
+     "cheapest": [
+      {
+       "name": "(サンプル) ホテル A",
+       "price": 15100,
+       "rating": 3.6,
+       "reviews": 50,
+       "url": "https://travel.rakuten.co.jp/"
+      },
+      {
+       "name": "(サンプル) ホテル B",
+       "price": 17000,
+       "rating": 4.3,
+       "reviews": 90,
+       "url": "https://travel.rakuten.co.jp/"
+      },
+      {
+       "name": "(サンプル) ホテル C",
+       "price": 18800,
+       "rating": 3.7,
+       "reviews": 130,
+       "url": "https://travel.rakuten.co.jp/"
+      }
+     ]
+    },
+    {
+     "date": "2026-10-30",
+     "weekday": "週五",
+     "days_ahead": 28,
+     "level": 19400,
+     "lowest": 13600,
+     "available": 20,
+     "trend": {
+      "verdict": "stable",
+      "observations": 3,
+      "change_pct": 0,
+      "baseline": 19400,
+      "label": "持平",
+      "advice": "沒有太大變化。"
+     },
+     "cheapest": [
+      {
+       "name": "(サンプル) ホテル A",
+       "price": 13600,
+       "rating": 3.6,
+       "reviews": 50,
+       "url": "https://travel.rakuten.co.jp/"
+      },
+      {
+       "name": "(サンプル) ホテル B",
+       "price": 15300,
+       "rating": 4.3,
+       "reviews": 90,
+       "url": "https://travel.rakuten.co.jp/"
+      },
+      {
+       "name": "(サンプル) ホテル C",
+       "price": 16900,
+       "rating": 3.7,
+       "reviews": 130,
+       "url": "https://travel.rakuten.co.jp/"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "sapporo-station",
+   "name": "札幌車站周邊",
+   "location": {
+    "lat": 43.0687,
+    "lng": 141.3508,
+    "radius_km": 1
+   },
+   "nights": [
+    {
+     "date": "2026-10-03",
+     "weekday": "週六",
+     "days_ahead": 1,
+     "level": 31950,
+     "lowest": 22500,
+     "available": 8,
+     "trend": {
+      "verdict": "rising",
+      "observations": 3,
+      "change_pct": 13.1,
+      "baseline": 28250,
+      "label": "上漲中",
+      "advice": "要預訂的話，越早越好。"
+     },
+     "cheapest": [
+      {
+       "name": "(サンプル) ホテル A",
+       "price": 22500,
+       "rating": 3.6,
+       "reviews": 50,
+       "url": "https://travel.rakuten.co.jp/"
+      },
+      {
+       "name": "(サンプル) ホテル B",
+       "price": 25200,
+       "rating": 4.3,
+       "reviews": 90,
+       "url": "https://travel.rakuten.co.jp/"
+      },
+      {
+       "name": "(サンプル) ホテル C",
+       "price": 27900,
+       "rating": 3.7,
+       "reviews": 130,
+       "url": "https://travel.rakuten.co.jp/"
+      }
+     ]
+    },
+    {
+     "date": "2026-10-09",
+     "weekday": "週五",
+     "days_ahead": 7,
+     "level": 29400,
+     "lowest": 20700,
+     "available": 8,
+     "trend": {
+      "verdict": "rising",
+      "observations": 3,
+      "change_pct": 12.9,
+      "baseline": 26050,
+      "label": "上漲中",
+      "advice": "要預訂的話，越早越好。"
+     },
+     "cheapest": [
+      {
+       "name": "(サンプル) ホテル A",
+       "price": 20700,
+       "rating": 3.6,
+       "reviews": 50,
+       "url": "https://travel.rakuten.co.jp/"
+      },
+      {
+       "name": "(サンプル) ホテル B",
+       "price": 23200,
+       "rating": 4.3,
+       "reviews": 90,
+       "url": "https://travel.rakuten.co.jp/"
+      },
+      {
+       "name": "(サンプル) ホテル C",
+       "price": 25700,
+       "rating": 3.7,
+       "reviews": 130,
+       "url": "https://travel.rakuten.co.jp/"
+      }
+     ]
+    },
+    {
+     "date": "2026-10-10",
+     "weekday": "週六",
+     "days_ahead": 8,
+     "level": 31950,
+     "lowest": 22500,
+     "available": 8,
+     "trend": {
+      "verdict": "rising",
+      "observations": 3,
+      "change_pct": 13.1,
+      "baseline": 28250,
+      "label": "上漲中",
+      "advice": "要預訂的話，越早越好。"
+     },
+     "cheapest": [
+      {
+       "name": "(サンプル) ホテル A",
+       "price": 22500,
+       "rating": 3.6,
+       "reviews": 50,
+       "url": "https://travel.rakuten.co.jp/"
+      },
+      {
+       "name": "(サンプル) ホテル B",
+       "price": 25200,
+       "rating": 4.3,
+       "reviews": 90,
+       "url": "https://travel.rakuten.co.jp/"
+      },
+      {
+       "name": "(サンプル) ホテル C",
+       "price": 27900,
+       "rating": 3.7,
+       "reviews": 130,
+       "url": "https://travel.rakuten.co.jp/"
+      }
+     ]
+    },
+    {
+     "date": "2026-10-16",
+     "weekday": "週五",
+     "days_ahead": 14,
+     "level": 29400,
+     "lowest": 20700,
+     "available": 8,
+     "trend": {
+      "verdict": "rising",
+      "observations": 3,
+      "change_pct": 12.9,
+      "baseline": 26050,
+      "label": "上漲中",
+      "advice": "要預訂的話，越早越好。"
+     },
+     "cheapest": [
+      {
+       "name": "(サンプル) ホテル A",
+       "price": 20700,
+       "rating": 3.6,
+       "reviews": 50,
+       "url": "https://travel.rakuten.co.jp/"
+      },
+      {
+       "name": "(サンプル) ホテル B",
+       "price": 23200,
+       "rating": 4.3,
+       "reviews": 90,
+       "url": "https://travel.rakuten.co.jp/"
+      },
+      {
+       "name": "(サンプル) ホテル C",
+       "price": 25700,
+       "rating": 3.7,
+       "reviews": 130,
+       "url": "https://travel.rakuten.co.jp/"
+      }
+     ]
+    },
+    {
+     "date": "2026-10-17",
+     "weekday": "週六",
+     "days_ahead": 15,
+     "level": 31950,
+     "lowest": 22500,
+     "available": 8,
+     "trend": {
+      "verdict": "rising",
+      "observations": 3,
+      "change_pct": 13.1,
+      "baseline": 28250,
+      "label": "上漲中",
+      "advice": "要預訂的話，越早越好。"
+     },
+     "cheapest": [
+      {
+       "name": "(サンプル) ホテル A",
+       "price": 22500,
+       "rating": 3.6,
+       "reviews": 50,
+       "url": "https://travel.rakuten.co.jp/"
+      },
+      {
+       "name": "(サンプル) ホテル B",
+       "price": 25200,
+       "rating": 4.3,
+       "reviews": 90,
+       "url": "https://travel.rakuten.co.jp/"
+      },
+      {
+       "name": "(サンプル) ホテル C",
+       "price": 27900,
+       "rating": 3.7,
+       "reviews": 130,
+       "url": "https://travel.rakuten.co.jp/"
+      }
+     ]
+    },
+    {
+     "date": "2026-10-23",
+     "weekday": "週五",
+     "days_ahead": 21,
+     "level": 29400,
+     "lowest": 20700,
+     "available": 8,
+     "trend": {
+      "verdict": "rising",
+      "observations": 3,
+      "change_pct": 12.9,
+      "baseline": 26050,
+      "label": "上漲中",
+      "advice": "要預訂的話，越早越好。"
+     },
+     "cheapest": [
+      {
+       "name": "(サンプル) ホテル A",
+       "price": 20700,
+       "rating": 3.6,
+       "reviews": 50,
+       "url": "https://travel.rakuten.co.jp/"
+      },
+      {
+       "name": "(サンプル) ホテル B",
+       "price": 23200,
+       "rating": 4.3,
+       "reviews": 90,
+       "url": "https://travel.rakuten.co.jp/"
+      },
+      {
+       "name": "(サンプル) ホテル C",
+       "price": 25700,
+       "rating": 3.7,
+       "reviews": 130,
+       "url": "https://travel.rakuten.co.jp/"
+      }
+     ]
+    },
+    {
+     "date": "2026-10-24",
+     "weekday": "週六",
+     "days_ahead": 22,
+     "level": 31950,
+     "lowest": 22500,
+     "available": 8,
+     "trend": {
+      "verdict": "rising",
+      "observations": 3,
+      "change_pct": 13.1,
+      "baseline": 28250,
+      "label": "上漲中",
+      "advice": "要預訂的話，越早越好。"
+     },
+     "cheapest": [
+      {
+       "name": "(サンプル) ホテル A",
+       "price": 22500,
+       "rating": 3.6,
+       "reviews": 50,
+       "url": "https://travel.rakuten.co.jp/"
+      },
+      {
+       "name": "(サンプル) ホテル B",
+       "price": 25200,
+       "rating": 4.3,
+       "reviews": 90,
+       "url": "https://travel.rakuten.co.jp/"
+      },
+      {
+       "name": "(サンプル) ホテル C",
+       "price": 27900,
+       "rating": 3.7,
+       "reviews": 130,
+       "url": "https://travel.rakuten.co.jp/"
+      }
+     ]
+    },
+    {
+     "date": "2026-10-30",
+     "weekday": "週五",
+     "days_ahead": 28,
+     "level": 29400,
+     "lowest": 20700,
+     "available": 8,
+     "trend": {
+      "verdict": "rising",
+      "observations": 3,
+      "change_pct": 12.9,
+      "baseline": 26050,
+      "label": "上漲中",
+      "advice": "要預訂的話，越早越好。"
+     },
+     "cheapest": [
+      {
+       "name": "(サンプル) ホテル A",
+       "price": 20700,
+       "rating": 3.6,
+       "reviews": 50,
+       "url": "https://travel.rakuten.co.jp/"
+      },
+      {
+       "name": "(サンプル) ホテル B",
+       "price": 23200,
+       "rating": 4.3,
+       "reviews": 90,
+       "url": "https://travel.rakuten.co.jp/"
+      },
+      {
+       "name": "(サンプル) ホテル C",
+       "price": 25700,
+       "rating": 3.7,
+       "reviews": 130,
+       "url": "https://travel.rakuten.co.jp/"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "fukuoka-hakata",
+   "name": "福岡·博多車站周邊",
+   "location": {
+    "lat": 33.5902,
+    "lng": 130.4207,
+    "radius_km": 1
+   },
+   "nights": [
+    {
+     "date": "2026-10-03",
+     "weekday": "週六",
+     "days_ahead": 1,
+     "level": 21300,
+     "lowest": 15000,
+     "available": 32,
+     "trend": {
+      "verdict": "falling",
+      "observations": 3,
+      "change_pct": -14.1,
+      "baseline": 24800,
+      "label": "下跌中",
+      "advice": "不急的話可以再觀望（但空房會越來越少）。"
+     },
+     "cheapest": [
+      {
+       "name": "(サンプル) ホテル A",
+       "price": 15000,
+       "rating": 3.6,
+       "reviews": 50,
+       "url": "https://travel.rakuten.co.jp/"
+      },
+      {
+       "name": "(サンプル) ホテル B",
+       "price": 16800,
+       "rating": 4.3,
+       "reviews": 90,
+       "url": "https://travel.rakuten.co.jp/"
+      },
+      {
+       "name": "(サンプル) ホテル C",
+       "price": 18600,
+       "rating": 3.7,
+       "reviews": 130,
+       "url": "https://travel.rakuten.co.jp/"
+      }
+     ]
+    },
+    {
+     "date": "2026-10-09",
+     "weekday": "週五",
+     "days_ahead": 7,
+     "level": 19550,
+     "lowest": 13800,
+     "available": 32,
+     "trend": {
+      "verdict": "falling",
+      "observations": 3,
+      "change_pct": -14.2,
+      "baseline": 22775,
+      "label": "下跌中",
+      "advice": "不急的話可以再觀望（但空房會越來越少）。"
+     },
+     "cheapest": [
+      {
+       "name": "(サンプル) ホテル A",
+       "price": 13800,
+       "rating": 3.6,
+       "reviews": 50,
+       "url": "https://travel.rakuten.co.jp/"
+      },
+      {
+       "name": "(サンプル) ホテル B",
+       "price": 15400,
+       "rating": 4.3,
+       "reviews": 90,
+       "url": "https://travel.rakuten.co.jp/"
+      },
+      {
+       "name": "(サンプル) ホテル C",
+       "price": 17100,
+       "rating": 3.7,
+       "reviews": 130,
+       "url": "https://travel.rakuten.co.jp/"
+      }
+     ]
+    },
+    {
+     "date": "2026-10-10",
+     "weekday": "週六",
+     "days_ahead": 8,
+     "level": 21300,
+     "lowest": 15000,
+     "available": 32,
+     "trend": {
+      "verdict": "falling",
+      "observations": 3,
+      "change_pct": -14.1,
+      "baseline": 24800,
+      "label": "下跌中",
+      "advice": "不急的話可以再觀望（但空房會越來越少）。"
+     },
+     "cheapest": [
+      {
+       "name": "(サンプル) ホテル A",
+       "price": 15000,
+       "rating": 3.6,
+       "reviews": 50,
+       "url": "https://travel.rakuten.co.jp/"
+      },
+      {
+       "name": "(サンプル) ホテル B",
+       "price": 16800,
+       "rating": 4.3,
+       "reviews": 90,
+       "url": "https://travel.rakuten.co.jp/"
+      },
+      {
+       "name": "(サンプル) ホテル C",
+       "price": 18600,
+       "rating": 3.7,
+       "reviews": 130,
+       "url": "https://travel.rakuten.co.jp/"
+      }
+     ]
+    },
+    {
+     "date": "2026-10-16",
+     "weekday": "週五",
+     "days_ahead": 14,
+     "level": 19550,
+     "lowest": 13800,
+     "available": 32,
+     "trend": {
+      "verdict": "falling",
+      "observations": 3,
+      "change_pct": -14.2,
+      "baseline": 22775,
+      "label": "下跌中",
+      "advice": "不急的話可以再觀望（但空房會越來越少）。"
+     },
+     "cheapest": [
+      {
+       "name": "(サンプル) ホテル A",
+       "price": 13800,
+       "rating": 3.6,
+       "reviews": 50,
+       "url": "https://travel.rakuten.co.jp/"
+      },
+      {
+       "name": "(サンプル) ホテル B",
+       "price": 15400,
+       "rating": 4.3,
+       "reviews": 90,
+       "url": "https://travel.rakuten.co.jp/"
+      },
+      {
+       "name": "(サンプル) ホテル C",
+       "price": 17100,
+       "rating": 3.7,
+       "reviews": 130,
+       "url": "https://travel.rakuten.co.jp/"
+      }
+     ]
+    },
+    {
+     "date": "2026-10-17",
+     "weekday": "週六",
+     "days_ahead": 15,
+     "level": 21300,
+     "lowest": 15000,
+     "available": 32,
+     "trend": {
+      "verdict": "falling",
+      "observations": 3,
+      "change_pct": -14.1,
+      "baseline": 24800,
+      "label": "下跌中",
+      "advice": "不急的話可以再觀望（但空房會越來越少）。"
+     },
+     "cheapest": [
+      {
+       "name": "(サンプル) ホテル A",
+       "price": 15000,
+       "rating": 3.6,
+       "reviews": 50,
+       "url": "https://travel.rakuten.co.jp/"
+      },
+      {
+       "name": "(サンプル) ホテル B",
+       "price": 16800,
+       "rating": 4.3,
+       "reviews": 90,
+       "url": "https://travel.rakuten.co.jp/"
+      },
+      {
+       "name": "(サンプル) ホテル C",
+       "price": 18600,
+       "rating": 3.7,
+       "reviews": 130,
+       "url": "https://travel.rakuten.co.jp/"
+      }
+     ]
+    },
+    {
+     "date": "2026-10-23",
+     "weekday": "週五",
+     "days_ahead": 21,
+     "level": 19550,
+     "lowest": 13800,
+     "available": 32,
+     "trend": {
+      "verdict": "falling",
+      "observations": 3,
+      "change_pct": -14.2,
+      "baseline": 22775,
+      "label": "下跌中",
+      "advice": "不急的話可以再觀望（但空房會越來越少）。"
+     },
+     "cheapest": [
+      {
+       "name": "(サンプル) ホテル A",
+       "price": 13800,
+       "rating": 3.6,
+       "reviews": 50,
+       "url": "https://travel.rakuten.co.jp/"
+      },
+      {
+       "name": "(サンプル) ホテル B",
+       "price": 15400,
+       "rating": 4.3,
+       "reviews": 90,
+       "url": "https://travel.rakuten.co.jp/"
+      },
+      {
+       "name": "(サンプル) ホテル C",
+       "price": 17100,
+       "rating": 3.7,
+       "reviews": 130,
+       "url": "https://travel.rakuten.co.jp/"
+      }
+     ]
+    },
+    {
+     "date": "2026-10-24",
+     "weekday": "週六",
+     "days_ahead": 22,
+     "level": 21300,
+     "lowest": 15000,
+     "available": 32,
+     "trend": {
+      "verdict": "falling",
+      "observations": 3,
+      "change_pct": -14.1,
+      "baseline": 24800,
+      "label": "下跌中",
+      "advice": "不急的話可以再觀望（但空房會越來越少）。"
+     },
+     "cheapest": [
+      {
+       "name": "(サンプル) ホテル A",
+       "price": 15000,
+       "rating": 3.6,
+       "reviews": 50,
+       "url": "https://travel.rakuten.co.jp/"
+      },
+      {
+       "name": "(サンプル) ホテル B",
+       "price": 16800,
+       "rating": 4.3,
+       "reviews": 90,
+       "url": "https://travel.rakuten.co.jp/"
+      },
+      {
+       "name": "(サンプル) ホテル C",
+       "price": 18600,
+       "rating": 3.7,
+       "reviews": 130,
+       "url": "https://travel.rakuten.co.jp/"
+      }
+     ]
+    },
+    {
+     "date": "2026-10-30",
+     "weekday": "週五",
+     "days_ahead": 28,
+     "level": 19550,
+     "lowest": 13800,
+     "available": 32,
+     "trend": {
+      "verdict": "falling",
+      "observations": 3,
+      "change_pct": -14.2,
+      "baseline": 22775,
+      "label": "下跌中",
+      "advice": "不急的話可以再觀望（但空房會越來越少）。"
+     },
+     "cheapest": [
+      {
+       "name": "(サンプル) ホテル A",
+       "price": 13800,
+       "rating": 3.6,
+       "reviews": 50,
+       "url": "https://travel.rakuten.co.jp/"
+      },
+      {
+       "name": "(サンプル) ホテル B",
+       "price": 15400,
+       "rating": 4.3,
+       "reviews": 90,
+       "url": "https://travel.rakuten.co.jp/"
+      },
+      {
+       "name": "(サンプル) ホテル C",
+       "price": 17100,
+       "rating": 3.7,
+       "reviews": 130,
+       "url": "https://travel.rakuten.co.jp/"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "naha",
+   "name": "那霸·國際通周邊",
+   "location": {
+    "lat": 26.2124,
+    "lng": 127.6792,
+    "radius_km": 1
+   },
+   "nights": [
+    {
+     "date": "2026-10-03",
+     "weekday": "週六",
+     "days_ahead": 1,
+     "level": 26400,
+     "lowest": 18600,
+     "available": 20,
+     "trend": {
+      "verdict": "stable",
+      "observations": 3,
+      "change_pct": 0,
+      "baseline": 26400,
+      "label": "持平",
+      "advice": "沒有太大變化。"
+     },
+     "cheapest": [
+      {
+       "name": "(サンプル) ホテル A",
+       "price": 18600,
+       "rating": 3.6,
+       "reviews": 50,
+       "url": "https://travel.rakuten.co.jp/"
+      },
+      {
+       "name": "(サンプル) ホテル B",
+       "price": 20800,
+       "rating": 4.3,
+       "reviews": 90,
+       "url": "https://travel.rakuten.co.jp/"
+      },
+      {
+       "name": "(サンプル) ホテル C",
+       "price": 23100,
+       "rating": 3.7,
+       "reviews": 130,
+       "url": "https://travel.rakuten.co.jp/"
+      }
+     ]
+    },
+    {
+     "date": "2026-10-09",
+     "weekday": "週五",
+     "days_ahead": 7,
+     "level": 24300,
+     "lowest": 17100,
+     "available": 20,
+     "trend": {
+      "verdict": "stable",
+      "observations": 3,
+      "change_pct": 0,
+      "baseline": 24300,
+      "label": "持平",
+      "advice": "沒有太大變化。"
+     },
+     "cheapest": [
+      {
+       "name": "(サンプル) ホテル A",
+       "price": 17100,
+       "rating": 3.6,
+       "reviews": 50,
+       "url": "https://travel.rakuten.co.jp/"
+      },
+      {
+       "name": "(サンプル) ホテル B",
+       "price": 19200,
+       "rating": 4.3,
+       "reviews": 90,
+       "url": "https://travel.rakuten.co.jp/"
+      },
+      {
+       "name": "(サンプル) ホテル C",
+       "price": 21200,
+       "rating": 3.7,
+       "reviews": 130,
+       "url": "https://travel.rakuten.co.jp/"
+      }
+     ]
+    },
+    {
+     "date": "2026-10-10",
+     "weekday": "週六",
+     "days_ahead": 8,
+     "level": 26400,
+     "lowest": 18600,
+     "available": 20,
+     "trend": {
+      "verdict": "stable",
+      "observations": 3,
+      "change_pct": 0,
+      "baseline": 26400,
+      "label": "持平",
+      "advice": "沒有太大變化。"
+     },
+     "cheapest": [
+      {
+       "name": "(サンプル) ホテル A",
+       "price": 18600,
+       "rating": 3.6,
+       "reviews": 50,
+       "url": "https://travel.rakuten.co.jp/"
+      },
+      {
+       "name": "(サンプル) ホテル B",
+       "price": 20800,
+       "rating": 4.3,
+       "reviews": 90,
+       "url": "https://travel.rakuten.co.jp/"
+      },
+      {
+       "name": "(サンプル) ホテル C",
+       "price": 23100,
+       "rating": 3.7,
+       "reviews": 130,
+       "url": "https://travel.rakuten.co.jp/"
+      }
+     ]
+    },
+    {
+     "date": "2026-10-16",
+     "weekday": "週五",
+     "days_ahead": 14,
+     "level": 24300,
+     "lowest": 17100,
+     "available": 20,
+     "trend": {
+      "verdict": "stable",
+      "observations": 3,
+      "change_pct": 0,
+      "baseline": 24300,
+      "label": "持平",
+      "advice": "沒有太大變化。"
+     },
+     "cheapest": [
+      {
+       "name": "(サンプル) ホテル A",
+       "price": 17100,
+       "rating": 3.6,
+       "reviews": 50,
+       "url": "https://travel.rakuten.co.jp/"
+      },
+      {
+       "name": "(サンプル) ホテル B",
+       "price": 19200,
+       "rating": 4.3,
+       "reviews": 90,
+       "url": "https://travel.rakuten.co.jp/"
+      },
+      {
+       "name": "(サンプル) ホテル C",
+       "price": 21200,
+       "rating": 3.7,
+       "reviews": 130,
+       "url": "https://travel.rakuten.co.jp/"
+      }
+     ]
+    },
+    {
+     "date": "2026-10-17",
+     "weekday": "週六",
+     "days_ahead": 15,
+     "level": 26400,
+     "lowest": 18600,
+     "available": 20,
+     "trend": {
+      "verdict": "stable",
+      "observations": 3,
+      "change_pct": 0,
+      "baseline": 26400,
+      "label": "持平",
+      "advice": "沒有太大變化。"
+     },
+     "cheapest": [
+      {
+       "name": "(サンプル) ホテル A",
+       "price": 18600,
+       "rating": 3.6,
+       "reviews": 50,
+       "url": "https://travel.rakuten.co.jp/"
+      },
+      {
+       "name": "(サンプル) ホテル B",
+       "price": 20800,
+       "rating": 4.3,
+       "reviews": 90,
+       "url": "https://travel.rakuten.co.jp/"
+      },
+      {
+       "name": "(サンプル) ホテル C",
+       "price": 23100,
+       "rating": 3.7,
+       "reviews": 130,
+       "url": "https://travel.rakuten.co.jp/"
+      }
+     ]
+    },
+    {
+     "date": "2026-10-23",
+     "weekday": "週五",
+     "days_ahead": 21,
+     "level": 24300,
+     "lowest": 17100,
+     "available": 20,
+     "trend": {
+      "verdict": "stable",
+      "observations": 3,
+      "change_pct": 0,
+      "baseline": 24300,
+      "label": "持平",
+      "advice": "沒有太大變化。"
+     },
+     "cheapest": [
+      {
+       "name": "(サンプル) ホテル A",
+       "price": 17100,
+       "rating": 3.6,
+       "reviews": 50,
+       "url": "https://travel.rakuten.co.jp/"
+      },
+      {
+       "name": "(サンプル) ホテル B",
+       "price": 19200,
+       "rating": 4.3,
+       "reviews": 90,
+       "url": "https://travel.rakuten.co.jp/"
+      },
+      {
+       "name": "(サンプル) ホテル C",
+       "price": 21200,
+       "rating": 3.7,
+       "reviews": 130,
+       "url": "https://travel.rakuten.co.jp/"
+      }
+     ]
+    },
+    {
+     "date": "2026-10-24",
+     "weekday": "週六",
+     "days_ahead": 22,
+     "level": 26400,
+     "lowest": 18600,
+     "available": 20,
+     "trend": {
+      "verdict": "stable",
+      "observations": 3,
+      "change_pct": 0,
+      "baseline": 26400,
+      "label": "持平",
+      "advice": "沒有太大變化。"
+     },
+     "cheapest": [
+      {
+       "name": "(サンプル) ホテル A",
+       "price": 18600,
+       "rating": 3.6,
+       "reviews": 50,
+       "url": "https://travel.rakuten.co.jp/"
+      },
+      {
+       "name": "(サンプル) ホテル B",
+       "price": 20800,
+       "rating": 4.3,
+       "reviews": 90,
+       "url": "https://travel.rakuten.co.jp/"
+      },
+      {
+       "name": "(サンプル) ホテル C",
+       "price": 23100,
+       "rating": 3.7,
+       "reviews": 130,
+       "url": "https://travel.rakuten.co.jp/"
+      }
+     ]
+    },
+    {
+     "date": "2026-10-30",
+     "weekday": "週五",
+     "days_ahead": 28,
+     "level": 24300,
+     "lowest": 17100,
+     "available": 20,
+     "trend": {
+      "verdict": "stable",
+      "observations": 3,
+      "change_pct": 0,
+      "baseline": 24300,
+      "label": "持平",
+      "advice": "沒有太大變化。"
+     },
+     "cheapest": [
+      {
+       "name": "(サンプル) ホテル A",
+       "price": 17100,
+       "rating": 3.6,
+       "reviews": 50,
+       "url": "https://travel.rakuten.co.jp/"
+      },
+      {
+       "name": "(サンプル) ホテル B",
+       "price": 19200,
+       "rating": 4.3,
+       "reviews": 90,
+       "url": "https://travel.rakuten.co.jp/"
+      },
+      {
+       "name": "(サンプル) ホテル C",
+       "price": 21200,
+       "rating": 3.7,
+       "reviews": 130,
+       "url": "https://travel.rakuten.co.jp/"
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "links": {
+  "html": "https://bufeks.github.io/LAB/shelf/zh-hant/hotels/",
+  "markdown": "https://bufeks.github.io/LAB/shelf/zh-hant/hotels.md",
+  "json": "https://bufeks.github.io/LAB/shelf/api/v1/zh-hant/hotels.json"
+ }
+}

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+  <id>https://bufeks.github.io/LAB/shelf/en/c/rice-cooker/feed.xml</id>
+  <title>SHELF — Rice cookers: Cheaper than usual</title>
+  <link rel="self" href="https://bufeks.github.io/LAB/shelf/en/c/rice-cooker/feed.xml"/>
+  <link rel="alternate" href="https://bufeks.github.io/LAB/shelf/en/c/rice-cooker/"/>
+  <updated>2026-10-02T14:41:13+09:00</updated>
+  <author><name>SHELF</name></author>
+  <entry>
+    <id>https://bufeks.github.io/LAB/shelf/en/c/rice-cooker/feed.xml#sample%3Arice-cooker-4@13470</id>
+    <title>(サンプル) 炊飯器 D 1升 圧力IH</title>
+    <link rel="alternate" href="https://bufeks.github.io/LAB/shelf/en/c/rice-cooker/"/>
+    <updated>2026-10-02T14:41:13+09:00</updated>
+    <summary>¥13,470 (usually ¥15,380, 12.4% lower)</summary>
+  </entry>
+  <entry>
+    <id>https://bufeks.github.io/LAB/shelf/en/c/rice-cooker/feed.xml#sample-y%3Arice-cooker-1@19800</id>
+    <title>(サンプル) 炊飯器 A 半額 5.5合 圧力IH 予約</title>
+    <link rel="alternate" href="https://bufeks.github.io/LAB/shelf/en/c/rice-cooker/"/>
+    <updated>2026-10-02T14:41:13+09:00</updated>
+    <summary>¥19,800 (usually ¥22,690, 12.7% lower)</summary>
+  </entry>
+</feed>

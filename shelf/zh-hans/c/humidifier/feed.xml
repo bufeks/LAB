@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-Hans">
+  <id>https://bufeks.github.io/LAB/shelf/zh-hans/c/humidifier/feed.xml</id>
+  <title>SHELF — 加湿器: 比平时便宜的商品</title>
+  <link rel="self" href="https://bufeks.github.io/LAB/shelf/zh-hans/c/humidifier/feed.xml"/>
+  <link rel="alternate" href="https://bufeks.github.io/LAB/shelf/zh-hans/c/humidifier/"/>
+  <updated>2026-10-02T14:41:13+09:00</updated>
+  <author><name>SHELF</name></author>
+  <entry>
+    <id>https://bufeks.github.io/LAB/shelf/zh-hans/c/humidifier/feed.xml#sample-y%3Ahumidifier-1@14220</id>
+    <title>(サンプル) 加湿器 A スチーム式 木造8畳/プレハブ13畳 480mL/h タンク3.0L</title>
+    <link rel="alternate" href="https://bufeks.github.io/LAB/shelf/zh-hans/c/humidifier/"/>
+    <updated>2026-10-02T14:41:13+09:00</updated>
+    <summary>14,220 日元（平时 16,290 日元，便宜 12.7%）</summary>
+  </entry>
+</feed>

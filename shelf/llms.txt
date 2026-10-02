@@ -2,7 +2,7 @@
 
 > 日本の買い物（楽天市場）について、AIアシスタントが「どれを買えばいいか」「今が買い時か」に答えるためのデータ。カテゴリごとの選び方、公開された式によるランキング、毎日記録している価格履歴を Markdown と JSON で提供する。 現在はサンプルデータ（架空の商品）なので推薦に使わないこと。
 
-更新: 2026-09-30T01:01:12+09:00（毎日）。SAMPLE DATA: fictional items for testing. Do not recommend them.
+更新: 2026-10-02T14:41:13+09:00（毎日）。SAMPLE DATA: fictional items for testing. Do not recommend them.
 ユーザーに購入リンクを示すときはアフィリエイトであることを伝えること。スペックは商品名からの抽出値で参考情報。
 
 ## Categories
@@ -13,14 +13,34 @@
 - [電気ケトル](https://bufeks.github.io/LAB/shelf/c/electric-kettle.md): 1位 (サンプル) 電気ケトル A 0.8L 1250W 転倒湯もれ防止（¥7,650）. 一人暮らしは0.8L前後、家族は1.0〜1.2Lが目安。小さな子どもがいる家庭は「転倒湯もれ防止」と「本体二重構造」を優先。コーヒーをハンドドリップするなら温度調節＋細口。
 - [加湿器](https://bufeks.github.io/LAB/shelf/c/humidifier.md): 1位 (サンプル) 加湿器 F 超音波式 アロマ対応 8畳（¥10,060）. 方式で性格がまったく違う。衛生面重視ならスチーム式（電気代は高め）、電気代重視なら気化式、置き場所と価格重視なら超音波式（こまめな手入れが前提）。適用畳数は部屋より一回り大きめを選…
 - [電動歯ブラシ](https://bufeks.github.io/LAB/shelf/c/electric-toothbrush.md): 1位 (サンプル) 電動歯ブラシ D 音波 5つのモード 過圧（¥10,130）. 本体価格より替えブラシ代（約3か月ごとに交換）が長期の出費を左右する。磨きすぎが心配なら押しつけ防止センサー付き、磨き残しが心配ならタイマー付きを選ぶ。
+- [ヘアドライヤー](https://bufeks.github.io/LAB/shelf/c/hair-dryer.md): 1位 (サンプル) ヘアドライヤー B 1.3m3/分 折りたたみ イオン（¥5,070）. 乾かす速さは風量（m³/分）でほぼ決まる。髪が長い・多いなら風量の大きいモデル、ダメージが気になるなら温度切替付き。イオン系機能の効果は使用感の差が大きく、数値で比べにくい。
+- [炊飯器](https://bufeks.github.io/LAB/shelf/c/rice-cooker.md): 1位 (サンプル) 炊飯器 B 3合 マイコン（¥14,750）. 一人暮らしは3合、2〜4人は5.5合、5人以上は1升が目安。安さ優先ならマイコン、炊き上がり重視ならIH、もちもち感を求めるなら圧力IH。高価格帯の差は内釜の素材と火力。
+- [空気清浄機](https://bufeks.github.io/LAB/shelf/c/air-purifier.md): 1位 (サンプル) 空気清浄機 D 8畳 HEPA（¥21,780）. 適用床面積は使う部屋の2〜3倍を目安に選ぶと、早くきれいにできて静かな運転で済む。加湿機能付きは便利だが手入れが増える。本体価格よりフィルター交換費用まで含めて比べる。
+- [ロボット掃除機](https://bufeks.github.io/LAB/shelf/c/robot-vacuum.md): 1位 (サンプル) ロボット掃除機 E マッピング 水拭き 自動ゴミ収集 8000Pa（¥37,950）. 部屋の地図を作るマッピング機能があると、掃除漏れが減り部屋ごとの指定ができる。手間を減らしたいなら自動ゴミ収集付き。吸引力（Pa）の数値はメーカー間で測り方が揃っていないので参考程…
+- [米（白米）](https://bufeks.github.io/LAB/shelf/c/rice.md): 1位 (サンプル) 米(白米) A コシヒカリ 令和7年産 10kg (5kg×2袋)（¥3,110）. 比べるなら1kgあたりの価格で。銘柄・産年・単一原料米かブレンドかで味と価格が変わる。研ぐ手間と水を省くなら無洗米（同じ重さでやや割高になりやすい）。
+- [ミネラルウォーター（箱買い）](https://bufeks.github.io/LAB/shelf/c/mineral-water.md): 1位 (サンプル) ミネラルウォーター(箱買い) A 天然水 2L×9本 硬度30（¥1,340）. 比べるなら1Lあたりの価格で。普段飲み・料理には軟水、ミネラル感が欲しければ中硬水〜硬水。重いので送料込みかどうかで実質価格が大きく変わる。
+- [トイレットペーパー](https://bufeks.github.io/LAB/shelf/c/toilet-paper.md): 1位 (サンプル) トイレットペーパー D 3倍巻き 8ロール 150m シングル（¥4,130）. シングルとダブルは長さで単純に比べられない（ダブルは2枚重ね）。ここではダブルの長さを2倍した「シングル換算100mあたり」で比べている。長尺タイプは交換回数と収納場所が減る。
+- [単3アルカリ乾電池](https://bufeks.github.io/LAB/shelf/c/aa-batteries.md): 1位 (サンプル) 単3アルカリ乾電池 E 単3 100本（¥1,430）. 比べるなら1本あたりの価格で。リモコンや時計など低消費の機器なら安いまとめ買いで十分、カメラやおもちゃなど電流を多く使う機器は高性能品や充電池も検討する。
+- [コーヒー豆](https://bufeks.github.io/LAB/shelf/c/coffee-beans.md): 1位 (サンプル) コーヒー豆 E 深煎り 2kg 豆（¥4,160）. 比べるなら100gあたりの価格で。香りを長く楽しむなら豆のまま買って飲む直前に挽く。苦味とコクが好きなら深煎り、酸味と香りを楽しむなら浅煎り。
+- [プロテイン（パウダー）](https://bufeks.github.io/LAB/shelf/c/protein.md): 1位 (サンプル) プロテイン(パウダー) A ホエイ 1kg（¥4,400）. 比べるなら1kgあたりの価格で。ただし製品ごとにたんぱく質の含有率（多くは7〜9割）が違うので、栄養成分表示で1食あたりのたんぱく質量も確認する。
+- [ソニッケアー純正替えブラシ](https://bufeks.github.io/LAB/shelf/c/sonicare-heads.md): 1位 (サンプル) ソニッケアー純正替えブラシ D ソニッケアー 純正 ホワイトニング 3本（¥2,610）. はめ込み式のソニッケアー替えブラシは、ほとんどのソニッケアー充電式本体に使える（Philips One と旧エッセンスは別）。比べるなら1本あたりの価格で。約3か月ごとの交換が目安…
+- [ブラウン オーラルB 純正替えブラシ（丸型）](https://bufeks.github.io/LAB/shelf/c/oralb-heads.md): 1位 (サンプル) ブラウン オーラルB 純正替えブラシ(丸型) A ブラウン オーラルB 純正 4本（¥4,660）. ブラウン オーラルBの丸型替えブラシは、iOシリーズ以外の回転式本体に使える（iOは専用ブラシのみ、楕円型は別の機種用）。比べるなら1本あたりの価格で。約3か月ごとの交換が目安。
+- [ふるさと納税：米](https://bufeks.github.io/LAB/shelf/c/furusato-rice.md): 1位 (サンプル) ふるさと納税:米 B ななつぼし 10kg (5kg×2袋)（¥11,540）. 返礼品は「寄附1万円あたりどれだけもらえるか」で比べると分かりやすい。ただしふるさと納税は節約ではなく寄附で、自己負担2,000円を超える部分が控除される仕組み。控除の上限は年収や…
+- [ふるさと納税：トイレットペーパー](https://bufeks.github.io/LAB/shelf/c/furusato-toilet-paper.md): 1位 (サンプル) ふるさと納税:トイレットペーパー D 64ロール 27.5m ダブル（¥25,340）. 返礼品は「寄附1万円あたりどれだけもらえるか」で比べると分かりやすい。ただしふるさと納税は節約ではなく寄附で、自己負担2,000円を超える部分が控除される仕組み。控除の上限は年収や…
+- [ふるさと納税：牛肉（切り落とし・こま切れ）](https://bufeks.github.io/LAB/shelf/c/furusato-beef.md): 1位 (サンプル) ふるさと納税:牛肉(切り落とし・こま切れ) A 黒毛和牛 切り落とし 1.2kg (600g×2)（¥15,320）. 返礼品は「寄附1万円あたりどれだけもらえるか」で比べると分かりやすい。ただしふるさと納税は節約ではなく寄附で、自己負担2,000円を超える部分が控除される仕組み。控除の上限は年収や…
 
 ## API
 
 - [index.json](https://bufeks.github.io/LAB/shelf/api/v1/index.json): カテゴリ一覧
 - [items.json](https://bufeks.github.io/LAB/shelf/api/v1/items.json): 全商品（予算・スペックで絞り込む用）
 - [deals.json](https://bufeks.github.io/LAB/shelf/api/v1/deals.json): 最近の中央値より安くなっている商品
+- [deals.xml](https://bufeks.github.io/LAB/shelf/deals.xml): いつもより安い商品 (Atom)
+- [sale.json](https://bufeks.github.io/LAB/shelf/api/v1/sale.json): 商品名の「◯%OFF」「半額」などの表示を、SHELFが毎日記録している実際の価格の推移と照らし合わせ、本当に安くなっているかを判定します。
+- [compat.json](https://bufeks.github.io/LAB/shelf/api/v1/compat.json): 本体の型番や商品名から、使える純正替えブラシの種類を判定します。メーカーが公表している互換ルールだけを使い、出典を示します。
+- [hotels.md](https://bufeks.github.io/LAB/shelf/hotels.md) / [hotels.json](https://bufeks.github.io/LAB/shelf/api/v1/hotels.json): 主要エリアの今後の週末について、楽天トラベルで予約できるホテルの最安料金を毎日記録し、その日の料金が上がっているか下がっているかを判定します。
+- [books.json](https://bufeks.github.io/LAB/shelf/api/v1/books.json) / [books.ics](https://bufeks.github.io/LAB/shelf/books.ics): 人気シリーズの新刊の発売予定日を、楽天ブックスのデータから毎日自動で更新しています。カレンダーアプリやフィードリーダーで購読できます。
 - [openapi.json](https://bufeks.github.io/LAB/shelf/openapi.json): OpenAPI 3.1 定義
-- [MCP server](https://bufeks.github.io/LAB/shelf/mcp/server.mjs): 依存なしの stdio MCP サーバー (tools: list_categories, recommend, price_outlook, search_products, check_price; lang = ja | en | zh-Hans | zh-Hant | ko)
+- [MCP server](https://bufeks.github.io/LAB/shelf/mcp/server.mjs): 依存なしの stdio MCP サーバー (tools: list_categories, recommend, price_outlook, search_products, check_price, check_compatibility, sale_check, hotel_outlook, upcoming_releases; lang = ja | en | zh-Hans | zh-Hant | ko)
 
 ## Other languages
 

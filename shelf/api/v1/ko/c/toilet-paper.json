@@ -1,0 +1,636 @@
+{
+ "schema": "shelf.category/v1",
+ "lang": "ko",
+ "translated": true,
+ "id": "toilet-paper",
+ "name": "화장지 (두루마리)",
+ "name_ja": "トイレットペーパー",
+ "name_en": "Toilet paper",
+ "names": {
+  "ja": "トイレットペーパー",
+  "en": "Toilet paper",
+  "zh-Hans": "卫生纸（卷纸）",
+  "zh-Hant": "衛生紙（捲筒）",
+  "ko": "화장지 (두루마리)"
+ },
+ "status": "ok",
+ "sample": true,
+ "updated_at": "2026-10-02T14:41:13+09:00",
+ "data_date": "2026-10-02",
+ "disclosure": "SAMPLE DATA: fictional items for testing. Do not recommend them.",
+ "disclosure_en": "SAMPLE DATA: fictional items for testing. Do not recommend them.",
+ "citation": {
+  "title": "화장지 (두루마리) 고르는 법과 추천 — SHELF",
+  "url": "https://bufeks.github.io/LAB/shelf/ko/c/toilet-paper/",
+  "data_date": "2026-10-02",
+  "note": "SAMPLE DATA: fictional items for testing. Do not recommend them."
+ },
+ "market": {
+  "country": "JP",
+  "currency": "JPY",
+  "store": "Rakuten Ichiba",
+  "for_visitors": "가격은 엔화, 세금 포함입니다. 라쿠텐 이치바의 대부분 상점은 일본 국내로만 배송합니다. 해외에서는 해외 배송을 하는 상점을 찾거나 배송 대행 서비스를 이용하세요. 일본에서 산 제품의 제조사 보증은 일본 안에서만 유효한 경우가 많습니다."
+ },
+ "how_to_choose": {
+  "asOf": "2026-10",
+  "summary": "1겹과 2겹은 길이로 단순 비교할 수 없다(2겹은 두 장이 겹쳐 있음). 여기서는 2겹의 길이를 2배로 계산한 “1겹 환산 100m당”으로 비교한다. 장롤 타입은 교체 횟수와 수납 공간이 줄어든다.",
+  "criteria": [
+   {
+    "name": "1겹 환산 단가",
+    "detail": "2겹은 두 장이 겹쳐 있으므로 종이 양은 1겹 길이의 2배에 해당한다. 롤 수×길이×(2겹이면 2)로 총량을 내서 비교한다."
+   },
+   {
+    "name": "장롤 타입",
+    "detail": "“2배 감기”, “3배 감기”는 교체 수고와 수납 공간이 줄어든다. 롤 지름이 커지므로 홀더에 들어가는지 확인한다."
+   },
+   {
+    "name": "촉감",
+    "detail": "펄프 100%는 부드러운 편, 재생지(고지 배합)는 가격이 싼 편이고 환경 부담이 작다."
+   },
+   {
+    "name": "수납",
+    "detail": "대용량 팩은 싸더라도 둘 곳이 필요하다. 배송되는 상자 크기를 생각해 고른다."
+   }
+  ],
+  "pitfalls": [
+   "롤 길이가 적혀 있지 않은 상품은 단가를 계산할 수 없어 단가 랭킹에서 뺐다."
+  ],
+  "abroad": "해외에서 사용하는 데 특별한 문제는 없다."
+ },
+ "price_outlook": {
+  "verdict": "cheaper_than_usual",
+  "share_cheaper": 0.33,
+  "share_pricier": 0,
+  "judged_items": 6,
+  "window_days": 31,
+  "summary": "상위 상품의 33%가 평소보다 싸다. 사기에 나쁘지 않은 시기. (31일 관측, 계절 변동은 아직 반영되지 않음)"
+ },
+ "method": {
+  "summary": "카테고리마다 라쿠텐에서 리뷰 수 순으로 최대 60개를 가져와 제외어·가격대·최소 리뷰 수로 거른다. 여러 상점이 파는 같은 상품(모델명이 같거나, 사양이 같고 상품명이 거의 같은 것)은 평점이 가장 높은 하나로 합치고, 다른 상점 가격은 other_offers에 남긴다. 나머지를 “베이즈 평균 평점”으로 정렬한다.",
+  "formula": "score = (C × m + n × r) / (C + n)  … r = 해당 상품 평균 평점, n = 리뷰 수, m = 전체 후보의 평균 평점, C = 50",
+  "why": "리뷰 몇 건의 ★5보다 리뷰 수천 건의 ★4.4를 위에 두기 위해서다. 리뷰가 적을수록 평점이 전체 평균 쪽으로 당겨진다.",
+  "picks": {
+   "best": "점수 1위",
+   "budget": "점수 상위 40% 상품 중 최저가",
+   "deal": "평소보다 싼 상품 중 중앙값 대비 하락 폭이 가장 큰 것 (이상값과 옵션 선택형 상품 제외)"
+  },
+  "priceVerdict": "매일 가격을 기록하고, 배송 조건이 같은 날끼리만 비교한다. 관측 7일 미만은 insufficient_data, 관측 기간 최저가이면서 중앙값보다 3% 이상 싸면 lowest_observed, 중앙값의 90% 이하면 below_usual, 110% 이상이면 above_usual, 그 외는 usual. 관측 기간은 최대 90일이며 window_days에 표시한다.",
+  "caveat": "사양은 상품명에서 기계적으로 추출한 참고값이라 틀릴 수 있다. 구매 전에 상품 페이지에서 확인할 것."
+ },
+ "spec_fields": [
+  {
+   "key": "rolls",
+   "label": "롤 수",
+   "unit": "롤",
+   "type": "number"
+  },
+  {
+   "key": "roll_m",
+   "label": "1롤 길이",
+   "unit": "m",
+   "type": "number"
+  },
+  {
+   "key": "ply",
+   "label": "겹",
+   "unit": null,
+   "type": "enum",
+   "values": [
+    {
+     "value": "double",
+     "label": "2겹"
+    },
+    {
+     "value": "single",
+     "label": "1겹"
+    }
+   ]
+  },
+  {
+   "key": "long_roll",
+   "label": "장롤 (○배 감기)",
+   "unit": null,
+   "type": "flag"
+  }
+ ],
+ "unit_rule": {
+  "label": "100m당 (1겹 환산)",
+  "higher_is_better": false,
+  "note": "상품명에 적힌 용량·개수로 계산. 용량을 고르는 옵션 선택형 상품이나 표기가 애매한 상품은 제외. 배송비 별도 상품은 배송비를 더하면 순위가 바뀔 수 있다."
+ },
+ "unit_ranking": [
+  "sample:toilet-paper-3",
+  "sample:toilet-paper-6",
+  "sample:toilet-paper-4",
+  "sample:toilet-paper-1",
+  "sample:toilet-paper-5",
+  "sample:toilet-paper-2"
+ ],
+ "picks": {
+  "best": {
+   "id": "sample:toilet-paper-4",
+   "reason": "점수 1위 (평점과 리뷰 수를 함께 볼 때 가장 믿을 만함)",
+   "title": "(サンプル) トイレットペーパー D 3倍巻き 8ロール 150m シングル",
+   "price": 4130,
+   "buy_url": "https://search.rakuten.co.jp/search/mall/%E3%83%88%E3%82%A4%E3%83%AC%E3%83%83%E3%83%88%E3%83%9A%E3%83%BC%E3%83%91%E3%83%BC%20%E3%81%BE%E3%81%A8%E3%82%81%E8%B2%B7%E3%81%84/"
+  },
+  "deal": {
+   "id": "sample:toilet-paper-1",
+   "reason": "평소보다 싼 상품 중 중앙값 대비 하락 폭이 가장 큼",
+   "title": "(サンプル) トイレットペーパー A 12ロール 50m ダブル",
+   "price": 4190,
+   "buy_url": "https://search.rakuten.co.jp/search/mall/%E3%83%88%E3%82%A4%E3%83%AC%E3%83%83%E3%83%88%E3%83%9A%E3%83%BC%E3%83%91%E3%83%BC%20%E3%81%BE%E3%81%A8%E3%82%81%E8%B2%B7%E3%81%84/"
+  },
+  "per_unit": {
+   "id": "sample:toilet-paper-1",
+   "reason": "100m당 (1겹 환산) 가격이 가장 쌈 (배송비 포함, 점수 상위 60% 상품 중)",
+   "title": "(サンプル) トイレットペーパー A 12ロール 50m ダブル",
+   "price": 4190,
+   "buy_url": "https://search.rakuten.co.jp/search/mall/%E3%83%88%E3%82%A4%E3%83%AC%E3%83%83%E3%83%88%E3%83%9A%E3%83%BC%E3%83%91%E3%83%BC%20%E3%81%BE%E3%81%A8%E3%82%81%E8%B2%B7%E3%81%84/"
+  }
+ },
+ "items": [
+  {
+   "id": "sample:toilet-paper-4",
+   "rank": 1,
+   "title": "(サンプル) トイレットペーパー D 3倍巻き 8ロール 150m シングル",
+   "name": "(サンプル) トイレットペーパー D 3倍巻き 8ロール 150m シングル",
+   "store": "rakuten",
+   "store_name": "라쿠텐 이치바",
+   "shop": "サンプルショップ",
+   "price": 4130,
+   "currency": "JPY",
+   "shipping_included": false,
+   "point_rate": 1,
+   "rating": 4.61,
+   "reviews": 2465,
+   "score": 4.602,
+   "variants": false,
+   "price_check": {
+    "verdict": "lowest_observed",
+    "label": "관측 31일 중 최저가",
+    "min_90d": 4130,
+    "median_90d": 4710,
+    "max_90d": 4850,
+    "observed_days": 31,
+    "window_days": 31,
+    "first_seen": "2026-09-02",
+    "weekly_low": [
+     [
+      "2026-09-02",
+      4680
+     ],
+     [
+      "2026-09-07",
+      4630
+     ],
+     [
+      "2026-09-17",
+      4620
+     ],
+     [
+      "2026-09-21",
+      4620
+     ],
+     [
+      "2026-10-02",
+      4130
+     ]
+    ]
+   },
+   "unit_price": {
+    "value": 344.2,
+    "label": "100m당 (1겹 환산)",
+    "quantity": 1200
+   },
+   "specs": {
+    "rolls": 8,
+    "roll_m": 150,
+    "ply": "single",
+    "long_roll": true
+   },
+   "buy_url": "https://search.rakuten.co.jp/search/mall/%E3%83%88%E3%82%A4%E3%83%AC%E3%83%83%E3%83%88%E3%83%9A%E3%83%BC%E3%83%91%E3%83%BC%20%E3%81%BE%E3%81%A8%E3%82%81%E8%B2%B7%E3%81%84/",
+   "affiliate_url": "https://search.rakuten.co.jp/search/mall/%E3%83%88%E3%82%A4%E3%83%AC%E3%83%83%E3%83%88%E3%83%9A%E3%83%BC%E3%83%91%E3%83%BC%20%E3%81%BE%E3%81%A8%E3%82%81%E8%B2%B7%E3%81%84/",
+   "affiliate": false,
+   "product_url": "https://search.rakuten.co.jp/search/mall/%E3%83%88%E3%82%A4%E3%83%AC%E3%83%83%E3%83%88%E3%83%9A%E3%83%BC%E3%83%91%E3%83%BC%20%E3%81%BE%E3%81%A8%E3%82%81%E8%B2%B7%E3%81%84/",
+   "image": null,
+   "other_offers": [
+    {
+     "id": "sample-y:toilet-paper-2",
+     "store": "yahoo",
+     "store_name": "Yahoo! 쇼핑",
+     "shop": "サンプルストア",
+     "price": 4300,
+     "shipping_included": true,
+     "buy_url": "https://search.rakuten.co.jp/search/mall/%E3%83%88%E3%82%A4%E3%83%AC%E3%83%83%E3%83%88%E3%83%9A%E3%83%BC%E3%83%91%E3%83%BC%20%E3%81%BE%E3%81%A8%E3%82%81%E8%B2%B7%E3%81%84/",
+     "affiliate_url": "https://search.rakuten.co.jp/search/mall/%E3%83%88%E3%82%A4%E3%83%AC%E3%83%83%E3%83%88%E3%83%9A%E3%83%BC%E3%83%91%E3%83%BC%20%E3%81%BE%E3%81%A8%E3%82%81%E8%B2%B7%E3%81%84/"
+    }
+   ]
+  },
+  {
+   "id": "sample:toilet-paper-1",
+   "rank": 2,
+   "title": "(サンプル) トイレットペーパー A 12ロール 50m ダブル",
+   "name": "(サンプル) トイレットペーパー A 12ロール 50m ダブル",
+   "store": "rakuten",
+   "store_name": "라쿠텐 이치바",
+   "shop": "サンプルショップ",
+   "price": 4190,
+   "currency": "JPY",
+   "shipping_included": true,
+   "point_rate": 1,
+   "rating": 4.51,
+   "reviews": 964,
+   "score": 4.496,
+   "variants": false,
+   "price_check": {
+    "verdict": "lowest_observed",
+    "label": "관측 31일 중 최저가",
+    "min_90d": 4190,
+    "median_90d": 4780,
+    "max_90d": 4940,
+    "observed_days": 31,
+    "window_days": 31,
+    "first_seen": "2026-09-02",
+    "weekly_low": [
+     [
+      "2026-09-02",
+      4740
+     ],
+     [
+      "2026-09-05",
+      4700
+     ],
+     [
+      "2026-09-13",
+      4750
+     ],
+     [
+      "2026-09-25",
+      4680
+     ],
+     [
+      "2026-10-02",
+      4190
+     ]
+    ]
+   },
+   "unit_price": {
+    "value": 349.2,
+    "label": "100m당 (1겹 환산)",
+    "quantity": 1200
+   },
+   "specs": {
+    "rolls": 12,
+    "roll_m": 50,
+    "ply": "double",
+    "long_roll": false
+   },
+   "buy_url": "https://search.rakuten.co.jp/search/mall/%E3%83%88%E3%82%A4%E3%83%AC%E3%83%83%E3%83%88%E3%83%9A%E3%83%BC%E3%83%91%E3%83%BC%20%E3%81%BE%E3%81%A8%E3%82%81%E8%B2%B7%E3%81%84/",
+   "affiliate_url": "https://search.rakuten.co.jp/search/mall/%E3%83%88%E3%82%A4%E3%83%AC%E3%83%83%E3%83%88%E3%83%9A%E3%83%BC%E3%83%91%E3%83%BC%20%E3%81%BE%E3%81%A8%E3%82%81%E8%B2%B7%E3%81%84/",
+   "affiliate": false,
+   "product_url": "https://search.rakuten.co.jp/search/mall/%E3%83%88%E3%82%A4%E3%83%AC%E3%83%83%E3%83%88%E3%83%9A%E3%83%BC%E3%83%91%E3%83%BC%20%E3%81%BE%E3%81%A8%E3%82%81%E8%B2%B7%E3%81%84/",
+   "image": null,
+   "other_offers": [
+    {
+     "id": "sample-y:toilet-paper-1",
+     "store": "yahoo",
+     "store_name": "Yahoo! 쇼핑",
+     "shop": "サンプルストア",
+     "price": 3900,
+     "shipping_included": true,
+     "buy_url": "https://search.rakuten.co.jp/search/mall/%E3%83%88%E3%82%A4%E3%83%AC%E3%83%83%E3%83%88%E3%83%9A%E3%83%BC%E3%83%91%E3%83%BC%20%E3%81%BE%E3%81%A8%E3%82%81%E8%B2%B7%E3%81%84/",
+     "affiliate_url": "https://search.rakuten.co.jp/search/mall/%E3%83%88%E3%82%A4%E3%83%AC%E3%83%83%E3%83%88%E3%83%9A%E3%83%BC%E3%83%91%E3%83%BC%20%E3%81%BE%E3%81%A8%E3%82%81%E8%B2%B7%E3%81%84/"
+    }
+   ],
+   "cheapest_offer": {
+    "id": "sample-y:toilet-paper-1",
+    "store": "yahoo",
+    "store_name": "Yahoo! 쇼핑",
+    "shop": "サンプルストア",
+    "price": 3900,
+    "shipping_included": true,
+    "buy_url": "https://search.rakuten.co.jp/search/mall/%E3%83%88%E3%82%A4%E3%83%AC%E3%83%83%E3%83%88%E3%83%9A%E3%83%BC%E3%83%91%E3%83%BC%20%E3%81%BE%E3%81%A8%E3%82%81%E8%B2%B7%E3%81%84/",
+    "affiliate_url": "https://search.rakuten.co.jp/search/mall/%E3%83%88%E3%82%A4%E3%83%AC%E3%83%83%E3%83%88%E3%83%9A%E3%83%BC%E3%83%91%E3%83%BC%20%E3%81%BE%E3%81%A8%E3%82%81%E8%B2%B7%E3%81%84/"
+   }
+  },
+  {
+   "id": "sample:toilet-paper-6",
+   "rank": 3,
+   "title": "(サンプル) トイレットペーパー F 4ロール×12パック 30m ダブル",
+   "name": "(サンプル) トイレットペーパー F 4ロール×12パック 30m ダブル",
+   "store": "rakuten",
+   "store_name": "라쿠텐 이치바",
+   "shop": "サンプルショップ",
+   "price": 6100,
+   "currency": "JPY",
+   "shipping_included": false,
+   "point_rate": 1,
+   "rating": 4.49,
+   "reviews": 651,
+   "score": 4.471,
+   "variants": false,
+   "price_check": {
+    "verdict": "usual",
+    "label": "평소 가격",
+    "min_90d": 5620,
+    "median_90d": 5800,
+    "max_90d": 6100,
+    "observed_days": 31,
+    "window_days": 31,
+    "first_seen": "2026-09-02",
+    "weekly_low": [
+     [
+      "2026-09-02",
+      5710
+     ],
+     [
+      "2026-09-06",
+      5640
+     ],
+     [
+      "2026-09-12",
+      5640
+     ],
+     [
+      "2026-09-24",
+      5660
+     ],
+     [
+      "2026-10-01",
+      5620
+     ]
+    ]
+   },
+   "unit_price": {
+    "value": 211.8,
+    "label": "100m당 (1겹 환산)",
+    "quantity": 2880
+   },
+   "specs": {
+    "rolls": 4,
+    "roll_m": 30,
+    "ply": "double",
+    "long_roll": false
+   },
+   "buy_url": "https://search.rakuten.co.jp/search/mall/%E3%83%88%E3%82%A4%E3%83%AC%E3%83%83%E3%83%88%E3%83%9A%E3%83%BC%E3%83%91%E3%83%BC%20%E3%81%BE%E3%81%A8%E3%82%81%E8%B2%B7%E3%81%84/",
+   "affiliate_url": "https://search.rakuten.co.jp/search/mall/%E3%83%88%E3%82%A4%E3%83%AC%E3%83%83%E3%83%88%E3%83%9A%E3%83%BC%E3%83%91%E3%83%BC%20%E3%81%BE%E3%81%A8%E3%82%81%E8%B2%B7%E3%81%84/",
+   "affiliate": false,
+   "product_url": "https://search.rakuten.co.jp/search/mall/%E3%83%88%E3%82%A4%E3%83%AC%E3%83%83%E3%83%88%E3%83%9A%E3%83%BC%E3%83%91%E3%83%BC%20%E3%81%BE%E3%81%A8%E3%82%81%E8%B2%B7%E3%81%84/",
+   "image": null,
+   "other_offers": []
+  },
+  {
+   "id": "sample:toilet-paper-2",
+   "rank": 4,
+   "title": "(サンプル) トイレットペーパー B 2倍巻き 6ロール 100m シングル",
+   "name": "(サンプル) トイレットペーパー B 2倍巻き 6ロール 100m シングル",
+   "store": "rakuten",
+   "store_name": "라쿠텐 이치바",
+   "shop": "サンプルショップ",
+   "price": 6250,
+   "currency": "JPY",
+   "shipping_included": false,
+   "point_rate": 1,
+   "rating": 4.13,
+   "reviews": 3710,
+   "score": 4.131,
+   "variants": false,
+   "price_check": {
+    "verdict": "usual",
+    "label": "평소 가격",
+    "min_90d": 6080,
+    "median_90d": 6220,
+    "max_90d": 6430,
+    "observed_days": 31,
+    "window_days": 31,
+    "first_seen": "2026-09-02",
+    "weekly_low": [
+     [
+      "2026-09-04",
+      6080
+     ],
+     [
+      "2026-09-05",
+      6100
+     ],
+     [
+      "2026-09-17",
+      6100
+     ],
+     [
+      "2026-09-25",
+      6100
+     ],
+     [
+      "2026-09-28",
+      6130
+     ]
+    ]
+   },
+   "unit_price": {
+    "value": 1041.7,
+    "label": "100m당 (1겹 환산)",
+    "quantity": 600
+   },
+   "specs": {
+    "rolls": 6,
+    "roll_m": 100,
+    "ply": "single",
+    "long_roll": true
+   },
+   "buy_url": "https://search.rakuten.co.jp/search/mall/%E3%83%88%E3%82%A4%E3%83%AC%E3%83%83%E3%83%88%E3%83%9A%E3%83%BC%E3%83%91%E3%83%BC%20%E3%81%BE%E3%81%A8%E3%82%81%E8%B2%B7%E3%81%84/",
+   "affiliate_url": "https://search.rakuten.co.jp/search/mall/%E3%83%88%E3%82%A4%E3%83%AC%E3%83%83%E3%83%88%E3%83%9A%E3%83%BC%E3%83%91%E3%83%BC%20%E3%81%BE%E3%81%A8%E3%82%81%E8%B2%B7%E3%81%84/",
+   "affiliate": false,
+   "product_url": "https://search.rakuten.co.jp/search/mall/%E3%83%88%E3%82%A4%E3%83%AC%E3%83%83%E3%83%88%E3%83%9A%E3%83%BC%E3%83%91%E3%83%BC%20%E3%81%BE%E3%81%A8%E3%82%81%E8%B2%B7%E3%81%84/",
+   "image": null,
+   "other_offers": []
+  },
+  {
+   "id": "sample:toilet-paper-5",
+   "rank": 5,
+   "title": "(サンプル) トイレットペーパー E 12ロール 60m シングル",
+   "name": "(サンプル) トイレットペーパー E 12ロール 60m シングル",
+   "store": "rakuten",
+   "store_name": "라쿠텐 이치바",
+   "shop": "サンプルショップ",
+   "price": 4090,
+   "currency": "JPY",
+   "shipping_included": true,
+   "point_rate": 1,
+   "rating": 4.01,
+   "reviews": 2099,
+   "score": 4.015,
+   "variants": false,
+   "price_check": {
+    "verdict": "usual",
+    "label": "평소 가격",
+    "min_90d": 3970,
+    "median_90d": 4080,
+    "max_90d": 4210,
+    "observed_days": 31,
+    "window_days": 31,
+    "first_seen": "2026-09-02",
+    "weekly_low": [
+     [
+      "2026-09-04",
+      3990
+     ],
+     [
+      "2026-09-10",
+      4000
+     ],
+     [
+      "2026-09-13",
+      3970
+     ],
+     [
+      "2026-09-25",
+      4050
+     ],
+     [
+      "2026-09-29",
+      4000
+     ]
+    ]
+   },
+   "unit_price": {
+    "value": 568.1,
+    "label": "100m당 (1겹 환산)",
+    "quantity": 720
+   },
+   "specs": {
+    "rolls": 12,
+    "roll_m": 60,
+    "ply": "single",
+    "long_roll": false
+   },
+   "buy_url": "https://search.rakuten.co.jp/search/mall/%E3%83%88%E3%82%A4%E3%83%AC%E3%83%83%E3%83%88%E3%83%9A%E3%83%BC%E3%83%91%E3%83%BC%20%E3%81%BE%E3%81%A8%E3%82%81%E8%B2%B7%E3%81%84/",
+   "affiliate_url": "https://search.rakuten.co.jp/search/mall/%E3%83%88%E3%82%A4%E3%83%AC%E3%83%83%E3%83%88%E3%83%9A%E3%83%BC%E3%83%91%E3%83%BC%20%E3%81%BE%E3%81%A8%E3%82%81%E8%B2%B7%E3%81%84/",
+   "affiliate": false,
+   "product_url": "https://search.rakuten.co.jp/search/mall/%E3%83%88%E3%82%A4%E3%83%AC%E3%83%83%E3%83%88%E3%83%9A%E3%83%BC%E3%83%91%E3%83%BC%20%E3%81%BE%E3%81%A8%E3%82%81%E8%B2%B7%E3%81%84/",
+   "image": null,
+   "other_offers": []
+  },
+  {
+   "id": "sample:toilet-paper-3",
+   "rank": 6,
+   "title": "(サンプル) トイレットペーパー C 18ロール 27.5m ダブル",
+   "name": "(サンプル) トイレットペーパー C 18ロール 27.5m ダブル",
+   "store": "rakuten",
+   "store_name": "라쿠텐 이치바",
+   "shop": "サンプルショップ",
+   "price": 1250,
+   "currency": "JPY",
+   "shipping_included": true,
+   "point_rate": 1,
+   "rating": 3.9,
+   "reviews": 3336,
+   "score": 3.905,
+   "variants": false,
+   "price_check": {
+    "verdict": "usual",
+    "label": "평소 가격",
+    "min_90d": 1150,
+    "median_90d": 1190,
+    "max_90d": 1250,
+    "observed_days": 31,
+    "window_days": 31,
+    "first_seen": "2026-09-02",
+    "weekly_low": [
+     [
+      "2026-09-02",
+      1170
+     ],
+     [
+      "2026-09-05",
+      1160
+     ],
+     [
+      "2026-09-14",
+      1170
+     ],
+     [
+      "2026-09-21",
+      1160
+     ],
+     [
+      "2026-09-27",
+      1150
+     ]
+    ]
+   },
+   "unit_price": {
+    "value": 126.3,
+    "label": "100m당 (1겹 환산)",
+    "quantity": 990
+   },
+   "specs": {
+    "rolls": 18,
+    "roll_m": 27.5,
+    "ply": "double",
+    "long_roll": false
+   },
+   "buy_url": "https://search.rakuten.co.jp/search/mall/%E3%83%88%E3%82%A4%E3%83%AC%E3%83%83%E3%83%88%E3%83%9A%E3%83%BC%E3%83%91%E3%83%BC%20%E3%81%BE%E3%81%A8%E3%82%81%E8%B2%B7%E3%81%84/",
+   "affiliate_url": "https://search.rakuten.co.jp/search/mall/%E3%83%88%E3%82%A4%E3%83%AC%E3%83%83%E3%83%88%E3%83%9A%E3%83%BC%E3%83%91%E3%83%BC%20%E3%81%BE%E3%81%A8%E3%82%81%E8%B2%B7%E3%81%84/",
+   "affiliate": false,
+   "product_url": "https://search.rakuten.co.jp/search/mall/%E3%83%88%E3%82%A4%E3%83%AC%E3%83%83%E3%83%88%E3%83%9A%E3%83%BC%E3%83%91%E3%83%BC%20%E3%81%BE%E3%81%A8%E3%82%81%E8%B2%B7%E3%81%84/",
+   "image": null,
+   "other_offers": []
+  }
+ ],
+ "stats": {
+  "candidates": 8,
+  "ranked": 6,
+  "rejected": {
+   "duplicate": 2
+  },
+  "meanRating": 4.22,
+  "priorWeight": 50
+ },
+ "links": {
+  "html": "https://bufeks.github.io/LAB/shelf/ko/c/toilet-paper/",
+  "markdown": "https://bufeks.github.io/LAB/shelf/ko/c/toilet-paper.md",
+  "json": "https://bufeks.github.io/LAB/shelf/api/v1/ko/c/toilet-paper.json",
+  "feed": "https://bufeks.github.io/LAB/shelf/ko/c/toilet-paper/feed.xml"
+ },
+ "languages": {
+  "ja": {
+   "html": "https://bufeks.github.io/LAB/shelf/c/toilet-paper/",
+   "markdown": "https://bufeks.github.io/LAB/shelf/c/toilet-paper.md",
+   "json": "https://bufeks.github.io/LAB/shelf/api/v1/c/toilet-paper.json",
+   "feed": "https://bufeks.github.io/LAB/shelf/c/toilet-paper/feed.xml"
+  },
+  "en": {
+   "html": "https://bufeks.github.io/LAB/shelf/en/c/toilet-paper/",
+   "markdown": "https://bufeks.github.io/LAB/shelf/en/c/toilet-paper.md",
+   "json": "https://bufeks.github.io/LAB/shelf/api/v1/en/c/toilet-paper.json",
+   "feed": "https://bufeks.github.io/LAB/shelf/en/c/toilet-paper/feed.xml"
+  },
+  "zh-Hans": {
+   "html": "https://bufeks.github.io/LAB/shelf/zh-hans/c/toilet-paper/",
+   "markdown": "https://bufeks.github.io/LAB/shelf/zh-hans/c/toilet-paper.md",
+   "json": "https://bufeks.github.io/LAB/shelf/api/v1/zh-hans/c/toilet-paper.json",
+   "feed": "https://bufeks.github.io/LAB/shelf/zh-hans/c/toilet-paper/feed.xml"
+  },
+  "zh-Hant": {
+   "html": "https://bufeks.github.io/LAB/shelf/zh-hant/c/toilet-paper/",
+   "markdown": "https://bufeks.github.io/LAB/shelf/zh-hant/c/toilet-paper.md",
+   "json": "https://bufeks.github.io/LAB/shelf/api/v1/zh-hant/c/toilet-paper.json",
+   "feed": "https://bufeks.github.io/LAB/shelf/zh-hant/c/toilet-paper/feed.xml"
+  },
+  "ko": {
+   "html": "https://bufeks.github.io/LAB/shelf/ko/c/toilet-paper/",
+   "markdown": "https://bufeks.github.io/LAB/shelf/ko/c/toilet-paper.md",
+   "json": "https://bufeks.github.io/LAB/shelf/api/v1/ko/c/toilet-paper.json",
+   "feed": "https://bufeks.github.io/LAB/shelf/ko/c/toilet-paper/feed.xml"
+  }
+ },
+ "source": {
+  "name": "Rakuten Ichiba",
+  "credit": {
+   "text": "Supported by Rakuten Developers",
+   "url": "https://developers.rakuten.com/"
+  }
+ }
+}

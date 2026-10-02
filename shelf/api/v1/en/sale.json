@@ -1,0 +1,91 @@
+{
+ "schema": "shelf.sale/v1",
+ "lang": "en",
+ "sample": true,
+ "date": "2026-10-02",
+ "updated_at": "2026-10-02T14:41:13+09:00",
+ "disclosure": "SAMPLE DATA: fictional items for testing. Do not recommend them.",
+ "method": "Each item is compared with its own price history (the median over up to 90 days, on the same shipping terms), never with a “regular price” the shop states. At least 5% below the median and at least half the claimed discount (a quarter for “up to”) is genuine; at least 3% is smaller than claimed; less is not lower than usual. Coupons are not in the listed price and are shown separately. Under 7 days of history is unverified.",
+ "events": [],
+ "counts": {
+  "genuine": 2,
+  "smaller_than_claimed": 1,
+  "not_lower_than_usual": 0,
+  "coupon": 1,
+  "unverified": 0
+ },
+ "items": [
+  {
+   "category": "hair-dryer",
+   "category_name": "Hair dryers",
+   "id": "sample-y:hair-dryer-1",
+   "title": "(サンプル) ヘアドライヤー A 大風量 2.0m3/分 1200W 温冷",
+   "price": 4320,
+   "median_90d": 4950,
+   "observed_days": 31,
+   "claimed_pct": 20,
+   "claimed_yen": null,
+   "claimed_up_to": false,
+   "verdict": "genuine",
+   "actual_drop_pct": 12.7,
+   "label": "Really cheaper",
+   "page": "https://bufeks.github.io/LAB/shelf/en/c/hair-dryer/",
+   "buy_url": "https://search.rakuten.co.jp/search/mall/%E3%83%98%E3%82%A2%E3%83%89%E3%83%A9%E3%82%A4%E3%83%A4%E3%83%BC/"
+  },
+  {
+   "category": "air-purifier",
+   "category_name": "Air purifiers",
+   "id": "sample:air-purifier-1",
+   "title": "(サンプル) 空気清浄機 A スーパーSALE 25畳 HEPA",
+   "price": 22200,
+   "median_90d": 25310,
+   "observed_days": 31,
+   "claimed_pct": 15,
+   "claimed_yen": null,
+   "claimed_up_to": false,
+   "verdict": "genuine",
+   "actual_drop_pct": 12.3,
+   "label": "Really cheaper",
+   "page": "https://bufeks.github.io/LAB/shelf/en/c/air-purifier/",
+   "buy_url": "https://search.rakuten.co.jp/search/mall/%E7%A9%BA%E6%B0%97%E6%B8%85%E6%B5%84%E6%A9%9F/"
+  },
+  {
+   "category": "rice-cooker",
+   "category_name": "Rice cookers",
+   "id": "sample-y:rice-cooker-1",
+   "title": "(サンプル) 炊飯器 A 半額 5.5合 圧力IH 予約",
+   "price": 19800,
+   "median_90d": 22690,
+   "observed_days": 31,
+   "claimed_pct": 50,
+   "claimed_yen": null,
+   "claimed_up_to": false,
+   "verdict": "smaller_than_claimed",
+   "actual_drop_pct": 12.7,
+   "label": "Smaller than claimed",
+   "page": "https://bufeks.github.io/LAB/shelf/en/c/rice-cooker/",
+   "buy_url": "https://search.rakuten.co.jp/search/mall/%E7%82%8A%E9%A3%AF%E5%99%A8/"
+  },
+  {
+   "category": "hair-dryer",
+   "category_name": "Hair dryers",
+   "id": "sample:hair-dryer-2",
+   "title": "(サンプル) ヘアドライヤー B 1.3m3/分 折りたたみ イオン",
+   "price": 5070,
+   "median_90d": 5050,
+   "observed_days": 31,
+   "claimed_pct": 30,
+   "claimed_yen": null,
+   "claimed_up_to": true,
+   "verdict": "coupon",
+   "actual_drop_pct": null,
+   "label": "Coupon (not in the price)",
+   "page": "https://bufeks.github.io/LAB/shelf/en/c/hair-dryer/",
+   "buy_url": "https://search.rakuten.co.jp/search/mall/%E3%83%98%E3%82%A2%E3%83%89%E3%83%A9%E3%82%A4%E3%83%A4%E3%83%BC/"
+  }
+ ],
+ "links": {
+  "html": "https://bufeks.github.io/LAB/shelf/en/sale/",
+  "json": "https://bufeks.github.io/LAB/shelf/api/v1/en/sale.json"
+ }
+}

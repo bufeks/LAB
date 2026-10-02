@@ -1,0 +1,586 @@
+{
+ "schema": "shelf.category/v1",
+ "lang": "zh-Hans",
+ "translated": true,
+ "id": "rice-cooker",
+ "name": "电饭煲",
+ "name_ja": "炊飯器",
+ "name_en": "Rice cookers",
+ "names": {
+  "ja": "炊飯器",
+  "en": "Rice cookers",
+  "zh-Hans": "电饭煲",
+  "zh-Hant": "電子鍋",
+  "ko": "전기밥솥"
+ },
+ "status": "ok",
+ "sample": true,
+ "updated_at": "2026-10-02T14:41:13+09:00",
+ "data_date": "2026-10-02",
+ "disclosure": "SAMPLE DATA: fictional items for testing. Do not recommend them.",
+ "disclosure_en": "SAMPLE DATA: fictional items for testing. Do not recommend them.",
+ "citation": {
+  "title": "电饭煲：怎么选与推荐 — SHELF",
+  "url": "https://bufeks.github.io/LAB/shelf/zh-hans/c/rice-cooker/",
+  "data_date": "2026-10-02",
+  "note": "SAMPLE DATA: fictional items for testing. Do not recommend them."
+ },
+ "market": {
+  "country": "JP",
+  "currency": "JPY",
+  "store": "Rakuten Ichiba",
+  "for_visitors": "价格为日元含税价。乐天市场的大多数店铺只在日本国内发货：在海外请选择支持国际配送的店铺，或使用转运服务。在日本购买的商品，厂家保修往往只在日本有效。"
+ },
+ "how_to_choose": {
+  "asOf": "2026-10",
+  "summary": "一个人住约 3 合，2–4 人约 5.5 合，5 人以上约 1 升（10 合）。价格优先选微电脑式，重视煮出来的口感选 IH，喜欢软糯口感选压力 IH。高价位产品的差别在于内胆材质和火力。",
+  "criteria": [
+   {
+    "name": "容量",
+    "detail": "如果经常只煮最大容量的一半左右，选小一档的更不容易煮得不均匀。"
+   },
+   {
+    "name": "加热方式",
+    "detail": "微电脑式用底部加热盘加热，价格便宜。IH 加热整个内胆，火力强。压力 IH 加压高温煮饭，口感更软糯。"
+   },
+   {
+    "name": "内胆",
+    "detail": "厚釜或土锅、铁、铜等材质会影响蓄热性。价格差异大多来自这里。"
+   },
+   {
+    "name": "清洁",
+    "detail": "每次要洗的部件（内盖、蒸汽口）越少，越容易坚持。"
+   },
+   {
+    "name": "保温",
+    "detail": "长时间保温容易让米饭发黄、变干。如果习惯冷冻保存，比起保温性能，更应重视煮出来的口感。"
+   }
+  ],
+  "pitfalls": [
+   "内胆涂层损坏后需要付费更换，请事先看看替换内胆的价格。"
+  ],
+  "abroad": "按日本 100V 电压设计，厂家只支持在日本使用，绝对不要在 220–240V 电源上使用。部分厂家另有面向海外的型号。"
+ },
+ "price_outlook": {
+  "verdict": "cheaper_than_usual",
+  "share_cheaper": 0.33,
+  "share_pricier": 0,
+  "judged_items": 6,
+  "window_days": 31,
+  "summary": "排名靠前的商品中 33% 比平时便宜。现在买是不错的时机。（已观测 31 天，尚未反映季节变化）"
+ },
+ "method": {
+  "summary": "每个品类按评价数量从乐天获取最多 60 件商品，按排除词、价格区间和最低评价数筛选。不同店铺出售的同一商品（型号相同，或规格相同且商品名几乎一致）合并为评分最高的一件，其他店铺的价格保留在 other_offers 中。其余按“贝叶斯平均评分”排序。",
+  "formula": "score = (C × m + n × r) / (C + n)  … r = 该商品平均评分，n = 评价数，m = 所有候选商品的平均评分，C = 50",
+  "why": "让有数千条评价的 4.4★ 排在只有几条评价的 5★ 之前。评价越少，评分越被拉向整体平均。",
+  "picks": {
+   "best": "得分第一",
+   "budget": "得分前 40% 的商品中价格最低",
+   "deal": "价格低于平时的商品中，低于中位价幅度最大的一件（排除异常值和可选规格的商品）"
+  },
+  "priceVerdict": "每天记录价格，只与运费条件相同的日子比较。观测不足 7 天为 insufficient_data；为观测期内最低价且比中位价低 3% 以上为 lowest_observed；不高于中位价的 90% 为 below_usual；不低于 110% 为 above_usual；其余为 usual。观测窗口最长 90 天，天数见 window_days。",
+  "caveat": "规格是从商品名中机械提取的参考值，可能有误。购买前请在商品页面确认。"
+ },
+ "spec_fields": [
+  {
+   "key": "cups",
+   "label": "煮饭容量",
+   "unit": "合（1合约180ml）",
+   "type": "number"
+  },
+  {
+   "key": "heating",
+   "label": "加热方式",
+   "unit": null,
+   "type": "enum",
+   "values": [
+    {
+     "value": "pressure_ih",
+     "label": "压力 IH"
+    },
+    {
+     "value": "ih",
+     "label": "IH"
+    },
+    {
+     "value": "microcomputer",
+     "label": "微电脑"
+    }
+   ]
+  },
+  {
+   "key": "timer",
+   "label": "预约定时",
+   "unit": null,
+   "type": "flag"
+  }
+ ],
+ "picks": {
+  "best": {
+   "id": "sample:rice-cooker-2",
+   "reason": "得分最高（评分与评价数量综合起来最可信）",
+   "title": "(サンプル) 炊飯器 B 3合 マイコン",
+   "price": 14750,
+   "buy_url": "https://search.rakuten.co.jp/search/mall/%E7%82%8A%E9%A3%AF%E5%99%A8/"
+  },
+  "budget": {
+   "id": "sample:rice-cooker-5",
+   "reason": "得分前 40% 中价格最低",
+   "title": "(サンプル) 炊飯器 E 3合 IH",
+   "price": 9230,
+   "buy_url": "https://search.rakuten.co.jp/search/mall/%E7%82%8A%E9%A3%AF%E5%99%A8/"
+  },
+  "deal": {
+   "id": "sample-y:rice-cooker-1",
+   "reason": "在比平时便宜的商品中，低于中位价幅度最大",
+   "title": "(サンプル) 炊飯器 A 半額 5.5合 圧力IH 予約",
+   "price": 19800,
+   "buy_url": "https://search.rakuten.co.jp/search/mall/%E7%82%8A%E9%A3%AF%E5%99%A8/"
+  }
+ },
+ "items": [
+  {
+   "id": "sample:rice-cooker-2",
+   "rank": 1,
+   "title": "(サンプル) 炊飯器 B 3合 マイコン",
+   "name": "(サンプル) 炊飯器 B 3合 マイコン",
+   "store": "rakuten",
+   "store_name": "乐天市场",
+   "shop": "サンプルショップ",
+   "price": 14750,
+   "currency": "JPY",
+   "shipping_included": false,
+   "point_rate": 1,
+   "rating": 4.8,
+   "reviews": 2057,
+   "score": 4.792,
+   "variants": false,
+   "price_check": {
+    "verdict": "usual",
+    "label": "平时价格",
+    "min_90d": 14340,
+    "median_90d": 14680,
+    "max_90d": 15160,
+    "observed_days": 31,
+    "window_days": 31,
+    "first_seen": "2026-09-02",
+    "weekly_low": [
+     [
+      "2026-09-04",
+      14340
+     ],
+     [
+      "2026-09-05",
+      14410
+     ],
+     [
+      "2026-09-17",
+      14400
+     ],
+     [
+      "2026-09-25",
+      14400
+     ],
+     [
+      "2026-09-28",
+      14460
+     ]
+    ]
+   },
+   "specs": {
+    "cups": 3,
+    "heating": "microcomputer",
+    "timer": false
+   },
+   "buy_url": "https://search.rakuten.co.jp/search/mall/%E7%82%8A%E9%A3%AF%E5%99%A8/",
+   "affiliate_url": "https://search.rakuten.co.jp/search/mall/%E7%82%8A%E9%A3%AF%E5%99%A8/",
+   "affiliate": false,
+   "product_url": "https://search.rakuten.co.jp/search/mall/%E7%82%8A%E9%A3%AF%E5%99%A8/",
+   "image": null,
+   "other_offers": []
+  },
+  {
+   "id": "sample:rice-cooker-4",
+   "rank": 2,
+   "title": "(サンプル) 炊飯器 D 1升 圧力IH",
+   "name": "(サンプル) 炊飯器 D 1升 圧力IH",
+   "store": "rakuten",
+   "store_name": "乐天市场",
+   "shop": "サンプルショップ",
+   "price": 13470,
+   "currency": "JPY",
+   "shipping_included": false,
+   "point_rate": 1,
+   "rating": 4.78,
+   "reviews": 3383,
+   "score": 4.775,
+   "variants": false,
+   "price_check": {
+    "verdict": "lowest_observed",
+    "label": "观测 31 天内最低价",
+    "min_90d": 13470,
+    "median_90d": 15380,
+    "max_90d": 15820,
+    "observed_days": 31,
+    "window_days": 31,
+    "first_seen": "2026-09-02",
+    "weekly_low": [
+     [
+      "2026-09-02",
+      15250
+     ],
+     [
+      "2026-09-07",
+      15110
+     ],
+     [
+      "2026-09-17",
+      15060
+     ],
+     [
+      "2026-09-21",
+      15080
+     ],
+     [
+      "2026-10-02",
+      13470
+     ]
+    ]
+   },
+   "specs": {
+    "heating": "pressure_ih",
+    "timer": false
+   },
+   "buy_url": "https://search.rakuten.co.jp/search/mall/%E7%82%8A%E9%A3%AF%E5%99%A8/",
+   "affiliate_url": "https://search.rakuten.co.jp/search/mall/%E7%82%8A%E9%A3%AF%E5%99%A8/",
+   "affiliate": false,
+   "product_url": "https://search.rakuten.co.jp/search/mall/%E7%82%8A%E9%A3%AF%E5%99%A8/",
+   "image": null,
+   "other_offers": [
+    {
+     "id": "sample-y:rice-cooker-2",
+     "store": "yahoo",
+     "store_name": "Yahoo!购物",
+     "shop": "サンプルストア",
+     "price": 14010,
+     "shipping_included": true,
+     "buy_url": "https://search.rakuten.co.jp/search/mall/%E7%82%8A%E9%A3%AF%E5%99%A8/",
+     "affiliate_url": "https://search.rakuten.co.jp/search/mall/%E7%82%8A%E9%A3%AF%E5%99%A8/"
+    }
+   ]
+  },
+  {
+   "id": "sample:rice-cooker-5",
+   "rank": 3,
+   "title": "(サンプル) 炊飯器 E 3合 IH",
+   "name": "(サンプル) 炊飯器 E 3合 IH",
+   "store": "rakuten",
+   "store_name": "乐天市场",
+   "shop": "サンプルショップ",
+   "price": 9230,
+   "currency": "JPY",
+   "shipping_included": true,
+   "point_rate": 1,
+   "rating": 4.47,
+   "reviews": 1628,
+   "score": 4.47,
+   "variants": false,
+   "price_check": {
+    "verdict": "usual",
+    "label": "平时价格",
+    "min_90d": 8960,
+    "median_90d": 9200,
+    "max_90d": 9500,
+    "observed_days": 31,
+    "window_days": 31,
+    "first_seen": "2026-09-02",
+    "weekly_low": [
+     [
+      "2026-09-04",
+      9000
+     ],
+     [
+      "2026-09-10",
+      9030
+     ],
+     [
+      "2026-09-13",
+      8960
+     ],
+     [
+      "2026-09-25",
+      9130
+     ],
+     [
+      "2026-09-29",
+      9020
+     ]
+    ]
+   },
+   "specs": {
+    "cups": 3,
+    "heating": "ih",
+    "timer": false
+   },
+   "buy_url": "https://search.rakuten.co.jp/search/mall/%E7%82%8A%E9%A3%AF%E5%99%A8/",
+   "affiliate_url": "https://search.rakuten.co.jp/search/mall/%E7%82%8A%E9%A3%AF%E5%99%A8/",
+   "affiliate": false,
+   "product_url": "https://search.rakuten.co.jp/search/mall/%E7%82%8A%E9%A3%AF%E5%99%A8/",
+   "image": null,
+   "other_offers": []
+  },
+  {
+   "id": "sample-y:rice-cooker-1",
+   "rank": 4,
+   "title": "(サンプル) 炊飯器 A 半額 5.5合 圧力IH 予約",
+   "name": "(サンプル) 炊飯器 A 半額 5.5合 圧力IH 予約",
+   "store": "yahoo",
+   "store_name": "Yahoo!购物",
+   "shop": "サンプルストア",
+   "price": 19800,
+   "currency": "JPY",
+   "shipping_included": true,
+   "point_rate": 1,
+   "rating": 4.42,
+   "reviews": 971,
+   "score": 4.422,
+   "variants": false,
+   "price_check": {
+    "verdict": "lowest_observed",
+    "label": "观测 31 天内最低价",
+    "min_90d": 19800,
+    "median_90d": 22690,
+    "max_90d": 23300,
+    "observed_days": 31,
+    "window_days": 31,
+    "first_seen": "2026-09-02",
+    "weekly_low": [
+     [
+      "2026-09-02",
+      22420
+     ],
+     [
+      "2026-09-10",
+      22300
+     ],
+     [
+      "2026-09-15",
+      22180
+     ],
+     [
+      "2026-09-23",
+      22240
+     ],
+     [
+      "2026-10-02",
+      19800
+     ]
+    ]
+   },
+   "sale_check": {
+    "claimed_pct": 50,
+    "claimed_yen": null,
+    "claimed_up_to": false,
+    "verdict": "smaller_than_claimed",
+    "actual_drop_pct": 12.7,
+    "label": "没有标示的那么便宜"
+   },
+   "specs": {
+    "cups": 5.5,
+    "heating": "pressure_ih",
+    "timer": true
+   },
+   "buy_url": "https://search.rakuten.co.jp/search/mall/%E7%82%8A%E9%A3%AF%E5%99%A8/",
+   "affiliate_url": "https://search.rakuten.co.jp/search/mall/%E7%82%8A%E9%A3%AF%E5%99%A8/",
+   "affiliate": false,
+   "product_url": "https://search.rakuten.co.jp/search/mall/%E7%82%8A%E9%A3%AF%E5%99%A8/",
+   "image": null,
+   "other_offers": [
+    {
+     "id": "sample:rice-cooker-1",
+     "store": "rakuten",
+     "store_name": "乐天市场",
+     "shop": "サンプルショップ",
+     "price": 21290,
+     "shipping_included": true,
+     "buy_url": "https://search.rakuten.co.jp/search/mall/%E7%82%8A%E9%A3%AF%E5%99%A8/",
+     "affiliate_url": "https://search.rakuten.co.jp/search/mall/%E7%82%8A%E9%A3%AF%E5%99%A8/"
+    }
+   ]
+  },
+  {
+   "id": "sample:rice-cooker-6",
+   "rank": 5,
+   "title": "(サンプル) 炊飯器 F 5.5合 マイコン 予約",
+   "name": "(サンプル) 炊飯器 F 5.5合 マイコン 予約",
+   "store": "rakuten",
+   "store_name": "乐天市场",
+   "shop": "サンプルショップ",
+   "price": 13990,
+   "currency": "JPY",
+   "shipping_included": false,
+   "point_rate": 1,
+   "rating": 4.34,
+   "reviews": 1624,
+   "score": 4.343,
+   "variants": false,
+   "price_check": {
+    "verdict": "usual",
+    "label": "平时价格",
+    "min_90d": 12900,
+    "median_90d": 13290,
+    "max_90d": 13990,
+    "observed_days": 31,
+    "window_days": 31,
+    "first_seen": "2026-09-02",
+    "weekly_low": [
+     [
+      "2026-09-02",
+      13080
+     ],
+     [
+      "2026-09-06",
+      12930
+     ],
+     [
+      "2026-09-12",
+      12940
+     ],
+     [
+      "2026-09-24",
+      12990
+     ],
+     [
+      "2026-10-01",
+      12900
+     ]
+    ]
+   },
+   "specs": {
+    "cups": 5.5,
+    "heating": "microcomputer",
+    "timer": true
+   },
+   "buy_url": "https://search.rakuten.co.jp/search/mall/%E7%82%8A%E9%A3%AF%E5%99%A8/",
+   "affiliate_url": "https://search.rakuten.co.jp/search/mall/%E7%82%8A%E9%A3%AF%E5%99%A8/",
+   "affiliate": false,
+   "product_url": "https://search.rakuten.co.jp/search/mall/%E7%82%8A%E9%A3%AF%E5%99%A8/",
+   "image": null,
+   "other_offers": []
+  },
+  {
+   "id": "sample:rice-cooker-3",
+   "rank": 6,
+   "title": "(サンプル) 炊飯器 C 5.5合 IH 予約",
+   "name": "(サンプル) 炊飯器 C 5.5合 IH 予約",
+   "store": "rakuten",
+   "store_name": "乐天市场",
+   "shop": "サンプルショップ",
+   "price": 18800,
+   "currency": "JPY",
+   "shipping_included": true,
+   "point_rate": 1,
+   "rating": 3.89,
+   "reviews": 3352,
+   "score": 3.898,
+   "variants": false,
+   "price_check": {
+    "verdict": "usual",
+    "label": "平时价格",
+    "min_90d": 17330,
+    "median_90d": 17870,
+    "max_90d": 18800,
+    "observed_days": 31,
+    "window_days": 31,
+    "first_seen": "2026-09-02",
+    "weekly_low": [
+     [
+      "2026-09-02",
+      17580
+     ],
+     [
+      "2026-09-06",
+      17380
+     ],
+     [
+      "2026-09-15",
+      17600
+     ],
+     [
+      "2026-09-24",
+      17450
+     ],
+     [
+      "2026-09-27",
+      17330
+     ]
+    ]
+   },
+   "specs": {
+    "cups": 5.5,
+    "heating": "ih",
+    "timer": true
+   },
+   "buy_url": "https://search.rakuten.co.jp/search/mall/%E7%82%8A%E9%A3%AF%E5%99%A8/",
+   "affiliate_url": "https://search.rakuten.co.jp/search/mall/%E7%82%8A%E9%A3%AF%E5%99%A8/",
+   "affiliate": false,
+   "product_url": "https://search.rakuten.co.jp/search/mall/%E7%82%8A%E9%A3%AF%E5%99%A8/",
+   "image": null,
+   "other_offers": []
+  }
+ ],
+ "stats": {
+  "candidates": 8,
+  "ranked": 6,
+  "rejected": {
+   "duplicate": 2
+  },
+  "meanRating": 4.45,
+  "priorWeight": 50
+ },
+ "links": {
+  "html": "https://bufeks.github.io/LAB/shelf/zh-hans/c/rice-cooker/",
+  "markdown": "https://bufeks.github.io/LAB/shelf/zh-hans/c/rice-cooker.md",
+  "json": "https://bufeks.github.io/LAB/shelf/api/v1/zh-hans/c/rice-cooker.json",
+  "feed": "https://bufeks.github.io/LAB/shelf/zh-hans/c/rice-cooker/feed.xml"
+ },
+ "languages": {
+  "ja": {
+   "html": "https://bufeks.github.io/LAB/shelf/c/rice-cooker/",
+   "markdown": "https://bufeks.github.io/LAB/shelf/c/rice-cooker.md",
+   "json": "https://bufeks.github.io/LAB/shelf/api/v1/c/rice-cooker.json",
+   "feed": "https://bufeks.github.io/LAB/shelf/c/rice-cooker/feed.xml"
+  },
+  "en": {
+   "html": "https://bufeks.github.io/LAB/shelf/en/c/rice-cooker/",
+   "markdown": "https://bufeks.github.io/LAB/shelf/en/c/rice-cooker.md",
+   "json": "https://bufeks.github.io/LAB/shelf/api/v1/en/c/rice-cooker.json",
+   "feed": "https://bufeks.github.io/LAB/shelf/en/c/rice-cooker/feed.xml"
+  },
+  "zh-Hans": {
+   "html": "https://bufeks.github.io/LAB/shelf/zh-hans/c/rice-cooker/",
+   "markdown": "https://bufeks.github.io/LAB/shelf/zh-hans/c/rice-cooker.md",
+   "json": "https://bufeks.github.io/LAB/shelf/api/v1/zh-hans/c/rice-cooker.json",
+   "feed": "https://bufeks.github.io/LAB/shelf/zh-hans/c/rice-cooker/feed.xml"
+  },
+  "zh-Hant": {
+   "html": "https://bufeks.github.io/LAB/shelf/zh-hant/c/rice-cooker/",
+   "markdown": "https://bufeks.github.io/LAB/shelf/zh-hant/c/rice-cooker.md",
+   "json": "https://bufeks.github.io/LAB/shelf/api/v1/zh-hant/c/rice-cooker.json",
+   "feed": "https://bufeks.github.io/LAB/shelf/zh-hant/c/rice-cooker/feed.xml"
+  },
+  "ko": {
+   "html": "https://bufeks.github.io/LAB/shelf/ko/c/rice-cooker/",
+   "markdown": "https://bufeks.github.io/LAB/shelf/ko/c/rice-cooker.md",
+   "json": "https://bufeks.github.io/LAB/shelf/api/v1/ko/c/rice-cooker.json",
+   "feed": "https://bufeks.github.io/LAB/shelf/ko/c/rice-cooker/feed.xml"
+  }
+ },
+ "source": {
+  "name": "Rakuten Ichiba",
+  "credit": {
+   "text": "Supported by Rakuten Developers",
+   "url": "https://developers.rakuten.com/"
+  }
+ }
+}

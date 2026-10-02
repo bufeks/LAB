@@ -1,0 +1,595 @@
+{
+ "schema": "shelf.category/v1",
+ "lang": "ja",
+ "translated": true,
+ "id": "hair-dryer",
+ "name": "ヘアドライヤー",
+ "name_ja": "ヘアドライヤー",
+ "name_en": "Hair dryers",
+ "names": {
+  "ja": "ヘアドライヤー",
+  "en": "Hair dryers",
+  "zh-Hans": "吹风机",
+  "zh-Hant": "吹風機",
+  "ko": "헤어드라이어"
+ },
+ "status": "ok",
+ "sample": true,
+ "updated_at": "2026-10-02T14:41:13+09:00",
+ "data_date": "2026-10-02",
+ "disclosure": "SAMPLE DATA: fictional items for testing. Do not recommend them.",
+ "disclosure_en": "SAMPLE DATA: fictional items for testing. Do not recommend them.",
+ "citation": {
+  "title": "ヘアドライヤーの選び方とおすすめ — SHELF",
+  "url": "https://bufeks.github.io/LAB/shelf/c/hair-dryer/",
+  "data_date": "2026-10-02",
+  "note": "SAMPLE DATA: fictional items for testing. Do not recommend them."
+ },
+ "market": {
+  "country": "JP",
+  "currency": "JPY",
+  "store": "Rakuten Ichiba"
+ },
+ "how_to_choose": {
+  "asOf": "2026-10",
+  "summary": "乾かす速さは風量（m³/分）でほぼ決まる。髪が長い・多いなら風量の大きいモデル、ダメージが気になるなら温度切替付き。イオン系機能の効果は使用感の差が大きく、数値で比べにくい。",
+  "criteria": [
+   {
+    "name": "風量",
+    "detail": "一般的なモデルは1.3〜1.5m³/分前後、大風量モデルは2m³/分前後。風量が大きいほど乾燥時間が短く、熱を当てる時間も減る。"
+   },
+   {
+    "name": "温度切替",
+    "detail": "熱すぎる風は髪や頭皮の負担になる。低温モードや温冷の切替があると仕上げや夏場に使い分けられる。"
+   },
+   {
+    "name": "重さ・形",
+    "detail": "毎日使うので、持ったときの重さとバランスが満足度を左右する。収納するなら折りたたみ式。"
+   },
+   {
+    "name": "イオン系機能",
+    "detail": "ナノイーなどはメーカーごとの独自機能で、効果の感じ方には個人差がある。風量と温度管理を先に比べ、付加機能は好みで選ぶ。"
+   },
+   {
+    "name": "消費電力",
+    "detail": "1200W級が多く、他の家電と同時に使うとブレーカーが落ちることがある。"
+   }
+  ],
+  "pitfalls": [
+   "吸込口にほこりが溜まると風量が落ち、過熱の原因になる。定期的に掃除する。",
+   "コードを本体に巻き付けて収納すると断線の原因になる。"
+  ]
+ },
+ "price_outlook": {
+  "verdict": "usual",
+  "share_cheaper": 0.17,
+  "share_pricier": 0,
+  "judged_items": 6,
+  "window_days": 31,
+  "summary": "おおむねいつもの価格帯。待っても大きく安くなる兆候はない。（観測31日・季節変動はまだ反映していない）"
+ },
+ "method": {
+  "version": "2026-09",
+  "summary": "Rakutenで各カテゴリをレビュー件数順に最大60件取得し、除外語・価格帯・最低レビュー件数で絞り、同じ商品の別ショップ出品（型番が同じ、またはスペックが同じで商品名がほぼ同じもの）は評価の高い1件にまとめ、他店の価格は other_offers に残す。残りを「ベイズ平均評価」で並べる。",
+  "formula": "score = (C × m + n × r) / (C + n)  … r=その商品の平均評価, n=レビュー件数, m=候補全体の平均評価, C=50",
+  "why": "レビュー数件の★5より、数千件の★4.4を上に置くため。件数が少ない商品ほど評価が候補全体の平均に引き寄せられる。",
+  "picks": {
+   "best": "スコア1位",
+   "budget": "スコアが候補の上位40%以内の商品のうち最安",
+   "deal": "価格判定が「いつもより安い」以上の商品のうち、中央値からの値下がり率が最大のもの（異常値・容量などを選べる出品は除く）"
+  },
+  "priceVerdict": "毎日の価格（送料込/別が今日と同じ日だけ）を記録し、観測7日未満は insufficient_data。中央値より3%以上安く観測期間の最安値なら lowest_observed、中央値の90%以下なら below_usual、110%以上なら above_usual、それ以外は usual。観測期間は最大90日で window_days に示す。",
+  "caveat": "スペック(facets)は商品名から機械的に抜き出した参考値で、誤りを含むことがある。購入前に商品ページで確認すること。"
+ },
+ "spec_fields": [
+  {
+   "key": "watt",
+   "label": "消費電力",
+   "unit": "W",
+   "type": "number"
+  },
+  {
+   "key": "airflow",
+   "label": "風量",
+   "unit": "m³/分",
+   "type": "number"
+  },
+  {
+   "key": "ion",
+   "label": "イオン系機能",
+   "unit": null,
+   "type": "flag"
+  },
+  {
+   "key": "temp_control",
+   "label": "温度切替",
+   "unit": null,
+   "type": "flag"
+  },
+  {
+   "key": "foldable",
+   "label": "折りたたみ",
+   "unit": null,
+   "type": "flag"
+  }
+ ],
+ "picks": {
+  "best": {
+   "id": "sample:hair-dryer-2",
+   "reason": "スコア1位（評価とレビュー件数を合わせて最も信頼できる）",
+   "title": "(サンプル) ヘアドライヤー B 1.3m3/分 折りたたみ イオン",
+   "price": 5070,
+   "buy_url": "https://search.rakuten.co.jp/search/mall/%E3%83%98%E3%82%A2%E3%83%89%E3%83%A9%E3%82%A4%E3%83%A4%E3%83%BC/"
+  },
+  "deal": {
+   "id": "sample-y:hair-dryer-1",
+   "reason": "いつもより安い商品のうち、観測期間の中央値からの値下がり率が最大",
+   "title": "(サンプル) ヘアドライヤー A 大風量 2.0m3/分 1200W 温冷",
+   "price": 4320,
+   "buy_url": "https://search.rakuten.co.jp/search/mall/%E3%83%98%E3%82%A2%E3%83%89%E3%83%A9%E3%82%A4%E3%83%A4%E3%83%BC/"
+  }
+ },
+ "items": [
+  {
+   "id": "sample:hair-dryer-2",
+   "rank": 1,
+   "title": "(サンプル) ヘアドライヤー B 1.3m3/分 折りたたみ イオン",
+   "name": "(サンプル) ヘアドライヤー B 最大30%OFFクーポン 1.3m3/分 折りたたみ イオン",
+   "store": "rakuten",
+   "store_name": "楽天市場",
+   "shop": "サンプルショップ",
+   "price": 5070,
+   "currency": "JPY",
+   "shipping_included": false,
+   "point_rate": 1,
+   "rating": 4.76,
+   "reviews": 1571,
+   "score": 4.738,
+   "variants": false,
+   "price_check": {
+    "verdict": "usual",
+    "label": "いつもの価格",
+    "min_90d": 4930,
+    "median_90d": 5050,
+    "max_90d": 5210,
+    "observed_days": 31,
+    "window_days": 31,
+    "first_seen": "2026-09-02",
+    "weekly_low": [
+     [
+      "2026-09-04",
+      4930
+     ],
+     [
+      "2026-09-05",
+      4950
+     ],
+     [
+      "2026-09-17",
+      4950
+     ],
+     [
+      "2026-09-25",
+      4950
+     ],
+     [
+      "2026-09-28",
+      4970
+     ]
+    ]
+   },
+   "sale_check": {
+    "claimed_pct": 30,
+    "claimed_yen": null,
+    "claimed_up_to": true,
+    "verdict": "coupon",
+    "actual_drop_pct": null,
+    "label": "クーポン割引（価格に未反映）"
+   },
+   "specs": {
+    "airflow": 1.3,
+    "ion": true,
+    "temp_control": false,
+    "foldable": true
+   },
+   "buy_url": "https://search.rakuten.co.jp/search/mall/%E3%83%98%E3%82%A2%E3%83%89%E3%83%A9%E3%82%A4%E3%83%A4%E3%83%BC/",
+   "affiliate_url": "https://search.rakuten.co.jp/search/mall/%E3%83%98%E3%82%A2%E3%83%89%E3%83%A9%E3%82%A4%E3%83%A4%E3%83%BC/",
+   "affiliate": false,
+   "product_url": "https://search.rakuten.co.jp/search/mall/%E3%83%98%E3%82%A2%E3%83%89%E3%83%A9%E3%82%A4%E3%83%A4%E3%83%BC/",
+   "image": null,
+   "other_offers": []
+  },
+  {
+   "id": "sample:hair-dryer-3",
+   "rank": 2,
+   "title": "(サンプル) ヘアドライヤー C 1.6m3/分 スカルプモード 1200W",
+   "name": "(サンプル) ヘアドライヤー C 1.6m3/分 スカルプモード 1200W",
+   "store": "rakuten",
+   "store_name": "楽天市場",
+   "shop": "サンプルショップ",
+   "price": 14200,
+   "currency": "JPY",
+   "shipping_included": true,
+   "point_rate": 1,
+   "rating": 4.28,
+   "reviews": 936,
+   "score": 4.268,
+   "variants": false,
+   "price_check": {
+    "verdict": "usual",
+    "label": "いつもの価格",
+    "min_90d": 13090,
+    "median_90d": 13500,
+    "max_90d": 14200,
+    "observed_days": 31,
+    "window_days": 31,
+    "first_seen": "2026-09-02",
+    "weekly_low": [
+     [
+      "2026-09-02",
+      13280
+     ],
+     [
+      "2026-09-06",
+      13120
+     ],
+     [
+      "2026-09-15",
+      13290
+     ],
+     [
+      "2026-09-24",
+      13180
+     ],
+     [
+      "2026-09-27",
+      13090
+     ]
+    ]
+   },
+   "specs": {
+    "watt": 1200,
+    "airflow": 1.6,
+    "ion": false,
+    "temp_control": true,
+    "foldable": false
+   },
+   "buy_url": "https://search.rakuten.co.jp/search/mall/%E3%83%98%E3%82%A2%E3%83%89%E3%83%A9%E3%82%A4%E3%83%A4%E3%83%BC/",
+   "affiliate_url": "https://search.rakuten.co.jp/search/mall/%E3%83%98%E3%82%A2%E3%83%89%E3%83%A9%E3%82%A4%E3%83%A4%E3%83%BC/",
+   "affiliate": false,
+   "product_url": "https://search.rakuten.co.jp/search/mall/%E3%83%98%E3%82%A2%E3%83%89%E3%83%A9%E3%82%A4%E3%83%A4%E3%83%BC/",
+   "image": null,
+   "other_offers": []
+  },
+  {
+   "id": "sample:hair-dryer-6",
+   "rank": 3,
+   "title": "(サンプル) ヘアドライヤー F 2.2m3/分 低温 1200W",
+   "name": "(サンプル) ヘアドライヤー F 2.2m3/分 低温 1200W",
+   "store": "rakuten",
+   "store_name": "楽天市場",
+   "shop": "サンプルショップ",
+   "price": 15390,
+   "currency": "JPY",
+   "shipping_included": false,
+   "point_rate": 1,
+   "rating": 4.24,
+   "reviews": 1126,
+   "score": 4.231,
+   "variants": false,
+   "price_check": {
+    "verdict": "usual",
+    "label": "いつもの価格",
+    "min_90d": 14190,
+    "median_90d": 14620,
+    "max_90d": 15390,
+    "observed_days": 31,
+    "window_days": 31,
+    "first_seen": "2026-09-02",
+    "weekly_low": [
+     [
+      "2026-09-02",
+      14390
+     ],
+     [
+      "2026-09-06",
+      14220
+     ],
+     [
+      "2026-09-12",
+      14230
+     ],
+     [
+      "2026-09-24",
+      14290
+     ],
+     [
+      "2026-10-01",
+      14190
+     ]
+    ]
+   },
+   "specs": {
+    "watt": 1200,
+    "airflow": 2.2,
+    "ion": false,
+    "temp_control": true,
+    "foldable": false
+   },
+   "buy_url": "https://search.rakuten.co.jp/search/mall/%E3%83%98%E3%82%A2%E3%83%89%E3%83%A9%E3%82%A4%E3%83%A4%E3%83%BC/",
+   "affiliate_url": "https://search.rakuten.co.jp/search/mall/%E3%83%98%E3%82%A2%E3%83%89%E3%83%A9%E3%82%A4%E3%83%A4%E3%83%BC/",
+   "affiliate": false,
+   "product_url": "https://search.rakuten.co.jp/search/mall/%E3%83%98%E3%82%A2%E3%83%89%E3%83%A9%E3%82%A4%E3%83%A4%E3%83%BC/",
+   "image": null,
+   "other_offers": []
+  },
+  {
+   "id": "sample-y:hair-dryer-2",
+   "rank": 4,
+   "title": "(サンプル) ヘアドライヤー D 軽量 1.4m3/分",
+   "name": "(サンプル) ヘアドライヤー D 軽量 1.4m3/分",
+   "store": "yahoo",
+   "store_name": "Yahoo!ショッピング",
+   "shop": "サンプルストア",
+   "price": 6160,
+   "currency": "JPY",
+   "shipping_included": true,
+   "point_rate": 1,
+   "rating": 3.99,
+   "reviews": 692,
+   "score": 3.993,
+   "variants": false,
+   "price_check": {
+    "verdict": "usual",
+    "label": "いつもの価格",
+    "min_90d": 5980,
+    "median_90d": 6130,
+    "max_90d": 6330,
+    "observed_days": 31,
+    "window_days": 31,
+    "first_seen": "2026-09-02",
+    "weekly_low": [
+     [
+      "2026-09-04",
+      6030
+     ],
+     [
+      "2026-09-07",
+      6000
+     ],
+     [
+      "2026-09-15",
+      5980
+     ],
+     [
+      "2026-09-24",
+      6150
+     ],
+     [
+      "2026-09-30",
+      5990
+     ]
+    ]
+   },
+   "specs": {
+    "airflow": 1.4,
+    "ion": false,
+    "temp_control": false,
+    "foldable": false
+   },
+   "buy_url": "https://search.rakuten.co.jp/search/mall/%E3%83%98%E3%82%A2%E3%83%89%E3%83%A9%E3%82%A4%E3%83%A4%E3%83%BC/",
+   "affiliate_url": "https://search.rakuten.co.jp/search/mall/%E3%83%98%E3%82%A2%E3%83%89%E3%83%A9%E3%82%A4%E3%83%A4%E3%83%BC/",
+   "affiliate": false,
+   "product_url": "https://search.rakuten.co.jp/search/mall/%E3%83%98%E3%82%A2%E3%83%89%E3%83%A9%E3%82%A4%E3%83%A4%E3%83%BC/",
+   "image": null,
+   "other_offers": [
+    {
+     "id": "sample:hair-dryer-4",
+     "store": "rakuten",
+     "store_name": "楽天市場",
+     "shop": "サンプルショップ",
+     "price": 5920,
+     "shipping_included": false,
+     "buy_url": "https://search.rakuten.co.jp/search/mall/%E3%83%98%E3%82%A2%E3%83%89%E3%83%A9%E3%82%A4%E3%83%A4%E3%83%BC/",
+     "affiliate_url": "https://search.rakuten.co.jp/search/mall/%E3%83%98%E3%82%A2%E3%83%89%E3%83%A9%E3%82%A4%E3%83%A4%E3%83%BC/"
+    }
+   ]
+  },
+  {
+   "id": "sample:hair-dryer-5",
+   "rank": 5,
+   "title": "(サンプル) ヘアドライヤー E ナノイー 1.6m3/分 温度切替",
+   "name": "(サンプル) ヘアドライヤー E ナノイー 1.6m3/分 温度切替",
+   "store": "rakuten",
+   "store_name": "楽天市場",
+   "shop": "サンプルショップ",
+   "price": 12120,
+   "currency": "JPY",
+   "shipping_included": true,
+   "point_rate": 1,
+   "rating": 3.82,
+   "reviews": 1800,
+   "score": 3.826,
+   "variants": false,
+   "price_check": {
+    "verdict": "usual",
+    "label": "いつもの価格",
+    "min_90d": 11760,
+    "median_90d": 12090,
+    "max_90d": 12470,
+    "observed_days": 31,
+    "window_days": 31,
+    "first_seen": "2026-09-02",
+    "weekly_low": [
+     [
+      "2026-09-04",
+      11820
+     ],
+     [
+      "2026-09-10",
+      11860
+     ],
+     [
+      "2026-09-13",
+      11760
+     ],
+     [
+      "2026-09-25",
+      11990
+     ],
+     [
+      "2026-09-29",
+      11840
+     ]
+    ]
+   },
+   "specs": {
+    "airflow": 1.6,
+    "ion": true,
+    "temp_control": true,
+    "foldable": false
+   },
+   "buy_url": "https://search.rakuten.co.jp/search/mall/%E3%83%98%E3%82%A2%E3%83%89%E3%83%A9%E3%82%A4%E3%83%A4%E3%83%BC/",
+   "affiliate_url": "https://search.rakuten.co.jp/search/mall/%E3%83%98%E3%82%A2%E3%83%89%E3%83%A9%E3%82%A4%E3%83%A4%E3%83%BC/",
+   "affiliate": false,
+   "product_url": "https://search.rakuten.co.jp/search/mall/%E3%83%98%E3%82%A2%E3%83%89%E3%83%A9%E3%82%A4%E3%83%A4%E3%83%BC/",
+   "image": null,
+   "other_offers": []
+  },
+  {
+   "id": "sample-y:hair-dryer-1",
+   "rank": 6,
+   "title": "(サンプル) ヘアドライヤー A 大風量 2.0m3/分 1200W 温冷",
+   "name": "(サンプル) ヘアドライヤー A 【20%OFF】大風量 2.0m3/分 1200W 温冷",
+   "store": "yahoo",
+   "store_name": "Yahoo!ショッピング",
+   "shop": "サンプルストア",
+   "price": 4320,
+   "currency": "JPY",
+   "shipping_included": true,
+   "point_rate": 1,
+   "rating": 3.8,
+   "reviews": 1138,
+   "score": 3.81,
+   "variants": false,
+   "price_check": {
+    "verdict": "lowest_observed",
+    "label": "観測31日の最安値",
+    "min_90d": 4320,
+    "median_90d": 4950,
+    "max_90d": 5080,
+    "observed_days": 31,
+    "window_days": 31,
+    "first_seen": "2026-09-02",
+    "weekly_low": [
+     [
+      "2026-09-02",
+      4890
+     ],
+     [
+      "2026-09-10",
+      4870
+     ],
+     [
+      "2026-09-15",
+      4840
+     ],
+     [
+      "2026-09-23",
+      4850
+     ],
+     [
+      "2026-10-02",
+      4320
+     ]
+    ]
+   },
+   "sale_check": {
+    "claimed_pct": 20,
+    "claimed_yen": null,
+    "claimed_up_to": false,
+    "verdict": "genuine",
+    "actual_drop_pct": 12.7,
+    "label": "本当に安い"
+   },
+   "specs": {
+    "watt": 1200,
+    "airflow": 2,
+    "ion": false,
+    "temp_control": true,
+    "foldable": false
+   },
+   "buy_url": "https://search.rakuten.co.jp/search/mall/%E3%83%98%E3%82%A2%E3%83%89%E3%83%A9%E3%82%A4%E3%83%A4%E3%83%BC/",
+   "affiliate_url": "https://search.rakuten.co.jp/search/mall/%E3%83%98%E3%82%A2%E3%83%89%E3%83%A9%E3%82%A4%E3%83%A4%E3%83%BC/",
+   "affiliate": false,
+   "product_url": "https://search.rakuten.co.jp/search/mall/%E3%83%98%E3%82%A2%E3%83%89%E3%83%A9%E3%82%A4%E3%83%A4%E3%83%BC/",
+   "image": null,
+   "other_offers": [
+    {
+     "id": "sample:hair-dryer-1",
+     "store": "rakuten",
+     "store_name": "楽天市場",
+     "shop": "サンプルショップ",
+     "price": 4650,
+     "shipping_included": true,
+     "buy_url": "https://search.rakuten.co.jp/search/mall/%E3%83%98%E3%82%A2%E3%83%89%E3%83%A9%E3%82%A4%E3%83%A4%E3%83%BC/",
+     "affiliate_url": "https://search.rakuten.co.jp/search/mall/%E3%83%98%E3%82%A2%E3%83%89%E3%83%A9%E3%82%A4%E3%83%A4%E3%83%BC/"
+    }
+   ]
+  }
+ ],
+ "stats": {
+  "candidates": 8,
+  "ranked": 6,
+  "rejected": {
+   "duplicate": 2
+  },
+  "meanRating": 4.04,
+  "priorWeight": 50
+ },
+ "links": {
+  "html": "https://bufeks.github.io/LAB/shelf/c/hair-dryer/",
+  "markdown": "https://bufeks.github.io/LAB/shelf/c/hair-dryer.md",
+  "json": "https://bufeks.github.io/LAB/shelf/api/v1/c/hair-dryer.json",
+  "feed": "https://bufeks.github.io/LAB/shelf/c/hair-dryer/feed.xml"
+ },
+ "languages": {
+  "ja": {
+   "html": "https://bufeks.github.io/LAB/shelf/c/hair-dryer/",
+   "markdown": "https://bufeks.github.io/LAB/shelf/c/hair-dryer.md",
+   "json": "https://bufeks.github.io/LAB/shelf/api/v1/c/hair-dryer.json",
+   "feed": "https://bufeks.github.io/LAB/shelf/c/hair-dryer/feed.xml"
+  },
+  "en": {
+   "html": "https://bufeks.github.io/LAB/shelf/en/c/hair-dryer/",
+   "markdown": "https://bufeks.github.io/LAB/shelf/en/c/hair-dryer.md",
+   "json": "https://bufeks.github.io/LAB/shelf/api/v1/en/c/hair-dryer.json",
+   "feed": "https://bufeks.github.io/LAB/shelf/en/c/hair-dryer/feed.xml"
+  },
+  "zh-Hans": {
+   "html": "https://bufeks.github.io/LAB/shelf/zh-hans/c/hair-dryer/",
+   "markdown": "https://bufeks.github.io/LAB/shelf/zh-hans/c/hair-dryer.md",
+   "json": "https://bufeks.github.io/LAB/shelf/api/v1/zh-hans/c/hair-dryer.json",
+   "feed": "https://bufeks.github.io/LAB/shelf/zh-hans/c/hair-dryer/feed.xml"
+  },
+  "zh-Hant": {
+   "html": "https://bufeks.github.io/LAB/shelf/zh-hant/c/hair-dryer/",
+   "markdown": "https://bufeks.github.io/LAB/shelf/zh-hant/c/hair-dryer.md",
+   "json": "https://bufeks.github.io/LAB/shelf/api/v1/zh-hant/c/hair-dryer.json",
+   "feed": "https://bufeks.github.io/LAB/shelf/zh-hant/c/hair-dryer/feed.xml"
+  },
+  "ko": {
+   "html": "https://bufeks.github.io/LAB/shelf/ko/c/hair-dryer/",
+   "markdown": "https://bufeks.github.io/LAB/shelf/ko/c/hair-dryer.md",
+   "json": "https://bufeks.github.io/LAB/shelf/api/v1/ko/c/hair-dryer.json",
+   "feed": "https://bufeks.github.io/LAB/shelf/ko/c/hair-dryer/feed.xml"
+  }
+ },
+ "source": {
+  "name": "Rakuten Ichiba",
+  "credit": {
+   "text": "Supported by Rakuten Developers",
+   "url": "https://developers.rakuten.com/"
+  }
+ }
+}

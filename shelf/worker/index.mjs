@@ -158,6 +158,47 @@ async function go(request, env, url) {
   return new Response(null, { status: 302, headers: { ...headers, Location: target } });
 }
 
+// A personal price watch without accounts: the item ids (and an optional
+// price ceiling) live in the feed URL the user subscribes to. Nothing is
+// stored. Entries point at SHELF pages, never straight at shops.
+const LANG_PREFIX = { ja: '', en: 'en/', 'zh-hans': 'zh-hans/', 'zh-hant': 'zh-hant/', ko: 'ko/' };
+const xmlEsc = (s) => String(s ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&apos;' })[c]);
+
+async function watchFeed(env, url) {
+  const lang = LANG_PREFIX[url.searchParams.get('lang') || 'ja'] !== undefined ? url.searchParams.get('lang') || 'ja' : 'ja';
+  const ids = (url.searchParams.get('ids') || '').split(',').map((s) => s.trim()).filter(Boolean).slice(0, 20);
+  const below = Number(url.searchParams.get('below')) || null;
+  if (!ids.length) return new Response('ids= is required (comma-separated SHELF item ids)', { status: 400 });
+  const items = (await (await asset(env, `${API_PREFIX}${LANG_PREFIX[lang]}items.json`)).json()).items;
+  const base = `${url.origin}/${LANG_PREFIX[lang]}`;
+  const updated = new Date().toISOString();
+  const entries = ids
+    .map((id) => items.find((x) => x.id === id))
+    .filter(Boolean)
+    .filter((x) => (below ? x.price <= below : ['lowest_observed', 'below_usual'].includes(x.verdict)))
+    .map(
+      (x) => `  <entry>
+    <id>${xmlEsc(`${url.origin}/feed/watch#${x.id}@${x.price}`)}</id>
+    <title>${xmlEsc(x.title)}</title>
+    <link rel="alternate" href="${xmlEsc(`${base}c/${x.category}/`)}"/>
+    <updated>${updated}</updated>
+    <summary>${xmlEsc(`¥${x.price.toLocaleString('ja-JP')} — ${x.verdict_label ?? x.verdict}`)}</summary>
+  </entry>`,
+    );
+  track(env, 'watch_feed', String(ids.length), below ? 'below' : 'verdict', '', '', lang);
+  const body = `<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <id>${xmlEsc(url.href)}</id>
+  <title>SHELF price watch</title>
+  <link rel="self" href="${xmlEsc(url.href)}"/>
+  <updated>${updated}</updated>
+  <author><name>SHELF</name></author>
+${entries.join('\n')}
+</feed>
+`;
+  return new Response(body, { headers: { 'Content-Type': 'application/atom+xml; charset=utf-8', 'Cache-Control': 'max-age=3600', ...CORS } });
+}
+
 function wantsMarkdown(request) {
   const accept = request.headers.get('Accept') || '';
   const md = accept.indexOf('text/markdown');
@@ -171,6 +212,7 @@ export default {
     const path = url.pathname;
     if (path === '/mcp' || path === '/mcp/') return mcp(request, env);
     if (path.startsWith('/go/')) return go(request, env, url);
+    if (path === '/feed/watch.xml') return watchFeed(env, url);
     if (request.method === 'OPTIONS' && path.startsWith(API_PREFIX)) return new Response(null, { status: 204, headers: CORS });
 
     let res;

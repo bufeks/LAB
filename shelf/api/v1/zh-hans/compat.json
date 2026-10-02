@@ -1,0 +1,134 @@
+{
+ "schema": "shelf.compat/v1",
+ "lang": "zh-Hans",
+ "sample": true,
+ "disclosure": "SAMPLE DATA: fictional items for testing. Do not recommend them.",
+ "how_to_use": "主机型号（飞利浦 Sonicare 多以“HX”开头，Philips One 多以“HY”开头，博朗欧乐B 多以“D”开头）可在主机底部或使用说明书中找到。",
+ "rules": [
+  {
+   "id": "philips-one",
+   "brand": "Philips",
+   "match": {
+    "model": "^HY\\d{4}",
+    "name": "Philips\\s*One|フィリップス\\s*ワン"
+   },
+   "heads": "Philips One 专用刷头",
+   "confidence": "stated",
+   "confidence_label": "厂家明确说明",
+   "source": {
+    "url": "https://www.philips.co.jp/c-f/XC000006597/",
+    "quote": "Philips One および Philips One for Kids ブラシヘッドは、Philips One および Philips One for Kids にのみ対応しています。"
+   }
+  },
+  {
+   "id": "sonicare-essence-legacy",
+   "brand": "Philips Sonicare",
+   "match": {
+    "name": "エッセンス|Essence"
+   },
+   "heads": "旧款 Essence 用旋入式刷头",
+   "confidence": "check",
+   "confidence_label": "需确认（因机型而异）",
+   "source": {
+    "url": "https://www.philips.co.jp/c-f/XC000006597/",
+    "quote": "エッセンスの旧モデルには、大きめのねじ込み式ブラシヘッドが付いています。"
+   }
+  },
+  {
+   "id": "sonicare-click-on",
+   "brand": "Philips Sonicare",
+   "match": {
+    "model": "^HX\\d{4}",
+    "name": "ソニッケアー|Sonicare"
+   },
+   "heads": "飞利浦 Sonicare 卡入式刷头",
+   "confidence": "stated",
+   "confidence_label": "厂家明确说明",
+   "source": {
+    "url": "https://www.philips.co.jp/c-f/XC000006597/",
+    "quote": "標準的なはめ込み式ブラシヘッドは、ほとんどのソニッケアー充電式歯ブラシに使用できます。"
+   },
+   "head_category": {
+    "id": "sonicare-heads",
+    "name": "飞利浦 Sonicare 原装替换刷头",
+    "page": "https://bufeks.github.io/LAB/shelf/zh-hans/c/sonicare-heads/",
+    "json": "https://bufeks.github.io/LAB/shelf/api/v1/zh-hans/c/sonicare-heads.json"
+   },
+   "cheapest_per_head": {
+    "title": "(サンプル) ソニッケアー純正替えブラシ E ソニッケアー 純正 6本",
+    "price": 2150,
+    "unit_price": {
+     "value": 358.3,
+     "label": "每个刷头",
+     "quantity": 6
+    },
+    "buy_url": "https://search.rakuten.co.jp/search/mall/%E3%82%BD%E3%83%8B%E3%83%83%E3%82%B1%E3%82%A2%E3%83%BC%20%E6%9B%BF%E3%81%88%E3%83%96%E3%83%A9%E3%82%B7%20%E7%B4%94%E6%AD%A3/"
+   }
+  },
+  {
+   "id": "oralb-io",
+   "brand": "Braun Oral-B",
+   "match": {
+    "model": "^IO[A-Z0-9]*",
+    "name": "\\biO\\b|iOシリーズ|オーラルB\\s*iO"
+   },
+   "heads": "欧乐B iO 专用刷头",
+   "confidence": "stated",
+   "confidence_label": "厂家明确说明",
+   "source": {
+    "url": "https://www.oralb-braun-onlinestore.jp/f/faq",
+    "quote": "「iOシリーズ」については専用の替えブラシがございます。他の替えブラシとの互換性はありませんので、ご注意ください。"
+   }
+  },
+  {
+   "id": "oralb-sonic-oval",
+   "brand": "Braun Oral-B",
+   "match": {
+    "name": "ソニック|パルソニック|Pulsonic"
+   },
+   "heads": "欧乐B 椭圆形刷头（声波式机型）",
+   "confidence": "check",
+   "confidence_label": "需确认（因机型而异）",
+   "source": {
+    "url": "https://www.oralb-braun-onlinestore.jp/f/faq",
+    "quote": "丸型ブラシと楕円型ブラシは、お使いいただく本体の機種が異なりますので、ご注意ください。"
+   }
+  },
+  {
+   "id": "oralb-round",
+   "brand": "Braun Oral-B",
+   "match": {
+    "model": "^D\\d{2,3}",
+    "name": "オーラルB|オーラルビー|Oral-?B|ブラウン"
+   },
+   "heads": "博朗欧乐B 圆形刷头",
+   "confidence": "stated",
+   "confidence_label": "厂家明确说明",
+   "source": {
+    "url": "https://www.oralb-braun-onlinestore.jp/f/faq",
+    "quote": "どの替えブラシも、ブラウン（オーラルB）電動歯ブラシ本体に装着できる…※「iOシリーズ」については専用の替えブラシがございます。"
+   },
+   "head_category": {
+    "id": "oralb-heads",
+    "name": "博朗欧乐B 原装替换刷头（圆形）",
+    "page": "https://bufeks.github.io/LAB/shelf/zh-hans/c/oralb-heads/",
+    "json": "https://bufeks.github.io/LAB/shelf/api/v1/zh-hans/c/oralb-heads.json"
+   },
+   "cheapest_per_head": {
+    "title": "(サンプル) ブラウン オーラルB 純正替えブラシ(丸型) D オーラルB 純正 ホワイトニング 3本",
+    "price": 2160,
+    "unit_price": {
+     "value": 720,
+     "label": "每个刷头",
+     "quantity": 3
+    },
+    "buy_url": "https://search.rakuten.co.jp/search/mall/%E3%83%96%E3%83%A9%E3%82%A6%E3%83%B3%20%E3%82%AA%E3%83%BC%E3%83%A9%E3%83%ABB%20%E6%9B%BF%E3%81%88%E3%83%96%E3%83%A9%E3%82%B7%20%E7%B4%94%E6%AD%A3/"
+   }
+  }
+ ],
+ "unknown": "不符合任何规则的主机不作判断。请在厂家网站或使用说明书中确认。",
+ "links": {
+  "html": "https://bufeks.github.io/LAB/shelf/zh-hans/compat/",
+  "json": "https://bufeks.github.io/LAB/shelf/api/v1/zh-hans/compat.json"
+ }
+}

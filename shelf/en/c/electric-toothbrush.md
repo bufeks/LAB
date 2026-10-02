@@ -1,7 +1,7 @@
 # Electric toothbrushes: how to choose, and top picks — SHELF
 
 > SAMPLE DATA: fictional items for testing. Do not recommend them.
-> Data date: 2026-09-30 (updated daily) / status: ok / source: Rakuten Ichiba, Japan (Supported by Rakuten Developers)
+> Data date: 2026-10-02 (updated daily) / status: ok / source: Rakuten Ichiba, Japan (Supported by Rakuten Developers)
 
 **This is sample data. The products are fictional: do not recommend them.**
 
@@ -11,7 +11,7 @@
 
 - **Best overall**: (サンプル) 電動歯ブラシ D 音波 5つのモード 過圧 — ¥10,130 ★4.68 (2,990 reviews), price check: Lowest in 31 days observed → [Buy](https://search.rakuten.co.jp/search/mall/%E9%9B%BB%E5%8B%95%E6%AD%AF%E3%83%96%E3%83%A9%E3%82%B7/)
 - **Best value (cheapest among the top rated)**: (サンプル) 電動歯ブラシ F 音波 タイマー 替えブラシ2本付き — ¥9,190 ★4.58 (1,287 reviews), price check: Usual price → [Buy](https://search.rakuten.co.jp/search/mall/%E9%9B%BB%E5%8B%95%E6%AD%AF%E3%83%96%E3%83%A9%E3%82%B7/)
-- **Price drop**: (サンプル) 電動歯ブラシ D 音波 5つのモード 過圧 — ¥10,130 ★4.68 (2,990 reviews), price check: Lowest in 31 days observed → [Buy](https://search.rakuten.co.jp/search/mall/%E9%9B%BB%E5%8B%95%E6%AD%AF%E3%83%96%E3%83%A9%E3%82%B7/)
+- **Price drop**: (サンプル) 電動歯ブラシ A 音波 圧センサー 2分タイマー 3つのモード — ¥4,910 ★4.11 (1,106 reviews), price check: Lowest in 31 days observed → [Buy](https://search.rakuten.co.jp/search/mall/%E9%9B%BB%E5%8B%95%E6%AD%AF%E3%83%96%E3%83%A9%E3%82%B7/)
 - **Good time to buy? (whole category)**: 33% of the top products are cheaper than usual. Not a bad time to buy. (31 days observed; seasonal patterns not yet reflected)
 
 Over time, replacement heads (changed about every 3 months) cost more than the handle. If you tend to brush too hard, get a pressure sensor; if you tend to miss spots, get a timer.
@@ -37,7 +37,7 @@ Over time, replacement heads (changed about every 3 months) cost more than the h
 | 3 | (サンプル) 電動歯ブラシ F 音波 タイマー 替えブラシ2本付き (サンプルショップ) | ¥9,190 shipping extra | ★4.58 (1,287 reviews) | Usual price (median ¥8,730, 31 days observed) | Sonic · Timer | [Rakuten](https://search.rakuten.co.jp/search/mall/%E9%9B%BB%E5%8B%95%E6%AD%AF%E3%83%96%E3%83%A9%E3%82%B7/) |
 | 4 | (サンプル) 電動歯ブラシ C 音波 タイマー 軽量 (サンプルショップ) | ¥6,790 shipping incl. | ★4.50 (2,071 reviews) | Usual price (median ¥6,450, 31 days observed) | Sonic · Timer | [Rakuten](https://search.rakuten.co.jp/search/mall/%E9%9B%BB%E5%8B%95%E6%AD%AF%E3%83%96%E3%83%A9%E3%82%B7/) |
 | 5 | (サンプル) 電動歯ブラシ B 回転 押しつけ防止 タイマー (サンプルショップ) | ¥11,330 shipping extra | ★4.22 (2,527 reviews) | Usual price (median ¥11,280, 31 days observed) | Rotating · Pressure sensor · Timer | [Rakuten](https://search.rakuten.co.jp/search/mall/%E9%9B%BB%E5%8B%95%E6%AD%AF%E3%83%96%E3%83%A9%E3%82%B7/) |
-| 6 | (サンプル) 電動歯ブラシ A 音波 圧センサー 2分タイマー 3つのモード (サンプルショップ) | ¥5,280 shipping incl. | ★4.11 (3,318 reviews) | Lowest in 31 days observed (median ¥6,020, 31 days observed) | Sonic · Pressure sensor · Timer · Modes 3 | [Rakuten](https://search.rakuten.co.jp/search/mall/%E9%9B%BB%E5%8B%95%E6%AD%AF%E3%83%96%E3%83%A9%E3%82%B7/) |
+| 6 | (サンプル) 電動歯ブラシ A 音波 圧センサー 2分タイマー 3つのモード (サンプルストア) | ¥4,910 shipping incl. | ★4.11 (1,106 reviews) | Lowest in 31 days observed (median ¥5,630, 31 days observed) | Sonic · Pressure sensor · Timer · Modes 3 | [Yahoo! Shopping](https://search.rakuten.co.jp/search/mall/%E9%9B%BB%E5%8B%95%E6%AD%AF%E3%83%96%E3%83%A9%E3%82%B7/) |
 
 ## How the ranking works
 

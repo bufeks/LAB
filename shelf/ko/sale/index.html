@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>세일 가격 진위 확인｜SHELF</title>
+<meta name="description" content="상품명의 “○% OFF”, “반값” 같은 표시를 SHELF가 매일 기록하는 실제 가격 추이와 대조해, 정말 싸졌는지 판정합니다.">
+<meta name="robots" content="noindex">
+<link rel="canonical" href="https://bufeks.github.io/LAB/shelf/ko/sale/">
+<link rel="alternate" type="application/json" href="https://bufeks.github.io/LAB/shelf/api/v1/ko/sale.json">
+<link rel="alternate" hreflang="ja" href="https://bufeks.github.io/LAB/shelf/sale/">
+<link rel="alternate" hreflang="en" href="https://bufeks.github.io/LAB/shelf/en/sale/">
+<link rel="alternate" hreflang="zh-Hans" href="https://bufeks.github.io/LAB/shelf/zh-hans/sale/">
+<link rel="alternate" hreflang="zh-Hant" href="https://bufeks.github.io/LAB/shelf/zh-hant/sale/">
+<link rel="alternate" hreflang="ko" href="https://bufeks.github.io/LAB/shelf/ko/sale/">
+<link rel="alternate" hreflang="x-default" href="https://bufeks.github.io/LAB/shelf/en/sale/">
+<link rel="stylesheet" href="../../assets/style.css">
+
+</head>
+<body>
+<header class="top"><a class="brand" href="https://bufeks.github.io/LAB/shelf/ko/">SHELF</a><span class="tag">AI 에이전트를 위한 쇼핑 데이터</span><nav class="langs" aria-label="언어"><a href="https://bufeks.github.io/LAB/shelf/sale/" hreflang="ja">日本語</a> <a href="https://bufeks.github.io/LAB/shelf/en/sale/" hreflang="en">English</a> <a href="https://bufeks.github.io/LAB/shelf/zh-hans/sale/" hreflang="zh-Hans">简体中文</a> <a href="https://bufeks.github.io/LAB/shelf/zh-hant/sale/" hreflang="zh-Hant">繁體中文</a> <b>한국어</b></nav></header>
+<p class="sample">샘플 데이터 표시 중: 실제 상품이 아닙니다 (라쿠텐 API 키를 설정하면 실제 데이터로 바뀝니다)</p>
+<main>
+<p class="pr">광고 · 제휴 링크 포함</p>
+<h1>세일 가격 진위 확인</h1>
+<p class="lead">상품명의 “○% OFF”, “반값” 같은 표시를 SHELF가 매일 기록하는 실제 가격 추이와 대조해, 정말 싸졌는지 판정합니다.</p>
+<p class="meta">데이터 날짜 2026-10-02 · 매일 업데이트 · 상품 4개</p>
+<h2>오늘의 이벤트</h2>
+<p>대형 세일은 감지되지 않았습니다.</p>
+<h2><span class="sale s-genuine">정말 쌈</span> (2)</h2>
+<p><small>평소 가격보다 실제로 내린 상품.</small></p>
+<ul class="sale-list"><li><a href="https://bufeks.github.io/LAB/shelf/ko/c/hair-dryer/">헤어드라이어</a> — <span lang="ja">(サンプル) ヘアドライヤー A 大風量 2.0m3/分 1200W 温冷</span><br><strong>4,320엔</strong> · 표시: 20%OFF · 실제: 평소(중앙값 4,950엔)보다 12.7% 쌈</li>
+<li><a href="https://bufeks.github.io/LAB/shelf/ko/c/air-purifier/">공기청정기</a> — <span lang="ja">(サンプル) 空気清浄機 A スーパーSALE 25畳 HEPA</span><br><strong>22,200엔</strong> · 표시: 15%OFF · 실제: 평소(중앙값 25,310엔)보다 12.3% 쌈</li></ul>
+<h2><span class="sale s-smaller_than_claimed">표시만큼 싸지 않음</span> (1)</h2>
+<p><small>내리기는 했지만 표시된 할인율보다 훨씬 작은 상품.</small></p>
+<ul class="sale-list"><li><a href="https://bufeks.github.io/LAB/shelf/ko/c/rice-cooker/">전기밥솥</a> — <span lang="ja">(サンプル) 炊飯器 A 半額 5.5合 圧力IH 予約</span><br><strong>19,800엔</strong> · 표시: 50%OFF · 실제: 평소(중앙값 22,690엔)보다 12.7% 쌈</li></ul>
+
+<h2><span class="sale s-coupon">쿠폰 할인 (가격에 미반영)</span> (1)</h2>
+<p><small>쿠폰을 쓰면 싸지는 상품. 표시 가격에는 쿠폰이 포함되지 않으므로 조건과 한도를 확인한다.</small></p>
+<ul class="sale-list"><li><a href="https://bufeks.github.io/LAB/shelf/ko/c/hair-dryer/">헤어드라이어</a> — <span lang="ja">(サンプル) ヘアドライヤー B 1.3m3/分 折りたたみ イオン</span><br><strong>5,070엔</strong> · 표시: 최대 30%OFF</li></ul>
+
+<h2>랭킹 산정 방법</h2><p>판정은 그 상품 자체의 과거 가격(배송 조건이 같은 날의 중앙값, 최대 90일)과 오늘 가격의 차이로 합니다. 상점이 표시하는 “정상가”, “정가”는 쓰지 않습니다. 표시된 할인율의 절반 이상(“최대 ○%”는 4분의 1 이상)이면서 5% 이상 내렸으면 “정말 쌈”, 3% 이상이면 “표시만큼 싸지 않음”, 그 미만은 “평소와 같은 가격”. 쿠폰은 표시 가격에 포함되지 않으므로 따로 다룹니다. 관측 7일 미만은 “미검증”.</p>
+<p class="data">이 페이지의 데이터: <a href="https://bufeks.github.io/LAB/shelf/api/v1/ko/sale.json">JSON</a></p>
+</main>
+<footer>
+<p>광고: 구매 링크는 제휴 링크입니다(라쿠텐 어필리에이트, 밸류커머스를 통한 Yahoo! 쇼핑). 링크를 통해 구매하면 운영자가 수수료를 받지만 가격은 같습니다. 순위는 공개된 공식으로만 정해지며, 수수료율은 순위에도 어느 상점을 보여 줄지에도 영향을 주지 않습니다.</p>
+<p><a href="https://developers.rakuten.com/">Supported by Rakuten Developers</a> ・ <span style="margin:15px 15px 15px 15px"><a href="https://developer.yahoo.co.jp/sitemap/">Web Services by Yahoo! JAPAN</a></span> ・ <a href="https://bufeks.github.io/LAB/shelf/ko/llms.txt">llms.txt</a> ・ <a href="https://bufeks.github.io/LAB/shelf/openapi.json">OpenAPI</a> ・ <a href="https://bufeks.github.io/LAB/shelf/en/about/">에이전트 사용 안내 (English)</a></p>
+</footer>
+</body>
+</html>

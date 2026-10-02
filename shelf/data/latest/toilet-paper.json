@@ -1,0 +1,425 @@
+{
+ "categoryId": "toilet-paper",
+ "date": "2026-10-02",
+ "fetchedAt": "2026-10-02T14:41:13+09:00",
+ "items": [
+  {
+   "id": "sample:toilet-paper-4",
+   "source": "rakuten",
+   "name": "(サンプル) トイレットペーパー D 3倍巻き 8ロール 150m シングル",
+   "caption": "",
+   "shop": "サンプルショップ",
+   "price": 4130,
+   "shippingIncluded": false,
+   "pointRate": 1,
+   "rating": 4.61,
+   "reviews": 2465,
+   "productUrl": "https://search.rakuten.co.jp/search/mall/%E3%83%88%E3%82%A4%E3%83%AC%E3%83%83%E3%83%88%E3%83%9A%E3%83%BC%E3%83%91%E3%83%BC%20%E3%81%BE%E3%81%A8%E3%82%81%E8%B2%B7%E3%81%84/",
+   "buyUrl": "https://search.rakuten.co.jp/search/mall/%E3%83%88%E3%82%A4%E3%83%AC%E3%83%83%E3%83%88%E3%83%9A%E3%83%BC%E3%83%91%E3%83%BC%20%E3%81%BE%E3%81%A8%E3%82%81%E8%B2%B7%E3%81%84/",
+   "affiliate": false,
+   "image": null,
+   "available": true,
+   "title": "(サンプル) トイレットペーパー D 3倍巻き 8ロール 150m シングル",
+   "variants": false,
+   "score": 4.602,
+   "facets": {
+    "rolls": 8,
+    "roll_m": 150,
+    "ply": "single",
+    "long_roll": true
+   },
+   "claimed": null,
+   "unit": {
+    "quantity": 1200,
+    "value": 344.2
+   },
+   "otherOffers": [
+    {
+     "id": "sample-y:toilet-paper-2",
+     "store": "yahoo",
+     "shop": "サンプルストア",
+     "price": 4300,
+     "shippingIncluded": true,
+     "buyUrl": "https://search.rakuten.co.jp/search/mall/%E3%83%88%E3%82%A4%E3%83%AC%E3%83%83%E3%83%88%E3%83%9A%E3%83%BC%E3%83%91%E3%83%BC%20%E3%81%BE%E3%81%A8%E3%82%81%E8%B2%B7%E3%81%84/",
+     "affiliate": false
+    }
+   ],
+   "rank": 1,
+   "priceStats": {
+    "points": 31,
+    "windowDays": 31,
+    "firstSeen": "2026-09-02",
+    "min90": 4130,
+    "median90": 4710,
+    "max90": 4850,
+    "verdict": "lowest_observed"
+   },
+   "priceWeekly": [
+    [
+     "2026-09-02",
+     4680
+    ],
+    [
+     "2026-09-07",
+     4630
+    ],
+    [
+     "2026-09-17",
+     4620
+    ],
+    [
+     "2026-09-21",
+     4620
+    ],
+    [
+     "2026-10-02",
+     4130
+    ]
+   ]
+  },
+  {
+   "id": "sample:toilet-paper-1",
+   "source": "rakuten",
+   "name": "(サンプル) トイレットペーパー A 12ロール 50m ダブル",
+   "caption": "",
+   "shop": "サンプルショップ",
+   "price": 4190,
+   "shippingIncluded": true,
+   "pointRate": 1,
+   "rating": 4.51,
+   "reviews": 964,
+   "productUrl": "https://search.rakuten.co.jp/search/mall/%E3%83%88%E3%82%A4%E3%83%AC%E3%83%83%E3%83%88%E3%83%9A%E3%83%BC%E3%83%91%E3%83%BC%20%E3%81%BE%E3%81%A8%E3%82%81%E8%B2%B7%E3%81%84/",
+   "buyUrl": "https://search.rakuten.co.jp/search/mall/%E3%83%88%E3%82%A4%E3%83%AC%E3%83%83%E3%83%88%E3%83%9A%E3%83%BC%E3%83%91%E3%83%BC%20%E3%81%BE%E3%81%A8%E3%82%81%E8%B2%B7%E3%81%84/",
+   "affiliate": false,
+   "image": null,
+   "available": true,
+   "title": "(サンプル) トイレットペーパー A 12ロール 50m ダブル",
+   "variants": false,
+   "score": 4.496,
+   "facets": {
+    "rolls": 12,
+    "roll_m": 50,
+    "ply": "double",
+    "long_roll": false
+   },
+   "claimed": null,
+   "unit": {
+    "quantity": 1200,
+    "value": 349.2
+   },
+   "otherOffers": [
+    {
+     "id": "sample-y:toilet-paper-1",
+     "store": "yahoo",
+     "shop": "サンプルストア",
+     "price": 3900,
+     "shippingIncluded": true,
+     "buyUrl": "https://search.rakuten.co.jp/search/mall/%E3%83%88%E3%82%A4%E3%83%AC%E3%83%83%E3%83%88%E3%83%9A%E3%83%BC%E3%83%91%E3%83%BC%20%E3%81%BE%E3%81%A8%E3%82%81%E8%B2%B7%E3%81%84/",
+     "affiliate": false
+    }
+   ],
+   "rank": 2,
+   "priceStats": {
+    "points": 31,
+    "windowDays": 31,
+    "firstSeen": "2026-09-02",
+    "min90": 4190,
+    "median90": 4780,
+    "max90": 4940,
+    "verdict": "lowest_observed"
+   },
+   "priceWeekly": [
+    [
+     "2026-09-02",
+     4740
+    ],
+    [
+     "2026-09-05",
+     4700
+    ],
+    [
+     "2026-09-13",
+     4750
+    ],
+    [
+     "2026-09-25",
+     4680
+    ],
+    [
+     "2026-10-02",
+     4190
+    ]
+   ]
+  },
+  {
+   "id": "sample:toilet-paper-6",
+   "source": "rakuten",
+   "name": "(サンプル) トイレットペーパー F 4ロール×12パック 30m ダブル",
+   "caption": "",
+   "shop": "サンプルショップ",
+   "price": 6100,
+   "shippingIncluded": false,
+   "pointRate": 1,
+   "rating": 4.49,
+   "reviews": 651,
+   "productUrl": "https://search.rakuten.co.jp/search/mall/%E3%83%88%E3%82%A4%E3%83%AC%E3%83%83%E3%83%88%E3%83%9A%E3%83%BC%E3%83%91%E3%83%BC%20%E3%81%BE%E3%81%A8%E3%82%81%E8%B2%B7%E3%81%84/",
+   "buyUrl": "https://search.rakuten.co.jp/search/mall/%E3%83%88%E3%82%A4%E3%83%AC%E3%83%83%E3%83%88%E3%83%9A%E3%83%BC%E3%83%91%E3%83%BC%20%E3%81%BE%E3%81%A8%E3%82%81%E8%B2%B7%E3%81%84/",
+   "affiliate": false,
+   "image": null,
+   "available": true,
+   "title": "(サンプル) トイレットペーパー F 4ロール×12パック 30m ダブル",
+   "variants": false,
+   "score": 4.471,
+   "facets": {
+    "rolls": 4,
+    "roll_m": 30,
+    "ply": "double",
+    "long_roll": false
+   },
+   "claimed": null,
+   "unit": {
+    "quantity": 2880,
+    "value": 211.8
+   },
+   "otherOffers": [],
+   "rank": 3,
+   "priceStats": {
+    "points": 31,
+    "windowDays": 31,
+    "firstSeen": "2026-09-02",
+    "min90": 5620,
+    "median90": 5800,
+    "max90": 6100,
+    "verdict": "usual"
+   },
+   "priceWeekly": [
+    [
+     "2026-09-02",
+     5710
+    ],
+    [
+     "2026-09-06",
+     5640
+    ],
+    [
+     "2026-09-12",
+     5640
+    ],
+    [
+     "2026-09-24",
+     5660
+    ],
+    [
+     "2026-10-01",
+     5620
+    ]
+   ]
+  },
+  {
+   "id": "sample:toilet-paper-2",
+   "source": "rakuten",
+   "name": "(サンプル) トイレットペーパー B 2倍巻き 6ロール 100m シングル",
+   "caption": "",
+   "shop": "サンプルショップ",
+   "price": 6250,
+   "shippingIncluded": false,
+   "pointRate": 1,
+   "rating": 4.13,
+   "reviews": 3710,
+   "productUrl": "https://search.rakuten.co.jp/search/mall/%E3%83%88%E3%82%A4%E3%83%AC%E3%83%83%E3%83%88%E3%83%9A%E3%83%BC%E3%83%91%E3%83%BC%20%E3%81%BE%E3%81%A8%E3%82%81%E8%B2%B7%E3%81%84/",
+   "buyUrl": "https://search.rakuten.co.jp/search/mall/%E3%83%88%E3%82%A4%E3%83%AC%E3%83%83%E3%83%88%E3%83%9A%E3%83%BC%E3%83%91%E3%83%BC%20%E3%81%BE%E3%81%A8%E3%82%81%E8%B2%B7%E3%81%84/",
+   "affiliate": false,
+   "image": null,
+   "available": true,
+   "title": "(サンプル) トイレットペーパー B 2倍巻き 6ロール 100m シングル",
+   "variants": false,
+   "score": 4.131,
+   "facets": {
+    "rolls": 6,
+    "roll_m": 100,
+    "ply": "single",
+    "long_roll": true
+   },
+   "claimed": null,
+   "unit": {
+    "quantity": 600,
+    "value": 1041.7
+   },
+   "otherOffers": [],
+   "rank": 4,
+   "priceStats": {
+    "points": 31,
+    "windowDays": 31,
+    "firstSeen": "2026-09-02",
+    "min90": 6080,
+    "median90": 6220,
+    "max90": 6430,
+    "verdict": "usual"
+   },
+   "priceWeekly": [
+    [
+     "2026-09-04",
+     6080
+    ],
+    [
+     "2026-09-05",
+     6100
+    ],
+    [
+     "2026-09-17",
+     6100
+    ],
+    [
+     "2026-09-25",
+     6100
+    ],
+    [
+     "2026-09-28",
+     6130
+    ]
+   ]
+  },
+  {
+   "id": "sample:toilet-paper-5",
+   "source": "rakuten",
+   "name": "(サンプル) トイレットペーパー E 12ロール 60m シングル",
+   "caption": "",
+   "shop": "サンプルショップ",
+   "price": 4090,
+   "shippingIncluded": true,
+   "pointRate": 1,
+   "rating": 4.01,
+   "reviews": 2099,
+   "productUrl": "https://search.rakuten.co.jp/search/mall/%E3%83%88%E3%82%A4%E3%83%AC%E3%83%83%E3%83%88%E3%83%9A%E3%83%BC%E3%83%91%E3%83%BC%20%E3%81%BE%E3%81%A8%E3%82%81%E8%B2%B7%E3%81%84/",
+   "buyUrl": "https://search.rakuten.co.jp/search/mall/%E3%83%88%E3%82%A4%E3%83%AC%E3%83%83%E3%83%88%E3%83%9A%E3%83%BC%E3%83%91%E3%83%BC%20%E3%81%BE%E3%81%A8%E3%82%81%E8%B2%B7%E3%81%84/",
+   "affiliate": false,
+   "image": null,
+   "available": true,
+   "title": "(サンプル) トイレットペーパー E 12ロール 60m シングル",
+   "variants": false,
+   "score": 4.015,
+   "facets": {
+    "rolls": 12,
+    "roll_m": 60,
+    "ply": "single",
+    "long_roll": false
+   },
+   "claimed": null,
+   "unit": {
+    "quantity": 720,
+    "value": 568.1
+   },
+   "otherOffers": [],
+   "rank": 5,
+   "priceStats": {
+    "points": 31,
+    "windowDays": 31,
+    "firstSeen": "2026-09-02",
+    "min90": 3970,
+    "median90": 4080,
+    "max90": 4210,
+    "verdict": "usual"
+   },
+   "priceWeekly": [
+    [
+     "2026-09-04",
+     3990
+    ],
+    [
+     "2026-09-10",
+     4000
+    ],
+    [
+     "2026-09-13",
+     3970
+    ],
+    [
+     "2026-09-25",
+     4050
+    ],
+    [
+     "2026-09-29",
+     4000
+    ]
+   ]
+  },
+  {
+   "id": "sample:toilet-paper-3",
+   "source": "rakuten",
+   "name": "(サンプル) トイレットペーパー C 18ロール 27.5m ダブル",
+   "caption": "",
+   "shop": "サンプルショップ",
+   "price": 1250,
+   "shippingIncluded": true,
+   "pointRate": 1,
+   "rating": 3.9,
+   "reviews": 3336,
+   "productUrl": "https://search.rakuten.co.jp/search/mall/%E3%83%88%E3%82%A4%E3%83%AC%E3%83%83%E3%83%88%E3%83%9A%E3%83%BC%E3%83%91%E3%83%BC%20%E3%81%BE%E3%81%A8%E3%82%81%E8%B2%B7%E3%81%84/",
+   "buyUrl": "https://search.rakuten.co.jp/search/mall/%E3%83%88%E3%82%A4%E3%83%AC%E3%83%83%E3%83%88%E3%83%9A%E3%83%BC%E3%83%91%E3%83%BC%20%E3%81%BE%E3%81%A8%E3%82%81%E8%B2%B7%E3%81%84/",
+   "affiliate": false,
+   "image": null,
+   "available": true,
+   "title": "(サンプル) トイレットペーパー C 18ロール 27.5m ダブル",
+   "variants": false,
+   "score": 3.905,
+   "facets": {
+    "rolls": 18,
+    "roll_m": 27.5,
+    "ply": "double",
+    "long_roll": false
+   },
+   "claimed": null,
+   "unit": {
+    "quantity": 990,
+    "value": 126.3
+   },
+   "otherOffers": [],
+   "rank": 6,
+   "priceStats": {
+    "points": 31,
+    "windowDays": 31,
+    "firstSeen": "2026-09-02",
+    "min90": 1150,
+    "median90": 1190,
+    "max90": 1250,
+    "verdict": "usual"
+   },
+   "priceWeekly": [
+    [
+     "2026-09-02",
+     1170
+    ],
+    [
+     "2026-09-05",
+     1160
+    ],
+    [
+     "2026-09-14",
+     1170
+    ],
+    [
+     "2026-09-21",
+     1160
+    ],
+    [
+     "2026-09-27",
+     1150
+    ]
+   ]
+  }
+ ],
+ "stats": {
+  "candidates": 8,
+  "ranked": 6,
+  "rejected": {
+   "duplicate": 2
+  },
+  "meanRating": 4.22,
+  "priorWeight": 50
+ },
+ "picks": {
+  "best": "sample:toilet-paper-4",
+  "deal": "sample:toilet-paper-1",
+  "per_unit": "sample:toilet-paper-1"
+ }
+}

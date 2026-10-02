@@ -1,7 +1,7 @@
 # Humidifiers: how to choose, and top picks — SHELF
 
 > SAMPLE DATA: fictional items for testing. Do not recommend them.
-> Data date: 2026-09-30 (updated daily) / status: ok / source: Rakuten Ichiba, Japan (Supported by Rakuten Developers)
+> Data date: 2026-10-02 (updated daily) / status: ok / source: Rakuten Ichiba, Japan (Supported by Rakuten Developers)
 
 **This is sample data. The products are fictional: do not recommend them.**
 
@@ -11,8 +11,8 @@
 
 - **Best overall**: (サンプル) 加湿器 F 超音波式 アロマ対応 8畳 — ¥10,060 ★4.71 (2,239 reviews), price check: Usual price → [Buy](https://search.rakuten.co.jp/search/mall/%E5%8A%A0%E6%B9%BF%E5%99%A8/)
 - **Best value (cheapest among the top rated)**: (サンプル) 加湿器 C 超音波式 6畳 300mL/h タンク2.5L — ¥8,460 ★4.26 (3,126 reviews), price check: Usual price → [Buy](https://search.rakuten.co.jp/search/mall/%E5%8A%A0%E6%B9%BF%E5%99%A8/)
-- **Price drop**: (サンプル) 加湿器 D ハイブリッド 14畳 600mL/h タンク4.0L — ¥7,250 ★4.03 (3,768 reviews), price check: Lowest in 31 days observed → [Buy](https://search.rakuten.co.jp/search/mall/%E5%8A%A0%E6%B9%BF%E5%99%A8/)
-- **Good time to buy? (whole category)**: 33% of the top products are cheaper than usual. Not a bad time to buy. (31 days observed; seasonal patterns not yet reflected)
+- **Price drop**: (サンプル) 加湿器 A スチーム式 木造8畳/プレハブ13畳 480mL/h タンク3.0L — ¥14,220 ★3.98 (91 reviews), price check: Lowest in 31 days observed → [Buy](https://search.rakuten.co.jp/search/mall/%E5%8A%A0%E6%B9%BF%E5%99%A8/)
+- **Good time to buy? (whole category)**: Mostly at usual prices; no sign that waiting would make it much cheaper. (31 days observed; seasonal patterns not yet reflected)
 
 The type changes everything. For hygiene, steam (higher running cost); for low running cost, evaporative; for size and price, ultrasonic (only with regular cleaning). Choose a rated room size a step larger than your room.
 
@@ -38,8 +38,8 @@ The type changes everything. For hygiene, steam (higher running cost); for low r
 | 2 | (サンプル) 加湿器 B 気化式 18畳 700mL/h タンク4.2L (サンプルショップ) | ¥15,520 shipping extra | ★4.65 (516 reviews) | Usual price (median ¥15,450, 31 days observed) | Output 700 mL/h · Room size (max) 18 jō (tatami mats, about 1.62 m² each) · Tank 4.2L · Evaporative | [Rakuten](https://search.rakuten.co.jp/search/mall/%E5%8A%A0%E6%B9%BF%E5%99%A8/) |
 | 3 | (サンプル) 加湿器 C 超音波式 6畳 300mL/h タンク2.5L (サンプルショップ) | ¥8,460 shipping incl. | ★4.26 (3,126 reviews) | Usual price (median ¥8,040, 31 days observed) | Output 300 mL/h · Room size (max) 6 jō (tatami mats, about 1.62 m² each) · Tank 2.5L · Ultrasonic | [Rakuten](https://search.rakuten.co.jp/search/mall/%E5%8A%A0%E6%B9%BF%E5%99%A8/) |
 | 4 | (サンプル) 加湿器 E スチーム式 10畳 タンク2.2L (サンプルショップ) | ¥4,320 shipping incl. | ★4.08 (689 reviews) | Usual price (median ¥4,310, 31 days observed) | Room size (max) 10 jō (tatami mats, about 1.62 m² each) · Tank 2.2L · Steam | [Rakuten](https://search.rakuten.co.jp/search/mall/%E5%8A%A0%E6%B9%BF%E5%99%A8/) |
-| 5 | (サンプル) 加湿器 D ハイブリッド 14畳 600mL/h タンク4.0L (サンプルショップ) | ¥7,250 shipping extra | ★4.03 (3,768 reviews) | Lowest in 31 days observed (median ¥8,280, 31 days observed) | Output 600 mL/h · Room size (max) 14 jō (tatami mats, about 1.62 m² each) · Tank 4L · Hybrid | [Rakuten](https://search.rakuten.co.jp/search/mall/%E5%8A%A0%E6%B9%BF%E5%99%A8/) |
-| 6 | (サンプル) 加湿器 A スチーム式 木造8畳/プレハブ13畳 480mL/h タンク3.0L (サンプルショップ) | ¥15,290 shipping incl. | ★3.98 (272 reviews) | Lowest in 31 days observed (median ¥17,440, 31 days observed) | Output 480 mL/h · Room size (max) 13 jō (tatami mats, about 1.62 m² each) · Tank 3L · Steam | [Rakuten](https://search.rakuten.co.jp/search/mall/%E5%8A%A0%E6%B9%BF%E5%99%A8/) |
+| 5 | (サンプル) 加湿器 A スチーム式 木造8畳/プレハブ13畳 480mL/h タンク3.0L (サンプルストア) | ¥14,220 shipping incl. | ★3.98 (91 reviews) | Lowest in 31 days observed (median ¥16,290, 31 days observed) | Output 480 mL/h · Room size (max) 13 jō (tatami mats, about 1.62 m² each) · Tank 3L · Steam | [Yahoo! Shopping](https://search.rakuten.co.jp/search/mall/%E5%8A%A0%E6%B9%BF%E5%99%A8/) |
+| 6 | (サンプル) 加湿器 D ハイブリッド 14畳 600mL/h タンク4.0L (サンプルストア) | ¥7,540 shipping incl. | ★4.03 (1,256 reviews) | Usual price (median ¥7,500, 31 days observed) | Output 600 mL/h · Room size (max) 14 jō (tatami mats, about 1.62 m² each) · Tank 4L · Hybrid | [Yahoo! Shopping](https://search.rakuten.co.jp/search/mall/%E5%8A%A0%E6%B9%BF%E5%99%A8/) |
 
 ## How the ranking works
 

@@ -1,0 +1,417 @@
+{
+ "categoryId": "mineral-water",
+ "date": "2026-10-02",
+ "fetchedAt": "2026-10-02T14:41:13+09:00",
+ "items": [
+  {
+   "id": "sample:mineral-water-1",
+   "source": "rakuten",
+   "name": "(サンプル) ミネラルウォーター（箱買い） A 天然水 2L×9本 硬度30",
+   "caption": "",
+   "shop": "サンプルショップ",
+   "price": 1340,
+   "shippingIncluded": true,
+   "pointRate": 1,
+   "rating": 4.82,
+   "reviews": 2907,
+   "productUrl": "https://search.rakuten.co.jp/search/mall/%E3%83%9F%E3%83%8D%E3%83%A9%E3%83%AB%E3%82%A6%E3%82%A9%E3%83%BC%E3%82%BF%E3%83%BC%202L%20%E7%AE%B1/",
+   "buyUrl": "https://search.rakuten.co.jp/search/mall/%E3%83%9F%E3%83%8D%E3%83%A9%E3%83%AB%E3%82%A6%E3%82%A9%E3%83%BC%E3%82%BF%E3%83%BC%202L%20%E7%AE%B1/",
+   "affiliate": false,
+   "image": null,
+   "available": true,
+   "title": "(サンプル) ミネラルウォーター(箱買い) A 天然水 2L×9本 硬度30",
+   "variants": false,
+   "score": 4.814,
+   "facets": {
+    "hardness": 30,
+    "bottle_l": 2,
+    "label_less": false
+   },
+   "claimed": null,
+   "unit": {
+    "quantity": 18000,
+    "value": 74.4
+   },
+   "otherOffers": [
+    {
+     "id": "sample-y:mineral-water-1",
+     "store": "yahoo",
+     "shop": "サンプルストア",
+     "price": 1250,
+     "shippingIncluded": true,
+     "buyUrl": "https://search.rakuten.co.jp/search/mall/%E3%83%9F%E3%83%8D%E3%83%A9%E3%83%AB%E3%82%A6%E3%82%A9%E3%83%BC%E3%82%BF%E3%83%BC%202L%20%E7%AE%B1/",
+     "affiliate": false
+    }
+   ],
+   "rank": 1,
+   "priceStats": {
+    "points": 31,
+    "windowDays": 31,
+    "firstSeen": "2026-09-02",
+    "min90": 1340,
+    "median90": 1530,
+    "max90": 1580,
+    "verdict": "lowest_observed"
+   },
+   "priceWeekly": [
+    [
+     "2026-09-02",
+     1520
+    ],
+    [
+     "2026-09-05",
+     1500
+    ],
+    [
+     "2026-09-13",
+     1520
+    ],
+    [
+     "2026-09-25",
+     1500
+    ],
+    [
+     "2026-10-02",
+     1340
+    ]
+   ]
+  },
+  {
+   "id": "sample:mineral-water-4",
+   "source": "rakuten",
+   "name": "(サンプル) ミネラルウォーター（箱買い） D 硬度300 2L×6本",
+   "caption": "",
+   "shop": "サンプルショップ",
+   "price": 3950,
+   "shippingIncluded": false,
+   "pointRate": 1,
+   "rating": 4.79,
+   "reviews": 465,
+   "productUrl": "https://search.rakuten.co.jp/search/mall/%E3%83%9F%E3%83%8D%E3%83%A9%E3%83%AB%E3%82%A6%E3%82%A9%E3%83%BC%E3%82%BF%E3%83%BC%202L%20%E7%AE%B1/",
+   "buyUrl": "https://search.rakuten.co.jp/search/mall/%E3%83%9F%E3%83%8D%E3%83%A9%E3%83%AB%E3%82%A6%E3%82%A9%E3%83%BC%E3%82%BF%E3%83%BC%202L%20%E7%AE%B1/",
+   "affiliate": false,
+   "image": null,
+   "available": true,
+   "title": "(サンプル) ミネラルウォーター(箱買い) D 硬度300 2L×6本",
+   "variants": false,
+   "score": 4.759,
+   "facets": {
+    "hardness": 300,
+    "bottle_l": 2,
+    "label_less": false
+   },
+   "claimed": null,
+   "unit": {
+    "quantity": 12000,
+    "value": 329.2
+   },
+   "otherOffers": [
+    {
+     "id": "sample-y:mineral-water-2",
+     "store": "yahoo",
+     "shop": "サンプルストア",
+     "price": 4110,
+     "shippingIncluded": true,
+     "buyUrl": "https://search.rakuten.co.jp/search/mall/%E3%83%9F%E3%83%8D%E3%83%A9%E3%83%AB%E3%82%A6%E3%82%A9%E3%83%BC%E3%82%BF%E3%83%BC%202L%20%E7%AE%B1/",
+     "affiliate": false
+    }
+   ],
+   "rank": 2,
+   "priceStats": {
+    "points": 31,
+    "windowDays": 31,
+    "firstSeen": "2026-09-02",
+    "min90": 3950,
+    "median90": 4510,
+    "max90": 4640,
+    "verdict": "lowest_observed"
+   },
+   "priceWeekly": [
+    [
+     "2026-09-02",
+     4470
+    ],
+    [
+     "2026-09-07",
+     4430
+    ],
+    [
+     "2026-09-17",
+     4420
+    ],
+    [
+     "2026-09-21",
+     4420
+    ],
+    [
+     "2026-10-02",
+     3950
+    ]
+   ]
+  },
+  {
+   "id": "sample:mineral-water-6",
+   "source": "rakuten",
+   "name": "(サンプル) ミネラルウォーター（箱買い） F 500ml×48本 硬度20",
+   "caption": "",
+   "shop": "サンプルショップ",
+   "price": 4910,
+   "shippingIncluded": false,
+   "pointRate": 1,
+   "rating": 4.56,
+   "reviews": 1213,
+   "productUrl": "https://search.rakuten.co.jp/search/mall/%E3%83%9F%E3%83%8D%E3%83%A9%E3%83%AB%E3%82%A6%E3%82%A9%E3%83%BC%E3%82%BF%E3%83%BC%202L%20%E7%AE%B1/",
+   "buyUrl": "https://search.rakuten.co.jp/search/mall/%E3%83%9F%E3%83%8D%E3%83%A9%E3%83%AB%E3%82%A6%E3%82%A9%E3%83%BC%E3%82%BF%E3%83%BC%202L%20%E7%AE%B1/",
+   "affiliate": false,
+   "image": null,
+   "available": true,
+   "title": "(サンプル) ミネラルウォーター(箱買い) F 500ml×48本 硬度20",
+   "variants": false,
+   "score": 4.557,
+   "facets": {
+    "hardness": 20,
+    "bottle_l": 0.5,
+    "label_less": false
+   },
+   "claimed": null,
+   "unit": {
+    "quantity": 24000,
+    "value": 204.6
+   },
+   "otherOffers": [],
+   "rank": 3,
+   "priceStats": {
+    "points": 31,
+    "windowDays": 31,
+    "firstSeen": "2026-09-02",
+    "min90": 4530,
+    "median90": 4660,
+    "max90": 4910,
+    "verdict": "usual"
+   },
+   "priceWeekly": [
+    [
+     "2026-09-02",
+     4590
+    ],
+    [
+     "2026-09-06",
+     4540
+    ],
+    [
+     "2026-09-12",
+     4540
+    ],
+    [
+     "2026-09-24",
+     4560
+    ],
+    [
+     "2026-10-01",
+     4530
+    ]
+   ]
+  },
+  {
+   "id": "sample:mineral-water-2",
+   "source": "rakuten",
+   "name": "(サンプル) ミネラルウォーター（箱買い） B 天然水 500ml×24本 硬度60",
+   "caption": "",
+   "shop": "サンプルショップ",
+   "price": 6190,
+   "shippingIncluded": false,
+   "pointRate": 1,
+   "rating": 4.4,
+   "reviews": 1528,
+   "productUrl": "https://search.rakuten.co.jp/search/mall/%E3%83%9F%E3%83%8D%E3%83%A9%E3%83%AB%E3%82%A6%E3%82%A9%E3%83%BC%E3%82%BF%E3%83%BC%202L%20%E7%AE%B1/",
+   "buyUrl": "https://search.rakuten.co.jp/search/mall/%E3%83%9F%E3%83%8D%E3%83%A9%E3%83%AB%E3%82%A6%E3%82%A9%E3%83%BC%E3%82%BF%E3%83%BC%202L%20%E7%AE%B1/",
+   "affiliate": false,
+   "image": null,
+   "available": true,
+   "title": "(サンプル) ミネラルウォーター(箱買い) B 天然水 500ml×24本 硬度60",
+   "variants": false,
+   "score": 4.402,
+   "facets": {
+    "hardness": 60,
+    "bottle_l": 0.5,
+    "label_less": false
+   },
+   "claimed": null,
+   "unit": {
+    "quantity": 12000,
+    "value": 515.8
+   },
+   "otherOffers": [],
+   "rank": 4,
+   "priceStats": {
+    "points": 31,
+    "windowDays": 31,
+    "firstSeen": "2026-09-02",
+    "min90": 6020,
+    "median90": 6160,
+    "max90": 6360,
+    "verdict": "usual"
+   },
+   "priceWeekly": [
+    [
+     "2026-09-04",
+     6020
+    ],
+    [
+     "2026-09-05",
+     6050
+    ],
+    [
+     "2026-09-17",
+     6040
+    ],
+    [
+     "2026-09-25",
+     6040
+    ],
+    [
+     "2026-09-28",
+     6070
+    ]
+   ]
+  },
+  {
+   "id": "sample:mineral-water-5",
+   "source": "rakuten",
+   "name": "(サンプル) ミネラルウォーター（箱買い） E 天然水 2L 9本",
+   "caption": "",
+   "shop": "サンプルショップ",
+   "price": 3910,
+   "shippingIncluded": true,
+   "pointRate": 1,
+   "rating": 3.96,
+   "reviews": 536,
+   "productUrl": "https://search.rakuten.co.jp/search/mall/%E3%83%9F%E3%83%8D%E3%83%A9%E3%83%AB%E3%82%A6%E3%82%A9%E3%83%BC%E3%82%BF%E3%83%BC%202L%20%E7%AE%B1/",
+   "buyUrl": "https://search.rakuten.co.jp/search/mall/%E3%83%9F%E3%83%8D%E3%83%A9%E3%83%AB%E3%82%A6%E3%82%A9%E3%83%BC%E3%82%BF%E3%83%BC%202L%20%E7%AE%B1/",
+   "affiliate": false,
+   "image": null,
+   "available": true,
+   "title": "(サンプル) ミネラルウォーター(箱買い) E 天然水 2L 9本",
+   "variants": false,
+   "score": 4.004,
+   "facets": {
+    "bottle_l": 2,
+    "label_less": false
+   },
+   "claimed": null,
+   "unit": {
+    "quantity": 18000,
+    "value": 217.2
+   },
+   "otherOffers": [],
+   "rank": 5,
+   "priceStats": {
+    "points": 31,
+    "windowDays": 31,
+    "firstSeen": "2026-09-02",
+    "min90": 3790,
+    "median90": 3900,
+    "max90": 4020,
+    "verdict": "usual"
+   },
+   "priceWeekly": [
+    [
+     "2026-09-04",
+     3810
+    ],
+    [
+     "2026-09-10",
+     3830
+    ],
+    [
+     "2026-09-13",
+     3790
+    ],
+    [
+     "2026-09-25",
+     3870
+    ],
+    [
+     "2026-09-29",
+     3820
+    ]
+   ]
+  },
+  {
+   "id": "sample:mineral-water-3",
+   "source": "rakuten",
+   "name": "(サンプル) ミネラルウォーター（箱買い） C ラベルレス 2L×6本×2ケース",
+   "caption": "",
+   "shop": "サンプルショップ",
+   "price": 6200,
+   "shippingIncluded": true,
+   "pointRate": 1,
+   "rating": 3.89,
+   "reviews": 2130,
+   "productUrl": "https://search.rakuten.co.jp/search/mall/%E3%83%9F%E3%83%8D%E3%83%A9%E3%83%AB%E3%82%A6%E3%82%A9%E3%83%BC%E3%82%BF%E3%83%BC%202L%20%E7%AE%B1/",
+   "buyUrl": "https://search.rakuten.co.jp/search/mall/%E3%83%9F%E3%83%8D%E3%83%A9%E3%83%AB%E3%82%A6%E3%82%A9%E3%83%BC%E3%82%BF%E3%83%BC%202L%20%E7%AE%B1/",
+   "affiliate": false,
+   "image": null,
+   "available": true,
+   "title": "(サンプル) ミネラルウォーター(箱買い) C ラベルレス 2L×6本×2ケース",
+   "variants": false,
+   "score": 3.903,
+   "facets": {
+    "bottle_l": 2,
+    "label_less": true
+   },
+   "claimed": null,
+   "unit": {
+    "quantity": 24000,
+    "value": 258.3
+   },
+   "otherOffers": [],
+   "rank": 6,
+   "priceStats": {
+    "points": 31,
+    "windowDays": 31,
+    "firstSeen": "2026-09-02",
+    "min90": 5720,
+    "median90": 5890,
+    "max90": 6200,
+    "verdict": "usual"
+   },
+   "priceWeekly": [
+    [
+     "2026-09-02",
+     5800
+    ],
+    [
+     "2026-09-06",
+     5730
+    ],
+    [
+     "2026-09-15",
+     5800
+    ],
+    [
+     "2026-09-24",
+     5750
+    ],
+    [
+     "2026-09-27",
+     5720
+    ]
+   ]
+  }
+ ],
+ "stats": {
+  "candidates": 8,
+  "ranked": 6,
+  "rejected": {
+   "duplicate": 2
+  },
+  "meanRating": 4.47,
+  "priorWeight": 50
+ },
+ "picks": {
+  "best": "sample:mineral-water-1",
+  "deal": "sample:mineral-water-1",
+  "per_unit": "sample:mineral-water-1"
+ }
+}

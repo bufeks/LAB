@@ -39,14 +39,15 @@
 <h2>MCP</h2>
 
 <p>To run it locally, Node.js 18+ is all it needs.</p>
+<p>Personal price watch feed (no account, nothing stored): <code>https://bufeks.github.io/LAB/shelf/feed/watch.xml?ids=&lt;id1&gt;,&lt;id2&gt;&amp;below=&lt;yen&gt;&amp;lang=en</code> (custom-domain deployment only)</p>
 <pre>curl -o shelf-mcp.mjs https://bufeks.github.io/LAB/shelf/mcp/server.mjs
 # claude_desktop_config.json
 { "mcpServers": { "shelf": { "command": "node", "args": ["/path/to/shelf-mcp.mjs"] } } }</pre>
-<p>Tools: <code>list_categories</code>, <code>recommend</code> (budget and spec filters), <code>price_outlook</code> (is now a good time for a category), <code>search_products</code>, <code>check_price</code> (item id or a Rakuten item URL). Every tool takes <code>lang</code> (ja / en / zh-Hans / zh-Hant / ko) for the answer language.</p>
+<p>Tools: <code>list_categories</code>, <code>recommend</code> (budget and spec filters; <code>sort: unit_price</code> for consumables), <code>price_outlook</code> (is now a good time for a category), <code>search_products</code>, <code>check_price</code> (item id or a Rakuten item URL), <code>check_compatibility</code> (brush heads), <code>sale_check</code> (are sale claims real), <code>hotel_outlook</code> (book now or wait), <code>upcoming_releases</code> (manga release dates). Every tool takes <code>lang</code> (ja / en / zh-Hans / zh-Hant / ko) for the answer language.</p>
 </main>
 <footer>
-<p>Ad: buy links are Rakuten affiliate links. The operator earns a commission on purchases at no extra cost to you. Rankings come only from the published formula; commission rates play no part.</p>
-<p><a href="https://developers.rakuten.com/">Supported by Rakuten Developers</a> ・ <a href="https://bufeks.github.io/LAB/shelf/en/llms.txt">llms.txt</a> ・ <a href="https://bufeks.github.io/LAB/shelf/openapi.json">OpenAPI</a> ・ <a href="https://bufeks.github.io/LAB/shelf/en/about/">How agents use SHELF</a></p>
+<p>Ad: buy links are affiliate links (Rakuten Affiliate, and Yahoo! Shopping via ValueCommerce). The operator earns a commission on purchases at no extra cost to you. Rankings come only from the published formula; commission rates play no part in rankings or in which store is shown.</p>
+<p><a href="https://developers.rakuten.com/">Supported by Rakuten Developers</a> ・ <span style="margin:15px 15px 15px 15px"><a href="https://developer.yahoo.co.jp/sitemap/">Web Services by Yahoo! JAPAN</a></span> ・ <a href="https://bufeks.github.io/LAB/shelf/en/llms.txt">llms.txt</a> ・ <a href="https://bufeks.github.io/LAB/shelf/openapi.json">OpenAPI</a> ・ <a href="https://bufeks.github.io/LAB/shelf/en/about/">How agents use SHELF</a></p>
 </footer>
 </body>
 </html>

@@ -1,0 +1,416 @@
+{
+ "categoryId": "rice",
+ "date": "2026-10-02",
+ "fetchedAt": "2026-10-02T14:41:13+09:00",
+ "items": [
+  {
+   "id": "sample:rice-1",
+   "source": "rakuten",
+   "name": "(サンプル) 米（白米） A コシヒカリ 令和7年産 10kg (5kg×2袋)",
+   "caption": "",
+   "shop": "サンプルショップ",
+   "price": 3110,
+   "shippingIncluded": true,
+   "pointRate": 1,
+   "rating": 4.75,
+   "reviews": 2215,
+   "productUrl": "https://search.rakuten.co.jp/search/mall/%E7%B1%B3%20%E7%99%BD%E7%B1%B3%205kg/",
+   "buyUrl": "https://search.rakuten.co.jp/search/mall/%E7%B1%B3%20%E7%99%BD%E7%B1%B3%205kg/",
+   "affiliate": false,
+   "image": null,
+   "available": true,
+   "title": "(サンプル) 米(白米) A コシヒカリ 令和7年産 10kg (5kg×2袋)",
+   "variants": false,
+   "score": 4.744,
+   "facets": {
+    "crop_year": 7,
+    "musenmai": false,
+    "blend": false
+   },
+   "claimed": null,
+   "unit": {
+    "quantity": 10000,
+    "value": 311
+   },
+   "otherOffers": [
+    {
+     "id": "sample-y:rice-1",
+     "store": "yahoo",
+     "shop": "サンプルストア",
+     "price": 2890,
+     "shippingIncluded": true,
+     "buyUrl": "https://search.rakuten.co.jp/search/mall/%E7%B1%B3%20%E7%99%BD%E7%B1%B3%205kg/",
+     "affiliate": false
+    }
+   ],
+   "rank": 1,
+   "priceStats": {
+    "points": 31,
+    "windowDays": 31,
+    "firstSeen": "2026-09-02",
+    "min90": 3110,
+    "median90": 3550,
+    "max90": 3670,
+    "verdict": "lowest_observed"
+   },
+   "priceWeekly": [
+    [
+     "2026-09-02",
+     3520
+    ],
+    [
+     "2026-09-05",
+     3490
+    ],
+    [
+     "2026-09-13",
+     3530
+    ],
+    [
+     "2026-09-25",
+     3480
+    ],
+    [
+     "2026-10-02",
+     3110
+    ]
+   ]
+  },
+  {
+   "id": "sample:rice-4",
+   "source": "rakuten",
+   "name": "(サンプル) 米（白米） D ななつぼし 10kg",
+   "caption": "",
+   "shop": "サンプルショップ",
+   "price": 10360,
+   "shippingIncluded": false,
+   "pointRate": 1,
+   "rating": 4.56,
+   "reviews": 3195,
+   "productUrl": "https://search.rakuten.co.jp/search/mall/%E7%B1%B3%20%E7%99%BD%E7%B1%B3%205kg/",
+   "buyUrl": "https://search.rakuten.co.jp/search/mall/%E7%B1%B3%20%E7%99%BD%E7%B1%B3%205kg/",
+   "affiliate": false,
+   "image": null,
+   "available": true,
+   "title": "(サンプル) 米(白米) D ななつぼし 10kg",
+   "variants": false,
+   "score": 4.558,
+   "facets": {
+    "musenmai": false,
+    "blend": false
+   },
+   "claimed": null,
+   "unit": {
+    "quantity": 10000,
+    "value": 1036
+   },
+   "otherOffers": [
+    {
+     "id": "sample-y:rice-2",
+     "store": "yahoo",
+     "shop": "サンプルストア",
+     "price": 10770,
+     "shippingIncluded": true,
+     "buyUrl": "https://search.rakuten.co.jp/search/mall/%E7%B1%B3%20%E7%99%BD%E7%B1%B3%205kg/",
+     "affiliate": false
+    }
+   ],
+   "rank": 2,
+   "priceStats": {
+    "points": 31,
+    "windowDays": 31,
+    "firstSeen": "2026-09-02",
+    "min90": 10360,
+    "median90": 11830,
+    "max90": 12170,
+    "verdict": "lowest_observed"
+   },
+   "priceWeekly": [
+    [
+     "2026-09-02",
+     11730
+    ],
+    [
+     "2026-09-07",
+     11620
+    ],
+    [
+     "2026-09-17",
+     11590
+    ],
+    [
+     "2026-09-21",
+     11600
+    ],
+    [
+     "2026-10-02",
+     10360
+    ]
+   ]
+  },
+  {
+   "id": "sample:rice-3",
+   "source": "rakuten",
+   "name": "(サンプル) 米（白米） C あきたこまち 令和7年産 5kg 無洗米",
+   "caption": "",
+   "shop": "サンプルショップ",
+   "price": 7180,
+   "shippingIncluded": true,
+   "pointRate": 1,
+   "rating": 4.49,
+   "reviews": 3664,
+   "productUrl": "https://search.rakuten.co.jp/search/mall/%E7%B1%B3%20%E7%99%BD%E7%B1%B3%205kg/",
+   "buyUrl": "https://search.rakuten.co.jp/search/mall/%E7%B1%B3%20%E7%99%BD%E7%B1%B3%205kg/",
+   "affiliate": false,
+   "image": null,
+   "available": true,
+   "title": "(サンプル) 米(白米) C あきたこまち 令和7年産 5kg 無洗米",
+   "variants": false,
+   "score": 4.49,
+   "facets": {
+    "crop_year": 7,
+    "musenmai": true,
+    "blend": false
+   },
+   "claimed": null,
+   "unit": {
+    "quantity": 5000,
+    "value": 1436
+   },
+   "otherOffers": [],
+   "rank": 3,
+   "priceStats": {
+    "points": 31,
+    "windowDays": 31,
+    "firstSeen": "2026-09-02",
+    "min90": 6620,
+    "median90": 6820,
+    "max90": 7180,
+    "verdict": "usual"
+   },
+   "priceWeekly": [
+    [
+     "2026-09-02",
+     6720
+    ],
+    [
+     "2026-09-06",
+     6640
+    ],
+    [
+     "2026-09-15",
+     6720
+    ],
+    [
+     "2026-09-24",
+     6660
+    ],
+    [
+     "2026-09-27",
+     6620
+    ]
+   ]
+  },
+  {
+   "id": "sample:rice-5",
+   "source": "rakuten",
+   "name": "(サンプル) 米（白米） E コシヒカリ 令和6年産 5kg×4袋 20kg",
+   "caption": "",
+   "shop": "サンプルショップ",
+   "price": 4150,
+   "shippingIncluded": true,
+   "pointRate": 1,
+   "rating": 4.36,
+   "reviews": 2526,
+   "productUrl": "https://search.rakuten.co.jp/search/mall/%E7%B1%B3%20%E7%99%BD%E7%B1%B3%205kg/",
+   "buyUrl": "https://search.rakuten.co.jp/search/mall/%E7%B1%B3%20%E7%99%BD%E7%B1%B3%205kg/",
+   "affiliate": false,
+   "image": null,
+   "available": true,
+   "title": "(サンプル) 米(白米) E コシヒカリ 令和6年産 5kg×4袋 20kg",
+   "variants": false,
+   "score": 4.362,
+   "facets": {
+    "crop_year": 6,
+    "musenmai": false,
+    "blend": false
+   },
+   "claimed": null,
+   "unit": {
+    "quantity": 20000,
+    "value": 207.5
+   },
+   "otherOffers": [],
+   "rank": 4,
+   "priceStats": {
+    "points": 31,
+    "windowDays": 31,
+    "firstSeen": "2026-09-02",
+    "min90": 4030,
+    "median90": 4140,
+    "max90": 4270,
+    "verdict": "usual"
+   },
+   "priceWeekly": [
+    [
+     "2026-09-04",
+     4050
+    ],
+    [
+     "2026-09-10",
+     4060
+    ],
+    [
+     "2026-09-13",
+     4030
+    ],
+    [
+     "2026-09-25",
+     4110
+    ],
+    [
+     "2026-09-29",
+     4050
+    ]
+   ]
+  },
+  {
+   "id": "sample:rice-6",
+   "source": "rakuten",
+   "name": "(サンプル) 米（白米） F ゆめぴりか 5kg",
+   "caption": "",
+   "shop": "サンプルショップ",
+   "price": 11460,
+   "shippingIncluded": false,
+   "pointRate": 1,
+   "rating": 4.36,
+   "reviews": 3382,
+   "productUrl": "https://search.rakuten.co.jp/search/mall/%E7%B1%B3%20%E7%99%BD%E7%B1%B3%205kg/",
+   "buyUrl": "https://search.rakuten.co.jp/search/mall/%E7%B1%B3%20%E7%99%BD%E7%B1%B3%205kg/",
+   "affiliate": false,
+   "image": null,
+   "available": true,
+   "title": "(サンプル) 米(白米) F ゆめぴりか 5kg",
+   "variants": false,
+   "score": 4.361,
+   "facets": {
+    "musenmai": false,
+    "blend": false
+   },
+   "claimed": null,
+   "unit": {
+    "quantity": 5000,
+    "value": 2292
+   },
+   "otherOffers": [],
+   "rank": 5,
+   "priceStats": {
+    "points": 31,
+    "windowDays": 31,
+    "firstSeen": "2026-09-02",
+    "min90": 10570,
+    "median90": 10890,
+    "max90": 11460,
+    "verdict": "usual"
+   },
+   "priceWeekly": [
+    [
+     "2026-09-02",
+     10720
+    ],
+    [
+     "2026-09-06",
+     10590
+    ],
+    [
+     "2026-09-12",
+     10600
+    ],
+    [
+     "2026-09-24",
+     10640
+    ],
+    [
+     "2026-10-01",
+     10570
+    ]
+   ]
+  },
+  {
+   "id": "sample:rice-2",
+   "source": "rakuten",
+   "name": "(サンプル) 米（白米） B ブレンド米 5kg",
+   "caption": "",
+   "shop": "サンプルショップ",
+   "price": 10980,
+   "shippingIncluded": false,
+   "pointRate": 1,
+   "rating": 4.16,
+   "reviews": 2642,
+   "productUrl": "https://search.rakuten.co.jp/search/mall/%E7%B1%B3%20%E7%99%BD%E7%B1%B3%205kg/",
+   "buyUrl": "https://search.rakuten.co.jp/search/mall/%E7%B1%B3%20%E7%99%BD%E7%B1%B3%205kg/",
+   "affiliate": false,
+   "image": null,
+   "available": true,
+   "title": "(サンプル) 米(白米) B ブレンド米 5kg",
+   "variants": false,
+   "score": 4.166,
+   "facets": {
+    "musenmai": false,
+    "blend": true
+   },
+   "claimed": null,
+   "unit": {
+    "quantity": 5000,
+    "value": 2196
+   },
+   "otherOffers": [],
+   "rank": 6,
+   "priceStats": {
+    "points": 31,
+    "windowDays": 31,
+    "firstSeen": "2026-09-02",
+    "min90": 10670,
+    "median90": 10930,
+    "max90": 11290,
+    "verdict": "usual"
+   },
+   "priceWeekly": [
+    [
+     "2026-09-04",
+     10670
+    ],
+    [
+     "2026-09-05",
+     10720
+    ],
+    [
+     "2026-09-17",
+     10720
+    ],
+    [
+     "2026-09-25",
+     10720
+    ],
+    [
+     "2026-09-30",
+     10760
+    ]
+   ]
+  }
+ ],
+ "stats": {
+  "candidates": 8,
+  "ranked": 6,
+  "rejected": {
+   "duplicate": 2
+  },
+  "meanRating": 4.46,
+  "priorWeight": 50
+ },
+ "picks": {
+  "best": "sample:rice-1",
+  "deal": "sample:rice-4",
+  "per_unit": "sample:rice-5"
+ }
+}

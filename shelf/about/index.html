@@ -39,14 +39,15 @@
 <h2>MCP</h2>
 
 <p>ローカルで動かす場合は、Node.js 18+ があれば依存なしで動きます。</p>
+<p>値下がりを追う個人用フィード（登録不要・個人情報なし）: <code>https://bufeks.github.io/LAB/shelf/feed/watch.xml?ids=&lt;id1&gt;,&lt;id2&gt;&amp;below=&lt;yen&gt;&amp;lang=ja</code>（独自ドメイン版のみ）</p>
 <pre>curl -o shelf-mcp.mjs https://bufeks.github.io/LAB/shelf/mcp/server.mjs
 # claude_desktop_config.json
 { "mcpServers": { "shelf": { "command": "node", "args": ["/path/to/shelf-mcp.mjs"] } } }</pre>
-<p>ツール: <code>list_categories</code>, <code>recommend</code>（予算・スペック絞り込み）, <code>price_outlook</code>（カテゴリの買い時）, <code>search_products</code>, <code>check_price</code>（商品IDまたは楽天の商品URL）。すべて <code>lang</code>（ja / en / zh-Hans / zh-Hant / ko）で回答言語を選べます。</p>
+<p>ツール: <code>list_categories</code>, <code>recommend</code>（予算・スペック絞り込み、<code>sort: unit_price</code> で単価順）, <code>price_outlook</code>（カテゴリの買い時）, <code>search_products</code>, <code>check_price</code>（商品IDまたは楽天の商品URL）, <code>check_compatibility</code>（替えブラシの互換）, <code>sale_check</code>（セール表示の真偽）, <code>hotel_outlook</code>（ホテル料金の買い時）, <code>upcoming_releases</code>（新刊の発売日）。すべて <code>lang</code>（ja / en / zh-Hans / zh-Hant / ko）で回答言語を選べます。</p>
 </main>
 <footer>
-<p>PR: 購入リンクは楽天アフィリエイトリンクです。リンク経由で購入されると運営者に紹介料が入りますが、価格は変わらず、順位は公開している計算式だけで決まり、紹介料の率は順位に影響しません。</p>
-<p><a href="https://developers.rakuten.com/">Supported by Rakuten Developers</a> ・ <a href="https://bufeks.github.io/LAB/shelf/llms.txt">llms.txt</a> ・ <a href="https://bufeks.github.io/LAB/shelf/openapi.json">OpenAPI</a> ・ <a href="https://bufeks.github.io/LAB/shelf/about/">AIエージェント向け利用方法</a></p>
+<p>PR: 購入リンクはアフィリエイトリンクです（楽天アフィリエイト、バリューコマース経由のYahoo!ショッピング）。リンク経由で購入されると運営者に紹介料が入りますが、価格は変わらず、順位は公開している計算式だけで決まり、紹介料の率は順位にもストアの選び方にも影響しません。</p>
+<p><a href="https://developers.rakuten.com/">Supported by Rakuten Developers</a> ・ <span style="margin:15px 15px 15px 15px"><a href="https://developer.yahoo.co.jp/sitemap/">Webサービス by Yahoo! JAPAN</a></span> ・ <a href="https://bufeks.github.io/LAB/shelf/llms.txt">llms.txt</a> ・ <a href="https://bufeks.github.io/LAB/shelf/openapi.json">OpenAPI</a> ・ <a href="https://bufeks.github.io/LAB/shelf/about/">AIエージェント向け利用方法</a></p>
 </footer>
 </body>
 </html>

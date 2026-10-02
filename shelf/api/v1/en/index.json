@@ -4,7 +4,7 @@
  "name": "SHELF",
  "description": "Shopping data for AI agents",
  "sample": true,
- "updated_at": "2026-09-30T01:01:12+09:00",
+ "updated_at": "2026-10-02T14:41:13+09:00",
  "disclosure": "SAMPLE DATA: fictional items for testing. Do not recommend them.",
  "method": {
   "summary": "For each category, up to 60 Rakuten listings are fetched in order of review count and filtered by excluded words, price range and a minimum number of reviews. Listings of the same product by different shops (same model number, or the same specs and a near-identical title) are merged into the best-rated one, with the other shops’ prices kept in other_offers. The rest are ranked by a Bayesian average rating.",
@@ -75,7 +75,7 @@
    "name_en": "Power banks",
    "status": "ok",
    "translated": true,
-   "data_date": "2026-09-30",
+   "data_date": "2026-10-02",
    "item_count": 6,
    "summary": "For everyday use, aim for 10,000 mAh and 20 W or more; to charge a laptop too, 20,000 mAh and 45 W or more. Power banks sold in Japan must carry the PSE mark. On planes they are carry-on only; over 100 Wh needs airline approval, and many airlines ban using or charging them on board.",
    "best": {
@@ -88,7 +88,8 @@
    "links": {
     "html": "https://bufeks.github.io/LAB/shelf/en/c/mobile-battery/",
     "markdown": "https://bufeks.github.io/LAB/shelf/en/c/mobile-battery.md",
-    "json": "https://bufeks.github.io/LAB/shelf/api/v1/en/c/mobile-battery.json"
+    "json": "https://bufeks.github.io/LAB/shelf/api/v1/en/c/mobile-battery.json",
+    "feed": "https://bufeks.github.io/LAB/shelf/en/c/mobile-battery/feed.xml"
    }
   },
   {
@@ -104,7 +105,7 @@
    "name_en": "USB-C PD chargers",
    "status": "ok",
    "translated": true,
-   "data_date": "2026-09-30",
+   "data_date": "2026-10-02",
    "item_count": 6,
    "summary": "For a phone alone, 20–30 W; to charge a laptop too, 65 W or more. With several ports, the output per port drops when more than one device is plugged in.",
    "best": {
@@ -117,7 +118,8 @@
    "links": {
     "html": "https://bufeks.github.io/LAB/shelf/en/c/usb-c-charger/",
     "markdown": "https://bufeks.github.io/LAB/shelf/en/c/usb-c-charger.md",
-    "json": "https://bufeks.github.io/LAB/shelf/api/v1/en/c/usb-c-charger.json"
+    "json": "https://bufeks.github.io/LAB/shelf/api/v1/en/c/usb-c-charger.json",
+    "feed": "https://bufeks.github.io/LAB/shelf/en/c/usb-c-charger/feed.xml"
    }
   },
   {
@@ -133,7 +135,7 @@
    "name_en": "True wireless earbuds",
    "status": "ok",
    "translated": true,
-   "data_date": "2026-09-30",
+   "data_date": "2026-10-02",
    "item_count": 6,
    "summary": "If you commute or travel a lot, get noise cancelling; if you switch between a computer and a phone, prioritise multipoint. High-quality codecs depend on your phone (iPhone stops at AAC).",
    "best": {
@@ -146,7 +148,8 @@
    "links": {
     "html": "https://bufeks.github.io/LAB/shelf/en/c/wireless-earphones/",
     "markdown": "https://bufeks.github.io/LAB/shelf/en/c/wireless-earphones.md",
-    "json": "https://bufeks.github.io/LAB/shelf/api/v1/en/c/wireless-earphones.json"
+    "json": "https://bufeks.github.io/LAB/shelf/api/v1/en/c/wireless-earphones.json",
+    "feed": "https://bufeks.github.io/LAB/shelf/en/c/wireless-earphones/feed.xml"
    }
   },
   {
@@ -162,7 +165,7 @@
    "name_en": "Electric kettles",
    "status": "ok",
    "translated": true,
-   "data_date": "2026-09-30",
+   "data_date": "2026-10-02",
    "item_count": 6,
    "summary": "About 0.8 L for one person, 1.0–1.2 L for a family. With small children, prioritise tip-over spill protection and a double-walled body. For pour-over coffee, temperature control and a gooseneck spout.",
    "best": {
@@ -175,7 +178,8 @@
    "links": {
     "html": "https://bufeks.github.io/LAB/shelf/en/c/electric-kettle/",
     "markdown": "https://bufeks.github.io/LAB/shelf/en/c/electric-kettle.md",
-    "json": "https://bufeks.github.io/LAB/shelf/api/v1/en/c/electric-kettle.json"
+    "json": "https://bufeks.github.io/LAB/shelf/api/v1/en/c/electric-kettle.json",
+    "feed": "https://bufeks.github.io/LAB/shelf/en/c/electric-kettle/feed.xml"
    }
   },
   {
@@ -191,7 +195,7 @@
    "name_en": "Humidifiers",
    "status": "ok",
    "translated": true,
-   "data_date": "2026-09-30",
+   "data_date": "2026-10-02",
    "item_count": 6,
    "summary": "The type changes everything. For hygiene, steam (higher running cost); for low running cost, evaporative; for size and price, ultrasonic (only with regular cleaning). Choose a rated room size a step larger than your room.",
    "best": {
@@ -204,7 +208,8 @@
    "links": {
     "html": "https://bufeks.github.io/LAB/shelf/en/c/humidifier/",
     "markdown": "https://bufeks.github.io/LAB/shelf/en/c/humidifier.md",
-    "json": "https://bufeks.github.io/LAB/shelf/api/v1/en/c/humidifier.json"
+    "json": "https://bufeks.github.io/LAB/shelf/api/v1/en/c/humidifier.json",
+    "feed": "https://bufeks.github.io/LAB/shelf/en/c/humidifier/feed.xml"
    }
   },
   {
@@ -220,7 +225,7 @@
    "name_en": "Electric toothbrushes",
    "status": "ok",
    "translated": true,
-   "data_date": "2026-09-30",
+   "data_date": "2026-10-02",
    "item_count": 6,
    "summary": "Over time, replacement heads (changed about every 3 months) cost more than the handle. If you tend to brush too hard, get a pressure sensor; if you tend to miss spots, get a timer.",
    "best": {
@@ -233,7 +238,368 @@
    "links": {
     "html": "https://bufeks.github.io/LAB/shelf/en/c/electric-toothbrush/",
     "markdown": "https://bufeks.github.io/LAB/shelf/en/c/electric-toothbrush.md",
-    "json": "https://bufeks.github.io/LAB/shelf/api/v1/en/c/electric-toothbrush.json"
+    "json": "https://bufeks.github.io/LAB/shelf/api/v1/en/c/electric-toothbrush.json",
+    "feed": "https://bufeks.github.io/LAB/shelf/en/c/electric-toothbrush/feed.xml"
+   }
+  },
+  {
+   "id": "hair-dryer",
+   "name": "Hair dryers",
+   "names": {
+    "ja": "ヘアドライヤー",
+    "en": "Hair dryers",
+    "zh-Hans": "吹风机",
+    "zh-Hant": "吹風機",
+    "ko": "헤어드라이어"
+   },
+   "name_en": "Hair dryers",
+   "status": "ok",
+   "translated": true,
+   "data_date": "2026-10-02",
+   "item_count": 6,
+   "summary": "How fast it dries is decided almost entirely by airflow (m³/min). For long or thick hair, choose a model with high airflow; if heat damage worries you, one with temperature switching. Ion-type features feel very different from person to person and are hard to compare by numbers.",
+   "best": {
+    "id": "sample:hair-dryer-2",
+    "reason": "Top score (rating and number of reviews together make it the most trustworthy)",
+    "title": "(サンプル) ヘアドライヤー B 1.3m3/分 折りたたみ イオン",
+    "price": 5070,
+    "buy_url": "https://search.rakuten.co.jp/search/mall/%E3%83%98%E3%82%A2%E3%83%89%E3%83%A9%E3%82%A4%E3%83%A4%E3%83%BC/"
+   },
+   "links": {
+    "html": "https://bufeks.github.io/LAB/shelf/en/c/hair-dryer/",
+    "markdown": "https://bufeks.github.io/LAB/shelf/en/c/hair-dryer.md",
+    "json": "https://bufeks.github.io/LAB/shelf/api/v1/en/c/hair-dryer.json",
+    "feed": "https://bufeks.github.io/LAB/shelf/en/c/hair-dryer/feed.xml"
+   }
+  },
+  {
+   "id": "rice-cooker",
+   "name": "Rice cookers",
+   "names": {
+    "ja": "炊飯器",
+    "en": "Rice cookers",
+    "zh-Hans": "电饭煲",
+    "zh-Hant": "電子鍋",
+    "ko": "전기밥솥"
+   },
+   "name_en": "Rice cookers",
+   "status": "ok",
+   "translated": true,
+   "data_date": "2026-10-02",
+   "item_count": 6,
+   "summary": "As a guide, 3 go for one person, 5.5 go for 2–4 people and 1 shō (10 go) for 5 or more. For the lowest price, a microcomputer model; for better-cooked rice, IH; for a chewier, stickier texture, pressure IH. At the top end, the differences are the inner pot’s material and heating power.",
+   "best": {
+    "id": "sample:rice-cooker-2",
+    "reason": "Top score (rating and number of reviews together make it the most trustworthy)",
+    "title": "(サンプル) 炊飯器 B 3合 マイコン",
+    "price": 14750,
+    "buy_url": "https://search.rakuten.co.jp/search/mall/%E7%82%8A%E9%A3%AF%E5%99%A8/"
+   },
+   "links": {
+    "html": "https://bufeks.github.io/LAB/shelf/en/c/rice-cooker/",
+    "markdown": "https://bufeks.github.io/LAB/shelf/en/c/rice-cooker.md",
+    "json": "https://bufeks.github.io/LAB/shelf/api/v1/en/c/rice-cooker.json",
+    "feed": "https://bufeks.github.io/LAB/shelf/en/c/rice-cooker/feed.xml"
+   }
+  },
+  {
+   "id": "air-purifier",
+   "name": "Air purifiers",
+   "names": {
+    "ja": "空気清浄機",
+    "en": "Air purifiers",
+    "zh-Hans": "空气净化器",
+    "zh-Hant": "空氣清淨機",
+    "ko": "공기청정기"
+   },
+   "name_en": "Air purifiers",
+   "status": "ok",
+   "translated": true,
+   "data_date": "2026-10-02",
+   "item_count": 6,
+   "summary": "Choose a rated floor area about 2–3 times the room you will use it in: it cleans the air faster and can run on a quieter setting. A built-in humidifier is convenient but means more cleaning. Compare including the cost of replacement filters, not just the price of the unit.",
+   "best": {
+    "id": "sample:air-purifier-4",
+    "reason": "Top score (rating and number of reviews together make it the most trustworthy)",
+    "title": "(サンプル) 空気清浄機 D 8畳 HEPA",
+    "price": 21780,
+    "buy_url": "https://search.rakuten.co.jp/search/mall/%E7%A9%BA%E6%B0%97%E6%B8%85%E6%B5%84%E6%A9%9F/"
+   },
+   "links": {
+    "html": "https://bufeks.github.io/LAB/shelf/en/c/air-purifier/",
+    "markdown": "https://bufeks.github.io/LAB/shelf/en/c/air-purifier.md",
+    "json": "https://bufeks.github.io/LAB/shelf/api/v1/en/c/air-purifier.json",
+    "feed": "https://bufeks.github.io/LAB/shelf/en/c/air-purifier/feed.xml"
+   }
+  },
+  {
+   "id": "robot-vacuum",
+   "name": "Robot vacuums",
+   "names": {
+    "ja": "ロボット掃除機",
+    "en": "Robot vacuums",
+    "zh-Hans": "扫地机器人",
+    "zh-Hant": "掃地機器人",
+    "ko": "로봇청소기"
+   },
+   "name_en": "Robot vacuums",
+   "status": "ok",
+   "translated": true,
+   "data_date": "2026-10-02",
+   "item_count": 6,
+   "summary": "Mapping, which builds a map of your home, means fewer missed spots and lets you choose which rooms to clean. To cut the chores, choose auto-empty. Suction figures (Pa) are not measured the same way by every maker, so treat them as a rough guide only.",
+   "best": {
+    "id": "sample:robot-vacuum-5",
+    "reason": "Top score (rating and number of reviews together make it the most trustworthy)",
+    "title": "(サンプル) ロボット掃除機 E マッピング 水拭き 自動ゴミ収集 8000Pa",
+    "price": 37950,
+    "buy_url": "https://search.rakuten.co.jp/search/mall/%E3%83%AD%E3%83%9C%E3%83%83%E3%83%88%E6%8E%83%E9%99%A4%E6%A9%9F/"
+   },
+   "links": {
+    "html": "https://bufeks.github.io/LAB/shelf/en/c/robot-vacuum/",
+    "markdown": "https://bufeks.github.io/LAB/shelf/en/c/robot-vacuum.md",
+    "json": "https://bufeks.github.io/LAB/shelf/api/v1/en/c/robot-vacuum.json",
+    "feed": "https://bufeks.github.io/LAB/shelf/en/c/robot-vacuum/feed.xml"
+   }
+  },
+  {
+   "id": "rice",
+   "name": "Rice (white)",
+   "names": {
+    "ja": "米（白米）",
+    "en": "Rice (white)",
+    "zh-Hans": "大米（精米）",
+    "zh-Hant": "米（白米）",
+    "ko": "쌀 (백미)"
+   },
+   "name_en": "Rice (white)",
+   "status": "ok",
+   "translated": true,
+   "data_date": "2026-10-02",
+   "item_count": 6,
+   "summary": "Compare by price per kg. Taste and price vary with the brand, the crop year and whether it is single-origin or blended. To skip rinsing and save water, choose musenmai (no-rinse rice), which tends to cost a little more for the same weight.",
+   "best": {
+    "id": "sample:rice-1",
+    "reason": "Top score (rating and number of reviews together make it the most trustworthy)",
+    "title": "(サンプル) 米(白米) A コシヒカリ 令和7年産 10kg (5kg×2袋)",
+    "price": 3110,
+    "buy_url": "https://search.rakuten.co.jp/search/mall/%E7%B1%B3%20%E7%99%BD%E7%B1%B3%205kg/"
+   },
+   "links": {
+    "html": "https://bufeks.github.io/LAB/shelf/en/c/rice/",
+    "markdown": "https://bufeks.github.io/LAB/shelf/en/c/rice.md",
+    "json": "https://bufeks.github.io/LAB/shelf/api/v1/en/c/rice.json",
+    "feed": "https://bufeks.github.io/LAB/shelf/en/c/rice/feed.xml"
+   }
+  },
+  {
+   "id": "mineral-water",
+   "name": "Bottled water (by the case)",
+   "names": {
+    "ja": "ミネラルウォーター（箱買い）",
+    "en": "Bottled water (by the case)",
+    "zh-Hans": "矿泉水（整箱）",
+    "zh-Hant": "礦泉水（整箱購買）",
+    "ko": "생수 (박스 구매)"
+   },
+   "name_en": "Bottled water (by the case)",
+   "status": "ok",
+   "translated": true,
+   "data_date": "2026-10-02",
+   "item_count": 6,
+   "summary": "Compare by price per litre. For everyday drinking and cooking, soft water; for more of a mineral taste, medium-hard to hard water. Water is heavy, so whether shipping is included changes the real price a lot.",
+   "best": {
+    "id": "sample:mineral-water-1",
+    "reason": "Top score (rating and number of reviews together make it the most trustworthy)",
+    "title": "(サンプル) ミネラルウォーター(箱買い) A 天然水 2L×9本 硬度30",
+    "price": 1340,
+    "buy_url": "https://search.rakuten.co.jp/search/mall/%E3%83%9F%E3%83%8D%E3%83%A9%E3%83%AB%E3%82%A6%E3%82%A9%E3%83%BC%E3%82%BF%E3%83%BC%202L%20%E7%AE%B1/"
+   },
+   "links": {
+    "html": "https://bufeks.github.io/LAB/shelf/en/c/mineral-water/",
+    "markdown": "https://bufeks.github.io/LAB/shelf/en/c/mineral-water.md",
+    "json": "https://bufeks.github.io/LAB/shelf/api/v1/en/c/mineral-water.json",
+    "feed": "https://bufeks.github.io/LAB/shelf/en/c/mineral-water/feed.xml"
+   }
+  },
+  {
+   "id": "toilet-paper",
+   "name": "Toilet paper",
+   "names": {
+    "ja": "トイレットペーパー",
+    "en": "Toilet paper",
+    "zh-Hans": "卫生纸（卷纸）",
+    "zh-Hant": "衛生紙（捲筒）",
+    "ko": "화장지 (두루마리)"
+   },
+   "name_en": "Toilet paper",
+   "status": "ok",
+   "translated": true,
+   "data_date": "2026-10-02",
+   "item_count": 6,
+   "summary": "Single-ply and double-ply cannot be compared simply by length (double-ply is two sheets). Here double-ply length is doubled and prices are compared per 100 m single-ply equivalent. Long rolls mean fewer changes and less storage space.",
+   "best": {
+    "id": "sample:toilet-paper-4",
+    "reason": "Top score (rating and number of reviews together make it the most trustworthy)",
+    "title": "(サンプル) トイレットペーパー D 3倍巻き 8ロール 150m シングル",
+    "price": 4130,
+    "buy_url": "https://search.rakuten.co.jp/search/mall/%E3%83%88%E3%82%A4%E3%83%AC%E3%83%83%E3%83%88%E3%83%9A%E3%83%BC%E3%83%91%E3%83%BC%20%E3%81%BE%E3%81%A8%E3%82%81%E8%B2%B7%E3%81%84/"
+   },
+   "links": {
+    "html": "https://bufeks.github.io/LAB/shelf/en/c/toilet-paper/",
+    "markdown": "https://bufeks.github.io/LAB/shelf/en/c/toilet-paper.md",
+    "json": "https://bufeks.github.io/LAB/shelf/api/v1/en/c/toilet-paper.json",
+    "feed": "https://bufeks.github.io/LAB/shelf/en/c/toilet-paper/feed.xml"
+   }
+  },
+  {
+   "id": "aa-batteries",
+   "name": "AA alkaline batteries",
+   "names": {
+    "ja": "単3アルカリ乾電池",
+    "en": "AA alkaline batteries",
+    "zh-Hans": "5号碱性电池（AA）",
+    "zh-Hant": "3號鹼性電池",
+    "ko": "AA(단3) 알카라인 건전지"
+   },
+   "name_en": "AA alkaline batteries",
+   "status": "ok",
+   "translated": true,
+   "data_date": "2026-10-02",
+   "item_count": 5,
+   "summary": "Compare by price per battery. For low-drain devices such as remote controls and clocks, cheap bulk packs are fine; for high-drain devices such as cameras and toys, consider high-performance batteries or rechargeables.",
+   "best": {
+    "id": "sample:aa-batteries-5",
+    "reason": "Top score (rating and number of reviews together make it the most trustworthy)",
+    "title": "(サンプル) 単3アルカリ乾電池 E 単3 100本",
+    "price": 1430,
+    "buy_url": "https://search.rakuten.co.jp/search/mall/%E5%8D%983%20%E3%82%A2%E3%83%AB%E3%82%AB%E3%83%AA%E4%B9%BE%E9%9B%BB%E6%B1%A0/"
+   },
+   "links": {
+    "html": "https://bufeks.github.io/LAB/shelf/en/c/aa-batteries/",
+    "markdown": "https://bufeks.github.io/LAB/shelf/en/c/aa-batteries.md",
+    "json": "https://bufeks.github.io/LAB/shelf/api/v1/en/c/aa-batteries.json",
+    "feed": "https://bufeks.github.io/LAB/shelf/en/c/aa-batteries/feed.xml"
+   }
+  },
+  {
+   "id": "coffee-beans",
+   "name": "Coffee beans",
+   "names": {
+    "ja": "コーヒー豆",
+    "en": "Coffee beans",
+    "zh-Hans": "咖啡豆",
+    "zh-Hant": "咖啡豆",
+    "ko": "커피 원두"
+   },
+   "name_en": "Coffee beans",
+   "status": "ok",
+   "translated": true,
+   "data_date": "2026-10-02",
+   "item_count": 6,
+   "summary": "Compare by price per 100 g. To keep the aroma longer, buy whole beans and grind just before brewing. If you like bitterness and body, dark roast; for acidity and aroma, light roast.",
+   "best": {
+    "id": "sample:coffee-beans-5",
+    "reason": "Top score (rating and number of reviews together make it the most trustworthy)",
+    "title": "(サンプル) コーヒー豆 E 深煎り 2kg 豆",
+    "price": 4160,
+    "buy_url": "https://search.rakuten.co.jp/search/mall/%E3%82%B3%E3%83%BC%E3%83%92%E3%83%BC%E8%B1%86/"
+   },
+   "links": {
+    "html": "https://bufeks.github.io/LAB/shelf/en/c/coffee-beans/",
+    "markdown": "https://bufeks.github.io/LAB/shelf/en/c/coffee-beans.md",
+    "json": "https://bufeks.github.io/LAB/shelf/api/v1/en/c/coffee-beans.json",
+    "feed": "https://bufeks.github.io/LAB/shelf/en/c/coffee-beans/feed.xml"
+   }
+  },
+  {
+   "id": "protein",
+   "name": "Protein powder",
+   "names": {
+    "ja": "プロテイン（パウダー）",
+    "en": "Protein powder",
+    "zh-Hans": "蛋白粉",
+    "zh-Hant": "高蛋白粉（乳清蛋白等）",
+    "ko": "프로틴 (파우더)"
+   },
+   "name_en": "Protein powder",
+   "status": "ok",
+   "translated": true,
+   "data_date": "2026-10-02",
+   "item_count": 6,
+   "summary": "Compare by price per kg. But the protein content differs between products (mostly 70–90%), so also check the protein per serving on the nutrition label.",
+   "best": {
+    "id": "sample:protein-1",
+    "reason": "Top score (rating and number of reviews together make it the most trustworthy)",
+    "title": "(サンプル) プロテイン(パウダー) A ホエイ 1kg",
+    "price": 4400,
+    "buy_url": "https://search.rakuten.co.jp/search/mall/%E3%83%97%E3%83%AD%E3%83%86%E3%82%A4%E3%83%B3%20%E3%83%9B%E3%82%A8%E3%82%A4%201kg/"
+   },
+   "links": {
+    "html": "https://bufeks.github.io/LAB/shelf/en/c/protein/",
+    "markdown": "https://bufeks.github.io/LAB/shelf/en/c/protein.md",
+    "json": "https://bufeks.github.io/LAB/shelf/api/v1/en/c/protein.json",
+    "feed": "https://bufeks.github.io/LAB/shelf/en/c/protein/feed.xml"
+   }
+  },
+  {
+   "id": "sonicare-heads",
+   "name": "Sonicare brush heads",
+   "names": {
+    "ja": "ソニッケアー純正替えブラシ",
+    "en": "Sonicare brush heads",
+    "zh-Hans": "飞利浦 Sonicare 原装替换刷头",
+    "zh-Hant": "Sonicare 原廠替換刷頭",
+    "ko": "소닉케어 정품 교체용 칫솔모"
+   },
+   "name_en": "Sonicare brush heads",
+   "status": "ok",
+   "translated": true,
+   "data_date": "2026-10-02",
+   "item_count": 6,
+   "summary": "Click-on Sonicare brush heads fit most Sonicare rechargeable handles (Philips One and older Essence models are different). Compare by price per head. Replace about every 3 months.",
+   "best": {
+    "id": "sample:sonicare-heads-4",
+    "reason": "Top score (rating and number of reviews together make it the most trustworthy)",
+    "title": "(サンプル) ソニッケアー純正替えブラシ D ソニッケアー 純正 ホワイトニング 3本",
+    "price": 2610,
+    "buy_url": "https://search.rakuten.co.jp/search/mall/%E3%82%BD%E3%83%8B%E3%83%83%E3%82%B1%E3%82%A2%E3%83%BC%20%E6%9B%BF%E3%81%88%E3%83%96%E3%83%A9%E3%82%B7%20%E7%B4%94%E6%AD%A3/"
+   },
+   "links": {
+    "html": "https://bufeks.github.io/LAB/shelf/en/c/sonicare-heads/",
+    "markdown": "https://bufeks.github.io/LAB/shelf/en/c/sonicare-heads.md",
+    "json": "https://bufeks.github.io/LAB/shelf/api/v1/en/c/sonicare-heads.json",
+    "feed": "https://bufeks.github.io/LAB/shelf/en/c/sonicare-heads/feed.xml"
+   }
+  },
+  {
+   "id": "oralb-heads",
+   "name": "Oral-B brush heads (round)",
+   "names": {
+    "ja": "ブラウン オーラルB 純正替えブラシ（丸型）",
+    "en": "Oral-B brush heads (round)",
+    "zh-Hans": "博朗欧乐B 原装替换刷头（圆形）",
+    "zh-Hant": "百靈 Oral-B 原廠替換刷頭（圓形）",
+    "ko": "브라운 오랄비 정품 교체용 칫솔모 (원형)"
+   },
+   "name_en": "Oral-B brush heads (round)",
+   "status": "ok",
+   "translated": true,
+   "data_date": "2026-10-02",
+   "item_count": 5,
+   "summary": "Braun Oral-B round brush heads fit rotating handles other than the iO series (iO takes its own heads only, and oval heads are for different models). Compare by price per head. Replace about every 3 months.",
+   "best": {
+    "id": "sample:oralb-heads-1",
+    "reason": "Top score (rating and number of reviews together make it the most trustworthy)",
+    "title": "(サンプル) ブラウン オーラルB 純正替えブラシ(丸型) A ブラウン オーラルB 純正 4本",
+    "price": 4660,
+    "buy_url": "https://search.rakuten.co.jp/search/mall/%E3%83%96%E3%83%A9%E3%82%A6%E3%83%B3%20%E3%82%AA%E3%83%BC%E3%83%A9%E3%83%ABB%20%E6%9B%BF%E3%81%88%E3%83%96%E3%83%A9%E3%82%B7%20%E7%B4%94%E6%AD%A3/"
+   },
+   "links": {
+    "html": "https://bufeks.github.io/LAB/shelf/en/c/oralb-heads/",
+    "markdown": "https://bufeks.github.io/LAB/shelf/en/c/oralb-heads.md",
+    "json": "https://bufeks.github.io/LAB/shelf/api/v1/en/c/oralb-heads.json",
+    "feed": "https://bufeks.github.io/LAB/shelf/en/c/oralb-heads/feed.xml"
    }
   }
  ],

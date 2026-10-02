@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="ko">
+  <id>https://bufeks.github.io/LAB/shelf/ko/c/air-purifier/feed.xml</id>
+  <title>SHELF — 공기청정기: 평소보다 싼 상품</title>
+  <link rel="self" href="https://bufeks.github.io/LAB/shelf/ko/c/air-purifier/feed.xml"/>
+  <link rel="alternate" href="https://bufeks.github.io/LAB/shelf/ko/c/air-purifier/"/>
+  <updated>2026-10-02T14:41:13+09:00</updated>
+  <author><name>SHELF</name></author>
+  <entry>
+    <id>https://bufeks.github.io/LAB/shelf/ko/c/air-purifier/feed.xml#sample%3Aair-purifier-4@21780</id>
+    <title>(サンプル) 空気清浄機 D 8畳 HEPA</title>
+    <link rel="alternate" href="https://bufeks.github.io/LAB/shelf/ko/c/air-purifier/"/>
+    <updated>2026-10-02T14:41:13+09:00</updated>
+    <summary>21,780엔 (평소 24,860엔, 12.4% 쌈)</summary>
+  </entry>
+  <entry>
+    <id>https://bufeks.github.io/LAB/shelf/ko/c/air-purifier/feed.xml#sample%3Aair-purifier-1@22200</id>
+    <title>(サンプル) 空気清浄機 A スーパーSALE 25畳 HEPA</title>
+    <link rel="alternate" href="https://bufeks.github.io/LAB/shelf/ko/c/air-purifier/"/>
+    <updated>2026-10-02T14:41:13+09:00</updated>
+    <summary>22,200엔 (평소 25,310엔, 12.3% 쌈)</summary>
+  </entry>
+</feed>

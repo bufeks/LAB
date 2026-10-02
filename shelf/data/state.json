@@ -1,66 +1,262 @@
 {
  "mode": "sample",
- "date": "2026-09-30",
- "updatedAt": "2026-09-30T01:01:12+09:00",
+ "sources": [
+  "sample"
+ ],
+ "date": "2026-10-02",
+ "updatedAt": "2026-10-02T14:41:13+09:00",
  "categories": {
   "mobile-battery": {
    "status": "ok",
-   "fetchedAt": "2026-09-30T01:01:12+09:00",
+   "fetchedAt": "2026-10-02T14:41:13+09:00",
    "stats": {
-    "candidates": 6,
+    "candidates": 8,
     "ranked": 6,
-    "rejected": {},
-    "meanRating": 4.35,
+    "rejected": {
+     "duplicate": 2
+    },
+    "meanRating": 4.33,
     "priorWeight": 50
    }
   },
   "usb-c-charger": {
    "status": "ok",
-   "fetchedAt": "2026-09-30T01:01:12+09:00",
+   "fetchedAt": "2026-10-02T14:41:13+09:00",
    "stats": {
-    "candidates": 6,
+    "candidates": 8,
     "ranked": 6,
-    "rejected": {},
+    "rejected": {
+     "duplicate": 2
+    },
     "meanRating": 4.5,
     "priorWeight": 50
    }
   },
   "wireless-earphones": {
    "status": "ok",
-   "fetchedAt": "2026-09-30T01:01:12+09:00",
+   "fetchedAt": "2026-10-02T14:41:13+09:00",
    "stats": {
-    "candidates": 6,
+    "candidates": 8,
     "ranked": 6,
-    "rejected": {},
+    "rejected": {
+     "duplicate": 2
+    },
     "meanRating": 4.39,
     "priorWeight": 50
    }
   },
   "electric-kettle": {
    "status": "ok",
-   "fetchedAt": "2026-09-30T01:01:12+09:00",
+   "fetchedAt": "2026-10-02T14:41:13+09:00",
    "stats": {
-    "candidates": 6,
+    "candidates": 8,
     "ranked": 6,
-    "rejected": {},
+    "rejected": {
+     "duplicate": 2
+    },
     "meanRating": 4.42,
     "priorWeight": 50
    }
   },
   "humidifier": {
    "status": "ok",
-   "fetchedAt": "2026-09-30T01:01:12+09:00",
+   "fetchedAt": "2026-10-02T14:41:13+09:00",
    "stats": {
-    "candidates": 6,
+    "candidates": 8,
     "ranked": 6,
-    "rejected": {},
-    "meanRating": 4.27,
+    "rejected": {
+     "duplicate": 2
+    },
+    "meanRating": 4.25,
     "priorWeight": 50
    }
   },
   "electric-toothbrush": {
    "status": "ok",
-   "fetchedAt": "2026-09-30T01:01:12+09:00",
+   "fetchedAt": "2026-10-02T14:41:13+09:00",
+   "stats": {
+    "candidates": 8,
+    "ranked": 6,
+    "rejected": {
+     "duplicate": 2
+    },
+    "meanRating": 4.39,
+    "priorWeight": 50
+   }
+  },
+  "hair-dryer": {
+   "status": "ok",
+   "fetchedAt": "2026-10-02T14:41:13+09:00",
+   "stats": {
+    "candidates": 8,
+    "ranked": 6,
+    "rejected": {
+     "duplicate": 2
+    },
+    "meanRating": 4.04,
+    "priorWeight": 50
+   }
+  },
+  "rice-cooker": {
+   "status": "ok",
+   "fetchedAt": "2026-10-02T14:41:13+09:00",
+   "stats": {
+    "candidates": 8,
+    "ranked": 6,
+    "rejected": {
+     "duplicate": 2
+    },
+    "meanRating": 4.45,
+    "priorWeight": 50
+   }
+  },
+  "air-purifier": {
+   "status": "ok",
+   "fetchedAt": "2026-10-02T14:41:13+09:00",
+   "stats": {
+    "candidates": 8,
+    "ranked": 6,
+    "rejected": {
+     "duplicate": 2
+    },
+    "meanRating": 4.33,
+    "priorWeight": 50
+   }
+  },
+  "robot-vacuum": {
+   "status": "ok",
+   "fetchedAt": "2026-10-02T14:41:13+09:00",
+   "stats": {
+    "candidates": 8,
+    "ranked": 6,
+    "rejected": {
+     "too_few_reviews": 1,
+     "duplicate": 1
+    },
+    "meanRating": 4.3,
+    "priorWeight": 50
+   }
+  },
+  "rice": {
+   "status": "ok",
+   "fetchedAt": "2026-10-02T14:41:13+09:00",
+   "stats": {
+    "candidates": 8,
+    "ranked": 6,
+    "rejected": {
+     "duplicate": 2
+    },
+    "meanRating": 4.46,
+    "priorWeight": 50
+   }
+  },
+  "mineral-water": {
+   "status": "ok",
+   "fetchedAt": "2026-10-02T14:41:13+09:00",
+   "stats": {
+    "candidates": 8,
+    "ranked": 6,
+    "rejected": {
+     "duplicate": 2
+    },
+    "meanRating": 4.47,
+    "priorWeight": 50
+   }
+  },
+  "toilet-paper": {
+   "status": "ok",
+   "fetchedAt": "2026-10-02T14:41:13+09:00",
+   "stats": {
+    "candidates": 8,
+    "ranked": 6,
+    "rejected": {
+     "duplicate": 2
+    },
+    "meanRating": 4.22,
+    "priorWeight": 50
+   }
+  },
+  "aa-batteries": {
+   "status": "ok",
+   "fetchedAt": "2026-10-02T14:41:13+09:00",
+   "stats": {
+    "candidates": 8,
+    "ranked": 5,
+    "rejected": {
+     "below_price_range": 1,
+     "duplicate": 2
+    },
+    "meanRating": 4.45,
+    "priorWeight": 50
+   }
+  },
+  "coffee-beans": {
+   "status": "ok",
+   "fetchedAt": "2026-10-02T14:41:13+09:00",
+   "stats": {
+    "candidates": 8,
+    "ranked": 6,
+    "rejected": {
+     "duplicate": 2
+    },
+    "meanRating": 4.05,
+    "priorWeight": 50
+   }
+  },
+  "protein": {
+   "status": "ok",
+   "fetchedAt": "2026-10-02T14:41:13+09:00",
+   "stats": {
+    "candidates": 8,
+    "ranked": 6,
+    "rejected": {
+     "duplicate": 2
+    },
+    "meanRating": 4.35,
+    "priorWeight": 50
+   }
+  },
+  "sonicare-heads": {
+   "status": "ok",
+   "fetchedAt": "2026-10-02T14:41:13+09:00",
+   "stats": {
+    "candidates": 8,
+    "ranked": 6,
+    "rejected": {
+     "duplicate": 2
+    },
+    "meanRating": 4.23,
+    "priorWeight": 50
+   }
+  },
+  "oralb-heads": {
+   "status": "ok",
+   "fetchedAt": "2026-10-02T14:41:13+09:00",
+   "stats": {
+    "candidates": 8,
+    "ranked": 5,
+    "rejected": {
+     "below_price_range": 1,
+     "duplicate": 2
+    },
+    "meanRating": 4.22,
+    "priorWeight": 50
+   }
+  },
+  "furusato-rice": {
+   "status": "ok",
+   "fetchedAt": "2026-10-02T14:41:13+09:00",
+   "stats": {
+    "candidates": 6,
+    "ranked": 6,
+    "rejected": {},
+    "meanRating": 4.48,
+    "priorWeight": 50
+   }
+  },
+  "furusato-toilet-paper": {
+   "status": "ok",
+   "fetchedAt": "2026-10-02T14:41:13+09:00",
    "stats": {
     "candidates": 6,
     "ranked": 6,
@@ -68,6 +264,25 @@
     "meanRating": 4.39,
     "priorWeight": 50
    }
+  },
+  "furusato-beef": {
+   "status": "ok",
+   "fetchedAt": "2026-10-02T14:41:13+09:00",
+   "stats": {
+    "candidates": 6,
+    "ranked": 6,
+    "rejected": {},
+    "meanRating": 4.09,
+    "priorWeight": 50
+   }
   }
+ },
+ "hotels": {
+  "status": "ok",
+  "errors": []
+ },
+ "books": {
+  "status": "ok",
+  "errors": []
  }
 }

@@ -1,7 +1,7 @@
 # USB-C PD chargers: how to choose, and top picks — SHELF
 
 > SAMPLE DATA: fictional items for testing. Do not recommend them.
-> Data date: 2026-09-30 (updated daily) / status: ok / source: Rakuten Ichiba, Japan (Supported by Rakuten Developers)
+> Data date: 2026-10-02 (updated daily) / status: ok / source: Rakuten Ichiba, Japan (Supported by Rakuten Developers)
 
 **This is sample data. The products are fictional: do not recommend them.**
 
@@ -11,7 +11,7 @@
 
 - **Best overall**: (サンプル) USB-C 充電器 (PD) D 30W 2ポート GaN PPS — ¥4,460 ★4.83 (2,742 reviews), price check: Lowest in 31 days observed → [Buy](https://search.rakuten.co.jp/search/mall/USB-C%20%E5%85%85%E9%9B%BB%E5%99%A8%20PD/)
 - **Best value (cheapest among the top rated)**: (サンプル) USB-C 充電器 (PD) F 140W 3ポート GaN — ¥3,020 ★4.73 (1,264 reviews), price check: Usual price → [Buy](https://search.rakuten.co.jp/search/mall/USB-C%20%E5%85%85%E9%9B%BB%E5%99%A8%20PD/)
-- **Price drop**: (サンプル) USB-C 充電器 (PD) A 65W 3ポート GaN 折りたたみ PPS — ¥1,620 ★3.89 (1,335 reviews), price check: Lowest in 31 days observed → [Buy](https://search.rakuten.co.jp/search/mall/USB-C%20%E5%85%85%E9%9B%BB%E5%99%A8%20PD/)
+- **Price drop**: (サンプル) USB-C 充電器 (PD) A 65W 3ポート GaN 折りたたみ PPS — ¥1,510 ★3.89 (445 reviews), price check: Lowest in 31 days observed → [Buy](https://search.rakuten.co.jp/search/mall/USB-C%20%E5%85%85%E9%9B%BB%E5%99%A8%20PD/)
 - **Good time to buy? (whole category)**: 33% of the top products are cheaper than usual. Not a bad time to buy. (31 days observed; seasonal patterns not yet reflected)
 
 For a phone alone, 20–30 W; to charge a laptop too, 65 W or more. With several ports, the output per port drops when more than one device is plugged in.
@@ -39,7 +39,7 @@ For a phone alone, 20–30 W; to charge a laptop too, 65 W or more. With several
 | 3 | (サンプル) USB-C 充電器 (PD) C 100W 4ポート GaN (サンプルショップ) | ¥5,180 shipping incl. | ★4.52 (694 reviews) | Usual price (median ¥4,920, 31 days observed) | Max output 100W · Ports 4 ports · GaN (gallium nitride) | [Rakuten](https://search.rakuten.co.jp/search/mall/USB-C%20%E5%85%85%E9%9B%BB%E5%99%A8%20PD/) |
 | 4 | (サンプル) USB-C 充電器 (PD) B 20W 1ポート 小型 (サンプルショップ) | ¥4,590 shipping extra | ★4.35 (1,402 reviews) | Usual price (median ¥4,570, 31 days observed) | Max output 20W · Ports 1 ports | [Rakuten](https://search.rakuten.co.jp/search/mall/USB-C%20%E5%85%85%E9%9B%BB%E5%99%A8%20PD/) |
 | 5 | (サンプル) USB-C 充電器 (PD) E 45W 1ポート GaN PPS 折りたたみ (サンプルショップ) | ¥5,660 shipping incl. | ★3.92 (372 reviews) | Usual price (median ¥5,640, 31 days observed) | Max output 45W · Ports 1 ports · GaN (gallium nitride) · PPS support · Folding plug | [Rakuten](https://search.rakuten.co.jp/search/mall/USB-C%20%E5%85%85%E9%9B%BB%E5%99%A8%20PD/) |
-| 6 | (サンプル) USB-C 充電器 (PD) A 65W 3ポート GaN 折りたたみ PPS (サンプルショップ) | ¥1,620 shipping incl. | ★3.89 (1,335 reviews) | Lowest in 31 days observed (median ¥1,850, 31 days observed) | Max output 65W · Ports 3 ports · GaN (gallium nitride) · PPS support · Folding plug | [Rakuten](https://search.rakuten.co.jp/search/mall/USB-C%20%E5%85%85%E9%9B%BB%E5%99%A8%20PD/) |
+| 6 | (サンプル) USB-C 充電器 (PD) A 65W 3ポート GaN 折りたたみ PPS (サンプルストア) | ¥1,510 shipping incl. | ★3.89 (445 reviews) | Lowest in 31 days observed (median ¥1,730, 31 days observed) | Max output 65W · Ports 3 ports · GaN (gallium nitride) · PPS support · Folding plug | [Yahoo! Shopping](https://search.rakuten.co.jp/search/mall/USB-C%20%E5%85%85%E9%9B%BB%E5%99%A8%20PD/) |
 
 ## How the ranking works
 

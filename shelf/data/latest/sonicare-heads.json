@@ -1,0 +1,414 @@
+{
+ "categoryId": "sonicare-heads",
+ "date": "2026-10-02",
+ "fetchedAt": "2026-10-02T14:41:13+09:00",
+ "items": [
+  {
+   "id": "sample:sonicare-heads-4",
+   "source": "rakuten",
+   "name": "(サンプル) ソニッケアー純正替えブラシ D ソニッケアー 純正 ホワイトニング 3本",
+   "caption": "",
+   "shop": "サンプルショップ",
+   "price": 2610,
+   "shippingIncluded": false,
+   "pointRate": 1,
+   "rating": 4.64,
+   "reviews": 3314,
+   "productUrl": "https://search.rakuten.co.jp/search/mall/%E3%82%BD%E3%83%8B%E3%83%83%E3%82%B1%E3%82%A2%E3%83%BC%20%E6%9B%BF%E3%81%88%E3%83%96%E3%83%A9%E3%82%B7%20%E7%B4%94%E6%AD%A3/",
+   "buyUrl": "https://search.rakuten.co.jp/search/mall/%E3%82%BD%E3%83%8B%E3%83%83%E3%82%B1%E3%82%A2%E3%83%BC%20%E6%9B%BF%E3%81%88%E3%83%96%E3%83%A9%E3%82%B7%20%E7%B4%94%E6%AD%A3/",
+   "affiliate": false,
+   "image": null,
+   "available": true,
+   "title": "(サンプル) ソニッケアー純正替えブラシ D ソニッケアー 純正 ホワイトニング 3本",
+   "variants": false,
+   "score": 4.634,
+   "facets": {
+    "heads": 3,
+    "genuine": true
+   },
+   "claimed": null,
+   "unit": {
+    "quantity": 3,
+    "value": 870
+   },
+   "otherOffers": [
+    {
+     "id": "sample-y:sonicare-heads-2",
+     "store": "yahoo",
+     "shop": "サンプルストア",
+     "price": 2710,
+     "shippingIncluded": true,
+     "buyUrl": "https://search.rakuten.co.jp/search/mall/%E3%82%BD%E3%83%8B%E3%83%83%E3%82%B1%E3%82%A2%E3%83%BC%20%E6%9B%BF%E3%81%88%E3%83%96%E3%83%A9%E3%82%B7%20%E7%B4%94%E6%AD%A3/",
+     "affiliate": false
+    }
+   ],
+   "rank": 1,
+   "priceStats": {
+    "points": 31,
+    "windowDays": 31,
+    "firstSeen": "2026-09-02",
+    "min90": 2610,
+    "median90": 2980,
+    "max90": 3060,
+    "verdict": "lowest_observed"
+   },
+   "priceWeekly": [
+    [
+     "2026-09-02",
+     2950
+    ],
+    [
+     "2026-09-07",
+     2930
+    ],
+    [
+     "2026-09-17",
+     2920
+    ],
+    [
+     "2026-09-21",
+     2920
+    ],
+    [
+     "2026-10-02",
+     2610
+    ]
+   ]
+  },
+  {
+   "id": "sample:sonicare-heads-5",
+   "source": "rakuten",
+   "name": "(サンプル) ソニッケアー純正替えブラシ E ソニッケアー 純正 6本",
+   "caption": "",
+   "shop": "サンプルショップ",
+   "price": 2150,
+   "shippingIncluded": true,
+   "pointRate": 1,
+   "rating": 4.44,
+   "reviews": 2376,
+   "productUrl": "https://search.rakuten.co.jp/search/mall/%E3%82%BD%E3%83%8B%E3%83%83%E3%82%B1%E3%82%A2%E3%83%BC%20%E6%9B%BF%E3%81%88%E3%83%96%E3%83%A9%E3%82%B7%20%E7%B4%94%E6%AD%A3/",
+   "buyUrl": "https://search.rakuten.co.jp/search/mall/%E3%82%BD%E3%83%8B%E3%83%83%E3%82%B1%E3%82%A2%E3%83%BC%20%E6%9B%BF%E3%81%88%E3%83%96%E3%83%A9%E3%82%B7%20%E7%B4%94%E6%AD%A3/",
+   "affiliate": false,
+   "image": null,
+   "available": true,
+   "title": "(サンプル) ソニッケアー純正替えブラシ E ソニッケアー 純正 6本",
+   "variants": false,
+   "score": 4.436,
+   "facets": {
+    "heads": 6,
+    "genuine": true
+   },
+   "claimed": null,
+   "unit": {
+    "quantity": 6,
+    "value": 358.3
+   },
+   "otherOffers": [],
+   "rank": 2,
+   "priceStats": {
+    "points": 31,
+    "windowDays": 31,
+    "firstSeen": "2026-09-02",
+    "min90": 2090,
+    "median90": 2140,
+    "max90": 2210,
+    "verdict": "usual"
+   },
+   "priceWeekly": [
+    [
+     "2026-09-04",
+     2100
+    ],
+    [
+     "2026-09-10",
+     2100
+    ],
+    [
+     "2026-09-13",
+     2090
+    ],
+    [
+     "2026-09-25",
+     2130
+    ],
+    [
+     "2026-09-29",
+     2100
+    ]
+   ]
+  },
+  {
+   "id": "sample:sonicare-heads-3",
+   "source": "rakuten",
+   "name": "(サンプル) ソニッケアー純正替えブラシ C フィリップス ソニッケアー 正規品 8本",
+   "caption": "",
+   "shop": "サンプルショップ",
+   "price": 4140,
+   "shippingIncluded": true,
+   "pointRate": 1,
+   "rating": 4.4,
+   "reviews": 3348,
+   "productUrl": "https://search.rakuten.co.jp/search/mall/%E3%82%BD%E3%83%8B%E3%83%83%E3%82%B1%E3%82%A2%E3%83%BC%20%E6%9B%BF%E3%81%88%E3%83%96%E3%83%A9%E3%82%B7%20%E7%B4%94%E6%AD%A3/",
+   "buyUrl": "https://search.rakuten.co.jp/search/mall/%E3%82%BD%E3%83%8B%E3%83%83%E3%82%B1%E3%82%A2%E3%83%BC%20%E6%9B%BF%E3%81%88%E3%83%96%E3%83%A9%E3%82%B7%20%E7%B4%94%E6%AD%A3/",
+   "affiliate": false,
+   "image": null,
+   "available": true,
+   "title": "(サンプル) ソニッケアー純正替えブラシ C フィリップス ソニッケアー 8本",
+   "variants": false,
+   "score": 4.398,
+   "facets": {
+    "heads": 8,
+    "genuine": true
+   },
+   "claimed": null,
+   "unit": {
+    "quantity": 8,
+    "value": 517.5
+   },
+   "otherOffers": [],
+   "rank": 3,
+   "priceStats": {
+    "points": 31,
+    "windowDays": 31,
+    "firstSeen": "2026-09-02",
+    "min90": 3820,
+    "median90": 3940,
+    "max90": 4140,
+    "verdict": "usual"
+   },
+   "priceWeekly": [
+    [
+     "2026-09-02",
+     3870
+    ],
+    [
+     "2026-09-06",
+     3830
+    ],
+    [
+     "2026-09-15",
+     3880
+    ],
+    [
+     "2026-09-24",
+     3840
+    ],
+    [
+     "2026-09-27",
+     3820
+    ]
+   ]
+  },
+  {
+   "id": "sample:sonicare-heads-6",
+   "source": "rakuten",
+   "name": "(サンプル) ソニッケアー純正替えブラシ F ソニッケアー 純正 1本",
+   "caption": "",
+   "shop": "サンプルショップ",
+   "price": 4600,
+   "shippingIncluded": false,
+   "pointRate": 1,
+   "rating": 4.07,
+   "reviews": 3267,
+   "productUrl": "https://search.rakuten.co.jp/search/mall/%E3%82%BD%E3%83%8B%E3%83%83%E3%82%B1%E3%82%A2%E3%83%BC%20%E6%9B%BF%E3%81%88%E3%83%96%E3%83%A9%E3%82%B7%20%E7%B4%94%E6%AD%A3/",
+   "buyUrl": "https://search.rakuten.co.jp/search/mall/%E3%82%BD%E3%83%8B%E3%83%83%E3%82%B1%E3%82%A2%E3%83%BC%20%E6%9B%BF%E3%81%88%E3%83%96%E3%83%A9%E3%82%B7%20%E7%B4%94%E6%AD%A3/",
+   "affiliate": false,
+   "image": null,
+   "available": true,
+   "title": "(サンプル) ソニッケアー純正替えブラシ F ソニッケアー 純正 1本",
+   "variants": false,
+   "score": 4.072,
+   "facets": {
+    "heads": 1,
+    "genuine": true
+   },
+   "claimed": null,
+   "unit": {
+    "quantity": 1,
+    "value": 4600
+   },
+   "otherOffers": [],
+   "rank": 4,
+   "priceStats": {
+    "points": 31,
+    "windowDays": 31,
+    "firstSeen": "2026-09-02",
+    "min90": 4240,
+    "median90": 4370,
+    "max90": 4600,
+    "verdict": "usual"
+   },
+   "priceWeekly": [
+    [
+     "2026-09-02",
+     4300
+    ],
+    [
+     "2026-09-06",
+     4250
+    ],
+    [
+     "2026-09-12",
+     4250
+    ],
+    [
+     "2026-09-24",
+     4270
+    ],
+    [
+     "2026-10-01",
+     4240
+    ]
+   ]
+  },
+  {
+   "id": "sample:sonicare-heads-2",
+   "source": "rakuten",
+   "name": "(サンプル) ソニッケアー純正替えブラシ B ソニッケアー 純正 2本",
+   "caption": "",
+   "shop": "サンプルショップ",
+   "price": 2070,
+   "shippingIncluded": false,
+   "pointRate": 1,
+   "rating": 4.04,
+   "reviews": 3945,
+   "productUrl": "https://search.rakuten.co.jp/search/mall/%E3%82%BD%E3%83%8B%E3%83%83%E3%82%B1%E3%82%A2%E3%83%BC%20%E6%9B%BF%E3%81%88%E3%83%96%E3%83%A9%E3%82%B7%20%E7%B4%94%E6%AD%A3/",
+   "buyUrl": "https://search.rakuten.co.jp/search/mall/%E3%82%BD%E3%83%8B%E3%83%83%E3%82%B1%E3%82%A2%E3%83%BC%20%E6%9B%BF%E3%81%88%E3%83%96%E3%83%A9%E3%82%B7%20%E7%B4%94%E6%AD%A3/",
+   "affiliate": false,
+   "image": null,
+   "available": true,
+   "title": "(サンプル) ソニッケアー純正替えブラシ B ソニッケアー 純正 2本",
+   "variants": false,
+   "score": 4.042,
+   "facets": {
+    "heads": 2,
+    "genuine": true
+   },
+   "claimed": null,
+   "unit": {
+    "quantity": 2,
+    "value": 1035
+   },
+   "otherOffers": [],
+   "rank": 5,
+   "priceStats": {
+    "points": 31,
+    "windowDays": 31,
+    "firstSeen": "2026-09-02",
+    "min90": 2010,
+    "median90": 2060,
+    "max90": 2130,
+    "verdict": "usual"
+   },
+   "priceWeekly": [
+    [
+     "2026-09-04",
+     2010
+    ],
+    [
+     "2026-09-05",
+     2020
+    ],
+    [
+     "2026-09-17",
+     2020
+    ],
+    [
+     "2026-09-25",
+     2020
+    ],
+    [
+     "2026-09-28",
+     2030
+    ]
+   ]
+  },
+  {
+   "id": "sample-y:sonicare-heads-1",
+   "source": "yahoo",
+   "name": "(サンプル) ソニッケアー純正替えブラシ A ソニッケアー 純正 4本",
+   "caption": "",
+   "shop": "サンプルストア",
+   "price": 3110,
+   "shippingIncluded": true,
+   "pointRate": 1,
+   "rating": 3.89,
+   "reviews": 1105,
+   "productUrl": "https://search.rakuten.co.jp/search/mall/%E3%82%BD%E3%83%8B%E3%83%83%E3%82%B1%E3%82%A2%E3%83%BC%20%E6%9B%BF%E3%81%88%E3%83%96%E3%83%A9%E3%82%B7%20%E7%B4%94%E6%AD%A3/",
+   "buyUrl": "https://search.rakuten.co.jp/search/mall/%E3%82%BD%E3%83%8B%E3%83%83%E3%82%B1%E3%82%A2%E3%83%BC%20%E6%9B%BF%E3%81%88%E3%83%96%E3%83%A9%E3%82%B7%20%E7%B4%94%E6%AD%A3/",
+   "affiliate": false,
+   "image": null,
+   "available": true,
+   "title": "(サンプル) ソニッケアー純正替えブラシ A ソニッケアー 純正 4本",
+   "variants": false,
+   "score": 3.905,
+   "facets": {
+    "heads": 4,
+    "genuine": true
+   },
+   "claimed": null,
+   "unit": {
+    "quantity": 4,
+    "value": 777.5
+   },
+   "otherOffers": [
+    {
+     "id": "sample:sonicare-heads-1",
+     "store": "rakuten",
+     "shop": "サンプルショップ",
+     "price": 3340,
+     "shippingIncluded": true,
+     "buyUrl": "https://search.rakuten.co.jp/search/mall/%E3%82%BD%E3%83%8B%E3%83%83%E3%82%B1%E3%82%A2%E3%83%BC%20%E6%9B%BF%E3%81%88%E3%83%96%E3%83%A9%E3%82%B7%20%E7%B4%94%E6%AD%A3/",
+     "affiliate": false
+    }
+   ],
+   "rank": 6,
+   "priceStats": {
+    "points": 31,
+    "windowDays": 31,
+    "firstSeen": "2026-09-02",
+    "min90": 3110,
+    "median90": 3560,
+    "max90": 3660,
+    "verdict": "lowest_observed"
+   },
+   "priceWeekly": [
+    [
+     "2026-09-02",
+     3520
+    ],
+    [
+     "2026-09-10",
+     3500
+    ],
+    [
+     "2026-09-15",
+     3480
+    ],
+    [
+     "2026-09-23",
+     3490
+    ],
+    [
+     "2026-10-02",
+     3110
+    ]
+   ]
+  }
+ ],
+ "stats": {
+  "candidates": 8,
+  "ranked": 6,
+  "rejected": {
+   "duplicate": 2
+  },
+  "meanRating": 4.23,
+  "priorWeight": 50
+ },
+ "picks": {
+  "best": "sample:sonicare-heads-4",
+  "budget": "sample:sonicare-heads-5",
+  "deal": "sample-y:sonicare-heads-1",
+  "per_unit": "sample:sonicare-heads-5"
+ }
+}

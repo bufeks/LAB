@@ -28,7 +28,7 @@ test('every translation has every string English has', () => {
 
 test('every translation covers every category, criterion, spec and value', () => {
   for (const L of TRANSLATIONS) {
-    for (const c of CATEGORIES) {
+    for (const c of CATEGORIES.filter((c) => !c.langs || c.langs.includes(L.lang))) {
       const tr = L.categories[c.id];
       assert.ok(tr, `${L.lang}: ${c.id}`);
       assert.equal(tr.guide.criteria.length, c.guide.criteria.length, `${L.lang}/${c.id} criteria`);

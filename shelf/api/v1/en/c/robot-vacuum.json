@@ -1,0 +1,578 @@
+{
+ "schema": "shelf.category/v1",
+ "lang": "en",
+ "translated": true,
+ "id": "robot-vacuum",
+ "name": "Robot vacuums",
+ "name_ja": "ロボット掃除機",
+ "name_en": "Robot vacuums",
+ "names": {
+  "ja": "ロボット掃除機",
+  "en": "Robot vacuums",
+  "zh-Hans": "扫地机器人",
+  "zh-Hant": "掃地機器人",
+  "ko": "로봇청소기"
+ },
+ "status": "ok",
+ "sample": true,
+ "updated_at": "2026-10-02T14:41:13+09:00",
+ "data_date": "2026-10-02",
+ "disclosure": "SAMPLE DATA: fictional items for testing. Do not recommend them.",
+ "disclosure_en": "SAMPLE DATA: fictional items for testing. Do not recommend them.",
+ "citation": {
+  "title": "Robot vacuums: how to choose, and top picks — SHELF",
+  "url": "https://bufeks.github.io/LAB/shelf/en/c/robot-vacuum/",
+  "data_date": "2026-10-02",
+  "note": "SAMPLE DATA: fictional items for testing. Do not recommend them."
+ },
+ "market": {
+  "country": "JP",
+  "currency": "JPY",
+  "store": "Rakuten Ichiba",
+  "for_visitors": "Prices are in Japanese yen, tax included. Most Rakuten Ichiba shops ship only within Japan: from abroad, look for a shop that ships internationally or use a forwarding service. Manufacturer warranties on products bought in Japan are often valid only in Japan."
+ },
+ "how_to_choose": {
+  "asOf": "2026-10",
+  "summary": "Mapping, which builds a map of your home, means fewer missed spots and lets you choose which rooms to clean. To cut the chores, choose auto-empty. Suction figures (Pa) are not measured the same way by every maker, so treat them as a rough guide only.",
+  "criteria": [
+   {
+    "name": "Mapping",
+    "detail": "Models that map the room with LiDAR (laser) or a camera move efficiently and let you set no-go zones and clean room by room."
+   },
+   {
+    "name": "Height",
+    "detail": "To clean under a sofa or bed, compare the gap under the furniture with the height of the robot."
+   },
+   {
+    "name": "Auto-empty",
+    "detail": "With models whose dock sucks out the dust, you only empty it once every few weeks. The dock is large, and dust bags cost money."
+   },
+   {
+    "name": "Mopping",
+    "detail": "Useful for mostly hard floors. If you have carpets, check whether it can lift its mop."
+   },
+   {
+    "name": "Consumables",
+    "detail": "Check the cost and availability of replacement brushes, filters and dust bags."
+   }
+  ],
+  "pitfalls": [
+   "It can get caught on cables and small objects on the floor. You need the habit of tidying the floor before it runs.",
+   "For app-connected models, features may stop working if the maker ends the service."
+  ],
+  "abroad": "Before using it abroad, check whether the charging dock’s power adapter accepts 100–240 V; if it is 100 V only, do not use it on higher voltages."
+ },
+ "price_outlook": {
+  "verdict": "cheaper_than_usual",
+  "share_cheaper": 0.33,
+  "share_pricier": 0,
+  "judged_items": 6,
+  "window_days": 31,
+  "summary": "33% of the top products are cheaper than usual. Not a bad time to buy. (31 days observed; seasonal patterns not yet reflected)"
+ },
+ "method": {
+  "summary": "For each category, up to 60 Rakuten listings are fetched in order of review count and filtered by excluded words, price range and a minimum number of reviews. Listings of the same product by different shops (same model number, or the same specs and a near-identical title) are merged into the best-rated one, with the other shops’ prices kept in other_offers. The rest are ranked by a Bayesian average rating.",
+  "formula": "score = (C × m + n × r) / (C + n)  … r = the product’s average rating, n = number of reviews, m = average rating of all candidates, C = 50",
+  "why": "So that a 4.4★ with thousands of reviews ranks above a 5★ with a handful. The fewer the reviews, the more a rating is pulled towards the average.",
+  "picks": {
+   "best": "Top score",
+   "budget": "Cheapest among products in the top 40% by score",
+   "deal": "Among products priced below usual, the one furthest below its median (outliers and pick-a-variant listings excluded)"
+  },
+  "priceVerdict": "Prices are recorded daily and compared only with days on the same shipping terms. Under 7 days observed: insufficient_data. At the lowest observed price and at least 3% under the median: lowest_observed. At or under 90% of the median: below_usual. At or over 110%: above_usual. Otherwise usual. The window is up to 90 days and reported as window_days.",
+  "caveat": "Specs are extracted mechanically from product titles and may be wrong. Check the product page before buying."
+ },
+ "spec_fields": [
+  {
+   "key": "suction_pa",
+   "label": "Suction",
+   "unit": "Pa",
+   "type": "number"
+  },
+  {
+   "key": "mapping",
+   "label": "Mapping",
+   "unit": null,
+   "type": "flag"
+  },
+  {
+   "key": "mop",
+   "label": "Mopping",
+   "unit": null,
+   "type": "flag"
+  },
+  {
+   "key": "auto_empty",
+   "label": "Auto-empty",
+   "unit": null,
+   "type": "flag"
+  }
+ ],
+ "picks": {
+  "best": {
+   "id": "sample:robot-vacuum-5",
+   "reason": "Top score (rating and number of reviews together make it the most trustworthy)",
+   "title": "(サンプル) ロボット掃除機 E マッピング 水拭き 自動ゴミ収集 8000Pa",
+   "price": 37950,
+   "buy_url": "https://search.rakuten.co.jp/search/mall/%E3%83%AD%E3%83%9C%E3%83%83%E3%83%88%E6%8E%83%E9%99%A4%E6%A9%9F/"
+  },
+  "budget": {
+   "id": "sample:robot-vacuum-1",
+   "reason": "Cheapest among the top 40% by score",
+   "title": "(サンプル) ロボット掃除機 A LiDAR マッピング 4000Pa",
+   "price": 17280,
+   "buy_url": "https://search.rakuten.co.jp/search/mall/%E3%83%AD%E3%83%9C%E3%83%83%E3%83%88%E6%8E%83%E9%99%A4%E6%A9%9F/"
+  },
+  "deal": {
+   "id": "sample:robot-vacuum-4",
+   "reason": "Largest drop below its median price among items cheaper than usual",
+   "title": "(サンプル) ロボット掃除機 D 2000Pa",
+   "price": 56980,
+   "buy_url": "https://search.rakuten.co.jp/search/mall/%E3%83%AD%E3%83%9C%E3%83%83%E3%83%88%E6%8E%83%E9%99%A4%E6%A9%9F/"
+  }
+ },
+ "items": [
+  {
+   "id": "sample:robot-vacuum-5",
+   "rank": 1,
+   "title": "(サンプル) ロボット掃除機 E マッピング 水拭き 自動ゴミ収集 8000Pa",
+   "name": "(サンプル) ロボット掃除機 E マッピング 水拭き 自動ゴミ収集 8000Pa",
+   "store": "rakuten",
+   "store_name": "Rakuten",
+   "shop": "サンプルショップ",
+   "price": 37950,
+   "currency": "JPY",
+   "shipping_included": true,
+   "point_rate": 1,
+   "rating": 4.62,
+   "reviews": 2325,
+   "score": 4.613,
+   "variants": false,
+   "price_check": {
+    "verdict": "usual",
+    "label": "Usual price",
+    "min_90d": 36820,
+    "median_90d": 37840,
+    "max_90d": 39050,
+    "observed_days": 31,
+    "window_days": 31,
+    "first_seen": "2026-09-02",
+    "weekly_low": [
+     [
+      "2026-09-04",
+      37020
+     ],
+     [
+      "2026-09-10",
+      37130
+     ],
+     [
+      "2026-09-18",
+      36820
+     ],
+     [
+      "2026-09-25",
+      37550
+     ],
+     [
+      "2026-09-29",
+      37080
+     ]
+    ]
+   },
+   "specs": {
+    "suction_pa": 8000,
+    "mapping": true,
+    "mop": true,
+    "auto_empty": true
+   },
+   "buy_url": "https://search.rakuten.co.jp/search/mall/%E3%83%AD%E3%83%9C%E3%83%83%E3%83%88%E6%8E%83%E9%99%A4%E6%A9%9F/",
+   "affiliate_url": "https://search.rakuten.co.jp/search/mall/%E3%83%AD%E3%83%9C%E3%83%83%E3%83%88%E6%8E%83%E9%99%A4%E6%A9%9F/",
+   "affiliate": false,
+   "product_url": "https://search.rakuten.co.jp/search/mall/%E3%83%AD%E3%83%9C%E3%83%83%E3%83%88%E6%8E%83%E9%99%A4%E6%A9%9F/",
+   "image": null,
+   "other_offers": []
+  },
+  {
+   "id": "sample:robot-vacuum-4",
+   "rank": 2,
+   "title": "(サンプル) ロボット掃除機 D 2000Pa",
+   "name": "(サンプル) ロボット掃除機 D 2000Pa",
+   "store": "rakuten",
+   "store_name": "Rakuten",
+   "shop": "サンプルショップ",
+   "price": 56980,
+   "currency": "JPY",
+   "shipping_included": false,
+   "point_rate": 1,
+   "rating": 4.58,
+   "reviews": 74,
+   "score": 4.466,
+   "variants": false,
+   "price_check": {
+    "verdict": "lowest_observed",
+    "label": "Lowest in 31 days observed",
+    "min_90d": 56980,
+    "median_90d": 65050,
+    "max_90d": 66910,
+    "observed_days": 31,
+    "window_days": 31,
+    "first_seen": "2026-09-02",
+    "weekly_low": [
+     [
+      "2026-09-02",
+      64510
+     ],
+     [
+      "2026-09-07",
+      63910
+     ],
+     [
+      "2026-09-17",
+      63720
+     ],
+     [
+      "2026-09-21",
+      63800
+     ],
+     [
+      "2026-10-02",
+      56980
+     ]
+    ]
+   },
+   "specs": {
+    "suction_pa": 2000,
+    "mapping": false,
+    "mop": false,
+    "auto_empty": false
+   },
+   "buy_url": "https://search.rakuten.co.jp/search/mall/%E3%83%AD%E3%83%9C%E3%83%83%E3%83%88%E6%8E%83%E9%99%A4%E6%A9%9F/",
+   "affiliate_url": "https://search.rakuten.co.jp/search/mall/%E3%83%AD%E3%83%9C%E3%83%83%E3%83%88%E6%8E%83%E9%99%A4%E6%A9%9F/",
+   "affiliate": false,
+   "product_url": "https://search.rakuten.co.jp/search/mall/%E3%83%AD%E3%83%9C%E3%83%83%E3%83%88%E6%8E%83%E9%99%A4%E6%A9%9F/",
+   "image": null,
+   "other_offers": []
+  },
+  {
+   "id": "sample:robot-vacuum-1",
+   "rank": 3,
+   "title": "(サンプル) ロボット掃除機 A LiDAR マッピング 4000Pa",
+   "name": "(サンプル) ロボット掃除機 A LiDAR マッピング 4000Pa",
+   "store": "rakuten",
+   "store_name": "Rakuten",
+   "shop": "サンプルショップ",
+   "price": 17280,
+   "currency": "JPY",
+   "shipping_included": true,
+   "point_rate": 1,
+   "rating": 4.47,
+   "reviews": 1021,
+   "score": 4.462,
+   "variants": false,
+   "price_check": {
+    "verdict": "lowest_observed",
+    "label": "Lowest in 31 days observed",
+    "min_90d": 17280,
+    "median_90d": 19700,
+    "max_90d": 20380,
+    "observed_days": 31,
+    "window_days": 31,
+    "first_seen": "2026-09-02",
+    "weekly_low": [
+     [
+      "2026-09-02",
+      19560
+     ],
+     [
+      "2026-09-05",
+      19370
+     ],
+     [
+      "2026-09-13",
+      19600
+     ],
+     [
+      "2026-09-25",
+      19320
+     ],
+     [
+      "2026-10-02",
+      17280
+     ]
+    ]
+   },
+   "specs": {
+    "suction_pa": 4000,
+    "mapping": true,
+    "mop": false,
+    "auto_empty": false
+   },
+   "buy_url": "https://search.rakuten.co.jp/search/mall/%E3%83%AD%E3%83%9C%E3%83%83%E3%83%88%E6%8E%83%E9%99%A4%E6%A9%9F/",
+   "affiliate_url": "https://search.rakuten.co.jp/search/mall/%E3%83%AD%E3%83%9C%E3%83%83%E3%83%88%E6%8E%83%E9%99%A4%E6%A9%9F/",
+   "affiliate": false,
+   "product_url": "https://search.rakuten.co.jp/search/mall/%E3%83%AD%E3%83%9C%E3%83%83%E3%83%88%E6%8E%83%E9%99%A4%E6%A9%9F/",
+   "image": null,
+   "other_offers": [
+    {
+     "id": "sample-y:robot-vacuum-1",
+     "store": "yahoo",
+     "store_name": "Yahoo! Shopping",
+     "shop": "サンプルストア",
+     "price": 16070,
+     "shipping_included": true,
+     "buy_url": "https://search.rakuten.co.jp/search/mall/%E3%83%AD%E3%83%9C%E3%83%83%E3%83%88%E6%8E%83%E9%99%A4%E6%A9%9F/",
+     "affiliate_url": "https://search.rakuten.co.jp/search/mall/%E3%83%AD%E3%83%9C%E3%83%83%E3%83%88%E6%8E%83%E9%99%A4%E6%A9%9F/"
+    }
+   ],
+   "cheapest_offer": {
+    "id": "sample-y:robot-vacuum-1",
+    "store": "yahoo",
+    "store_name": "Yahoo! Shopping",
+    "shop": "サンプルストア",
+    "price": 16070,
+    "shipping_included": true,
+    "buy_url": "https://search.rakuten.co.jp/search/mall/%E3%83%AD%E3%83%9C%E3%83%83%E3%83%88%E6%8E%83%E9%99%A4%E6%A9%9F/",
+    "affiliate_url": "https://search.rakuten.co.jp/search/mall/%E3%83%AD%E3%83%9C%E3%83%83%E3%83%88%E6%8E%83%E9%99%A4%E6%A9%9F/"
+   }
+  },
+  {
+   "id": "sample:robot-vacuum-6",
+   "rank": 4,
+   "title": "(サンプル) ロボット掃除機 F LiDAR 5000Pa",
+   "name": "(サンプル) ロボット掃除機 F LiDAR 5000Pa",
+   "store": "rakuten",
+   "store_name": "Rakuten",
+   "shop": "サンプルショップ",
+   "price": 19030,
+   "currency": "JPY",
+   "shipping_included": false,
+   "point_rate": 1,
+   "rating": 4.33,
+   "reviews": 3169,
+   "score": 4.329,
+   "variants": false,
+   "price_check": {
+    "verdict": "usual",
+    "label": "Usual price",
+    "min_90d": 17550,
+    "median_90d": 18080,
+    "max_90d": 19030,
+    "observed_days": 31,
+    "window_days": 31,
+    "first_seen": "2026-09-02",
+    "weekly_low": [
+     [
+      "2026-09-02",
+      17800
+     ],
+     [
+      "2026-09-06",
+      17590
+     ],
+     [
+      "2026-09-12",
+      17600
+     ],
+     [
+      "2026-09-24",
+      17670
+     ],
+     [
+      "2026-10-01",
+      17550
+     ]
+    ]
+   },
+   "specs": {
+    "suction_pa": 5000,
+    "mapping": true,
+    "mop": false,
+    "auto_empty": false
+   },
+   "buy_url": "https://search.rakuten.co.jp/search/mall/%E3%83%AD%E3%83%9C%E3%83%83%E3%83%88%E6%8E%83%E9%99%A4%E6%A9%9F/",
+   "affiliate_url": "https://search.rakuten.co.jp/search/mall/%E3%83%AD%E3%83%9C%E3%83%83%E3%83%88%E6%8E%83%E9%99%A4%E6%A9%9F/",
+   "affiliate": false,
+   "product_url": "https://search.rakuten.co.jp/search/mall/%E3%83%AD%E3%83%9C%E3%83%83%E3%83%88%E6%8E%83%E9%99%A4%E6%A9%9F/",
+   "image": null,
+   "other_offers": []
+  },
+  {
+   "id": "sample:robot-vacuum-2",
+   "rank": 5,
+   "title": "(サンプル) ロボット掃除機 B 水拭き 2700Pa",
+   "name": "(サンプル) ロボット掃除機 B 水拭き 2700Pa",
+   "store": "rakuten",
+   "store_name": "Rakuten",
+   "shop": "サンプルショップ",
+   "price": 42150,
+   "currency": "JPY",
+   "shipping_included": false,
+   "point_rate": 1,
+   "rating": 4.21,
+   "reviews": 3232,
+   "score": 4.211,
+   "variants": false,
+   "price_check": {
+    "verdict": "usual",
+    "label": "Usual price",
+    "min_90d": 40980,
+    "median_90d": 41950,
+    "max_90d": 43330,
+    "observed_days": 31,
+    "window_days": 31,
+    "first_seen": "2026-09-02",
+    "weekly_low": [
+     [
+      "2026-09-04",
+      40980
+     ],
+     [
+      "2026-09-05",
+      41170
+     ],
+     [
+      "2026-09-17",
+      41160
+     ],
+     [
+      "2026-09-25",
+      41160
+     ],
+     [
+      "2026-09-30",
+      41320
+     ]
+    ]
+   },
+   "specs": {
+    "suction_pa": 2700,
+    "mapping": false,
+    "mop": true,
+    "auto_empty": false
+   },
+   "buy_url": "https://search.rakuten.co.jp/search/mall/%E3%83%AD%E3%83%9C%E3%83%83%E3%83%88%E6%8E%83%E9%99%A4%E6%A9%9F/",
+   "affiliate_url": "https://search.rakuten.co.jp/search/mall/%E3%83%AD%E3%83%9C%E3%83%83%E3%83%88%E6%8E%83%E9%99%A4%E6%A9%9F/",
+   "affiliate": false,
+   "product_url": "https://search.rakuten.co.jp/search/mall/%E3%83%AD%E3%83%9C%E3%83%83%E3%83%88%E6%8E%83%E9%99%A4%E6%A9%9F/",
+   "image": null,
+   "other_offers": []
+  },
+  {
+   "id": "sample:robot-vacuum-3",
+   "rank": 6,
+   "title": "(サンプル) ロボット掃除機 C LiDAR 自動ゴミ収集 6000Pa",
+   "name": "(サンプル) ロボット掃除機 C LiDAR 自動ゴミ収集 6000Pa",
+   "store": "rakuten",
+   "store_name": "Rakuten",
+   "shop": "サンプルショップ",
+   "price": 33940,
+   "currency": "JPY",
+   "shipping_included": true,
+   "point_rate": 1,
+   "rating": 4,
+   "reviews": 2773,
+   "score": 4.005,
+   "variants": false,
+   "price_check": {
+    "verdict": "usual",
+    "label": "Usual price",
+    "min_90d": 31290,
+    "median_90d": 32260,
+    "max_90d": 33940,
+    "observed_days": 31,
+    "window_days": 31,
+    "first_seen": "2026-09-02",
+    "weekly_low": [
+     [
+      "2026-09-02",
+      31740
+     ],
+     [
+      "2026-09-06",
+      31370
+     ],
+     [
+      "2026-09-15",
+      31780
+     ],
+     [
+      "2026-09-24",
+      31490
+     ],
+     [
+      "2026-09-27",
+      31290
+     ]
+    ]
+   },
+   "specs": {
+    "suction_pa": 6000,
+    "mapping": true,
+    "mop": false,
+    "auto_empty": true
+   },
+   "buy_url": "https://search.rakuten.co.jp/search/mall/%E3%83%AD%E3%83%9C%E3%83%83%E3%83%88%E6%8E%83%E9%99%A4%E6%A9%9F/",
+   "affiliate_url": "https://search.rakuten.co.jp/search/mall/%E3%83%AD%E3%83%9C%E3%83%83%E3%83%88%E6%8E%83%E9%99%A4%E6%A9%9F/",
+   "affiliate": false,
+   "product_url": "https://search.rakuten.co.jp/search/mall/%E3%83%AD%E3%83%9C%E3%83%83%E3%83%88%E6%8E%83%E9%99%A4%E6%A9%9F/",
+   "image": null,
+   "other_offers": []
+  }
+ ],
+ "stats": {
+  "candidates": 8,
+  "ranked": 6,
+  "rejected": {
+   "too_few_reviews": 1,
+   "duplicate": 1
+  },
+  "meanRating": 4.3,
+  "priorWeight": 50
+ },
+ "links": {
+  "html": "https://bufeks.github.io/LAB/shelf/en/c/robot-vacuum/",
+  "markdown": "https://bufeks.github.io/LAB/shelf/en/c/robot-vacuum.md",
+  "json": "https://bufeks.github.io/LAB/shelf/api/v1/en/c/robot-vacuum.json",
+  "feed": "https://bufeks.github.io/LAB/shelf/en/c/robot-vacuum/feed.xml"
+ },
+ "languages": {
+  "ja": {
+   "html": "https://bufeks.github.io/LAB/shelf/c/robot-vacuum/",
+   "markdown": "https://bufeks.github.io/LAB/shelf/c/robot-vacuum.md",
+   "json": "https://bufeks.github.io/LAB/shelf/api/v1/c/robot-vacuum.json",
+   "feed": "https://bufeks.github.io/LAB/shelf/c/robot-vacuum/feed.xml"
+  },
+  "en": {
+   "html": "https://bufeks.github.io/LAB/shelf/en/c/robot-vacuum/",
+   "markdown": "https://bufeks.github.io/LAB/shelf/en/c/robot-vacuum.md",
+   "json": "https://bufeks.github.io/LAB/shelf/api/v1/en/c/robot-vacuum.json",
+   "feed": "https://bufeks.github.io/LAB/shelf/en/c/robot-vacuum/feed.xml"
+  },
+  "zh-Hans": {
+   "html": "https://bufeks.github.io/LAB/shelf/zh-hans/c/robot-vacuum/",
+   "markdown": "https://bufeks.github.io/LAB/shelf/zh-hans/c/robot-vacuum.md",
+   "json": "https://bufeks.github.io/LAB/shelf/api/v1/zh-hans/c/robot-vacuum.json",
+   "feed": "https://bufeks.github.io/LAB/shelf/zh-hans/c/robot-vacuum/feed.xml"
+  },
+  "zh-Hant": {
+   "html": "https://bufeks.github.io/LAB/shelf/zh-hant/c/robot-vacuum/",
+   "markdown": "https://bufeks.github.io/LAB/shelf/zh-hant/c/robot-vacuum.md",
+   "json": "https://bufeks.github.io/LAB/shelf/api/v1/zh-hant/c/robot-vacuum.json",
+   "feed": "https://bufeks.github.io/LAB/shelf/zh-hant/c/robot-vacuum/feed.xml"
+  },
+  "ko": {
+   "html": "https://bufeks.github.io/LAB/shelf/ko/c/robot-vacuum/",
+   "markdown": "https://bufeks.github.io/LAB/shelf/ko/c/robot-vacuum.md",
+   "json": "https://bufeks.github.io/LAB/shelf/api/v1/ko/c/robot-vacuum.json",
+   "feed": "https://bufeks.github.io/LAB/shelf/ko/c/robot-vacuum/feed.xml"
+  }
+ },
+ "source": {
+  "name": "Rakuten Ichiba",
+  "credit": {
+   "text": "Supported by Rakuten Developers",
+   "url": "https://developers.rakuten.com/"
+  }
+ }
+}

@@ -1,0 +1,414 @@
+{
+ "categoryId": "coffee-beans",
+ "date": "2026-10-02",
+ "fetchedAt": "2026-10-02T14:41:13+09:00",
+ "items": [
+  {
+   "id": "sample:coffee-beans-5",
+   "source": "rakuten",
+   "name": "(サンプル) コーヒー豆 E 深煎り 2kg 豆",
+   "caption": "",
+   "shop": "サンプルショップ",
+   "price": 4160,
+   "shippingIncluded": true,
+   "pointRate": 1,
+   "rating": 4.57,
+   "reviews": 1069,
+   "productUrl": "https://search.rakuten.co.jp/search/mall/%E3%82%B3%E3%83%BC%E3%83%92%E3%83%BC%E8%B1%86/",
+   "buyUrl": "https://search.rakuten.co.jp/search/mall/%E3%82%B3%E3%83%BC%E3%83%92%E3%83%BC%E8%B1%86/",
+   "affiliate": false,
+   "image": null,
+   "available": true,
+   "title": "(サンプル) コーヒー豆 E 深煎り 2kg 豆",
+   "variants": false,
+   "score": 4.547,
+   "facets": {
+    "roast": "dark",
+    "form": "beans"
+   },
+   "claimed": null,
+   "unit": {
+    "quantity": 2000,
+    "value": 208
+   },
+   "otherOffers": [],
+   "rank": 1,
+   "priceStats": {
+    "points": 31,
+    "windowDays": 31,
+    "firstSeen": "2026-09-02",
+    "min90": 4040,
+    "median90": 4150,
+    "max90": 4280,
+    "verdict": "usual"
+   },
+   "priceWeekly": [
+    [
+     "2026-09-04",
+     4060
+    ],
+    [
+     "2026-09-10",
+     4070
+    ],
+    [
+     "2026-09-13",
+     4040
+    ],
+    [
+     "2026-09-25",
+     4120
+    ],
+    [
+     "2026-09-29",
+     4060
+    ]
+   ]
+  },
+  {
+   "id": "sample:coffee-beans-2",
+   "source": "rakuten",
+   "name": "(サンプル) コーヒー豆 B 中煎り 200g 粉",
+   "caption": "",
+   "shop": "サンプルショップ",
+   "price": 3100,
+   "shippingIncluded": false,
+   "pointRate": 1,
+   "rating": 4.24,
+   "reviews": 3054,
+   "productUrl": "https://search.rakuten.co.jp/search/mall/%E3%82%B3%E3%83%BC%E3%83%92%E3%83%BC%E8%B1%86/",
+   "buyUrl": "https://search.rakuten.co.jp/search/mall/%E3%82%B3%E3%83%BC%E3%83%92%E3%83%BC%E8%B1%86/",
+   "affiliate": false,
+   "image": null,
+   "available": true,
+   "title": "(サンプル) コーヒー豆 B 中煎り 200g 粉",
+   "variants": false,
+   "score": 4.237,
+   "facets": {
+    "roast": "medium",
+    "form": "ground"
+   },
+   "claimed": null,
+   "unit": {
+    "quantity": 200,
+    "value": 1550
+   },
+   "otherOffers": [],
+   "rank": 2,
+   "priceStats": {
+    "points": 31,
+    "windowDays": 31,
+    "firstSeen": "2026-09-02",
+    "min90": 3010,
+    "median90": 3090,
+    "max90": 3190,
+    "verdict": "usual"
+   },
+   "priceWeekly": [
+    [
+     "2026-09-04",
+     3010
+    ],
+    [
+     "2026-09-05",
+     3030
+    ],
+    [
+     "2026-09-17",
+     3030
+    ],
+    [
+     "2026-09-25",
+     3030
+    ],
+    [
+     "2026-09-28",
+     3040
+    ]
+   ]
+  },
+  {
+   "id": "sample:coffee-beans-4",
+   "source": "rakuten",
+   "name": "(サンプル) コーヒー豆 D ブレンド 中深煎り 500g 豆",
+   "caption": "",
+   "shop": "サンプルショップ",
+   "price": 6370,
+   "shippingIncluded": false,
+   "pointRate": 1,
+   "rating": 4.12,
+   "reviews": 476,
+   "productUrl": "https://search.rakuten.co.jp/search/mall/%E3%82%B3%E3%83%BC%E3%83%92%E3%83%BC%E8%B1%86/",
+   "buyUrl": "https://search.rakuten.co.jp/search/mall/%E3%82%B3%E3%83%BC%E3%83%92%E3%83%BC%E8%B1%86/",
+   "affiliate": false,
+   "image": null,
+   "available": true,
+   "title": "(サンプル) コーヒー豆 D ブレンド 中深煎り 500g 豆",
+   "variants": false,
+   "score": 4.113,
+   "facets": {
+    "roast": "dark",
+    "form": "beans"
+   },
+   "claimed": null,
+   "unit": {
+    "quantity": 500,
+    "value": 1274
+   },
+   "otherOffers": [
+    {
+     "id": "sample-y:coffee-beans-2",
+     "store": "yahoo",
+     "shop": "サンプルストア",
+     "price": 6620,
+     "shippingIncluded": true,
+     "buyUrl": "https://search.rakuten.co.jp/search/mall/%E3%82%B3%E3%83%BC%E3%83%92%E3%83%BC%E8%B1%86/",
+     "affiliate": false
+    }
+   ],
+   "rank": 3,
+   "priceStats": {
+    "points": 31,
+    "windowDays": 31,
+    "firstSeen": "2026-09-02",
+    "min90": 6370,
+    "median90": 7270,
+    "max90": 7480,
+    "verdict": "lowest_observed"
+   },
+   "priceWeekly": [
+    [
+     "2026-09-02",
+     7210
+    ],
+    [
+     "2026-09-07",
+     7150
+    ],
+    [
+     "2026-09-17",
+     7120
+    ],
+    [
+     "2026-09-21",
+     7130
+    ],
+    [
+     "2026-10-02",
+     6370
+    ]
+   ]
+  },
+  {
+   "id": "sample:coffee-beans-6",
+   "source": "rakuten",
+   "name": "(サンプル) コーヒー豆 F 中煎り 300g×3袋 粉",
+   "caption": "",
+   "shop": "サンプルショップ",
+   "price": 4420,
+   "shippingIncluded": false,
+   "pointRate": 1,
+   "rating": 4.1,
+   "reviews": 175,
+   "productUrl": "https://search.rakuten.co.jp/search/mall/%E3%82%B3%E3%83%BC%E3%83%92%E3%83%BC%E8%B1%86/",
+   "buyUrl": "https://search.rakuten.co.jp/search/mall/%E3%82%B3%E3%83%BC%E3%83%92%E3%83%BC%E8%B1%86/",
+   "affiliate": false,
+   "image": null,
+   "available": true,
+   "title": "(サンプル) コーヒー豆 F 中煎り 300g×3袋 粉",
+   "variants": false,
+   "score": 4.088,
+   "facets": {
+    "roast": "medium",
+    "form": "ground"
+   },
+   "claimed": null,
+   "unit": {
+    "quantity": 900,
+    "value": 491.1
+   },
+   "otherOffers": [],
+   "rank": 4,
+   "priceStats": {
+    "points": 31,
+    "windowDays": 31,
+    "firstSeen": "2026-09-02",
+    "min90": 4080,
+    "median90": 4200,
+    "max90": 4420,
+    "verdict": "usual"
+   },
+   "priceWeekly": [
+    [
+     "2026-09-02",
+     4130
+    ],
+    [
+     "2026-09-06",
+     4090
+    ],
+    [
+     "2026-09-12",
+     4090
+    ],
+    [
+     "2026-09-24",
+     4100
+    ],
+    [
+     "2026-10-01",
+     4080
+    ]
+   ]
+  },
+  {
+   "id": "sample-y:coffee-beans-1",
+   "source": "yahoo",
+   "name": "(サンプル) コーヒー豆 A 深煎り 500g×2袋 豆のまま",
+   "caption": "",
+   "shop": "サンプルストア",
+   "price": 4190,
+   "shippingIncluded": true,
+   "pointRate": 1,
+   "rating": 3.85,
+   "reviews": 860,
+   "productUrl": "https://search.rakuten.co.jp/search/mall/%E3%82%B3%E3%83%BC%E3%83%92%E3%83%BC%E8%B1%86/",
+   "buyUrl": "https://search.rakuten.co.jp/search/mall/%E3%82%B3%E3%83%BC%E3%83%92%E3%83%BC%E8%B1%86/",
+   "affiliate": false,
+   "image": null,
+   "available": true,
+   "title": "(サンプル) コーヒー豆 A 深煎り 500g×2袋 豆のまま",
+   "variants": false,
+   "score": 3.861,
+   "facets": {
+    "roast": "dark",
+    "form": "beans"
+   },
+   "claimed": null,
+   "unit": {
+    "quantity": 1000,
+    "value": 419
+   },
+   "otherOffers": [
+    {
+     "id": "sample:coffee-beans-1",
+     "store": "rakuten",
+     "shop": "サンプルショップ",
+     "price": 4510,
+     "shippingIncluded": true,
+     "buyUrl": "https://search.rakuten.co.jp/search/mall/%E3%82%B3%E3%83%BC%E3%83%92%E3%83%BC%E8%B1%86/",
+     "affiliate": false
+    }
+   ],
+   "rank": 5,
+   "priceStats": {
+    "points": 31,
+    "windowDays": 31,
+    "firstSeen": "2026-09-02",
+    "min90": 4190,
+    "median90": 4800,
+    "max90": 4930,
+    "verdict": "lowest_observed"
+   },
+   "priceWeekly": [
+    [
+     "2026-09-02",
+     4740
+    ],
+    [
+     "2026-09-10",
+     4720
+    ],
+    [
+     "2026-09-15",
+     4690
+    ],
+    [
+     "2026-09-23",
+     4710
+    ],
+    [
+     "2026-10-02",
+     4190
+    ]
+   ]
+  },
+  {
+   "id": "sample:coffee-beans-3",
+   "source": "rakuten",
+   "name": "(サンプル) コーヒー豆 C 浅煎り 1kg 豆のまま",
+   "caption": "",
+   "shop": "サンプルショップ",
+   "price": 5450,
+   "shippingIncluded": true,
+   "pointRate": 1,
+   "rating": 3.8,
+   "reviews": 2159,
+   "productUrl": "https://search.rakuten.co.jp/search/mall/%E3%82%B3%E3%83%BC%E3%83%92%E3%83%BC%E8%B1%86/",
+   "buyUrl": "https://search.rakuten.co.jp/search/mall/%E3%82%B3%E3%83%BC%E3%83%92%E3%83%BC%E8%B1%86/",
+   "affiliate": false,
+   "image": null,
+   "available": true,
+   "title": "(サンプル) コーヒー豆 C 浅煎り 1kg 豆のまま",
+   "variants": false,
+   "score": 3.806,
+   "facets": {
+    "roast": "light",
+    "form": "beans"
+   },
+   "claimed": null,
+   "unit": {
+    "quantity": 1000,
+    "value": 545
+   },
+   "otherOffers": [],
+   "rank": 6,
+   "priceStats": {
+    "points": 31,
+    "windowDays": 31,
+    "firstSeen": "2026-09-02",
+    "min90": 5020,
+    "median90": 5180,
+    "max90": 5450,
+    "verdict": "usual"
+   },
+   "priceWeekly": [
+    [
+     "2026-09-02",
+     5100
+    ],
+    [
+     "2026-09-06",
+     5040
+    ],
+    [
+     "2026-09-15",
+     5100
+    ],
+    [
+     "2026-09-24",
+     5060
+    ],
+    [
+     "2026-09-27",
+     5020
+    ]
+   ]
+  }
+ ],
+ "stats": {
+  "candidates": 8,
+  "ranked": 6,
+  "rejected": {
+   "duplicate": 2
+  },
+  "meanRating": 4.05,
+  "priorWeight": 50
+ },
+ "picks": {
+  "best": "sample:coffee-beans-5",
+  "budget": "sample:coffee-beans-2",
+  "deal": "sample-y:coffee-beans-1",
+  "per_unit": "sample:coffee-beans-5"
+ }
+}

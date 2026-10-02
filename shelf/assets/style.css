@@ -99,3 +99,31 @@ footer { margin-top: 48px; padding-top: 16px; padding-bottom: 32px; border-top: 
 header.top { flex-wrap: wrap; }
 .visitor { background: var(--bad-bg); color: var(--fg); border-radius: 10px; padding: 10px 14px; font-size: 14px; }
 :lang(ko) { word-break: keep-all; overflow-wrap: anywhere; }
+.unit { font-size: 14px; font-weight: 600; margin: 0; }
+.sale { display: inline-block; font-size: 12px; font-weight: 600; padding: 1px 8px; border-radius: 99px; background: var(--neutral-bg); margin-top: 4px; }
+.s-genuine { background: var(--good-bg); color: var(--good); }
+.s-not_lower_than_usual, .s-smaller_than_claimed { background: var(--bad-bg); color: var(--bad); }
+.sale-list { list-style: none; padding: 0; display: grid; gap: 8px; }
+.sale-list li { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 10px 14px; }
+.pick .alt { display: block; text-align: center; font-size: 13px; margin-top: 6px; }
+.h-rising { background: var(--bad-bg); color: var(--bad); }
+.h-falling { background: var(--good-bg); color: var(--good); }
+@media (max-width: 640px) {
+  table.hotel thead { display: none; }
+  table.hotel, table.hotel tbody { display: block; }
+  table.hotel tr {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-areas: "rank rank" "price rating" "verdict verdict" "item item";
+    gap: 4px 8px;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--line);
+  }
+  table.hotel td { border: 0; padding: 0; }
+  table.hotel .c-rank { grid-area: rank; font-weight: 700; }
+  table.hotel .c-price { grid-area: price; font-weight: 700; }
+  table.hotel .c-rating { grid-area: rating; text-align: right; }
+  table.hotel .c-rating::after { content: " 🏨"; }
+  table.hotel .c-verdict { grid-area: verdict; }
+  table.hotel .c-item { grid-area: item; }
+}

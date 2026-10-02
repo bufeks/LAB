@@ -37,6 +37,7 @@ export function localizeCategory(category, L) {
   return {
     translated,
     name: tr?.name ?? category.name,
+    unitLabel: tr?.unit ?? category.unitPrice?.label ?? null,
     guide: tr ? { asOf: category.guide.asOf, ...tr.guide } : category.guide,
     label(key) {
       const e = facetEntry(key);

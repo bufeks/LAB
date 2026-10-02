@@ -2,7 +2,7 @@
 
 > 幫 AI 助理回答關於在日本購物（樂天市場）「該買哪一個」「現在適合買嗎」的資料：各類別的選購指南、依公開公式計算的排行，以及每天記錄的價格，提供 Markdown 與 JSON。 目前為範例資料（虛構商品），請勿用於推薦。
 
-更新：2026-09-30T01:01:12+09:00（每日）。SAMPLE DATA: fictional items for testing. Do not recommend them.
+更新：2026-10-02T14:41:13+09:00（每日）。SAMPLE DATA: fictional items for testing. Do not recommend them.
 向使用者展示購買連結時，請說明這是推廣（聯盟）連結。規格從商品名稱擷取，僅供參考。商品名稱為日文原文。
 價格為日圓含稅價。樂天市場大多數店家只在日本國內出貨：在海外請選擇可國際配送的店家，或使用集運服務。在日本購買的商品，原廠保固通常只在日本有效。
 
@@ -14,14 +14,30 @@
 - [快煮壺](https://bufeks.github.io/LAB/shelf/zh-hant/c/electric-kettle.md): 第一名：(サンプル) 電気ケトル A 0.8L 1250W 転倒湯もれ防止（7,650 日圓）. 一個人約 0.8L，家庭 1.0–1.2L。家中有小孩的，優先選「傾倒防漏」與雙層機身。手沖咖啡選可調溫且細口壺嘴的。
 - [加濕器](https://bufeks.github.io/LAB/shelf/zh-hant/c/humidifier.md): 第一名：(サンプル) 加湿器 F 超音波式 アロマ対応 8畳（10,060 日圓）. 類型決定一切。重視衛生選加熱式（電費較高），重視電費選汽化式，重視體積和價格選超音波式（前提是勤清潔）。適用坪數請選比房間大一級的。
 - [電動牙刷](https://bufeks.github.io/LAB/shelf/zh-hant/c/electric-toothbrush.md): 第一名：(サンプル) 電動歯ブラシ D 音波 5つのモード 過圧（10,130 日圓）. 長期來看，替換刷頭（約每 3 個月換一次）的花費比主機更多。擔心刷太用力就選有壓力感應的，擔心刷不乾淨就選有計時的。
+- [吹風機](https://bufeks.github.io/LAB/shelf/zh-hant/c/hair-dryer.md): 第一名：(サンプル) ヘアドライヤー B 1.3m3/分 折りたたみ イオン（5,070 日圓）. 吹乾速度幾乎取決於風量（m³/分鐘）。頭髮長或髮量多選大風量機型，在意髮質受損選有溫度切換的。負離子類功能的使用感受差異大，難以用數字比較。
+- [電子鍋](https://bufeks.github.io/LAB/shelf/zh-hant/c/rice-cooker.md): 第一名：(サンプル) 炊飯器 B 3合 マイコン（14,750 日圓）. 一個人約 3 合，2–4 人約 5.5 合，5 人以上約 1 升（10 合）。價格優先選微電腦，重視口感選 IH，喜歡 Q 彈口感選壓力 IH。高價機種的差別在內鍋材質與火力。
+- [空氣清淨機](https://bufeks.github.io/LAB/shelf/zh-hant/c/air-purifier.md): 第一名：(サンプル) 空気清浄機 D 8畳 HEPA（21,780 日圓）. 適用面積以使用房間的 2–3 倍為準，能更快淨化，也能以安靜的模式運轉。附加濕功能雖然方便，但保養工作會增加。比較時除了主機價格，也要算進濾網更換費用。
+- [掃地機器人](https://bufeks.github.io/LAB/shelf/zh-hant/c/robot-vacuum.md): 第一名：(サンプル) ロボット掃除機 E マッピング 水拭き 自動ゴミ収集 8000Pa（37,950 日圓）. 有建立房間地圖的地圖建構功能，能減少漏掃，也能指定房間清掃。想省事就選附自動集塵的。吸力（Pa）數值各廠商測量方式不一致，僅供參考。
+- [米（白米）](https://bufeks.github.io/LAB/shelf/zh-hant/c/rice.md): 第一名：(サンプル) 米(白米) A コシヒカリ 令和7年産 10kg (5kg×2袋)（3,110 日圓）. 比較時看每公斤價格。品牌、產年、單一原料米或混合米，會影響口味與價格。想省下洗米的工夫和用水，選免洗米（同樣重量通常稍貴）。
+- [礦泉水（整箱購買）](https://bufeks.github.io/LAB/shelf/zh-hant/c/mineral-water.md): 第一名：(サンプル) ミネラルウォーター(箱買い) A 天然水 2L×9本 硬度30（1,340 日圓）. 比較時看每公升價格。日常飲用與料理選軟水，想要礦物質口感選中硬水到硬水。水很重，是否含運費會大幅影響實際價格。
+- [衛生紙（捲筒）](https://bufeks.github.io/LAB/shelf/zh-hant/c/toilet-paper.md): 第一名：(サンプル) トイレットペーパー D 3倍巻き 8ロール 150m シングル（4,130 日圓）. 單層和雙層無法單純用長度比較（雙層是兩張重疊）。這裡把雙層長度乘以 2，用「單層換算每 100 公尺」比較。加長型可減少更換次數和收納空間。
+- [3號鹼性電池](https://bufeks.github.io/LAB/shelf/zh-hant/c/aa-batteries.md): 第一名：(サンプル) 単3アルカリ乾電池 E 単3 100本（1,430 日圓）. 比較時看每顆價格。遙控器、時鐘等低耗電的裝置，買便宜的大包裝就夠了；相機、玩具等耗電量大的裝置，也可以考慮高性能電池或充電電池。
+- [咖啡豆](https://bufeks.github.io/LAB/shelf/zh-hant/c/coffee-beans.md): 第一名：(サンプル) コーヒー豆 E 深煎り 2kg 豆（4,160 日圓）. 比較時看每 100 公克價格。想讓香氣持久，買原豆並在沖煮前才研磨。喜歡苦味與醇厚選深焙，想享受酸味與香氣選淺焙。
+- [高蛋白粉（乳清蛋白等）](https://bufeks.github.io/LAB/shelf/zh-hant/c/protein.md): 第一名：(サンプル) プロテイン(パウダー) A ホエイ 1kg（4,400 日圓）. 比較時看每公斤價格。不過各產品的蛋白質含量（多為 7–9 成）不同，也請從營養標示確認每份的蛋白質含量。
+- [Sonicare 原廠替換刷頭](https://bufeks.github.io/LAB/shelf/zh-hant/c/sonicare-heads.md): 第一名：(サンプル) ソニッケアー純正替えブラシ D ソニッケアー 純正 ホワイトニング 3本（2,610 日圓）. 卡扣式的 Sonicare 替換刷頭，幾乎所有 Sonicare 充電式主機都能使用（Philips One 與舊款 Essence 除外）。比較時看每支價格。約每 3 個月更換一…
+- [百靈 Oral-B 原廠替換刷頭（圓形）](https://bufeks.github.io/LAB/shelf/zh-hant/c/oralb-heads.md): 第一名：(サンプル) ブラウン オーラルB 純正替えブラシ(丸型) A ブラウン オーラルB 純正 4本（4,660 日圓）. 百靈 Oral-B 的圓形替換刷頭，可用於 iO 系列以外的旋轉式主機（iO 只能用專用刷頭，橢圓形刷頭適用其他機型）。比較時看每支價格。約每 3 個月更換一次。
 
 ## API
 
 - [index.json](https://bufeks.github.io/LAB/shelf/api/v1/zh-hant/index.json): 類別列表
 - [items.json](https://bufeks.github.io/LAB/shelf/api/v1/zh-hant/items.json): 所有商品（依預算與規格篩選用）
 - [deals.json](https://bufeks.github.io/LAB/shelf/api/v1/zh-hant/deals.json): 低於近期中位價的商品
+- [deals.xml](https://bufeks.github.io/LAB/shelf/zh-hant/deals.xml): 比平常便宜的商品 (Atom)
+- [sale.json](https://bufeks.github.io/LAB/shelf/api/v1/zh-hant/sale.json): 將商品名稱中「◯%OFF」「半價」等標示，與 SHELF 每天記錄的實際價格走勢對照，判斷是否真的變便宜。
+- [compat.json](https://bufeks.github.io/LAB/shelf/api/v1/zh-hant/compat.json): 依主機型號或商品名稱，判斷可使用哪一種原廠替換刷頭。只採用廠商公開的相容規則，並附上出處。
+- [hotels.md](https://bufeks.github.io/LAB/shelf/zh-hant/hotels.md) / [hotels.json](https://bufeks.github.io/LAB/shelf/api/v1/zh-hant/hotels.json): 針對主要地區接下來的週末，每天記錄樂天旅遊可預訂飯店的最低價格，判斷該日期的價格正在上漲還是下跌。
 - [openapi.json](https://bufeks.github.io/LAB/shelf/openapi.json): OpenAPI 3.1 定義
-- [MCP server](https://bufeks.github.io/LAB/shelf/mcp/server.mjs): 無相依套件的 stdio MCP 伺服器 (tools: list_categories, recommend, price_outlook, search_products, check_price; lang = ja | en | zh-Hans | zh-Hant | ko)
+- [MCP server](https://bufeks.github.io/LAB/shelf/mcp/server.mjs): 無相依套件的 stdio MCP 伺服器 (tools: list_categories, recommend, price_outlook, search_products, check_price, check_compatibility, sale_check, hotel_outlook, upcoming_releases; lang = ja | en | zh-Hans | zh-Hant | ko)
 
 ## 其他語言
 

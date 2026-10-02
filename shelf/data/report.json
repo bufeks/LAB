@@ -1,5 +1,5 @@
 {
- "at": "2026-09-29T18:53:32.711Z",
+ "at": "2026-10-02T05:39:36.382Z",
  "errors": [],
  "warnings": [
   "sample mode: set RAKUTEN_APP_ID / RAKUTEN_ACCESS_KEY secrets to publish real data"
@@ -15,8 +15,10 @@
     "weight_g": 0
    },
    "variant_listings": 0,
-   "reject_rate": 0,
-   "rejected": {},
+   "reject_rate": 0.25,
+   "rejected": {
+    "duplicate": 2
+   },
    "suspicious": 0
   },
   "usb-c-charger": {
@@ -27,8 +29,10 @@
     "ports": 1
    },
    "variant_listings": 0,
-   "reject_rate": 0,
-   "rejected": {},
+   "reject_rate": 0.25,
+   "rejected": {
+    "duplicate": 2
+   },
    "suspicious": 0
   },
   "wireless-earphones": {
@@ -39,8 +43,10 @@
     "battery_h": 0.5
    },
    "variant_listings": 0,
-   "reject_rate": 0,
-   "rejected": {},
+   "reject_rate": 0.25,
+   "rejected": {
+    "duplicate": 2
+   },
    "suspicious": 0
   },
   "electric-kettle": {
@@ -51,8 +57,10 @@
     "watt": 0.83
    },
    "variant_listings": 0,
-   "reject_rate": 0,
-   "rejected": {},
+   "reject_rate": 0.25,
+   "rejected": {
+    "duplicate": 2
+   },
    "suspicious": 0
   },
   "humidifier": {
@@ -64,8 +72,10 @@
     "tank_l": 0.83
    },
    "variant_listings": 0,
-   "reject_rate": 0,
-   "rejected": {},
+   "reject_rate": 0.25,
+   "rejected": {
+    "duplicate": 2
+   },
    "suspicious": 0
   },
   "electric-toothbrush": {
@@ -74,6 +84,197 @@
    "facet_coverage": {
     "modes": 0.5
    },
+   "variant_listings": 0,
+   "reject_rate": 0.25,
+   "rejected": {
+    "duplicate": 2
+   },
+   "suspicious": 0
+  },
+  "hair-dryer": {
+   "items": 6,
+   "status": "ok",
+   "facet_coverage": {
+    "watt": 0.5,
+    "airflow": 1
+   },
+   "variant_listings": 0,
+   "reject_rate": 0.25,
+   "rejected": {
+    "duplicate": 2
+   },
+   "suspicious": 0
+  },
+  "rice-cooker": {
+   "items": 6,
+   "status": "ok",
+   "facet_coverage": {
+    "cups": 0.83
+   },
+   "variant_listings": 0,
+   "reject_rate": 0.25,
+   "rejected": {
+    "duplicate": 2
+   },
+   "suspicious": 0
+  },
+  "air-purifier": {
+   "items": 6,
+   "status": "ok",
+   "facet_coverage": {
+    "room_tatami": 1
+   },
+   "variant_listings": 0,
+   "reject_rate": 0.25,
+   "rejected": {
+    "duplicate": 2
+   },
+   "suspicious": 0
+  },
+  "robot-vacuum": {
+   "items": 6,
+   "status": "ok",
+   "facet_coverage": {
+    "suction_pa": 1
+   },
+   "variant_listings": 0,
+   "reject_rate": 0.25,
+   "rejected": {
+    "too_few_reviews": 1,
+    "duplicate": 1
+   },
+   "suspicious": 0
+  },
+  "rice": {
+   "items": 6,
+   "status": "ok",
+   "facet_coverage": {
+    "crop_year": 0.5
+   },
+   "variant_listings": 0,
+   "reject_rate": 0.25,
+   "rejected": {
+    "duplicate": 2
+   },
+   "suspicious": 0
+  },
+  "mineral-water": {
+   "items": 6,
+   "status": "ok",
+   "facet_coverage": {
+    "hardness": 0.67,
+    "bottle_l": 1
+   },
+   "variant_listings": 0,
+   "reject_rate": 0.25,
+   "rejected": {
+    "duplicate": 2
+   },
+   "suspicious": 0
+  },
+  "toilet-paper": {
+   "items": 6,
+   "status": "ok",
+   "facet_coverage": {
+    "rolls": 1,
+    "roll_m": 1
+   },
+   "variant_listings": 0,
+   "reject_rate": 0.25,
+   "rejected": {
+    "duplicate": 2
+   },
+   "suspicious": 0
+  },
+  "aa-batteries": {
+   "items": 5,
+   "status": "ok",
+   "facet_coverage": {
+    "shelf_life_y": 0.2
+   },
+   "variant_listings": 0,
+   "reject_rate": 0.38,
+   "rejected": {
+    "below_price_range": 1,
+    "duplicate": 2
+   },
+   "suspicious": 0
+  },
+  "coffee-beans": {
+   "items": 6,
+   "status": "ok",
+   "facet_coverage": {},
+   "variant_listings": 0,
+   "reject_rate": 0.25,
+   "rejected": {
+    "duplicate": 2
+   },
+   "suspicious": 0
+  },
+  "protein": {
+   "items": 6,
+   "status": "ok",
+   "facet_coverage": {},
+   "variant_listings": 0,
+   "reject_rate": 0.25,
+   "rejected": {
+    "duplicate": 2
+   },
+   "suspicious": 0
+  },
+  "sonicare-heads": {
+   "items": 6,
+   "status": "ok",
+   "facet_coverage": {
+    "heads": 1
+   },
+   "variant_listings": 0,
+   "reject_rate": 0.25,
+   "rejected": {
+    "duplicate": 2
+   },
+   "suspicious": 0
+  },
+  "oralb-heads": {
+   "items": 5,
+   "status": "ok",
+   "facet_coverage": {
+    "heads": 1
+   },
+   "variant_listings": 0,
+   "reject_rate": 0.38,
+   "rejected": {
+    "below_price_range": 1,
+    "duplicate": 2
+   },
+   "suspicious": 0
+  },
+  "furusato-rice": {
+   "items": 6,
+   "status": "ok",
+   "facet_coverage": {
+    "crop_year": 0.17
+   },
+   "variant_listings": 0,
+   "reject_rate": 0,
+   "rejected": {},
+   "suspicious": 0
+  },
+  "furusato-toilet-paper": {
+   "items": 6,
+   "status": "ok",
+   "facet_coverage": {
+    "rolls": 1
+   },
+   "variant_listings": 0,
+   "reject_rate": 0,
+   "rejected": {},
+   "suspicious": 0
+  },
+  "furusato-beef": {
+   "items": 6,
+   "status": "ok",
+   "facet_coverage": {},
    "variant_listings": 0,
    "reject_rate": 0,
    "rejected": {},
@@ -93,7 +294,7 @@
     "untranslated": []
    }
   },
-  "llms_txt_bytes": 4275
+  "llms_txt_bytes": 12071
  },
  "live": false
 }

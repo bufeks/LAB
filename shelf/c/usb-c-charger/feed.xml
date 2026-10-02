@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="ja">
+  <id>https://bufeks.github.io/LAB/shelf/c/usb-c-charger/feed.xml</id>
+  <title>SHELF — USB-C 充電器 (PD): いつもより安い商品</title>
+  <link rel="self" href="https://bufeks.github.io/LAB/shelf/c/usb-c-charger/feed.xml"/>
+  <link rel="alternate" href="https://bufeks.github.io/LAB/shelf/c/usb-c-charger/"/>
+  <updated>2026-10-02T14:41:13+09:00</updated>
+  <author><name>SHELF</name></author>
+  <entry>
+    <id>https://bufeks.github.io/LAB/shelf/c/usb-c-charger/feed.xml#sample%3Ausb-c-charger-4@4460</id>
+    <title>(サンプル) USB-C 充電器 (PD) D 30W 2ポート GaN PPS</title>
+    <link rel="alternate" href="https://bufeks.github.io/LAB/shelf/c/usb-c-charger/"/>
+    <updated>2026-10-02T14:41:13+09:00</updated>
+    <summary>¥4,460（いつもは¥5,090、12.4%安い）</summary>
+  </entry>
+  <entry>
+    <id>https://bufeks.github.io/LAB/shelf/c/usb-c-charger/feed.xml#sample-y%3Ausb-c-charger-1@1510</id>
+    <title>(サンプル) USB-C 充電器 (PD) A 65W 3ポート GaN 折りたたみ PPS</title>
+    <link rel="alternate" href="https://bufeks.github.io/LAB/shelf/c/usb-c-charger/"/>
+    <updated>2026-10-02T14:41:13+09:00</updated>
+    <summary>¥1,510（いつもは¥1,730、12.7%安い）</summary>
+  </entry>
+</feed>
